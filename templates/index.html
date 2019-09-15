@@ -53,6 +53,10 @@
 
         <div id="mobile-navbar" class="mobile-navbar">
             <div class="mobile-header-logo">
+                <a href="{{ config.base_url }}" title="{{ config.extra.even_title }}" rel="home"
+                    class="site-logo site-title">
+                    <img src="{{ get_url(path="logo.png") }}" alt="{{ config.extra.even_title }} logo">
+                </a>
                 <a href="/" class="logo">{{ config.extra.even_title }}</a>
             </div>
             <div class="mobile-navbar-icon icon-out">
