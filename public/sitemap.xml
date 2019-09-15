@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    
+        <url>
+            <loc>http%3A//127.0.0.1%3A1111/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>http%3A//127.0.0.1%3A1111/about/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>http%3A//127.0.0.1%3A1111/blog/a-new-blog/</loc>
+            
+                <lastmod>2019-09-14</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>http%3A//127.0.0.1%3A1111/blog/giving-up-on-the-climate-crisis/</loc>
+            
+                <lastmod>2019-09-15</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>http%3A//127.0.0.1%3A1111/page/1/</loc>
+            
+        </url>
+    
+</urlset>

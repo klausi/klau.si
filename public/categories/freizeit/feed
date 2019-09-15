@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xml:base="https://klau.si/categories/freizeit">
+  <channel>
+    <title>Freizeit</title>
+    <link>https://klau.si/categories/freizeit</link>
+    <description/>
+    <language>en</language>
+    
+    <item>
+  <title>Mit dem Schlauchboot die Donau runter</title>
+  <link>https://klau.si/mit-dem-schlauchboot-die-donau-runter</link>
+  <description>&lt;span class="field field--name-title field--type-string field--label-hidden"&gt;Mit dem Schlauchboot die Donau runter&lt;/span&gt;
+
+            &lt;div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"&gt;&lt;p&gt;Ein etwas später Nachbericht meiner Reise im Juli.&lt;/p&gt;
+&lt;p&gt;&lt;img height="240" width="320" src="https://klau.si/files/donau-fahrt.png" alt="Auf der Donau mit Peace-Flagge" /&gt;&lt;/p&gt;
+&lt;p&gt;Was als Schnapsidee entstand, haben wir diesen Sommer realisiert: Mit einem gebrauchten, motorlosen Schlauboot traten wir Anfang Juli eine vierwöchige Abenteuerfahrt die Donau hinunter an. Ausgerüstet mit Zelten, wasserdichten Säcken, einem ausführlichen Buch über die Donaubefahrung, einem billigen 40 Euro Beiboot und zwei Paddeln machten wir uns zu dritt von Wien aus auf einen gemütlichen Trip auf.&lt;/p&gt;
+&lt;/div&gt;
+      &lt;span class="field field--name-uid field--type-entity-reference field--label-hidden"&gt;&lt;span&gt;klausi&lt;/span&gt;&lt;/span&gt;
+&lt;span class="field field--name-created field--type-created field--label-hidden"&gt;Fri, 09/05/2008 - 17:45&lt;/span&gt;
+</description>
+  <pubDate>Fri, 05 Sep 2008 15:45:47 +0000</pubDate>
+    <dc:creator>klausi</dc:creator>
+    <guid isPermaLink="false">17 at https://klau.si</guid>
+    </item>
+
+  </channel>
+</rss>
