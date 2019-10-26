@@ -1,6 +1,6 @@
 +++
 title = "A new blog on Zola"
-date = 2019-09-14
+date = 2019-10-26
 +++
 
 ![Zola logo](zola.ico)
