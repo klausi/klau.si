@@ -102,6 +102,9 @@
         <main>
             <div class="content" id="mobile-panel">
                 {% block content %}
+                <div class="about">
+                    {{ section.content | safe }}
+                </div>
                 <div class="posts">
                     {% for page in paginator.pages %}
                     <article class="post">
