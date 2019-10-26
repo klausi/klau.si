@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<link rel="canonical" href="33.html" />
+<link rel="shortlink" href="33.html" />
+<link rel="revision" href="33.html" />
+
+    <title>Abandon CVS and synchronize your code from git automatically | Klausi&#039;s Weblog</title>
+    <link rel="stylesheet" media="all" href="../files/css/css_c8uKrkdw3uTl-xXgGz0TtfMpOZq9ps2b3GoXRcXqFfo.css%3Fprerue.css" />
+<link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css?family=Lato|Inconsolata|Merriweather:400,400italic,700,700italic&amp;subset=latin,latin-ext" />
+<link rel="stylesheet" media="all" href="../files/css/css_nnYw3irVvzE0RwPEuTYB4Tml0tweJsM-gJZkF-TjK4U.css%3Fprerue.css" />
+
+    
+<!--[if lte IE 8]>
+<script src="/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+<script src="../core/assets/vendor/modernizr/modernizr.min.js%3Fv=3.3.1"></script>
+
+  </head>
+  <body class="writer path-node page-node-type-story">
+        <a href="33.html#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div id="wrapper" class="wrapper" style="max-width: 630px;">
+  
+  <header role="banner" id="site-header">
+  	<div class="head-wrap clearfix">
+        <div class="region region-header">
+    <div id="block-writer-branding" class="block block-system block-system-branding-block">
+  
+    
+        <div class="logo-wrap">
+      <a href="../index.html" title="Home" rel="home" id="logo">
+        <img src="../files/uhura-drupal65_0.png" alt="Home" />
+      </a>
+    </div>
+  
+      <hgroup class="site-name-wrap">
+              <h1 id="site-name">
+          <a href="../index.html">Klausi&#039;s Weblog</a>
+        </h1>
+                    <h2 id="site-slogan">Trying to do a useful Blog</h2>
+          </hgroup>
+  </div>
+
+  </div>
+
+        <div class="region region-main-menu">
+    <nav role="navigation" aria-labelledby="block-writer-main-menu-menu" id="block-writer-main-menu" class="block block-menu navigation menu--main">
+            
+  <h2 class="visually-hidden" id="block-writer-main-menu-menu">Main navigation</h2>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="50.html" title="Drupal development setup on Ubuntu" data-drupal-link-system-path="node/50">Drupal dev on Ubuntu</a>
+              </li>
+                <li class="menu-item">
+        <a href="../rss.xml" title="Subscribe to this feed to get updates on new blog posts" data-drupal-link-system-path="rss.xml">RSS feed</a>
+              </li>
+                <li class="menu-item">
+        <a href="51.html" data-drupal-link-system-path="node/51">speaking</a>
+              </li>
+                <li class="menu-item">
+        <a href="1.html" data-drupal-link-system-path="node/1">about</a>
+              </li>
+                <li class="menu-item">
+        <a href="53.html" title="contact klausi" data-drupal-link-system-path="node/53">contact</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </div>
+
+	  </div>
+  </header>
+
+  
+
+  
+  <main role="main" class="main-content">
+  	<a id="main-content"></a>
+          <div id="highlighted">  <div class="region region-highlighted">
+    <div data-drupal-messages-fallback class="hidden"></div>
+
+  </div>
+</div>
+    
+    
+        
+
+    
+    
+
+    
+      <div class="region region-content">
+    <div id="block-writer-page-title" class="block block-core block-page-title-block">
+  
+    
+      
+  <h1 class="page-title"><span class="field field--name-title field--type-string field--label-hidden">Abandon CVS and synchronize your code from git automatically</span>
+</h1>
+
+
+  </div>
+<div id="block-writer-easybreeze-system-main" class="block block-system block-system-main-block">
+  
+    
+      
+<article id="node-33" class=" " role="article" >
+
+  <header>
+    
+
+    
+          <div class="meta">
+        <time class="submitted writer-date" datetime="2010-08-25 13:20:35" pubdate="pubdate">25 Aug 2010</time>
+      </div>
+    
+  </header>
+
+  <div class="node-main contextual-region">
+
+    
+
+    <div >
+            
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>
+	Sick of developing a Drupal module with CVS? Want to use git but also want your code in CVS on drupal.org for development snapshots? This is an approach to get rid of using CVS completely by synchronizing a git repository automatically to CVS. Basic git knowledge required. Script is on <a href="http://github.com/klausi/git-cvs-export">Github</a>. Needs some testing though.</p>
+<!--break--><h2>
+	Motivation</h2>
+<ul><li>
+		git is fast</li>
+<li>
+		git commmits are local until you push them somewhere</li>
+<li>
+		it is painfull to move and delete files/directories in CVS</li>
+<li>
+		you can't add a file/directory in a patch made from CVS easily (argl!)</li>
+<li>
+		git is better and faster at merging and branching</li>
+<li>
+		drupal.org will move to git sooner or later, so let's start to use it</li>
+<li>
+		&lt;fill in many more reasons here&gt;</li>
+</ul><h2>
+	Preconditions</h2>
+<p>
+	In this approach I used Github for hosting the git repository. All people that you want to collaborate with on that project will push their changes to that git repository. Nobody is allowed to touch the CVS repository on drupal.org, so that you don't have to do bidirectional synchronization. All changes arrive in the git repository and are then pushed over to the CVS repository.</p>
+<p>
+	I think it is best if you have a server or permanently running machine at hand. A cron job will periodically pull from the git repository and export new commits to CVS.</p>
+<p>
+	You need to install the package git-cvs on Ubuntu to get the necessary CVS export command for git. Script was tested on Ubuntu 10.04.</p>
+<h2>
+	Setting up the repositories on your machine</h2>
+<p>
+	Create a repository on Github or any other git repository provider. Clone that for exporting to CVS on your server. Make sure that "git pull" works, e.g. that your checkout is connected to the remote repository and that the correct branch is checked out that you want to push to CVS. Note: This clone is for synchronization only, don't use it for development (create another clone and do your work there).</p>
+<p>
+	Create a CVS checkout of your drupal.org project on your server. Use your CVS credentials so that you have access to commit the exports later. Make sure that you have checked out the correct branch you want sync with.</p>
+<p>
+	If you already have code in your CVS repository use "git cvsimport" to populate your git repository with that. I won't explain that here, there is a <a href="http://maymay.net/blog/2008/04/15/how-to-import-cvs-code-repositories-into-git-using-git-cvsimport/">blog post about it</a>.</p>
+<h2>
+	Setting up the export script and cron job</h2>
+<p>
+	Clone or download the export script from <a href="http://github.com/klausi/git-cvs-export">Github</a> and make sure it is executable.</p>
+<p>
+	If you just imported the latest CVS code into your git repo, you need to put the latest commit ID hash into ".cvslastexport" file in your git repository directory. You can use "git log" to get the latest commit. Example: "echo f0f09a55532f0be86224f6fe957cec9e31250698 &gt; /path/to/your-git-repo/.cvslastexport". Otherwise you would export the old commits to CVS that are already there - bad idea.</p>
+<p>
+	Time for a test run, exectue "/path/to/git-cvs-export/pull-cvs-export.sh /path/to/your-git-repo /path/to/your-cvs-repo". If there is nothing in CVS yet, all commits should get synced over. If you just imported from CVS to git before, the script should do nothing (because CVS is up to date).</p>
+<p>
+	Now we are ready to automate this command with cron. I suggest to use a time interval of 15 minutes to check for updates in git. Put a new line in your crontab (execute "crontab -e" to edit your crontab):</p>
+<pre>
+*/15  *  *  *  *      /path/to/git-cvs-export/pull-cvs-export.sh /path/to/your-git-repo /path/to/your-cvs-repo</pre><p>
+	That's it.</p>
+<h2>
+	Merging with git</h2>
+<p>
+	This workflow has one drawback: you can't use the standard "git merge" to merge in form other branches. That's because the commits from the other branch get mixed into the commit history and then each single commit does not apply as patch on top of the previous commit anymore. So you have to use "<strong>git merge --squash</strong>" to create one single changeset from the other branch. By committing that as single commit you maintain compatibility of your history with the CVS export script. Delete the other branch after the merge as another merge will cause conflicts, because git will try to bring in the whole branch changes again.</p>
+<h2>
+	Open issues</h2>
+<ul><li>
+		You still need to do branching and tagging in CVS. Create corresponding git and CVS checkouts for each branch and add a cron task for each branch to synchronize. Could be fixed by checking automatically for Drupal CVS compatible branch/tag names and create them on demand in CVS.</li>
+<li>
+		You still need to create git and CVS checkouts to synchronize. Could be fixed by asking for the git and CVS repository URLs (+credentials for CVS) and setting up everything automatically in a dedicated directory, including the cronjob(s).</li>
+</ul></div>
+      
+  <div class="field field--name-taxonomy-vocabulary-1 field--type-entity-reference field--label-above">
+    <div class="field__label">Categories</div>
+          <div class="field__items">
+              <div class="field__item"><a href="../taxonomy/term/6.html" hreflang="en">Drupal</a></div>
+              </div>
+      </div>
+<section class="comments field field--name-comment-node-story field--type-comment field--label-above comment-wrapper">
+  
+  
+
+  
+</section>
+
+    </div>
+
+          <footer class="link-wrapper">
+          <div class="node__links">
+    <ul class="links inline"><li class="comment-forbidden"></li></ul>  </div>
+
+      </footer>
+    
+    
+  </div>
+
+</article>
+
+  </div>
+
+  </div>
+
+  </main>
+
+  <footer class="page-footer">
+  	  <div class="region region-footer-top">
+    <nav role="navigation" aria-labelledby="block-categories-menu" id="block-categories" class="block block-menu navigation menu--secondary-menu">
+      
+  <h2 id="block-categories-menu">Categories</h2>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="../taxonomy/term/6.html" title="
+" data-drupal-link-system-path="taxonomy/term/6">Drupal</a>
+              </li>
+                <li class="menu-item">
+        <a href="../taxonomy/term/1.html" title="" data-drupal-link-system-path="taxonomy/term/1">Freizeit</a>
+              </li>
+                <li class="menu-item">
+        <a href="../taxonomy/term/2.html" title="" data-drupal-link-system-path="taxonomy/term/2">Gesellschaftskritik</a>
+              </li>
+                <li class="menu-item">
+        <a href="../taxonomy/term/3.html" title="" data-drupal-link-system-path="taxonomy/term/3">Software</a>
+              </li>
+                <li class="menu-item">
+        <a href="../taxonomy/term/5.html" title="" data-drupal-link-system-path="taxonomy/term/5">Uni</a>
+              </li>
+                <li class="menu-item">
+        <a href="../taxonomy/term/4.html" title="" data-drupal-link-system-path="taxonomy/term/4">Uncategorized</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+<div id="block-writer-easybreeze-block-3" class="block block-block-content block-block-content31e9598c-b49e-4c82-af38-e5c72a6fb0c7">
+  
+    
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Klaus Purer</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+</div>
+      
+  </div>
+
+  </div>
+
+  	  	
+  	<div class="foot-wrap clearfix">
+                </div>
+  </footer>
+</div> <!-- end wrapper -->
+
+  </div>
+
+    
+    <script src="../files/js/js_SAbF7_9D3ptKNhENvJKfwyi_T5kAVm_Ix6s6XYDiJhg.js"></script>
+
+  </body>
+</html>

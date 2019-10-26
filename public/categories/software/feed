@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xml:base="https://klau.si/categories/software">
+  <channel>
+    <title>Software</title>
+    <link>https://klau.si/categories/software</link>
+    <description/>
+    <language>en</language>
+    
+    <item>
+  <title>New blog on Rust</title>
+  <link>https://klau.si/new-blog-rust</link>
+  <description>&lt;span class="field field--name-title field--type-string field--label-hidden"&gt;New blog on Rust&lt;/span&gt;
+
+            &lt;div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"&gt;&lt;p&gt;I'm experimenting a bit with Rust and Github Pages, see &lt;a href="https://klausi.github.io/rustnish/"&gt;https://klausi.github.io/rustnish/&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
+      &lt;span class="field field--name-uid field--type-entity-reference field--label-hidden"&gt;&lt;span&gt;klausi&lt;/span&gt;&lt;/span&gt;
+&lt;span class="field field--name-created field--type-created field--label-hidden"&gt;Sun, 04/30/2017 - 22:21&lt;/span&gt;
+</description>
+  <pubDate>Sun, 30 Apr 2017 20:21:00 +0000</pubDate>
+    <dc:creator>klausi</dc:creator>
+    <guid isPermaLink="false">54 at https://klau.si</guid>
+    </item>
+<item>
+  <title>Screencasts with RecordMyDesktop, ffmpeg conversion for HTML5 video</title>
+  <link>https://klau.si/screencasts-recordmydesktop-ffmpeg-conversion-html5-video</link>
+  <description>&lt;span class="field field--name-title field--type-string field--label-hidden"&gt;Screencasts with RecordMyDesktop, ffmpeg conversion for HTML5 video&lt;/span&gt;
+
+            &lt;div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"&gt;&lt;p&gt;Producing a demo video for &lt;a href="http://portland2013.drupal.org/session/rest-and-serialization-drupal-8"&gt;my DrupalCon Portland presentation&lt;/a&gt; caused a bit frustration with video editing tools, so here is a simple solution to cut and convert a video on Ubuntu.&lt;/p&gt;
+&lt;/div&gt;
+      &lt;span class="field field--name-uid field--type-entity-reference field--label-hidden"&gt;&lt;span&gt;klausi&lt;/span&gt;&lt;/span&gt;
+&lt;span class="field field--name-created field--type-created field--label-hidden"&gt;Mon, 05/13/2013 - 00:12&lt;/span&gt;
+</description>
+  <pubDate>Sun, 12 May 2013 22:12:24 +0000</pubDate>
+    <dc:creator>klausi</dc:creator>
+    <guid isPermaLink="false">46 at https://klau.si</guid>
+    </item>
+<item>
+  <title>Git diff --color-words</title>
+  <link>https://klau.si/git-diff-color-words</link>
+  <description>&lt;span class="field field--name-title field--type-string field--label-hidden"&gt;Git diff --color-words&lt;/span&gt;
+
+            &lt;div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"&gt;&lt;p&gt;Git command for better patch review.&lt;/p&gt;
+&lt;p&gt;The usual patch format is often not really human readable. Consider &lt;a href="http://drupal.org/files/issues/dependent-clause-errors-806974-8.patch"&gt;this patch on drupal.org&lt;/a&gt; (&lt;a href="http://drupal.org/node/806974"&gt;issue&lt;/a&gt;) that only removes commas. How can I be sure that only the comma was removed on the changed lines? Fortunately, Git can help here. Download the patch, apply it to your repository and use the following command to get a colored output:&lt;/p&gt;&lt;/div&gt;
+      &lt;span class="field field--name-uid field--type-entity-reference field--label-hidden"&gt;&lt;span&gt;klausi&lt;/span&gt;&lt;/span&gt;
+&lt;span class="field field--name-created field--type-created field--label-hidden"&gt;Sun, 09/25/2011 - 20:13&lt;/span&gt;
+</description>
+  <pubDate>Sun, 25 Sep 2011 18:13:02 +0000</pubDate>
+    <dc:creator>klausi</dc:creator>
+    <guid isPermaLink="false">39 at https://klau.si</guid>
+    </item>
+<item>
+  <title>Web Service Composition in Drupal</title>
+  <link>https://klau.si/thesis</link>
+  <description>&lt;span class="field field--name-title field--type-string field--label-hidden"&gt;Web Service Composition in Drupal&lt;/span&gt;
+
+  &lt;div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-above"&gt;
+    &lt;div class="field__label"&gt;Body&lt;/div&gt;
+              &lt;div class="field__item"&gt;&lt;p&gt;&lt;img alt="" src="https://klau.si/sites/default/files/wsclient_logo_300_0.thumbnail.png" /&gt;A master thesis written by Klaus Purer at the Vienna University of Technology, released in May 2011.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Abstract:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Building web applications has become a complex task and often requires interaction with other web applications, such as web services. Drupal is a free and open source content management system and framework that provides a rich platform for rapid web development. The modular and extensible nature of Drupal allows developers to customize and embrace the core functionality and to create new features. This thesis is about investigating and implementing a web service client module for Drupal that is able to consume classical WS* web services as well as RESTful web services.&lt;/p&gt;
+&lt;/div&gt;
+          &lt;/div&gt;
+&lt;span class="field field--name-uid field--type-entity-reference field--label-hidden"&gt;&lt;span&gt;klausi&lt;/span&gt;&lt;/span&gt;
+&lt;span class="field field--name-created field--type-created field--label-hidden"&gt;Wed, 05/11/2011 - 23:16&lt;/span&gt;
+</description>
+  <pubDate>Wed, 11 May 2011 21:16:56 +0000</pubDate>
+    <dc:creator>klausi</dc:creator>
+    <guid isPermaLink="false">36 at https://klau.si</guid>
+    </item>
+<item>
+  <title>Home WiFi setup with Ubuntu, Asus RT-N56U and Linksys WMP600N</title>
+  <link>https://klau.si/home-wifi-setup-ubuntu-asus-rt-n56u-and-linksys-wmp600n</link>
+  <description>&lt;span class="field field--name-title field--type-string field--label-hidden"&gt;Home WiFi setup with Ubuntu, Asus RT-N56U and Linksys WMP600N&lt;/span&gt;
+
+            &lt;div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"&gt;&lt;p&gt;
+	A summary about setting up a 802.11n wireless network at home, also for future self-reference.&lt;/p&gt;
+&lt;/div&gt;
+      &lt;span class="field field--name-uid field--type-entity-reference field--label-hidden"&gt;&lt;span&gt;klausi&lt;/span&gt;&lt;/span&gt;
+&lt;span class="field field--name-created field--type-created field--label-hidden"&gt;Fri, 04/15/2011 - 15:56&lt;/span&gt;
+</description>
+  <pubDate>Fri, 15 Apr 2011 13:56:48 +0000</pubDate>
+    <dc:creator>klausi</dc:creator>
+    <guid isPermaLink="false">35 at https://klau.si</guid>
+    </item>
+<item>
+  <title>Running PHP 5.3 and 5.2 in parallel with nginx</title>
+  <link>https://klau.si/running-php-53-and-52-parallel-nginx</link>
+  <description>&lt;span class="field field--name-title field--type-string field--label-hidden"&gt;Running PHP 5.3 and 5.2 in parallel with nginx&lt;/span&gt;
+
+            &lt;div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"&gt;&lt;p&gt;
+	The problem: you want to upgrade your Ubuntu server, but you still need PHP 5.2 for some old web sites (i.e. Drupal 5 is not PHP 5.3 compatible).&lt;br /&gt;
+	The solution: Go with the packaged PHP 5.3 for your new sites and compile PHP 5.2 yourself for the old ones. As we use the nginx webserver with FastCGI, we can choose per site which PHP CGI binary will handle the requests.&lt;/p&gt;
+&lt;/div&gt;
+      &lt;span class="field field--name-uid field--type-entity-reference field--label-hidden"&gt;&lt;span&gt;klausi&lt;/span&gt;&lt;/span&gt;
+&lt;span class="field field--name-created field--type-created field--label-hidden"&gt;Mon, 01/17/2011 - 18:16&lt;/span&gt;
+</description>
+  <pubDate>Mon, 17 Jan 2011 17:16:42 +0000</pubDate>
+    <dc:creator>klausi</dc:creator>
+    <guid isPermaLink="false">34 at https://klau.si</guid>
+    </item>
+<item>
+  <title>Ubuntu talking Elvish or Klingon?</title>
+  <link>https://klau.si/ubuntu-talking-elvish-or-klingon</link>
+  <description>&lt;span class="field field--name-title field--type-string field--label-hidden"&gt;Ubuntu talking Elvish or Klingon?&lt;/span&gt;
+
+            &lt;div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"&gt;&lt;p&gt;
+	Funny screenshot I captured yesterday (I guess this bug was originally caused by outputting binary data in a terminal):&lt;/p&gt;
+&lt;p&gt;
+	&lt;a href="https://klau.si/files/ubuntu-elvish-klingon.png"&gt;&lt;img alt="" src="https://klau.si/files/ubuntu-elvish-klingon.png" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+      &lt;span class="field field--name-uid field--type-entity-reference field--label-hidden"&gt;&lt;span&gt;klausi&lt;/span&gt;&lt;/span&gt;
+&lt;span class="field field--name-created field--type-created field--label-hidden"&gt;Mon, 05/17/2010 - 13:51&lt;/span&gt;
+</description>
+  <pubDate>Mon, 17 May 2010 11:51:39 +0000</pubDate>
+    <dc:creator>klausi</dc:creator>
+    <guid isPermaLink="false">31 at https://klau.si</guid>
+    </item>
+<item>
+  <title>Lightning talk about hooks in Drupal</title>
+  <link>https://klau.si/lightning-talk-about-hooks-drupal</link>
+  <description>&lt;span class="field field--name-title field--type-string field--label-hidden"&gt;Lightning talk about hooks in Drupal&lt;/span&gt;
+
+            &lt;div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"&gt;&lt;p&gt;
+	I will attend the &lt;a href="http://sf2010.drupal.org/conference/core-developer-summit"&gt;Drupal Core Developer Summit&lt;/a&gt; at Drupalcon San Francisco, so I had to prepare a short lighting talk about a topic that bothers me in Drupal. As I ran into an issue of implementing a hook by accident recently, I decided to come up with some suggestions how to improve the situation. I have attached &lt;a href="https://klau.si/sites/klausi.fsinf.at/files/hooks_drupal.pdf"&gt;the PDF&lt;/a&gt; I will submit.&lt;/p&gt;
+&lt;/div&gt;
+      &lt;span class="field field--name-uid field--type-entity-reference field--label-hidden"&gt;&lt;span&gt;klausi&lt;/span&gt;&lt;/span&gt;
+&lt;span class="field field--name-created field--type-created field--label-hidden"&gt;Tue, 04/13/2010 - 13:06&lt;/span&gt;
+</description>
+  <pubDate>Tue, 13 Apr 2010 11:06:56 +0000</pubDate>
+    <dc:creator>klausi</dc:creator>
+    <guid isPermaLink="false">30 at https://klau.si</guid>
+    </item>
+<item>
+  <title>Gmail and postmaster</title>
+  <link>https://klau.si/gmail-and-postmaster</link>
+  <description>&lt;span class="field field--name-title field--type-string field--label-hidden"&gt;Gmail and postmaster&lt;/span&gt;
+
+            &lt;div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"&gt;&lt;p&gt;The Gmail spam filter works fine most time, but be careful if you are the postmaster of a mail server and want to check delivery failure notifications in your Gmail account.&lt;/p&gt;
+&lt;/div&gt;
+      &lt;span class="field field--name-uid field--type-entity-reference field--label-hidden"&gt;&lt;span&gt;klausi&lt;/span&gt;&lt;/span&gt;
+&lt;span class="field field--name-created field--type-created field--label-hidden"&gt;Mon, 02/22/2010 - 15:23&lt;/span&gt;
+</description>
+  <pubDate>Mon, 22 Feb 2010 14:23:50 +0000</pubDate>
+    <dc:creator>klausi</dc:creator>
+    <guid isPermaLink="false">29 at https://klau.si</guid>
+    </item>
+<item>
+  <title>A master thesis about Drupal and Web Services</title>
+  <link>https://klau.si/master-thesis-about-drupal-and-web-services</link>
+  <description>&lt;span class="field field--name-title field--type-string field--label-hidden"&gt;A master thesis about Drupal and Web Services&lt;/span&gt;
+
+            &lt;div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"&gt;&lt;p&gt;
+	In the last weeks I thought about a topic for my master thesis at the Vienna University of Technology, and I came up with the idea of integrating Drupal and Web Services.&lt;/p&gt;
+&lt;/div&gt;
+      &lt;span class="field field--name-uid field--type-entity-reference field--label-hidden"&gt;&lt;span&gt;klausi&lt;/span&gt;&lt;/span&gt;
+&lt;span class="field field--name-created field--type-created field--label-hidden"&gt;Mon, 02/15/2010 - 19:10&lt;/span&gt;
+</description>
+  <pubDate>Mon, 15 Feb 2010 18:10:37 +0000</pubDate>
+    <dc:creator>klausi</dc:creator>
+    <guid isPermaLink="false">28 at https://klau.si</guid>
+    </item>
+
+  </channel>
+</rss>

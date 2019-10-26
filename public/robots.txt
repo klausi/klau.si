@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://klau.si/sitemap.xml
