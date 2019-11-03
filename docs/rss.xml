@@ -39,5 +39,15 @@
 </description>
             </item>
         
+            <item>
+                <title>Drupalcon 2016 talk: How to publish a module on drupal.org</title>
+                <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+                <link>https%3A//klau.si/blog/drupalcon-publish-module/</link>
+                <guid>https%3A//klau.si/blog/drupalcon-publish-module/</guid>
+                <description>&lt;p&gt;Here is the video of my DrupalCon Asia 2016 talk &amp;quot;How to publish a module on drupal.org&amp;quot;.&lt;&#x2F;p&gt;
+&lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;JWLb--cb33E&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
+</description>
+            </item>
+        
     </channel>
 </rss>
