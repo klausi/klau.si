@@ -128,6 +128,16 @@
             </item>
         
             <item>
+                <title>Drupal Austria Meetup: Drupal security learnings</title>
+                <pubDate>Wed, 13 Mar 2019 00:00:00 +0000</pubDate>
+                <link>https%3A//klau.si/blog/drupal-security-vulnerability-learnings/</link>
+                <guid>https%3A//klau.si/blog/drupal-security-vulnerability-learnings/</guid>
+                <description>&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;drupal-security-vulnerability-learnings&#x2F;meetup_security.jpeg&quot; alt=&quot;Drupal Austria security meetup&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Here are &lt;a href=&quot;&#x2F;presentations&#x2F;sec-learnings2019&#x2F;index.html&quot;&gt;the slides&lt;&#x2F;a&gt; of my Drupal Austria Meetup talk &amp;quot;Drupal security learnings&amp;quot;.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
                 <title>Benchmarking a Rust web application</title>
                 <pubDate>Fri, 31 Aug 2018 00:00:00 +0000</pubDate>
                 <link>https%3A//klau.si/blog/benchmarking-a-rust-web-application/</link>
