@@ -1,7 +1,12 @@
 {% extends "index.html" %}
 
 {% block content %}
-    <div class="about">
-        {{ page.content | safe }}
-    </div>
+<div class="about">
+  {% if page.content %}
+  {{ page.content | safe }}
+  {% endif %}
+  {% if section.content %}
+  {{ section.content | safe }}
+  {% endif %}
+</div>
 {% endblock content %}
