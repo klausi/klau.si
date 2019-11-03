@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     
         <url>
-            <loc>https://klau.si/</loc>
+            <loc>https%3A//klau.si/</loc>
             
         </url>
     
         <url>
-            <loc>https://klau.si/blog/a-new-blog-on-zola/</loc>
+            <loc>https%3A//klau.si/blog/a-new-blog-on-zola/</loc>
             
                 <lastmod>2019-10-26</lastmod>
             
         </url>
     
         <url>
-            <loc>https://klau.si/page/1/</loc>
+            <loc>https%3A//klau.si/blog/drupalcon-security-code-review/</loc>
+            
+                <lastmod>2019-11-03</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https%3A//klau.si/page/1/</loc>
             
         </url>
     
