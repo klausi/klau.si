@@ -14,9 +14,51 @@
         </url>
     
         <url>
+            <loc>https%3A//klau.si/blog/drupalcamp-cracking-drupal/</loc>
+            
+                <lastmod>2013-12-10</lastmod>
+            
+        </url>
+    
+        <url>
             <loc>https%3A//klau.si/blog/drupalcon-automated-testing-phpunit/</loc>
             
                 <lastmod>2016-09-27</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https%3A//klau.si/blog/drupalcon-coding-with-rules-drupal-8/</loc>
+            
+                <lastmod>2015-09-22</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https%3A//klau.si/blog/drupalcon-cracking-drupal/</loc>
+            
+                <lastmod>2014-10-02</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https%3A//klau.si/blog/drupalcon-portland-rest-serialization-drupal-8/</loc>
+            
+                <lastmod>2013-05-23</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https%3A//klau.si/blog/drupalcon-prague-rest-serialization-drupal-8/</loc>
+            
+                <lastmod>2013-09-25</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https%3A//klau.si/blog/drupalcon-project-application-process/</loc>
+            
+                <lastmod>2012-08-24</lastmod>
             
         </url>
     
@@ -35,7 +77,19 @@
         </url>
     
         <url>
+            <loc>https%3A//klau.si/blog/drupalcon-security-what-you-need-to-know/</loc>
+            
+                <lastmod>2015-09-23</lastmod>
+            
+        </url>
+    
+        <url>
             <loc>https%3A//klau.si/page/1/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https%3A//klau.si/page/2/</loc>
             
         </url>
     
@@ -56,6 +110,16 @@
     
         <url>
             <loc>https%3A//klau.si/tags/phpunit/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https%3A//klau.si/tags/rest/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https%3A//klau.si/tags/rules/</loc>
             
         </url>
     

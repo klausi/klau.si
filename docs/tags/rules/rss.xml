@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Klausi&#x27;s Weblog</title>
+        <link>https%3A//klau.si</link>
+        <description></description>
+        <generator>Zola</generator>
+        <language>en</language>
+        <atom:link href="https%3A//klau.si/tags/rules/rss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Tue, 22 Sep 2015 00:00:00 +0000</lastBuildDate>
+        
+            <item>
+                <title>Drupalcon 2015 talk: Coding with Rules for Drupal 8</title>
+                <pubDate>Tue, 22 Sep 2015 00:00:00 +0000</pubDate>
+                <link>https%3A//klau.si/blog/drupalcon-coding-with-rules-drupal-8/</link>
+                <guid>https%3A//klau.si/blog/drupalcon-coding-with-rules-drupal-8/</guid>
+                <description>&lt;p&gt;Here is the video of our DrupalCon Barcelona 2015 talk &amp;quot;Coding with Rules for Drupal 8&amp;quot;.&lt;&#x2F;p&gt;
+&lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;QcU_LCAHNLg&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
+</description>
+            </item>
+        
+    </channel>
+</rss>
