@@ -1,6 +1,8 @@
 +++
 title = "A new blog on Zola"
 date = 2019-10-26
+[taxonomies]
+tags = ["rust"]
 +++
 
 ![Zola logo](zola.ico)

@@ -14,6 +14,13 @@
         </url>
     
         <url>
+            <loc>https%3A//klau.si/blog/drupalcon-automated-testing-phpunit/</loc>
+            
+                <lastmod>2016-09-27</lastmod>
+            
+        </url>
+    
+        <url>
             <loc>https%3A//klau.si/blog/drupalcon-security-code-review/</loc>
             
                 <lastmod>2019-11-03</lastmod>
@@ -22,6 +29,46 @@
     
         <url>
             <loc>https%3A//klau.si/page/1/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https%3A//klau.si/tags/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https%3A//klau.si/tags/code-review/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https%3A//klau.si/tags/drupalcon/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https%3A//klau.si/tags/phpunit/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https%3A//klau.si/tags/rust/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https%3A//klau.si/tags/security/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https%3A//klau.si/tags/speaking/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https%3A//klau.si/tags/testing/</loc>
             
         </url>
     
