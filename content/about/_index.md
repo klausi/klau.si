@@ -11,6 +11,6 @@ You can contact me on [Mastodon](https://mastodon.social/@klausi), [Twitter](htt
 Some projects I work on:
 
 * [Coder](https://www.drupal.org/project/coder), a coding standards checker for Drupal
-* [Mastodon Twitter Snyc](https://github.com/klausi/mastodon-twitter-sync), a tool to synchronize posts between Mastodon and Twitter
+* [Mastodon Twitter Sync](https://github.com/klausi/mastodon-twitter-sync), a tool to synchronize posts between Mastodon and Twitter
 * [Rustnish](https://klausi.github.io/rustnish/), a Rust learning project with the example of a reverse proxy
 * [GraphQL for Drupal](https://www.drupal.org/project/graphql), a Drupal module that implements a GraphQL server API
