@@ -70,6 +70,20 @@
         </url>
     
         <url>
+            <loc>https%3A//klau.si/blog/drupalcon-rules-ecosystem/</loc>
+            
+                <lastmod>2010-08-27</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https%3A//klau.si/blog/drupalcon-rules-way-of-life/</loc>
+            
+                <lastmod>2011-08-26</lastmod>
+            
+        </url>
+    
+        <url>
             <loc>https%3A//klau.si/blog/drupalcon-security-code-review/</loc>
             
                 <lastmod>2019-11-03</lastmod>
@@ -90,6 +104,11 @@
     
         <url>
             <loc>https%3A//klau.si/page/2/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https%3A//klau.si/speaking/</loc>
             
         </url>
     
