@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Klausi&#x27;s Weblog - Converting a Hyper server to Tokio</title>
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+  
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
+  
+  
+
+  
+  <link rel="stylesheet" href="https:&#x2F;&#x2F;klau.si&#x2F;site.css">
+  
+  
+
+  
+  
+</head>
+
+<body>
+  <div class="container">
+
+    <div id="mobile-navbar" class="mobile-navbar">
+      <div class="mobile-header-logo">
+        <a href="https:&#x2F;&#x2F;klau.si" title="Klausi&#x27;s Weblog" rel="home" class="site-logo site-title">
+          <img src="https:&#x2F;&#x2F;klau.si&#x2F;logo.png" alt="Klausi&#x27;s Weblog logo">
+        </a>
+        <a href="/" class="logo">Klausi&#x27;s Weblog</a>
+      </div>
+      <div class="mobile-navbar-icon icon-out">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <nav id="mobile-menu" class="mobile-menu slideout-menu slideout-menu-left">
+      <ul class="mobile-menu-list">
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si">
+            Home
+          </a>
+        </li>
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;speaking">
+            Speaking
+          </a>
+        </li>
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si&#x2F;archive.html">
+            Archive
+          </a>
+        </li>
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+            RSS
+          </a>
+        </li>
+        
+      </ul>
+    </nav>
+
+    <header id="header">
+      <div class="logo">
+        <a href="https:&#x2F;&#x2F;klau.si" title="Klausi&#x27;s Weblog" rel="home" class="site-logo site-title">
+          <img src="https:&#x2F;&#x2F;klau.si&#x2F;logo.png" alt="Klausi&#x27;s Weblog logo">
+        </a>
+        <a href="https:&#x2F;&#x2F;klau.si">Klausi&#x27;s Weblog</a>
+      </div>
+      <nav class="menu">
+        <ul>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si">
+              Home
+            </a>
+          </li>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;speaking">
+              Speaking
+            </a>
+          </li>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;archive.html">
+              Archive
+            </a>
+          </li>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+              RSS
+            </a>
+          </li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="content" id="mobile-panel">
+        
+
+
+<div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">Contents</h2>
+    <div class="post-toc-content always-active">
+        <nav id="TableOfContents">
+            <ul>
+                
+                <li>
+                    <a href="https://klau.si/blog/converting-a-hyper-server-to-tokio/#upgrading-hyper" class="toc-link">Upgrading Hyper</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://klau.si/blog/converting-a-hyper-server-to-tokio/#converting-handler-to-service" class="toc-link">Converting Handler to Service</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://klau.si/blog/converting-a-hyper-server-to-tokio/#a-word-on-futures" class="toc-link">A word on Futures</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://klau.si/blog/converting-a-hyper-server-to-tokio/#starting-a-server-and-sharing-a-tokio-core" class="toc-link">Starting a server and sharing a Tokio core</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://klau.si/blog/converting-a-hyper-server-to-tokio/#converting-the-response-handling" class="toc-link">Converting the response handling</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://klau.si/blog/converting-a-hyper-server-to-tokio/#converting-integration-tests" class="toc-link">Converting integration tests</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://klau.si/blog/converting-a-hyper-server-to-tokio/#conclusion" class="toc-link">Conclusion</a>
+                    
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+<article class="post">
+    
+    <header class="post__header">
+        <h1 class="post__title">
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;converting-a-hyper-server-to-tokio&#x2F;">Converting a Hyper server to Tokio</a>
+        </h1>
+        <div class="post__meta">
+            <span class="post__time">2017-07-16</span>
+            
+        </div>
+    </header>
+
+    <div class="post-content">
+      <p>Since my <a href="https://klau.si/blog/getting-started-with-rust/">first blog post where I constructed a server with Hyper</a> some time
+has passed and there is now a new version of the library that is based on
+<a href="https://tokio.rs">Tokio</a>. My goal 3:</p>
+<blockquote>
+<p>A new version of the Hyper library has been released which is
+based on the Tokio library. Convert the existing code to use that new version
+and provide one integration test case.</p>
+</blockquote>
+<p>Tokio handles input/output asynchronously, which makes setting up a server more
+complicated. The benefit is more efficient parallel execution with a
+non-blocking event loop.</p>
+<p>You can find all the code in <a href="https://github.com/klausi/rustnish/tree/goal-03">the goal-03 branch on
+Github</a>.</p>
+<h2 id="upgrading-hyper">Upgrading Hyper</h2>
+<p>Hyper is already registered in the Cargo.toml file as a project dependency, so
+there is only one step to update:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">cargo update
+</span></pre>
+<p>This will download the new Hyper library version and change the version number
+in Cargo.lock.</p>
+<h2 id="converting-handler-to-service">Converting Handler to Service</h2>
+<p>Old code:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#b48ead;">struct </span><span style="color:#c0c5ce;">Proxy {
+    </span><span style="color:#bf616a;">upstream_port</span><span style="color:#c0c5ce;">: </span><span style="color:#b48ead;">u16</span><span style="color:#c0c5ce;">,
+}
+
+</span><span style="color:#b48ead;">impl </span><span style="color:#c0c5ce;">Handler </span><span style="color:#b48ead;">for </span><span style="color:#c0c5ce;">Proxy {
+    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">handle</span><span style="color:#c0c5ce;">(&amp;</span><span style="color:#bf616a;">self</span><span style="color:#c0c5ce;">, </span><span style="color:#bf616a;">request</span><span style="color:#c0c5ce;">: Request, </span><span style="color:#bf616a;">response</span><span style="color:#c0c5ce;">: Response) {
+        </span><span style="color:#65737e;">// Function body omitted here.
+    </span><span style="color:#c0c5ce;">}
+}
+</span></pre>
+<p>New code:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#b48ead;">struct </span><span style="color:#c0c5ce;">Proxy {
+    </span><span style="color:#bf616a;">upstream_port</span><span style="color:#c0c5ce;">: </span><span style="color:#b48ead;">u16</span><span style="color:#c0c5ce;">,
+    </span><span style="color:#bf616a;">client</span><span style="color:#c0c5ce;">: Client&lt;HttpConnector&gt;,
+}
+
+</span><span style="color:#b48ead;">impl </span><span style="color:#c0c5ce;">Service </span><span style="color:#b48ead;">for </span><span style="color:#c0c5ce;">Proxy {
+    </span><span style="color:#b48ead;">type </span><span style="color:#c0c5ce;">Request = Request;
+    </span><span style="color:#b48ead;">type </span><span style="color:#c0c5ce;">Response = Response;
+    </span><span style="color:#b48ead;">type </span><span style="color:#c0c5ce;">Error = hyper::Error;
+    </span><span style="color:#b48ead;">type </span><span style="color:#c0c5ce;">Future = Either&lt;FutureResult&lt;</span><span style="color:#b48ead;">Self::</span><span style="color:#c0c5ce;">Response, </span><span style="color:#b48ead;">Self::</span><span style="color:#c0c5ce;">Error&gt;,
+        FutureResponse&gt;;
+
+    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">call</span><span style="color:#c0c5ce;">(&amp;</span><span style="color:#bf616a;">self</span><span style="color:#c0c5ce;">, </span><span style="color:#bf616a;">request</span><span style="color:#c0c5ce;">: Request) -&gt; </span><span style="color:#b48ead;">Self::</span><span style="color:#c0c5ce;">Future {
+        </span><span style="color:#65737e;">// Function body omitted here.
+    </span><span style="color:#c0c5ce;">}
+}
+</span></pre>
+<p>The first thing you'll notice is that the Proxy struct has an additional field
+to hold a Hyper client instance. This is a bit of an implementation detail of
+my specific reverse proxy use case here. Since I'm using a Hyper server and a
+Hyper client at the same time in my program I want them to run on the same
+Tokio core (the event loop). Which means that I need to pre-construct my HTTP
+client and &quot;inject&quot; it into my Proxy service.</p>
+<p>The types of the Service determine what kind of requests and responses go in
+and out of it.</p>
+<h2 id="a-word-on-futures">A word on Futures</h2>
+<p>A Future is a result of an operation that will be available later. You can
+think of callbacks or the concept of a Promise in JavaScript. Execution is
+non-blocking:</p>
+<ul>
+<li>In the old <code>handle()</code> function the execution time is directly spent there
+assembling and preparing the response and returning it once everything is done.</li>
+<li>The new <code>call()</code> function runs through more quickly. Anything that
+requires further input/output (fetching with the HTTP client in our case) is
+postponed as Future and the function returns immediately.</li>
+</ul>
+<p>The hardest part is to get the Future type right. In our case we can have 2
+different kinds of responses: direct responses if the client request is wrong
+in any way and upstream responses that come out of our HTTP client invocation.
+We can use the <code>Either</code> helper Future to combine those 2 Future types.</p>
+<h2 id="starting-a-server-and-sharing-a-tokio-core">Starting a server and sharing a Tokio core</h2>
+<p>Old code:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#b48ead;">pub fn </span><span style="color:#8fa1b3;">start_server</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">port</span><span style="color:#c0c5ce;">: </span><span style="color:#b48ead;">u16</span><span style="color:#c0c5ce;">, </span><span style="color:#bf616a;">upstream_port</span><span style="color:#c0c5ce;">: </span><span style="color:#b48ead;">u16</span><span style="color:#c0c5ce;">) -&gt; Listening {
+    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> address = &quot;</span><span style="color:#a3be8c;">127.0.0.1:</span><span style="color:#c0c5ce;">&quot;.</span><span style="color:#96b5b4;">to_owned</span><span style="color:#c0c5ce;">() + &amp;port.</span><span style="color:#96b5b4;">to_string</span><span style="color:#c0c5ce;">();
+    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> server = Server::http(&amp;address).</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
+    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> listening = server
+        .</span><span style="color:#96b5b4;">handle</span><span style="color:#c0c5ce;">(Proxy { upstream_port: upstream_port })
+        .</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
+    println!(&quot;</span><span style="color:#a3be8c;">Listening on </span><span style="color:#d08770;">{}</span><span style="color:#c0c5ce;">&quot;, address);
+
+    listening
+}
+
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span style="color:#c0c5ce;">() {
+    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> port: </span><span style="color:#b48ead;">u16 </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">9090</span><span style="color:#c0c5ce;">;
+    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> upstream_port: </span><span style="color:#b48ead;">u16 </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">80</span><span style="color:#c0c5ce;">;
+    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> _listening = rustnish::start_server(port, upstream_port);
+}
+</span></pre>
+<p>New code:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#b48ead;">pub fn </span><span style="color:#8fa1b3;">start_server</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">port</span><span style="color:#c0c5ce;">: </span><span style="color:#b48ead;">u16</span><span style="color:#c0c5ce;">, </span><span style="color:#bf616a;">upstream_port</span><span style="color:#c0c5ce;">: </span><span style="color:#b48ead;">u16</span><span style="color:#c0c5ce;">) -&gt; thread::JoinHandle&lt;()&gt; {
+
+    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> thread = thread::Builder::new()
+        .</span><span style="color:#96b5b4;">name</span><span style="color:#c0c5ce;">(&quot;</span><span style="color:#a3be8c;">rustnish</span><span style="color:#c0c5ce;">&quot;.</span><span style="color:#96b5b4;">to_owned</span><span style="color:#c0c5ce;">())
+        .</span><span style="color:#96b5b4;">spawn</span><span style="color:#c0c5ce;">(</span><span style="color:#b48ead;">move </span><span style="color:#c0c5ce;">|| {
+            </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> address = &quot;</span><span style="color:#a3be8c;">127.0.0.1:</span><span style="color:#c0c5ce;">&quot;.</span><span style="color:#96b5b4;">to_owned</span><span style="color:#c0c5ce;">() + &amp;port.</span><span style="color:#96b5b4;">to_string</span><span style="color:#c0c5ce;">();
+            println!(&quot;</span><span style="color:#a3be8c;">Listening on http://</span><span style="color:#d08770;">{}</span><span style="color:#c0c5ce;">&quot;, address);
+            </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> addr = address.</span><span style="color:#96b5b4;">parse</span><span style="color:#c0c5ce;">().</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
+
+            </span><span style="color:#65737e;">// Prepare a Tokio core that we will use for our server and our
+            // client.
+            </span><span style="color:#b48ead;">let mut</span><span style="color:#c0c5ce;"> core = Core::new().</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
+            </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> handle = core.</span><span style="color:#96b5b4;">handle</span><span style="color:#c0c5ce;">();
+            </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> http = Http::new();
+            </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> listener = TcpListener::bind(&amp;addr, &amp;handle).</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
+            </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> client = Client::new(&amp;handle);
+
+            </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> server = listener
+                .</span><span style="color:#96b5b4;">incoming</span><span style="color:#c0c5ce;">()
+                .</span><span style="color:#96b5b4;">for_each</span><span style="color:#c0c5ce;">(</span><span style="color:#b48ead;">move </span><span style="color:#c0c5ce;">|(sock, addr)| {
+                    http.</span><span style="color:#96b5b4;">bind_connection</span><span style="color:#c0c5ce;">(&amp;handle,
+                                         sock,
+                                         addr,
+                                         Proxy {
+                                             upstream_port: upstream_port,
+                                             client: client.</span><span style="color:#96b5b4;">clone</span><span style="color:#c0c5ce;">(),
+                                         });
+                    Ok(())
+                });
+
+            core.</span><span style="color:#96b5b4;">run</span><span style="color:#c0c5ce;">(server).</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
+        })
+        .</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
+
+    thread
+}
+
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span style="color:#c0c5ce;">() {
+    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> port: </span><span style="color:#b48ead;">u16 </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">9090</span><span style="color:#c0c5ce;">;
+    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> upstream_port: </span><span style="color:#b48ead;">u16 </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">80</span><span style="color:#c0c5ce;">;
+    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> thread = rustnish::start_server(port, upstream_port);
+    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> _guard = thread.</span><span style="color:#96b5b4;">join</span><span style="color:#c0c5ce;">();
+}
+</span></pre>
+<p>So we went from 15 lines of code to 40 lines of code. What happened?</p>
+<ol>
+<li><code>core.run(server)</code> is starting the event loop and blocking. That's why
+we need to set up our own thread handling. Inspired by <a href="https://github.com/hyperium/hyper/blob/master/tests/server.rs#L583">Hyper test
+code</a>.</li>
+<li>The Hyper server would create its own internal Tokio core event loop when
+using <code>http.bind()</code>. But we need our event loop beforehand to initialize
+our HTTP client. That's why we need the complicated setup with
+<code>Core::new()</code> and <code>TcpListener</code> and <code>http.bind_connection()</code> to
+pass in an existing event loop handle.</li>
+<li>We want to return something useful (non-blocking) to the consumer that calls
+our <code>start_server()</code> function. We have spawned a thread so our <code>main()</code>
+consumer can just wait indefinitely on the thread by calling <code>join()</code>.</li>
+</ol>
+<h2 id="converting-the-response-handling">Converting the response handling</h2>
+<p>This is where the new version of the Hyper library shines. The request and
+response types are now unified: a HTTP client response is the same as a HTTP
+server response! This is very useful in our reverse proxy use case where we can
+just pass through responses as is.</p>
+<p>I'm omitting <a href="https://github.com/klausi/rustnish/blob/goal-02/src/lib.rs#L35">my old Hyper
+code</a> here
+because it is quite convoluted and long. The new code is so much nicer:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#b48ead;">impl </span><span style="color:#c0c5ce;">Service </span><span style="color:#b48ead;">for </span><span style="color:#c0c5ce;">Proxy {
+    </span><span style="color:#b48ead;">type </span><span style="color:#c0c5ce;">Request = Request;
+    </span><span style="color:#b48ead;">type </span><span style="color:#c0c5ce;">Response = Response;
+    </span><span style="color:#b48ead;">type </span><span style="color:#c0c5ce;">Error = hyper::Error;
+    </span><span style="color:#b48ead;">type </span><span style="color:#c0c5ce;">Future = Either&lt;FutureResult&lt;</span><span style="color:#b48ead;">Self::</span><span style="color:#c0c5ce;">Response, </span><span style="color:#b48ead;">Self::</span><span style="color:#c0c5ce;">Error&gt;,
+        FutureResponse&gt;;
+
+    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">call</span><span style="color:#c0c5ce;">(&amp;</span><span style="color:#bf616a;">self</span><span style="color:#c0c5ce;">, </span><span style="color:#bf616a;">request</span><span style="color:#c0c5ce;">: Request) -&gt; </span><span style="color:#b48ead;">Self::</span><span style="color:#c0c5ce;">Future {
+        </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> host = </span><span style="color:#b48ead;">match</span><span style="color:#c0c5ce;"> request.</span><span style="color:#96b5b4;">headers</span><span style="color:#c0c5ce;">().get::&lt;Host&gt;() {
+            None =&gt; {
+                </span><span style="color:#b48ead;">return </span><span style="color:#c0c5ce;">Either::A(futures::future::ok(Response::new()
+                    .</span><span style="color:#96b5b4;">with_status</span><span style="color:#c0c5ce;">(StatusCode::BadRequest)
+                    .</span><span style="color:#96b5b4;">with_body</span><span style="color:#c0c5ce;">(&quot;</span><span style="color:#a3be8c;">No host header in request</span><span style="color:#c0c5ce;">&quot;)));
+            }
+            Some(h) =&gt; h.</span><span style="color:#96b5b4;">hostname</span><span style="color:#c0c5ce;">(),
+        };
+
+        </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> request_uri = request.</span><span style="color:#96b5b4;">uri</span><span style="color:#c0c5ce;">();
+        </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> upstream_uri = (&quot;</span><span style="color:#a3be8c;">http://</span><span style="color:#c0c5ce;">&quot;.</span><span style="color:#96b5b4;">to_string</span><span style="color:#c0c5ce;">() + host + &quot;</span><span style="color:#a3be8c;">:</span><span style="color:#c0c5ce;">&quot;
+            + &amp;</span><span style="color:#bf616a;">self</span><span style="color:#c0c5ce;">.upstream_port.</span><span style="color:#96b5b4;">to_string</span><span style="color:#c0c5ce;">() + request_uri.</span><span style="color:#96b5b4;">path</span><span style="color:#c0c5ce;">())
+            .</span><span style="color:#96b5b4;">parse</span><span style="color:#c0c5ce;">()
+            .</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
+
+        Either::B(</span><span style="color:#bf616a;">self</span><span style="color:#c0c5ce;">.client.</span><span style="color:#96b5b4;">get</span><span style="color:#c0c5ce;">(upstream_uri))
+    }
+}
+</span></pre>
+<p>In the first part of <code>call()</code> we quickly build a custom HTTP response when
+there is no HTTP Host header on the incoming request. The real magic happens on
+the last line: we invoke the HTTP client to make a GET request and we can use
+the resulting Future verbatim as is as our server response. The GET request is
+spawned on the event loop, a Future is returned immediately and our
+<code>call()</code> function returns. The Future is passed back and as soon as it
+evaluates (the GET request is done) the response is sent out as server response.</p>
+<h2 id="converting-integration-tests">Converting integration tests</h2>
+<p>The integration testing experience has changed in good and bad ways:</p>
+<ul>
+<li>In <a href="https://klau.si/blog/writing-integration-tests-in-rust/">my old integration tests</a> I was <a href="https://users.rust-lang.org/t/how-do-you-write-integration-tests-that-fail-early-and-often/11297">struggling with hanging
+test cases on
+panics</a>
+and not being able to tear down test services
+reliably. This problem has never occurred in <a href="https://github.com/klausi/rustnish/blob/goal-03/tests/integration_tests.rs">the new integration
+test</a> because everything is shut down as it should be when the variables run out of
+scope in the test function. I think that is exactly the Rust way of cleaning
+up, so yay!</li>
+<li>The same boilerplate of thread handling and Tokio core setup is needed when
+creating quick and dirty HTTP servers and clients for testing. There are no
+synchronous helper constructs to shortcut this in test code, so you need to
+invent those helpers yourself for your integration test.</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>The new Hyper library forces you to think more about where your HTTP server is
+blocking and it also forces a basic understanding of asynchronous programming
+and the concept of Futures. Once that obstacle of learning is out of the way
+and all the boilerplate of thread handling, Tokio core and Future types are set
+up the rest of your server implementation falls into place nicely.</p>
+
+    </div>
+
+    
+    
+
+    <div class="post-footer">
+        
+            
+                <div class="post-tags">
+                    
+                        <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;rust&#x2F;">#rust</a>
+                    
+                        <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;rustnish&#x2F;">#rustnish</a>
+                    
+                </div>
+            
+            
+                <div class="post-nav">
+                    
+                        <a class="previous" href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;using-visual-studio-code-for-rust-on-ubuntu&#x2F;">‹ Using Visual Studio Code for Rust on Ubuntu</a>
+                    
+                    
+                        <a class="next" href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;replacing-unwrap-and-avoiding-panics-in-rust&#x2F;">Replacing unwrap() and avoiding panics in Rust ›</a>
+                    
+                    
+                    
+                </div>
+            
+
+        
+
+    </div>
+
+    
+    
+</article>
+
+
+      </div>
+    </main>
+
+    
+    <footer>
+      <p><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License"
+            style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work by
+        <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Klaus Purer</span> is licensed
+        under a <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
+          Attribution-ShareAlike 4.0 International License</a>.
+      </p>
+    </footer>
+    
+  </div>
+
+  
+  <script type="text/javascript" src="https:&#x2F;&#x2F;klau.si&#x2F;even.js"></script>
+  
+</body>
+
+</html>

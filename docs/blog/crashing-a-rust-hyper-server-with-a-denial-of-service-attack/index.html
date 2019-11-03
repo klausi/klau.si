@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Klausi&#x27;s Weblog - Crashing a Rust Hyper server with a Denial of Service attack</title>
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+  
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
+  
+  
+
+  
+  <link rel="stylesheet" href="https:&#x2F;&#x2F;klau.si&#x2F;site.css">
+  
+  
+
+  
+  
+</head>
+
+<body>
+  <div class="container">
+
+    <div id="mobile-navbar" class="mobile-navbar">
+      <div class="mobile-header-logo">
+        <a href="https:&#x2F;&#x2F;klau.si" title="Klausi&#x27;s Weblog" rel="home" class="site-logo site-title">
+          <img src="https:&#x2F;&#x2F;klau.si&#x2F;logo.png" alt="Klausi&#x27;s Weblog logo">
+        </a>
+        <a href="/" class="logo">Klausi&#x27;s Weblog</a>
+      </div>
+      <div class="mobile-navbar-icon icon-out">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <nav id="mobile-menu" class="mobile-menu slideout-menu slideout-menu-left">
+      <ul class="mobile-menu-list">
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si">
+            Home
+          </a>
+        </li>
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;speaking">
+            Speaking
+          </a>
+        </li>
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si&#x2F;archive.html">
+            Archive
+          </a>
+        </li>
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+            RSS
+          </a>
+        </li>
+        
+      </ul>
+    </nav>
+
+    <header id="header">
+      <div class="logo">
+        <a href="https:&#x2F;&#x2F;klau.si" title="Klausi&#x27;s Weblog" rel="home" class="site-logo site-title">
+          <img src="https:&#x2F;&#x2F;klau.si&#x2F;logo.png" alt="Klausi&#x27;s Weblog logo">
+        </a>
+        <a href="https:&#x2F;&#x2F;klau.si">Klausi&#x27;s Weblog</a>
+      </div>
+      <nav class="menu">
+        <ul>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si">
+              Home
+            </a>
+          </li>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;speaking">
+              Speaking
+            </a>
+          </li>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;archive.html">
+              Archive
+            </a>
+          </li>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+              RSS
+            </a>
+          </li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="content" id="mobile-panel">
+        
+
+
+<div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">Contents</h2>
+    <div class="post-toc-content always-active">
+        <nav id="TableOfContents">
+            <ul>
+                
+                <li>
+                    <a href="https://klau.si/blog/crashing-a-rust-hyper-server-with-a-denial-of-service-attack/#a-vulnerable-hello-world-server-example" class="toc-link">A vulnerable Hello world server example</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://klau.si/blog/crashing-a-rust-hyper-server-with-a-denial-of-service-attack/#using-apachebench-to-attack-the-server" class="toc-link">Using ApacheBench to attack the server</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://klau.si/blog/crashing-a-rust-hyper-server-with-a-denial-of-service-attack/#a-naive-fix-with-a-loop" class="toc-link">A naive fix with a loop</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://klau.si/blog/crashing-a-rust-hyper-server-with-a-denial-of-service-attack/#the-fix-in-hyper" class="toc-link">The fix in Hyper</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://klau.si/blog/crashing-a-rust-hyper-server-with-a-denial-of-service-attack/#conclusion" class="toc-link">Conclusion</a>
+                    
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+<article class="post">
+    
+    <header class="post__header">
+        <h1 class="post__title">
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;crashing-a-rust-hyper-server-with-a-denial-of-service-attack&#x2F;">Crashing a Rust Hyper server with a Denial of Service attack</a>
+        </h1>
+        <div class="post__meta">
+            <span class="post__time">2018-03-11</span>
+            
+        </div>
+    </header>
+
+    <div class="post-content">
+      <p>I'm writing a reverse proxy in Rust using <a href="https://hyper.rs/">Hyper</a> and I want
+to measure performance a bit to know if I'm doing something terribly wrong. By
+doing that I discovered a Denial of Service vulnerability in Hyper when IO
+errors are not properly handled. Note that <a href="https://github.com/hyperium/hyper/releases/tag/v0.11.20">a workaround has been released in
+the meantime in Hyper
+0.11.20</a>, more
+background info can be found in <a href="https://github.com/hyperium/hyper/issues/1358">this Hyper
+issue</a>.</p>
+<h2 id="a-vulnerable-hello-world-server-example">A vulnerable Hello world server example</h2>
+<p>Let's look at the simplest Hyper server example that just serves &quot;Hello world&quot;
+HTTP responses
+(<a href="https://github.com/hyperium/hyper/blob/v0.11.19/examples/hello.rs">source</a>):</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#b48ead;">static </span><span style="color:#d08770;">PHRASE</span><span style="color:#c0c5ce;">: &amp;</span><span style="color:#b48ead;">&#39;static </span><span style="color:#c0c5ce;">[</span><span style="color:#b48ead;">u8</span><span style="color:#c0c5ce;">] = </span><span style="color:#b48ead;">b</span><span style="color:#c0c5ce;">&quot;</span><span style="color:#a3be8c;">Hello World!</span><span style="color:#c0c5ce;">&quot;;
+
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span style="color:#c0c5ce;">() {
+    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> addr = ([</span><span style="color:#d08770;">127</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">], </span><span style="color:#d08770;">3000</span><span style="color:#c0c5ce;">).</span><span style="color:#96b5b4;">into</span><span style="color:#c0c5ce;">();
+
+    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> new_service = </span><span style="color:#96b5b4;">const_service</span><span style="color:#c0c5ce;">(</span><span style="color:#96b5b4;">service_fn</span><span style="color:#c0c5ce;">(|_| {
+        Ok(Response::&lt;hyper::Body&gt;::new()
+            .</span><span style="color:#96b5b4;">with_header</span><span style="color:#c0c5ce;">(ContentLength(</span><span style="color:#d08770;">PHRASE</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">len</span><span style="color:#c0c5ce;">() as </span><span style="color:#b48ead;">u64</span><span style="color:#c0c5ce;">))
+            .</span><span style="color:#96b5b4;">with_header</span><span style="color:#c0c5ce;">(ContentType::plaintext())
+            .</span><span style="color:#96b5b4;">with_body</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">PHRASE</span><span style="color:#c0c5ce;">))
+    }));
+
+    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> server = Http::new().</span><span style="color:#96b5b4;">bind</span><span style="color:#c0c5ce;">(&amp;addr, new_service).</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
+    println!(&quot;</span><span style="color:#a3be8c;">Listening on http://</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> with 1 thread.</span><span style="color:#c0c5ce;">&quot;, server.</span><span style="color:#96b5b4;">local_addr</span><span style="color:#c0c5ce;">().</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">());
+    server.</span><span style="color:#96b5b4;">run</span><span style="color:#c0c5ce;">().</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
+}
+</span></pre>
+<p>The last call to <code>server.run()</code> will block and the program will continue to run
+until terminated. At least that is what we expect to happen here.</p>
+<p>This example is included with the Hyper library and you can run the vulnerable
+version directly from there:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">git clone --branch v0.11.19 https://github.com/hyperium/hyper.git
+cd hyper
+cargo run --example hello
+</span></pre><h2 id="using-apachebench-to-attack-the-server">Using ApacheBench to attack the server</h2>
+<p>My go to tool for load testing is
+<a href="https://httpd.apache.org/docs/2.4/programs/ab.html">ApacheBench</a>, a simple
+command line tool for HTTP request testing. I played a bit with the command
+line options and made the number of concurrent requests a bit too high by
+mistake:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">$ ab -r -c 10000 -n 1000000 http://127.0.0.1:3000/
+Benchmarking 127.0.0.1 (be patient)
+socket: Too many open files (24)
+</span></pre>
+<p>Ah yes, 10k requests in parallel will probably not work because the <code>ab</code>
+process is only allowed to open a certain amount of ports. Let's check the
+limits for a Linux process running under my user account:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">$ ulimit -a
+core file size          (blocks, -c) 0
+data seg size           (kbytes, -d) unlimited
+scheduling priority             (-e) 0
+file size               (blocks, -f) unlimited
+pending signals                 (-i) 30562
+max locked memory       (kbytes, -l) 64
+max memory size         (kbytes, -m) unlimited
+open files                      (-n) 1024
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+stack size              (kbytes, -s) 8192
+cpu time               (seconds, -t) unlimited
+max user processes              (-u) 30562
+virtual memory          (kbytes, -v) unlimited
+file locks                      (-x) unlimited
+</span></pre>
+<p>Only 1024 open files/ports allowed.</p>
+<p>When I checked back on my Hyper server I was surprised to find it dead for the
+same reason:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">Listening on http://127.0.0.1:3000 with 1 thread.
+thread &#39;main&#39; panicked at &#39;called `Result::unwrap()` on an `Err` value: Io(Os {
+code: 24, kind: Other, message: &quot;Too many open files&quot; })&#39;, libcore/result.rs:945:5
+note: Run with `RUST_BACKTRACE=1` for a backtrace.
+</span></pre>
+<p>Oops, that is not good. A HTTP server should not just exit when a flood of HTTP
+requests comes in. It needs to be resilient and keep running at all times. You
+could argue that the open file limit simply must be configured to a higher
+value for production use. That way the problem can be postponed to even larger
+request volumes, but then the problem is the same: the server will abort and
+die.</p>
+<h2 id="a-naive-fix-with-a-loop">A naive fix with a loop</h2>
+<pre style="background-color:#2b303b;">
+<span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> addr = ([</span><span style="color:#d08770;">127</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">], </span><span style="color:#d08770;">3000</span><span style="color:#c0c5ce;">).</span><span style="color:#96b5b4;">into</span><span style="color:#c0c5ce;">();
+
+</span><span style="color:#b48ead;">loop </span><span style="color:#c0c5ce;">{
+    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> new_service = </span><span style="color:#96b5b4;">const_service</span><span style="color:#c0c5ce;">(</span><span style="color:#96b5b4;">service_fn</span><span style="color:#c0c5ce;">(|_| {
+        Ok(Response::&lt;hyper::Body&gt;::new()
+            .</span><span style="color:#96b5b4;">with_header</span><span style="color:#c0c5ce;">(ContentLength(</span><span style="color:#d08770;">PHRASE</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">len</span><span style="color:#c0c5ce;">() as </span><span style="color:#b48ead;">u64</span><span style="color:#c0c5ce;">))
+            .</span><span style="color:#96b5b4;">with_header</span><span style="color:#c0c5ce;">(ContentType::plaintext())
+            .</span><span style="color:#96b5b4;">with_body</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">PHRASE</span><span style="color:#c0c5ce;">))
+    }));
+
+    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> server = Http::new()
+        .</span><span style="color:#96b5b4;">bind</span><span style="color:#c0c5ce;">(&amp;addr, new_service)
+        .</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
+    println!(&quot;</span><span style="color:#a3be8c;">Listening on http://</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> with 1 thread.</span><span style="color:#c0c5ce;">&quot;, server.</span><span style="color:#96b5b4;">local_addr</span><span style="color:#c0c5ce;">().</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">());
+    </span><span style="color:#b48ead;">if let </span><span style="color:#c0c5ce;">Err(e) = server.</span><span style="color:#96b5b4;">run</span><span style="color:#c0c5ce;">() {
+        println!(&quot;</span><span style="color:#a3be8c;">Error: </span><span style="color:#d08770;">{:?}</span><span style="color:#c0c5ce;">&quot;, e);
+    }
+}
+</span></pre>
+<p>This &quot;works&quot; in the sense that the server does not die and just restarts
+itself. The problem with this approach is that other connections are dropped
+when an IO error occurs, causing a service interruption.</p>
+<h2 id="the-fix-in-hyper">The fix in Hyper</h2>
+<p>In order to fix this in Hyper itself I contributed
+<a href="https://docs.rs/hyper/0.11.22/hyper/server/struct.Http.html#method.sleep_on_errors"><code>sleep_on_errors()</code></a>. Starting a HTTP server with that setting will
+swallow IO errors internally and library users do not have to worry about it.
+In the case of &quot;Too many open files&quot; errors the server will just wait 10ms
+before trying to accept the TCP connection again, hoping that free ports have
+become available in the meantime.</p>
+<p>This setting is currently (Hyper v0.11.22) disabled by default and you must
+enable it like this:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> server = Http::new()
+    .</span><span style="color:#96b5b4;">sleep_on_errors</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">true</span><span style="color:#c0c5ce;">)
+    .</span><span style="color:#96b5b4;">bind</span><span style="color:#c0c5ce;">(&amp;addr, new_service)
+    .</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
+println!(&quot;</span><span style="color:#a3be8c;">Listening on http://</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> with 1 thread.</span><span style="color:#c0c5ce;">&quot;, server.</span><span style="color:#96b5b4;">local_addr</span><span style="color:#c0c5ce;">().</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">());
+server.</span><span style="color:#96b5b4;">run</span><span style="color:#c0c5ce;">().</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
+</span></pre>
+<p>Future versions of Hyper (probably starting with 0.12.x) will enable this
+setting per default to have a better developer experience. Progress is tracked
+in <a href="https://github.com/hyperium/hyper/issues/1455">this issue</a>.</p>
+<p>Thanks a lot to Paul Colomiets (the fix was copied from their
+<a href="https://github.com/tailhook/tk-listen">tk-listen</a> library) and Sean McArthur
+for helping me understand and fix this problem!</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Coming from a PHP background I'm not used to thinking about or handling IO
+errors. That is all handled by well tested web servers like Apache and Nginx,
+while I only care about application specific code in PHP. Using a low level
+library such as Hyper exposes more than just request/response handling. Maybe
+using a higher level framework such as <a href="https://rocket.rs/">Rocket</a> even for
+the most basic use case (such as my proxy) is a safer choice.</p>
+<p>I think that a HTTP server API such as Hyper should be secure by default and
+prevent server exits where possible. We will get there hopefully!</p>
+
+    </div>
+
+    
+    
+
+    <div class="post-footer">
+        
+            
+                <div class="post-tags">
+                    
+                        <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;rust&#x2F;">#rust</a>
+                    
+                        <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;rustnish&#x2F;">#rustnish</a>
+                    
+                </div>
+            
+            
+                <div class="post-nav">
+                    
+                        <a class="previous" href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;testing-memory-leaks-in-rust&#x2F;">‹ Testing memory leaks in Rust</a>
+                    
+                    
+                        <a class="next" href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;benchmarking-a-rust-web-application&#x2F;">Benchmarking a Rust web application ›</a>
+                    
+                    
+                    
+                </div>
+            
+
+        
+
+    </div>
+
+    
+    
+</article>
+
+
+      </div>
+    </main>
+
+    
+    <footer>
+      <p><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License"
+            style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work by
+        <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Klaus Purer</span> is licensed
+        under a <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
+          Attribution-ShareAlike 4.0 International License</a>.
+      </p>
+    </footer>
+    
+  </div>
+
+  
+  <script type="text/javascript" src="https:&#x2F;&#x2F;klau.si&#x2F;even.js"></script>
+  
+</body>
+
+</html>

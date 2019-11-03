@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Klausi&#x27;s Weblog - Using Visual Studio Code for Rust on Ubuntu</title>
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+  
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
+  
+  
+
+  
+  <link rel="stylesheet" href="https:&#x2F;&#x2F;klau.si&#x2F;site.css">
+  
+  
+
+  
+  
+</head>
+
+<body>
+  <div class="container">
+
+    <div id="mobile-navbar" class="mobile-navbar">
+      <div class="mobile-header-logo">
+        <a href="https:&#x2F;&#x2F;klau.si" title="Klausi&#x27;s Weblog" rel="home" class="site-logo site-title">
+          <img src="https:&#x2F;&#x2F;klau.si&#x2F;logo.png" alt="Klausi&#x27;s Weblog logo">
+        </a>
+        <a href="/" class="logo">Klausi&#x27;s Weblog</a>
+      </div>
+      <div class="mobile-navbar-icon icon-out">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <nav id="mobile-menu" class="mobile-menu slideout-menu slideout-menu-left">
+      <ul class="mobile-menu-list">
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si">
+            Home
+          </a>
+        </li>
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;speaking">
+            Speaking
+          </a>
+        </li>
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si&#x2F;archive.html">
+            Archive
+          </a>
+        </li>
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+            RSS
+          </a>
+        </li>
+        
+      </ul>
+    </nav>
+
+    <header id="header">
+      <div class="logo">
+        <a href="https:&#x2F;&#x2F;klau.si" title="Klausi&#x27;s Weblog" rel="home" class="site-logo site-title">
+          <img src="https:&#x2F;&#x2F;klau.si&#x2F;logo.png" alt="Klausi&#x27;s Weblog logo">
+        </a>
+        <a href="https:&#x2F;&#x2F;klau.si">Klausi&#x27;s Weblog</a>
+      </div>
+      <nav class="menu">
+        <ul>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si">
+              Home
+            </a>
+          </li>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;speaking">
+              Speaking
+            </a>
+          </li>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;archive.html">
+              Archive
+            </a>
+          </li>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+              RSS
+            </a>
+          </li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="content" id="mobile-panel">
+        
+
+
+<div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">Contents</h2>
+    <div class="post-toc-content always-active">
+        <nav id="TableOfContents">
+            <ul>
+                
+                <li>
+                    <a href="https://klau.si/blog/using-visual-studio-code-for-rust-on-ubuntu/#installing-rust-on-ubuntu" class="toc-link">Installing Rust on Ubuntu</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://klau.si/blog/using-visual-studio-code-for-rust-on-ubuntu/#installing-vscode-and-extensions" class="toc-link">Installing VSCode and extensions</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://klau.si/blog/using-visual-studio-code-for-rust-on-ubuntu/#conclusion" class="toc-link">Conclusion</a>
+                    
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+<article class="post">
+    
+    <header class="post__header">
+        <h1 class="post__title">
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;using-visual-studio-code-for-rust-on-ubuntu&#x2F;">Using Visual Studio Code for Rust on Ubuntu</a>
+        </h1>
+        <div class="post__meta">
+            <span class="post__time">2017-05-28</span>
+            
+        </div>
+    </header>
+
+    <div class="post-content">
+      <p>I already wrote about <a href="https://klau.si/blog/using-eclipse-ide-for-rust-on-ubuntu/">using Eclipse for Rust development</a> but after trying
+<a href="https://code.visualstudio.com/">Visual Studio Code</a> (VSCode) I think it is
+slightly better than the Eclipse integration:</p>
+<ul>
+<li>when the cursor is at a variable the same variable is highlighted elsewhere.</li>
+<li>tooltip popups when hovering over variables, functions, methods.</li>
+<li>better native support for Git and Markdown files</li>
+</ul>
+<p>Syntax highlighting, autocompletion, Ctrl + Click on functions and
+auto-formatting of course also work in VSCode as you would expect from an IDE.</p>
+<h2 id="installing-rust-on-ubuntu">Installing Rust on Ubuntu</h2>
+<p>First make sure you have a Rust toolchain environment set up:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">curl https://sh.rustup.rs -sSf | sh
+</span></pre>
+<p>(the usual security warning: make sure to trust your sources before you execute
+random scripts from the internet.)</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">source $HOME/.cargo/env
+cargo install racer
+cargo install rustfmt
+rustup component add rust-src
+</span></pre><h2 id="installing-vscode-and-extensions">Installing VSCode and extensions</h2>
+<p>Download the Deb package from
+<a href="https://code.visualstudio.com">code.visualstudio.com</a> and install it with the
+Ubuntu software center or dpkg. You should now have a launcher for vscode and
+the <code>code</code> command to start the IDE.</p>
+<p>Next install the following extensions:</p>
+<ul>
+<li>Rust code completion and auto formatting:
+<a href="https://marketplace.visualstudio.com/items?itemName=kalitaalexey.vscode-rust">Rust</a></li>
+<li>TOML configuration files syntax highlighting: <a href="https://marketplace.visualstudio.com/items?itemName=bungcip.better-toml">Better
+TOML</a></li>
+<li>LLDB debugging for Rust programs: <a href="https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb">LLDB
+Debugger</a></li>
+<li>nice file icons:
+<a href="https://marketplace.visualstudio.com/items?itemName=robertohuertasm.vscode-icons">vscode-icons</a></li>
+</ul>
+<p>The Rust extension has experimental support for <a href="https://github.com/rust-lang-nursery/rls">Rust Language
+Server</a>, but it does not work
+reliably yet. That's why you have to enable the racer legacy mode in the VSCode
+settings.</p>
+<p>Go to File -&gt; Preferences -&gt; Settings and the editor will open your settings
+JSON file. Here are some very useful settings you should use:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">{
+    &quot;</span><span style="color:#a3be8c;">editor.formatOnSave</span><span style="color:#c0c5ce;">&quot;: </span><span style="color:#d08770;">true</span><span style="color:#c0c5ce;">,
+    &quot;</span><span style="color:#a3be8c;">editor.rulers</span><span style="color:#c0c5ce;">&quot;: [
+        </span><span style="color:#d08770;">80
+    </span><span style="color:#c0c5ce;">],
+    &quot;</span><span style="color:#a3be8c;">files.trimTrailingWhitespace</span><span style="color:#c0c5ce;">&quot;: </span><span style="color:#d08770;">true</span><span style="color:#c0c5ce;">,
+    &quot;</span><span style="color:#a3be8c;">rust.actionOnSave</span><span style="color:#c0c5ce;">&quot;: &quot;</span><span style="color:#a3be8c;">check</span><span style="color:#c0c5ce;">&quot;,
+    &quot;</span><span style="color:#a3be8c;">rust.forceLegacyMode</span><span style="color:#c0c5ce;">&quot;: </span><span style="color:#d08770;">true</span><span style="color:#c0c5ce;">,
+    &quot;</span><span style="color:#a3be8c;">workbench.iconTheme</span><span style="color:#c0c5ce;">&quot;: &quot;</span><span style="color:#a3be8c;">vscode-icons</span><span style="color:#c0c5ce;">&quot;
+}
+</span></pre><h2 id="conclusion">Conclusion</h2>
+<p>Although VSCode has a sparse user interface (Back/Forward buttons are missing
+for example when navigating through code) it is a decent IDE for Rust
+development. It offers freely configurable keyboard shortcuts and a
+comprehensible settings editor. The Rust extension is a bit better than the one
+for Eclipse IDE.</p>
+
+    </div>
+
+    
+    
+
+    <div class="post-footer">
+        
+            
+                <div class="post-tags">
+                    
+                        <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;rust&#x2F;">#rust</a>
+                    
+                        <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;rustnish&#x2F;">#rustnish</a>
+                    
+                </div>
+            
+            
+                <div class="post-nav">
+                    
+                        <a class="previous" href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;writing-integration-tests-in-rust&#x2F;">‹ Writing integration tests in Rust</a>
+                    
+                    
+                        <a class="next" href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;converting-a-hyper-server-to-tokio&#x2F;">Converting a Hyper server to Tokio ›</a>
+                    
+                    
+                    
+                </div>
+            
+
+        
+
+    </div>
+
+    
+    
+</article>
+
+
+      </div>
+    </main>
+
+    
+    <footer>
+      <p><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License"
+            style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work by
+        <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Klaus Purer</span> is licensed
+        under a <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
+          Attribution-ShareAlike 4.0 International License</a>.
+      </p>
+    </footer>
+    
+  </div>
+
+  
+  <script type="text/javascript" src="https:&#x2F;&#x2F;klau.si&#x2F;even.js"></script>
+  
+</body>
+
+</html>

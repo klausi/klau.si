@@ -19,6 +19,27 @@
         </url>
     
         <url>
+            <loc>https%3A//klau.si/blog/benchmarking-a-rust-web-application/</loc>
+            
+                <lastmod>2018-08-31</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https%3A//klau.si/blog/converting-a-hyper-server-to-tokio/</loc>
+            
+                <lastmod>2017-07-16</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https%3A//klau.si/blog/crashing-a-rust-hyper-server-with-a-denial-of-service-attack/</loc>
+            
+                <lastmod>2018-03-11</lastmod>
+            
+        </url>
+    
+        <url>
             <loc>https%3A//klau.si/blog/drupalcamp-cracking-drupal/</loc>
             
                 <lastmod>2013-12-10</lastmod>
@@ -103,6 +124,62 @@
         </url>
     
         <url>
+            <loc>https%3A//klau.si/blog/getting-started-with-rust/</loc>
+            
+                <lastmod>2017-04-30</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https%3A//klau.si/blog/mocking-in-rust-with-conditional-compilation/</loc>
+            
+                <lastmod>2019-03-31</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https%3A//klau.si/blog/replacing-unwrap-and-avoiding-panics-in-rust/</loc>
+            
+                <lastmod>2017-08-16</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https%3A//klau.si/blog/static-variables-made-thread-safe-in-rust/</loc>
+            
+                <lastmod>2017-09-09</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https%3A//klau.si/blog/testing-memory-leaks-in-rust/</loc>
+            
+                <lastmod>2017-10-06</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https%3A//klau.si/blog/using-eclipse-ide-for-rust-on-ubuntu/</loc>
+            
+                <lastmod>2017-05-06</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https%3A//klau.si/blog/using-visual-studio-code-for-rust-on-ubuntu/</loc>
+            
+                <lastmod>2017-05-28</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https%3A//klau.si/blog/writing-integration-tests-in-rust/</loc>
+            
+                <lastmod>2017-05-25</lastmod>
+            
+        </url>
+    
+        <url>
             <loc>https%3A//klau.si/contact/</loc>
             
         </url>
@@ -114,6 +191,11 @@
     
         <url>
             <loc>https%3A//klau.si/page/2/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https%3A//klau.si/page/3/</loc>
             
         </url>
     
@@ -154,6 +236,11 @@
     
         <url>
             <loc>https%3A//klau.si/tags/rust/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https%3A//klau.si/tags/rustnish/</loc>
             
         </url>
     

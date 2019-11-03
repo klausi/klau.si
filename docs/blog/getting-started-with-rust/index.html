@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Klausi&#x27;s Weblog - Getting started with Rust</title>
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+  
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
+  
+  
+
+  
+  <link rel="stylesheet" href="https:&#x2F;&#x2F;klau.si&#x2F;site.css">
+  
+  
+
+  
+  
+</head>
+
+<body>
+  <div class="container">
+
+    <div id="mobile-navbar" class="mobile-navbar">
+      <div class="mobile-header-logo">
+        <a href="https:&#x2F;&#x2F;klau.si" title="Klausi&#x27;s Weblog" rel="home" class="site-logo site-title">
+          <img src="https:&#x2F;&#x2F;klau.si&#x2F;logo.png" alt="Klausi&#x27;s Weblog logo">
+        </a>
+        <a href="/" class="logo">Klausi&#x27;s Weblog</a>
+      </div>
+      <div class="mobile-navbar-icon icon-out">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <nav id="mobile-menu" class="mobile-menu slideout-menu slideout-menu-left">
+      <ul class="mobile-menu-list">
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si">
+            Home
+          </a>
+        </li>
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;speaking">
+            Speaking
+          </a>
+        </li>
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si&#x2F;archive.html">
+            Archive
+          </a>
+        </li>
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+            RSS
+          </a>
+        </li>
+        
+      </ul>
+    </nav>
+
+    <header id="header">
+      <div class="logo">
+        <a href="https:&#x2F;&#x2F;klau.si" title="Klausi&#x27;s Weblog" rel="home" class="site-logo site-title">
+          <img src="https:&#x2F;&#x2F;klau.si&#x2F;logo.png" alt="Klausi&#x27;s Weblog logo">
+        </a>
+        <a href="https:&#x2F;&#x2F;klau.si">Klausi&#x27;s Weblog</a>
+      </div>
+      <nav class="menu">
+        <ul>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si">
+              Home
+            </a>
+          </li>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;speaking">
+              Speaking
+            </a>
+          </li>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;archive.html">
+              Archive
+            </a>
+          </li>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+              RSS
+            </a>
+          </li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="content" id="mobile-panel">
+        
+
+
+<div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">Contents</h2>
+    <div class="post-toc-content always-active">
+        <nav id="TableOfContents">
+            <ul>
+                
+                <li>
+                    <a href="https://klau.si/blog/getting-started-with-rust/#the-use-case" class="toc-link">The use case</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://klau.si/blog/getting-started-with-rust/#installing-rust" class="toc-link">Installing Rust</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://klau.si/blog/getting-started-with-rust/#project-setup" class="toc-link">Project setup</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://klau.si/blog/getting-started-with-rust/#running-the-project" class="toc-link">Running the project</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://klau.si/blog/getting-started-with-rust/#picking-an-editor" class="toc-link">Picking an editor</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://klau.si/blog/getting-started-with-rust/#installing-a-http-library" class="toc-link">Installing a HTTP library</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://klau.si/blog/getting-started-with-rust/#namespaces-and-modules-crates" class="toc-link">Namespaces and modules (crates)</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://klau.si/blog/getting-started-with-rust/#writing-an-http-server" class="toc-link">Writing an HTTP server</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://klau.si/blog/getting-started-with-rust/#handling-http-requests" class="toc-link">Handling HTTP requests</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://klau.si/blog/getting-started-with-rust/#conclusion" class="toc-link">Conclusion</a>
+                    
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+<article class="post">
+    
+    <header class="post__header">
+        <h1 class="post__title">
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;getting-started-with-rust&#x2F;">Getting started with Rust</a>
+        </h1>
+        <div class="post__meta">
+            <span class="post__time">2017-04-30</span>
+            
+        </div>
+    </header>
+
+    <div class="post-content">
+      <p><img src="https://klau.si/blog/getting-started-with-rust/rustnish2.png" alt="Rustnish logo" /></p>
+<p><a href="https://www.rust-lang.org">Rust</a> is still very alien to me and I want to write
+a bit of code in it to get a feeling of the concepts and restrictions it
+enforces.</p>
+<p id="zola-continue-reading"><a name="continue-reading"></a></p>
+<h2 id="the-use-case">The use case</h2>
+<p>I worked through Rust examples but they always feel theoretical and artificial.
+To get dirty with something real I thought of playing with something concrete.
+Being a big fan of <a href="https://varnish-cache.org/">Varnish</a> (a reverse proxy that
+sits in front of your web application and caches HTTP requests) - that sounds
+interesting to emulate in Rust? Disclaimer: I have never looked at the Varnish
+source code and I will probably make very obvious mistakes.</p>
+<p>Goals:</p>
+<ul>
+<li>write something like Varnish that caches HTTP GET requests.</li>
+<li>use as a lot of already existing work (Rust HTTP libraries) to avoid writing
+too much code.</li>
+<li>iterate in smaller goals to quickly get something working.</li>
+</ul>
+<p>With that in mind I have set out the requirement for the first step:</p>
+<blockquote>
+<p>A webserver like Apache is listening on port 80. Write a reverse proxy
+service that does nothing but forwarding HTTP requests to port 80. The service
+must listen on port 9090. The service must not modify the HTTP response in any
+way.</p>
+</blockquote>
+<h2 id="installing-rust">Installing Rust</h2>
+<p>I'm using Ubuntu as operating system and everything was very straight forward
+by <a href="https://www.rust-lang.org/en-US/install.html">following the installation
+instructions</a>:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">curl https://sh.rustup.rs -sSf | sh
+</span></pre>
+<p>(the usual security warning: make sure to trust your sources before you execute
+random scripts from the internet.)</p>
+<p>That single script installs all rust command line utilities you need into your
+home directory thereby not messing up your global Ubuntu system (yay!). It
+gives you the following:</p>
+<ul>
+<li><code>rustup</code>: tool chain installer that installs/updates all the Rust things
+(run <code>rustup update</code> to update Rust itself)</li>
+<li><code>rustc</code>: the compiler that turns your Rust code into executables</li>
+<li><code>cargo</code>: the Rust package and dependency manager, as well as build tool</li>
+</ul>
+<h2 id="project-setup">Project setup</h2>
+<p>We can use <code>cargo</code> to create a new project:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">cargo new --bin rustnish
+</span></pre>
+<p>That creates a new folder &quot;rustnish&quot; (the project name) and the <code>--bin</code>
+option tells cargo to create a standalone application (instead of a library).</p>
+<h2 id="running-the-project">Running the project</h2>
+<p>Cargo has created a &quot;Hello World!&quot; example in src/main.rs in our project. We
+can execute it like this:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">$ cargo run
+   Compiling rustnish v0.1.0 (file:///home/klausi/workspace/rustnish)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.26 secs
+     Running `target/debug/rustnish`
+Hello, world!
+</span></pre>
+<p>Success! With cargo you don't have to think about compiler commands or anything -
+whenever you modify your source files just execute <code>cargo run</code> and it
+will detect file changes and compile everything for you. A big thank you to the
+Rust community at this point for providing such excellent tooling with the
+language itself!</p>
+<h2 id="picking-an-editor">Picking an editor</h2>
+<p><strong>Update: <a href="https://klau.si/blog/using-visual-studio-code-for-rust-on-ubuntu/">New blog post about choosing Visual Studio Code for Rust</a>
+because of better IDE support.</strong></p>
+<p><a href="https://areweideyet.com/">areweideyet.com</a> lists editors and Integrated
+Development Environments (IDE) for Rust. I chose <a href="https://atom.io/">Atom</a>
+because it seems to have the most IDE features. Make sure to install all the
+additional packages on
+<a href="https://areweideyet.com/#atom">https://areweideyet.com/#atom</a>. Also make sure
+to install <code>rustfmt</code> which can automatically format your code:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">cargo install rustfmt
+</span></pre>
+<p>It is crucial to have good language support for navigating around in source
+code. While working with Atom I really missed the functionality to click on
+functions or types to jump to their definition with Ctrl+Click. That works in
+Netbeans for example for Java and PHP and I would be really grateful if
+somebody could show me how to do that in Atom and Rust.</p>
+<h2 id="installing-a-http-library">Installing a HTTP library</h2>
+<p>After a bit of research I found <a href="https://hyper.rs/">Hyper</a> for Rust. That will
+give us a client and server library to deal with HTTP requests so that we don't
+need to parse HTTP requests ourselves.</p>
+<p><strong>Update 2017-07-16</strong>: A new version of Hyper has been released and setting up
+the server works a bit differently now. See the newer blog post about
+<strong><a href="https://klau.si/blog/converting-a-hyper-server-to-tokio/">Converting a Hyper server to Tokio</a></strong>.</p>
+<p>Edit Cargo.toml in your project and add a dependency line:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">[dependencies]
+</span><span style="color:#bf616a;">hyper </span><span style="color:#c0c5ce;">= &quot;</span><span style="color:#a3be8c;">0.10.9</span><span style="color:#c0c5ce;">&quot;
+</span></pre>
+<p>The next time you execute <code>cargo run</code> it will fetch the Hyper dependency
+for you, compile everything and then run your program. Super easy!</p>
+<h2 id="namespaces-and-modules-crates">Namespaces and modules (crates)</h2>
+<p>Let's walk through the Rust code in src/main.rs that can be found on
+<a href="https://github.com/klausi/rustnish">Github</a>.</p>
+<p>Rust has a full namespace and module system and makes importing libraries
+straightforward:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#b48ead;">extern crate</span><span style="color:#c0c5ce;"> hyper;
+</span><span style="color:#b48ead;">use </span><span style="color:#c0c5ce;">hyper::server::{Server, Request, Response};
+</span></pre>
+<p>That tells the compiler to use the Hyper library and import the &quot;Server&quot; type
+for example to make use of it in our program. &quot;Server&quot; is a complex type called
+a <code>struct</code> in Rust (comparable to a class in PHP/Java, but without
+inheritance and instead a trait system). I'm still confused by all the Rust
+terminology because an instance of a struct is not called on object. But there
+are also trait objects in Rust, so the term is in use and a different concept
+on its own. In general it feels like Rust is overloaded with concepts that you
+can learn about. Like in C++.</p>
+<h2 id="writing-an-http-server">Writing an HTTP server</h2>
+<p>There must not be any expressions in the global scope in Rust, all logic has to
+live in functions. Coming from a scripting language this was <a href="http://stackoverflow.com/questions/41086033/how-do-i-start-a-web-server-in-rust-with-hyper">the first thing I got
+wrong</a> :-)</p>
+<p>The main() function is the entry point for the program execution:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span style="color:#c0c5ce;">() {}
+</span></pre>
+<p>Rust uses the fn keyword to define a function. &quot;fn&quot; instead of &quot;function&quot; is an
+optimization to quicker write programs, but of course we know that we should
+optimize for humans reading programs faster instead. &quot;fn&quot; is not a natural word
+and harder to recognize for newcomers. (General programming rant: never
+abbreviate things because somebody will have to read and understand this.)</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span style="color:#c0c5ce;">() {
+    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> server = Server::http(&quot;</span><span style="color:#a3be8c;">127.0.0.1:9090</span><span style="color:#c0c5ce;">&quot;).</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
+}
+</span></pre>
+<p>We start an HTTP server on localhost listening on port 9090. Our test program
+should only be reachable from our own computer, so localhost only seems
+appropriate.</p>
+<p>The <code>unwrap()</code> call here tells the compiler to ignore errors that could
+happen when we try to bind our server to the interface/port. For example
+another service could occupy that port already. In that case the unwrap() call
+will raise a panic (comparable to a runtime exception) and our program will
+terminate.</p>
+<p>Rust does not have an exception system like in PHP/Java. All functions need to
+return any outcome in their return type, that's why return types in Rust are
+often complex types that express multiple different result possibilities a
+function can have.</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span style="color:#c0c5ce;">() {
+    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> server = Server::http(&quot;</span><span style="color:#a3be8c;">127.0.0.1:9090</span><span style="color:#c0c5ce;">&quot;).</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
+    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> _guard = server.</span><span style="color:#96b5b4;">handle</span><span style="color:#c0c5ce;">(pipe_through);
+    println!(&quot;</span><span style="color:#a3be8c;">Listening on http://127.0.0.1:9090</span><span style="color:#c0c5ce;">&quot;);
+}
+
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">pipe_through</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">request</span><span style="color:#c0c5ce;">: Request, </span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">response</span><span style="color:#c0c5ce;">: Response) {}
+</span></pre>
+<p>Next we tell the server instance which of our function will handle requests by
+passing in the function name &quot;pipe_through&quot;. It receives an HTTP request
+instance and a mutable HTTP response instance that we will populate later.</p>
+<p>If a function returns something in Rust you can't ignore it, so we need this
+superfluous unused variable here. Starting it with &quot;_&quot; tells the compiler to
+ignore it.</p>
+<p>The Hyper server will now listen in the background for incoming requests while
+we write an output message in parallel that the server is running.
+<code>println!()</code> is a macro in Rust (yet another concept), but you can think of
+it as just a function call with variable arguments for now.</p>
+<h2 id="handling-http-requests">Handling HTTP requests</h2>
+<p>Let's look at the pipe_trough() function that will handle requests:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">pipe_through</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">request</span><span style="color:#c0c5ce;">: Request, </span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">response</span><span style="color:#c0c5ce;">: Response) {
+    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> path = </span><span style="color:#b48ead;">match</span><span style="color:#c0c5ce;"> request.uri {
+        RequestUri::AbsolutePath(p) =&gt; p,
+        RequestUri::AbsoluteUri(url) =&gt; url.</span><span style="color:#96b5b4;">path</span><span style="color:#c0c5ce;">().</span><span style="color:#96b5b4;">to_string</span><span style="color:#c0c5ce;">(),
+        RequestUri::Authority(p) =&gt; p,
+        RequestUri::Star =&gt; &quot;</span><span style="color:#a3be8c;">*</span><span style="color:#c0c5ce;">&quot;.</span><span style="color:#96b5b4;">to_string</span><span style="color:#c0c5ce;">(),
+    };
+    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> host = </span><span style="color:#b48ead;">match</span><span style="color:#c0c5ce;"> request.headers.get::&lt;Host&gt;() {
+        None =&gt; {
+            </span><span style="color:#b48ead;">return </span><span style="color:#96b5b4;">error_page</span><span style="color:#c0c5ce;">(&quot;</span><span style="color:#a3be8c;">No host header in request</span><span style="color:#c0c5ce;">&quot;.</span><span style="color:#96b5b4;">to_string</span><span style="color:#c0c5ce;">(),
+                              StatusCode::BadRequest,
+                              response)
+        }
+        Some(h) =&gt; h,
+    };
+</span></pre>
+<p>We us pattern matching with the <code>match</code> keyword here which works a bit like
+switch statements in other languages but seems to be more powerful. That way we
+can build variables from the different possible values of the incoming request
+and also terminate early if the HTTP Host header is missing for example (with
+our custom error_page() functions defined later).</p>
+<p>Do you see all the <code>to_string()</code> weirdness here? Apparently statically
+defined strings in quotes are not of the String type and you need to tell Rust
+to allocate memory for them if you want to use them where String is expected.
+While writing this code I never knew when that must be done, so I just throw
+lots of <code>to_string()</code> calls in whenever the compiler complains about a type
+mismatch.</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> hostname = host.hostname.</span><span style="color:#96b5b4;">to_string</span><span style="color:#c0c5ce;">();
+</span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> protocol = &quot;</span><span style="color:#a3be8c;">http://</span><span style="color:#c0c5ce;">&quot;.</span><span style="color:#96b5b4;">to_string</span><span style="color:#c0c5ce;">();
+</span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> url_string = protocol + &amp;hostname + &amp;path;
+</span></pre>
+<p>A simple task such as string concatenation is really complicated in Rust. Why
+is the protocol variable the only one without the reference operator? Why do I
+have to convert the hostname variable to a string first if it is a reference
+already? Same spiel as before: randomly throwing in <code>to_string()</code> and &quot;&amp;&quot;
+operators until the compiler shuts up and we have our desired result in the
+url_string variable.</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> client = Client::new();
+</span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> request_builder = client
+    .</span><span style="color:#96b5b4;">request</span><span style="color:#c0c5ce;">(request.method, url)
+    .</span><span style="color:#96b5b4;">headers</span><span style="color:#c0c5ce;">(request.headers.</span><span style="color:#96b5b4;">clone</span><span style="color:#c0c5ce;">());
+</span><span style="color:#b48ead;">let mut</span><span style="color:#c0c5ce;"> upstream_response = request_builder.</span><span style="color:#96b5b4;">send</span><span style="color:#c0c5ce;">().</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
+</span></pre>
+<p>Using the Hyper HTTP client was pretty straightforward. The only thing that I
+don't understand is the <code>clone()</code> call here. I just want to forward the
+incoming request headers to the upstream request I'm building. They are of the
+same type, so why do I have to clone them? Maybe this has something to do with
+the Rust ownership model, but the compiler errors were not clear on that.</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">*response.</span><span style="color:#96b5b4;">status_mut</span><span style="color:#c0c5ce;">() = upstream_response.status;
+*response.</span><span style="color:#96b5b4;">headers_mut</span><span style="color:#c0c5ce;">() = upstream_response.headers.</span><span style="color:#96b5b4;">clone</span><span style="color:#c0c5ce;">();
+io::copy(&amp;</span><span style="color:#b48ead;">mut</span><span style="color:#c0c5ce;"> upstream_response, &amp;</span><span style="color:#b48ead;">mut</span><span style="color:#c0c5ce;"> response.</span><span style="color:#96b5b4;">start</span><span style="color:#c0c5ce;">().</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">()).</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
+</span></pre>
+<p>OK, I admit that in those last 3 lines I really have no idea anymore what I'm
+doing. I have to use the &quot;*&quot; operator because there is no other way to modify
+the response instance. Headers are weird again of course, so we do some cloning
+for good measure. The IO copying is moving over the HTTP response body which is
+represented by streams (which makes sense, you can have large data bodies). It
+feels wrong to use io from the standard library for this when there really
+should be a method
+response.use_this_output_stream_as_your_output_stream(&amp;stream).</p>
+<p>And yes, there are way too many <code>unwrap()</code> calls in my code, indicating
+that there is lots of error handling missing and this application will raise
+lots of panics when given invalid data.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Rust is one of the most powerful languages I have seen, giving you lots of
+tools to write safe code. I love the strictness of the compiler that reminds
+you of mistakes that you overlooked. The type and trait system is great, as
+well as the explicit handling of mutable vs. immutable variables. This style is
+definitely the future of programming.</p>
+<p>That being said Rust is complex to use. I struggled a lot with going in circles
+between my code, the API documentation and other example code. At times I felt
+like working for the compiler and not for the sake of making progress in my
+program. It annoys me that I wrote code that I don't fully understand, but that
+is probably the case for every beginner in a new language :-)</p>
+<p>A big thank you to the Hyper library authors for their powerful HTTP server and
+client API. While I had some minor complaints the exposed API surface felt
+exactly right to be productive fairly quickly.</p>
+<p>Stay tuned for future blog posts where I plan to explore Configuration file
+handling, Automated Testing, Structuring larger programs, Benchmarking and more.</p>
+
+    </div>
+
+    
+    
+
+    <div class="post-footer">
+        
+            
+                <div class="post-tags">
+                    
+                        <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;rust&#x2F;">#rust</a>
+                    
+                        <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;rustnish&#x2F;">#rustnish</a>
+                    
+                </div>
+            
+            
+                <div class="post-nav">
+                    
+                        <a class="previous" href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;drupalcon-automated-testing-phpunit&#x2F;">‹ Drupalcon 2016 talk: Automated Testing: PHPUnit all the way</a>
+                    
+                    
+                        <a class="next" href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;using-eclipse-ide-for-rust-on-ubuntu&#x2F;">Using Eclipse IDE for Rust on Ubuntu ›</a>
+                    
+                    
+                    
+                </div>
+            
+
+        
+
+    </div>
+
+    
+    
+</article>
+
+
+      </div>
+    </main>
+
+    
+    <footer>
+      <p><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License"
+            style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work by
+        <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Klaus Purer</span> is licensed
+        under a <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
+          Attribution-ShareAlike 4.0 International License</a>.
+      </p>
+    </footer>
+    
+  </div>
+
+  
+  <script type="text/javascript" src="https:&#x2F;&#x2F;klau.si&#x2F;even.js"></script>
+  
+</body>
+
+</html>

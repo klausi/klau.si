@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Klausi&#x27;s Weblog - Mocking in Rust with conditional compilation</title>
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+  
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
+  
+  
+
+  
+  <link rel="stylesheet" href="https:&#x2F;&#x2F;klau.si&#x2F;site.css">
+  
+  
+
+  
+  
+</head>
+
+<body>
+  <div class="container">
+
+    <div id="mobile-navbar" class="mobile-navbar">
+      <div class="mobile-header-logo">
+        <a href="https:&#x2F;&#x2F;klau.si" title="Klausi&#x27;s Weblog" rel="home" class="site-logo site-title">
+          <img src="https:&#x2F;&#x2F;klau.si&#x2F;logo.png" alt="Klausi&#x27;s Weblog logo">
+        </a>
+        <a href="/" class="logo">Klausi&#x27;s Weblog</a>
+      </div>
+      <div class="mobile-navbar-icon icon-out">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <nav id="mobile-menu" class="mobile-menu slideout-menu slideout-menu-left">
+      <ul class="mobile-menu-list">
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si">
+            Home
+          </a>
+        </li>
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;speaking">
+            Speaking
+          </a>
+        </li>
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si&#x2F;archive.html">
+            Archive
+          </a>
+        </li>
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+            RSS
+          </a>
+        </li>
+        
+      </ul>
+    </nav>
+
+    <header id="header">
+      <div class="logo">
+        <a href="https:&#x2F;&#x2F;klau.si" title="Klausi&#x27;s Weblog" rel="home" class="site-logo site-title">
+          <img src="https:&#x2F;&#x2F;klau.si&#x2F;logo.png" alt="Klausi&#x27;s Weblog logo">
+        </a>
+        <a href="https:&#x2F;&#x2F;klau.si">Klausi&#x27;s Weblog</a>
+      </div>
+      <nav class="menu">
+        <ul>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si">
+              Home
+            </a>
+          </li>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;speaking">
+              Speaking
+            </a>
+          </li>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;archive.html">
+              Archive
+            </a>
+          </li>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+              RSS
+            </a>
+          </li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="content" id="mobile-panel">
+        
+
+
+<div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">Contents</h2>
+    <div class="post-toc-content always-active">
+        <nav id="TableOfContents">
+            <ul>
+                
+                <li>
+                    <a href="https://klau.si/blog/mocking-in-rust-with-conditional-compilation/#conditional-compilation-for-test-types" class="toc-link">Conditional compilation for test types</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://klau.si/blog/mocking-in-rust-with-conditional-compilation/#integration-tests-not-affected" class="toc-link">Integration tests not affected</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://klau.si/blog/mocking-in-rust-with-conditional-compilation/#downsides-of-conditional-compilation-mocks" class="toc-link">Downsides of conditional compilation mocks</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://klau.si/blog/mocking-in-rust-with-conditional-compilation/#conclusion" class="toc-link">Conclusion</a>
+                    
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+<article class="post">
+    
+    <header class="post__header">
+        <h1 class="post__title">
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;mocking-in-rust-with-conditional-compilation&#x2F;">Mocking in Rust with conditional compilation</a>
+        </h1>
+        <div class="post__meta">
+            <span class="post__time">2019-03-31</span>
+            
+        </div>
+    </header>
+
+    <div class="post-content">
+      <p>When writing automated unit tests for your application you will probably need to use <a href="https://en.wikipedia.org/wiki/Mock_object">mocks</a> at some point. Classical object-oriented programming languages such as PHP solve this with reflection where mock object types are created during test runtime. The code under test expects a certain interface or class and the test code passes mock objects that implement the interface or are a subclass.</p>
+<p>Similar approaches exist in Rust where mock objects are used to test code that expects a trait type. There is a wonderful <a href="https://asomers.github.io/mock_shootout/">Rust mock framework comparison</a> by Alan Somers that lists their features. The biggest problem with most of them as far as I can see is that they cannot mock a foreign <code>struct</code> you are using in your code. Rust does not have a concept of object inheritance for structs so there is no way to mimic a struct type from the standard library or an external crate.</p>
+<p>One workaround for that is to refactor your code to use traits/generics instead of concrete structs. That way the implementation is agnostic to whatever struct is used - test code can pass mocks that satisfy the expected trait bounds. The downside is that you might have to invent traits which can make your code more complex just to satisfy test requirements.</p>
+<p>Another solution is to use one of Rust's powerful meta programming capabilities: <a href="https://doc.rust-lang.org/reference/conditional-compilation.html">conditional compilation</a>.</p>
+<h2 id="conditional-compilation-for-test-types">Conditional compilation for test types</h2>
+<p>This was quite a revelation to me and still blows my mind: you can just swap out a complete type during test runs! I first found this when looking at the <a href="https://github.com/maidsafe/lru_time_cache">lru_time_cache crate</a> and the <a href="https://github.com/pcsm/test_double">test_double crate</a>.</p>
+<p>Let's look at a concrete use case as I implemented for <a href="https://github.com/klausi/rustnish/blob/goal-11/src/cache.rs">the cache part</a> of my Rustnish project (a fork of the mentioned lru_time_cache crate). The cache has an <code>insert()</code> and <code>len()</code> method defined like this:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#b48ead;">use </span><span style="color:#c0c5ce;">std::time::Instant;
+
+</span><span style="color:#65737e;">/// Inserts a key-value pair into the cache.
+</span><span style="color:#b48ead;">pub fn </span><span style="color:#8fa1b3;">insert</span><span style="color:#c0c5ce;">(&amp;</span><span style="color:#b48ead;">mut </span><span style="color:#bf616a;">self</span><span style="color:#c0c5ce;">, </span><span style="color:#bf616a;">key</span><span style="color:#c0c5ce;">: Key, </span><span style="color:#bf616a;">value</span><span style="color:#c0c5ce;">: Value, </span><span style="color:#bf616a;">expires</span><span style="color:#c0c5ce;">: Instant) -&gt; Option&lt;Value&gt; {
+    </span><span style="color:#bf616a;">self</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">remove_expired</span><span style="color:#c0c5ce;">();
+    </span><span style="color:#65737e;">// ...
+    // Rest of function body omitted here.
+</span><span style="color:#c0c5ce;">}
+
+</span><span style="color:#65737e;">/// Returns the size of the cache, i.e. the number of cached non-expired key-value pairs.
+</span><span style="color:#b48ead;">pub fn </span><span style="color:#8fa1b3;">len</span><span style="color:#c0c5ce;">(&amp;</span><span style="color:#bf616a;">self</span><span style="color:#c0c5ce;">) -&gt; </span><span style="color:#b48ead;">usize </span><span style="color:#c0c5ce;">{
+    </span><span style="color:#bf616a;">self</span><span style="color:#c0c5ce;">.map
+        .</span><span style="color:#96b5b4;">iter</span><span style="color:#c0c5ce;">()
+        .</span><span style="color:#96b5b4;">filter</span><span style="color:#c0c5ce;">(|&amp;(_, (_, </span><span style="color:#bf616a;">t</span><span style="color:#c0c5ce;">, _))| *t &gt;= Instant::now())
+        .</span><span style="color:#96b5b4;">count</span><span style="color:#c0c5ce;">()
+}
+</span></pre>
+<p>Whenever <code>len()</code> is called it has to go through all items in the cache and only count the non-expired ones (expired items are only removed in <code>insert()</code> calls).</p>
+<p>How do we test this effectively? We could use <code>thread::sleep()</code> in test functions and check real time results, but that makes the unit test slow and dependent on thread time. How can we mock the <code>Instant</code> struct and associated methods instead? The secret sauce is this:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#65737e;">// During testing we use a mock clock to be time independent.
+</span><span style="color:#c0c5ce;">#[</span><span style="color:#bf616a;">cfg</span><span style="color:#c0c5ce;">(test)]
+</span><span style="color:#b48ead;">use </span><span style="color:#c0c5ce;">fake_clock::FakeClock as Instant;
+#[</span><span style="color:#bf616a;">cfg</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">not</span><span style="color:#c0c5ce;">(test))]
+</span><span style="color:#b48ead;">use </span><span style="color:#c0c5ce;">std::time::Instant;
+</span></pre>
+<p>The <code>cfg</code> attribute is used here to swap in a mock <code>Instant</code> type whenever the tests are executed. During production compilation the normal type is used. Luckily in this case a <a href="https://github.com/maidsafe/fake_clock">fake clock crate</a> already exists, so we don't even have to write the mock code and just use it:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">sleep</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">time</span><span style="color:#c0c5ce;">: </span><span style="color:#b48ead;">u64</span><span style="color:#c0c5ce;">) {
+    </span><span style="color:#b48ead;">use </span><span style="color:#c0c5ce;">fake_clock::FakeClock;
+    FakeClock::advance_time(time);
+}
+
+#[</span><span style="color:#bf616a;">test</span><span style="color:#c0c5ce;">]
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">expiration_time</span><span style="color:#c0c5ce;">() {
+    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> time_to_live = Duration::from_millis(</span><span style="color:#d08770;">100</span><span style="color:#c0c5ce;">);
+    </span><span style="color:#b48ead;">let mut</span><span style="color:#c0c5ce;"> lru_cache = </span><span style="color:#b48ead;">super</span><span style="color:#c0c5ce;">::LruCache::&lt;</span><span style="color:#b48ead;">usize</span><span style="color:#c0c5ce;">, </span><span style="color:#b48ead;">usize</span><span style="color:#c0c5ce;">&gt;::with_memory_size(</span><span style="color:#d08770;">10000</span><span style="color:#c0c5ce;">);
+
+    </span><span style="color:#b48ead;">for</span><span style="color:#c0c5ce;"> i in </span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">..</span><span style="color:#d08770;">10 </span><span style="color:#c0c5ce;">{
+        assert_eq!(lru_cache.</span><span style="color:#96b5b4;">len</span><span style="color:#c0c5ce;">(), i);
+        </span><span style="color:#b48ead;">let </span><span style="color:#c0c5ce;">_ = lru_cache.</span><span style="color:#96b5b4;">insert</span><span style="color:#c0c5ce;">(i, i, Instant::now() + time_to_live);
+        assert_eq!(lru_cache.</span><span style="color:#96b5b4;">len</span><span style="color:#c0c5ce;">(), i + </span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">);
+    }
+
+    </span><span style="color:#96b5b4;">sleep</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">101</span><span style="color:#c0c5ce;">);
+    </span><span style="color:#b48ead;">let </span><span style="color:#c0c5ce;">_ = lru_cache.</span><span style="color:#96b5b4;">insert</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">11</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">11</span><span style="color:#c0c5ce;">, Instant::now() + time_to_live);
+
+    </span><span style="color:#65737e;">// All old items are expired, so only the last item must remain.
+    </span><span style="color:#c0c5ce;">assert_eq!(lru_cache.</span><span style="color:#96b5b4;">len</span><span style="color:#c0c5ce;">(), </span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">);
+
+    </span><span style="color:#b48ead;">for</span><span style="color:#c0c5ce;"> i in </span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">..</span><span style="color:#d08770;">10 </span><span style="color:#c0c5ce;">{
+        assert!(!lru_cache.</span><span style="color:#96b5b4;">is_empty</span><span style="color:#c0c5ce;">());
+        assert_eq!(lru_cache.</span><span style="color:#96b5b4;">len</span><span style="color:#c0c5ce;">(), i + </span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">);
+        </span><span style="color:#b48ead;">let </span><span style="color:#c0c5ce;">_ = lru_cache.</span><span style="color:#96b5b4;">insert</span><span style="color:#c0c5ce;">(i, i, Instant::now() + time_to_live);
+        assert_eq!(lru_cache.</span><span style="color:#96b5b4;">len</span><span style="color:#c0c5ce;">(), i + </span><span style="color:#d08770;">2</span><span style="color:#c0c5ce;">);
+    }
+
+    </span><span style="color:#96b5b4;">sleep</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">101</span><span style="color:#c0c5ce;">);
+    </span><span style="color:#65737e;">// All items are expired, so the cache must report being empty.
+    </span><span style="color:#c0c5ce;">assert_eq!(</span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">, lru_cache.</span><span style="color:#96b5b4;">len</span><span style="color:#c0c5ce;">());
+    assert!(lru_cache.</span><span style="color:#96b5b4;">is_empty</span><span style="color:#c0c5ce;">());
+}
+</span></pre>
+<p><code>FakeClock</code> exhibits the same methods as <code>Instant</code> from the standard library, so the compiler has no problem to use it as a drop-in replacement. We can manipulate the FakeClock from the outside and pretend that a certain amount of time has passed while we really just increase a counter. Super fast unit test, no waiting with a <code>thread::sleep()</code> needed!</p>
+<h2 id="integration-tests-not-affected">Integration tests not affected</h2>
+<p>&quot;But Klausi!&quot; you scream &quot;Now your reverse proxy integration tests are broken because they will also run with the fake clock!&quot;</p>
+<p>No, because Rust compiles each <a href="https://doc.rust-lang.org/rust-by-example/testing/integration_testing.html">integration test</a> as separate crate. It links it with your main crate, but only the integration test code has <code>#[cfg(test)]</code> mode on during that test run. The main crate will use the production <code>Instant</code> type and everything still works as before.</p>
+<h2 id="downsides-of-conditional-compilation-mocks">Downsides of conditional compilation mocks</h2>
+<p>So far so good, but there are some downsides to consider with this approach:</p>
+<ul>
+<li>You can only swap in one mock implementation for all your test cases. Every test case shares the same mock code, so you need to come up with your own strategy if you need different mock behavior per test case.</li>
+<li>Integration tests become more important to have in addition to unit tests. The unit tests run with a complete fake type, so you don't even know if your code still compiles with the real type.</li>
+<li>If we would not have the fake_clock crate then we would have to write all the mock code ourselves, which is not trivial. This is probably the nature of mocking in general: complex type usage results in complex mock code to replace it.</li>
+</ul>
+<p>As you can see there is great overlap with the general challenges of mocking, so don't take these as arguments against conditional compilation mocks specifically.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Rust is super flexible and powerful on the topic of mocking. Conditional compilation is a next level opportunity that is simply missing in other programming languages. HTTP request mocking libraries such as <a href="https://github.com/lipanski/mockito">Mockito</a> are beginning to leverage this.</p>
+<p>But there are also maturity problems:</p>
+<ul>
+<li>There are 7 competing mocking frameworks, a sign that the Rust ecosystem has not figured out yet how to do it effectively for everybody.</li>
+<li>The <a href="https://doc.rust-lang.org/1.33.0/book/ch11-00-testing.html">official Testing documentation</a> does not even mention mocking. I assume any larger Rust program will run into mocking use cases during tests, so this is lacking. Interestingly there is a mock use case in the <a href="https://doc.rust-lang.org/1.33.0/book/ch15-05-interior-mutability.html#a-use-case-for-interior-mutability-mock-objects">RefCell example documentation</a>.</li>
+</ul>
+
+    </div>
+
+    
+    
+
+    <div class="post-footer">
+        
+            
+                <div class="post-tags">
+                    
+                        <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;rust&#x2F;">#rust</a>
+                    
+                        <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;rustnish&#x2F;">#rustnish</a>
+                    
+                </div>
+            
+            
+                <div class="post-nav">
+                    
+                        <a class="previous" href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;benchmarking-a-rust-web-application&#x2F;">‹ Benchmarking a Rust web application</a>
+                    
+                    
+                        <a class="next" href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;a-new-blog-on-zola&#x2F;">A new blog on Zola ›</a>
+                    
+                    
+                    
+                </div>
+            
+
+        
+
+    </div>
+
+    
+    
+</article>
+
+
+      </div>
+    </main>
+
+    
+    <footer>
+      <p><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License"
+            style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work by
+        <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Klaus Purer</span> is licensed
+        under a <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
+          Attribution-ShareAlike 4.0 International License</a>.
+      </p>
+    </footer>
+    
+  </div>
+
+  
+  <script type="text/javascript" src="https:&#x2F;&#x2F;klau.si&#x2F;even.js"></script>
+  
+</body>
+
+</html>

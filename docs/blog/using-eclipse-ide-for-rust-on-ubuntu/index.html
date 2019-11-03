@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Klausi&#x27;s Weblog - Using Eclipse IDE for Rust on Ubuntu</title>
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+  
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
+  
+  
+
+  
+  <link rel="stylesheet" href="https:&#x2F;&#x2F;klau.si&#x2F;site.css">
+  
+  
+
+  
+  
+</head>
+
+<body>
+  <div class="container">
+
+    <div id="mobile-navbar" class="mobile-navbar">
+      <div class="mobile-header-logo">
+        <a href="https:&#x2F;&#x2F;klau.si" title="Klausi&#x27;s Weblog" rel="home" class="site-logo site-title">
+          <img src="https:&#x2F;&#x2F;klau.si&#x2F;logo.png" alt="Klausi&#x27;s Weblog logo">
+        </a>
+        <a href="/" class="logo">Klausi&#x27;s Weblog</a>
+      </div>
+      <div class="mobile-navbar-icon icon-out">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <nav id="mobile-menu" class="mobile-menu slideout-menu slideout-menu-left">
+      <ul class="mobile-menu-list">
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si">
+            Home
+          </a>
+        </li>
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;speaking">
+            Speaking
+          </a>
+        </li>
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si&#x2F;archive.html">
+            Archive
+          </a>
+        </li>
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+            RSS
+          </a>
+        </li>
+        
+      </ul>
+    </nav>
+
+    <header id="header">
+      <div class="logo">
+        <a href="https:&#x2F;&#x2F;klau.si" title="Klausi&#x27;s Weblog" rel="home" class="site-logo site-title">
+          <img src="https:&#x2F;&#x2F;klau.si&#x2F;logo.png" alt="Klausi&#x27;s Weblog logo">
+        </a>
+        <a href="https:&#x2F;&#x2F;klau.si">Klausi&#x27;s Weblog</a>
+      </div>
+      <nav class="menu">
+        <ul>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si">
+              Home
+            </a>
+          </li>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;speaking">
+              Speaking
+            </a>
+          </li>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;archive.html">
+              Archive
+            </a>
+          </li>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+              RSS
+            </a>
+          </li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="content" id="mobile-panel">
+        
+
+
+<div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">Contents</h2>
+    <div class="post-toc-content always-active">
+        <nav id="TableOfContents">
+            <ul>
+                
+                <li>
+                    <a href="https://klau.si/blog/using-eclipse-ide-for-rust-on-ubuntu/#installing-java-to-run-eclipse" class="toc-link">Installing Java to run Eclipse</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://klau.si/blog/using-eclipse-ide-for-rust-on-ubuntu/#installing-eclipse-base" class="toc-link">Installing Eclipse base</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://klau.si/blog/using-eclipse-ide-for-rust-on-ubuntu/#adding-a-launcher-shortcut" class="toc-link">Adding a launcher shortcut</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://klau.si/blog/using-eclipse-ide-for-rust-on-ubuntu/#installing-rustdt-on-ubuntu" class="toc-link">Installing RustDT on Ubuntu</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://klau.si/blog/using-eclipse-ide-for-rust-on-ubuntu/#conclusion" class="toc-link">Conclusion</a>
+                    
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+<article class="post">
+    
+    <header class="post__header">
+        <h1 class="post__title">
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;using-eclipse-ide-for-rust-on-ubuntu&#x2F;">Using Eclipse IDE for Rust on Ubuntu</a>
+        </h1>
+        <div class="post__meta">
+            <span class="post__time">2017-05-06</span>
+            
+        </div>
+    </header>
+
+    <div class="post-content">
+      <p><strong>Update: <a href="https://klau.si/blog/using-visual-studio-code-for-rust-on-ubuntu/">New blog post about choosing Visual Studio Code for Rust</a>
+because of better IDE support.</strong></p>
+<p>In <a href="https://klau.si/blog/getting-started-with-rust/">my first blog post</a> I was
+starting out with Atom editor but quickly realized that it is lacking features
+of Integrated Development Environments (IDEs). I need to be able to click on
+functions and data types to jump to their definitions and was not able to get
+that working in Atom.</p>
+<p>Looking further at <a href="https://areweideyet.com/">areweideyet.com</a> I found
+<a href="https://eclipse.org/">Eclipse</a> listed, an IDE I have used a long time ago for
+Java development. Let's give it a try!</p>
+<h2 id="installing-java-to-run-eclipse">Installing Java to run Eclipse</h2>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">sudo apt install openjdk-8-jre
+</span></pre>
+<p>In my first installation attempt Eclipse had problems to connect to external
+Github software sources sites because of missing Java SSL root certificates.
+After <a href="https://github.com/RustDT/RustDT/issues/162">filing an issue in the wrong
+place</a> I found the following <a href="http://stackoverflow.com/a/33440168/2000435">fix
+for missing Java SSL certificates</a>:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">sudo dpkg --purge --force-depends ca-certificates-java
+sudo apt-get install ca-certificates-java
+</span></pre><h2 id="installing-eclipse-base">Installing Eclipse base</h2>
+<p>The <a href="https://www.eclipse.org/downloads/">Eclipse downloads page</a> gives you an
+installer where you select additional packages for whatever platform you want
+to develop on. You can skip all of that because we will install the external
+Rust extension later, so we select &quot;Eclipse Platform (Neon)&quot;.</p>
+<p>On the &quot;Projects&quot; step of the installer I only selected EGit for Git support in
+Eclipse which I always need. As installation folder I picked &quot;eclipse&quot; which
+means Eclipse will end up in your home directory for example at
+<code>/home/klausi/eclipse</code>. When you finish the installation you will have to
+accept some license agreements and trust some certificates.</p>
+<p>In the end Eclipse should start up successfully.</p>
+<h2 id="adding-a-launcher-shortcut">Adding a launcher shortcut</h2>
+<p>Create a new file at <code>~/.local/share/applications/eclipse.desktop</code> with
+content like this:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">[Desktop Entry]
+Name=Eclipse
+Type=Application
+Exec=/home/klausi/eclipse/eclipse/eclipse
+Terminal=false
+Icon=/home/klausi/eclipse/eclipse/icon.xpm
+Comment=Integrated Development Environment
+NoDisplay=false
+Categories=Development;IDE;
+Name[en]=Eclipse
+</span></pre><h2 id="installing-rustdt-on-ubuntu">Installing RustDT on Ubuntu</h2>
+<p>Make sure you have a Rust toolchain environment set up:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">curl https://sh.rustup.rs -sSf | sh
+</span></pre>
+<p>(the usual security warning: make sure to trust your sources before you execute
+random scripts from the internet.)</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">source $HOME/.cargo/env
+cargo install racer
+cargo install rustfmt
+cargo install --git https://github.com/RustDT/Rainicorn --tag version_1.x
+rustup component add rust-src
+</span></pre>
+<p>Now we need the RustDT Eclipse plugin from
+<a href="https://rustdt.github.io/">rustdt.github.io</a>. Follow the installation and
+configuration instructions there closely.</p>
+<p>My settings in Window -&gt; Preferences -&gt; Rust:</p>
+<ul>
+<li>Rust installation directory: <code>/home/klausi/.cargo</code></li>
+<li>Rust &quot;src&quot; directory:
+<code>/home/klausi/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src</code></li>
+<li>Racer: <code>/home/klausi/.cargo/bin/racer</code></li>
+<li>Rainicorn: <code>/home/klausi/.cargo/bin/parse_describe</code></li>
+<li>rustfmt: <code>/home/klausi/.cargo/bin/rustfmt</code></li>
+</ul>
+<p>I'm also using the option &quot;Format automatically on editor save&quot;. No questions
+anymore what the correct code style is :-)</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>The installation of Eclipse is a bit tedious and RustDT takes a bit of
+configuration, but I think it is totally worth it to be more productive when
+writing Rust. Eclipse works better for me than Atom Editor. I also filed a
+<a href="https://github.com/contradictioned/areweideyet/pull/46">pull request to update the available Eclipse features on
+areweideyet.com</a>.</p>
+
+    </div>
+
+    
+    
+
+    <div class="post-footer">
+        
+            
+                <div class="post-tags">
+                    
+                        <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;rust&#x2F;">#rust</a>
+                    
+                        <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;rustnish&#x2F;">#rustnish</a>
+                    
+                </div>
+            
+            
+                <div class="post-nav">
+                    
+                        <a class="previous" href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;getting-started-with-rust&#x2F;">‹ Getting started with Rust</a>
+                    
+                    
+                        <a class="next" href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;writing-integration-tests-in-rust&#x2F;">Writing integration tests in Rust ›</a>
+                    
+                    
+                    
+                </div>
+            
+
+        
+
+    </div>
+
+    
+    
+</article>
+
+
+      </div>
+    </main>
+
+    
+    <footer>
+      <p><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License"
+            style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work by
+        <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Klaus Purer</span> is licensed
+        under a <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
+          Attribution-ShareAlike 4.0 International License</a>.
+      </p>
+    </footer>
+    
+  </div>
+
+  
+  <script type="text/javascript" src="https:&#x2F;&#x2F;klau.si&#x2F;even.js"></script>
+  
+</body>
+
+</html>
