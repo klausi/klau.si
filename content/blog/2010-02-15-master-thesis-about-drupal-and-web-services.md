@@ -15,6 +15,5 @@ tags = ["software", "uni", "drupal"]
 <p>
 	I&#39;m glad that <a href="http://www.amininfo.net/">Amin Anjomshoaa</a> has agreed to supervise the thesis and that <a href="http://more.zites.net">Wolfgang Ziegler</a> will provide me with help and tips around Rules and Drupal, as he already did during <a href="http://groups.drupal.org/node/21658">my Google Summer of Code project</a> last year.</p>
 <p>
-	Here is a more detailed <a href="https://klausi.fsinf.at/sites/klausi.fsinf.at/files/initial_concept.pdf">initial concept as PDF</a> of what I&#39;m planning to do.</p>
+	Here is a more detailed <a href="/files/initial_concept.pdf">initial concept as PDF</a> of what I&#39;m planning to do.</p>
 
-        

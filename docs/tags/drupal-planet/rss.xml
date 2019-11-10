@@ -61,6 +61,14 @@
             </item>
         
             <item>
+                <title>Drupal development setup on Ubuntu 12.04</title>
+                <pubDate>Sun, 29 Apr 2012 00:00:00 +0000</pubDate>
+                <link>https://klau.si/dev-ubuntu-12-04/</link>
+                <guid>https://klau.si/dev-ubuntu-12-04/</guid>
+                <description>&lt;p&gt;I upgraded my local computer to Ubuntu 12.04 today and revisited my Drupal development environment. Here is a simple and fast guide how to configure Ubuntu for development. There are a number of &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;node&#x2F;262&quot;&gt;installation documentation pages on this topic on drupal.org&lt;&#x2F;a&gt;, but they suggest to use the packaged Drupal installation and to run Drupal in subfolders (e.g. http:&#x2F;&#x2F;localhost&#x2F;drupal6). They also do not cover some other important development tools like Phpmyadmin or php.ini settings. During development we want to edit files and we want to do that somewhere in our home directory to avoid any permission problems. There is also &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;project&#x2F;drubuntu&quot;&gt;Drubuntu&lt;&#x2F;a&gt;, but it is outdated and does way too much magic in my opinion. So here is a more transparent tutorial that highlights the key development configuration settings for Drupal development.</description>
+            </item>
+        
+            <item>
                 <title>Installation of a Drupal Upgrade Path Test DB</title>
                 <pubDate>Sat, 31 Mar 2012 00:00:00 +0000</pubDate>
                 <link>https://klau.si/installation-drupal-upgrade-path-test-db/</link>

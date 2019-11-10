@@ -1761,6 +1761,14 @@ enforces.&lt;&#x2F;p&gt;
             </item>
         
             <item>
+                <title>Drupal development setup on Ubuntu 12.04</title>
+                <pubDate>Sun, 29 Apr 2012 00:00:00 +0000</pubDate>
+                <link>https://klau.si/dev-ubuntu-12-04/</link>
+                <guid>https://klau.si/dev-ubuntu-12-04/</guid>
+                <description>&lt;p&gt;I upgraded my local computer to Ubuntu 12.04 today and revisited my Drupal development environment. Here is a simple and fast guide how to configure Ubuntu for development. There are a number of &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;node&#x2F;262&quot;&gt;installation documentation pages on this topic on drupal.org&lt;&#x2F;a&gt;, but they suggest to use the packaged Drupal installation and to run Drupal in subfolders (e.g. http:&#x2F;&#x2F;localhost&#x2F;drupal6). They also do not cover some other important development tools like Phpmyadmin or php.ini settings. During development we want to edit files and we want to do that somewhere in our home directory to avoid any permission problems. There is also &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;project&#x2F;drubuntu&quot;&gt;Drubuntu&lt;&#x2F;a&gt;, but it is outdated and does way too much magic in my opinion. So here is a more transparent tutorial that highlights the key development configuration settings for Drupal development.</description>
+            </item>
+        
+            <item>
                 <title>Installation of a Drupal Upgrade Path Test DB</title>
                 <pubDate>Sat, 31 Mar 2012 00:00:00 +0000</pubDate>
                 <link>https://klau.si/installation-drupal-upgrade-path-test-db/</link>
@@ -1958,7 +1966,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
                 <link>https://klau.si/lightning-talk-about-hooks-drupal/</link>
                 <guid>https://klau.si/lightning-talk-about-hooks-drupal/</guid>
                 <description>&lt;p&gt;
-	I will attend the &lt;a href=&quot;http:&#x2F;&#x2F;sf2010.drupal.org&#x2F;conference&#x2F;core-developer-summit&quot;&gt;Drupal Core Developer Summit&lt;&#x2F;a&gt; at Drupalcon San Francisco, so I had to prepare a short lighting talk about a topic that bothers me in Drupal. As I ran into an issue of implementing a hook by accident recently, I decided to come up with some suggestions how to improve the situation. I have attached &lt;a href=&quot;&#x2F;sites&#x2F;klausi.fsinf.at&#x2F;files&#x2F;hooks_drupal.pdf&quot;&gt;the PDF&lt;&#x2F;a&gt; I will submit.&lt;&#x2F;p&gt;
+	I will attend the &lt;a href=&quot;http:&#x2F;&#x2F;sf2010.drupal.org&#x2F;conference&#x2F;core-developer-summit&quot;&gt;Drupal Core Developer Summit&lt;&#x2F;a&gt; at Drupalcon San Francisco, so I had to prepare a short lighting talk about a topic that bothers me in Drupal. As I ran into an issue of implementing a hook by accident recently, I decided to come up with some suggestions how to improve the situation. I have attached &lt;a href=&quot;&#x2F;files&#x2F;hooks_drupal.pdf&quot;&gt;the PDF&lt;&#x2F;a&gt; I will submit.&lt;&#x2F;p&gt;
 </description>
             </item>
         
