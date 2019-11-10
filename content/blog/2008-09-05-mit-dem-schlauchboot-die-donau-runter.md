@@ -1,0 +1,20 @@
++++
+title = "Mit dem Schlauchboot die Donau runter"
+date = 2008-09-05
+path = "mit-dem-schlauchboot-die-donau-runter"
+aliases = ["node/17", "node/17.html", "mit-dem-schlauchboot-die-donau-runter.html"]
+[taxonomies]
+tags = ["freizeit"]
++++
+
+<p>Ein etwas sp&auml;ter Nachbericht meiner Reise im Juli.</p>
+<p><img height="240" width="320" style="vertical-align: middle;" src="/files/donau-fahrt.png" alt="Auf der Donau mit Peace-Flagge" /></p>
+<p>Was als Schnapsidee entstand, haben wir diesen Sommer realisiert: Mit einem gebrauchten, motorlosen Schlauboot traten wir Anfang Juli eine vierw&ouml;chige Abenteuerfahrt die Donau hinunter an. Ausger&uuml;stet mit Zelten, wasserdichten S&auml;cken, einem ausf&uuml;hrlichen Buch &uuml;ber die Donaubefahrung, einem billigen 40 Euro Beiboot und zwei Paddeln machten wir uns zu dritt von Wien aus auf einen gem&uuml;tlichen Trip auf.</p>
+<!-- more -->
+<p>Erster Fehlschlag war der Start auf der neuen Donau, auf der Ostseite der Donauinsel. Was sich auf der Karte als verlockender, schleusenloser Kanal darstellte war in Wirklichkeit ein fast str&ouml;mungsloser See mit vielen Sperren. Am Tag 1 legten wir also sage und schreibe 6 Kilometer zur&uuml;ck und mussten noch auf der Donauinsel campieren. In der Fr&uuml;h weckte uns die Polizei (Wildcampen ist ja nicht legal) und bat uns sehr freundlich und h&ouml;flich die Zelte abzubauen, was wir sowieso vor hatten. Am Tag 2 kamen wir endlich in den Hauptstrom und von da an ging es etwas schneller vorw&auml;rts.</p>
+<p>Wir waren uns im klaren, dass wir in den zur Verf&uuml;gung stehenden 4 Wochen wohl kaum die fast 2000 Kilometer bis zum Schwarzen Meer schaffen w&uuml;rden, also schlugen wir ein gem&auml;chliches Tempo mit ca. 20 Kilometern pro Tag an. Die Fortbewegungsarbeit erledigte die Str&ouml;mung, wir sonnten uns am Boot, spielten das Kartenspiel Magic oder lasen B&uuml;cher. Bei sch&ouml;nen Pl&auml;tzen am Ufer stoppten wir, erkundeten die Umgebung und schlugen unsere Zelte &uuml;ber Nacht auf.</p>
+<p>So f&uuml;hrte uns die Donau &uuml;ber Hainburg in die Slowakei, Bratislava, die slowakisch-ungarische Grenze entlang, nach Budapest und quer durch Ungarn hindurch zu unserer Endstation in Baja. In Budapest und in Baja verbrachten wir einige Tage in Jugendherbergen und genossen echte Betten und Duschen. Auf der Fahrt wuschen wir uns und unsere W&auml;sche in der Donau, die au&szlig;erhalb der St&auml;dte eine halbwegs aktzeptable Wasserqualit&auml;t bot.</p>
+<p>Die Verpflegung war auch kein Problem, entlang der Donau gibt bis auf wenige Ausnahmen immer D&ouml;rfer und kleine St&auml;dte, wo wir in Superm&auml;rkten oder bei Greislern Trinkwasser (10 Liter Kanister) und Essen kaufen konnten. Es gibt immer wieder auch sehr leckere Restaurants am Ufer, wo selbst ich als Vegetarierer immer auf meine Kosten kam.</p>
+<p>Die Donau selbst erwies sich als harmloser Flu&szlig;, der v&ouml;llig gefahrlos befahren werden kann. Wir waren mit unseren Schwimmwesten &uuml;ber-ausger&uuml;stet, sie dienten ab Tag 2 nur mehr als Sitz- und Schlafpolster auf dem Rest der Reise. Auch der Schiffsverkehr war weder bedrohlich noch st&ouml;rend, der Flu&szlig; war immer breit genug zum Ausweichen, was mit ein paar Padelschl&auml;gen schnell erledigt war. Prognosen wie &quot;Ihr werdet nicht lebend zur&uuml;ckkommen!&quot; sind im Nachhinein gesehen einfach nur l&auml;cherlich.</p>
+<p>Bemerkenswert war in Ungarn das massenhaft wild wachsende Marihuana, das sich vor allem in der N&auml;he von Sonnenblumenfeldern wie Unkraut ausbreitet. Allerdings war das Zeug stark versamt und noch nicht reif, wir haben es nicht getrocknet und nicht getestet, also k&ouml;nnen wir auch nicht sagen, dass es nur eine hom&ouml;opathische Wirkung hatte.  Alles in allem kann ich so eine Bootsreise uneingeschr&auml;nkt weiterempfehlen, eignet sich gut zum Abschalten und Seele baumlen lassen. Mosquito-Spray nicht vergessen!</p>
+        
