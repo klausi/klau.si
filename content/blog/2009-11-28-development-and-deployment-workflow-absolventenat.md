@@ -7,5 +7,6 @@ aliases = ["node/24", "node/24.html", "development-and-deployment-workflow-absol
 tags = ["software"]
 +++
 
-<p>Here you can find the slides to my <a href="http://drupalcamp.at">Drupalcamp Vienna</a> presentation about development and deployment at <a href="http://absolventen.at">Absolventen.at</a>. Files are attached.</p>
-        
+<p>Here you can find the slides to my <a href="http://drupalcamp.at">Drupalcamp Vienna</a> presentation about development and deployment at <a href="http://absolventen.at">Absolventen.at</a>.</p>
+
+[Presentation as PDF](/files/absolventen-dev-workflow.pdf) or as [ODP](/files/absolventen-dev-workflow.odp)
