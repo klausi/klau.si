@@ -5,3 +5,7 @@
 # not necessary.
 
 zola build --output-dir=docs
+
+# Manually copy the old Drupal Planet feed URL because we can't do a HTML
+# redirect for XML.
+cp docs/tags/drupal-planet/rss.xml docs/categories/drupal-planet/feed
