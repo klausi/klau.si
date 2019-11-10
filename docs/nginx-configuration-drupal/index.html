@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Klausi&#x27;s Weblog - A nginx configuration for Drupal</title>
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+  
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
+  
+  
+
+  
+  <link rel="stylesheet" href="https:&#x2F;&#x2F;klau.si&#x2F;site.css">
+  
+  
+
+  
+  
+</head>
+
+<body>
+  <div class="container">
+
+    <div id="mobile-navbar" class="mobile-navbar">
+      <div class="mobile-header-logo">
+        <a href="https:&#x2F;&#x2F;klau.si" title="Klausi&#x27;s Weblog" rel="home" class="site-logo site-title">
+          <img src="https:&#x2F;&#x2F;klau.si&#x2F;logo.png" alt="Klausi&#x27;s Weblog logo">
+        </a>
+        <a href="/" class="logo">Klausi&#x27;s Weblog</a>
+      </div>
+      <div class="mobile-navbar-icon icon-out">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <nav id="mobile-menu" class="mobile-menu slideout-menu slideout-menu-left">
+      <ul class="mobile-menu-list">
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si">
+            Home
+          </a>
+        </li>
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;speaking">
+            Speaking
+          </a>
+        </li>
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags">
+            Categories
+          </a>
+        </li>
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+            RSS
+          </a>
+        </li>
+        
+      </ul>
+    </nav>
+
+    <header id="header">
+      <div class="logo">
+        <a href="https:&#x2F;&#x2F;klau.si" title="Klausi&#x27;s Weblog" rel="home" class="site-logo site-title">
+          <img src="https:&#x2F;&#x2F;klau.si&#x2F;logo.png" alt="Klausi&#x27;s Weblog logo">
+        </a>
+        <a href="https:&#x2F;&#x2F;klau.si">Klausi&#x27;s Weblog</a>
+      </div>
+      <nav class="menu">
+        <ul>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si">
+              Home
+            </a>
+          </li>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;speaking">
+              Speaking
+            </a>
+          </li>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags">
+              Categories
+            </a>
+          </li>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+              RSS
+            </a>
+          </li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="content" id="mobile-panel">
+        
+
+
+
+<article class="post">
+    
+    <header class="post__header">
+        <h1 class="post__title">
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;nginx-configuration-drupal&#x2F;">A nginx configuration for Drupal</a>
+        </h1>
+        <div class="post__meta">
+            <span class="post__time">2011-05-23</span>
+            
+        </div>
+    </header>
+
+    <div class="post-content">
+      <p>While nginx is highly configurable, you might encounter some problems and pitfalls when configuring it with Drupal. This post contains our configuration and solutions to those problems.</p>
+<p id="zola-continue-reading"><a name="continue-reading"></a></p>
+
+<p>Before reading on please consider the original <a href="http://wiki.nginx.org/Drupal">resources in the nginx wiki</a> or some other suggested configurations, e.g. this <a href="https://github.com/omega8cc/nginx-for-drupal/blob/master/aegir/conf/nginx_octopus_include.conf">one on Github</a>. Some problems we found:</p>
+<ul>
+	<li>
+		nginx does extra URL encoding when passing query parameters to Drupal. This is bad especially for &quot;+&quot; characters in queries that do not translate to spaces in Drupal (as <a href="http://www.dmuth.org/node/1268">reported here</a>). Therefore we cannot use the generic &quot;location /&quot; directive but use a generic regular expression to extract the query, in this case the &quot;$1&quot; variable is not encoded by nginx.</li>
+	<li>
+		Private files cannot be downloaded fluently, i.e. they often pause for 30 seconds before they continue. It seems to be a problem related to HTTP keep-alive connections, because disabling them with &quot;keepalive_requests 0;&quot; solved the issue.</li>
+	<li>
+		Image cache may cause problems if the images are not generated yet, so an additional &quot;try_files $uri @drupal&quot; statement for images redirects the request to Drupal in case an image is not found. Also works for Drupal 7, where image cache is part of Drupal core.</li>
+</ul>
+<p>The strategy in the configuration is to first handle/secure files (robots.txt, PHP files), then protect or configure other relevant paths and to have a catch-all directive at the end. Here is the content of drupal.conf that can be included in a &quot;server{}&quot; block:</p>
+<pre>
+# common Drupal configuration options.
+# Make sure to set $socket to a fastcgi socket.
+<p>        location = /favicon.ico {
+                log_not_found off;
+                access_log off;
+        }</p>
+<p>        ###
+        ### support for http://drupal.org/project/robotstxt module
+        ###
+        location = /robots.txt {
+                access_log off;
+                try_files $uri @drupal;
+        }</p>
+<p>        # no access to php files in subfolders.
+        location ~ .+/.*.php$ {
+                return 403;
+        }</p>
+<p>        location ~* .(inc|engine|install|info|module|sh|sql|theme|tpl.php|xtmpl|Entries|Repository|Root|jar|java|class)$ {
+                deny all;
+        }</p>
+<p>        location ~ .php$ {
+                # Required for private files, otherwise they slow down extremely.
+                keepalive_requests 0;
+                include fastcgi.conf;
+        }</p>
+<p>        # private files protection
+        location ~ ^/sites/.*/private/ {
+                access_log off;
+                deny all;
+        }</p>
+<p>        location ~* ^(?!/system/files).*.(js|css|png|jpg|jpeg|gif|ico)$ {
+                # If the image does not exist, maybe it must be generated by drupal (imagecache)
+                try_files $uri @drupal;
+                expires 7d;
+                log_not_found off;
+        }</p>
+<p>        ###
+        ### deny direct access to backups
+        ###
+        location ~* ^/sites/.*/files/backup_migrate/ {
+                access_log off;
+                deny all;
+        }</p>
+<p>        location ~ ^/(.*) {
+                try_files $uri /index.php?q=$1&amp;$args;
+        }</p>
+<p>        location @drupal {
+                # Some modules enforce no slash (/) at the end of the URL
+                # Else this rewrite block wouldn't be needed (GlobalRedirect)
+                rewrite ^/(.*)$ /index.php?q=$1;
+        }
+</pre></p>
+<p>And here is the configuration for passing the request to PHP FastCGI (fastcgi.conf):</p>
+<pre>
+# common fastcgi configuration for PHP files
+<p>                fastcgi_split_path_info ^(.+.php)(/.+)$;
+                #NOTE: You should have &quot;cgi.fix_pathinfo = 0;&quot; in php.ini
+                include fastcgi_params;
+                fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+                fastcgi_intercept_errors on;
+                fastcgi_pass $socket;
+                # workaround as fastcgi_param cannot be used inside if statements
+                set $https &quot;&quot;;
+                if ($scheme = https) {
+                  set $https on;
+                }
+                fastcgi_param HTTPS $https;
+                fastcgi_read_timeout 6000;
+                # set expires header for private files.
+                if ($args ~* .(js|css|png|jpg|jpeg|gif|ico)) {
+                    expires 7d;
+                }</pre></p>
+<p>&nbsp;</p>
+
+    </div>
+
+    
+    
+
+    <div class="post-footer">
+        
+            
+                <div class="post-tags">
+                    
+                        <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;drupal&#x2F;">#drupal</a>
+                    
+                        <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;drupal-planet&#x2F;">#drupal planet</a>
+                    
+                </div>
+            
+            
+                <div class="post-nav">
+                    
+                        <a class="previous" href="https:&#x2F;&#x2F;klau.si&#x2F;thesis&#x2F;">‹ Web Service Composition in Drupal</a>
+                    
+                    
+                        <a class="next" href="https:&#x2F;&#x2F;klau.si&#x2F;ein-rückblick-auf-7-jahre-tu-wien&#x2F;">Ein Rückblick auf 7 Jahre TU Wien ›</a>
+                    
+                    
+                    
+                </div>
+            
+
+        
+
+    </div>
+
+    
+    
+</article>
+
+
+      </div>
+    </main>
+
+    
+    <footer>
+      <p><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License"
+            style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work by
+        <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Klaus Purer</span> is licensed
+        under a <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
+          Attribution-ShareAlike 4.0 International License</a>.
+      </p>
+    </footer>
+    
+  </div>
+
+  
+  <script type="text/javascript" src="https:&#x2F;&#x2F;klau.si&#x2F;even.js"></script>
+  
+</body>
+
+</html>

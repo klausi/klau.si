@@ -1,268 +1,664 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
         <url>
-            <loc>https%3A//klau.si/</loc>
+            <loc>https://klau.si/</loc>
             
         </url>
     
         <url>
-            <loc>https%3A//klau.si/about/</loc>
+            <loc>https://klau.si/about/</loc>
             
         </url>
     
         <url>
-            <loc>https%3A//klau.si/blog/a-new-blog-on-zola/</loc>
+            <loc>https://klau.si/blog/a-new-blog-on-zola/</loc>
             
                 <lastmod>2019-10-26</lastmod>
             
         </url>
     
         <url>
-            <loc>https%3A//klau.si/blog/benchmarking-a-rust-web-application/</loc>
+            <loc>https://klau.si/blog/benchmarking-a-rust-web-application/</loc>
             
                 <lastmod>2018-08-31</lastmod>
             
         </url>
     
         <url>
-            <loc>https%3A//klau.si/blog/converting-a-hyper-server-to-tokio/</loc>
+            <loc>https://klau.si/blog/converting-a-hyper-server-to-tokio/</loc>
             
                 <lastmod>2017-07-16</lastmod>
             
         </url>
     
         <url>
-            <loc>https%3A//klau.si/blog/crashing-a-rust-hyper-server-with-a-denial-of-service-attack/</loc>
+            <loc>https://klau.si/blog/crashing-a-rust-hyper-server-with-a-denial-of-service-attack/</loc>
             
                 <lastmod>2018-03-11</lastmod>
             
         </url>
     
         <url>
-            <loc>https%3A//klau.si/blog/drupal-security-vulnerability-learnings/</loc>
+            <loc>https://klau.si/blog/drupal-security-vulnerability-learnings/</loc>
             
                 <lastmod>2019-03-13</lastmod>
             
         </url>
     
         <url>
-            <loc>https%3A//klau.si/blog/drupalcamp-cracking-drupal/</loc>
+            <loc>https://klau.si/blog/drupalcamp-cracking-drupal/</loc>
             
                 <lastmod>2013-12-10</lastmod>
             
         </url>
     
         <url>
-            <loc>https%3A//klau.si/blog/drupalcon-automated-testing-phpunit/</loc>
+            <loc>https://klau.si/blog/drupalcon-automated-testing-phpunit/</loc>
             
                 <lastmod>2016-09-27</lastmod>
             
         </url>
     
         <url>
-            <loc>https%3A//klau.si/blog/drupalcon-coding-with-rules-drupal-8/</loc>
+            <loc>https://klau.si/blog/drupalcon-coding-with-rules-drupal-8/</loc>
             
                 <lastmod>2015-09-22</lastmod>
             
         </url>
     
         <url>
-            <loc>https%3A//klau.si/blog/drupalcon-cracking-drupal/</loc>
+            <loc>https://klau.si/blog/drupalcon-cracking-drupal/</loc>
             
                 <lastmod>2014-10-02</lastmod>
             
         </url>
     
         <url>
-            <loc>https%3A//klau.si/blog/drupalcon-portland-rest-serialization-drupal-8/</loc>
+            <loc>https://klau.si/blog/drupalcon-portland-rest-serialization-drupal-8/</loc>
             
                 <lastmod>2013-05-23</lastmod>
             
         </url>
     
         <url>
-            <loc>https%3A//klau.si/blog/drupalcon-prague-rest-serialization-drupal-8/</loc>
+            <loc>https://klau.si/blog/drupalcon-prague-rest-serialization-drupal-8/</loc>
             
                 <lastmod>2013-09-25</lastmod>
             
         </url>
     
         <url>
-            <loc>https%3A//klau.si/blog/drupalcon-project-application-process/</loc>
+            <loc>https://klau.si/blog/drupalcon-project-application-process/</loc>
             
                 <lastmod>2012-08-24</lastmod>
             
         </url>
     
         <url>
-            <loc>https%3A//klau.si/blog/drupalcon-publish-module/</loc>
+            <loc>https://klau.si/blog/drupalcon-publish-module/</loc>
             
                 <lastmod>2016-04-20</lastmod>
             
         </url>
     
         <url>
-            <loc>https%3A//klau.si/blog/drupalcon-rules-ecosystem/</loc>
+            <loc>https://klau.si/blog/drupalcon-rules-ecosystem/</loc>
             
                 <lastmod>2010-08-27</lastmod>
             
         </url>
     
         <url>
-            <loc>https%3A//klau.si/blog/drupalcon-rules-way-of-life/</loc>
+            <loc>https://klau.si/blog/drupalcon-rules-way-of-life/</loc>
             
                 <lastmod>2011-08-26</lastmod>
             
         </url>
     
         <url>
-            <loc>https%3A//klau.si/blog/drupalcon-security-code-review/</loc>
+            <loc>https://klau.si/blog/drupalcon-security-code-review/</loc>
             
                 <lastmod>2019-11-03</lastmod>
             
         </url>
     
         <url>
-            <loc>https%3A//klau.si/blog/drupalcon-security-what-you-need-to-know/</loc>
+            <loc>https://klau.si/blog/drupalcon-security-what-you-need-to-know/</loc>
             
                 <lastmod>2015-09-23</lastmod>
             
         </url>
     
         <url>
-            <loc>https%3A//klau.si/blog/getting-started-with-rust/</loc>
+            <loc>https://klau.si/blog/getting-started-with-rust/</loc>
             
                 <lastmod>2017-04-30</lastmod>
             
         </url>
     
         <url>
-            <loc>https%3A//klau.si/blog/mocking-in-rust-with-conditional-compilation/</loc>
+            <loc>https://klau.si/blog/mocking-in-rust-with-conditional-compilation/</loc>
             
                 <lastmod>2019-03-31</lastmod>
             
         </url>
     
         <url>
-            <loc>https%3A//klau.si/blog/replacing-unwrap-and-avoiding-panics-in-rust/</loc>
+            <loc>https://klau.si/blog/replacing-unwrap-and-avoiding-panics-in-rust/</loc>
             
                 <lastmod>2017-08-16</lastmod>
             
         </url>
     
         <url>
-            <loc>https%3A//klau.si/blog/static-variables-made-thread-safe-in-rust/</loc>
+            <loc>https://klau.si/blog/static-variables-made-thread-safe-in-rust/</loc>
             
                 <lastmod>2017-09-09</lastmod>
             
         </url>
     
         <url>
-            <loc>https%3A//klau.si/blog/testing-memory-leaks-in-rust/</loc>
+            <loc>https://klau.si/blog/testing-memory-leaks-in-rust/</loc>
             
                 <lastmod>2017-10-06</lastmod>
             
         </url>
     
         <url>
-            <loc>https%3A//klau.si/blog/using-eclipse-ide-for-rust-on-ubuntu/</loc>
+            <loc>https://klau.si/blog/using-eclipse-ide-for-rust-on-ubuntu/</loc>
             
                 <lastmod>2017-05-06</lastmod>
             
         </url>
     
         <url>
-            <loc>https%3A//klau.si/blog/using-visual-studio-code-for-rust-on-ubuntu/</loc>
+            <loc>https://klau.si/blog/using-visual-studio-code-for-rust-on-ubuntu/</loc>
             
                 <lastmod>2017-05-28</lastmod>
             
         </url>
     
         <url>
-            <loc>https%3A//klau.si/blog/writing-integration-tests-in-rust/</loc>
+            <loc>https://klau.si/blog/writing-integration-tests-in-rust/</loc>
             
                 <lastmod>2017-05-25</lastmod>
             
         </url>
     
         <url>
-            <loc>https%3A//klau.si/contact/</loc>
+            <loc>https://klau.si/brecht-das-gesetz-brecht-die-abschiebung/</loc>
+            
+                <lastmod>2007-10-19</lastmod>
             
         </url>
     
         <url>
-            <loc>https%3A//klau.si/page/1/</loc>
+            <loc>https://klau.si/contact/</loc>
             
         </url>
     
         <url>
-            <loc>https%3A//klau.si/page/2/</loc>
+            <loc>https://klau.si/der-nationalsozialismus-und-ich/</loc>
+            
+                <lastmod>2007-07-25</lastmod>
             
         </url>
     
         <url>
-            <loc>https%3A//klau.si/page/3/</loc>
+            <loc>https://klau.si/dev/</loc>
+            
+                <lastmod>2015-12-19</lastmod>
             
         </url>
     
         <url>
-            <loc>https%3A//klau.si/speaking/</loc>
+            <loc>https://klau.si/development-and-deployment-workflow-absolventenat/</loc>
+            
+                <lastmod>2009-11-28</lastmod>
             
         </url>
     
         <url>
-            <loc>https%3A//klau.si/tags/</loc>
+            <loc>https://klau.si/die-deutsche-wikipedia-ist-tot/</loc>
+            
+                <lastmod>2008-05-18</lastmod>
             
         </url>
     
         <url>
-            <loc>https%3A//klau.si/tags/code-review/</loc>
+            <loc>https://klau.si/die-vorlesung-über-die-vorlesung-sich/</loc>
+            
+                <lastmod>2007-06-27</lastmod>
             
         </url>
     
         <url>
-            <loc>https%3A//klau.si/tags/drupalcon/</loc>
+            <loc>https://klau.si/display-currently-playing-song-rythmbox-gajim-status-message/</loc>
+            
+                <lastmod>2008-02-22</lastmod>
             
         </url>
     
         <url>
-            <loc>https%3A//klau.si/tags/phpunit/</loc>
+            <loc>https://klau.si/drupal-core-update-script/</loc>
+            
+                <lastmod>2009-12-22</lastmod>
             
         </url>
     
         <url>
-            <loc>https%3A//klau.si/tags/rest/</loc>
+            <loc>https://klau.si/drupal-development-setup-ubuntu-1310/</loc>
+            
+                <lastmod>2013-11-08</lastmod>
             
         </url>
     
         <url>
-            <loc>https%3A//klau.si/tags/rules/</loc>
+            <loc>https://klau.si/drupal-project-application-issue-slaughter/</loc>
+            
+                <lastmod>2011-11-06</lastmod>
             
         </url>
     
         <url>
-            <loc>https%3A//klau.si/tags/rust/</loc>
+            <loc>https://klau.si/ein-rückblick-auf-7-jahre-tu-wien/</loc>
+            
+                <lastmod>2011-06-23</lastmod>
             
         </url>
     
         <url>
-            <loc>https%3A//klau.si/tags/rustnish/</loc>
+            <loc>https://klau.si/frauinnen-emanzencodex-und-das-ganze-gender-blabla/</loc>
+            
+                <lastmod>2007-08-07</lastmod>
             
         </url>
     
         <url>
-            <loc>https%3A//klau.si/tags/security/</loc>
+            <loc>https://klau.si/git-cvs-export/</loc>
+            
+                <lastmod>2010-08-25</lastmod>
             
         </url>
     
         <url>
-            <loc>https%3A//klau.si/tags/speaking/</loc>
+            <loc>https://klau.si/git-diff-color-words/</loc>
+            
+                <lastmod>2011-09-25</lastmod>
             
         </url>
     
         <url>
-            <loc>https%3A//klau.si/tags/testing/</loc>
+            <loc>https://klau.si/gmail-and-postmaster/</loc>
+            
+                <lastmod>2010-02-22</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/go-easy-code-review-she-woman-after-all/</loc>
+            
+                <lastmod>2016-10-29</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/hello-world/</loc>
+            
+                <lastmod>2007-06-22</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/home-wifi-setup-ubuntu-asus-rt-n56u-and-linksys-wmp600n/</loc>
+            
+                <lastmod>2011-04-15</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/how-i-became-aware-sexism/</loc>
+            
+                <lastmod>2014-04-26</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/installation-drupal-upgrade-path-test-db/</loc>
+            
+                <lastmod>2012-03-31</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/integration/</loc>
+            
+                <lastmod>2010-06-17</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/klitoris-die-schöne-unbekannte/</loc>
+            
+                <lastmod>2007-11-25</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/lightning-talk-about-hooks-drupal/</loc>
+            
+                <lastmod>2010-04-13</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/mach-der-volksfront-den-garaus/</loc>
+            
+                <lastmod>2008-08-12</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/master-thesis-about-drupal-and-web-services/</loc>
+            
+                <lastmod>2010-02-15</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/meine-lieblingsseiten-meine-lieblingssoftware/</loc>
+            
+                <lastmod>2007-11-09</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/mit-dem-schlauchboot-die-donau-runter/</loc>
+            
+                <lastmod>2008-09-05</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/nginx-configuration-drupal/</loc>
+            
+                <lastmod>2011-05-23</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/oida-bist-schwul-oder-was/</loc>
+            
+                <lastmod>2007-06-24</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/page/1/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/page/2/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/page/3/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/page/4/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/page/5/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/page/6/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/page/7/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/page/8/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/php-vs-python-vs-ruby/</loc>
+            
+                <lastmod>2009-11-22</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/pro-e-voting/</loc>
+            
+                <lastmod>2009-05-07</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/python-dbus-gajim-magic/</loc>
+            
+                <lastmod>2008-09-28</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/rest-module-status-report/</loc>
+            
+                <lastmod>2012-12-16</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/restful-entity-web-api-drupal-8/</loc>
+            
+                <lastmod>2012-10-16</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/ruby-rails-setup-ubuntu-910/</loc>
+            
+                <lastmod>2009-12-10</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/running-php-53-and-52-parallel-nginx/</loc>
+            
+                <lastmod>2011-01-17</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/screencasts-recordmydesktop-ffmpeg-conversion-html5-video/</loc>
+            
+                <lastmod>2013-05-12</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/sidux-der-nächste-schritt/</loc>
+            
+                <lastmod>2008-02-15</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/sidux-way-life-beispiel-openoffice-3/</loc>
+            
+                <lastmod>2008-10-30</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/speaking/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/state-project-application-issue-queue-2013/</loc>
+            
+                <lastmod>2013-02-08</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/stirb-wordpress-stirb/</loc>
+            
+                <lastmod>2009-02-27</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/tags/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/tags/code-review/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/tags/drupal-planet/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/tags/drupal/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/tags/drupalcon/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/tags/freizeit/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/tags/gesellschaftskritik/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/tags/phpunit/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/tags/rest/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/tags/rules/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/tags/rust/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/tags/rustnish/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/tags/security/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/tags/software/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/tags/speaking/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/tags/testing/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/tags/uncategorized/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/tags/uni/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/telling-gajim-remember-window-position/</loc>
+            
+                <lastmod>2007-08-26</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/thesis/</loc>
+            
+                <lastmod>2011-05-11</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/thunderbird-3-quick-test/</loc>
+            
+                <lastmod>2009-12-09</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/ubuntu-talking-elvish-or-klingon/</loc>
+            
+                <lastmod>2010-05-17</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/wie-viele-frauen-sprechen-eigentlich-bei-am-schauplatz/</loc>
+            
+                <lastmod>2015-09-28</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/windows-vista-gratis/</loc>
+            
+                <lastmod>2007-11-21</lastmod>
+            
+        </url>
+    
+        <url>
+            <loc>https://klau.si/yet-another-blog-move/</loc>
+            
+                <lastmod>2009-11-22</lastmod>
             
         </url>
     

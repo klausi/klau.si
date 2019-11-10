@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Klausi&#x27;s Weblog</title>
+        <link>https://klau.si</link>
+        <description></description>
+        <generator>Zola</generator>
+        <language>en</language>
+        <atom:link href="https://klau.si/tags/uncategorized/rss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Sun, 22 Nov 2009 00:00:00 +0000</lastBuildDate>
+        
+            <item>
+                <title>Yet another blog move</title>
+                <pubDate>Sun, 22 Nov 2009 00:00:00 +0000</pubDate>
+                <link>https://klau.si/yet-another-blog-move/</link>
+                <guid>https://klau.si/yet-another-blog-move/</guid>
+                <description>&lt;p&gt;While I liked the &lt;a href=&quot;https:&#x2F;&#x2F;web.student.tuwien.ac.at&#x2F;~e0426223&#x2F;&quot;&gt;webspace&lt;&#x2F;a&gt; offered by the Vienna university of technology, I decided to move my Drupal blog to the Drupal farm at fsinf.at. This has two advantages: less administration&#x2F;update overhead (I&#x27;m responsible for Drupal updates on fsinf.at as well) and a much shorter, easy to remember URL.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>Hello World</title>
+                <pubDate>Fri, 22 Jun 2007 00:00:00 +0000</pubDate>
+                <link>https://klau.si/hello-world/</link>
+                <guid>https://klau.si/hello-world/</guid>
+                <description>&lt;p&gt;Wahrscheinlich der 100.000ste WordPress-Weblog der Welt. Ja auch ich halte dem Gruppendruck nicht mehr Stand und eröffne meinen zweiten Weblog (im Gegensatz zu &lt;a href=&quot;http:&#x2F;&#x2F;twoday.tuwien.ac.at&#x2F;klausi&#x2F;&quot;&gt;meinem ersten Weblog&lt;&#x2F;a&gt; verspreche ich diesmal tatsächlich Inhalt zu produzieren ;-) ).&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+    </channel>
+</rss>

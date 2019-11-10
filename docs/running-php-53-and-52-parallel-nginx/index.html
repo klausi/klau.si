@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Klausi&#x27;s Weblog - Running PHP 5.3 and 5.2 in parallel with nginx</title>
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+  
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
+  
+  
+
+  
+  <link rel="stylesheet" href="https:&#x2F;&#x2F;klau.si&#x2F;site.css">
+  
+  
+
+  
+  
+</head>
+
+<body>
+  <div class="container">
+
+    <div id="mobile-navbar" class="mobile-navbar">
+      <div class="mobile-header-logo">
+        <a href="https:&#x2F;&#x2F;klau.si" title="Klausi&#x27;s Weblog" rel="home" class="site-logo site-title">
+          <img src="https:&#x2F;&#x2F;klau.si&#x2F;logo.png" alt="Klausi&#x27;s Weblog logo">
+        </a>
+        <a href="/" class="logo">Klausi&#x27;s Weblog</a>
+      </div>
+      <div class="mobile-navbar-icon icon-out">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <nav id="mobile-menu" class="mobile-menu slideout-menu slideout-menu-left">
+      <ul class="mobile-menu-list">
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si">
+            Home
+          </a>
+        </li>
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;speaking">
+            Speaking
+          </a>
+        </li>
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags">
+            Categories
+          </a>
+        </li>
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+            RSS
+          </a>
+        </li>
+        
+      </ul>
+    </nav>
+
+    <header id="header">
+      <div class="logo">
+        <a href="https:&#x2F;&#x2F;klau.si" title="Klausi&#x27;s Weblog" rel="home" class="site-logo site-title">
+          <img src="https:&#x2F;&#x2F;klau.si&#x2F;logo.png" alt="Klausi&#x27;s Weblog logo">
+        </a>
+        <a href="https:&#x2F;&#x2F;klau.si">Klausi&#x27;s Weblog</a>
+      </div>
+      <nav class="menu">
+        <ul>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si">
+              Home
+            </a>
+          </li>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;speaking">
+              Speaking
+            </a>
+          </li>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags">
+              Categories
+            </a>
+          </li>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+              RSS
+            </a>
+          </li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="content" id="mobile-panel">
+        
+
+
+
+<article class="post">
+    
+    <header class="post__header">
+        <h1 class="post__title">
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;running-php-53-and-52-parallel-nginx&#x2F;">Running PHP 5.3 and 5.2 in parallel with nginx</a>
+        </h1>
+        <div class="post__meta">
+            <span class="post__time">2011-01-17</span>
+            
+        </div>
+    </header>
+
+    <div class="post-content">
+      <p>
+	The problem: you want to upgrade your Ubuntu server, but you still need PHP 5.2 for some old web sites (i.e. Drupal 5 is not PHP 5.3 compatible).<br />
+	The solution: Go with the packaged PHP 5.3 for your new sites and compile PHP 5.2 yourself for the old ones. As we use the nginx webserver with FastCGI, we can choose per site which PHP CGI binary will handle the requests.</p>
+<p id="zola-continue-reading"><a name="continue-reading"></a></p>
+
+<p>
+	The following steps were carried out on Ubuntu 10.10.</p>
+<ul>
+	<li>
+		Download PHP 5.2 from http://php.net</li>
+	<li>
+		Extract the archive (tar xvzf php-5.2.X.tar.bz2)</li>
+	<li>
+		Change to the new directory (cd php-5.2.X)</li>
+	<li>
+		Run the configure script, we used the following options (&quot;php52&quot; is the name for configuration/data directories, instead of &quot;php5&quot; used by the ubuntu package):</li>
+</ul>
+<pre>
+./configure --prefix=/usr/share/php52\
+ --datadir=/usr/share/php52\
+ --mandir=/usr/share/man\
+ --bindir=/usr/bin/php52\
+ --with-libdir=lib64\
+ --includedir=/usr/include\
+ --sysconfdir=/etc/php52/apache2\
+ --with-config-file-path=/etc/php52/cli\
+ --with-config-file-scan-dir=/etc/php52/conf.d\
+ --localstatedir=/var \
+ --disable-debug \
+ --with-regex=php \
+ --disable-rpath \
+ --disable-static \
+ --with-pic \
+ --with-layout=GNU \
+ --with-pear=/usr/share/php \
+ --enable-calendar \
+ --enable-sysvsem \
+ --enable-sysvshm \
+ --enable-sysvmsg \
+ --enable-bcmath \
+ --with-bz2 \
+ --enable-ctype \
+ --with-db4 \
+ --without-gdbm \
+ --with-iconv \
+ --enable-exif \
+ --enable-ftp \
+ --with-gettext \
+ --enable-mbstring \
+ --with-pcre-regex=/usr \
+ --enable-shmop \
+ --enable-sockets \
+ --enable-wddx \
+ --with-libxml-dir=/usr \
+ --with-zlib \
+ --with-kerberos=/usr \
+ --with-openssl=/usr \
+ --enable-soap \
+ --enable-zip \
+ --with-mhash=yes \
+ --with-exec-dir=/usr/lib/php5/libexec \
+ --without-mm \
+ --with-curl=shared,/usr \
+ --with-zlib-dir=/usr \
+ --with-gd=shared,/usr --enable-gd-native-ttf \
+ --with-gmp=shared,/usr \
+ --with-jpeg-dir=shared,/usr \
+ --with-xpm-dir=shared,/usr/X11R6 \
+ --with-png-dir=shared,/usr \
+ --with-freetype-dir=shared,/usr \
+ --with-ttf=shared,/usr \
+ --with-t1lib=shared,/usr \
+ --with-ldap=shared,/usr \
+ --with-ldap-sasl=/usr \
+ --with-mysql=shared,/usr \
+ --with-mysqli=shared,/usr/bin/mysql_config \
+ --with-pspell=shared,/usr \
+ --with-unixODBC=shared,/usr \
+ --with-xsl=shared,/usr \
+ --with-snmp=shared,/usr \
+ --with-sqlite=shared,/usr \
+ --with-mssql=shared,/usr \
+ --with-tidy=shared,/usr \
+ --with-xmlrpc=shared \
+ --enable-pdo=shared \
+ --without-pdo-dblib \
+ --with-pdo-mysql=shared,/usr \
+ --with-pdo-odbc=shared,unixODBC,/usr \
+ --with-pdo-pgsql=shared,/usr/bin/pg_config \
+ --with-pdo-sqlite=shared,/usr \
+ --with-pdo-dblib=shared,/usr \
+ --enable-force-cgi-redirect --enable-fastcgi \	
+</pre>
+<ul>
+	<li>
+		The configure script may require additional dev-libraries, install them (incomplete list, you may reuqire others, too):</li>
+</ul>
+<pre>
+aptitude install libxml2-dev libpcre3-dev libbz2-dev libcurl4-openssl-dev libgdbm-dev libdb-dev libjpeg62-dev libpng12-dev libxpm-dev
+</pre>
+<ul>
+	<li>
+		Next execute</li>
+</ul>
+<pre>
+make
+</pre>
+<ul>
+	<li>
+		Now we can create a package from that and install it:</li>
+</ul>
+<pre>
+sudo checkinstall
+</pre>
+<ul>
+	<li>
+		Create the config directory /etc/php52 and copy/link the configuration files from /etc/php5</li>
+</ul>
+<pre>
+sudo mkdir /etc/php52
+sudo ln -s /etc/php5/conf.d /etc/php52
+sudo ln -s /etc/php5/cli /etc/php52
+</pre>
+<ul>
+	<li>
+		Now you can use /usr/bin/php52/php-cgi in your upstart/init script as PHP 5.2 binary. You should also have now a deb-package in the directory where you executed checkinstall. You can use that package on other servers as well (installation: sudo dpkg -i php-5.2.deb).</li>
+</ul>
+
+    </div>
+
+    
+    
+
+    <div class="post-footer">
+        
+            
+                <div class="post-tags">
+                    
+                        <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;software&#x2F;">#software</a>
+                    
+                        <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;drupal&#x2F;">#drupal</a>
+                    
+                </div>
+            
+            
+                <div class="post-nav">
+                    
+                        <a class="previous" href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;drupalcon-rules-ecosystem&#x2F;">‹ Drupalcon 2010 talk: About the Rules ecosystem</a>
+                    
+                    
+                        <a class="next" href="https:&#x2F;&#x2F;klau.si&#x2F;home-wifi-setup-ubuntu-asus-rt-n56u-and-linksys-wmp600n&#x2F;">Home WiFi setup with Ubuntu, Asus RT-N56U and Linksys WMP600N ›</a>
+                    
+                    
+                    
+                </div>
+            
+
+        
+
+    </div>
+
+    
+    
+</article>
+
+
+      </div>
+    </main>
+
+    
+    <footer>
+      <p><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License"
+            style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work by
+        <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Klaus Purer</span> is licensed
+        under a <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
+          Attribution-ShareAlike 4.0 International License</a>.
+      </p>
+    </footer>
+    
+  </div>
+
+  
+  <script type="text/javascript" src="https:&#x2F;&#x2F;klau.si&#x2F;even.js"></script>
+  
+</body>
+
+</html>

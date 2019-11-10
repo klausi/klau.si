@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Klausi&#x27;s Weblog - Abandon CVS and synchronize your code from git automatically</title>
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+  
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
+  
+  
+
+  
+  <link rel="stylesheet" href="https:&#x2F;&#x2F;klau.si&#x2F;site.css">
+  
+  
+
+  
+  
+</head>
+
+<body>
+  <div class="container">
+
+    <div id="mobile-navbar" class="mobile-navbar">
+      <div class="mobile-header-logo">
+        <a href="https:&#x2F;&#x2F;klau.si" title="Klausi&#x27;s Weblog" rel="home" class="site-logo site-title">
+          <img src="https:&#x2F;&#x2F;klau.si&#x2F;logo.png" alt="Klausi&#x27;s Weblog logo">
+        </a>
+        <a href="/" class="logo">Klausi&#x27;s Weblog</a>
+      </div>
+      <div class="mobile-navbar-icon icon-out">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <nav id="mobile-menu" class="mobile-menu slideout-menu slideout-menu-left">
+      <ul class="mobile-menu-list">
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si">
+            Home
+          </a>
+        </li>
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;speaking">
+            Speaking
+          </a>
+        </li>
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags">
+            Categories
+          </a>
+        </li>
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+            RSS
+          </a>
+        </li>
+        
+      </ul>
+    </nav>
+
+    <header id="header">
+      <div class="logo">
+        <a href="https:&#x2F;&#x2F;klau.si" title="Klausi&#x27;s Weblog" rel="home" class="site-logo site-title">
+          <img src="https:&#x2F;&#x2F;klau.si&#x2F;logo.png" alt="Klausi&#x27;s Weblog logo">
+        </a>
+        <a href="https:&#x2F;&#x2F;klau.si">Klausi&#x27;s Weblog</a>
+      </div>
+      <nav class="menu">
+        <ul>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si">
+              Home
+            </a>
+          </li>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;speaking">
+              Speaking
+            </a>
+          </li>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags">
+              Categories
+            </a>
+          </li>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+              RSS
+            </a>
+          </li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="content" id="mobile-panel">
+        
+
+
+
+<article class="post">
+    
+    <header class="post__header">
+        <h1 class="post__title">
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;git-cvs-export&#x2F;">Abandon CVS and synchronize your code from git automatically</a>
+        </h1>
+        <div class="post__meta">
+            <span class="post__time">2010-08-25</span>
+            
+        </div>
+    </header>
+
+    <div class="post-content">
+      <p>
+	Sick of developing a Drupal module with CVS? Want to use git but also want your code in CVS on drupal.org for development snapshots? This is an approach to get rid of using CVS completely by synchronizing a git repository automatically to CVS. Basic git knowledge required. Script is on <a href="http://github.com/klausi/git-cvs-export">Github</a>. Needs some testing though.</p>
+<p id="zola-continue-reading"><a name="continue-reading"></a></p>
+
+<h2>
+	Motivation</h2>
+<ul>
+	<li>
+		git is fast</li>
+	<li>
+		git commmits are local until you push them somewhere</li>
+	<li>
+		it is painfull to move and delete files/directories in CVS</li>
+	<li>
+		you can&#39;t add a file/directory in a patch made from CVS easily (argl!)</li>
+	<li>
+		git is better and faster at merging and branching</li>
+	<li>
+		drupal.org will move to git sooner or later, so let&#39;s start to use it</li>
+	<li>
+		&lt;fill in many more reasons here&gt;</li>
+</ul>
+<h2>
+	Preconditions</h2>
+<p>
+	In this approach I used Github for hosting the git repository. All people that you want to collaborate with on that project will push their changes to that git repository. Nobody is allowed to touch the CVS repository on drupal.org, so that you don&#39;t have to do bidirectional synchronization. All changes arrive in the git repository and are then pushed over to the CVS repository.</p>
+<p>
+	I think it is best if you have a server or permanently running machine at hand. A cron job will periodically pull from the git repository and export new commits to CVS.</p>
+<p>
+	You need to install the package git-cvs on Ubuntu to get the necessary CVS export command for git. Script was tested on Ubuntu 10.04.</p>
+<h2>
+	Setting up the repositories on your machine</h2>
+<p>
+	Create a repository on Github or any other git repository provider. Clone that for exporting to CVS on your server. Make sure that &quot;git pull&quot; works, e.g. that your checkout is connected to the remote repository and that the correct branch is checked out that you want to push to CVS. Note: This clone is for synchronization only, don&#39;t use it for development (create another clone and do your work there).</p>
+<p>
+	Create a CVS checkout of your drupal.org project on your server. Use your CVS credentials so that you have access to commit the exports later. Make sure that you have checked out the correct branch you want sync with.</p>
+<p>
+	If you already have code in your CVS repository use &quot;git cvsimport&quot; to populate your git repository with that. I won&#39;t explain that here, there is a <a href="http://maymay.net/blog/2008/04/15/how-to-import-cvs-code-repositories-into-git-using-git-cvsimport/">blog post about it</a>.</p>
+<h2>
+	Setting up the export script and cron job</h2>
+<p>
+	Clone or download the export script from <a href="http://github.com/klausi/git-cvs-export">Github</a> and make sure it is executable.</p>
+<p>
+	If you just imported the latest CVS code into your git repo, you need to put the latest commit ID hash into &quot;.cvslastexport&quot; file in your git repository directory. You can use &quot;git log&quot; to get the latest commit. Example: &quot;echo f0f09a55532f0be86224f6fe957cec9e31250698 &gt; /path/to/your-git-repo/.cvslastexport&quot;. Otherwise you would export the old commits to CVS that are already there - bad idea.</p>
+<p>
+	Time for a test run, exectue &quot;/path/to/git-cvs-export/pull-cvs-export.sh /path/to/your-git-repo /path/to/your-cvs-repo&quot;. If there is nothing in CVS yet, all commits should get synced over. If you just imported from CVS to git before, the script should do nothing (because CVS is up to date).</p>
+<p>
+	Now we are ready to automate this command with cron. I suggest to use a time interval of 15 minutes to check for updates in git. Put a new line in your crontab (execute &quot;crontab -e&quot; to edit your crontab):</p>
+<pre>
+*/15  *  *  *  *      /path/to/git-cvs-export/pull-cvs-export.sh /path/to/your-git-repo /path/to/your-cvs-repo</pre>
+<p>
+	That&#39;s it.</p>
+<h2>
+	Merging with git</h2>
+<p>
+	This workflow has one drawback: you can&#39;t use the standard &quot;git merge&quot; to merge in form other branches. That&#39;s because the commits from the other branch get mixed into the commit history and then each single commit does not apply as patch on top of the previous commit anymore. So you have to use &quot;<strong>git merge --squash</strong>&quot; to create one single changeset from the other branch. By committing that as single commit you maintain compatibility of your history with the CVS export script. Delete the other branch after the merge as another merge will cause conflicts, because git will try to bring in the whole branch changes again.</p>
+<h2>
+	Open issues</h2>
+<ul>
+	<li>
+		You still need to do branching and tagging in CVS. Create corresponding git and CVS checkouts for each branch and add a cron task for each branch to synchronize. Could be fixed by checking automatically for Drupal CVS compatible branch/tag names and create them on demand in CVS.</li>
+	<li>
+		You still need to create git and CVS checkouts to synchronize. Could be fixed by asking for the git and CVS repository URLs (+credentials for CVS) and setting up everything automatically in a dedicated directory, including the cronjob(s).</li>
+</ul>
+
+    </div>
+
+    
+    
+
+    <div class="post-footer">
+        
+            
+                <div class="post-tags">
+                    
+                        <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;drupal&#x2F;">#drupal</a>
+                    
+                </div>
+            
+            
+                <div class="post-nav">
+                    
+                        <a class="previous" href="https:&#x2F;&#x2F;klau.si&#x2F;integration&#x2F;">‹ Integration?</a>
+                    
+                    
+                        <a class="next" href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;drupalcon-rules-ecosystem&#x2F;">Drupalcon 2010 talk: About the Rules ecosystem ›</a>
+                    
+                    
+                    
+                </div>
+            
+
+        
+
+    </div>
+
+    
+    
+</article>
+
+
+      </div>
+    </main>
+
+    
+    <footer>
+      <p><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License"
+            style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work by
+        <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Klaus Purer</span> is licensed
+        under a <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
+          Attribution-ShareAlike 4.0 International License</a>.
+      </p>
+    </footer>
+    
+  </div>
+
+  
+  <script type="text/javascript" src="https:&#x2F;&#x2F;klau.si&#x2F;even.js"></script>
+  
+</body>
+
+</html>

@@ -1,8 +1,8 @@
 +++
 title = "Web Service Composition in Drupal"
 date = 2011-05-11
-path = "theses"
-aliases = ["node/36", "node/36.html", "web-service-composition-drupal.html", "web-service-composition-drupal"]
+path = "thesis"
+aliases = ["node/36", "node/36.html", "web-service-composition-drupal.html", "web-service-composition-drupal", "thesis.html"]
 [taxonomies]
 tags = ["software", "uni", "drupal", "drupal planet"]
 +++

@@ -2,18 +2,18 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Klausi&#x27;s Weblog</title>
-        <link>https%3A//klau.si</link>
+        <link>https://klau.si</link>
         <description></description>
         <generator>Zola</generator>
         <language>en</language>
-        <atom:link href="https%3A//klau.si/tags/rust/rss.xml" rel="self" type="application/rss+xml"/>
+        <atom:link href="https://klau.si/tags/rust/rss.xml" rel="self" type="application/rss+xml"/>
         <lastBuildDate>Sat, 26 Oct 2019 00:00:00 +0000</lastBuildDate>
         
             <item>
                 <title>A new blog on Zola</title>
                 <pubDate>Sat, 26 Oct 2019 00:00:00 +0000</pubDate>
-                <link>https%3A//klau.si/blog/a-new-blog-on-zola/</link>
-                <guid>https%3A//klau.si/blog/a-new-blog-on-zola/</guid>
+                <link>https://klau.si/blog/a-new-blog-on-zola/</link>
+                <guid>https://klau.si/blog/a-new-blog-on-zola/</guid>
                 <description>&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;a-new-blog-on-zola&#x2F;zola.ico&quot; alt=&quot;Zola logo&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;I converted my old blog posts from Drupal to static files and now I&#x27;m trying out &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&quot;&gt;Zola&lt;&#x2F;a&gt;. The static files are hosted on &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;github-pages&#x2F;&quot;&gt;Github Pages&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 </description>
@@ -22,8 +22,8 @@
             <item>
                 <title>Mocking in Rust with conditional compilation</title>
                 <pubDate>Sun, 31 Mar 2019 00:00:00 +0000</pubDate>
-                <link>https%3A//klau.si/blog/mocking-in-rust-with-conditional-compilation/</link>
-                <guid>https%3A//klau.si/blog/mocking-in-rust-with-conditional-compilation/</guid>
+                <link>https://klau.si/blog/mocking-in-rust-with-conditional-compilation/</link>
+                <guid>https://klau.si/blog/mocking-in-rust-with-conditional-compilation/</guid>
                 <description>&lt;p&gt;When writing automated unit tests for your application you will probably need to use &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Mock_object&quot;&gt;mocks&lt;&#x2F;a&gt; at some point. Classical object-oriented programming languages such as PHP solve this with reflection where mock object types are created during test runtime. The code under test expects a certain interface or class and the test code passes mock objects that implement the interface or are a subclass.&lt;&#x2F;p&gt;
 &lt;p&gt;Similar approaches exist in Rust where mock objects are used to test code that expects a trait type. There is a wonderful &lt;a href=&quot;https:&#x2F;&#x2F;asomers.github.io&#x2F;mock_shootout&#x2F;&quot;&gt;Rust mock framework comparison&lt;&#x2F;a&gt; by Alan Somers that lists their features. The biggest problem with most of them as far as I can see is that they cannot mock a foreign &lt;code&gt;struct&lt;&#x2F;code&gt; you are using in your code. Rust does not have a concept of object inheritance for structs so there is no way to mimic a struct type from the standard library or an external crate.&lt;&#x2F;p&gt;
 &lt;p&gt;One workaround for that is to refactor your code to use traits&#x2F;generics instead of concrete structs. That way the implementation is agnostic to whatever struct is used - test code can pass mocks that satisfy the expected trait bounds. The downside is that you might have to invent traits which can make your code more complex just to satisfy test requirements.&lt;&#x2F;p&gt;
@@ -120,8 +120,8 @@
             <item>
                 <title>Benchmarking a Rust web application</title>
                 <pubDate>Fri, 31 Aug 2018 00:00:00 +0000</pubDate>
-                <link>https%3A//klau.si/blog/benchmarking-a-rust-web-application/</link>
-                <guid>https%3A//klau.si/blog/benchmarking-a-rust-web-application/</guid>
+                <link>https://klau.si/blog/benchmarking-a-rust-web-application/</link>
+                <guid>https://klau.si/blog/benchmarking-a-rust-web-application/</guid>
                 <description>&lt;p&gt;Performance testing is an important part when developing a network application - you want to know when you have a regression in request throughput in your service.&lt;&#x2F;p&gt;
 &lt;p&gt;I set out out my goal 9 for Rustnish:&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
@@ -135,7 +135,7 @@
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;cargo run --release
    Compiling rustnish v0.0.1 (file:&#x2F;&#x2F;&#x2F;home&#x2F;klausi&#x2F;workspace&#x2F;rustnish)
     Finished release [optimized] target(s) in 6.02s
-     Running &#96;target&#x2F;release&#x2F;rustnish&#96;
+     Running `target&#x2F;release&#x2F;rustnish`
 Listening on http:&#x2F;&#x2F;127.0.0.1:9090
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;As backend service I&#x27;m using the default Ubuntu Apache webserver running on port 80. It delivers a static default test page.&lt;&#x2F;p&gt;
@@ -232,7 +232,7 @@ Transfer rate:          96275.68 [Kbytes&#x2F;sec] received
                         assert_eq!(
                             res.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;status&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(),
                             hyper::StatusCode::Ok,
-                            &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Did not receive a 200 HTTP status code. Make sure Varnish is configured on port 6081 and the backend port is set to 9091 in &#x2F;etc&#x2F;varnish&#x2F;default.vcl. Make sure the backend server is running with &#96;cargo run --example hello_9091&#96; and Rustnish with &#96;cargo run --release --example rustnish_9090&#96;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;);
+                            &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Did not receive a 200 HTTP status code. Make sure Varnish is configured on port 6081 and the backend port is set to 9091 in &#x2F;etc&#x2F;varnish&#x2F;default.vcl. Make sure the backend server is running with `cargo run --example hello_9091` and Rustnish with `cargo run --release --example rustnish_9090`.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;&amp;quot;);
                         &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; Read response body until the end.
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;                        res.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;body&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;().&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;for_each&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(|&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;_chunk&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;| Ok(()))
                     })
@@ -326,8 +326,8 @@ test f_1_000_parallel_requests_varnish ... bench:  76,219,659 ns&#x2F;iter (+&#x
             <item>
                 <title>Crashing a Rust Hyper server with a Denial of Service attack</title>
                 <pubDate>Sun, 11 Mar 2018 00:00:00 +0000</pubDate>
-                <link>https%3A//klau.si/blog/crashing-a-rust-hyper-server-with-a-denial-of-service-attack/</link>
-                <guid>https%3A//klau.si/blog/crashing-a-rust-hyper-server-with-a-denial-of-service-attack/</guid>
+                <link>https://klau.si/blog/crashing-a-rust-hyper-server-with-a-denial-of-service-attack/</link>
+                <guid>https://klau.si/blog/crashing-a-rust-hyper-server-with-a-denial-of-service-attack/</guid>
                 <description>&lt;p&gt;I&#x27;m writing a reverse proxy in Rust using &lt;a href=&quot;https:&#x2F;&#x2F;hyper.rs&#x2F;&quot;&gt;Hyper&lt;&#x2F;a&gt; and I want
 to measure performance a bit to know if I&#x27;m doing something terribly wrong. By
 doing that I discovered a Denial of Service vulnerability in Hyper when IO
@@ -404,9 +404,9 @@ file locks                      (-x) unlimited
 same reason:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;Listening on http:&#x2F;&#x2F;127.0.0.1:3000 with 1 thread.
-thread &amp;#39;main&amp;#39; panicked at &amp;#39;called &#96;Result::unwrap()&#96; on an &#96;Err&#96; value: Io(Os {
+thread &amp;#39;main&amp;#39; panicked at &amp;#39;called `Result::unwrap()` on an `Err` value: Io(Os {
 code: 24, kind: Other, message: &amp;quot;Too many open files&amp;quot; })&amp;#39;, libcore&#x2F;result.rs:945:5
-note: Run with &#96;RUST_BACKTRACE=1&#96; for a backtrace.
+note: Run with `RUST_BACKTRACE=1` for a backtrace.
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Oops, that is not good. A HTTP server should not just exit when a flood of HTTP
 requests comes in. It needs to be resilient and keep running at all times. You
@@ -476,8 +476,8 @@ prevent server exits where possible. We will get there hopefully!&lt;&#x2F;p&gt;
             <item>
                 <title>Testing memory leaks in Rust</title>
                 <pubDate>Fri, 06 Oct 2017 00:00:00 +0000</pubDate>
-                <link>https%3A//klau.si/blog/testing-memory-leaks-in-rust/</link>
-                <guid>https%3A//klau.si/blog/testing-memory-leaks-in-rust/</guid>
+                <link>https://klau.si/blog/testing-memory-leaks-in-rust/</link>
+                <guid>https://klau.si/blog/testing-memory-leaks-in-rust/</guid>
                 <description>&lt;p&gt;Rust has many built-in concepts for memory safety, but it cannot prevent
 application level logic errors that take up system memory. An example would be
 a server application that stores something for each incoming request in a
@@ -601,10 +601,10 @@ leave out all type decalrations:&lt;&#x2F;p&gt;
   --&amp;gt; tests&#x2F;memory_leaks.rs:48:21
    |
 40 |     let mut parallel = Vec::new();
-   |         ------------ consider giving &#96;parallel&#96; a type
+   |         ------------ consider giving `parallel` a type
 ...
 48 |                     Ok(Loop::Continue(counter + 1))
-   |                     ^^ cannot infer type for &#96;E&#96;
+   |                     ^^ cannot infer type for `E`
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;What &lt;code&gt;E&lt;&#x2F;code&gt;? I&#x27;m not even using any error type in the code here, how would I know?
 And the compiler is asking me to annotate the type of my list of futures, which
@@ -632,7 +632,7 @@ failures:
     thread &amp;#39;test_memory_after_30_000_requests&amp;#39; panicked at &amp;#39;Memory usage at
     server start is 1551KB, memory usage after 30000 requests is 7098KB&amp;#39;,
     tests&#x2F;memory_leaks.rs:63:4
-note: Run with &#96;RUST_BACKTRACE=1&#96; for a backtrace.
+note: Run with `RUST_BACKTRACE=1` for a backtrace.
 
 
 failures:
@@ -703,8 +703,8 @@ still very practical and useful.&lt;&#x2F;p&gt;
             <item>
                 <title>Static variables made thread-safe in Rust</title>
                 <pubDate>Sat, 09 Sep 2017 00:00:00 +0000</pubDate>
-                <link>https%3A//klau.si/blog/static-variables-made-thread-safe-in-rust/</link>
-                <guid>https%3A//klau.si/blog/static-variables-made-thread-safe-in-rust/</guid>
+                <link>https://klau.si/blog/static-variables-made-thread-safe-in-rust/</link>
+                <guid>https://klau.si/blog/static-variables-made-thread-safe-in-rust/</guid>
                 <description>&lt;p&gt;When writing &lt;a href=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;writing-integration-tests-in-rust&#x2F;&quot;&gt;integration tests for my Rustnish reverse proxy project&lt;&#x2F;a&gt; I
 have hard-coded port numbers in tests. This is not ideal because it is hard to
 keep track of which port numbers have already been used and which ones are
@@ -769,7 +769,7 @@ of our desired value 9090. If you try&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;98 |     static PORT_NR: AtomicUsize = AtomicUsize::new(9090);
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;   |                                   ^^^^^^^^^^^^^^^^^^^^^^
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;   |
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;   = help: in Nightly builds, add &#96;#![feature(const_fn)]&#96; to the crate attributes to enable
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;   = help: in Nightly builds, add `#![feature(const_fn)]` to the crate attributes to enable
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;We don&#x27;t want to depend on the nightly compiler, so this is not possible
 right now.&lt;&#x2F;p&gt;
@@ -815,8 +815,8 @@ have not discovered yet.&lt;&#x2F;p&gt;
             <item>
                 <title>Replacing unwrap() and avoiding panics in Rust</title>
                 <pubDate>Wed, 16 Aug 2017 00:00:00 +0000</pubDate>
-                <link>https%3A//klau.si/blog/replacing-unwrap-and-avoiding-panics-in-rust/</link>
-                <guid>https%3A//klau.si/blog/replacing-unwrap-and-avoiding-panics-in-rust/</guid>
+                <link>https://klau.si/blog/replacing-unwrap-and-avoiding-panics-in-rust/</link>
+                <guid>https://klau.si/blog/replacing-unwrap-and-avoiding-panics-in-rust/</guid>
                 <description>&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;std&#x2F;result&#x2F;enum.Result.html#method.unwrap&quot;&gt;&lt;code&gt;unwrap()&lt;&#x2F;code&gt;&lt;&#x2F;a&gt; is a useful tool in Rust but is also bad practice in production code that
 should not abort with unpredictable panics.&lt;&#x2F;p&gt;
 &lt;p&gt;Therefore my goal 4 for Rustnish is full integration tests with no panics
@@ -976,8 +976,8 @@ They are comparable to exception handling in languages such as PHP and Java.&lt;
             <item>
                 <title>Converting a Hyper server to Tokio</title>
                 <pubDate>Sun, 16 Jul 2017 00:00:00 +0000</pubDate>
-                <link>https%3A//klau.si/blog/converting-a-hyper-server-to-tokio/</link>
-                <guid>https%3A//klau.si/blog/converting-a-hyper-server-to-tokio/</guid>
+                <link>https://klau.si/blog/converting-a-hyper-server-to-tokio/</link>
+                <guid>https://klau.si/blog/converting-a-hyper-server-to-tokio/</guid>
                 <description>&lt;p&gt;Since my &lt;a href=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;getting-started-with-rust&#x2F;&quot;&gt;first blog post where I constructed a server with Hyper&lt;&#x2F;a&gt; some time
 has passed and there is now a new version of the library that is based on
 &lt;a href=&quot;https:&#x2F;&#x2F;tokio.rs&quot;&gt;Tokio&lt;&#x2F;a&gt;. My goal 3:&lt;&#x2F;p&gt;
@@ -1205,8 +1205,8 @@ up the rest of your server implementation falls into place nicely.&lt;&#x2F;p&gt
             <item>
                 <title>Using Visual Studio Code for Rust on Ubuntu</title>
                 <pubDate>Sun, 28 May 2017 00:00:00 +0000</pubDate>
-                <link>https%3A//klau.si/blog/using-visual-studio-code-for-rust-on-ubuntu/</link>
-                <guid>https%3A//klau.si/blog/using-visual-studio-code-for-rust-on-ubuntu/</guid>
+                <link>https://klau.si/blog/using-visual-studio-code-for-rust-on-ubuntu/</link>
+                <guid>https://klau.si/blog/using-visual-studio-code-for-rust-on-ubuntu/</guid>
                 <description>&lt;p&gt;I already wrote about &lt;a href=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;using-eclipse-ide-for-rust-on-ubuntu&#x2F;&quot;&gt;using Eclipse for Rust development&lt;&#x2F;a&gt; but after trying
 &lt;a href=&quot;https:&#x2F;&#x2F;code.visualstudio.com&#x2F;&quot;&gt;Visual Studio Code&lt;&#x2F;a&gt; (VSCode) I think it is
 slightly better than the Eclipse integration:&lt;&#x2F;p&gt;
@@ -1274,8 +1274,8 @@ for Eclipse IDE.&lt;&#x2F;p&gt;
             <item>
                 <title>Writing integration tests in Rust</title>
                 <pubDate>Thu, 25 May 2017 00:00:00 +0000</pubDate>
-                <link>https%3A//klau.si/blog/writing-integration-tests-in-rust/</link>
-                <guid>https%3A//klau.si/blog/writing-integration-tests-in-rust/</guid>
+                <link>https://klau.si/blog/writing-integration-tests-in-rust/</link>
+                <guid>https://klau.si/blog/writing-integration-tests-in-rust/</guid>
                 <description>&lt;p&gt;In my first post I wrote a quite fragile, minimally working prototype that uses
 many &lt;code&gt;unwrap()&lt;&#x2F;code&gt; calls thereby raising lots of panics during execution.
 Implementing and verifying proper error handling requires testing. I don&#x27;t want
@@ -1315,15 +1315,15 @@ fail because it will not even compile.&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;span style=&quot;color:#c0c5ce;&quot;&gt;$ cargo test
    Compiling rustnish v0.0.1 (file:&#x2F;&#x2F;&#x2F;home&#x2F;klausi&#x2F;workspace&#x2F;rustnish)
-error[E0425]: cannot find function &#96;start_server&#96; in module &#96;rustnish&#96;
+error[E0425]: cannot find function `start_server` in module `rustnish`
   --&amp;gt; tests&#x2F;integration_tests.rs:21:35
    |
 21 |     let mut listening = rustnish::start_server(port, upstream_port);
-   |                                   ^^^^^^^^^^^^ not found in &#96;rustnish&#96;
+   |                                   ^^^^^^^^^^^^ not found in `rustnish`
 
 error: aborting due to previous error
 
-error: Could not compile &#96;rustnish&#96;.
+error: Could not compile `rustnish`.
 &lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;In order to integration test your Rust application &lt;strong&gt;you need to split it up
 into a main.rs file and a lib.rs file&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
@@ -1472,8 +1472,8 @@ initialization and shutdown code for tests.&lt;&#x2F;p&gt;
             <item>
                 <title>Using Eclipse IDE for Rust on Ubuntu</title>
                 <pubDate>Sat, 06 May 2017 00:00:00 +0000</pubDate>
-                <link>https%3A//klau.si/blog/using-eclipse-ide-for-rust-on-ubuntu/</link>
-                <guid>https%3A//klau.si/blog/using-eclipse-ide-for-rust-on-ubuntu/</guid>
+                <link>https://klau.si/blog/using-eclipse-ide-for-rust-on-ubuntu/</link>
+                <guid>https://klau.si/blog/using-eclipse-ide-for-rust-on-ubuntu/</guid>
                 <description>&lt;p&gt;&lt;strong&gt;Update: &lt;a href=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;using-visual-studio-code-for-rust-on-ubuntu&#x2F;&quot;&gt;New blog post about choosing Visual Studio Code for Rust&lt;&#x2F;a&gt;
 because of better IDE support.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;In &lt;a href=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;getting-started-with-rust&#x2F;&quot;&gt;my first blog post&lt;&#x2F;a&gt; I was
@@ -1561,8 +1561,8 @@ areweideyet.com&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
             <item>
                 <title>Getting started with Rust</title>
                 <pubDate>Sun, 30 Apr 2017 00:00:00 +0000</pubDate>
-                <link>https%3A//klau.si/blog/getting-started-with-rust/</link>
-                <guid>https%3A//klau.si/blog/getting-started-with-rust/</guid>
+                <link>https://klau.si/blog/getting-started-with-rust/</link>
+                <guid>https://klau.si/blog/getting-started-with-rust/</guid>
                 <description>&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;getting-started-with-rust&#x2F;rustnish2.png&quot; alt=&quot;Rustnish logo&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.rust-lang.org&quot;&gt;Rust&lt;&#x2F;a&gt; is still very alien to me and I want to write
 a bit of code in it to get a feeling of the concepts and restrictions it

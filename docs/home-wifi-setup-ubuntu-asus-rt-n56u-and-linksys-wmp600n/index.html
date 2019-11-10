@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Klausi&#x27;s Weblog - Home WiFi setup with Ubuntu, Asus RT-N56U and Linksys WMP600N</title>
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+  
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
+  
+  
+
+  
+  <link rel="stylesheet" href="https:&#x2F;&#x2F;klau.si&#x2F;site.css">
+  
+  
+
+  
+  
+</head>
+
+<body>
+  <div class="container">
+
+    <div id="mobile-navbar" class="mobile-navbar">
+      <div class="mobile-header-logo">
+        <a href="https:&#x2F;&#x2F;klau.si" title="Klausi&#x27;s Weblog" rel="home" class="site-logo site-title">
+          <img src="https:&#x2F;&#x2F;klau.si&#x2F;logo.png" alt="Klausi&#x27;s Weblog logo">
+        </a>
+        <a href="/" class="logo">Klausi&#x27;s Weblog</a>
+      </div>
+      <div class="mobile-navbar-icon icon-out">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <nav id="mobile-menu" class="mobile-menu slideout-menu slideout-menu-left">
+      <ul class="mobile-menu-list">
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si">
+            Home
+          </a>
+        </li>
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;speaking">
+            Speaking
+          </a>
+        </li>
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags">
+            Categories
+          </a>
+        </li>
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+            RSS
+          </a>
+        </li>
+        
+      </ul>
+    </nav>
+
+    <header id="header">
+      <div class="logo">
+        <a href="https:&#x2F;&#x2F;klau.si" title="Klausi&#x27;s Weblog" rel="home" class="site-logo site-title">
+          <img src="https:&#x2F;&#x2F;klau.si&#x2F;logo.png" alt="Klausi&#x27;s Weblog logo">
+        </a>
+        <a href="https:&#x2F;&#x2F;klau.si">Klausi&#x27;s Weblog</a>
+      </div>
+      <nav class="menu">
+        <ul>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si">
+              Home
+            </a>
+          </li>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;speaking">
+              Speaking
+            </a>
+          </li>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags">
+              Categories
+            </a>
+          </li>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+              RSS
+            </a>
+          </li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="content" id="mobile-panel">
+        
+
+
+
+<article class="post">
+    
+    <header class="post__header">
+        <h1 class="post__title">
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;home-wifi-setup-ubuntu-asus-rt-n56u-and-linksys-wmp600n&#x2F;">Home WiFi setup with Ubuntu, Asus RT-N56U and Linksys WMP600N</a>
+        </h1>
+        <div class="post__meta">
+            <span class="post__time">2011-04-15</span>
+            
+        </div>
+    </header>
+
+    <div class="post-content">
+      <p>
+	A summary about setting up a 802.11n wireless network at home, also for future self-reference.</p>
+<p id="zola-continue-reading"><a name="continue-reading"></a></p>
+
+<p>
+	I moved to a new apartment and thought it would be a good idea to avoid network cables and switch to a fast 802.11n wireless network. I bought an Asus RT-N56U wifi router and a Linksys WMP600N PCI card for my desktop PC. Unfortunately there were some problems on the way, so I document the solutions here. All computers involved run Ubuntu 10.10.</p>
+<h3>
+	Firmware update</h3>
+<p>
+	The general setup with the Asus router was straight forward and easy, I did it with my notebook and an Ethernet cable. The first mistake was to upgrade the firmware (which is also very easy with this router), because the new firmware version 1.0.1.3 did not work for me (the router could not connect to the modem anymore). Switching back to 1.0.1.2 solved the problem.</p>
+<h3>
+	DNS problems</h3>
+<p>
+	Internet was working now, but web pages were somehow delayed and it took several seconds before they loaded. I had a look at <a href="http://speedtest.net/">speedtest.net</a> to examine the ping and bandwidth statistics, but they were totally ok (ping 15ms, bandwidth 20Mbps as promised by my provider). So I started to suspect the DNS settings and fired up wireshark to capture the network traffic. As expected: the DNS responses took several seconds. After some googeling I found the very useful page <a href="http://wiki.ubuntuusers.de/DNS-Probleme">DNS problems (German) at ubuntuusers.de</a> that indicated that my router does not handle DNS requests correctly. I search the DHCP configuration of the router to manually specify DNS servers, but could not find anything.</p>
+<p>
+	In this case we can configure the Ubuntu network manager to ignore the offered name server(s) from the router and use others. You need to edit your network connection, got to &quot;IPv4 settings&quot; and select &quot;Automatic (DHCP) addresses only&quot;. Then you can enter custom DNS server(s), I used the ones provided by my ISP. And voila: web pages load much faster now.</p>
+<h3>
+	Wifi card problems</h3>
+<p>
+	Installing the Linksys WMP600N PCI WiFi card in my desktop PC was not a problem and Ubuntu also detected it correctly. At least I thought so, because there were no WiFi networks showing up in the network manager. After a lot of research about the card&#39;s chipset (Ralink RT2800) I found some errors in the log (&quot;dmesg | grep rt&quot;) while using the rt2800pci linux driver. So I blacklisted that driver (sudo echo &quot;blacklist rt2800pci&quot; &gt;&gt; /etc/modprobe.d/blacklist.conf) and tried the rt2860sta driver that also comes with Ubuntu 10.10. No luck, the WiFi was still dead. The next step was to compile the newest Ralink rt2860sta driver myself (<a href="http://wiki.ubuntuusers.de/WLAN/Ralink#RT28xx">howto on ubuntuusers.de, German</a>). Although everything went through smoothly, still no WiFi.</p>
+<p>
+	I revisited all hardware components and played around with the card&#39;s antennas - suddenly I was able to receive WiFi signals while scanning (sudo iwlist scan)! Obviously the problem was that the antennas can only pick up a signal when they are aligned in parallel, either strictly vertical or strictly horizontal. I adjusted them to be horizontal because there was no vertical space (cables to the graphics card). Finally everything works now!</p>
+
+    </div>
+
+    
+    
+
+    <div class="post-footer">
+        
+            
+                <div class="post-tags">
+                    
+                        <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;software&#x2F;">#software</a>
+                    
+                </div>
+            
+            
+                <div class="post-nav">
+                    
+                        <a class="previous" href="https:&#x2F;&#x2F;klau.si&#x2F;running-php-53-and-52-parallel-nginx&#x2F;">‹ Running PHP 5.3 and 5.2 in parallel with nginx</a>
+                    
+                    
+                        <a class="next" href="https:&#x2F;&#x2F;klau.si&#x2F;thesis&#x2F;">Web Service Composition in Drupal ›</a>
+                    
+                    
+                    
+                </div>
+            
+
+        
+
+    </div>
+
+    
+    
+</article>
+
+
+      </div>
+    </main>
+
+    
+    <footer>
+      <p><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License"
+            style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work by
+        <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Klaus Purer</span> is licensed
+        under a <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
+          Attribution-ShareAlike 4.0 International License</a>.
+      </p>
+    </footer>
+    
+  </div>
+
+  
+  <script type="text/javascript" src="https:&#x2F;&#x2F;klau.si&#x2F;even.js"></script>
+  
+</body>
+
+</html>

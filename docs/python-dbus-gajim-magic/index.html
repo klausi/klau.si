@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Klausi&#x27;s Weblog - Python Dbus Gajim Magic</title>
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+  
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
+  
+  
+
+  
+  <link rel="stylesheet" href="https:&#x2F;&#x2F;klau.si&#x2F;site.css">
+  
+  
+
+  
+  
+</head>
+
+<body>
+  <div class="container">
+
+    <div id="mobile-navbar" class="mobile-navbar">
+      <div class="mobile-header-logo">
+        <a href="https:&#x2F;&#x2F;klau.si" title="Klausi&#x27;s Weblog" rel="home" class="site-logo site-title">
+          <img src="https:&#x2F;&#x2F;klau.si&#x2F;logo.png" alt="Klausi&#x27;s Weblog logo">
+        </a>
+        <a href="/" class="logo">Klausi&#x27;s Weblog</a>
+      </div>
+      <div class="mobile-navbar-icon icon-out">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <nav id="mobile-menu" class="mobile-menu slideout-menu slideout-menu-left">
+      <ul class="mobile-menu-list">
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si">
+            Home
+          </a>
+        </li>
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;speaking">
+            Speaking
+          </a>
+        </li>
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags">
+            Categories
+          </a>
+        </li>
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+            RSS
+          </a>
+        </li>
+        
+      </ul>
+    </nav>
+
+    <header id="header">
+      <div class="logo">
+        <a href="https:&#x2F;&#x2F;klau.si" title="Klausi&#x27;s Weblog" rel="home" class="site-logo site-title">
+          <img src="https:&#x2F;&#x2F;klau.si&#x2F;logo.png" alt="Klausi&#x27;s Weblog logo">
+        </a>
+        <a href="https:&#x2F;&#x2F;klau.si">Klausi&#x27;s Weblog</a>
+      </div>
+      <nav class="menu">
+        <ul>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si">
+              Home
+            </a>
+          </li>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;speaking">
+              Speaking
+            </a>
+          </li>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags">
+              Categories
+            </a>
+          </li>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+              RSS
+            </a>
+          </li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="content" id="mobile-panel">
+        
+
+
+
+<article class="post">
+    
+    <header class="post__header">
+        <h1 class="post__title">
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;python-dbus-gajim-magic&#x2F;">Python Dbus Gajim Magic</a>
+        </h1>
+        <div class="post__meta">
+            <span class="post__time">2008-09-28</span>
+            
+        </div>
+    </header>
+
+    <div class="post-content">
+      <p>I like <a href="http://freedesktop.org/wiki/Software/dbus">Dbus</a> because it allows desktop applications to communicate with each other. I also like <a href="http://www.python.org/">Python</a>, a powerful scripting language that is perfect for short tasks with a minimum of commands. And finally I like <a href="http://www.gajim.org">Gajim</a>, the instant messenger of my choice for the <a href="http://jabber.rwth-aachen.de/wiki/index.php/Jabber_-_Einfach_erkl%C3%A4rt!">XMPP-Jabber network</a> (the only free [free as in free speech] instant messaging network!).</p>
+<p id="zola-continue-reading"><a name="continue-reading"></a></p>
+
+<p>Oh I forgot: I really like <a href="http://www.fsf.org">free software</a>! It allows you to study, improve and of course to modify or manipulate the software you use, according to your own needs. Ok, I should stop talking in <a href="http://www.stallman.org/">Richard Stallman</a> style and get to the point. Perhaps non-programmers, non-GNU/Linux-enthusiasts should go away now, it could be boring for you. Find some other sites to waste your time on the internet ;-)</p>
+<p>The problem: I want to switch my status message on Gajim very quick, so that people (friends, work colleagues) can see when I'm working or when I'm simply available. I hate it to search and click around in some nested Gajim menus just to toggle my status message. I want to do it with a single click on a button.  The idea: I write a small script, tell Gajim via Dbus to toggle the status message and put a launcher on my GNOME panel bar.</p>
+<p><a href="http://xover.fsinf.at/klausi/gajim_switch.py">The code</a>: At first you have to import the dbus library for Python, then you access a remote object from gajim that provides methods to retrieve information or send requests. All this can be done in three lines, perfect for custom scripts to tell applications what they should do. (I would have posted a nicely syntax highlighted code snippet here, but wordpress is not capable of that as far as I can see. I should switch to drupal soon.) It works fine and is really convenient. Feel free to modify the script to your own needs! (I did not add a license to it, because 13 lines aren't worth it - consider it is public domain)</p>
+<p>How did I find out: Finding documentation on the internet is hard. In fact, I did a little bit reverse engineering by examining the <a href="http://trac.gajim.org/browser/tags/gajim-0.11.4/src/remote_control.py">source code of gajim for dbus connectivity</a> and an example for a <a href="http://madchicken.altervista.org/tech/2006/10/rhythmbox-096-plugin-for-gajim-status.html">rhythmbox gajim plugin</a>. Well, actually I cannot speak of reverse engineering here, because this is all free and open source software, but digging in python files is ... funny.</p>
+
+    </div>
+
+    
+    
+
+    <div class="post-footer">
+        
+            
+                <div class="post-tags">
+                    
+                        <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;software&#x2F;">#software</a>
+                    
+                </div>
+            
+            
+                <div class="post-nav">
+                    
+                        <a class="previous" href="https:&#x2F;&#x2F;klau.si&#x2F;mit-dem-schlauchboot-die-donau-runter&#x2F;">‹ Mit dem Schlauchboot die Donau runter</a>
+                    
+                    
+                        <a class="next" href="https:&#x2F;&#x2F;klau.si&#x2F;sidux-way-life-beispiel-openoffice-3&#x2F;">The sidux way of life - Beispiel OpenOffice 3 ›</a>
+                    
+                    
+                    
+                </div>
+            
+
+        
+
+    </div>
+
+    
+    
+</article>
+
+
+      </div>
+    </main>
+
+    
+    <footer>
+      <p><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License"
+            style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work by
+        <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Klaus Purer</span> is licensed
+        under a <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
+          Attribution-ShareAlike 4.0 International License</a>.
+      </p>
+    </footer>
+    
+  </div>
+
+  
+  <script type="text/javascript" src="https:&#x2F;&#x2F;klau.si&#x2F;even.js"></script>
+  
+</body>
+
+</html>

@@ -33,6 +33,6 @@ author = "Klaus Purer"
 even_menu = [
     {url = "$BASE_URL", name = "Home"},
     {url = "$BASE_URL/tags/speaking", name = "Speaking"},
-    {url = "$BASE_URL/archive.html", name = "Archive"},
+    {url = "$BASE_URL/tags", name = "Categories"},
     {url = "$BASE_URL/rss.xml", name = "RSS"},
 ]

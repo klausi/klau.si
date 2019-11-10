@@ -2,18 +2,18 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Klausi&#x27;s Weblog</title>
-        <link>https%3A//klau.si</link>
+        <link>https://klau.si</link>
         <description></description>
         <generator>Zola</generator>
         <language>en</language>
-        <atom:link href="https%3A//klau.si/tags/testing/rss.xml" rel="self" type="application/rss+xml"/>
+        <atom:link href="https://klau.si/tags/testing/rss.xml" rel="self" type="application/rss+xml"/>
         <lastBuildDate>Tue, 27 Sep 2016 00:00:00 +0000</lastBuildDate>
         
             <item>
                 <title>Drupalcon 2016 talk: Automated Testing: PHPUnit all the way</title>
                 <pubDate>Tue, 27 Sep 2016 00:00:00 +0000</pubDate>
-                <link>https%3A//klau.si/blog/drupalcon-automated-testing-phpunit/</link>
-                <guid>https%3A//klau.si/blog/drupalcon-automated-testing-phpunit/</guid>
+                <link>https://klau.si/blog/drupalcon-automated-testing-phpunit/</link>
+                <guid>https://klau.si/blog/drupalcon-automated-testing-phpunit/</guid>
                 <description>&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;docs.google.com&#x2F;presentation&#x2F;d&#x2F;1Uhw3wYfcC_axz6SRTxEHVe8FZHbA-tUGN7dr7YyHMXg&#x2F;edit#slide=id.p&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of our DrupalCon Dublin 2016 talk &amp;quot;Automated Testing: PHPUnit all the way&amp;quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;jcdEp3YGa94&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>

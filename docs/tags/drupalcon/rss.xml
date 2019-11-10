@@ -2,18 +2,18 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Klausi&#x27;s Weblog</title>
-        <link>https%3A//klau.si</link>
+        <link>https://klau.si</link>
         <description></description>
         <generator>Zola</generator>
         <language>en</language>
-        <atom:link href="https%3A//klau.si/tags/drupalcon/rss.xml" rel="self" type="application/rss+xml"/>
+        <atom:link href="https://klau.si/tags/drupalcon/rss.xml" rel="self" type="application/rss+xml"/>
         <lastBuildDate>Sun, 03 Nov 2019 00:00:00 +0000</lastBuildDate>
         
             <item>
                 <title>Drupalcon 2019 talk: Find security vulnerabilities through code review</title>
                 <pubDate>Sun, 03 Nov 2019 00:00:00 +0000</pubDate>
-                <link>https%3A//klau.si/blog/drupalcon-security-code-review/</link>
-                <guid>https%3A//klau.si/blog/drupalcon-security-code-review/</guid>
+                <link>https://klau.si/blog/drupalcon-security-code-review/</link>
+                <guid>https://klau.si/blog/drupalcon-security-code-review/</guid>
                 <description>&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;klausi.github.io&#x2F;sec-code-review2019&#x2F;#&#x2F;&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of my DrupalCon Amsterdam 2019 talk &amp;quot;Find security vulnerabilities through code review&amp;quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;Oyoja2rfqSk&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
@@ -22,8 +22,8 @@
             <item>
                 <title>Drupalcon 2016 talk: Automated Testing: PHPUnit all the way</title>
                 <pubDate>Tue, 27 Sep 2016 00:00:00 +0000</pubDate>
-                <link>https%3A//klau.si/blog/drupalcon-automated-testing-phpunit/</link>
-                <guid>https%3A//klau.si/blog/drupalcon-automated-testing-phpunit/</guid>
+                <link>https://klau.si/blog/drupalcon-automated-testing-phpunit/</link>
+                <guid>https://klau.si/blog/drupalcon-automated-testing-phpunit/</guid>
                 <description>&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;docs.google.com&#x2F;presentation&#x2F;d&#x2F;1Uhw3wYfcC_axz6SRTxEHVe8FZHbA-tUGN7dr7YyHMXg&#x2F;edit#slide=id.p&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of our DrupalCon Dublin 2016 talk &amp;quot;Automated Testing: PHPUnit all the way&amp;quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;jcdEp3YGa94&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
@@ -32,8 +32,8 @@
             <item>
                 <title>Drupalcon 2016 talk: How to publish a module on drupal.org</title>
                 <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
-                <link>https%3A//klau.si/blog/drupalcon-publish-module/</link>
-                <guid>https%3A//klau.si/blog/drupalcon-publish-module/</guid>
+                <link>https://klau.si/blog/drupalcon-publish-module/</link>
+                <guid>https://klau.si/blog/drupalcon-publish-module/</guid>
                 <description>&lt;p&gt;Here is the video of my DrupalCon Asia 2016 talk &amp;quot;How to publish a module on drupal.org&amp;quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;JWLb--cb33E&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
@@ -42,8 +42,8 @@
             <item>
                 <title>Drupalcon 2015 talk: Drupal and Security: what you need to know</title>
                 <pubDate>Wed, 23 Sep 2015 00:00:00 +0000</pubDate>
-                <link>https%3A//klau.si/blog/drupalcon-security-what-you-need-to-know/</link>
-                <guid>https%3A//klau.si/blog/drupalcon-security-what-you-need-to-know/</guid>
+                <link>https://klau.si/blog/drupalcon-security-what-you-need-to-know/</link>
+                <guid>https://klau.si/blog/drupalcon-security-what-you-need-to-know/</guid>
                 <description>&lt;p&gt;Here are &lt;a href=&quot;http:&#x2F;&#x2F;scor.github.io&#x2F;drupal-security-2015&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of our DrupalCon Barcelona 2015 talk &amp;quot;Drupal and Security: what you need to know&amp;quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;5LpKelSMsas&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
@@ -52,8 +52,8 @@
             <item>
                 <title>Drupalcon 2015 talk: Coding with Rules for Drupal 8</title>
                 <pubDate>Tue, 22 Sep 2015 00:00:00 +0000</pubDate>
-                <link>https%3A//klau.si/blog/drupalcon-coding-with-rules-drupal-8/</link>
-                <guid>https%3A//klau.si/blog/drupalcon-coding-with-rules-drupal-8/</guid>
+                <link>https://klau.si/blog/drupalcon-coding-with-rules-drupal-8/</link>
+                <guid>https://klau.si/blog/drupalcon-coding-with-rules-drupal-8/</guid>
                 <description>&lt;p&gt;Here is the video of our DrupalCon Barcelona 2015 talk &amp;quot;Coding with Rules for Drupal 8&amp;quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;QcU_LCAHNLg&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
@@ -62,8 +62,8 @@
             <item>
                 <title>Drupalcon 2014 talk: Cracking Drupal</title>
                 <pubDate>Thu, 02 Oct 2014 00:00:00 +0000</pubDate>
-                <link>https%3A//klau.si/blog/drupalcon-cracking-drupal/</link>
-                <guid>https%3A//klau.si/blog/drupalcon-cracking-drupal/</guid>
+                <link>https://klau.si/blog/drupalcon-cracking-drupal/</link>
+                <guid>https://klau.si/blog/drupalcon-cracking-drupal/</guid>
                 <description>&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;docs.google.com&#x2F;presentation&#x2F;d&#x2F;1LWXRbcQUTj9NDHg8gHplAc7EGy94nmbUEUryWLHJqBg&#x2F;edit?usp=sharing&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of our DrupalCon Amsterdam 2014 talk &amp;quot;Cracking Drupal&amp;quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;ZkNGObI4nlU&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
@@ -72,8 +72,8 @@
             <item>
                 <title>Drupalcon Prague 2013 talk: REST and Serialization in Drupal 8</title>
                 <pubDate>Wed, 25 Sep 2013 00:00:00 +0000</pubDate>
-                <link>https%3A//klau.si/blog/drupalcon-prague-rest-serialization-drupal-8/</link>
-                <guid>https%3A//klau.si/blog/drupalcon-prague-rest-serialization-drupal-8/</guid>
+                <link>https://klau.si/blog/drupalcon-prague-rest-serialization-drupal-8/</link>
+                <guid>https://klau.si/blog/drupalcon-prague-rest-serialization-drupal-8/</guid>
                 <description>&lt;p&gt;Here is the video of our DrupalCon Prague 2013 talk &amp;quot;REST and serialization in Drupal 8&amp;quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;w6dqzDbY78k&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
@@ -82,8 +82,8 @@
             <item>
                 <title>Drupalcon Portland 2013 talk: REST and Serialization in Drupal 8</title>
                 <pubDate>Thu, 23 May 2013 00:00:00 +0000</pubDate>
-                <link>https%3A//klau.si/blog/drupalcon-portland-rest-serialization-drupal-8/</link>
-                <guid>https%3A//klau.si/blog/drupalcon-portland-rest-serialization-drupal-8/</guid>
+                <link>https://klau.si/blog/drupalcon-portland-rest-serialization-drupal-8/</link>
+                <guid>https://klau.si/blog/drupalcon-portland-rest-serialization-drupal-8/</guid>
                 <description>&lt;p&gt;Here is the video of our DrupalCon Portland 2013 talk &amp;quot;REST and serialization in Drupal 8&amp;quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;6FNfy7pU6mE&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
@@ -92,8 +92,8 @@
             <item>
                 <title>Drupalcon 2012 talk: The project application process</title>
                 <pubDate>Fri, 24 Aug 2012 00:00:00 +0000</pubDate>
-                <link>https%3A//klau.si/blog/drupalcon-project-application-process/</link>
-                <guid>https%3A//klau.si/blog/drupalcon-project-application-process/</guid>
+                <link>https://klau.si/blog/drupalcon-project-application-process/</link>
+                <guid>https://klau.si/blog/drupalcon-project-application-process/</guid>
                 <description>&lt;p&gt;Here is the video of our DrupalCon Munich 2012 talk &amp;quot;The project application process&amp;quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;jLj0K8Trvus&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
@@ -102,8 +102,8 @@
             <item>
                 <title>Drupalcon 2011 talk: The Rules way of life</title>
                 <pubDate>Fri, 26 Aug 2011 00:00:00 +0000</pubDate>
-                <link>https%3A//klau.si/blog/drupalcon-rules-way-of-life/</link>
-                <guid>https%3A//klau.si/blog/drupalcon-rules-way-of-life/</guid>
+                <link>https://klau.si/blog/drupalcon-rules-way-of-life/</link>
+                <guid>https://klau.si/blog/drupalcon-rules-way-of-life/</guid>
                 <description>&lt;p&gt;Here is the video of our DrupalCon London 2011 talk &amp;quot;The Rules way of life&amp;quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;xXcbPi16VAU&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
@@ -112,8 +112,8 @@
             <item>
                 <title>Drupalcon 2010 talk: About the Rules ecosystem</title>
                 <pubDate>Fri, 27 Aug 2010 00:00:00 +0000</pubDate>
-                <link>https%3A//klau.si/blog/drupalcon-rules-ecosystem/</link>
-                <guid>https%3A//klau.si/blog/drupalcon-rules-ecosystem/</guid>
+                <link>https://klau.si/blog/drupalcon-rules-ecosystem/</link>
+                <guid>https://klau.si/blog/drupalcon-rules-ecosystem/</guid>
                 <description>&lt;p&gt;Here is the video of our DrupalCon Copenhagen 2010 talk &amp;quot;About the Rules ecosystem&amp;quot;.&lt;&#x2F;p&gt;
 &lt;iframe src=&quot;https:&#x2F;&#x2F;archive.org&#x2F;embed&#x2F;AboutTheRulesEcosystem&quot; width=&quot;420&quot; height=&quot;236&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>

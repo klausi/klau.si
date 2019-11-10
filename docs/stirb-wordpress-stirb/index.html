@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Klausi&#x27;s Weblog - Stirb Wordpress, stirb!</title>
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+  
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
+  
+  
+
+  
+  <link rel="stylesheet" href="https:&#x2F;&#x2F;klau.si&#x2F;site.css">
+  
+  
+
+  
+  
+</head>
+
+<body>
+  <div class="container">
+
+    <div id="mobile-navbar" class="mobile-navbar">
+      <div class="mobile-header-logo">
+        <a href="https:&#x2F;&#x2F;klau.si" title="Klausi&#x27;s Weblog" rel="home" class="site-logo site-title">
+          <img src="https:&#x2F;&#x2F;klau.si&#x2F;logo.png" alt="Klausi&#x27;s Weblog logo">
+        </a>
+        <a href="/" class="logo">Klausi&#x27;s Weblog</a>
+      </div>
+      <div class="mobile-navbar-icon icon-out">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <nav id="mobile-menu" class="mobile-menu slideout-menu slideout-menu-left">
+      <ul class="mobile-menu-list">
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si">
+            Home
+          </a>
+        </li>
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;speaking">
+            Speaking
+          </a>
+        </li>
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags">
+            Categories
+          </a>
+        </li>
+        
+        <li class="mobile-menu-item">
+          <a href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+            RSS
+          </a>
+        </li>
+        
+      </ul>
+    </nav>
+
+    <header id="header">
+      <div class="logo">
+        <a href="https:&#x2F;&#x2F;klau.si" title="Klausi&#x27;s Weblog" rel="home" class="site-logo site-title">
+          <img src="https:&#x2F;&#x2F;klau.si&#x2F;logo.png" alt="Klausi&#x27;s Weblog logo">
+        </a>
+        <a href="https:&#x2F;&#x2F;klau.si">Klausi&#x27;s Weblog</a>
+      </div>
+      <nav class="menu">
+        <ul>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si">
+              Home
+            </a>
+          </li>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;speaking">
+              Speaking
+            </a>
+          </li>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags">
+              Categories
+            </a>
+          </li>
+          
+          <li>
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+              RSS
+            </a>
+          </li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="content" id="mobile-panel">
+        
+
+
+
+<article class="post">
+    
+    <header class="post__header">
+        <h1 class="post__title">
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;stirb-wordpress-stirb&#x2F;">Stirb Wordpress, stirb!</a>
+        </h1>
+        <div class="post__meta">
+            <span class="post__time">2009-02-27</span>
+            
+        </div>
+    </header>
+
+    <div class="post-content">
+      <p>Endlich geschafft: Mein Weblog l&auml;uft jetzt auf <a href="http://drupal.org">Drupal</a> und nicht mehr auf dem unsympathischen <a href="http://wordpress.org">Wordpress</a>. Gleichzeitig bin ich umgezogen - ich will mal den Webspace der TU ausprobieren. Seit einiger Zeit bietet der ZID ja PHP- und Mysql-Unterst&uuml;tzung an, sodass hier auch Content Management Systeme aufgezogen werden k&ouml;nnen.</p>
+<p id="zola-continue-reading"><a name="continue-reading"></a></p>
+
+<p>Im Prinzip verlief die &Uuml;bersiedlung problemlos, zuerst habe ich mir die <a href="http://www.zid.tuwien.ac.at/student/internet_services/web/">Informationsseite des ZID</a> angesehen. Datenbank anlegen war kein Problem, Login per SSH auf web.student.tuwien.ac.at auch nicht. Dann das aktuelle Drupal heruntergeladen und in das public_html Verzeichnis entpackt, darin die vorhandene index.html gel&ouml;scht. Im Browser noch die URL meines Webspaces aufgerufen und Drupal mit ein paar Clicks installiert - fertig.</p>
+<p>Wie erwartet gab es ein kleines Problem mit den Clean URLs zu l&ouml;sen, da habe ich eine sehr hilfreiche <a href="http://drupal.org/node/121834">Doku-Seite</a> gefunden, die Clean URLs auf Shared Hostern erm&ouml;glicht. Nicht vergessen in der .htaccess-Datei &quot;<code>RewriteBase /</code>&quot; auf &quot;<code>RewriteBase /</code>~eXXXXXXX/&quot; zu &auml;ndern.</p>
+<p>Jetzt musste ich noch den gesamten Inhalt meines alten Wordpress-Blogs hierher migrieren, dazu habe ich ein <a href="http://drupal.org/project/wordpress_import">Import-Modul</a> verwendet, das die ganze Arbeit f&uuml;r mich erledigt hat. Leider verlief das nicht ganz fehlerfrei, einige Zeilenumbr&uuml;che in den Posts sind kaputt und m&uuml;ssen wohl oder &uuml;bel manuell gefixt werden.</p>
+<p>Zum Abschluss habe ich noch ein paar hilfreiche Module aktiviert/installiert:</p>
+<ul>
+    <li>Blog - F&uuml;gt Blog Content Type hinzu</li>
+    <li><a href="http://drupal.org/project/commentrss">Comment RSS</a> - Damit k&ouml;nnen seitenweit und per Blogeintrag RSS Feeds zu den Kommentaren abonniert werden</li>
+    <li><a href="http://drupal.org/project/fckeditor">FCKEditor</a> - WYSIWYG Editor, damit ich beim Erstellen eines Blogposts nicht manuell HTML-Tags einf&uuml;gen muss (z.B. f&uuml;r Links, Aufz&auml;hlungen, etc.)</li>
+    <li><a href="http://drupal.org/project/mollom">Mollom</a> - Anti-Spam, damit ihr anonym Kommentare schreiben k&ouml;nnt und ich nicht im M&uuml;ll versinke</li>
+</ul>
+<p>Jetzt fehlt mir nur noch ein Modul, das automatisch sinnvolle Pfade aus dem Titel eines Blogposts generiert.</p>
+<p>Update: <a href="http://drupal.org/project/pathauto">Pathauto</a> gefunden und f&uuml;r besonders wertvoll befunden.</p>
+<p>&nbsp;</p>
+
+    </div>
+
+    
+    
+
+    <div class="post-footer">
+        
+            
+                <div class="post-tags">
+                    
+                        <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;software&#x2F;">#software</a>
+                    
+                </div>
+            
+            
+                <div class="post-nav">
+                    
+                        <a class="previous" href="https:&#x2F;&#x2F;klau.si&#x2F;sidux-way-life-beispiel-openoffice-3&#x2F;">‹ The sidux way of life - Beispiel OpenOffice 3</a>
+                    
+                    
+                        <a class="next" href="https:&#x2F;&#x2F;klau.si&#x2F;pro-e-voting&#x2F;">Pro E-Voting ›</a>
+                    
+                    
+                    
+                </div>
+            
+
+        
+
+    </div>
+
+    
+    
+</article>
+
+
+      </div>
+    </main>
+
+    
+    <footer>
+      <p><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License"
+            style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work by
+        <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Klaus Purer</span> is licensed
+        under a <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
+          Attribution-ShareAlike 4.0 International License</a>.
+      </p>
+    </footer>
+    
+  </div>
+
+  
+  <script type="text/javascript" src="https:&#x2F;&#x2F;klau.si&#x2F;even.js"></script>
+  
+</body>
+
+</html>
