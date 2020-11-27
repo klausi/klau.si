@@ -1,23 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Klausi&#x27;s Weblog</title>
+      <title>Klausi&#x27;s Weblog - code review</title>
         <link>https://klau.si</link>
         <description></description>
         <generator>Zola</generator>
         <language>en</language>
         <atom:link href="https://klau.si/tags/code-review/rss.xml" rel="self" type="application/rss+xml"/>
-        <lastBuildDate>Sun, 03 Nov 2019 00:00:00 +0000</lastBuildDate>
-        
-            <item>
-                <title>Drupalcon 2019 talk: Find security vulnerabilities through code review</title>
-                <pubDate>Sun, 03 Nov 2019 00:00:00 +0000</pubDate>
-                <link>https://klau.si/blog/drupalcon-security-code-review/</link>
-                <guid>https://klau.si/blog/drupalcon-security-code-review/</guid>
-                <description>&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;klausi.github.io&#x2F;sec-code-review2019&#x2F;#&#x2F;&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of my DrupalCon Amsterdam 2019 talk &amp;quot;Find security vulnerabilities through code review&amp;quot;.&lt;&#x2F;p&gt;
+        <lastBuildDate>Fri, 27 Nov 2020 00:00:00 +0000</lastBuildDate>
+        <item>
+            <title>Russmedia CTO meetup talk: Pull Request Review best practices</title>
+            <pubDate>Fri, 27 Nov 2020 00:00:00 +0000</pubDate>
+            <link>https://klau.si/blog/russmedia-cto-meetup-talk-pull-request-review/</link>
+            <guid>https://klau.si/blog/russmedia-cto-meetup-talk-pull-request-review/</guid>
+            <description>&lt;p&gt;Here is the video of my Russmedia CTO &amp;amp; product meetup talk &amp;quot;Pull Request Review best practices&amp;quot;.&lt;&#x2F;p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;6CbdQaWI5Hk&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
+</description>
+        </item>
+        <item>
+            <title>Drupalcon 2019 talk: Find security vulnerabilities through code review</title>
+            <pubDate>Sun, 03 Nov 2019 00:00:00 +0000</pubDate>
+            <link>https://klau.si/blog/drupalcon-security-code-review/</link>
+            <guid>https://klau.si/blog/drupalcon-security-code-review/</guid>
+            <description>&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;klausi.github.io&#x2F;sec-code-review2019&#x2F;#&#x2F;&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of my DrupalCon Amsterdam 2019 talk &amp;quot;Find security vulnerabilities through code review&amp;quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;Oyoja2rfqSk&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
-            </item>
-        
+        </item>
     </channel>
 </rss>

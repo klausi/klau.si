@@ -11,7 +11,9 @@
   <title>Klausi&#x27;s Weblog - Crashing a Rust Hyper server with a Denial of Service attack</title>
 
   
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+  <link rel="alternate"
+    type="application/rss+xml"
+    title="RSS" href="https://klau.si/rss.xml">
   
 
   
@@ -180,48 +182,48 @@ issue</a>.</p>
 <p>Let's look at the simplest Hyper server example that just serves &quot;Hello world&quot;
 HTTP responses
 (<a href="https://github.com/hyperium/hyper/blob/v0.11.19/examples/hello.rs">source</a>):</p>
-<pre style="background-color:#2b303b;">
-<span style="color:#b48ead;">static </span><span style="color:#d08770;">PHRASE</span><span style="color:#c0c5ce;">: &amp;</span><span style="color:#b48ead;">&#39;static </span><span style="color:#c0c5ce;">[</span><span style="color:#b48ead;">u8</span><span style="color:#c0c5ce;">] = </span><span style="color:#b48ead;">b</span><span style="color:#c0c5ce;">&quot;</span><span style="color:#a3be8c;">Hello World!</span><span style="color:#c0c5ce;">&quot;;
+<pre style="background-color:#191919;">
+<code><span style="font-style:italic;color:#fbdfb5;">static </span><span style="color:#fdb082;">PHRASE</span><span style="color:#f8f8f2;">: </span><span style="color:#ff5e5e;">&amp;&#39;static </span><span style="color:#f8f8f2;">[</span><span style="font-style:italic;color:#fbdfb5;">u8</span><span style="color:#f8f8f2;">] </span><span style="color:#ff5e5e;">= </span><span style="font-style:italic;color:#fbdfb5;">b</span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">Hello World!</span><span style="color:#ffffff;">&quot;</span><span style="color:#f8f8f2;">;
 
-</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span style="color:#c0c5ce;">() {
-    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> addr = ([</span><span style="color:#d08770;">127</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">], </span><span style="color:#d08770;">3000</span><span style="color:#c0c5ce;">).</span><span style="color:#96b5b4;">into</span><span style="color:#c0c5ce;">();
+</span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">main</span><span style="color:#f8f8f2;">() {
+    </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> addr </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">([</span><span style="color:#fdb082;">127</span><span style="color:#f8f8f2;">, </span><span style="color:#fdb082;">0</span><span style="color:#f8f8f2;">, </span><span style="color:#fdb082;">0</span><span style="color:#f8f8f2;">, </span><span style="color:#fdb082;">1</span><span style="color:#f8f8f2;">], </span><span style="color:#fdb082;">3000</span><span style="color:#f8f8f2;">).</span><span style="color:#6699cc;">into</span><span style="color:#f8f8f2;">();
 
-    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> new_service = </span><span style="color:#96b5b4;">const_service</span><span style="color:#c0c5ce;">(</span><span style="color:#96b5b4;">service_fn</span><span style="color:#c0c5ce;">(|_| {
-        Ok(Response::&lt;hyper::Body&gt;::new()
-            .</span><span style="color:#96b5b4;">with_header</span><span style="color:#c0c5ce;">(ContentLength(</span><span style="color:#d08770;">PHRASE</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">len</span><span style="color:#c0c5ce;">() as </span><span style="color:#b48ead;">u64</span><span style="color:#c0c5ce;">))
-            .</span><span style="color:#96b5b4;">with_header</span><span style="color:#c0c5ce;">(ContentType::plaintext())
-            .</span><span style="color:#96b5b4;">with_body</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">PHRASE</span><span style="color:#c0c5ce;">))
+    </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> new_service </span><span style="color:#ff5e5e;">= </span><span style="color:#6699cc;">const_service</span><span style="color:#f8f8f2;">(</span><span style="color:#6699cc;">service_fn</span><span style="color:#f8f8f2;">(|_| {
+        </span><span style="color:#fbe3bf;">Ok</span><span style="color:#f8f8f2;">(Response::&lt;hyper::Body&gt;::new()
+            .</span><span style="color:#6699cc;">with_header</span><span style="color:#f8f8f2;">(ContentLength(</span><span style="color:#fdb082;">PHRASE</span><span style="color:#f8f8f2;">.</span><span style="color:#6699cc;">len</span><span style="color:#f8f8f2;">() </span><span style="color:#ff5e5e;">as </span><span style="font-style:italic;color:#fbdfb5;">u64</span><span style="color:#f8f8f2;">))
+            .</span><span style="color:#6699cc;">with_header</span><span style="color:#f8f8f2;">(ContentType::plaintext())
+            .</span><span style="color:#6699cc;">with_body</span><span style="color:#f8f8f2;">(</span><span style="color:#fdb082;">PHRASE</span><span style="color:#f8f8f2;">))
     }));
 
-    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> server = Http::new().</span><span style="color:#96b5b4;">bind</span><span style="color:#c0c5ce;">(&amp;addr, new_service).</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
-    println!(&quot;</span><span style="color:#a3be8c;">Listening on http://</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> with 1 thread.</span><span style="color:#c0c5ce;">&quot;, server.</span><span style="color:#96b5b4;">local_addr</span><span style="color:#c0c5ce;">().</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">());
-    server.</span><span style="color:#96b5b4;">run</span><span style="color:#c0c5ce;">().</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
+    </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> server </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">Http::new().</span><span style="color:#6699cc;">bind</span><span style="color:#f8f8f2;">(</span><span style="color:#ff5e5e;">&amp;</span><span style="color:#f8f8f2;">addr, new_service).</span><span style="color:#6699cc;">unwrap</span><span style="color:#f8f8f2;">();
+    println!(</span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">Listening on http://</span><span style="color:#fdb082;">{}</span><span style="color:#fbe3bf;"> with 1 thread.</span><span style="color:#ffffff;">&quot;</span><span style="color:#f8f8f2;">, server.</span><span style="color:#6699cc;">local_addr</span><span style="color:#f8f8f2;">().</span><span style="color:#6699cc;">unwrap</span><span style="color:#f8f8f2;">());
+    server.</span><span style="color:#6699cc;">run</span><span style="color:#f8f8f2;">().</span><span style="color:#6699cc;">unwrap</span><span style="color:#f8f8f2;">();
 }
-</span></pre>
+</span></code></pre>
 <p>The last call to <code>server.run()</code> will block and the program will continue to run
 until terminated. At least that is what we expect to happen here.</p>
 <p>This example is included with the Hyper library and you can run the vulnerable
 version directly from there:</p>
-<pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">git clone --branch v0.11.19 https://github.com/hyperium/hyper.git
+<pre style="background-color:#191919;">
+<code><span style="color:#f8f8f2;">git clone --branch v0.11.19 https://github.com/hyperium/hyper.git
 cd hyper
 cargo run --example hello
-</span></pre><h2 id="using-apachebench-to-attack-the-server">Using ApacheBench to attack the server</h2>
+</span></code></pre><h2 id="using-apachebench-to-attack-the-server">Using ApacheBench to attack the server</h2>
 <p>My go to tool for load testing is
 <a href="https://httpd.apache.org/docs/2.4/programs/ab.html">ApacheBench</a>, a simple
 command line tool for HTTP request testing. I played a bit with the command
 line options and made the number of concurrent requests a bit too high by
 mistake:</p>
-<pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">$ ab -r -c 10000 -n 1000000 http://127.0.0.1:3000/
+<pre style="background-color:#191919;">
+<code><span style="color:#f8f8f2;">$ ab -r -c 10000 -n 1000000 http://127.0.0.1:3000/
 Benchmarking 127.0.0.1 (be patient)
 socket: Too many open files (24)
-</span></pre>
+</span></code></pre>
 <p>Ah yes, 10k requests in parallel will probably not work because the <code>ab</code>
 process is only allowed to open a certain amount of ports. Let's check the
 limits for a Linux process running under my user account:</p>
-<pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">$ ulimit -a
+<pre style="background-color:#191919;">
+<code><span style="color:#f8f8f2;">$ ulimit -a
 core file size          (blocks, -c) 0
 data seg size           (kbytes, -d) unlimited
 scheduling priority             (-e) 0
@@ -238,16 +240,16 @@ cpu time               (seconds, -t) unlimited
 max user processes              (-u) 30562
 virtual memory          (kbytes, -v) unlimited
 file locks                      (-x) unlimited
-</span></pre>
+</span></code></pre>
 <p>Only 1024 open files/ports allowed.</p>
 <p>When I checked back on my Hyper server I was surprised to find it dead for the
 same reason:</p>
-<pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">Listening on http://127.0.0.1:3000 with 1 thread.
+<pre style="background-color:#191919;">
+<code><span style="color:#f8f8f2;">Listening on http://127.0.0.1:3000 with 1 thread.
 thread &#39;main&#39; panicked at &#39;called `Result::unwrap()` on an `Err` value: Io(Os {
 code: 24, kind: Other, message: &quot;Too many open files&quot; })&#39;, libcore/result.rs:945:5
 note: Run with `RUST_BACKTRACE=1` for a backtrace.
-</span></pre>
+</span></code></pre>
 <p>Oops, that is not good. A HTTP server should not just exit when a flood of HTTP
 requests comes in. It needs to be resilient and keep running at all times. You
 could argue that the open file limit simply must be configured to a higher
@@ -255,26 +257,26 @@ value for production use. That way the problem can be postponed to even larger
 request volumes, but then the problem is the same: the server will abort and
 die.</p>
 <h2 id="a-naive-fix-with-a-loop">A naive fix with a loop</h2>
-<pre style="background-color:#2b303b;">
-<span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> addr = ([</span><span style="color:#d08770;">127</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">], </span><span style="color:#d08770;">3000</span><span style="color:#c0c5ce;">).</span><span style="color:#96b5b4;">into</span><span style="color:#c0c5ce;">();
+<pre style="background-color:#191919;">
+<code><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> addr </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">([</span><span style="color:#fdb082;">127</span><span style="color:#f8f8f2;">, </span><span style="color:#fdb082;">0</span><span style="color:#f8f8f2;">, </span><span style="color:#fdb082;">0</span><span style="color:#f8f8f2;">, </span><span style="color:#fdb082;">1</span><span style="color:#f8f8f2;">], </span><span style="color:#fdb082;">3000</span><span style="color:#f8f8f2;">).</span><span style="color:#6699cc;">into</span><span style="color:#f8f8f2;">();
 
-</span><span style="color:#b48ead;">loop </span><span style="color:#c0c5ce;">{
-    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> new_service = </span><span style="color:#96b5b4;">const_service</span><span style="color:#c0c5ce;">(</span><span style="color:#96b5b4;">service_fn</span><span style="color:#c0c5ce;">(|_| {
-        Ok(Response::&lt;hyper::Body&gt;::new()
-            .</span><span style="color:#96b5b4;">with_header</span><span style="color:#c0c5ce;">(ContentLength(</span><span style="color:#d08770;">PHRASE</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">len</span><span style="color:#c0c5ce;">() as </span><span style="color:#b48ead;">u64</span><span style="color:#c0c5ce;">))
-            .</span><span style="color:#96b5b4;">with_header</span><span style="color:#c0c5ce;">(ContentType::plaintext())
-            .</span><span style="color:#96b5b4;">with_body</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">PHRASE</span><span style="color:#c0c5ce;">))
+</span><span style="color:#ff5e5e;">loop </span><span style="color:#f8f8f2;">{
+    </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> new_service </span><span style="color:#ff5e5e;">= </span><span style="color:#6699cc;">const_service</span><span style="color:#f8f8f2;">(</span><span style="color:#6699cc;">service_fn</span><span style="color:#f8f8f2;">(|_| {
+        </span><span style="color:#fbe3bf;">Ok</span><span style="color:#f8f8f2;">(Response::&lt;hyper::Body&gt;::new()
+            .</span><span style="color:#6699cc;">with_header</span><span style="color:#f8f8f2;">(ContentLength(</span><span style="color:#fdb082;">PHRASE</span><span style="color:#f8f8f2;">.</span><span style="color:#6699cc;">len</span><span style="color:#f8f8f2;">() </span><span style="color:#ff5e5e;">as </span><span style="font-style:italic;color:#fbdfb5;">u64</span><span style="color:#f8f8f2;">))
+            .</span><span style="color:#6699cc;">with_header</span><span style="color:#f8f8f2;">(ContentType::plaintext())
+            .</span><span style="color:#6699cc;">with_body</span><span style="color:#f8f8f2;">(</span><span style="color:#fdb082;">PHRASE</span><span style="color:#f8f8f2;">))
     }));
 
-    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> server = Http::new()
-        .</span><span style="color:#96b5b4;">bind</span><span style="color:#c0c5ce;">(&amp;addr, new_service)
-        .</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
-    println!(&quot;</span><span style="color:#a3be8c;">Listening on http://</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> with 1 thread.</span><span style="color:#c0c5ce;">&quot;, server.</span><span style="color:#96b5b4;">local_addr</span><span style="color:#c0c5ce;">().</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">());
-    </span><span style="color:#b48ead;">if let </span><span style="color:#c0c5ce;">Err(e) = server.</span><span style="color:#96b5b4;">run</span><span style="color:#c0c5ce;">() {
-        println!(&quot;</span><span style="color:#a3be8c;">Error: </span><span style="color:#d08770;">{:?}</span><span style="color:#c0c5ce;">&quot;, e);
+    </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> server </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">Http::new()
+        .</span><span style="color:#6699cc;">bind</span><span style="color:#f8f8f2;">(</span><span style="color:#ff5e5e;">&amp;</span><span style="color:#f8f8f2;">addr, new_service)
+        .</span><span style="color:#6699cc;">unwrap</span><span style="color:#f8f8f2;">();
+    println!(</span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">Listening on http://</span><span style="color:#fdb082;">{}</span><span style="color:#fbe3bf;"> with 1 thread.</span><span style="color:#ffffff;">&quot;</span><span style="color:#f8f8f2;">, server.</span><span style="color:#6699cc;">local_addr</span><span style="color:#f8f8f2;">().</span><span style="color:#6699cc;">unwrap</span><span style="color:#f8f8f2;">());
+    </span><span style="color:#ff5e5e;">if </span><span style="font-style:italic;color:#fbdfb5;">let </span><span style="color:#fbe3bf;">Err</span><span style="color:#f8f8f2;">(e) </span><span style="color:#ff5e5e;">=</span><span style="color:#f8f8f2;"> server.</span><span style="color:#6699cc;">run</span><span style="color:#f8f8f2;">() {
+        println!(</span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">Error: </span><span style="color:#fdb082;">{:?}</span><span style="color:#ffffff;">&quot;</span><span style="color:#f8f8f2;">, e);
     }
 }
-</span></pre>
+</span></code></pre>
 <p>This &quot;works&quot; in the sense that the server does not die and just restarts
 itself. The problem with this approach is that other connections are dropped
 when an IO error occurs, causing a service interruption.</p>
@@ -287,14 +289,14 @@ before trying to accept the TCP connection again, hoping that free ports have
 become available in the meantime.</p>
 <p>This setting is currently (Hyper v0.11.22) disabled by default and you must
 enable it like this:</p>
-<pre style="background-color:#2b303b;">
-<span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> server = Http::new()
-    .</span><span style="color:#96b5b4;">sleep_on_errors</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">true</span><span style="color:#c0c5ce;">)
-    .</span><span style="color:#96b5b4;">bind</span><span style="color:#c0c5ce;">(&amp;addr, new_service)
-    .</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
-println!(&quot;</span><span style="color:#a3be8c;">Listening on http://</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> with 1 thread.</span><span style="color:#c0c5ce;">&quot;, server.</span><span style="color:#96b5b4;">local_addr</span><span style="color:#c0c5ce;">().</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">());
-server.</span><span style="color:#96b5b4;">run</span><span style="color:#c0c5ce;">().</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
-</span></pre>
+<pre style="background-color:#191919;">
+<code><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> server </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">Http::new()
+    .</span><span style="color:#6699cc;">sleep_on_errors</span><span style="color:#f8f8f2;">(</span><span style="color:#ff8942;">true</span><span style="color:#f8f8f2;">)
+    .</span><span style="color:#6699cc;">bind</span><span style="color:#f8f8f2;">(</span><span style="color:#ff5e5e;">&amp;</span><span style="color:#f8f8f2;">addr, new_service)
+    .</span><span style="color:#6699cc;">unwrap</span><span style="color:#f8f8f2;">();
+println!(</span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">Listening on http://</span><span style="color:#fdb082;">{}</span><span style="color:#fbe3bf;"> with 1 thread.</span><span style="color:#ffffff;">&quot;</span><span style="color:#f8f8f2;">, server.</span><span style="color:#6699cc;">local_addr</span><span style="color:#f8f8f2;">().</span><span style="color:#6699cc;">unwrap</span><span style="color:#f8f8f2;">());
+server.</span><span style="color:#6699cc;">run</span><span style="color:#f8f8f2;">().</span><span style="color:#6699cc;">unwrap</span><span style="color:#f8f8f2;">();
+</span></code></pre>
 <p>Future versions of Hyper (probably starting with 0.12.x) will enable this
 setting per default to have a better developer experience. Progress is tracked
 in <a href="https://github.com/hyperium/hyper/issues/1455">this issue</a>.</p>

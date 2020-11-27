@@ -1,227 +1,205 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Klausi&#x27;s Weblog</title>
+      <title>Klausi&#x27;s Weblog - software</title>
         <link>https://klau.si</link>
         <description></description>
         <generator>Zola</generator>
         <language>en</language>
         <atom:link href="https://klau.si/tags/software/rss.xml" rel="self" type="application/rss+xml"/>
         <lastBuildDate>Sun, 12 May 2013 00:00:00 +0000</lastBuildDate>
-        
-            <item>
-                <title>Screencasts with RecordMyDesktop, ffmpeg conversion for HTML5 video</title>
-                <pubDate>Sun, 12 May 2013 00:00:00 +0000</pubDate>
-                <link>https://klau.si/screencasts-recordmydesktop-ffmpeg-conversion-html5-video/</link>
-                <guid>https://klau.si/screencasts-recordmydesktop-ffmpeg-conversion-html5-video/</guid>
-                <description>&lt;p&gt;Producing a demo video for &lt;a href=&quot;http:&#x2F;&#x2F;portland2013.drupal.org&#x2F;session&#x2F;rest-and-serialization-drupal-8&quot;&gt;my DrupalCon Portland presentation&lt;&#x2F;a&gt; caused a bit frustration with video editing tools, so here is a simple solution to cut and convert a video on Ubuntu.</description>
-            </item>
-        
-            <item>
-                <title>Git diff --color-words</title>
-                <pubDate>Sun, 25 Sep 2011 00:00:00 +0000</pubDate>
-                <link>https://klau.si/git-diff-color-words/</link>
-                <guid>https://klau.si/git-diff-color-words/</guid>
-                <description>&lt;p&gt;Git command for better patch review.&lt;&#x2F;p&gt;
+        <item>
+            <title>Screencasts with RecordMyDesktop, ffmpeg conversion for HTML5 video</title>
+            <pubDate>Sun, 12 May 2013 00:00:00 +0000</pubDate>
+            <link>https://klau.si/screencasts-recordmydesktop-ffmpeg-conversion-html5-video/</link>
+            <guid>https://klau.si/screencasts-recordmydesktop-ffmpeg-conversion-html5-video/</guid>
+            <description>&lt;p&gt;Producing a demo video for &lt;a href=&quot;http:&#x2F;&#x2F;portland2013.drupal.org&#x2F;session&#x2F;rest-and-serialization-drupal-8&quot;&gt;my DrupalCon Portland presentation&lt;&#x2F;a&gt; caused a bit frustration with video editing tools, so here is a simple solution to cut and convert a video on Ubuntu.</description>
+        </item>
+        <item>
+            <title>Git diff --color-words</title>
+            <pubDate>Sun, 25 Sep 2011 00:00:00 +0000</pubDate>
+            <link>https://klau.si/git-diff-color-words/</link>
+            <guid>https://klau.si/git-diff-color-words/</guid>
+            <description>&lt;p&gt;Git command for better patch review.&lt;&#x2F;p&gt;
 &lt;p&gt;The usual patch format is often not really human readable. Consider &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;files&#x2F;issues&#x2F;dependent-clause-errors-806974-8.patch&quot;&gt;this patch on drupal.org&lt;&#x2F;a&gt; (&lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;node&#x2F;806974&quot;&gt;issue&lt;&#x2F;a&gt;) that only removes commas. How can I be sure that only the comma was removed on the changed lines? Fortunately, Git can help here. Download the patch, apply it to your repository and use the following command to get a colored output:&lt;&#x2F;p&gt;
 &lt;pre&gt;
 git diff --color-words&lt;&#x2F;pre&gt;
 &lt;p&gt;The output will not show changed lines but changed words, usually removed words in red and added words in green. So you get a much more fine-grained overview of what the patch changes.&lt;&#x2F;p&gt;
 </description>
-            </item>
-        
-            <item>
-                <title>Web Service Composition in Drupal</title>
-                <pubDate>Wed, 11 May 2011 00:00:00 +0000</pubDate>
-                <link>https://klau.si/thesis/</link>
-                <guid>https://klau.si/thesis/</guid>
-                <description>&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;&#x2F;sites&#x2F;default&#x2F;files&#x2F;wsclient_logo_300_0.thumbnail.png&quot; style=&quot;width: 209px; height: 217px; float: right;&quot; &#x2F;&gt;A master thesis written by Klaus Purer at the Vienna University of Technology, released in May 2011.&lt;&#x2F;p&gt;
+        </item>
+        <item>
+            <title>Web Service Composition in Drupal</title>
+            <pubDate>Wed, 11 May 2011 00:00:00 +0000</pubDate>
+            <link>https://klau.si/thesis/</link>
+            <guid>https://klau.si/thesis/</guid>
+            <description>&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;&#x2F;sites&#x2F;default&#x2F;files&#x2F;wsclient_logo_300_0.thumbnail.png&quot; style=&quot;width: 209px; height: 217px; float: right;&quot; &#x2F;&gt;A master thesis written by Klaus Purer at the Vienna University of Technology, released in May 2011.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;strong&gt;Abstract:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;Building web applications has become a complex task and often requires interaction with other web applications, such as web services. Drupal is a free and open source content management system and framework that provides a rich platform for rapid web development. The modular and extensible nature of Drupal allows developers to customize and embrace the core functionality and to create new features. This thesis is about investigating and implementing a web service client module for Drupal that is able to consume classical WS* web services as well as RESTful web services.&lt;&#x2F;p&gt;
 </description>
-            </item>
-        
-            <item>
-                <title>Home WiFi setup with Ubuntu, Asus RT-N56U and Linksys WMP600N</title>
-                <pubDate>Fri, 15 Apr 2011 00:00:00 +0000</pubDate>
-                <link>https://klau.si/home-wifi-setup-ubuntu-asus-rt-n56u-and-linksys-wmp600n/</link>
-                <guid>https://klau.si/home-wifi-setup-ubuntu-asus-rt-n56u-and-linksys-wmp600n/</guid>
-                <description>&lt;p&gt;
+        </item>
+        <item>
+            <title>Home WiFi setup with Ubuntu, Asus RT-N56U and Linksys WMP600N</title>
+            <pubDate>Fri, 15 Apr 2011 00:00:00 +0000</pubDate>
+            <link>https://klau.si/home-wifi-setup-ubuntu-asus-rt-n56u-and-linksys-wmp600n/</link>
+            <guid>https://klau.si/home-wifi-setup-ubuntu-asus-rt-n56u-and-linksys-wmp600n/</guid>
+            <description>&lt;p&gt;
 	A summary about setting up a 802.11n wireless network at home, also for future self-reference.&lt;&#x2F;p&gt;
 </description>
-            </item>
-        
-            <item>
-                <title>Running PHP 5.3 and 5.2 in parallel with nginx</title>
-                <pubDate>Mon, 17 Jan 2011 00:00:00 +0000</pubDate>
-                <link>https://klau.si/running-php-53-and-52-parallel-nginx/</link>
-                <guid>https://klau.si/running-php-53-and-52-parallel-nginx/</guid>
-                <description>&lt;p&gt;
+        </item>
+        <item>
+            <title>Running PHP 5.3 and 5.2 in parallel with nginx</title>
+            <pubDate>Mon, 17 Jan 2011 00:00:00 +0000</pubDate>
+            <link>https://klau.si/running-php-53-and-52-parallel-nginx/</link>
+            <guid>https://klau.si/running-php-53-and-52-parallel-nginx/</guid>
+            <description>&lt;p&gt;
 	The problem: you want to upgrade your Ubuntu server, but you still need PHP 5.2 for some old web sites (i.e. Drupal 5 is not PHP 5.3 compatible).&lt;br &#x2F;&gt;
 	The solution: Go with the packaged PHP 5.3 for your new sites and compile PHP 5.2 yourself for the old ones. As we use the nginx webserver with FastCGI, we can choose per site which PHP CGI binary will handle the requests.&lt;&#x2F;p&gt;
 </description>
-            </item>
-        
-            <item>
-                <title>Ubuntu talking Elvish or Klingon?</title>
-                <pubDate>Mon, 17 May 2010 00:00:00 +0000</pubDate>
-                <link>https://klau.si/ubuntu-talking-elvish-or-klingon/</link>
-                <guid>https://klau.si/ubuntu-talking-elvish-or-klingon/</guid>
-                <description>&lt;p&gt;
+        </item>
+        <item>
+            <title>Ubuntu talking Elvish or Klingon?</title>
+            <pubDate>Mon, 17 May 2010 00:00:00 +0000</pubDate>
+            <link>https://klau.si/ubuntu-talking-elvish-or-klingon/</link>
+            <guid>https://klau.si/ubuntu-talking-elvish-or-klingon/</guid>
+            <description>&lt;p&gt;
 	Funny screenshot I captured yesterday (I guess this bug was originally caused by outputting binary data in a terminal):&lt;&#x2F;p&gt;
 &lt;p&gt;
 	&lt;a href=&quot;&#x2F;files&#x2F;ubuntu-elvish-klingon.png&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;&#x2F;files&#x2F;ubuntu-elvish-klingon.png&quot; style=&quot;width: 500px; height: 313px;&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </description>
-            </item>
-        
-            <item>
-                <title>Lightning talk about hooks in Drupal</title>
-                <pubDate>Tue, 13 Apr 2010 00:00:00 +0000</pubDate>
-                <link>https://klau.si/lightning-talk-about-hooks-drupal/</link>
-                <guid>https://klau.si/lightning-talk-about-hooks-drupal/</guid>
-                <description>&lt;p&gt;
+        </item>
+        <item>
+            <title>Lightning talk about hooks in Drupal</title>
+            <pubDate>Tue, 13 Apr 2010 00:00:00 +0000</pubDate>
+            <link>https://klau.si/lightning-talk-about-hooks-drupal/</link>
+            <guid>https://klau.si/lightning-talk-about-hooks-drupal/</guid>
+            <description>&lt;p&gt;
 	I will attend the &lt;a href=&quot;http:&#x2F;&#x2F;sf2010.drupal.org&#x2F;conference&#x2F;core-developer-summit&quot;&gt;Drupal Core Developer Summit&lt;&#x2F;a&gt; at Drupalcon San Francisco, so I had to prepare a short lighting talk about a topic that bothers me in Drupal. As I ran into an issue of implementing a hook by accident recently, I decided to come up with some suggestions how to improve the situation. I have attached &lt;a href=&quot;&#x2F;files&#x2F;hooks_drupal.pdf&quot;&gt;the PDF&lt;&#x2F;a&gt; I will submit.&lt;&#x2F;p&gt;
 </description>
-            </item>
-        
-            <item>
-                <title>Gmail and postmaster</title>
-                <pubDate>Mon, 22 Feb 2010 00:00:00 +0000</pubDate>
-                <link>https://klau.si/gmail-and-postmaster/</link>
-                <guid>https://klau.si/gmail-and-postmaster/</guid>
-                <description>&lt;p&gt;The Gmail spam filter works fine most time, but be careful if you are the postmaster of a mail server and want to check delivery failure notifications in your Gmail account.&lt;&#x2F;p&gt;
+        </item>
+        <item>
+            <title>Gmail and postmaster</title>
+            <pubDate>Mon, 22 Feb 2010 00:00:00 +0000</pubDate>
+            <link>https://klau.si/gmail-and-postmaster/</link>
+            <guid>https://klau.si/gmail-and-postmaster/</guid>
+            <description>&lt;p&gt;The Gmail spam filter works fine most time, but be careful if you are the postmaster of a mail server and want to check delivery failure notifications in your Gmail account.&lt;&#x2F;p&gt;
 </description>
-            </item>
-        
-            <item>
-                <title>A master thesis about Drupal and Web Services</title>
-                <pubDate>Mon, 15 Feb 2010 00:00:00 +0000</pubDate>
-                <link>https://klau.si/master-thesis-about-drupal-and-web-services/</link>
-                <guid>https://klau.si/master-thesis-about-drupal-and-web-services/</guid>
-                <description>&lt;p&gt;
+        </item>
+        <item>
+            <title>A master thesis about Drupal and Web Services</title>
+            <pubDate>Mon, 15 Feb 2010 00:00:00 +0000</pubDate>
+            <link>https://klau.si/master-thesis-about-drupal-and-web-services/</link>
+            <guid>https://klau.si/master-thesis-about-drupal-and-web-services/</guid>
+            <description>&lt;p&gt;
 	In the last weeks I thought about a topic for my master thesis at the Vienna University of Technology, and I came up with the idea of integrating Drupal and Web Services.&lt;&#x2F;p&gt;
 </description>
-            </item>
-        
-            <item>
-                <title>Drupal Core update script</title>
-                <pubDate>Tue, 22 Dec 2009 00:00:00 +0000</pubDate>
-                <link>https://klau.si/drupal-core-update-script/</link>
-                <guid>https://klau.si/drupal-core-update-script/</guid>
-                <description>&lt;p&gt;
+        </item>
+        <item>
+            <title>Drupal Core update script</title>
+            <pubDate>Tue, 22 Dec 2009 00:00:00 +0000</pubDate>
+            <link>https://klau.si/drupal-core-update-script/</link>
+            <guid>https://klau.si/drupal-core-update-script/</guid>
+            <description>&lt;p&gt;
 	&lt;strong&gt;Update: Do not use this script anymore, drush provides a very good upgrade mechanism itself now!&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;
 	Upgrading &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&quot;&gt;Drupal&lt;&#x2F;a&gt; core can be a very tedious task - especially if you run a Drupal multi site installation (backup database, put site into maintenance mode, run update DB script, put site online again - repeat for every single site). We use &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;project&#x2F;drush&quot;&gt;Drush&lt;&#x2F;a&gt; and a custom bash script to make life much more easier on our fsinf.at Drupal farm.&lt;&#x2F;p&gt;
 </description>
-            </item>
-        
-            <item>
-                <title>Ruby on Rails Setup on Ubuntu 9.10</title>
-                <pubDate>Thu, 10 Dec 2009 00:00:00 +0000</pubDate>
-                <link>https://klau.si/ruby-rails-setup-ubuntu-910/</link>
-                <guid>https://klau.si/ruby-rails-setup-ubuntu-910/</guid>
-                <description>&lt;p&gt;I&#x27;m working on a Ruby on Rails project right now and had to setup an environment on my Ubuntu 9.10 system. Here are the install commands for your reference if you want to get it done fast.&lt;&#x2F;p&gt;
+        </item>
+        <item>
+            <title>Ruby on Rails Setup on Ubuntu 9.10</title>
+            <pubDate>Thu, 10 Dec 2009 00:00:00 +0000</pubDate>
+            <link>https://klau.si/ruby-rails-setup-ubuntu-910/</link>
+            <guid>https://klau.si/ruby-rails-setup-ubuntu-910/</guid>
+            <description>&lt;p&gt;I&#x27;m working on a Ruby on Rails project right now and had to setup an environment on my Ubuntu 9.10 system. Here are the install commands for your reference if you want to get it done fast.&lt;&#x2F;p&gt;
 </description>
-            </item>
-        
-            <item>
-                <title>Thunderbird 3 quick test</title>
-                <pubDate>Wed, 09 Dec 2009 00:00:00 +0000</pubDate>
-                <link>https://klau.si/thunderbird-3-quick-test/</link>
-                <guid>https://klau.si/thunderbird-3-quick-test/</guid>
-                <description>&lt;p&gt;Just tested the new Mozilla Thunderbird 3 mailclient, here is a very short review what has changed since version 2.&lt;&#x2F;p&gt;
+        </item>
+        <item>
+            <title>Thunderbird 3 quick test</title>
+            <pubDate>Wed, 09 Dec 2009 00:00:00 +0000</pubDate>
+            <link>https://klau.si/thunderbird-3-quick-test/</link>
+            <guid>https://klau.si/thunderbird-3-quick-test/</guid>
+            <description>&lt;p&gt;Just tested the new Mozilla Thunderbird 3 mailclient, here is a very short review what has changed since version 2.&lt;&#x2F;p&gt;
 </description>
-            </item>
-        
-            <item>
-                <title>Development and deployment workflow at Absolventen.at</title>
-                <pubDate>Sat, 28 Nov 2009 00:00:00 +0000</pubDate>
-                <link>https://klau.si/development-and-deployment-workflow-absolventenat/</link>
-                <guid>https://klau.si/development-and-deployment-workflow-absolventenat/</guid>
-                <description>&lt;p&gt;Here you can find the slides to my &lt;a href=&quot;http:&#x2F;&#x2F;drupalcamp.at&quot;&gt;Drupalcamp Vienna&lt;&#x2F;a&gt; presentation about development and deployment at &lt;a href=&quot;http:&#x2F;&#x2F;absolventen.at&quot;&gt;Absolventen.at&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+        </item>
+        <item>
+            <title>Development and deployment workflow at Absolventen.at</title>
+            <pubDate>Sat, 28 Nov 2009 00:00:00 +0000</pubDate>
+            <link>https://klau.si/development-and-deployment-workflow-absolventenat/</link>
+            <guid>https://klau.si/development-and-deployment-workflow-absolventenat/</guid>
+            <description>&lt;p&gt;Here you can find the slides to my &lt;a href=&quot;http:&#x2F;&#x2F;drupalcamp.at&quot;&gt;Drupalcamp Vienna&lt;&#x2F;a&gt; presentation about development and deployment at &lt;a href=&quot;http:&#x2F;&#x2F;absolventen.at&quot;&gt;Absolventen.at&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;a href=&quot;&#x2F;files&#x2F;absolventen-dev-workflow.pdf&quot;&gt;Presentation as PDF&lt;&#x2F;a&gt; or as &lt;a href=&quot;&#x2F;files&#x2F;absolventen-dev-workflow.odp&quot;&gt;ODP&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </description>
-            </item>
-        
-            <item>
-                <title>PHP vs. Python vs. Ruby</title>
-                <pubDate>Sun, 22 Nov 2009 00:00:00 +0000</pubDate>
-                <link>https://klau.si/php-vs-python-vs-ruby/</link>
-                <guid>https://klau.si/php-vs-python-vs-ruby/</guid>
-                <description>&lt;p&gt;I did an interesting programming language comparison last semester and wrote up a paper called &amp;quot;&lt;a href=&quot;&#x2F;sites&#x2F;default&#x2F;files&#x2F;php-vs-python-vs-ruby.pdf&quot;&gt;PHP vs. Python vs. Ruby &amp;ndash; The web scripting language shootout&amp;quot;&lt;&#x2F;a&gt;. I&#x27;m not completely satisfied with it as it does not dig deep enough into the details, but it provides a good introduction and overview. As my time was limited and the seminar was only worth 3 ECTS, further investigation and experiments were not done - I would appreciate any additional references on this topic, feel free to post a comment or contact me. &lt;&#x2F;p&gt;
+        </item>
+        <item>
+            <title>PHP vs. Python vs. Ruby</title>
+            <pubDate>Sun, 22 Nov 2009 00:00:00 +0000</pubDate>
+            <link>https://klau.si/php-vs-python-vs-ruby/</link>
+            <guid>https://klau.si/php-vs-python-vs-ruby/</guid>
+            <description>&lt;p&gt;I did an interesting programming language comparison last semester and wrote up a paper called &amp;quot;&lt;a href=&quot;&#x2F;sites&#x2F;default&#x2F;files&#x2F;php-vs-python-vs-ruby.pdf&quot;&gt;PHP vs. Python vs. Ruby &amp;ndash; The web scripting language shootout&amp;quot;&lt;&#x2F;a&gt;. I&#x27;m not completely satisfied with it as it does not dig deep enough into the details, but it provides a good introduction and overview. As my time was limited and the seminar was only worth 3 ECTS, further investigation and experiments were not done - I would appreciate any additional references on this topic, feel free to post a comment or contact me. &lt;&#x2F;p&gt;
 </description>
-            </item>
-        
-            <item>
-                <title>Stirb Wordpress, stirb!</title>
-                <pubDate>Fri, 27 Feb 2009 00:00:00 +0000</pubDate>
-                <link>https://klau.si/stirb-wordpress-stirb/</link>
-                <guid>https://klau.si/stirb-wordpress-stirb/</guid>
-                <description>&lt;p&gt;Endlich geschafft: Mein Weblog l&amp;auml;uft jetzt auf &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&quot;&gt;Drupal&lt;&#x2F;a&gt; und nicht mehr auf dem unsympathischen &lt;a href=&quot;http:&#x2F;&#x2F;wordpress.org&quot;&gt;Wordpress&lt;&#x2F;a&gt;. Gleichzeitig bin ich umgezogen - ich will mal den Webspace der TU ausprobieren. Seit einiger Zeit bietet der ZID ja PHP- und Mysql-Unterst&amp;uuml;tzung an, sodass hier auch Content Management Systeme aufgezogen werden k&amp;ouml;nnen.&lt;&#x2F;p&gt;
+        </item>
+        <item>
+            <title>Stirb Wordpress, stirb!</title>
+            <pubDate>Fri, 27 Feb 2009 00:00:00 +0000</pubDate>
+            <link>https://klau.si/stirb-wordpress-stirb/</link>
+            <guid>https://klau.si/stirb-wordpress-stirb/</guid>
+            <description>&lt;p&gt;Endlich geschafft: Mein Weblog l&amp;auml;uft jetzt auf &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&quot;&gt;Drupal&lt;&#x2F;a&gt; und nicht mehr auf dem unsympathischen &lt;a href=&quot;http:&#x2F;&#x2F;wordpress.org&quot;&gt;Wordpress&lt;&#x2F;a&gt;. Gleichzeitig bin ich umgezogen - ich will mal den Webspace der TU ausprobieren. Seit einiger Zeit bietet der ZID ja PHP- und Mysql-Unterst&amp;uuml;tzung an, sodass hier auch Content Management Systeme aufgezogen werden k&amp;ouml;nnen.&lt;&#x2F;p&gt;
 </description>
-            </item>
-        
-            <item>
-                <title>The sidux way of life - Beispiel OpenOffice 3</title>
-                <pubDate>Thu, 30 Oct 2008 00:00:00 +0000</pubDate>
-                <link>https://klau.si/sidux-way-life-beispiel-openoffice-3/</link>
-                <guid>https://klau.si/sidux-way-life-beispiel-openoffice-3/</guid>
-                <description>&lt;p&gt;Eine &lt;a href=&quot;http:&#x2F;&#x2F;ikhaya.ubuntuusers.de&#x2F;2008&#x2F;10&#x2F;25&#x2F;ubuntu-rechtfertigt-entscheidung-gegen-openoffice.org-3.0&#x2F;&quot; target=&quot;_blank&quot;&gt;Ikhaya Meldung auf ubuntuusers.de&lt;&#x2F;a&gt; samt &lt;a href=&quot;http:&#x2F;&#x2F;forum.ubuntuusers.de&#x2F;topic&#x2F;ikhaya-ubuntu-rechtfertigt-entscheidung-gegen&#x2F;&quot;&gt;Diskussion&lt;&#x2F;a&gt; brachte mich letztens ein bisschen zum Lächeln: OpenOffice 3 wird nicht in Ubuntu 8.10 Intrepid Ibex enthalten sein. Großes Wehklagen war bei den Fans von Ubuntu (gleichzeitig Fans aktueller Software) zu hören, so was wird mir bei der Distribution meiner Wahl jedenfalls nicht passieren.</description>
-            </item>
-        
-            <item>
-                <title>Python Dbus Gajim Magic</title>
-                <pubDate>Sun, 28 Sep 2008 00:00:00 +0000</pubDate>
-                <link>https://klau.si/python-dbus-gajim-magic/</link>
-                <guid>https://klau.si/python-dbus-gajim-magic/</guid>
-                <description>&lt;p&gt;I like &lt;a href=&quot;http:&#x2F;&#x2F;freedesktop.org&#x2F;wiki&#x2F;Software&#x2F;dbus&quot;&gt;Dbus&lt;&#x2F;a&gt; because it allows desktop applications to communicate with each other. I also like &lt;a href=&quot;http:&#x2F;&#x2F;www.python.org&#x2F;&quot;&gt;Python&lt;&#x2F;a&gt;, a powerful scripting language that is perfect for short tasks with a minimum of commands. And finally I like &lt;a href=&quot;http:&#x2F;&#x2F;www.gajim.org&quot;&gt;Gajim&lt;&#x2F;a&gt;, the instant messenger of my choice for the &lt;a href=&quot;http:&#x2F;&#x2F;jabber.rwth-aachen.de&#x2F;wiki&#x2F;index.php&#x2F;Jabber_-_Einfach_erkl%C3%A4rt!&quot;&gt;XMPP-Jabber network&lt;&#x2F;a&gt; (the only free [free as in free speech] instant messaging network!).&lt;&#x2F;p&gt;
+        </item>
+        <item>
+            <title>The sidux way of life - Beispiel OpenOffice 3</title>
+            <pubDate>Thu, 30 Oct 2008 00:00:00 +0000</pubDate>
+            <link>https://klau.si/sidux-way-life-beispiel-openoffice-3/</link>
+            <guid>https://klau.si/sidux-way-life-beispiel-openoffice-3/</guid>
+            <description>&lt;p&gt;Eine &lt;a href=&quot;http:&#x2F;&#x2F;ikhaya.ubuntuusers.de&#x2F;2008&#x2F;10&#x2F;25&#x2F;ubuntu-rechtfertigt-entscheidung-gegen-openoffice.org-3.0&#x2F;&quot; target=&quot;_blank&quot;&gt;Ikhaya Meldung auf ubuntuusers.de&lt;&#x2F;a&gt; samt &lt;a href=&quot;http:&#x2F;&#x2F;forum.ubuntuusers.de&#x2F;topic&#x2F;ikhaya-ubuntu-rechtfertigt-entscheidung-gegen&#x2F;&quot;&gt;Diskussion&lt;&#x2F;a&gt; brachte mich letztens ein bisschen zum Lächeln: OpenOffice 3 wird nicht in Ubuntu 8.10 Intrepid Ibex enthalten sein. Großes Wehklagen war bei den Fans von Ubuntu (gleichzeitig Fans aktueller Software) zu hören, so was wird mir bei der Distribution meiner Wahl jedenfalls nicht passieren.</description>
+        </item>
+        <item>
+            <title>Python Dbus Gajim Magic</title>
+            <pubDate>Sun, 28 Sep 2008 00:00:00 +0000</pubDate>
+            <link>https://klau.si/python-dbus-gajim-magic/</link>
+            <guid>https://klau.si/python-dbus-gajim-magic/</guid>
+            <description>&lt;p&gt;I like &lt;a href=&quot;http:&#x2F;&#x2F;freedesktop.org&#x2F;wiki&#x2F;Software&#x2F;dbus&quot;&gt;Dbus&lt;&#x2F;a&gt; because it allows desktop applications to communicate with each other. I also like &lt;a href=&quot;http:&#x2F;&#x2F;www.python.org&#x2F;&quot;&gt;Python&lt;&#x2F;a&gt;, a powerful scripting language that is perfect for short tasks with a minimum of commands. And finally I like &lt;a href=&quot;http:&#x2F;&#x2F;www.gajim.org&quot;&gt;Gajim&lt;&#x2F;a&gt;, the instant messenger of my choice for the &lt;a href=&quot;http:&#x2F;&#x2F;jabber.rwth-aachen.de&#x2F;wiki&#x2F;index.php&#x2F;Jabber_-_Einfach_erkl%C3%A4rt!&quot;&gt;XMPP-Jabber network&lt;&#x2F;a&gt; (the only free [free as in free speech] instant messaging network!).&lt;&#x2F;p&gt;
 </description>
-            </item>
-        
-            <item>
-                <title>Display the currently playing song from rythmbox as gajim status message</title>
-                <pubDate>Fri, 22 Feb 2008 00:00:00 +0000</pubDate>
-                <link>https://klau.si/display-currently-playing-song-rythmbox-gajim-status-message/</link>
-                <guid>https://klau.si/display-currently-playing-song-rythmbox-gajim-status-message/</guid>
-                <description>&lt;p&gt;I found a nice feature in the preferences of my instant messenger &lt;a href=&quot;http:&#x2F;&#x2F;www.gajim.org&quot; title=&quot;Gajim home&quot;&gt;gajim&lt;&#x2F;a&gt;, where a check box says &amp;quot;Set status message to reflect currently playing music track&amp;quot;. My only problem was that i could not enable the option, because it was greyed out and not active. First I tried to find a plugin for my musicplayer &lt;a href=&quot;http:&#x2F;&#x2F;rhythmbox.org&quot; title=&quot;Rhythmbox home&quot;&gt;r&lt;&#x2F;a&gt;&lt;a href=&quot;http:&#x2F;&#x2F;rhythmbox.org&quot; title=&quot;Rhythmbox home&quot;&gt;hythmbox&lt;&#x2F;a&gt;, but the information I found seemed to be old and several web pages said that gajim and rhythmbox should work together natively. I remembered that most &lt;a href=&quot;http:&#x2F;&#x2F;gnome.org&quot; title=&quot;GNOME home&quot;&gt;GNOME&lt;&#x2F;a&gt; applications use &lt;a href=&quot;http:&#x2F;&#x2F;www.freedesktop.org&#x2F;wiki&#x2F;Software&#x2F;dbus&quot; title=&quot;D-Bus home&quot;&gt;D-Bus&lt;&#x2F;a&gt; to communicate with each other. I supposed that there was a D-Bus package missing on my &lt;a href=&quot;http:&#x2F;&#x2F;sidux.com&quot; title=&quot;Sidux home&quot;&gt;Sidux&lt;&#x2F;a&gt; system, so I searched the package repository with &amp;quot;apt-cache search dbus&amp;quot; and found a package named &amp;quot;&lt;a href=&quot;http:&#x2F;&#x2F;packages.debian.org&#x2F;sid&#x2F;python-dbus&quot; title=&quot;Debian package info&quot;&gt;python-dbus&lt;&#x2F;a&gt;&amp;quot;. Since I know that gajim is written in &lt;a href=&quot;http:&#x2F;&#x2F;python.org&quot; title=&quot;Python home&quot;&gt;python&lt;&#x2F;a&gt; I installed the package and had success: After a restart of gajim the option was now available and worked when enabled.&lt;&#x2F;p&gt;
+        </item>
+        <item>
+            <title>Display the currently playing song from rythmbox as gajim status message</title>
+            <pubDate>Fri, 22 Feb 2008 00:00:00 +0000</pubDate>
+            <link>https://klau.si/display-currently-playing-song-rythmbox-gajim-status-message/</link>
+            <guid>https://klau.si/display-currently-playing-song-rythmbox-gajim-status-message/</guid>
+            <description>&lt;p&gt;I found a nice feature in the preferences of my instant messenger &lt;a href=&quot;http:&#x2F;&#x2F;www.gajim.org&quot; title=&quot;Gajim home&quot;&gt;gajim&lt;&#x2F;a&gt;, where a check box says &amp;quot;Set status message to reflect currently playing music track&amp;quot;. My only problem was that i could not enable the option, because it was greyed out and not active. First I tried to find a plugin for my musicplayer &lt;a href=&quot;http:&#x2F;&#x2F;rhythmbox.org&quot; title=&quot;Rhythmbox home&quot;&gt;r&lt;&#x2F;a&gt;&lt;a href=&quot;http:&#x2F;&#x2F;rhythmbox.org&quot; title=&quot;Rhythmbox home&quot;&gt;hythmbox&lt;&#x2F;a&gt;, but the information I found seemed to be old and several web pages said that gajim and rhythmbox should work together natively. I remembered that most &lt;a href=&quot;http:&#x2F;&#x2F;gnome.org&quot; title=&quot;GNOME home&quot;&gt;GNOME&lt;&#x2F;a&gt; applications use &lt;a href=&quot;http:&#x2F;&#x2F;www.freedesktop.org&#x2F;wiki&#x2F;Software&#x2F;dbus&quot; title=&quot;D-Bus home&quot;&gt;D-Bus&lt;&#x2F;a&gt; to communicate with each other. I supposed that there was a D-Bus package missing on my &lt;a href=&quot;http:&#x2F;&#x2F;sidux.com&quot; title=&quot;Sidux home&quot;&gt;Sidux&lt;&#x2F;a&gt; system, so I searched the package repository with &amp;quot;apt-cache search dbus&amp;quot; and found a package named &amp;quot;&lt;a href=&quot;http:&#x2F;&#x2F;packages.debian.org&#x2F;sid&#x2F;python-dbus&quot; title=&quot;Debian package info&quot;&gt;python-dbus&lt;&#x2F;a&gt;&amp;quot;. Since I know that gajim is written in &lt;a href=&quot;http:&#x2F;&#x2F;python.org&quot; title=&quot;Python home&quot;&gt;python&lt;&#x2F;a&gt; I installed the package and had success: After a restart of gajim the option was now available and worked when enabled.&lt;&#x2F;p&gt;
 &lt;p&gt;Solution worked with gajim 0.11.4 and rhythmbox 0.10.1.&lt;&#x2F;p&gt;
 </description>
-            </item>
-        
-            <item>
-                <title>Sidux - der nächste Schritt</title>
-                <pubDate>Fri, 15 Feb 2008 00:00:00 +0000</pubDate>
-                <link>https://klau.si/sidux-der-nächste-schritt/</link>
-                <guid>https://klau.si/sidux-der-nächste-schritt/</guid>
-                <description>&lt;p&gt;Lange habe ich auf meinem Desktop-Rechner &lt;a href=&quot;http:&#x2F;&#x2F;ubuntu.com&quot; title=&quot;Ubuntu Home&quot;&gt;Ubuntu GNU&#x2F;Linux&lt;&#x2F;a&gt; eingesetzt, was für mich zumeist sehr bequem funktioniert hat. Am Anfang wusste ich kaum wie man eine Shell  bedient - es war bei Ubuntu auch nur selten notwendig, vieles ging über grafische Konfigurationstools oder man befragte einfach das ausgezeichnete &lt;a href=&quot;http:&#x2F;&#x2F;wiki.ubuntuusers.de&#x2F;&quot; title=&quot;deutsches Ubuntu Wiki&quot;&gt;Ubuntuusers-Wiki&lt;&#x2F;a&gt;. Die Jahre zogen ins Land, auf der Uni wurde auch viel mit GNU&#x2F;Linux&#x2F;Unix gemacht und ich begann schön langsam die Innereien eines debian-artigen Betriebssystems kennenzulernen (Ubuntu basiert ja auf &lt;a href=&quot;http:&#x2F;&#x2F;debian.org&quot; title=&quot;Debian Home&quot;&gt;Debian&lt;&#x2F;a&gt;). Die Philosophie von freier bzw. open source Software überzeugte mich immer mehr, und ich konnte fast ganz auf Windows XP verzichten (XP habe ich heute noch im &lt;a href=&quot;http:&#x2F;&#x2F;wiki.ubuntuusers.de&#x2F;Dualboot&quot; title=&quot;Wikibeitrag zu Dualboot&quot;&gt;Dualboot&lt;&#x2F;a&gt;, Vista habe ich gar nie probiert).&lt;&#x2F;p&gt;
+        </item>
+        <item>
+            <title>Sidux - der nächste Schritt</title>
+            <pubDate>Fri, 15 Feb 2008 00:00:00 +0000</pubDate>
+            <link>https://klau.si/sidux-der-nächste-schritt/</link>
+            <guid>https://klau.si/sidux-der-nächste-schritt/</guid>
+            <description>&lt;p&gt;Lange habe ich auf meinem Desktop-Rechner &lt;a href=&quot;http:&#x2F;&#x2F;ubuntu.com&quot; title=&quot;Ubuntu Home&quot;&gt;Ubuntu GNU&#x2F;Linux&lt;&#x2F;a&gt; eingesetzt, was für mich zumeist sehr bequem funktioniert hat. Am Anfang wusste ich kaum wie man eine Shell  bedient - es war bei Ubuntu auch nur selten notwendig, vieles ging über grafische Konfigurationstools oder man befragte einfach das ausgezeichnete &lt;a href=&quot;http:&#x2F;&#x2F;wiki.ubuntuusers.de&#x2F;&quot; title=&quot;deutsches Ubuntu Wiki&quot;&gt;Ubuntuusers-Wiki&lt;&#x2F;a&gt;. Die Jahre zogen ins Land, auf der Uni wurde auch viel mit GNU&#x2F;Linux&#x2F;Unix gemacht und ich begann schön langsam die Innereien eines debian-artigen Betriebssystems kennenzulernen (Ubuntu basiert ja auf &lt;a href=&quot;http:&#x2F;&#x2F;debian.org&quot; title=&quot;Debian Home&quot;&gt;Debian&lt;&#x2F;a&gt;). Die Philosophie von freier bzw. open source Software überzeugte mich immer mehr, und ich konnte fast ganz auf Windows XP verzichten (XP habe ich heute noch im &lt;a href=&quot;http:&#x2F;&#x2F;wiki.ubuntuusers.de&#x2F;Dualboot&quot; title=&quot;Wikibeitrag zu Dualboot&quot;&gt;Dualboot&lt;&#x2F;a&gt;, Vista habe ich gar nie probiert).&lt;&#x2F;p&gt;
 </description>
-            </item>
-        
-            <item>
-                <title>Windows Vista gratis</title>
-                <pubDate>Wed, 21 Nov 2007 00:00:00 +0000</pubDate>
-                <link>https://klau.si/windows-vista-gratis/</link>
-                <guid>https://klau.si/windows-vista-gratis/</guid>
-                <description>&lt;p&gt;Jetzt gibt es ein unglaubliches Angebot: &lt;a href=&quot;http:&#x2F;&#x2F;www.ubuntu.com&#x2F;&quot;&gt;Microsoft Windows Vista Ultimate Edition&lt;&#x2F;a&gt; kann gratis aus dem Internet heruntergeladen werden, und das völlig legal! Diese Version ist außerdem auf Sicherheit ausgelegt und benötigt daher keinen Virenscanner und keine Firewall! Mitgeliefert werden volle 3D-Effekte, das &lt;a href=&quot;http:&#x2F;&#x2F;www.openoffice.org&#x2F;&quot;&gt;Microsoft Office Professional&lt;&#x2F;a&gt; Paket und &lt;a href=&quot;http:&#x2F;&#x2F;www.gimp.org&#x2F;&quot;&gt;Adobe Photoshop&lt;&#x2F;a&gt;!&lt;&#x2F;p&gt;
+        </item>
+        <item>
+            <title>Windows Vista gratis</title>
+            <pubDate>Wed, 21 Nov 2007 00:00:00 +0000</pubDate>
+            <link>https://klau.si/windows-vista-gratis/</link>
+            <guid>https://klau.si/windows-vista-gratis/</guid>
+            <description>&lt;p&gt;Jetzt gibt es ein unglaubliches Angebot: &lt;a href=&quot;http:&#x2F;&#x2F;www.ubuntu.com&#x2F;&quot;&gt;Microsoft Windows Vista Ultimate Edition&lt;&#x2F;a&gt; kann gratis aus dem Internet heruntergeladen werden, und das völlig legal! Diese Version ist außerdem auf Sicherheit ausgelegt und benötigt daher keinen Virenscanner und keine Firewall! Mitgeliefert werden volle 3D-Effekte, das &lt;a href=&quot;http:&#x2F;&#x2F;www.openoffice.org&#x2F;&quot;&gt;Microsoft Office Professional&lt;&#x2F;a&gt; Paket und &lt;a href=&quot;http:&#x2F;&#x2F;www.gimp.org&#x2F;&quot;&gt;Adobe Photoshop&lt;&#x2F;a&gt;!&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;ubuntu.gds.tuwien.ac.at&#x2F;cdimage&#x2F;releases&#x2F;gutsy&#x2F;ubuntu-7.10-desktop-i386.iso&quot;&gt;Hier geht&#x27;s zum Download ...&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </description>
-            </item>
-        
-            <item>
-                <title>Meine Lieblingsseiten, meine Lieblingssoftware</title>
-                <pubDate>Fri, 09 Nov 2007 00:00:00 +0000</pubDate>
-                <link>https://klau.si/meine-lieblingsseiten-meine-lieblingssoftware/</link>
-                <guid>https://klau.si/meine-lieblingsseiten-meine-lieblingssoftware/</guid>
-                <description>&lt;p&gt;Ich habe mal auf &lt;a href=&quot;http:&#x2F;&#x2F;vowi.fsinf.at&#x2F;wiki&#x2F;Benutzer:Klausi&quot; title=&quot;Meine Seite im VoWi&quot; target=&quot;_blank&quot;&gt;meiner Benutzerseite&lt;&#x2F;a&gt; im &lt;a href=&quot;http:&#x2F;&#x2F;vowi.fsinf.at&quot; title=&quot;VorlesungsWiki&quot; target=&quot;_blank&quot;&gt;VoWi&lt;&#x2F;a&gt; eine Auflistung zu meinem elektronischen Alltag erstellt. Kommentare zu besseren Seiten und besseren Programmen sind willkommen!&lt;&#x2F;p&gt;
+        </item>
+        <item>
+            <title>Meine Lieblingsseiten, meine Lieblingssoftware</title>
+            <pubDate>Fri, 09 Nov 2007 00:00:00 +0000</pubDate>
+            <link>https://klau.si/meine-lieblingsseiten-meine-lieblingssoftware/</link>
+            <guid>https://klau.si/meine-lieblingsseiten-meine-lieblingssoftware/</guid>
+            <description>&lt;p&gt;Ich habe mal auf &lt;a href=&quot;http:&#x2F;&#x2F;vowi.fsinf.at&#x2F;wiki&#x2F;Benutzer:Klausi&quot; title=&quot;Meine Seite im VoWi&quot; target=&quot;_blank&quot;&gt;meiner Benutzerseite&lt;&#x2F;a&gt; im &lt;a href=&quot;http:&#x2F;&#x2F;vowi.fsinf.at&quot; title=&quot;VorlesungsWiki&quot; target=&quot;_blank&quot;&gt;VoWi&lt;&#x2F;a&gt; eine Auflistung zu meinem elektronischen Alltag erstellt. Kommentare zu besseren Seiten und besseren Programmen sind willkommen!&lt;&#x2F;p&gt;
 </description>
-            </item>
-        
-            <item>
-                <title>Telling Gajim to remember the Window position</title>
-                <pubDate>Sun, 26 Aug 2007 00:00:00 +0000</pubDate>
-                <link>https://klau.si/telling-gajim-remember-window-position/</link>
-                <guid>https://klau.si/telling-gajim-remember-window-position/</guid>
-                <description>&lt;p&gt;Recently I deprecated my ICQ account and switched from my old Instant Messaging Client &lt;a href=&quot;http:&#x2F;&#x2F;www.pidgin.im&quot; title=&quot;Pidign Project Site&quot; target=&quot;_blank&quot;&gt;Pidgin&lt;&#x2F;a&gt; to &lt;a href=&quot;http:&#x2F;&#x2F;www.gajim.org&#x2F;&quot; title=&quot;Gajim Project Site&quot; target=&quot;_blank&quot;&gt;Gajim&lt;&#x2F;a&gt;, a &lt;a href=&quot;http:&#x2F;&#x2F;www.jabber.org&#x2F;about&#x2F;overview.shtml&quot; title=&quot;Jabber Protocol Overview&quot;&gt;Jabber&lt;&#x2F;a&gt;-only IM-client. The good thing: Messages can now be encrypted with &lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Pretty_Good_Privacy&quot; title=&quot;Wikipedia about PGP&quot; target=&quot;_blank&quot;&gt;PGP&#x2F;GPG&lt;&#x2F;a&gt;! The bad thing: The Window position and size was not remembered by Gajim, so the program appeared always on the left instead of the right side, where I placed it, and that on every program start.&lt;&#x2F;p&gt;
+        </item>
+        <item>
+            <title>Telling Gajim to remember the Window position</title>
+            <pubDate>Sun, 26 Aug 2007 00:00:00 +0000</pubDate>
+            <link>https://klau.si/telling-gajim-remember-window-position/</link>
+            <guid>https://klau.si/telling-gajim-remember-window-position/</guid>
+            <description>&lt;p&gt;Recently I deprecated my ICQ account and switched from my old Instant Messaging Client &lt;a href=&quot;http:&#x2F;&#x2F;www.pidgin.im&quot; title=&quot;Pidign Project Site&quot; target=&quot;_blank&quot;&gt;Pidgin&lt;&#x2F;a&gt; to &lt;a href=&quot;http:&#x2F;&#x2F;www.gajim.org&#x2F;&quot; title=&quot;Gajim Project Site&quot; target=&quot;_blank&quot;&gt;Gajim&lt;&#x2F;a&gt;, a &lt;a href=&quot;http:&#x2F;&#x2F;www.jabber.org&#x2F;about&#x2F;overview.shtml&quot; title=&quot;Jabber Protocol Overview&quot;&gt;Jabber&lt;&#x2F;a&gt;-only IM-client. The good thing: Messages can now be encrypted with &lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Pretty_Good_Privacy&quot; title=&quot;Wikipedia about PGP&quot; target=&quot;_blank&quot;&gt;PGP&#x2F;GPG&lt;&#x2F;a&gt;! The bad thing: The Window position and size was not remembered by Gajim, so the program appeared always on the left instead of the right side, where I placed it, and that on every program start.&lt;&#x2F;p&gt;
 &lt;p&gt;Solution:&lt;&#x2F;p&gt;
 &lt;ol&gt;
 	&lt;li&gt;Go to preferences  ==&amp;gt; Advanced ==&amp;gt; Advanced Configuration Editor&lt;&#x2F;li&gt;
@@ -231,7 +209,6 @@ git diff --color-words&lt;&#x2F;pre&gt;
 &lt;&#x2F;ol&gt;
 Solution worked with Gajim version 0.11.1.
 </description>
-            </item>
-        
+        </item>
     </channel>
 </rss>

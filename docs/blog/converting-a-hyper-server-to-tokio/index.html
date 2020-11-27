@@ -11,7 +11,9 @@
   <title>Klausi&#x27;s Weblog - Converting a Hyper server to Tokio</title>
 
   
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+  <link rel="alternate"
+    type="application/rss+xml"
+    title="RSS" href="https://klau.si/rss.xml">
   
 
   
@@ -194,43 +196,43 @@ Github</a>.</p>
 <h2 id="upgrading-hyper">Upgrading Hyper</h2>
 <p>Hyper is already registered in the Cargo.toml file as a project dependency, so
 there is only one step to update:</p>
-<pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">cargo update
-</span></pre>
+<pre style="background-color:#191919;">
+<code><span style="color:#f8f8f2;">cargo update
+</span></code></pre>
 <p>This will download the new Hyper library version and change the version number
 in Cargo.lock.</p>
 <h2 id="converting-handler-to-service">Converting Handler to Service</h2>
 <p>Old code:</p>
-<pre style="background-color:#2b303b;">
-<span style="color:#b48ead;">struct </span><span style="color:#c0c5ce;">Proxy {
-    </span><span style="color:#bf616a;">upstream_port</span><span style="color:#c0c5ce;">: </span><span style="color:#b48ead;">u16</span><span style="color:#c0c5ce;">,
+<pre style="background-color:#191919;">
+<code><span style="font-style:italic;color:#fbdfb5;">struct </span><span style="color:#f8f8f2;">Proxy {
+    </span><span style="color:#e9fdac;">upstream_port</span><span style="color:#f8f8f2;">: </span><span style="font-style:italic;color:#fbdfb5;">u16</span><span style="color:#f8f8f2;">,
 }
 
-</span><span style="color:#b48ead;">impl </span><span style="color:#c0c5ce;">Handler </span><span style="color:#b48ead;">for </span><span style="color:#c0c5ce;">Proxy {
-    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">handle</span><span style="color:#c0c5ce;">(&amp;</span><span style="color:#bf616a;">self</span><span style="color:#c0c5ce;">, </span><span style="color:#bf616a;">request</span><span style="color:#c0c5ce;">: Request, </span><span style="color:#bf616a;">response</span><span style="color:#c0c5ce;">: Response) {
-        </span><span style="color:#65737e;">// Function body omitted here.
-    </span><span style="color:#c0c5ce;">}
+</span><span style="font-style:italic;color:#fbdfb5;">impl </span><span style="color:#f8f8f2;">Handler </span><span style="color:#ff5e5e;">for </span><span style="color:#f8f8f2;">Proxy {
+    </span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">handle</span><span style="color:#f8f8f2;">(</span><span style="color:#ff5e5e;">&amp;</span><span style="font-style:italic;color:#fc9354;">self</span><span style="color:#f8f8f2;">, </span><span style="font-style:italic;color:#fc9354;">request</span><span style="color:#f8f8f2;">: Request, </span><span style="font-style:italic;color:#fc9354;">response</span><span style="color:#f8f8f2;">: Response) {
+        </span><span style="color:#6d6d6d;">// Function body omitted here.
+    </span><span style="color:#f8f8f2;">}
 }
-</span></pre>
+</span></code></pre>
 <p>New code:</p>
-<pre style="background-color:#2b303b;">
-<span style="color:#b48ead;">struct </span><span style="color:#c0c5ce;">Proxy {
-    </span><span style="color:#bf616a;">upstream_port</span><span style="color:#c0c5ce;">: </span><span style="color:#b48ead;">u16</span><span style="color:#c0c5ce;">,
-    </span><span style="color:#bf616a;">client</span><span style="color:#c0c5ce;">: Client&lt;HttpConnector&gt;,
+<pre style="background-color:#191919;">
+<code><span style="font-style:italic;color:#fbdfb5;">struct </span><span style="color:#f8f8f2;">Proxy {
+    </span><span style="color:#e9fdac;">upstream_port</span><span style="color:#f8f8f2;">: </span><span style="font-style:italic;color:#fbdfb5;">u16</span><span style="color:#f8f8f2;">,
+    </span><span style="color:#e9fdac;">client</span><span style="color:#f8f8f2;">: Client&lt;HttpConnector&gt;,
 }
 
-</span><span style="color:#b48ead;">impl </span><span style="color:#c0c5ce;">Service </span><span style="color:#b48ead;">for </span><span style="color:#c0c5ce;">Proxy {
-    </span><span style="color:#b48ead;">type </span><span style="color:#c0c5ce;">Request = Request;
-    </span><span style="color:#b48ead;">type </span><span style="color:#c0c5ce;">Response = Response;
-    </span><span style="color:#b48ead;">type </span><span style="color:#c0c5ce;">Error = hyper::Error;
-    </span><span style="color:#b48ead;">type </span><span style="color:#c0c5ce;">Future = Either&lt;FutureResult&lt;</span><span style="color:#b48ead;">Self::</span><span style="color:#c0c5ce;">Response, </span><span style="color:#b48ead;">Self::</span><span style="color:#c0c5ce;">Error&gt;,
+</span><span style="font-style:italic;color:#fbdfb5;">impl </span><span style="color:#f8f8f2;">Service </span><span style="color:#ff5e5e;">for </span><span style="color:#f8f8f2;">Proxy {
+    </span><span style="font-style:italic;color:#fbdfb5;">type </span><span style="color:#f8f8f2;">Request </span><span style="color:#ff5e5e;">=</span><span style="color:#f8f8f2;"> Request;
+    </span><span style="font-style:italic;color:#fbdfb5;">type </span><span style="color:#f8f8f2;">Response </span><span style="color:#ff5e5e;">=</span><span style="color:#f8f8f2;"> Response;
+    </span><span style="font-style:italic;color:#fbdfb5;">type </span><span style="color:#f8f8f2;">Error </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">hyper::Error;
+    </span><span style="font-style:italic;color:#fbdfb5;">type </span><span style="color:#f8f8f2;">Future </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">Either&lt;FutureResult&lt;</span><span style="font-style:italic;color:#fbdfb5;">Self::</span><span style="color:#f8f8f2;">Response, </span><span style="font-style:italic;color:#fbdfb5;">Self::</span><span style="color:#f8f8f2;">Error&gt;,
         FutureResponse&gt;;
 
-    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">call</span><span style="color:#c0c5ce;">(&amp;</span><span style="color:#bf616a;">self</span><span style="color:#c0c5ce;">, </span><span style="color:#bf616a;">request</span><span style="color:#c0c5ce;">: Request) -&gt; </span><span style="color:#b48ead;">Self::</span><span style="color:#c0c5ce;">Future {
-        </span><span style="color:#65737e;">// Function body omitted here.
-    </span><span style="color:#c0c5ce;">}
+    </span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">call</span><span style="color:#f8f8f2;">(</span><span style="color:#ff5e5e;">&amp;</span><span style="font-style:italic;color:#fc9354;">self</span><span style="color:#f8f8f2;">, </span><span style="font-style:italic;color:#fc9354;">request</span><span style="color:#f8f8f2;">: Request) -&gt; </span><span style="font-style:italic;color:#fbdfb5;">Self::</span><span style="color:#f8f8f2;">Future {
+        </span><span style="color:#6d6d6d;">// Function body omitted here.
+    </span><span style="color:#f8f8f2;">}
 }
-</span></pre>
+</span></code></pre>
 <p>The first thing you'll notice is that the Proxy struct has an additional field
 to hold a Hyper client instance. This is a bit of an implementation detail of
 my specific reverse proxy use case here. Since I'm using a Hyper server and a
@@ -256,70 +258,70 @@ in any way and upstream responses that come out of our HTTP client invocation.
 We can use the <code>Either</code> helper Future to combine those 2 Future types.</p>
 <h2 id="starting-a-server-and-sharing-a-tokio-core">Starting a server and sharing a Tokio core</h2>
 <p>Old code:</p>
-<pre style="background-color:#2b303b;">
-<span style="color:#b48ead;">pub fn </span><span style="color:#8fa1b3;">start_server</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">port</span><span style="color:#c0c5ce;">: </span><span style="color:#b48ead;">u16</span><span style="color:#c0c5ce;">, </span><span style="color:#bf616a;">upstream_port</span><span style="color:#c0c5ce;">: </span><span style="color:#b48ead;">u16</span><span style="color:#c0c5ce;">) -&gt; Listening {
-    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> address = &quot;</span><span style="color:#a3be8c;">127.0.0.1:</span><span style="color:#c0c5ce;">&quot;.</span><span style="color:#96b5b4;">to_owned</span><span style="color:#c0c5ce;">() + &amp;port.</span><span style="color:#96b5b4;">to_string</span><span style="color:#c0c5ce;">();
-    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> server = Server::http(&amp;address).</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
-    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> listening = server
-        .</span><span style="color:#96b5b4;">handle</span><span style="color:#c0c5ce;">(Proxy { upstream_port: upstream_port })
-        .</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
-    println!(&quot;</span><span style="color:#a3be8c;">Listening on </span><span style="color:#d08770;">{}</span><span style="color:#c0c5ce;">&quot;, address);
+<pre style="background-color:#191919;">
+<code><span style="color:#ff5e5e;">pub </span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">start_server</span><span style="color:#f8f8f2;">(</span><span style="font-style:italic;color:#fc9354;">port</span><span style="color:#f8f8f2;">: </span><span style="font-style:italic;color:#fbdfb5;">u16</span><span style="color:#f8f8f2;">, </span><span style="font-style:italic;color:#fc9354;">upstream_port</span><span style="color:#f8f8f2;">: </span><span style="font-style:italic;color:#fbdfb5;">u16</span><span style="color:#f8f8f2;">) -&gt; Listening {
+    </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> address </span><span style="color:#ff5e5e;">= </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">127.0.0.1:</span><span style="color:#ffffff;">&quot;</span><span style="color:#f8f8f2;">.</span><span style="color:#6699cc;">to_owned</span><span style="color:#f8f8f2;">() </span><span style="color:#ff5e5e;">+ &amp;</span><span style="color:#f8f8f2;">port.</span><span style="color:#6699cc;">to_string</span><span style="color:#f8f8f2;">();
+    </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> server </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">Server::http(</span><span style="color:#ff5e5e;">&amp;</span><span style="color:#f8f8f2;">address).</span><span style="color:#6699cc;">unwrap</span><span style="color:#f8f8f2;">();
+    </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> listening </span><span style="color:#ff5e5e;">=</span><span style="color:#f8f8f2;"> server
+        .</span><span style="color:#6699cc;">handle</span><span style="color:#f8f8f2;">(Proxy { upstream_port: upstream_port })
+        .</span><span style="color:#6699cc;">unwrap</span><span style="color:#f8f8f2;">();
+    println!(</span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">Listening on </span><span style="color:#fdb082;">{}</span><span style="color:#ffffff;">&quot;</span><span style="color:#f8f8f2;">, address);
 
     listening
 }
 
-</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span style="color:#c0c5ce;">() {
-    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> port: </span><span style="color:#b48ead;">u16 </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">9090</span><span style="color:#c0c5ce;">;
-    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> upstream_port: </span><span style="color:#b48ead;">u16 </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">80</span><span style="color:#c0c5ce;">;
-    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> _listening = rustnish::start_server(port, upstream_port);
+</span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">main</span><span style="color:#f8f8f2;">() {
+    </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> port: </span><span style="font-style:italic;color:#fbdfb5;">u16 </span><span style="color:#ff5e5e;">= </span><span style="color:#fdb082;">9090</span><span style="color:#f8f8f2;">;
+    </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> upstream_port: </span><span style="font-style:italic;color:#fbdfb5;">u16 </span><span style="color:#ff5e5e;">= </span><span style="color:#fdb082;">80</span><span style="color:#f8f8f2;">;
+    </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> _listening </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">rustnish::start_server(port, upstream_port);
 }
-</span></pre>
+</span></code></pre>
 <p>New code:</p>
-<pre style="background-color:#2b303b;">
-<span style="color:#b48ead;">pub fn </span><span style="color:#8fa1b3;">start_server</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">port</span><span style="color:#c0c5ce;">: </span><span style="color:#b48ead;">u16</span><span style="color:#c0c5ce;">, </span><span style="color:#bf616a;">upstream_port</span><span style="color:#c0c5ce;">: </span><span style="color:#b48ead;">u16</span><span style="color:#c0c5ce;">) -&gt; thread::JoinHandle&lt;()&gt; {
+<pre style="background-color:#191919;">
+<code><span style="color:#ff5e5e;">pub </span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">start_server</span><span style="color:#f8f8f2;">(</span><span style="font-style:italic;color:#fc9354;">port</span><span style="color:#f8f8f2;">: </span><span style="font-style:italic;color:#fbdfb5;">u16</span><span style="color:#f8f8f2;">, </span><span style="font-style:italic;color:#fc9354;">upstream_port</span><span style="color:#f8f8f2;">: </span><span style="font-style:italic;color:#fbdfb5;">u16</span><span style="color:#f8f8f2;">) -&gt; thread::JoinHandle&lt;()&gt; {
 
-    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> thread = thread::Builder::new()
-        .</span><span style="color:#96b5b4;">name</span><span style="color:#c0c5ce;">(&quot;</span><span style="color:#a3be8c;">rustnish</span><span style="color:#c0c5ce;">&quot;.</span><span style="color:#96b5b4;">to_owned</span><span style="color:#c0c5ce;">())
-        .</span><span style="color:#96b5b4;">spawn</span><span style="color:#c0c5ce;">(</span><span style="color:#b48ead;">move </span><span style="color:#c0c5ce;">|| {
-            </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> address = &quot;</span><span style="color:#a3be8c;">127.0.0.1:</span><span style="color:#c0c5ce;">&quot;.</span><span style="color:#96b5b4;">to_owned</span><span style="color:#c0c5ce;">() + &amp;port.</span><span style="color:#96b5b4;">to_string</span><span style="color:#c0c5ce;">();
-            println!(&quot;</span><span style="color:#a3be8c;">Listening on http://</span><span style="color:#d08770;">{}</span><span style="color:#c0c5ce;">&quot;, address);
-            </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> addr = address.</span><span style="color:#96b5b4;">parse</span><span style="color:#c0c5ce;">().</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
+    </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> thread </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">thread::Builder::new()
+        .</span><span style="color:#6699cc;">name</span><span style="color:#f8f8f2;">(</span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">rustnish</span><span style="color:#ffffff;">&quot;</span><span style="color:#f8f8f2;">.</span><span style="color:#6699cc;">to_owned</span><span style="color:#f8f8f2;">())
+        .</span><span style="color:#6699cc;">spawn</span><span style="color:#f8f8f2;">(</span><span style="color:#ff5e5e;">move || </span><span style="color:#f8f8f2;">{
+            </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> address </span><span style="color:#ff5e5e;">= </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">127.0.0.1:</span><span style="color:#ffffff;">&quot;</span><span style="color:#f8f8f2;">.</span><span style="color:#6699cc;">to_owned</span><span style="color:#f8f8f2;">() </span><span style="color:#ff5e5e;">+ &amp;</span><span style="color:#f8f8f2;">port.</span><span style="color:#6699cc;">to_string</span><span style="color:#f8f8f2;">();
+            println!(</span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">Listening on http://</span><span style="color:#fdb082;">{}</span><span style="color:#ffffff;">&quot;</span><span style="color:#f8f8f2;">, address);
+            </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> addr </span><span style="color:#ff5e5e;">=</span><span style="color:#f8f8f2;"> address.</span><span style="color:#6699cc;">parse</span><span style="color:#f8f8f2;">().</span><span style="color:#6699cc;">unwrap</span><span style="color:#f8f8f2;">();
 
-            </span><span style="color:#65737e;">// Prepare a Tokio core that we will use for our server and our
+            </span><span style="color:#6d6d6d;">// Prepare a Tokio core that we will use for our server and our
             // client.
-            </span><span style="color:#b48ead;">let mut</span><span style="color:#c0c5ce;"> core = Core::new().</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
-            </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> handle = core.</span><span style="color:#96b5b4;">handle</span><span style="color:#c0c5ce;">();
-            </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> http = Http::new();
-            </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> listener = TcpListener::bind(&amp;addr, &amp;handle).</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
-            </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> client = Client::new(&amp;handle);
+            </span><span style="font-style:italic;color:#fbdfb5;">let </span><span style="color:#ff5e5e;">mut</span><span style="color:#f8f8f2;"> core </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">Core::new().</span><span style="color:#6699cc;">unwrap</span><span style="color:#f8f8f2;">();
+            </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> handle </span><span style="color:#ff5e5e;">=</span><span style="color:#f8f8f2;"> core.</span><span style="color:#6699cc;">handle</span><span style="color:#f8f8f2;">();
+            </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> http </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">Http::new();
+            </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> listener </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">TcpListener::bind(</span><span style="color:#ff5e5e;">&amp;</span><span style="color:#f8f8f2;">addr, </span><span style="color:#ff5e5e;">&amp;</span><span style="color:#f8f8f2;">handle).</span><span style="color:#6699cc;">unwrap</span><span style="color:#f8f8f2;">();
+            </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> client </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">Client::new(</span><span style="color:#ff5e5e;">&amp;</span><span style="color:#f8f8f2;">handle);
 
-            </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> server = listener
-                .</span><span style="color:#96b5b4;">incoming</span><span style="color:#c0c5ce;">()
-                .</span><span style="color:#96b5b4;">for_each</span><span style="color:#c0c5ce;">(</span><span style="color:#b48ead;">move </span><span style="color:#c0c5ce;">|(sock, addr)| {
-                    http.</span><span style="color:#96b5b4;">bind_connection</span><span style="color:#c0c5ce;">(&amp;handle,
+            </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> server </span><span style="color:#ff5e5e;">=</span><span style="color:#f8f8f2;"> listener
+                .</span><span style="color:#6699cc;">incoming</span><span style="color:#f8f8f2;">()
+                .</span><span style="color:#6699cc;">for_each</span><span style="color:#f8f8f2;">(</span><span style="color:#ff5e5e;">move |</span><span style="color:#f8f8f2;">(sock, addr)</span><span style="color:#ff5e5e;">| </span><span style="color:#f8f8f2;">{
+                    http.</span><span style="color:#6699cc;">bind_connection</span><span style="color:#f8f8f2;">(</span><span style="color:#ff5e5e;">&amp;</span><span style="color:#f8f8f2;">handle,
                                          sock,
                                          addr,
                                          Proxy {
                                              upstream_port: upstream_port,
-                                             client: client.</span><span style="color:#96b5b4;">clone</span><span style="color:#c0c5ce;">(),
+                                             client: client.</span><span style="color:#6699cc;">clone</span><span style="color:#f8f8f2;">(),
                                          });
-                    Ok(())
+                    </span><span style="color:#fbe3bf;">Ok</span><span style="color:#f8f8f2;">(())
                 });
 
-            core.</span><span style="color:#96b5b4;">run</span><span style="color:#c0c5ce;">(server).</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
+            core.</span><span style="color:#6699cc;">run</span><span style="color:#f8f8f2;">(server).</span><span style="color:#6699cc;">unwrap</span><span style="color:#f8f8f2;">();
         })
-        .</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
+        .</span><span style="color:#6699cc;">unwrap</span><span style="color:#f8f8f2;">();
 
     thread
 }
 
-</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span style="color:#c0c5ce;">() {
-    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> port: </span><span style="color:#b48ead;">u16 </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">9090</span><span style="color:#c0c5ce;">;
-    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> upstream_port: </span><span style="color:#b48ead;">u16 </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">80</span><span style="color:#c0c5ce;">;
-    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> thread = rustnish::start_server(port, upstream_port);
-    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> _guard = thread.</span><span style="color:#96b5b4;">join</span><span style="color:#c0c5ce;">();
+</span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">main</span><span style="color:#f8f8f2;">() {
+    </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> port: </span><span style="font-style:italic;color:#fbdfb5;">u16 </span><span style="color:#ff5e5e;">= </span><span style="color:#fdb082;">9090</span><span style="color:#f8f8f2;">;
+    </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> upstream_port: </span><span style="font-style:italic;color:#fbdfb5;">u16 </span><span style="color:#ff5e5e;">= </span><span style="color:#fdb082;">80</span><span style="color:#f8f8f2;">;
+    </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> thread </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">rustnish::start_server(port, upstream_port);
+    </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> _guard </span><span style="color:#ff5e5e;">=</span><span style="color:#f8f8f2;"> thread.</span><span style="color:#6699cc;">join</span><span style="color:#f8f8f2;">();
 }
-</span></pre>
+</span></code></pre>
 <p>So we went from 15 lines of code to 40 lines of code. What happened?</p>
 <ol>
 <li><code>core.run(server)</code> is starting the event loop and blocking. That's why
@@ -342,34 +344,34 @@ just pass through responses as is.</p>
 <p>I'm omitting <a href="https://github.com/klausi/rustnish/blob/goal-02/src/lib.rs#L35">my old Hyper
 code</a> here
 because it is quite convoluted and long. The new code is so much nicer:</p>
-<pre style="background-color:#2b303b;">
-<span style="color:#b48ead;">impl </span><span style="color:#c0c5ce;">Service </span><span style="color:#b48ead;">for </span><span style="color:#c0c5ce;">Proxy {
-    </span><span style="color:#b48ead;">type </span><span style="color:#c0c5ce;">Request = Request;
-    </span><span style="color:#b48ead;">type </span><span style="color:#c0c5ce;">Response = Response;
-    </span><span style="color:#b48ead;">type </span><span style="color:#c0c5ce;">Error = hyper::Error;
-    </span><span style="color:#b48ead;">type </span><span style="color:#c0c5ce;">Future = Either&lt;FutureResult&lt;</span><span style="color:#b48ead;">Self::</span><span style="color:#c0c5ce;">Response, </span><span style="color:#b48ead;">Self::</span><span style="color:#c0c5ce;">Error&gt;,
+<pre style="background-color:#191919;">
+<code><span style="font-style:italic;color:#fbdfb5;">impl </span><span style="color:#f8f8f2;">Service </span><span style="color:#ff5e5e;">for </span><span style="color:#f8f8f2;">Proxy {
+    </span><span style="font-style:italic;color:#fbdfb5;">type </span><span style="color:#f8f8f2;">Request </span><span style="color:#ff5e5e;">=</span><span style="color:#f8f8f2;"> Request;
+    </span><span style="font-style:italic;color:#fbdfb5;">type </span><span style="color:#f8f8f2;">Response </span><span style="color:#ff5e5e;">=</span><span style="color:#f8f8f2;"> Response;
+    </span><span style="font-style:italic;color:#fbdfb5;">type </span><span style="color:#f8f8f2;">Error </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">hyper::Error;
+    </span><span style="font-style:italic;color:#fbdfb5;">type </span><span style="color:#f8f8f2;">Future </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">Either&lt;FutureResult&lt;</span><span style="font-style:italic;color:#fbdfb5;">Self::</span><span style="color:#f8f8f2;">Response, </span><span style="font-style:italic;color:#fbdfb5;">Self::</span><span style="color:#f8f8f2;">Error&gt;,
         FutureResponse&gt;;
 
-    </span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">call</span><span style="color:#c0c5ce;">(&amp;</span><span style="color:#bf616a;">self</span><span style="color:#c0c5ce;">, </span><span style="color:#bf616a;">request</span><span style="color:#c0c5ce;">: Request) -&gt; </span><span style="color:#b48ead;">Self::</span><span style="color:#c0c5ce;">Future {
-        </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> host = </span><span style="color:#b48ead;">match</span><span style="color:#c0c5ce;"> request.</span><span style="color:#96b5b4;">headers</span><span style="color:#c0c5ce;">().get::&lt;Host&gt;() {
-            None =&gt; {
-                </span><span style="color:#b48ead;">return </span><span style="color:#c0c5ce;">Either::A(futures::future::ok(Response::new()
-                    .</span><span style="color:#96b5b4;">with_status</span><span style="color:#c0c5ce;">(StatusCode::BadRequest)
-                    .</span><span style="color:#96b5b4;">with_body</span><span style="color:#c0c5ce;">(&quot;</span><span style="color:#a3be8c;">No host header in request</span><span style="color:#c0c5ce;">&quot;)));
+    </span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">call</span><span style="color:#f8f8f2;">(</span><span style="color:#ff5e5e;">&amp;</span><span style="font-style:italic;color:#fc9354;">self</span><span style="color:#f8f8f2;">, </span><span style="font-style:italic;color:#fc9354;">request</span><span style="color:#f8f8f2;">: Request) -&gt; </span><span style="font-style:italic;color:#fbdfb5;">Self::</span><span style="color:#f8f8f2;">Future {
+        </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> host </span><span style="color:#ff5e5e;">= match</span><span style="color:#f8f8f2;"> request.</span><span style="color:#6699cc;">headers</span><span style="color:#f8f8f2;">().get::&lt;Host&gt;() {
+            </span><span style="color:#fbe3bf;">None </span><span style="color:#ff5e5e;">=&gt; </span><span style="color:#f8f8f2;">{
+                </span><span style="color:#ff5e5e;">return </span><span style="color:#f8f8f2;">Either::A(futures::future::ok(Response::new()
+                    .</span><span style="color:#6699cc;">with_status</span><span style="color:#f8f8f2;">(StatusCode::BadRequest)
+                    .</span><span style="color:#6699cc;">with_body</span><span style="color:#f8f8f2;">(</span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">No host header in request</span><span style="color:#ffffff;">&quot;</span><span style="color:#f8f8f2;">)));
             }
-            Some(h) =&gt; h.</span><span style="color:#96b5b4;">hostname</span><span style="color:#c0c5ce;">(),
+            </span><span style="color:#fbe3bf;">Some</span><span style="color:#f8f8f2;">(h) </span><span style="color:#ff5e5e;">=&gt;</span><span style="color:#f8f8f2;"> h.</span><span style="color:#6699cc;">hostname</span><span style="color:#f8f8f2;">(),
         };
 
-        </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> request_uri = request.</span><span style="color:#96b5b4;">uri</span><span style="color:#c0c5ce;">();
-        </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> upstream_uri = (&quot;</span><span style="color:#a3be8c;">http://</span><span style="color:#c0c5ce;">&quot;.</span><span style="color:#96b5b4;">to_string</span><span style="color:#c0c5ce;">() + host + &quot;</span><span style="color:#a3be8c;">:</span><span style="color:#c0c5ce;">&quot;
-            + &amp;</span><span style="color:#bf616a;">self</span><span style="color:#c0c5ce;">.upstream_port.</span><span style="color:#96b5b4;">to_string</span><span style="color:#c0c5ce;">() + request_uri.</span><span style="color:#96b5b4;">path</span><span style="color:#c0c5ce;">())
-            .</span><span style="color:#96b5b4;">parse</span><span style="color:#c0c5ce;">()
-            .</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
+        </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> request_uri </span><span style="color:#ff5e5e;">=</span><span style="color:#f8f8f2;"> request.</span><span style="color:#6699cc;">uri</span><span style="color:#f8f8f2;">();
+        </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> upstream_uri </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">(</span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">http://</span><span style="color:#ffffff;">&quot;</span><span style="color:#f8f8f2;">.</span><span style="color:#6699cc;">to_string</span><span style="color:#f8f8f2;">() </span><span style="color:#ff5e5e;">+</span><span style="color:#f8f8f2;"> host </span><span style="color:#ff5e5e;">+ </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">:</span><span style="color:#ffffff;">&quot;
+            </span><span style="color:#ff5e5e;">+ &amp;</span><span style="color:#e9fdac;">self</span><span style="color:#f8f8f2;">.upstream_port.</span><span style="color:#6699cc;">to_string</span><span style="color:#f8f8f2;">() </span><span style="color:#ff5e5e;">+</span><span style="color:#f8f8f2;"> request_uri.</span><span style="color:#6699cc;">path</span><span style="color:#f8f8f2;">())
+            .</span><span style="color:#6699cc;">parse</span><span style="color:#f8f8f2;">()
+            .</span><span style="color:#6699cc;">unwrap</span><span style="color:#f8f8f2;">();
 
-        Either::B(</span><span style="color:#bf616a;">self</span><span style="color:#c0c5ce;">.client.</span><span style="color:#96b5b4;">get</span><span style="color:#c0c5ce;">(upstream_uri))
+        Either::B(</span><span style="color:#e9fdac;">self</span><span style="color:#f8f8f2;">.client.</span><span style="color:#6699cc;">get</span><span style="color:#f8f8f2;">(upstream_uri))
     }
 }
-</span></pre>
+</span></code></pre>
 <p>In the first part of <code>call()</code> we quickly build a custom HTTP response when
 there is no HTTP Host header on the incoming request. The real magic happens on
 the last line: we invoke the HTTP client to make a GET request and we can use

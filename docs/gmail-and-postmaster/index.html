@@ -11,7 +11,9 @@
   <title>Klausi&#x27;s Weblog - Gmail and postmaster</title>
 
   
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+  <link rel="alternate"
+    type="application/rss+xml"
+    title="RSS" href="https://klau.si/rss.xml">
   
 
   
@@ -133,8 +135,7 @@
 
     <div class="post-content">
       <p>The Gmail spam filter works fine most time, but be careful if you are the postmaster of a mail server and want to check delivery failure notifications in your Gmail account.</p>
-<p id="zola-continue-reading"><a name="continue-reading"></a></p>
-
+<span id="continue-reading"></span>
 <p>Postfix forwards the postmaster mails to my Gmail account where all of them were classified as spam. I wondered why I never got any notifications from the mail server I administer and was happy that everything worked out so smoothly. Today I checked the logs and postfix configuration on the server and found out that there were errors I didn't notice.</p>
 <p>I checked my Gmail spam folder and found 218 false positives, most coming from the postfix postmaster address of my server, but also from other postmaster addresses of different domains that reported mail delivery problems. I marked them all as &quot;not spam&quot; now and added MAILER-DAEMON@myserver.example.com to the gmail contact list, which will hopefully prevent gmail from classifying the postfix mails as spam.</p>
 

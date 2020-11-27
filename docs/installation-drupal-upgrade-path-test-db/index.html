@@ -11,7 +11,9 @@
   <title>Klausi&#x27;s Weblog - Installation of a Drupal Upgrade Path Test DB</title>
 
   
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+  <link rel="alternate"
+    type="application/rss+xml"
+    title="RSS" href="https://klau.si/rss.xml">
   
 
   
@@ -133,8 +135,7 @@
 
     <div class="post-content">
       <p>While working on the <a href="http://drupal.org/node/935062">Kill role IDs patch</a> I had to develop some upgrade path Simpletests. Unfortunately the <a href="http://drupal.org/node/1429136">documentation for upgrade path tests</a> currently lacks installtion instructions on how to work with the existing bare and filled exported test databases. Here is a small writeup of what I did until we document that properly.</p>
-<p id="zola-continue-reading"><a name="continue-reading"></a></p>
-
+<span id="continue-reading"></span>
 <p>The test databases are exported to executable PHP code and live in core/modules/simpletest/tests/upgrade (Drupal 8). The problem is that you needed a bootstrapped Drupal database system to run those statements and an empty database at the same time where you insert the data. So first you need to create a new, empty development environment - not only a new site in a multi-site setup in your usual development directory.</p>
 <ul>
 	<li>

@@ -1,33 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Klausi&#x27;s Weblog</title>
+      <title>Klausi&#x27;s Weblog - rest</title>
         <link>https://klau.si</link>
         <description></description>
         <generator>Zola</generator>
         <language>en</language>
         <atom:link href="https://klau.si/tags/rest/rss.xml" rel="self" type="application/rss+xml"/>
         <lastBuildDate>Wed, 25 Sep 2013 00:00:00 +0000</lastBuildDate>
-        
-            <item>
-                <title>Drupalcon Prague 2013 talk: REST and Serialization in Drupal 8</title>
-                <pubDate>Wed, 25 Sep 2013 00:00:00 +0000</pubDate>
-                <link>https://klau.si/blog/drupalcon-prague-rest-serialization-drupal-8/</link>
-                <guid>https://klau.si/blog/drupalcon-prague-rest-serialization-drupal-8/</guid>
-                <description>&lt;p&gt;Here is the video of our DrupalCon Prague 2013 talk &amp;quot;REST and serialization in Drupal 8&amp;quot;.&lt;&#x2F;p&gt;
+        <item>
+            <title>Drupalcon Prague 2013 talk: REST and Serialization in Drupal 8</title>
+            <pubDate>Wed, 25 Sep 2013 00:00:00 +0000</pubDate>
+            <link>https://klau.si/blog/drupalcon-prague-rest-serialization-drupal-8/</link>
+            <guid>https://klau.si/blog/drupalcon-prague-rest-serialization-drupal-8/</guid>
+            <description>&lt;p&gt;Here is the video of our DrupalCon Prague 2013 talk &amp;quot;REST and serialization in Drupal 8&amp;quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;w6dqzDbY78k&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
-            </item>
-        
-            <item>
-                <title>Drupalcon Portland 2013 talk: REST and Serialization in Drupal 8</title>
-                <pubDate>Thu, 23 May 2013 00:00:00 +0000</pubDate>
-                <link>https://klau.si/blog/drupalcon-portland-rest-serialization-drupal-8/</link>
-                <guid>https://klau.si/blog/drupalcon-portland-rest-serialization-drupal-8/</guid>
-                <description>&lt;p&gt;Here is the video of our DrupalCon Portland 2013 talk &amp;quot;REST and serialization in Drupal 8&amp;quot;.&lt;&#x2F;p&gt;
+        </item>
+        <item>
+            <title>Drupalcon Portland 2013 talk: REST and Serialization in Drupal 8</title>
+            <pubDate>Thu, 23 May 2013 00:00:00 +0000</pubDate>
+            <link>https://klau.si/blog/drupalcon-portland-rest-serialization-drupal-8/</link>
+            <guid>https://klau.si/blog/drupalcon-portland-rest-serialization-drupal-8/</guid>
+            <description>&lt;p&gt;Here is the video of our DrupalCon Portland 2013 talk &amp;quot;REST and serialization in Drupal 8&amp;quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;6FNfy7pU6mE&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
-            </item>
-        
+        </item>
     </channel>
 </rss>

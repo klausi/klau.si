@@ -11,7 +11,9 @@
   <title>Klausi&#x27;s Weblog - Testing memory leaks in Rust</title>
 
   
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+  <link rel="alternate"
+    type="application/rss+xml"
+    title="RSS" href="https://klau.si/rss.xml">
   
 
   
@@ -180,31 +182,31 @@ compare memory usage of the current process before and after the test.</p>
 <h2 id="finding-memory-leaks-manually-first">Finding memory leaks manually first</h2>
 <p>A very primitive way of inspecting the memory usage of a program is <code>ps</code> on
 Linux. First we start our Rustnish reverse proxy:</p>
-<pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">cargo run --release
-</span></pre>
+<pre style="background-color:#191919;">
+<code><span style="color:#f8f8f2;">cargo run --release
+</span></code></pre>
 <p>Then get the memory information from ps for rustnish in a new terminal:</p>
-<pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">$ ps aux | grep &#39;[r]ustnish&#39;
+<pre style="background-color:#191919;">
+<code><span style="color:#f8f8f2;">$ ps aux | grep &#39;[r]ustnish&#39;
 klausi    3840  0.0  0.0  38504  7832 pts/0    Sl+  17:56   0:00 target/release/rustnish
-</span></pre>
+</span></code></pre>
 <p>The 6th column is the resident memory usage in kilobytes. Which means our
 server process is taking up ~8MB in RAM right now.</p>
 <p>Now we want to see how our server is doing after it had to deal with a lot of
 requests. A tool for that is Apache Bench, which is used for load testing on
 servers. Installation on Ubuntu for example:</p>
-<pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">sudo apt-get install apache2-utils
-</span></pre>
+<pre style="background-color:#191919;">
+<code><span style="color:#f8f8f2;">sudo apt-get install apache2-utils
+</span></code></pre>
 <p>Then fire 1 million requests at our reverse proxy, 4 requests concurrently:</p>
-<pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">ab -c 4 -n 1000000 http://localhost:9090/
-</span></pre>
+<pre style="background-color:#191919;">
+<code><span style="color:#f8f8f2;">ab -c 4 -n 1000000 http://localhost:9090/
+</span></code></pre>
 <p>Now running ps again:</p>
-<pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">$ ps aux | grep &#39;[r]ustnish&#39;
+<pre style="background-color:#191919;">
+<code><span style="color:#f8f8f2;">$ ps aux | grep &#39;[r]ustnish&#39;
 klausi    3840 47.8  3.6 304836 283588 pts/0   Sl+  18:15   2:04 target/release/rustnish
-</span></pre>
+</span></code></pre>
 <p>Wow, the 6th column is now showing 283,588KB which is ~278MB, something is
 definitely very wrong here!</p>
 <p>Luckily I could track down the problem pretty quick to the Hyper library and
@@ -231,43 +233,43 @@ dependent and can for example not work on MacOS or Windows.</p>
 <p>The full test can be found in
 <a href="https://github.com/klausi/rustnish/blob/goal-07/tests/memory_leaks.rs">memory_leaks.rs</a>.</p>
 <p>Getting the current memory usage (resident number of kilobytes in RAM):</p>
-<pre style="background-color:#2b303b;">
-<span style="color:#b48ead;">extern crate</span><span style="color:#c0c5ce;"> procinfo;
-</span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> memory_before = procinfo::pid::statm_self().</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">().resident;
-</span></pre>
+<pre style="background-color:#191919;">
+<code><span style="color:#ff5e5e;">extern crate</span><span style="color:#f8f8f2;"> procinfo;
+</span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> memory_before </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">procinfo::pid::statm_self().</span><span style="color:#6699cc;">unwrap</span><span style="color:#f8f8f2;">().resident;
+</span></code></pre>
 <p>Emulating Apache Bench and sending 30K requests, 4 at a time:</p>
-<pre style="background-color:#2b303b;">
-<span style="color:#b48ead;">let mut</span><span style="color:#c0c5ce;"> core = Core::new().</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
-</span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> client = Client::new(&amp;core.</span><span style="color:#96b5b4;">handle</span><span style="color:#c0c5ce;">());
+<pre style="background-color:#191919;">
+<code><span style="font-style:italic;color:#fbdfb5;">let </span><span style="color:#ff5e5e;">mut</span><span style="color:#f8f8f2;"> core </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">Core::new().</span><span style="color:#6699cc;">unwrap</span><span style="color:#f8f8f2;">();
+</span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> client </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">Client::new(</span><span style="color:#ff5e5e;">&amp;</span><span style="color:#f8f8f2;">core.</span><span style="color:#6699cc;">handle</span><span style="color:#f8f8f2;">());
 
-</span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> url: Uri = (&quot;</span><span style="color:#a3be8c;">http://127.0.0.1:</span><span style="color:#c0c5ce;">&quot;.</span><span style="color:#96b5b4;">to_string</span><span style="color:#c0c5ce;">() + &amp;port.</span><span style="color:#96b5b4;">to_string</span><span style="color:#c0c5ce;">())
-    .</span><span style="color:#96b5b4;">parse</span><span style="color:#c0c5ce;">()
-    .</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
+</span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> url: Uri </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">(</span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">http://127.0.0.1:</span><span style="color:#ffffff;">&quot;</span><span style="color:#f8f8f2;">.</span><span style="color:#6699cc;">to_string</span><span style="color:#f8f8f2;">() </span><span style="color:#ff5e5e;">+ &amp;</span><span style="color:#f8f8f2;">port.</span><span style="color:#6699cc;">to_string</span><span style="color:#f8f8f2;">())
+    .</span><span style="color:#6699cc;">parse</span><span style="color:#f8f8f2;">()
+    .</span><span style="color:#6699cc;">unwrap</span><span style="color:#f8f8f2;">();
 
-</span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> nr_requests = </span><span style="color:#d08770;">30_000</span><span style="color:#c0c5ce;">;
-</span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> concurrency = </span><span style="color:#d08770;">4</span><span style="color:#c0c5ce;">;
+</span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> nr_requests </span><span style="color:#ff5e5e;">= </span><span style="color:#fdb082;">30_000</span><span style="color:#f8f8f2;">;
+</span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> concurrency </span><span style="color:#ff5e5e;">= </span><span style="color:#fdb082;">4</span><span style="color:#f8f8f2;">;
 
-</span><span style="color:#b48ead;">let mut</span><span style="color:#c0c5ce;"> parallel = Vec::new();
-</span><span style="color:#b48ead;">for</span><span style="color:#c0c5ce;"> _i in </span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">..concurrency {
-    </span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> requests_til_done = </span><span style="color:#96b5b4;">loop_fn</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">, |</span><span style="color:#bf616a;">counter</span><span style="color:#c0c5ce;">| {
-        </span><span style="color:#b48ead;">let mut</span><span style="color:#c0c5ce;"> request = Request::new(Method::Get, url.</span><span style="color:#96b5b4;">clone</span><span style="color:#c0c5ce;">());
-        request.</span><span style="color:#96b5b4;">set_version</span><span style="color:#c0c5ce;">(hyper::HttpVersion::Http10);
+</span><span style="font-style:italic;color:#fbdfb5;">let </span><span style="color:#ff5e5e;">mut</span><span style="color:#f8f8f2;"> parallel </span><span style="color:#ff5e5e;">= </span><span style="color:#fbe3bf;">Vec</span><span style="color:#f8f8f2;">::new();
+</span><span style="color:#ff5e5e;">for</span><span style="color:#f8f8f2;"> _i </span><span style="color:#ff5e5e;">in </span><span style="color:#fdb082;">0</span><span style="color:#ff5e5e;">..</span><span style="color:#f8f8f2;">concurrency {
+    </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> requests_til_done </span><span style="color:#ff5e5e;">= </span><span style="color:#6699cc;">loop_fn</span><span style="color:#f8f8f2;">(</span><span style="color:#fdb082;">0</span><span style="color:#f8f8f2;">, |</span><span style="font-style:italic;color:#fc9354;">counter</span><span style="color:#f8f8f2;">| {
+        </span><span style="font-style:italic;color:#fbdfb5;">let </span><span style="color:#ff5e5e;">mut</span><span style="color:#f8f8f2;"> request </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">Request::new(Method::Get, url.</span><span style="color:#6699cc;">clone</span><span style="color:#f8f8f2;">());
+        request.</span><span style="color:#6699cc;">set_version</span><span style="color:#f8f8f2;">(hyper::HttpVersion::Http10);
         client
-            .</span><span style="color:#96b5b4;">request</span><span style="color:#c0c5ce;">(request)
-            .</span><span style="color:#96b5b4;">then</span><span style="color:#c0c5ce;">(</span><span style="color:#b48ead;">move </span><span style="color:#c0c5ce;">|_| -&gt; Result&lt;_, hyper::Error&gt; {
-                </span><span style="color:#b48ead;">if</span><span style="color:#c0c5ce;"> counter &lt; (nr_requests / concurrency) {
-                    Ok(Loop::Continue(counter + </span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">))
-                } </span><span style="color:#b48ead;">else </span><span style="color:#c0c5ce;">{
-                    Ok(Loop::Break(counter))
+            .</span><span style="color:#6699cc;">request</span><span style="color:#f8f8f2;">(request)
+            .</span><span style="color:#6699cc;">then</span><span style="color:#f8f8f2;">(</span><span style="color:#ff5e5e;">move |_| </span><span style="color:#f8f8f2;">-&gt; </span><span style="color:#fbe3bf;">Result</span><span style="color:#f8f8f2;">&lt;</span><span style="color:#ff5e5e;">_</span><span style="color:#f8f8f2;">, hyper::Error&gt; {
+                </span><span style="color:#ff5e5e;">if</span><span style="color:#f8f8f2;"> counter </span><span style="color:#ff5e5e;">&lt; </span><span style="color:#f8f8f2;">(nr_requests </span><span style="color:#ff5e5e;">/</span><span style="color:#f8f8f2;"> concurrency) {
+                    </span><span style="color:#fbe3bf;">Ok</span><span style="color:#f8f8f2;">(Loop::Continue(counter </span><span style="color:#ff5e5e;">+ </span><span style="color:#fdb082;">1</span><span style="color:#f8f8f2;">))
+                } </span><span style="color:#ff5e5e;">else </span><span style="color:#f8f8f2;">{
+                    </span><span style="color:#fbe3bf;">Ok</span><span style="color:#f8f8f2;">(Loop::Break(counter))
                 }
             })
     });
-    parallel.</span><span style="color:#96b5b4;">push</span><span style="color:#c0c5ce;">(requests_til_done);
+    parallel.</span><span style="color:#6699cc;">push</span><span style="color:#f8f8f2;">(requests_til_done);
 }
 
-</span><span style="color:#b48ead;">let</span><span style="color:#c0c5ce;"> work = </span><span style="color:#96b5b4;">join_all</span><span style="color:#c0c5ce;">(parallel);
-core.</span><span style="color:#96b5b4;">run</span><span style="color:#c0c5ce;">(work).</span><span style="color:#96b5b4;">unwrap</span><span style="color:#c0c5ce;">();
-</span></pre>
+</span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> work </span><span style="color:#ff5e5e;">= </span><span style="color:#6699cc;">join_all</span><span style="color:#f8f8f2;">(parallel);
+core.</span><span style="color:#6699cc;">run</span><span style="color:#f8f8f2;">(work).</span><span style="color:#6699cc;">unwrap</span><span style="color:#f8f8f2;">();
+</span></code></pre>
 <p>We are building 4 loop futures here with the
 <a href="https://docs.rs/futures/*/futures/future/fn.loop_fn.html"><code>loop_fn()</code></a>
 construct, each iteration sending one request. The 4 futures are executed in
@@ -281,8 +283,8 @@ spaghetti right. <code>loop_fn()</code> has 4 (!!!) generic type parameters, so 
 and reasoning about it takes quite some time. As you can see there is a
 <code>hyper::Error</code> type in there because the compiler would greet me with this if I
 leave out all type decalrations:</p>
-<pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">error[E0282]: type annotations needed
+<pre style="background-color:#191919;">
+<code><span style="color:#f8f8f2;">error[E0282]: type annotations needed
   --&gt; tests/memory_leaks.rs:48:21
    |
 40 |     let mut parallel = Vec::new();
@@ -290,7 +292,7 @@ leave out all type decalrations:</p>
 ...
 48 |                     Ok(Loop::Continue(counter + 1))
    |                     ^^ cannot infer type for `E`
-</span></pre>
+</span></code></pre>
 <p>What <code>E</code>? I'm not even using any error type in the code here, how would I know?
 And the compiler is asking me to annotate the type of my list of futures, which
 is ... difficult. It is a vector of loop futures, each of them having 4 type
@@ -305,8 +307,8 @@ request.</p>
 <p>After solving that I can successfully run my test and demonstrate the memory
 leak on Hyper version 0.11.2 and that it is fixed in 0.11.4. Here is what the
 fail looks like:</p>
-<pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">$ cargo test --test memory_leaks
+<pre style="background-color:#191919;">
+<code><span style="color:#f8f8f2;">$ cargo test --test memory_leaks
 running 1 test
 Listening on http://127.0.0.1:9090
 test test_memory_after_30_000_requests ... FAILED
@@ -326,7 +328,7 @@ failures:
 test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out
 
 error: test failed, to rerun pass &#39;--test memory_leaks&#39;
-</span></pre>
+</span></code></pre>
 <p>Very good, now the tests will fail if the server should expose a similar memory
 leak in the future! The downside of this test is that it is a bit slow to
 execute (because it makes so many requests) - it takes about 22 seconds on my
@@ -340,16 +342,16 @@ run the tests on MacOS, so I need a platform specific exception to skip this
 test.</p>
 <p>We can use <a href="https://doc.rust-lang.org/book/first-edition/conditional-compilation.html">conditional compilation</a> for that.</p>
 <p>Cargo.toml:</p>
-<pre style="background-color:#2b303b;">
-<span style="color:#65737e;"># Memory Leak tests require procinfo, which only works on Linux.
-</span><span style="color:#c0c5ce;">[target.&#39;</span><span style="color:#a3be8c;">cfg(target_os=&quot;linux&quot;)</span><span style="color:#c0c5ce;">&#39;.dev-dependencies]
-</span><span style="color:#bf616a;">procinfo </span><span style="color:#c0c5ce;">= &quot;</span><span style="color:#a3be8c;">&gt;=0.4.2</span><span style="color:#c0c5ce;">&quot;
-</span></pre>
+<pre style="background-color:#191919;">
+<code><span style="color:#6d6d6d;"># Memory Leak tests require procinfo, which only works on Linux.
+</span><span style="color:#f8f8f2;">[target.</span><span style="color:#ffffff;">&#39;</span><span style="color:#fbe3bf;">cfg(target_os=&quot;linux&quot;)</span><span style="color:#ffffff;">&#39;</span><span style="color:#f8f8f2;">.dev-dependencies]
+</span><span style="color:#ff5e5e;">procinfo </span><span style="color:#f8f8f2;">= </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">&gt;=0.4.2</span><span style="color:#ffffff;">&quot;
+</span></code></pre>
 <p>At the beginning of the test file:</p>
-<pre style="background-color:#2b303b;">
-<span style="color:#65737e;">// This test uses procinfo, so can only be run on Linux.
-</span><span style="color:#c0c5ce;">#![</span><span style="color:#bf616a;">cfg</span><span style="color:#c0c5ce;">(target_os = &quot;</span><span style="color:#a3be8c;">linux</span><span style="color:#c0c5ce;">&quot;)]
-</span></pre>
+<pre style="background-color:#191919;">
+<code><span style="color:#6d6d6d;">// This test uses procinfo, so can only be run on Linux.
+</span><span style="color:#f8f8f2;">#![</span><span style="color:#e9fdac;">cfg</span><span style="color:#f8f8f2;">(target_os </span><span style="color:#ff5e5e;">= </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">linux</span><span style="color:#ffffff;">&quot;</span><span style="color:#f8f8f2;">)]
+</span></code></pre>
 <p>That means the test case is not even compiled on other platforms, so it does
 not show up as test for the test runner, so it never gets executed.</p>
 <h2 id="conclusion">Conclusion</h2>

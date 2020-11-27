@@ -11,7 +11,9 @@
   <title>Klausi&#x27;s Weblog - Running PHP 5.3 and 5.2 in parallel with nginx</title>
 
   
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+  <link rel="alternate"
+    type="application/rss+xml"
+    title="RSS" href="https://klau.si/rss.xml">
   
 
   
@@ -135,8 +137,7 @@
       <p>
 	The problem: you want to upgrade your Ubuntu server, but you still need PHP 5.2 for some old web sites (i.e. Drupal 5 is not PHP 5.3 compatible).<br />
 	The solution: Go with the packaged PHP 5.3 for your new sites and compile PHP 5.2 yourself for the old ones. As we use the nginx webserver with FastCGI, we can choose per site which PHP CGI binary will handle the requests.</p>
-<p id="zola-continue-reading"><a name="continue-reading"></a></p>
-
+<span id="continue-reading"></span>
 <p>
 	The following steps were carried out on Ubuntu 10.10.</p>
 <ul>
