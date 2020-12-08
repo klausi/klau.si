@@ -2,7 +2,7 @@
 title = "Drupalcon 2010 talk: About the Rules ecosystem"
 date = 2010-08-27
 [taxonomies]
-tags = ["speaking", "rules", "drupalcon"]
+tags = ["speaking", "rules", "drupalcon", "drupal"]
 +++
 
 Here is the video of our DrupalCon Copenhagen 2010 talk "About the Rules ecosystem".

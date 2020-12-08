@@ -7,7 +7,43 @@
         <generator>Zola</generator>
         <language>en</language>
         <atom:link href="https://klau.si/tags/drupal/rss.xml" rel="self" type="application/rss+xml"/>
-        <lastBuildDate>Sat, 19 Dec 2015 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Sun, 03 Nov 2019 00:00:00 +0000</lastBuildDate>
+        <item>
+            <title>Drupalcon 2019 talk: Find security vulnerabilities through code review</title>
+            <pubDate>Sun, 03 Nov 2019 00:00:00 +0000</pubDate>
+            <link>https://klau.si/blog/drupalcon-security-code-review/</link>
+            <guid>https://klau.si/blog/drupalcon-security-code-review/</guid>
+            <description>&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;klausi.github.io&#x2F;sec-code-review2019&#x2F;#&#x2F;&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of my DrupalCon Amsterdam 2019 talk &amp;quot;Find security vulnerabilities through code review&amp;quot;.&lt;&#x2F;p&gt;
+&lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;Oyoja2rfqSk&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
+</description>
+        </item>
+        <item>
+            <title>Drupal Austria Meetup: Drupal security learnings</title>
+            <pubDate>Wed, 13 Mar 2019 00:00:00 +0000</pubDate>
+            <link>https://klau.si/blog/drupal-security-vulnerability-learnings/</link>
+            <guid>https://klau.si/blog/drupal-security-vulnerability-learnings/</guid>
+            <description>&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;drupal-security-vulnerability-learnings&#x2F;meetup_security.jpeg&quot; alt=&quot;Drupal Austria security meetup&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Here are &lt;a href=&quot;&#x2F;presentations&#x2F;sec-learnings2019&#x2F;index.html&quot;&gt;the slides&lt;&#x2F;a&gt; of my Drupal Austria Meetup talk &amp;quot;Drupal security learnings&amp;quot;.&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>Drupalcon 2016 talk: Automated Testing: PHPUnit all the way</title>
+            <pubDate>Tue, 27 Sep 2016 00:00:00 +0000</pubDate>
+            <link>https://klau.si/blog/drupalcon-automated-testing-phpunit/</link>
+            <guid>https://klau.si/blog/drupalcon-automated-testing-phpunit/</guid>
+            <description>&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;docs.google.com&#x2F;presentation&#x2F;d&#x2F;1Uhw3wYfcC_axz6SRTxEHVe8FZHbA-tUGN7dr7YyHMXg&#x2F;edit#slide=id.p&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of our DrupalCon Dublin 2016 talk &amp;quot;Automated Testing: PHPUnit all the way&amp;quot;.&lt;&#x2F;p&gt;
+&lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;jcdEp3YGa94&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
+</description>
+        </item>
+        <item>
+            <title>Drupalcon 2016 talk: How to publish a module on drupal.org</title>
+            <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+            <link>https://klau.si/blog/drupalcon-publish-module/</link>
+            <guid>https://klau.si/blog/drupalcon-publish-module/</guid>
+            <description>&lt;p&gt;Here is the video of my DrupalCon Asia 2016 talk &amp;quot;How to publish a module on drupal.org&amp;quot;.&lt;&#x2F;p&gt;
+&lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;JWLb--cb33E&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
+</description>
+        </item>
         <item>
             <title>Drupal development setup on Ubuntu 15.10</title>
             <pubDate>Sat, 19 Dec 2015 00:00:00 +0000</pubDate>
@@ -16,11 +52,56 @@
             <description>&lt;p&gt;I upgraded my local computer to Ubuntu 15.10 today and revisited my Drupal development environment (this &lt;a href=&quot;&#x2F;drupal-development-setup-ubuntu-1310&quot;&gt;guide is also available for Ubuntu 13.10&lt;&#x2F;a&gt;). Here is a simple and fast guide how to configure Ubuntu for development. There are a number of &lt;a href=&quot;https:&#x2F;&#x2F;www.drupal.org&#x2F;node&#x2F;262&quot;&gt;installation documentation pages on this topic on drupal.org&lt;&#x2F;a&gt;, but they suggest to use the packaged Drupal installation and to run Drupal in subfolders (e.g. http:&#x2F;&#x2F;localhost&#x2F;drupal6). They also do not cover some other important development tools like Phpmyadmin or php.ini settings. During development we want to edit files and we want to do that somewhere in our home directory to avoid any permission problems. There is also &lt;a href=&quot;https:&#x2F;&#x2F;www.drupal.org&#x2F;project&#x2F;drubuntu&quot;&gt;Drubuntu&lt;&#x2F;a&gt;, but it is outdated and does way too much magic in my opinion. So here is a more transparent tutorial that highlights the key development configuration settings for Drupal development on a local computer (do not use this for a production server!).</description>
         </item>
         <item>
+            <title>Drupalcon 2015 talk: Drupal and Security: what you need to know</title>
+            <pubDate>Wed, 23 Sep 2015 00:00:00 +0000</pubDate>
+            <link>https://klau.si/blog/drupalcon-security-what-you-need-to-know/</link>
+            <guid>https://klau.si/blog/drupalcon-security-what-you-need-to-know/</guid>
+            <description>&lt;p&gt;Here are &lt;a href=&quot;http:&#x2F;&#x2F;scor.github.io&#x2F;drupal-security-2015&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of our DrupalCon Barcelona 2015 talk &amp;quot;Drupal and Security: what you need to know&amp;quot;.&lt;&#x2F;p&gt;
+&lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;5LpKelSMsas&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
+</description>
+        </item>
+        <item>
+            <title>Drupalcon 2015 talk: Coding with Rules for Drupal 8</title>
+            <pubDate>Tue, 22 Sep 2015 00:00:00 +0000</pubDate>
+            <link>https://klau.si/blog/drupalcon-coding-with-rules-drupal-8/</link>
+            <guid>https://klau.si/blog/drupalcon-coding-with-rules-drupal-8/</guid>
+            <description>&lt;p&gt;Here is the video of our DrupalCon Barcelona 2015 talk &amp;quot;Coding with Rules for Drupal 8&amp;quot;.&lt;&#x2F;p&gt;
+&lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;QcU_LCAHNLg&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
+</description>
+        </item>
+        <item>
+            <title>Drupalcon 2014 talk: Cracking Drupal</title>
+            <pubDate>Thu, 02 Oct 2014 00:00:00 +0000</pubDate>
+            <link>https://klau.si/blog/drupalcon-cracking-drupal/</link>
+            <guid>https://klau.si/blog/drupalcon-cracking-drupal/</guid>
+            <description>&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;docs.google.com&#x2F;presentation&#x2F;d&#x2F;1LWXRbcQUTj9NDHg8gHplAc7EGy94nmbUEUryWLHJqBg&#x2F;edit?usp=sharing&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of our DrupalCon Amsterdam 2014 talk &amp;quot;Cracking Drupal&amp;quot;.&lt;&#x2F;p&gt;
+&lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;ZkNGObI4nlU&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
+</description>
+        </item>
+        <item>
             <title>Drupal development setup on Ubuntu 13.10</title>
             <pubDate>Fri, 08 Nov 2013 00:00:00 +0000</pubDate>
             <link>https://klau.si/drupal-development-setup-ubuntu-1310/</link>
             <guid>https://klau.si/drupal-development-setup-ubuntu-1310/</guid>
             <description>&lt;p&gt;I upgraded my local computer to Ubuntu 13.10 today and revisited my Drupal development environment (this &lt;a href=&quot;&#x2F;dev-ubuntu-12-04&quot;&gt;guide is also available for Ubuntu 12.04&lt;&#x2F;a&gt;). Here is a simple and fast guide how to configure Ubuntu for development. There are a number of &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;node&#x2F;262&quot;&gt;installation documentation pages on this topic on drupal.org&lt;&#x2F;a&gt;, but they suggest to use the packaged Drupal installation and to run Drupal in subfolders (e.g. http:&#x2F;&#x2F;localhost&#x2F;drupal6). They also do not cover some other important development tools like Phpmyadmin or php.ini settings. During development we want to edit files and we want to do that somewhere in our home directory to avoid any permission problems. There is also &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;project&#x2F;drubuntu&quot;&gt;Drubuntu&lt;&#x2F;a&gt;, but it is outdated and does way too much magic in my opinion. So here is a more transparent tutorial that highlights the key development configuration settings for Drupal development on a local computer (do not use this for a production server!).</description>
+        </item>
+        <item>
+            <title>Drupalcon Prague 2013 talk: REST and Serialization in Drupal 8</title>
+            <pubDate>Wed, 25 Sep 2013 00:00:00 +0000</pubDate>
+            <link>https://klau.si/blog/drupalcon-prague-rest-serialization-drupal-8/</link>
+            <guid>https://klau.si/blog/drupalcon-prague-rest-serialization-drupal-8/</guid>
+            <description>&lt;p&gt;Here is the video of our DrupalCon Prague 2013 talk &amp;quot;REST and serialization in Drupal 8&amp;quot;.&lt;&#x2F;p&gt;
+&lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;w6dqzDbY78k&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
+</description>
+        </item>
+        <item>
+            <title>Drupalcon Portland 2013 talk: REST and Serialization in Drupal 8</title>
+            <pubDate>Thu, 23 May 2013 00:00:00 +0000</pubDate>
+            <link>https://klau.si/blog/drupalcon-portland-rest-serialization-drupal-8/</link>
+            <guid>https://klau.si/blog/drupalcon-portland-rest-serialization-drupal-8/</guid>
+            <description>&lt;p&gt;Here is the video of our DrupalCon Portland 2013 talk &amp;quot;REST and serialization in Drupal 8&amp;quot;.&lt;&#x2F;p&gt;
+&lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;6FNfy7pU6mE&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
+</description>
         </item>
         <item>
             <title>State of the project application issue queue 2013</title>
@@ -43,6 +124,15 @@
             <guid>https://klau.si/restful-entity-web-api-drupal-8/</guid>
             <description>&lt;p&gt;I&#x27;m happy to announce that I will join the &lt;a href=&quot;http:&#x2F;&#x2F;groups.drupal.org&#x2F;wscci&quot;&gt;WSCCI initiative&lt;&#x2F;a&gt; to help develop web service interfaces in Drupal 8. Big thanks to my team at &lt;a href=&quot;http:&#x2F;&#x2F;epiqo.com&#x2F;&quot;&gt;epiqo&lt;&#x2F;a&gt; for sponsoring and making time for me to work on this, as well as &lt;a href=&quot;https:&#x2F;&#x2F;www.acquia.com&#x2F;&quot;&gt;Acquia&lt;&#x2F;a&gt; for providing a crucial financial part to make this happen.&lt;&#x2F;p&gt;
 &lt;p&gt;Read the &lt;a href=&quot;http:&#x2F;&#x2F;groups.drupal.org&#x2F;node&#x2F;262063&quot;&gt;full announcement on groups.drupal.org&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>Drupalcon 2012 talk: The project application process</title>
+            <pubDate>Fri, 24 Aug 2012 00:00:00 +0000</pubDate>
+            <link>https://klau.si/blog/drupalcon-project-application-process/</link>
+            <guid>https://klau.si/blog/drupalcon-project-application-process/</guid>
+            <description>&lt;p&gt;Here is the video of our DrupalCon Munich 2012 talk &amp;quot;The project application process&amp;quot;.&lt;&#x2F;p&gt;
+&lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;jLj0K8Trvus&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
         </item>
         <item>
@@ -83,6 +173,15 @@ git diff --color-words&lt;&#x2F;pre&gt;
 </description>
         </item>
         <item>
+            <title>Drupalcon 2011 talk: The Rules way of life</title>
+            <pubDate>Fri, 26 Aug 2011 00:00:00 +0000</pubDate>
+            <link>https://klau.si/blog/drupalcon-rules-way-of-life/</link>
+            <guid>https://klau.si/blog/drupalcon-rules-way-of-life/</guid>
+            <description>&lt;p&gt;Here is the video of our DrupalCon London 2011 talk &amp;quot;The Rules way of life&amp;quot;.&lt;&#x2F;p&gt;
+&lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;xXcbPi16VAU&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
+</description>
+        </item>
+        <item>
             <title>A nginx configuration for Drupal</title>
             <pubDate>Mon, 23 May 2011 00:00:00 +0000</pubDate>
             <link>https://klau.si/nginx-configuration-drupal/</link>
@@ -108,6 +207,15 @@ git diff --color-words&lt;&#x2F;pre&gt;
             <description>&lt;p&gt;
 	The problem: you want to upgrade your Ubuntu server, but you still need PHP 5.2 for some old web sites (i.e. Drupal 5 is not PHP 5.3 compatible).&lt;br &#x2F;&gt;
 	The solution: Go with the packaged PHP 5.3 for your new sites and compile PHP 5.2 yourself for the old ones. As we use the nginx webserver with FastCGI, we can choose per site which PHP CGI binary will handle the requests.&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>Drupalcon 2010 talk: About the Rules ecosystem</title>
+            <pubDate>Fri, 27 Aug 2010 00:00:00 +0000</pubDate>
+            <link>https://klau.si/blog/drupalcon-rules-ecosystem/</link>
+            <guid>https://klau.si/blog/drupalcon-rules-ecosystem/</guid>
+            <description>&lt;p&gt;Here is the video of our DrupalCon Copenhagen 2010 talk &amp;quot;About the Rules ecosystem&amp;quot;.&lt;&#x2F;p&gt;
+&lt;iframe src=&quot;https:&#x2F;&#x2F;archive.org&#x2F;embed&#x2F;AboutTheRulesEcosystem&quot; width=&quot;420&quot; height=&quot;236&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
         </item>
         <item>
