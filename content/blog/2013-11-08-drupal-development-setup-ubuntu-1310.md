@@ -4,7 +4,7 @@ date = 2013-11-08
 path = "drupal-development-setup-ubuntu-1310"
 aliases = ["node/47", "node/47.html", "drupal-development-setup-ubuntu-1310.html"]
 [taxonomies]
-tags = ["drupal", "drupal planet"]
+tags = ["drupal", "drupal planet", "ubuntu"]
 +++
 
 I upgraded my local computer to Ubuntu 13.10 today and revisited my Drupal development environment (this <a href="/dev-ubuntu-12-04">guide is also available for Ubuntu 12.04</a>). Here is a simple and fast guide how to configure Ubuntu for development. There are a number of <a href="http://drupal.org/node/262">installation documentation pages on this topic on drupal.org</a>, but they suggest to use the packaged Drupal installation and to run Drupal in subfolders (e.g. http://localhost/drupal6). They also do not cover some other important development tools like Phpmyadmin or php.ini settings. During development we want to edit files and we want to do that somewhere in our home directory to avoid any permission problems. There is also <a href="http://drupal.org/project/drubuntu">Drubuntu</a>, but it is outdated and does way too much magic in my opinion. So here is a more transparent tutorial that highlights the key development configuration settings for Drupal development on a local computer (do not use this for a production server!).<!-- more -->
@@ -129,5 +129,3 @@ drush site-install --account-name=klausi --account-pass=klausi --site-name=drupa
   <li>You like the command line? Check out <a href="https://github.com/drush-ops/drush">drush</a> to do all sorts of Drupal administration tasks faster.</li>
   <li>You want to know what's going on in that stupid function? Install the <a href="http://drupal.org/project/devel">devel module</a> for debugging purposes and insert <code>dpm($variable);</code> anywhere you want. It will pretty-print the variable in the browser for inspection.</li>
 </ul>
-
-        

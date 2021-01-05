@@ -4,7 +4,7 @@ date = 2010-05-17
 path = "ubuntu-talking-elvish-or-klingon"
 aliases = ["node/31", "node/31.html", "ubuntu-talking-elvish-or-klingon.html"]
 [taxonomies]
-tags = ["software"]
+tags = ["software", "ubuntu"]
 +++
 
 <p>
@@ -12,4 +12,3 @@ tags = ["software"]
 <p>
 	<a href="/files/ubuntu-elvish-klingon.png"><img alt="" src="/files/ubuntu-elvish-klingon.png" style="width: 500px; height: 313px;" /></a></p>
 <!-- more -->
-        

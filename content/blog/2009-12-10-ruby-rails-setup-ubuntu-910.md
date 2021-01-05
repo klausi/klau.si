@@ -4,7 +4,7 @@ date = 2009-12-10
 path = "ruby-rails-setup-ubuntu-910"
 aliases = ["node/26", "node/26.html", "ruby-rails-setup-ubuntu-910.html"]
 [taxonomies]
-tags = ["software"]
+tags = ["software", "ubuntu"]
 +++
 
 <p>I'm working on a Ruby on Rails project right now and had to setup an environment on my Ubuntu 9.10 system. Here are the install commands for your reference if you want to get it done fast.</p>
@@ -26,4 +26,3 @@ sudo gem install mysql
 sudo gem install aquarium
 sudo gem install ruby-debug19</pre>
 <p>Further steps: there is a very good <a href="http://media.rubyonrails.org/video/rails_blog_2.mov">tutorial screencast available online</a> which shows the power of Rails in 15 minutes.</p>
-        

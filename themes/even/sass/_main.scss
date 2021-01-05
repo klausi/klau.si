@@ -138,6 +138,11 @@ main {
     &__summary {
       margin-bottom: 1rem;
     }
+
+    // Display image captions under the image.
+    img + em {
+      display: block;
+    }
   }
 
   .post-footer {

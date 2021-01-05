@@ -7,7 +7,17 @@
         <generator>Zola</generator>
         <language>en</language>
         <atom:link href="https://klau.si/rss.xml" rel="self" type="application/rss+xml"/>
-        <lastBuildDate>Fri, 27 Nov 2020 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Tue, 05 Jan 2021 00:00:00 +0000</lastBuildDate>
+        <item>
+            <title>Fully hidden automatic system updates on Ubuntu 20.04</title>
+            <pubDate>Tue, 05 Jan 2021 00:00:00 +0000</pubDate>
+            <link>https://klau.si/blog/fully-hidden-automatic-system-updates-ubuntu/</link>
+            <guid>https://klau.si/blog/fully-hidden-automatic-system-updates-ubuntu/</guid>
+            <description>&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;fully-hidden-automatic-system-updates-ubuntu&#x2F;tank-girl-update-smaller.png&quot; alt=&quot;Screenshot of Ubuntu&#x27;s update manager popping up during the movie &amp;quot;Tank Girl.&amp;quot;&quot; &#x2F;&gt;
+&lt;em&gt;Screenshot of Ubuntu&#x27;s update manager popping up during the movie &amp;quot;Tank Girl.&amp;quot;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Ubuntu&#x27;s graphical update manager pops up every time you need to install updates. That can be annoying when you are watching a movie or doing other things and don&#x27;t want to be bothered all the time. Yes, I want to always apply all updates from all sources, but please do it silently. Here is a small script I use to do that with Anacron.&lt;&#x2F;p&gt;
+</description>
+        </item>
         <item>
             <title>Russmedia CTO meetup talk: Pull Request Review best practices</title>
             <pubDate>Fri, 27 Nov 2020 00:00:00 +0000</pubDate>

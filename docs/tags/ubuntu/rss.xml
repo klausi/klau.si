@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>Klausi&#x27;s Weblog - ubuntu</title>
+        <link>https://klau.si</link>
+        <description></description>
+        <generator>Zola</generator>
+        <language>en</language>
+        <atom:link href="https://klau.si/tags/ubuntu/rss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Tue, 05 Jan 2021 00:00:00 +0000</lastBuildDate>
+        <item>
+            <title>Fully hidden automatic system updates on Ubuntu 20.04</title>
+            <pubDate>Tue, 05 Jan 2021 00:00:00 +0000</pubDate>
+            <link>https://klau.si/blog/fully-hidden-automatic-system-updates-ubuntu/</link>
+            <guid>https://klau.si/blog/fully-hidden-automatic-system-updates-ubuntu/</guid>
+            <description>&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;fully-hidden-automatic-system-updates-ubuntu&#x2F;tank-girl-update-smaller.png&quot; alt=&quot;Screenshot of Ubuntu&#x27;s update manager popping up during the movie &amp;quot;Tank Girl.&amp;quot;&quot; &#x2F;&gt;
+&lt;em&gt;Screenshot of Ubuntu&#x27;s update manager popping up during the movie &amp;quot;Tank Girl.&amp;quot;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Ubuntu&#x27;s graphical update manager pops up every time you need to install updates. That can be annoying when you are watching a movie or doing other things and don&#x27;t want to be bothered all the time. Yes, I want to always apply all updates from all sources, but please do it silently. Here is a small script I use to do that with Anacron.&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>Drupal development setup on Ubuntu 15.10</title>
+            <pubDate>Sat, 19 Dec 2015 00:00:00 +0000</pubDate>
+            <link>https://klau.si/dev/</link>
+            <guid>https://klau.si/dev/</guid>
+            <description>&lt;p&gt;I upgraded my local computer to Ubuntu 15.10 today and revisited my Drupal development environment (this &lt;a href=&quot;&#x2F;drupal-development-setup-ubuntu-1310&quot;&gt;guide is also available for Ubuntu 13.10&lt;&#x2F;a&gt;). Here is a simple and fast guide how to configure Ubuntu for development. There are a number of &lt;a href=&quot;https:&#x2F;&#x2F;www.drupal.org&#x2F;node&#x2F;262&quot;&gt;installation documentation pages on this topic on drupal.org&lt;&#x2F;a&gt;, but they suggest to use the packaged Drupal installation and to run Drupal in subfolders (e.g. http:&#x2F;&#x2F;localhost&#x2F;drupal6). They also do not cover some other important development tools like Phpmyadmin or php.ini settings. During development we want to edit files and we want to do that somewhere in our home directory to avoid any permission problems. There is also &lt;a href=&quot;https:&#x2F;&#x2F;www.drupal.org&#x2F;project&#x2F;drubuntu&quot;&gt;Drubuntu&lt;&#x2F;a&gt;, but it is outdated and does way too much magic in my opinion. So here is a more transparent tutorial that highlights the key development configuration settings for Drupal development on a local computer (do not use this for a production server!).</description>
+        </item>
+        <item>
+            <title>Drupal development setup on Ubuntu 13.10</title>
+            <pubDate>Fri, 08 Nov 2013 00:00:00 +0000</pubDate>
+            <link>https://klau.si/drupal-development-setup-ubuntu-1310/</link>
+            <guid>https://klau.si/drupal-development-setup-ubuntu-1310/</guid>
+            <description>&lt;p&gt;I upgraded my local computer to Ubuntu 13.10 today and revisited my Drupal development environment (this &lt;a href=&quot;&#x2F;dev-ubuntu-12-04&quot;&gt;guide is also available for Ubuntu 12.04&lt;&#x2F;a&gt;). Here is a simple and fast guide how to configure Ubuntu for development. There are a number of &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;node&#x2F;262&quot;&gt;installation documentation pages on this topic on drupal.org&lt;&#x2F;a&gt;, but they suggest to use the packaged Drupal installation and to run Drupal in subfolders (e.g. http:&#x2F;&#x2F;localhost&#x2F;drupal6). They also do not cover some other important development tools like Phpmyadmin or php.ini settings. During development we want to edit files and we want to do that somewhere in our home directory to avoid any permission problems. There is also &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;project&#x2F;drubuntu&quot;&gt;Drubuntu&lt;&#x2F;a&gt;, but it is outdated and does way too much magic in my opinion. So here is a more transparent tutorial that highlights the key development configuration settings for Drupal development on a local computer (do not use this for a production server!).</description>
+        </item>
+        <item>
+            <title>Screencasts with RecordMyDesktop, ffmpeg conversion for HTML5 video</title>
+            <pubDate>Sun, 12 May 2013 00:00:00 +0000</pubDate>
+            <link>https://klau.si/screencasts-recordmydesktop-ffmpeg-conversion-html5-video/</link>
+            <guid>https://klau.si/screencasts-recordmydesktop-ffmpeg-conversion-html5-video/</guid>
+            <description>&lt;p&gt;Producing a demo video for &lt;a href=&quot;http:&#x2F;&#x2F;portland2013.drupal.org&#x2F;session&#x2F;rest-and-serialization-drupal-8&quot;&gt;my DrupalCon Portland presentation&lt;&#x2F;a&gt; caused a bit frustration with video editing tools, so here is a simple solution to cut and convert a video on Ubuntu.</description>
+        </item>
+        <item>
+            <title>Drupal development setup on Ubuntu 12.04</title>
+            <pubDate>Sun, 29 Apr 2012 00:00:00 +0000</pubDate>
+            <link>https://klau.si/dev-ubuntu-12-04/</link>
+            <guid>https://klau.si/dev-ubuntu-12-04/</guid>
+            <description>&lt;p&gt;I upgraded my local computer to Ubuntu 12.04 today and revisited my Drupal development environment. Here is a simple and fast guide how to configure Ubuntu for development. There are a number of &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;node&#x2F;262&quot;&gt;installation documentation pages on this topic on drupal.org&lt;&#x2F;a&gt;, but they suggest to use the packaged Drupal installation and to run Drupal in subfolders (e.g. http:&#x2F;&#x2F;localhost&#x2F;drupal6). They also do not cover some other important development tools like Phpmyadmin or php.ini settings. During development we want to edit files and we want to do that somewhere in our home directory to avoid any permission problems. There is also &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;project&#x2F;drubuntu&quot;&gt;Drubuntu&lt;&#x2F;a&gt;, but it is outdated and does way too much magic in my opinion. So here is a more transparent tutorial that highlights the key development configuration settings for Drupal development.</description>
+        </item>
+        <item>
+            <title>Ubuntu talking Elvish or Klingon?</title>
+            <pubDate>Mon, 17 May 2010 00:00:00 +0000</pubDate>
+            <link>https://klau.si/ubuntu-talking-elvish-or-klingon/</link>
+            <guid>https://klau.si/ubuntu-talking-elvish-or-klingon/</guid>
+            <description>&lt;p&gt;
+	Funny screenshot I captured yesterday (I guess this bug was originally caused by outputting binary data in a terminal):&lt;&#x2F;p&gt;
+&lt;p&gt;
+	&lt;a href=&quot;&#x2F;files&#x2F;ubuntu-elvish-klingon.png&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;&#x2F;files&#x2F;ubuntu-elvish-klingon.png&quot; style=&quot;width: 500px; height: 313px;&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>Ruby on Rails Setup on Ubuntu 9.10</title>
+            <pubDate>Thu, 10 Dec 2009 00:00:00 +0000</pubDate>
+            <link>https://klau.si/ruby-rails-setup-ubuntu-910/</link>
+            <guid>https://klau.si/ruby-rails-setup-ubuntu-910/</guid>
+            <description>&lt;p&gt;I&#x27;m working on a Ruby on Rails project right now and had to setup an environment on my Ubuntu 9.10 system. Here are the install commands for your reference if you want to get it done fast.&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>Windows Vista gratis</title>
+            <pubDate>Wed, 21 Nov 2007 00:00:00 +0000</pubDate>
+            <link>https://klau.si/windows-vista-gratis/</link>
+            <guid>https://klau.si/windows-vista-gratis/</guid>
+            <description>&lt;p&gt;Jetzt gibt es ein unglaubliches Angebot: &lt;a href=&quot;http:&#x2F;&#x2F;www.ubuntu.com&#x2F;&quot;&gt;Microsoft Windows Vista Ultimate Edition&lt;&#x2F;a&gt; kann gratis aus dem Internet heruntergeladen werden, und das völlig legal! Diese Version ist außerdem auf Sicherheit ausgelegt und benötigt daher keinen Virenscanner und keine Firewall! Mitgeliefert werden volle 3D-Effekte, das &lt;a href=&quot;http:&#x2F;&#x2F;www.openoffice.org&#x2F;&quot;&gt;Microsoft Office Professional&lt;&#x2F;a&gt; Paket und &lt;a href=&quot;http:&#x2F;&#x2F;www.gimp.org&#x2F;&quot;&gt;Adobe Photoshop&lt;&#x2F;a&gt;!&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;ubuntu.gds.tuwien.ac.at&#x2F;cdimage&#x2F;releases&#x2F;gutsy&#x2F;ubuntu-7.10-desktop-i386.iso&quot;&gt;Hier geht&#x27;s zum Download ...&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</description>
+        </item>
+    </channel>
+</rss>

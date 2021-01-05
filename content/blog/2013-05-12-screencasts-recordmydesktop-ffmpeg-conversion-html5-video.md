@@ -4,7 +4,7 @@ date = 2013-05-12
 path = "screencasts-recordmydesktop-ffmpeg-conversion-html5-video"
 aliases = ["node/46", "node/46.html", "screencasts-recordmydesktop-ffmpeg-conversion-html5-video.html"]
 [taxonomies]
-tags = ["software"]
+tags = ["software", "ubuntu"]
 +++
 
 Producing a demo video for <a href="http://portland2013.drupal.org/session/rest-and-serialization-drupal-8">my DrupalCon Portland presentation</a> caused a bit frustration with video editing tools, so here is a simple solution to cut and convert a video on Ubuntu.<!-- more -->
@@ -24,4 +24,3 @@ To convert the video file, cut off everything after minute 1:34 and remove the a
 ffmpeg -i input-file.ogv -vcodec libx264 -acodec none -t 00:01:34.0 output-file.mp4
 ```
 Done! It also reduced the file size from 4 MB for the Ogg file to 1.4 MB for the MP4 file without reducing the visual quality, thank you ffmpeg :-)
-        

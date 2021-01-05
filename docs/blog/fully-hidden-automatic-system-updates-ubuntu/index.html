@@ -8,7 +8,7 @@
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <title>Klausi&#x27;s Weblog - Screencasts with RecordMyDesktop, ffmpeg conversion for HTML5 video</title>
+  <title>Klausi&#x27;s Weblog - Fully hidden automatic system updates on Ubuntu 20.04</title>
 
   
   <link rel="alternate"
@@ -125,30 +125,51 @@
     
     <header class="post__header">
         <h1 class="post__title">
-            <a href="https:&#x2F;&#x2F;klau.si&#x2F;screencasts-recordmydesktop-ffmpeg-conversion-html5-video&#x2F;">Screencasts with RecordMyDesktop, ffmpeg conversion for HTML5 video</a>
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;fully-hidden-automatic-system-updates-ubuntu&#x2F;">Fully hidden automatic system updates on Ubuntu 20.04</a>
         </h1>
         <div class="post__meta">
-            <span class="post__time">2013-05-12</span>
+            <span class="post__time">2021-01-05</span>
             
         </div>
     </header>
 
     <div class="post-content">
-      <p>Producing a demo video for <a href="http://portland2013.drupal.org/session/rest-and-serialization-drupal-8">my DrupalCon Portland presentation</a> caused a bit frustration with video editing tools, so here is a simple solution to cut and convert a video on Ubuntu.<span id="continue-reading"></span></p>
-<p>First I recorded my screencast with RecordMyDesktop, a simple tool to capture the happenings on your screen. It even supports only recording one window, so you don't need to include the rest of your irrelevant desktop. Installation:</p>
+      <p><img src="https://klau.si/blog/fully-hidden-automatic-system-updates-ubuntu/tank-girl-update-smaller.png" alt="Screenshot of Ubuntu's update manager popping up during the movie &quot;Tank Girl.&quot;" />
+<em>Screenshot of Ubuntu's update manager popping up during the movie &quot;Tank Girl.&quot;</em></p>
+<p>Ubuntu's graphical update manager pops up every time you need to install updates. That can be annoying when you are watching a movie or doing other things and don't want to be bothered all the time. Yes, I want to always apply all updates from all sources, but please do it silently. Here is a small script I use to do that with Anacron.</p>
+<span id="continue-reading"></span>
+<p>Make sure Anacron is installed:</p>
 <pre style="background-color:#191919;">
-<code><span style="color:#f8f8f2;">sudo aptitude install gtk-recordmydesktop</span><span style="color:#f8f8f2;">
+<code><span style="color:#f8f8f2;">sudo apt install anacron
 </span></code></pre>
-<p>The output file it creates uses the Ogg Theroa Video format, which is free and open, but unfortunately not used on a lot on other platforms. For HTML5 video H.264/MPEG-4 now seems to be the most widely spread format, so we need to convert that. I tried with various graphical video editors such as PiTiVi, kdenlive and OpenShot, but not any of them produced useful results. They always changed the resolution, used the wrong codec, a different frame rate or blew up the output file. Their preconfigured rendering profiles just don't make sense for simply converting and cutting a video for the web.</p>
-<p>I decided to look into the command line tool ffmpeg directly and found it surprisingly easy to use. Installation with the H.264 codec:</p>
+<p>Create the file <code>/etc/cron.daily/autoapt</code> as root with the following content (inspired by <a href="https://debian-handbook.info/browse/stable/sect.automatic-upgrades.html">The Debian Administrator's Handbook</a>):</p>
 <pre style="background-color:#191919;">
-<code><span style="color:#f8f8f2;">sudo aptitude install ffmpeg x264</span><span style="color:#f8f8f2;">
+<code><span style="color:#6d6d6d;">#!/bin/bash
+
+</span><span style="color:#ff5e5e;">export </span><span style="color:#e9fdac;">DEBIAN_FRONTEND</span><span style="color:#ff5e5e;">=</span><span style="color:#fbe3bf;">noninteractive
+</span><span style="color:#6d6d6d;"># Log the current date so that we can check when any failed runs happened.
+</span><span style="color:#e9fdac;">date </span><span style="color:#ff5e5e;">&gt;&gt;</span><span style="color:#f8f8f2;"> /var/log/autoapt.log
+</span><span style="color:#e9fdac;">apt</span><span style="color:#f8f8f2;"> update </span><span style="color:#fdb082;">2</span><span style="color:#ff5e5e;">&gt;&amp;</span><span style="color:#fdb082;">1 </span><span style="color:#ff5e5e;">&gt;&gt;</span><span style="color:#f8f8f2;"> /var/log/autoapt.log
+</span><span style="color:#6d6d6d;"># By default answer all user interaction questions with yes, for example
+# for debconf.
+# Use the old configuration file when new config files arrive.
+# Also say yes to setting up config files.
+</span><span style="color:#f8f8f2;">yes </span><span style="color:#ffffff;">&#39;&#39; </span><span style="color:#ff5e5e;">| </span><span style="color:#e9fdac;">apt </span><span style="color:#f8f8f2;">\
+</span><span style="font-style:italic;color:#fc9354;">  -o</span><span style="color:#f8f8f2;"> Dpkg::Options::=--force-confold \
+</span><span style="font-style:italic;color:#fc9354;">  -o</span><span style="color:#f8f8f2;"> Dpkg::Options::=--force-confdef \
+</span><span style="font-style:italic;color:#fc9354;">  -y --allow-downgrades --allow-remove-essential </span><span style="color:#f8f8f2;">\
+</span><span style="font-style:italic;color:#fc9354;">  --allow-change-held-packages </span><span style="color:#f8f8f2;">\
+  upgrade </span><span style="color:#fdb082;">2</span><span style="color:#ff5e5e;">&gt;&amp;</span><span style="color:#fdb082;">1 </span><span style="color:#ff5e5e;">&gt;&gt;</span><span style="color:#f8f8f2;"> /var/log/autoapt.log
+</span><span style="color:#6d6d6d;"># Clean up any packages that are not needed anymore.
+</span><span style="color:#f8f8f2;">apt autoremove</span><span style="font-style:italic;color:#fc9354;"> -y </span><span style="color:#fdb082;">2</span><span style="color:#ff5e5e;">&gt;&amp;</span><span style="color:#fdb082;">1 </span><span style="color:#ff5e5e;">&gt;&gt;</span><span style="color:#f8f8f2;"> /var/log/autoapt.log
 </span></code></pre>
-<p>To convert the video file, cut off everything after minute 1:34 and remove the audio track I used this command:</p>
+<p>This will update all your primary and third-party APT sources and perform any upgrades. Running APT from a script without user interaction is hard, that is why you see all the weird configuration options here.</p>
+<p>This cron job will run now once per day, whenever you turn on your computer. If anything goes wrong you can check the upgrade log at <code>/var/log/autoapt.log</code>.</p>
+<p>Sometimes that cron job might not be fast enough and Ubuntu's graphical update manager might still pop up. If you want to get rid of that completely uninstall it:</p>
 <pre style="background-color:#191919;">
-<code><span style="color:#f8f8f2;">ffmpeg -i input-file.ogv -vcodec libx264 -acodec none -t 00:01:34.0 output-file.mp4</span><span style="color:#f8f8f2;">
+<code><span style="color:#f8f8f2;">sudo apt remove update-notifier
 </span></code></pre>
-<p>Done! It also reduced the file size from 4 MB for the Ogg file to 1.4 MB for the MP4 file without reducing the visual quality, thank you ffmpeg :-)</p>
+<p>Congratulations, your Ubuntu now updates itself and shuts up about it!</p>
 
     </div>
 
@@ -160,8 +181,6 @@
             
                 <div class="post-tags">
                     
-                        <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;software&#x2F;">#software</a>
-                    
                         <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;ubuntu&#x2F;">#ubuntu</a>
                     
                 </div>
@@ -169,10 +188,8 @@
             
                 <div class="post-nav">
                     
-                        <a class="previous" href="https:&#x2F;&#x2F;klau.si&#x2F;state-project-application-issue-queue-2013&#x2F;">‹ State of the project application issue queue 2013</a>
+                        <a class="previous" href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;russmedia-cto-meetup-talk-pull-request-review&#x2F;">‹ Russmedia CTO meetup talk: Pull Request Review best practices</a>
                     
-                    
-                        <a class="next" href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;drupalcon-portland-rest-serialization-drupal-8&#x2F;">Drupalcon Portland 2013 talk: REST and Serialization in Drupal 8 ›</a>
                     
                     
                     
