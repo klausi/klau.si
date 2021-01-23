@@ -173,7 +173,7 @@
 <p>This was quite a revelation to me and still blows my mind: you can just swap out a complete type during test runs! I first found this when looking at the <a href="https://github.com/maidsafe/lru_time_cache">lru_time_cache crate</a> and the <a href="https://github.com/pcsm/test_double">test_double crate</a>.</p>
 <p>Let's look at a concrete use case as I implemented for <a href="https://github.com/klausi/rustnish/blob/goal-11/src/cache.rs">the cache part</a> of my Rustnish project (a fork of the mentioned lru_time_cache crate). The cache has an <code>insert()</code> and <code>len()</code> method defined like this:</p>
 <pre style="background-color:#191919;">
-<code><span style="color:#ff5e5e;">use </span><span style="color:#f8f8f2;">std::time::Instant;
+<code class="language-rust" data-lang="rust"><span style="color:#ff5e5e;">use </span><span style="color:#f8f8f2;">std::time::Instant;
 
 </span><span style="color:#6d6d6d;">/// Inserts a key-value pair into the cache.
 </span><span style="color:#ff5e5e;">pub </span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">insert</span><span style="color:#f8f8f2;">(</span><span style="color:#ff5e5e;">&amp;mut </span><span style="font-style:italic;color:#fc9354;">self</span><span style="color:#f8f8f2;">, </span><span style="font-style:italic;color:#fc9354;">key</span><span style="color:#f8f8f2;">: Key, </span><span style="font-style:italic;color:#fc9354;">value</span><span style="color:#f8f8f2;">: Value, </span><span style="font-style:italic;color:#fc9354;">expires</span><span style="color:#f8f8f2;">: Instant) -&gt; </span><span style="color:#fbe3bf;">Option</span><span style="color:#f8f8f2;">&lt;Value&gt; {
@@ -193,7 +193,7 @@
 <p>Whenever <code>len()</code> is called it has to go through all items in the cache and only count the non-expired ones (expired items are only removed in <code>insert()</code> calls).</p>
 <p>How do we test this effectively? We could use <code>thread::sleep()</code> in test functions and check real time results, but that makes the unit test slow and dependent on thread time. How can we mock the <code>Instant</code> struct and associated methods instead? The secret sauce is this:</p>
 <pre style="background-color:#191919;">
-<code><span style="color:#6d6d6d;">// During testing we use a mock clock to be time independent.
+<code class="language-rust" data-lang="rust"><span style="color:#6d6d6d;">// During testing we use a mock clock to be time independent.
 </span><span style="color:#f8f8f2;">#[</span><span style="color:#e9fdac;">cfg</span><span style="color:#f8f8f2;">(test)]
 </span><span style="color:#ff5e5e;">use </span><span style="color:#f8f8f2;">fake_clock::FakeClock </span><span style="color:#ff5e5e;">as</span><span style="color:#f8f8f2;"> Instant;
 #[</span><span style="color:#e9fdac;">cfg</span><span style="color:#f8f8f2;">(</span><span style="color:#e9fdac;">not</span><span style="color:#f8f8f2;">(test))]
@@ -201,7 +201,7 @@
 </span></code></pre>
 <p>The <code>cfg</code> attribute is used here to swap in a mock <code>Instant</code> type whenever the tests are executed. During production compilation the normal type is used. Luckily in this case a <a href="https://github.com/maidsafe/fake_clock">fake clock crate</a> already exists, so we don't even have to write the mock code and just use it:</p>
 <pre style="background-color:#191919;">
-<code><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">sleep</span><span style="color:#f8f8f2;">(</span><span style="font-style:italic;color:#fc9354;">time</span><span style="color:#f8f8f2;">: </span><span style="font-style:italic;color:#fbdfb5;">u64</span><span style="color:#f8f8f2;">) {
+<code class="language-rust" data-lang="rust"><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">sleep</span><span style="color:#f8f8f2;">(</span><span style="font-style:italic;color:#fc9354;">time</span><span style="color:#f8f8f2;">: </span><span style="font-style:italic;color:#fbdfb5;">u64</span><span style="color:#f8f8f2;">) {
     </span><span style="color:#ff5e5e;">use </span><span style="color:#f8f8f2;">fake_clock::FakeClock;
     FakeClock::advance_time(time);
 }

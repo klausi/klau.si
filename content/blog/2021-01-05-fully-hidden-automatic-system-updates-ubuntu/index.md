@@ -43,6 +43,12 @@ apt autoremove -y 2>&1 >> /var/log/autoapt.log
 
 This will update all your primary and third-party APT sources and perform any upgrades. Running APT from a script without user interaction is hard, that is why you see all the weird configuration options here.
 
+Make sure this new script file is executable:
+
+```
+sudo chmod a+x /etc/cron.daily/autoapt
+```
+
 This cron job will run now once per day, whenever you turn on your computer. If anything goes wrong you can check the upgrade log at `/var/log/autoapt.log`.
 
 Sometimes that cron job might not be fast enough and Ubuntu's graphical update manager might still pop up. If you want to get rid of that completely uninstall it:

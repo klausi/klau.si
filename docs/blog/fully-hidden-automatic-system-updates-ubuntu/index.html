@@ -144,7 +144,7 @@
 </span></code></pre>
 <p>Create the file <code>/etc/cron.daily/autoapt</code> as root with the following content (inspired by <a href="https://debian-handbook.info/browse/stable/sect.automatic-upgrades.html">The Debian Administrator's Handbook</a>):</p>
 <pre style="background-color:#191919;">
-<code><span style="color:#6d6d6d;">#!/bin/bash
+<code class="language-sh" data-lang="sh"><span style="color:#6d6d6d;">#!/bin/bash
 
 </span><span style="color:#ff5e5e;">export </span><span style="color:#e9fdac;">DEBIAN_FRONTEND</span><span style="color:#ff5e5e;">=</span><span style="color:#fbe3bf;">noninteractive
 </span><span style="color:#6d6d6d;"># Log the current date so that we can check when any failed runs happened.
@@ -164,6 +164,10 @@
 </span><span style="color:#f8f8f2;">apt autoremove</span><span style="font-style:italic;color:#fc9354;"> -y </span><span style="color:#fdb082;">2</span><span style="color:#ff5e5e;">&gt;&amp;</span><span style="color:#fdb082;">1 </span><span style="color:#ff5e5e;">&gt;&gt;</span><span style="color:#f8f8f2;"> /var/log/autoapt.log
 </span></code></pre>
 <p>This will update all your primary and third-party APT sources and perform any upgrades. Running APT from a script without user interaction is hard, that is why you see all the weird configuration options here.</p>
+<p>Make sure this new script file is executable:</p>
+<pre style="background-color:#191919;">
+<code><span style="color:#f8f8f2;">sudo chmod a+x /etc/cron.daily/autoapt
+</span></code></pre>
 <p>This cron job will run now once per day, whenever you turn on your computer. If anything goes wrong you can check the upgrade log at <code>/var/log/autoapt.log</code>.</p>
 <p>Sometimes that cron job might not be fast enough and Ubuntu's graphical update manager might still pop up. If you want to get rid of that completely uninstall it:</p>
 <pre style="background-color:#191919;">

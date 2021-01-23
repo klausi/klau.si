@@ -234,12 +234,12 @@ dependent and can for example not work on MacOS or Windows.</p>
 <a href="https://github.com/klausi/rustnish/blob/goal-07/tests/memory_leaks.rs">memory_leaks.rs</a>.</p>
 <p>Getting the current memory usage (resident number of kilobytes in RAM):</p>
 <pre style="background-color:#191919;">
-<code><span style="color:#ff5e5e;">extern crate</span><span style="color:#f8f8f2;"> procinfo;
+<code class="language-rust" data-lang="rust"><span style="color:#ff5e5e;">extern crate</span><span style="color:#f8f8f2;"> procinfo;
 </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> memory_before </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">procinfo::pid::statm_self().</span><span style="color:#6699cc;">unwrap</span><span style="color:#f8f8f2;">().resident;
 </span></code></pre>
 <p>Emulating Apache Bench and sending 30K requests, 4 at a time:</p>
 <pre style="background-color:#191919;">
-<code><span style="font-style:italic;color:#fbdfb5;">let </span><span style="color:#ff5e5e;">mut</span><span style="color:#f8f8f2;"> core </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">Core::new().</span><span style="color:#6699cc;">unwrap</span><span style="color:#f8f8f2;">();
+<code class="language-rust" data-lang="rust"><span style="font-style:italic;color:#fbdfb5;">let </span><span style="color:#ff5e5e;">mut</span><span style="color:#f8f8f2;"> core </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">Core::new().</span><span style="color:#6699cc;">unwrap</span><span style="color:#f8f8f2;">();
 </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> client </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">Client::new(</span><span style="color:#ff5e5e;">&amp;</span><span style="color:#f8f8f2;">core.</span><span style="color:#6699cc;">handle</span><span style="color:#f8f8f2;">());
 
 </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> url: Uri </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">(</span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">http://127.0.0.1:</span><span style="color:#ffffff;">&quot;</span><span style="color:#f8f8f2;">.</span><span style="color:#6699cc;">to_string</span><span style="color:#f8f8f2;">() </span><span style="color:#ff5e5e;">+ &amp;</span><span style="color:#f8f8f2;">port.</span><span style="color:#6699cc;">to_string</span><span style="color:#f8f8f2;">())
@@ -343,13 +343,13 @@ test.</p>
 <p>We can use <a href="https://doc.rust-lang.org/book/first-edition/conditional-compilation.html">conditional compilation</a> for that.</p>
 <p>Cargo.toml:</p>
 <pre style="background-color:#191919;">
-<code><span style="color:#6d6d6d;"># Memory Leak tests require procinfo, which only works on Linux.
+<code class="language-toml" data-lang="toml"><span style="color:#6d6d6d;"># Memory Leak tests require procinfo, which only works on Linux.
 </span><span style="color:#f8f8f2;">[target.</span><span style="color:#ffffff;">&#39;</span><span style="color:#fbe3bf;">cfg(target_os=&quot;linux&quot;)</span><span style="color:#ffffff;">&#39;</span><span style="color:#f8f8f2;">.dev-dependencies]
 </span><span style="color:#ff5e5e;">procinfo </span><span style="color:#f8f8f2;">= </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">&gt;=0.4.2</span><span style="color:#ffffff;">&quot;
 </span></code></pre>
 <p>At the beginning of the test file:</p>
 <pre style="background-color:#191919;">
-<code><span style="color:#6d6d6d;">// This test uses procinfo, so can only be run on Linux.
+<code class="language-rust" data-lang="rust"><span style="color:#6d6d6d;">// This test uses procinfo, so can only be run on Linux.
 </span><span style="color:#f8f8f2;">#![</span><span style="color:#e9fdac;">cfg</span><span style="color:#f8f8f2;">(target_os </span><span style="color:#ff5e5e;">= </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">linux</span><span style="color:#ffffff;">&quot;</span><span style="color:#f8f8f2;">)]
 </span></code></pre>
 <p>That means the test case is not even compiled on other platforms, so it does

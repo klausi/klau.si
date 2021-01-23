@@ -177,7 +177,7 @@ and test isolation with our test so this is not really an option.</p>
 <p>The basic idea is to have a function <code>get_free_port()</code> that hands out port
 numbers incrementally and is called by tests:</p>
 <pre style="background-color:#191919;">
-<code><span style="color:#ff5e5e;">pub </span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">get_free_port</span><span style="color:#f8f8f2;">() -&gt; </span><span style="font-style:italic;color:#fbdfb5;">u16 </span><span style="color:#f8f8f2;">{
+<code class="language-rust" data-lang="rust"><span style="color:#ff5e5e;">pub </span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">get_free_port</span><span style="color:#f8f8f2;">() -&gt; </span><span style="font-style:italic;color:#fbdfb5;">u16 </span><span style="color:#f8f8f2;">{
     </span><span style="font-style:italic;color:#fbdfb5;">static </span><span style="color:#ff5e5e;">mut </span><span style="color:#fdb082;">PORT_NR</span><span style="color:#f8f8f2;">: </span><span style="font-style:italic;color:#fbdfb5;">u16 </span><span style="color:#ff5e5e;">= </span><span style="color:#fdb082;">9090</span><span style="color:#f8f8f2;">;
     </span><span style="color:#fdb082;">PORT_NR </span><span style="color:#ff5e5e;">+= </span><span style="color:#fdb082;">1</span><span style="color:#f8f8f2;">;
     </span><span style="color:#fdb082;">PORT_NR
@@ -206,7 +206,7 @@ more primitive synchronization constructs.</p>
 <p>The standard library has some <a href="https://doc.rust-lang.org/std/sync/atomic/">good documentation about synchronized atomic
 access</a> that we can use.</p>
 <pre style="background-color:#191919;">
-<code><span style="color:#ff5e5e;">pub </span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">get_free_port</span><span style="color:#f8f8f2;">() -&gt; </span><span style="font-style:italic;color:#fbdfb5;">u16 </span><span style="color:#f8f8f2;">{
+<code class="language-rust" data-lang="rust"><span style="color:#ff5e5e;">pub </span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">get_free_port</span><span style="color:#f8f8f2;">() -&gt; </span><span style="font-style:italic;color:#fbdfb5;">u16 </span><span style="color:#f8f8f2;">{
     </span><span style="font-style:italic;color:#fbdfb5;">static </span><span style="color:#fdb082;">PORT_NR</span><span style="color:#f8f8f2;">: AtomicUsize </span><span style="color:#ff5e5e;">= </span><span style="color:#fdb082;">ATOMIC_USIZE_INIT</span><span style="color:#f8f8f2;">;
 
     </span><span style="color:#fdb082;">PORT_NR</span><span style="color:#f8f8f2;">.</span><span style="color:#6699cc;">compare_and_swap</span><span style="color:#f8f8f2;">(</span><span style="color:#fdb082;">0</span><span style="color:#f8f8f2;">, </span><span style="color:#fdb082;">9090</span><span style="color:#f8f8f2;">, Ordering::SeqCst);
@@ -219,7 +219,7 @@ access</a> that we can use.</p>
 <p>We have to initialize the static variable with <code>ATOMIC_USIZE_INIT</code> instead
 of our desired value 9090. If you try</p>
 <pre style="background-color:#191919;">
-<code><span style="font-style:italic;color:#fbdfb5;">static </span><span style="color:#fdb082;">PORT_NR</span><span style="color:#f8f8f2;">: AtomicUsize </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">AtomicUsize::new(</span><span style="color:#fdb082;">9090</span><span style="color:#f8f8f2;">);
+<code class="language-rust" data-lang="rust"><span style="font-style:italic;color:#fbdfb5;">static </span><span style="color:#fdb082;">PORT_NR</span><span style="color:#f8f8f2;">: AtomicUsize </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">AtomicUsize::new(</span><span style="color:#fdb082;">9090</span><span style="color:#f8f8f2;">);
 </span></code></pre>
 <p>then the compiler will complain:</p>
 <pre style="background-color:#191919;">
@@ -255,7 +255,7 @@ type but no <code>AtomicU16</code>.</p>
 <p>Thanks to a <a href="https://users.rust-lang.org/t/how-do-you-access-static-variables-in-a-thread-safe-manner/12792/2">tip from Steven Fackler</a>
 we can postpone our offset to the very end:</p>
 <pre style="background-color:#191919;">
-<code><span style="color:#ff5e5e;">pub </span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">get_free_port</span><span style="color:#f8f8f2;">() -&gt; </span><span style="font-style:italic;color:#fbdfb5;">u16 </span><span style="color:#f8f8f2;">{
+<code class="language-rust" data-lang="rust"><span style="color:#ff5e5e;">pub </span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">get_free_port</span><span style="color:#f8f8f2;">() -&gt; </span><span style="font-style:italic;color:#fbdfb5;">u16 </span><span style="color:#f8f8f2;">{
     </span><span style="font-style:italic;color:#fbdfb5;">static </span><span style="color:#fdb082;">PORT_NR</span><span style="color:#f8f8f2;">: AtomicUsize </span><span style="color:#ff5e5e;">= </span><span style="color:#fdb082;">ATOMIC_USIZE_INIT</span><span style="color:#f8f8f2;">;
 
     </span><span style="color:#fdb082;">PORT_NR</span><span style="color:#f8f8f2;">.</span><span style="color:#6699cc;">fetch_add</span><span style="color:#f8f8f2;">(</span><span style="color:#fdb082;">1</span><span style="color:#f8f8f2;">, Ordering::SeqCst) </span><span style="color:#ff5e5e;">as </span><span style="font-style:italic;color:#fbdfb5;">u16 </span><span style="color:#ff5e5e;">+ </span><span style="color:#fdb082;">9090

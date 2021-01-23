@@ -286,7 +286,7 @@ the server works a bit differently now. See the newer blog post about
 <strong><a href="https://klau.si/blog/converting-a-hyper-server-to-tokio/">Converting a Hyper server to Tokio</a></strong>.</p>
 <p>Edit Cargo.toml in your project and add a dependency line:</p>
 <pre style="background-color:#191919;">
-<code><span style="color:#f8f8f2;">[dependencies]
+<code class="language-toml" data-lang="toml"><span style="color:#f8f8f2;">[dependencies]
 </span><span style="color:#ff5e5e;">hyper </span><span style="color:#f8f8f2;">= </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">0.10.9</span><span style="color:#ffffff;">&quot;
 </span></code></pre>
 <p>The next time you execute <code>cargo run</code> it will fetch the Hyper dependency
@@ -297,7 +297,7 @@ for you, compile everything and then run your program. Super easy!</p>
 <p>Rust has a full namespace and module system and makes importing libraries
 straightforward:</p>
 <pre style="background-color:#191919;">
-<code><span style="color:#ff5e5e;">extern crate</span><span style="color:#f8f8f2;"> hyper;
+<code class="language-rust" data-lang="rust"><span style="color:#ff5e5e;">extern crate</span><span style="color:#f8f8f2;"> hyper;
 </span><span style="color:#ff5e5e;">use </span><span style="color:#f8f8f2;">hyper::server::{Server, Request, Response};
 </span></code></pre>
 <p>That tells the compiler to use the Hyper library and import the &quot;Server&quot; type
@@ -314,7 +314,7 @@ live in functions. Coming from a scripting language this was <a href="http://sta
 wrong</a> :-)</p>
 <p>The main() function is the entry point for the program execution:</p>
 <pre style="background-color:#191919;">
-<code><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">main</span><span style="color:#f8f8f2;">() {}
+<code class="language-rust" data-lang="rust"><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">main</span><span style="color:#f8f8f2;">() {}
 </span></code></pre>
 <p>Rust uses the fn keyword to define a function. &quot;fn&quot; instead of &quot;function&quot; is an
 optimization to quicker write programs, but of course we know that we should
@@ -322,7 +322,7 @@ optimize for humans reading programs faster instead. &quot;fn&quot; is not a nat
 and harder to recognize for newcomers. (General programming rant: never
 abbreviate things because somebody will have to read and understand this.)</p>
 <pre style="background-color:#191919;">
-<code><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">main</span><span style="color:#f8f8f2;">() {
+<code class="language-rust" data-lang="rust"><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">main</span><span style="color:#f8f8f2;">() {
     </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> server </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">Server::http(</span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">127.0.0.1:9090</span><span style="color:#ffffff;">&quot;</span><span style="color:#f8f8f2;">).</span><span style="color:#6699cc;">unwrap</span><span style="color:#f8f8f2;">();
 }
 </span></code></pre>
@@ -339,7 +339,7 @@ return any outcome in their return type, that's why return types in Rust are
 often complex types that express multiple different result possibilities a
 function can have.</p>
 <pre style="background-color:#191919;">
-<code><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">main</span><span style="color:#f8f8f2;">() {
+<code class="language-rust" data-lang="rust"><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">main</span><span style="color:#f8f8f2;">() {
     </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> server </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">Server::http(</span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">127.0.0.1:9090</span><span style="color:#ffffff;">&quot;</span><span style="color:#f8f8f2;">).</span><span style="color:#6699cc;">unwrap</span><span style="color:#f8f8f2;">();
     </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> _guard </span><span style="color:#ff5e5e;">=</span><span style="color:#f8f8f2;"> server.</span><span style="color:#6699cc;">handle</span><span style="color:#f8f8f2;">(pipe_through);
     println!(</span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">Listening on http://127.0.0.1:9090</span><span style="color:#ffffff;">&quot;</span><span style="color:#f8f8f2;">);
@@ -360,7 +360,7 @@ it as just a function call with variable arguments for now.</p>
 <h2 id="handling-http-requests">Handling HTTP requests</h2>
 <p>Let's look at the pipe_trough() function that will handle requests:</p>
 <pre style="background-color:#191919;">
-<code><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">pipe_through</span><span style="color:#f8f8f2;">(</span><span style="font-style:italic;color:#fc9354;">request</span><span style="color:#f8f8f2;">: Request, </span><span style="color:#ff5e5e;">mut </span><span style="font-style:italic;color:#fc9354;">response</span><span style="color:#f8f8f2;">: Response) {
+<code class="language-rust" data-lang="rust"><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">pipe_through</span><span style="color:#f8f8f2;">(</span><span style="font-style:italic;color:#fc9354;">request</span><span style="color:#f8f8f2;">: Request, </span><span style="color:#ff5e5e;">mut </span><span style="font-style:italic;color:#fc9354;">response</span><span style="color:#f8f8f2;">: Response) {
     </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> path </span><span style="color:#ff5e5e;">= match</span><span style="color:#f8f8f2;"> request.uri {
         RequestUri::AbsolutePath(p) </span><span style="color:#ff5e5e;">=&gt;</span><span style="color:#f8f8f2;"> p,
         RequestUri::AbsoluteUri(url) </span><span style="color:#ff5e5e;">=&gt;</span><span style="color:#f8f8f2;"> url.</span><span style="color:#6699cc;">path</span><span style="color:#f8f8f2;">().</span><span style="color:#6699cc;">to_string</span><span style="color:#f8f8f2;">(),
@@ -388,7 +388,7 @@ While writing this code I never knew when that must be done, so I just throw
 lots of <code>to_string()</code> calls in whenever the compiler complains about a type
 mismatch.</p>
 <pre style="background-color:#191919;">
-<code><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> hostname </span><span style="color:#ff5e5e;">=</span><span style="color:#f8f8f2;"> host.hostname.</span><span style="color:#6699cc;">to_string</span><span style="color:#f8f8f2;">();
+<code class="language-rust" data-lang="rust"><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> hostname </span><span style="color:#ff5e5e;">=</span><span style="color:#f8f8f2;"> host.hostname.</span><span style="color:#6699cc;">to_string</span><span style="color:#f8f8f2;">();
 </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> protocol </span><span style="color:#ff5e5e;">= </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">http://</span><span style="color:#ffffff;">&quot;</span><span style="color:#f8f8f2;">.</span><span style="color:#6699cc;">to_string</span><span style="color:#f8f8f2;">();
 </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> url_string </span><span style="color:#ff5e5e;">=</span><span style="color:#f8f8f2;"> protocol </span><span style="color:#ff5e5e;">+ &amp;</span><span style="color:#f8f8f2;">hostname </span><span style="color:#ff5e5e;">+ &amp;</span><span style="color:#f8f8f2;">path;
 </span></code></pre>
@@ -399,7 +399,7 @@ already? Same spiel as before: randomly throwing in <code>to_string()</code> and
 operators until the compiler shuts up and we have our desired result in the
 url_string variable.</p>
 <pre style="background-color:#191919;">
-<code><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> client </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">Client::new();
+<code class="language-rust" data-lang="rust"><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> client </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">Client::new();
 </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> request_builder </span><span style="color:#ff5e5e;">=</span><span style="color:#f8f8f2;"> client
     .</span><span style="color:#6699cc;">request</span><span style="color:#f8f8f2;">(request.method, url)
     .</span><span style="color:#6699cc;">headers</span><span style="color:#f8f8f2;">(request.headers.</span><span style="color:#6699cc;">clone</span><span style="color:#f8f8f2;">());
@@ -411,7 +411,7 @@ incoming request headers to the upstream request I'm building. They are of the
 same type, so why do I have to clone them? Maybe this has something to do with
 the Rust ownership model, but the compiler errors were not clear on that.</p>
 <pre style="background-color:#191919;">
-<code><span style="color:#ff5e5e;">*</span><span style="color:#f8f8f2;">response.</span><span style="color:#6699cc;">status_mut</span><span style="color:#f8f8f2;">() </span><span style="color:#ff5e5e;">=</span><span style="color:#f8f8f2;"> upstream_response.status;
+<code class="language-rust" data-lang="rust"><span style="color:#ff5e5e;">*</span><span style="color:#f8f8f2;">response.</span><span style="color:#6699cc;">status_mut</span><span style="color:#f8f8f2;">() </span><span style="color:#ff5e5e;">=</span><span style="color:#f8f8f2;"> upstream_response.status;
 </span><span style="color:#ff5e5e;">*</span><span style="color:#f8f8f2;">response.</span><span style="color:#6699cc;">headers_mut</span><span style="color:#f8f8f2;">() </span><span style="color:#ff5e5e;">=</span><span style="color:#f8f8f2;"> upstream_response.headers.</span><span style="color:#6699cc;">clone</span><span style="color:#f8f8f2;">();
 io::copy(</span><span style="color:#ff5e5e;">&amp;mut</span><span style="color:#f8f8f2;"> upstream_response, </span><span style="color:#ff5e5e;">&amp;mut</span><span style="color:#f8f8f2;"> response.</span><span style="color:#6699cc;">start</span><span style="color:#f8f8f2;">().</span><span style="color:#6699cc;">unwrap</span><span style="color:#f8f8f2;">()).</span><span style="color:#6699cc;">unwrap</span><span style="color:#f8f8f2;">();
 </span></code></pre>

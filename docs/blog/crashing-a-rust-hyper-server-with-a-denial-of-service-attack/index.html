@@ -183,7 +183,7 @@ issue</a>.</p>
 HTTP responses
 (<a href="https://github.com/hyperium/hyper/blob/v0.11.19/examples/hello.rs">source</a>):</p>
 <pre style="background-color:#191919;">
-<code><span style="font-style:italic;color:#fbdfb5;">static </span><span style="color:#fdb082;">PHRASE</span><span style="color:#f8f8f2;">: </span><span style="color:#ff5e5e;">&amp;&#39;static </span><span style="color:#f8f8f2;">[</span><span style="font-style:italic;color:#fbdfb5;">u8</span><span style="color:#f8f8f2;">] </span><span style="color:#ff5e5e;">= </span><span style="font-style:italic;color:#fbdfb5;">b</span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">Hello World!</span><span style="color:#ffffff;">&quot;</span><span style="color:#f8f8f2;">;
+<code class="language-rust" data-lang="rust"><span style="font-style:italic;color:#fbdfb5;">static </span><span style="color:#fdb082;">PHRASE</span><span style="color:#f8f8f2;">: </span><span style="color:#ff5e5e;">&amp;&#39;static </span><span style="color:#f8f8f2;">[</span><span style="font-style:italic;color:#fbdfb5;">u8</span><span style="color:#f8f8f2;">] </span><span style="color:#ff5e5e;">= </span><span style="font-style:italic;color:#fbdfb5;">b</span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">Hello World!</span><span style="color:#ffffff;">&quot;</span><span style="color:#f8f8f2;">;
 
 </span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">main</span><span style="color:#f8f8f2;">() {
     </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> addr </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">([</span><span style="color:#fdb082;">127</span><span style="color:#f8f8f2;">, </span><span style="color:#fdb082;">0</span><span style="color:#f8f8f2;">, </span><span style="color:#fdb082;">0</span><span style="color:#f8f8f2;">, </span><span style="color:#fdb082;">1</span><span style="color:#f8f8f2;">], </span><span style="color:#fdb082;">3000</span><span style="color:#f8f8f2;">).</span><span style="color:#6699cc;">into</span><span style="color:#f8f8f2;">();
@@ -258,7 +258,7 @@ request volumes, but then the problem is the same: the server will abort and
 die.</p>
 <h2 id="a-naive-fix-with-a-loop">A naive fix with a loop</h2>
 <pre style="background-color:#191919;">
-<code><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> addr </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">([</span><span style="color:#fdb082;">127</span><span style="color:#f8f8f2;">, </span><span style="color:#fdb082;">0</span><span style="color:#f8f8f2;">, </span><span style="color:#fdb082;">0</span><span style="color:#f8f8f2;">, </span><span style="color:#fdb082;">1</span><span style="color:#f8f8f2;">], </span><span style="color:#fdb082;">3000</span><span style="color:#f8f8f2;">).</span><span style="color:#6699cc;">into</span><span style="color:#f8f8f2;">();
+<code class="language-rust" data-lang="rust"><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> addr </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">([</span><span style="color:#fdb082;">127</span><span style="color:#f8f8f2;">, </span><span style="color:#fdb082;">0</span><span style="color:#f8f8f2;">, </span><span style="color:#fdb082;">0</span><span style="color:#f8f8f2;">, </span><span style="color:#fdb082;">1</span><span style="color:#f8f8f2;">], </span><span style="color:#fdb082;">3000</span><span style="color:#f8f8f2;">).</span><span style="color:#6699cc;">into</span><span style="color:#f8f8f2;">();
 
 </span><span style="color:#ff5e5e;">loop </span><span style="color:#f8f8f2;">{
     </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> new_service </span><span style="color:#ff5e5e;">= </span><span style="color:#6699cc;">const_service</span><span style="color:#f8f8f2;">(</span><span style="color:#6699cc;">service_fn</span><span style="color:#f8f8f2;">(|_| {
@@ -290,7 +290,7 @@ become available in the meantime.</p>
 <p>This setting is currently (Hyper v0.11.22) disabled by default and you must
 enable it like this:</p>
 <pre style="background-color:#191919;">
-<code><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> server </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">Http::new()
+<code class="language-rust" data-lang="rust"><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> server </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">Http::new()
     .</span><span style="color:#6699cc;">sleep_on_errors</span><span style="color:#f8f8f2;">(</span><span style="color:#ff8942;">true</span><span style="color:#f8f8f2;">)
     .</span><span style="color:#6699cc;">bind</span><span style="color:#f8f8f2;">(</span><span style="color:#ff5e5e;">&amp;</span><span style="color:#f8f8f2;">addr, new_service)
     .</span><span style="color:#6699cc;">unwrap</span><span style="color:#f8f8f2;">();

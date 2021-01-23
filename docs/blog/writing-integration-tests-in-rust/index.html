@@ -181,7 +181,7 @@ testing</a> which describes that you
 put integration tests into a &quot;tests&quot; folder in your project. We create a file
 tests/integration_tests.rs with the following content:</p>
 <pre style="background-color:#191919;">
-<code><span style="color:#ff5e5e;">extern crate</span><span style="color:#f8f8f2;"> rustnish;
+<code class="language-rust" data-lang="rust"><span style="color:#ff5e5e;">extern crate</span><span style="color:#f8f8f2;"> rustnish;
 
 #[</span><span style="color:#e9fdac;">test</span><span style="color:#f8f8f2;">]
 </span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">test_pass_through</span><span style="color:#f8f8f2;">() {
@@ -213,7 +213,7 @@ error: Could not compile `rustnish`.
 into a main.rs file and a lib.rs file</strong>.</p>
 <p>main.rs is a thin wrapper that just launches the reverse proxy server:</p>
 <pre style="background-color:#191919;">
-<code><span style="color:#ff5e5e;">extern crate</span><span style="color:#f8f8f2;"> rustnish;
+<code class="language-rust" data-lang="rust"><span style="color:#ff5e5e;">extern crate</span><span style="color:#f8f8f2;"> rustnish;
 
 </span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">main</span><span style="color:#f8f8f2;">() {
     </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> port: </span><span style="font-style:italic;color:#fbdfb5;">u16 </span><span style="color:#ff5e5e;">= </span><span style="color:#fdb082;">9090</span><span style="color:#f8f8f2;">;
@@ -224,7 +224,7 @@ into a main.rs file and a lib.rs file</strong>.</p>
 <p>Our own code is now the rustnish library crate that we need to include here.</p>
 <p>In lib.rs we create an empty dummy start_server() function:</p>
 <pre style="background-color:#191919;">
-<code><span style="color:#ff5e5e;">pub </span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">start_server</span><span style="color:#f8f8f2;">(</span><span style="font-style:italic;color:#fc9354;">port</span><span style="color:#f8f8f2;">: </span><span style="font-style:italic;color:#fbdfb5;">u16</span><span style="color:#f8f8f2;">, </span><span style="font-style:italic;color:#fc9354;">upstream_port</span><span style="color:#f8f8f2;">: </span><span style="font-style:italic;color:#fbdfb5;">u16</span><span style="color:#f8f8f2;">) {}
+<code class="language-rust" data-lang="rust"><span style="color:#ff5e5e;">pub </span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">start_server</span><span style="color:#f8f8f2;">(</span><span style="font-style:italic;color:#fc9354;">port</span><span style="color:#f8f8f2;">: </span><span style="font-style:italic;color:#fbdfb5;">u16</span><span style="color:#f8f8f2;">, </span><span style="font-style:italic;color:#fc9354;">upstream_port</span><span style="color:#f8f8f2;">: </span><span style="font-style:italic;color:#fbdfb5;">u16</span><span style="color:#f8f8f2;">) {}
 </span></code></pre>
 <p>The function needs to be marked as public (<code>pub</code>) so that it is visible to
 consumers of our crate. Running the tests again:</p>
@@ -284,7 +284,7 @@ reverse proxy works. You can find the whole <a href="https://github.com/klausi/r
 Github</a>,
 let's examine the parts of the test:</p>
 <pre style="background-color:#191919;">
-<code><span style="color:#f8f8f2;">#[</span><span style="color:#e9fdac;">test</span><span style="color:#f8f8f2;">]
+<code class="language-rust" data-lang="rust"><span style="color:#f8f8f2;">#[</span><span style="color:#e9fdac;">test</span><span style="color:#f8f8f2;">]
 </span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">test_pass_through</span><span style="color:#f8f8f2;">() {
     </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> port </span><span style="color:#ff5e5e;">= </span><span style="color:#fdb082;">9090</span><span style="color:#f8f8f2;">;
     </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> upstream_port </span><span style="color:#ff5e5e;">= </span><span style="color:#fdb082;">9091</span><span style="color:#f8f8f2;">;
@@ -300,7 +300,7 @@ closure</a> (anonymous function)
 which is expressed by the two pipes <code>|</code>. Easy, expressive and powerful -
 thanks Hyper!</p>
 <pre style="background-color:#191919;">
-<code><span style="font-style:italic;color:#fbdfb5;">let </span><span style="color:#ff5e5e;">mut</span><span style="color:#f8f8f2;"> listening </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">rustnish::start_server(port, upstream_port);
+<code class="language-rust" data-lang="rust"><span style="font-style:italic;color:#fbdfb5;">let </span><span style="color:#ff5e5e;">mut</span><span style="color:#f8f8f2;"> listening </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">rustnish::start_server(port, upstream_port);
 
 </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> client </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">Client::new();
 
@@ -315,7 +315,7 @@ and the upstream port it should forward requests to. Then we make a request to
 the reverse proxy and read the response. Again, doing that with the HTTP client
 API Hyper provides is fairly easy.</p>
 <pre style="background-color:#191919;">
-<code><span style="font-style:italic;color:#fbdfb5;">let </span><span style="color:#ff5e5e;">mut</span><span style="color:#f8f8f2;"> body </span><span style="color:#ff5e5e;">= </span><span style="color:#fbe3bf;">String</span><span style="color:#f8f8f2;">::new();
+<code class="language-rust" data-lang="rust"><span style="font-style:italic;color:#fbdfb5;">let </span><span style="color:#ff5e5e;">mut</span><span style="color:#f8f8f2;"> body </span><span style="color:#ff5e5e;">= </span><span style="color:#fbe3bf;">String</span><span style="color:#f8f8f2;">::new();
 </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> _size </span><span style="color:#ff5e5e;">=</span><span style="color:#f8f8f2;"> upstream_response.</span><span style="color:#6699cc;">read_to_string</span><span style="color:#f8f8f2;">(</span><span style="color:#ff5e5e;">&amp;mut</span><span style="color:#f8f8f2;"> body).</span><span style="color:#6699cc;">unwrap</span><span style="color:#f8f8f2;">();
 
 </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> _guard </span><span style="color:#ff5e5e;">=</span><span style="color:#f8f8f2;"> listening.</span><span style="color:#6699cc;">close</span><span style="color:#f8f8f2;">();

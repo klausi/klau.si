@@ -204,7 +204,7 @@ in Cargo.lock.</p>
 <h2 id="converting-handler-to-service">Converting Handler to Service</h2>
 <p>Old code:</p>
 <pre style="background-color:#191919;">
-<code><span style="font-style:italic;color:#fbdfb5;">struct </span><span style="color:#f8f8f2;">Proxy {
+<code class="language-rust" data-lang="rust"><span style="font-style:italic;color:#fbdfb5;">struct </span><span style="color:#f8f8f2;">Proxy {
     </span><span style="color:#e9fdac;">upstream_port</span><span style="color:#f8f8f2;">: </span><span style="font-style:italic;color:#fbdfb5;">u16</span><span style="color:#f8f8f2;">,
 }
 
@@ -216,7 +216,7 @@ in Cargo.lock.</p>
 </span></code></pre>
 <p>New code:</p>
 <pre style="background-color:#191919;">
-<code><span style="font-style:italic;color:#fbdfb5;">struct </span><span style="color:#f8f8f2;">Proxy {
+<code class="language-rust" data-lang="rust"><span style="font-style:italic;color:#fbdfb5;">struct </span><span style="color:#f8f8f2;">Proxy {
     </span><span style="color:#e9fdac;">upstream_port</span><span style="color:#f8f8f2;">: </span><span style="font-style:italic;color:#fbdfb5;">u16</span><span style="color:#f8f8f2;">,
     </span><span style="color:#e9fdac;">client</span><span style="color:#f8f8f2;">: Client&lt;HttpConnector&gt;,
 }
@@ -259,7 +259,7 @@ We can use the <code>Either</code> helper Future to combine those 2 Future types
 <h2 id="starting-a-server-and-sharing-a-tokio-core">Starting a server and sharing a Tokio core</h2>
 <p>Old code:</p>
 <pre style="background-color:#191919;">
-<code><span style="color:#ff5e5e;">pub </span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">start_server</span><span style="color:#f8f8f2;">(</span><span style="font-style:italic;color:#fc9354;">port</span><span style="color:#f8f8f2;">: </span><span style="font-style:italic;color:#fbdfb5;">u16</span><span style="color:#f8f8f2;">, </span><span style="font-style:italic;color:#fc9354;">upstream_port</span><span style="color:#f8f8f2;">: </span><span style="font-style:italic;color:#fbdfb5;">u16</span><span style="color:#f8f8f2;">) -&gt; Listening {
+<code class="language-rust" data-lang="rust"><span style="color:#ff5e5e;">pub </span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">start_server</span><span style="color:#f8f8f2;">(</span><span style="font-style:italic;color:#fc9354;">port</span><span style="color:#f8f8f2;">: </span><span style="font-style:italic;color:#fbdfb5;">u16</span><span style="color:#f8f8f2;">, </span><span style="font-style:italic;color:#fc9354;">upstream_port</span><span style="color:#f8f8f2;">: </span><span style="font-style:italic;color:#fbdfb5;">u16</span><span style="color:#f8f8f2;">) -&gt; Listening {
     </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> address </span><span style="color:#ff5e5e;">= </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">127.0.0.1:</span><span style="color:#ffffff;">&quot;</span><span style="color:#f8f8f2;">.</span><span style="color:#6699cc;">to_owned</span><span style="color:#f8f8f2;">() </span><span style="color:#ff5e5e;">+ &amp;</span><span style="color:#f8f8f2;">port.</span><span style="color:#6699cc;">to_string</span><span style="color:#f8f8f2;">();
     </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> server </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">Server::http(</span><span style="color:#ff5e5e;">&amp;</span><span style="color:#f8f8f2;">address).</span><span style="color:#6699cc;">unwrap</span><span style="color:#f8f8f2;">();
     </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> listening </span><span style="color:#ff5e5e;">=</span><span style="color:#f8f8f2;"> server
@@ -278,7 +278,7 @@ We can use the <code>Either</code> helper Future to combine those 2 Future types
 </span></code></pre>
 <p>New code:</p>
 <pre style="background-color:#191919;">
-<code><span style="color:#ff5e5e;">pub </span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">start_server</span><span style="color:#f8f8f2;">(</span><span style="font-style:italic;color:#fc9354;">port</span><span style="color:#f8f8f2;">: </span><span style="font-style:italic;color:#fbdfb5;">u16</span><span style="color:#f8f8f2;">, </span><span style="font-style:italic;color:#fc9354;">upstream_port</span><span style="color:#f8f8f2;">: </span><span style="font-style:italic;color:#fbdfb5;">u16</span><span style="color:#f8f8f2;">) -&gt; thread::JoinHandle&lt;()&gt; {
+<code class="language-rust" data-lang="rust"><span style="color:#ff5e5e;">pub </span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">start_server</span><span style="color:#f8f8f2;">(</span><span style="font-style:italic;color:#fc9354;">port</span><span style="color:#f8f8f2;">: </span><span style="font-style:italic;color:#fbdfb5;">u16</span><span style="color:#f8f8f2;">, </span><span style="font-style:italic;color:#fc9354;">upstream_port</span><span style="color:#f8f8f2;">: </span><span style="font-style:italic;color:#fbdfb5;">u16</span><span style="color:#f8f8f2;">) -&gt; thread::JoinHandle&lt;()&gt; {
 
     </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> thread </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">thread::Builder::new()
         .</span><span style="color:#6699cc;">name</span><span style="color:#f8f8f2;">(</span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">rustnish</span><span style="color:#ffffff;">&quot;</span><span style="color:#f8f8f2;">.</span><span style="color:#6699cc;">to_owned</span><span style="color:#f8f8f2;">())
@@ -345,7 +345,7 @@ just pass through responses as is.</p>
 code</a> here
 because it is quite convoluted and long. The new code is so much nicer:</p>
 <pre style="background-color:#191919;">
-<code><span style="font-style:italic;color:#fbdfb5;">impl </span><span style="color:#f8f8f2;">Service </span><span style="color:#ff5e5e;">for </span><span style="color:#f8f8f2;">Proxy {
+<code class="language-rust" data-lang="rust"><span style="font-style:italic;color:#fbdfb5;">impl </span><span style="color:#f8f8f2;">Service </span><span style="color:#ff5e5e;">for </span><span style="color:#f8f8f2;">Proxy {
     </span><span style="font-style:italic;color:#fbdfb5;">type </span><span style="color:#f8f8f2;">Request </span><span style="color:#ff5e5e;">=</span><span style="color:#f8f8f2;"> Request;
     </span><span style="font-style:italic;color:#fbdfb5;">type </span><span style="color:#f8f8f2;">Response </span><span style="color:#ff5e5e;">=</span><span style="color:#f8f8f2;"> Response;
     </span><span style="font-style:italic;color:#fbdfb5;">type </span><span style="color:#f8f8f2;">Error </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">hyper::Error;
