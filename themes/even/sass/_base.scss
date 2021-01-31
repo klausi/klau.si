@@ -58,6 +58,11 @@ pre > code {
   font-size: 1rem;
 }
 
+// Used for Youtube Iframes so that they don't overflow on mobile.
 iframe {
   border: 0;
+  width: 755px;
+  height: 424px;
+  max-width: 100%;
+  max-height: calc((100vw - 40px) / (16/9));
 }
