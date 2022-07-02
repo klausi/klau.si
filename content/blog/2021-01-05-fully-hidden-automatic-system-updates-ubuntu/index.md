@@ -23,10 +23,19 @@ Create the file `/etc/cron.daily/autoapt` as root with the following content (in
 ```sh
 #!/bin/bash
 
-export DEBIAN_FRONTEND=noninteractive
+# This script is useful to automatically update APT packages in the background
+# with Anacron.
+# See https://klau.si/blog/fully-hidden-automatic-system-updates-ubuntu/
+
+# Print output and log it at the same time.
+exec > >(tee -a /var/log/autoapt.log) 2>&1
+# We want to see all commands for better debugging in the logs.
+set -x
 # Log the current date so that we can check when any failed runs happened.
-date >> /var/log/autoapt.log
-apt update 2>&1 >> /var/log/autoapt.log
+date
+
+export DEBIAN_FRONTEND=noninteractive
+apt update
 # By default answer all user interaction questions with yes, for example
 # for debconf.
 # Use the old configuration file when new config files arrive.
@@ -36,9 +45,12 @@ yes '' | apt \
   -o Dpkg::Options::=--force-confdef \
   -y --allow-downgrades --allow-remove-essential \
   --allow-change-held-packages \
-  upgrade 2>&1 >> /var/log/autoapt.log
+  upgrade
 # Clean up any packages that are not needed anymore.
-apt autoremove -y 2>&1 >> /var/log/autoapt.log
+apt autoremove -y
+# Also update Snap packages. Unfortunately Snap still outputs terminal colors
+# - how can we configure snap to not use terminal colors?
+snap refresh --color=never --unicode=never
 ```
 
 This will update all your primary and third-party APT sources and perform any upgrades. Running APT from a script without user interaction is hard, that is why you see all the weird configuration options here.

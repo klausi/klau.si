@@ -22,7 +22,7 @@
   
 
   
-  <link rel="stylesheet" href="https:&#x2F;&#x2F;klau.si&#x2F;site.css">
+  <link rel="stylesheet" href="https://klau.si/site.css">
   
   
 
@@ -36,7 +36,7 @@
     <div id="mobile-navbar" class="mobile-navbar">
       <div class="mobile-header-logo">
         <a href="https:&#x2F;&#x2F;klau.si" title="Klausi&#x27;s Weblog" rel="home" class="site-logo site-title">
-          <img src="https:&#x2F;&#x2F;klau.si&#x2F;logo.png" alt="Klausi&#x27;s Weblog logo">
+          <img src="https://klau.si/logo.png" alt="Klausi&#x27;s Weblog logo">
         </a>
         <a href="/" class="logo">Klausi&#x27;s Weblog</a>
       </div>
@@ -80,7 +80,7 @@
     <header id="header">
       <div class="logo">
         <a href="https:&#x2F;&#x2F;klau.si" title="Klausi&#x27;s Weblog" rel="home" class="site-logo site-title">
-          <img src="https:&#x2F;&#x2F;klau.si&#x2F;logo.png" alt="Klausi&#x27;s Weblog logo">
+          <img src="https://klau.si/logo.png" alt="Klausi&#x27;s Weblog logo">
         </a>
         <a href="https:&#x2F;&#x2F;klau.si">Klausi&#x27;s Weblog</a>
       </div>
@@ -139,39 +139,47 @@
 <p>Ubuntu's graphical update manager pops up every time you need to install updates. That can be annoying when you are watching a movie or doing other things and don't want to be bothered all the time. Yes, I want to always apply all updates from all sources, but please do it silently. Here is a small script I use to do that with Anacron.</p>
 <span id="continue-reading"></span>
 <p>Make sure Anacron is installed:</p>
-<pre style="background-color:#191919;">
-<code><span style="color:#f8f8f2;">sudo apt install anacron
+<pre style="background-color:#191919;color:#f8f8f2;"><code><span>sudo apt install anacron
 </span></code></pre>
 <p>Create the file <code>/etc/cron.daily/autoapt</code> as root with the following content (inspired by <a href="https://debian-handbook.info/browse/stable/sect.automatic-upgrades.html">The Debian Administrator's Handbook</a>):</p>
-<pre style="background-color:#191919;">
-<code class="language-sh" data-lang="sh"><span style="color:#6d6d6d;">#!/bin/bash
-
-</span><span style="color:#ff5e5e;">export </span><span style="color:#e9fdac;">DEBIAN_FRONTEND</span><span style="color:#ff5e5e;">=</span><span style="color:#fbe3bf;">noninteractive
+<pre data-lang="sh" style="background-color:#191919;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#6d6d6d;">#!/bin/bash
+</span><span>
+</span><span style="color:#6d6d6d;"># This script is useful to automatically update APT packages in the background
+</span><span style="color:#6d6d6d;"># with Anacron.
+</span><span style="color:#6d6d6d;"># See https://klau.si/blog/fully-hidden-automatic-system-updates-ubuntu/
+</span><span>
+</span><span style="color:#6d6d6d;"># Print output and log it at the same time.
+</span><span style="color:#6699cc;">exec </span><span style="color:#ff5e5e;">&gt; &gt;</span><span>(</span><span style="color:#e9fdac;">tee</span><span style="font-style:italic;color:#fc9354;"> -a</span><span> /var/log/autoapt.log) </span><span style="color:#fdb082;">2</span><span style="color:#ff5e5e;">&gt;&amp;</span><span style="color:#fdb082;">1
+</span><span style="color:#6d6d6d;"># We want to see all commands for better debugging in the logs.
+</span><span style="color:#6699cc;">set </span><span style="font-style:italic;color:#fc9354;">-x
 </span><span style="color:#6d6d6d;"># Log the current date so that we can check when any failed runs happened.
-</span><span style="color:#e9fdac;">date </span><span style="color:#ff5e5e;">&gt;&gt;</span><span style="color:#f8f8f2;"> /var/log/autoapt.log
-</span><span style="color:#e9fdac;">apt</span><span style="color:#f8f8f2;"> update </span><span style="color:#fdb082;">2</span><span style="color:#ff5e5e;">&gt;&amp;</span><span style="color:#fdb082;">1 </span><span style="color:#ff5e5e;">&gt;&gt;</span><span style="color:#f8f8f2;"> /var/log/autoapt.log
+</span><span style="color:#e9fdac;">date
+</span><span>
+</span><span style="color:#ff5e5e;">export </span><span style="color:#e9fdac;">DEBIAN_FRONTEND</span><span style="color:#ff5e5e;">=</span><span style="color:#fbe3bf;">noninteractive
+</span><span style="color:#e9fdac;">apt</span><span> update
 </span><span style="color:#6d6d6d;"># By default answer all user interaction questions with yes, for example
-# for debconf.
-# Use the old configuration file when new config files arrive.
-# Also say yes to setting up config files.
-</span><span style="color:#f8f8f2;">yes </span><span style="color:#ffffff;">&#39;&#39; </span><span style="color:#ff5e5e;">| </span><span style="color:#e9fdac;">apt </span><span style="color:#f8f8f2;">\
-</span><span style="font-style:italic;color:#fc9354;">  -o</span><span style="color:#f8f8f2;"> Dpkg::Options::=--force-confold \
-</span><span style="font-style:italic;color:#fc9354;">  -o</span><span style="color:#f8f8f2;"> Dpkg::Options::=--force-confdef \
-</span><span style="font-style:italic;color:#fc9354;">  -y --allow-downgrades --allow-remove-essential </span><span style="color:#f8f8f2;">\
-</span><span style="font-style:italic;color:#fc9354;">  --allow-change-held-packages </span><span style="color:#f8f8f2;">\
-  upgrade </span><span style="color:#fdb082;">2</span><span style="color:#ff5e5e;">&gt;&amp;</span><span style="color:#fdb082;">1 </span><span style="color:#ff5e5e;">&gt;&gt;</span><span style="color:#f8f8f2;"> /var/log/autoapt.log
+</span><span style="color:#6d6d6d;"># for debconf.
+</span><span style="color:#6d6d6d;"># Use the old configuration file when new config files arrive.
+</span><span style="color:#6d6d6d;"># Also say yes to setting up config files.
+</span><span style="color:#e9fdac;">yes </span><span style="color:#ffffff;">&#39;&#39; </span><span style="color:#ff5e5e;">| </span><span style="color:#e9fdac;">apt </span><span>\
+</span><span style="font-style:italic;color:#fc9354;">  -o</span><span> Dpkg::Options::=--force-confold \
+</span><span style="font-style:italic;color:#fc9354;">  -o</span><span> Dpkg::Options::=--force-confdef \
+</span><span style="font-style:italic;color:#fc9354;">  -y --allow-downgrades --allow-remove-essential </span><span>\
+</span><span style="font-style:italic;color:#fc9354;">  --allow-change-held-packages </span><span>\
+</span><span>  upgrade
 </span><span style="color:#6d6d6d;"># Clean up any packages that are not needed anymore.
-</span><span style="color:#f8f8f2;">apt autoremove</span><span style="font-style:italic;color:#fc9354;"> -y </span><span style="color:#fdb082;">2</span><span style="color:#ff5e5e;">&gt;&amp;</span><span style="color:#fdb082;">1 </span><span style="color:#ff5e5e;">&gt;&gt;</span><span style="color:#f8f8f2;"> /var/log/autoapt.log
+</span><span style="color:#e9fdac;">apt</span><span> autoremove</span><span style="font-style:italic;color:#fc9354;"> -y
+</span><span style="color:#6d6d6d;"># Also update Snap packages. Unfortunately Snap still outputs terminal colors
+</span><span style="color:#6d6d6d;"># - how can we configure snap to not use terminal colors?
+</span><span style="color:#e9fdac;">snap</span><span> refresh</span><span style="font-style:italic;color:#fc9354;"> --color</span><span style="color:#ff5e5e;">=</span><span>never</span><span style="font-style:italic;color:#fc9354;"> --unicode</span><span style="color:#ff5e5e;">=</span><span>never
 </span></code></pre>
 <p>This will update all your primary and third-party APT sources and perform any upgrades. Running APT from a script without user interaction is hard, that is why you see all the weird configuration options here.</p>
 <p>Make sure this new script file is executable:</p>
-<pre style="background-color:#191919;">
-<code><span style="color:#f8f8f2;">sudo chmod a+x /etc/cron.daily/autoapt
+<pre style="background-color:#191919;color:#f8f8f2;"><code><span>sudo chmod a+x /etc/cron.daily/autoapt
 </span></code></pre>
 <p>This cron job will run now once per day, whenever you turn on your computer. If anything goes wrong you can check the upgrade log at <code>/var/log/autoapt.log</code>.</p>
 <p>Sometimes that cron job might not be fast enough and Ubuntu's graphical update manager might still pop up. If you want to get rid of that completely uninstall it:</p>
-<pre style="background-color:#191919;">
-<code><span style="color:#f8f8f2;">sudo apt remove update-notifier
+<pre style="background-color:#191919;color:#f8f8f2;"><code><span>sudo apt remove update-notifier
 </span></code></pre>
 <p>Congratulations, your Ubuntu now updates itself and shuts up about it!</p>
 
@@ -185,7 +193,7 @@
             
                 <div class="post-tags">
                     
-                        <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;ubuntu&#x2F;">#ubuntu</a>
+                        <a href="https://klau.si/tags/ubuntu/">#ubuntu</a>
                     
                 </div>
             
@@ -225,7 +233,7 @@
   </div>
 
   
-  <script type="text/javascript" src="https:&#x2F;&#x2F;klau.si&#x2F;even.js"></script>
+  <script type="text/javascript" src="https://klau.si/even.js"></script>
   
 </body>
 

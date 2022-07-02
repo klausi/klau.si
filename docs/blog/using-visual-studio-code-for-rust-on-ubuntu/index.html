@@ -22,7 +22,7 @@
   
 
   
-  <link rel="stylesheet" href="https:&#x2F;&#x2F;klau.si&#x2F;site.css">
+  <link rel="stylesheet" href="https://klau.si/site.css">
   
   
 
@@ -36,7 +36,7 @@
     <div id="mobile-navbar" class="mobile-navbar">
       <div class="mobile-header-logo">
         <a href="https:&#x2F;&#x2F;klau.si" title="Klausi&#x27;s Weblog" rel="home" class="site-logo site-title">
-          <img src="https:&#x2F;&#x2F;klau.si&#x2F;logo.png" alt="Klausi&#x27;s Weblog logo">
+          <img src="https://klau.si/logo.png" alt="Klausi&#x27;s Weblog logo">
         </a>
         <a href="/" class="logo">Klausi&#x27;s Weblog</a>
       </div>
@@ -80,7 +80,7 @@
     <header id="header">
       <div class="logo">
         <a href="https:&#x2F;&#x2F;klau.si" title="Klausi&#x27;s Weblog" rel="home" class="site-logo site-title">
-          <img src="https:&#x2F;&#x2F;klau.si&#x2F;logo.png" alt="Klausi&#x27;s Weblog logo">
+          <img src="https://klau.si/logo.png" alt="Klausi&#x27;s Weblog logo">
         </a>
         <a href="https:&#x2F;&#x2F;klau.si">Klausi&#x27;s Weblog</a>
       </div>
@@ -172,17 +172,16 @@ slightly better than the Eclipse integration:</p>
 auto-formatting of course also work in VSCode as you would expect from an IDE.</p>
 <h2 id="installing-rust-on-ubuntu">Installing Rust on Ubuntu</h2>
 <p>First make sure you have a Rust toolchain environment set up:</p>
-<pre style="background-color:#191919;">
-<code><span style="color:#f8f8f2;">curl https://sh.rustup.rs -sSf | sh
+<pre style="background-color:#191919;color:#f8f8f2;"><code><span>curl https://sh.rustup.rs -sSf | sh
 </span></code></pre>
 <p>(the usual security warning: make sure to trust your sources before you execute
 random scripts from the internet.)</p>
-<pre style="background-color:#191919;">
-<code><span style="color:#f8f8f2;">source $HOME/.cargo/env
-cargo install racer
-cargo install rustfmt
-rustup component add rust-src
-</span></code></pre><h2 id="installing-vscode-and-extensions">Installing VSCode and extensions</h2>
+<pre style="background-color:#191919;color:#f8f8f2;"><code><span>source $HOME/.cargo/env
+</span><span>cargo install racer
+</span><span>cargo install rustfmt
+</span><span>rustup component add rust-src
+</span></code></pre>
+<h2 id="installing-vscode-and-extensions">Installing VSCode and extensions</h2>
 <p>Download the Deb package from
 <a href="https://code.visualstudio.com">code.visualstudio.com</a> and install it with the
 Ubuntu software center or dpkg. You should now have a launcher for vscode and
@@ -204,18 +203,18 @@ reliably yet. That's why you have to enable the racer legacy mode in the VSCode
 settings.</p>
 <p>Go to File -&gt; Preferences -&gt; Settings and the editor will open your settings
 JSON file. Here are some very useful settings you should use:</p>
-<pre style="background-color:#191919;">
-<code class="language-json" data-lang="json"><span style="color:#f8f8f2;">{
-    </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">editor.formatOnSave</span><span style="color:#ffffff;">&quot;</span><span style="color:#f8f8f2;">: </span><span style="color:#ff8942;">true</span><span style="color:#f8f8f2;">,
-    </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">editor.rulers</span><span style="color:#ffffff;">&quot;</span><span style="color:#f8f8f2;">: [
-        </span><span style="color:#fdb082;">80
-    </span><span style="color:#f8f8f2;">],
-    </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">files.trimTrailingWhitespace</span><span style="color:#ffffff;">&quot;</span><span style="color:#f8f8f2;">: </span><span style="color:#ff8942;">true</span><span style="color:#f8f8f2;">,
-    </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">rust.actionOnSave</span><span style="color:#ffffff;">&quot;</span><span style="color:#f8f8f2;">: </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">check</span><span style="color:#ffffff;">&quot;</span><span style="color:#f8f8f2;">,
-    </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">rust.forceLegacyMode</span><span style="color:#ffffff;">&quot;</span><span style="color:#f8f8f2;">: </span><span style="color:#ff8942;">true</span><span style="color:#f8f8f2;">,
-    </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">workbench.iconTheme</span><span style="color:#ffffff;">&quot;</span><span style="color:#f8f8f2;">: </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">vscode-icons</span><span style="color:#ffffff;">&quot;
-</span><span style="color:#f8f8f2;">}
-</span></code></pre><h2 id="conclusion">Conclusion</h2>
+<pre data-lang="json" style="background-color:#191919;color:#f8f8f2;" class="language-json "><code class="language-json" data-lang="json"><span>{
+</span><span>    </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">editor.formatOnSave</span><span style="color:#ffffff;">&quot;</span><span>: </span><span style="color:#ff8942;">true</span><span>,
+</span><span>    </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">editor.rulers</span><span style="color:#ffffff;">&quot;</span><span>: [
+</span><span>        </span><span style="color:#fdb082;">80
+</span><span>    ],
+</span><span>    </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">files.trimTrailingWhitespace</span><span style="color:#ffffff;">&quot;</span><span>: </span><span style="color:#ff8942;">true</span><span>,
+</span><span>    </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">rust.actionOnSave</span><span style="color:#ffffff;">&quot;</span><span>: </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">check</span><span style="color:#ffffff;">&quot;</span><span>,
+</span><span>    </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">rust.forceLegacyMode</span><span style="color:#ffffff;">&quot;</span><span>: </span><span style="color:#ff8942;">true</span><span>,
+</span><span>    </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">workbench.iconTheme</span><span style="color:#ffffff;">&quot;</span><span>: </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">vscode-icons</span><span style="color:#ffffff;">&quot;
+</span><span>}
+</span></code></pre>
+<h2 id="conclusion">Conclusion</h2>
 <p>Although VSCode has a sparse user interface (Back/Forward buttons are missing
 for example when navigating through code) it is a decent IDE for Rust
 development. It offers freely configurable keyboard shortcuts and a
@@ -232,9 +231,9 @@ for Eclipse IDE.</p>
             
                 <div class="post-tags">
                     
-                        <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;rust&#x2F;">#rust</a>
+                        <a href="https://klau.si/tags/rust/">#rust</a>
                     
-                        <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;rustnish&#x2F;">#rustnish</a>
+                        <a href="https://klau.si/tags/rustnish/">#rustnish</a>
                     
                 </div>
             
@@ -276,7 +275,7 @@ for Eclipse IDE.</p>
   </div>
 
   
-  <script type="text/javascript" src="https:&#x2F;&#x2F;klau.si&#x2F;even.js"></script>
+  <script type="text/javascript" src="https://klau.si/even.js"></script>
   
 </body>
 

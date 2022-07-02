@@ -22,7 +22,7 @@
   
 
   
-  <link rel="stylesheet" href="https:&#x2F;&#x2F;klau.si&#x2F;site.css">
+  <link rel="stylesheet" href="https://klau.si/site.css">
   
   
 
@@ -36,7 +36,7 @@
     <div id="mobile-navbar" class="mobile-navbar">
       <div class="mobile-header-logo">
         <a href="https:&#x2F;&#x2F;klau.si" title="Klausi&#x27;s Weblog" rel="home" class="site-logo site-title">
-          <img src="https:&#x2F;&#x2F;klau.si&#x2F;logo.png" alt="Klausi&#x27;s Weblog logo">
+          <img src="https://klau.si/logo.png" alt="Klausi&#x27;s Weblog logo">
         </a>
         <a href="/" class="logo">Klausi&#x27;s Weblog</a>
       </div>
@@ -80,7 +80,7 @@
     <header id="header">
       <div class="logo">
         <a href="https:&#x2F;&#x2F;klau.si" title="Klausi&#x27;s Weblog" rel="home" class="site-logo site-title">
-          <img src="https:&#x2F;&#x2F;klau.si&#x2F;logo.png" alt="Klausi&#x27;s Weblog logo">
+          <img src="https://klau.si/logo.png" alt="Klausi&#x27;s Weblog logo">
         </a>
         <a href="https:&#x2F;&#x2F;klau.si">Klausi&#x27;s Weblog</a>
       </div>
@@ -181,18 +181,17 @@ that working in Atom.</p>
 <a href="https://eclipse.org/">Eclipse</a> listed, an IDE I have used a long time ago for
 Java development. Let's give it a try!</p>
 <h2 id="installing-java-to-run-eclipse">Installing Java to run Eclipse</h2>
-<pre style="background-color:#191919;">
-<code><span style="color:#f8f8f2;">sudo apt install openjdk-8-jre
+<pre style="background-color:#191919;color:#f8f8f2;"><code><span>sudo apt install openjdk-8-jre
 </span></code></pre>
 <p>In my first installation attempt Eclipse had problems to connect to external
 Github software sources sites because of missing Java SSL root certificates.
 After <a href="https://github.com/RustDT/RustDT/issues/162">filing an issue in the wrong
 place</a> I found the following <a href="http://stackoverflow.com/a/33440168/2000435">fix
 for missing Java SSL certificates</a>:</p>
-<pre style="background-color:#191919;">
-<code><span style="color:#f8f8f2;">sudo dpkg --purge --force-depends ca-certificates-java
-sudo apt-get install ca-certificates-java
-</span></code></pre><h2 id="installing-eclipse-base">Installing Eclipse base</h2>
+<pre style="background-color:#191919;color:#f8f8f2;"><code><span>sudo dpkg --purge --force-depends ca-certificates-java
+</span><span>sudo apt-get install ca-certificates-java
+</span></code></pre>
+<h2 id="installing-eclipse-base">Installing Eclipse base</h2>
 <p>The <a href="https://www.eclipse.org/downloads/">Eclipse downloads page</a> gives you an
 installer where you select additional packages for whatever platform you want
 to develop on. You can skip all of that because we will install the external
@@ -206,30 +205,28 @@ accept some license agreements and trust some certificates.</p>
 <h2 id="adding-a-launcher-shortcut">Adding a launcher shortcut</h2>
 <p>Create a new file at <code>~/.local/share/applications/eclipse.desktop</code> with
 content like this:</p>
-<pre style="background-color:#191919;">
-<code><span style="color:#f8f8f2;">[Desktop Entry]
-Name=Eclipse
-Type=Application
-Exec=/home/klausi/eclipse/eclipse/eclipse
-Terminal=false
-Icon=/home/klausi/eclipse/eclipse/icon.xpm
-Comment=Integrated Development Environment
-NoDisplay=false
-Categories=Development;IDE;
-Name[en]=Eclipse
-</span></code></pre><h2 id="installing-rustdt-on-ubuntu">Installing RustDT on Ubuntu</h2>
+<pre style="background-color:#191919;color:#f8f8f2;"><code><span>[Desktop Entry]
+</span><span>Name=Eclipse
+</span><span>Type=Application
+</span><span>Exec=/home/klausi/eclipse/eclipse/eclipse
+</span><span>Terminal=false
+</span><span>Icon=/home/klausi/eclipse/eclipse/icon.xpm
+</span><span>Comment=Integrated Development Environment
+</span><span>NoDisplay=false
+</span><span>Categories=Development;IDE;
+</span><span>Name[en]=Eclipse
+</span></code></pre>
+<h2 id="installing-rustdt-on-ubuntu">Installing RustDT on Ubuntu</h2>
 <p>Make sure you have a Rust toolchain environment set up:</p>
-<pre style="background-color:#191919;">
-<code><span style="color:#f8f8f2;">curl https://sh.rustup.rs -sSf | sh
+<pre style="background-color:#191919;color:#f8f8f2;"><code><span>curl https://sh.rustup.rs -sSf | sh
 </span></code></pre>
 <p>(the usual security warning: make sure to trust your sources before you execute
 random scripts from the internet.)</p>
-<pre style="background-color:#191919;">
-<code><span style="color:#f8f8f2;">source $HOME/.cargo/env
-cargo install racer
-cargo install rustfmt
-cargo install --git https://github.com/RustDT/Rainicorn --tag version_1.x
-rustup component add rust-src
+<pre style="background-color:#191919;color:#f8f8f2;"><code><span>source $HOME/.cargo/env
+</span><span>cargo install racer
+</span><span>cargo install rustfmt
+</span><span>cargo install --git https://github.com/RustDT/Rainicorn --tag version_1.x
+</span><span>rustup component add rust-src
 </span></code></pre>
 <p>Now we need the RustDT Eclipse plugin from
 <a href="https://rustdt.github.io/">rustdt.github.io</a>. Follow the installation and
@@ -262,9 +259,9 @@ areweideyet.com</a>.</p>
             
                 <div class="post-tags">
                     
-                        <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;rust&#x2F;">#rust</a>
+                        <a href="https://klau.si/tags/rust/">#rust</a>
                     
-                        <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;rustnish&#x2F;">#rustnish</a>
+                        <a href="https://klau.si/tags/rustnish/">#rustnish</a>
                     
                 </div>
             
@@ -306,7 +303,7 @@ areweideyet.com</a>.</p>
   </div>
 
   
-  <script type="text/javascript" src="https:&#x2F;&#x2F;klau.si&#x2F;even.js"></script>
+  <script type="text/javascript" src="https://klau.si/even.js"></script>
   
 </body>
 

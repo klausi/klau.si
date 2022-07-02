@@ -22,7 +22,7 @@
   
 
   
-  <link rel="stylesheet" href="https:&#x2F;&#x2F;klau.si&#x2F;site.css">
+  <link rel="stylesheet" href="https://klau.si/site.css">
   
   
 
@@ -36,7 +36,7 @@
     <div id="mobile-navbar" class="mobile-navbar">
       <div class="mobile-header-logo">
         <a href="https:&#x2F;&#x2F;klau.si" title="Klausi&#x27;s Weblog" rel="home" class="site-logo site-title">
-          <img src="https:&#x2F;&#x2F;klau.si&#x2F;logo.png" alt="Klausi&#x27;s Weblog logo">
+          <img src="https://klau.si/logo.png" alt="Klausi&#x27;s Weblog logo">
         </a>
         <a href="/" class="logo">Klausi&#x27;s Weblog</a>
       </div>
@@ -80,7 +80,7 @@
     <header id="header">
       <div class="logo">
         <a href="https:&#x2F;&#x2F;klau.si" title="Klausi&#x27;s Weblog" rel="home" class="site-logo site-title">
-          <img src="https:&#x2F;&#x2F;klau.si&#x2F;logo.png" alt="Klausi&#x27;s Weblog logo">
+          <img src="https://klau.si/logo.png" alt="Klausi&#x27;s Weblog logo">
         </a>
         <a href="https:&#x2F;&#x2F;klau.si">Klausi&#x27;s Weblog</a>
       </div>
@@ -136,17 +136,14 @@
     <div class="post-content">
       <p>Producing a demo video for <a href="http://portland2013.drupal.org/session/rest-and-serialization-drupal-8">my DrupalCon Portland presentation</a> caused a bit frustration with video editing tools, so here is a simple solution to cut and convert a video on Ubuntu.<span id="continue-reading"></span></p>
 <p>First I recorded my screencast with RecordMyDesktop, a simple tool to capture the happenings on your screen. It even supports only recording one window, so you don't need to include the rest of your irrelevant desktop. Installation:</p>
-<pre style="background-color:#191919;">
-<code><span style="color:#f8f8f2;">sudo aptitude install gtk-recordmydesktop</span><span style="color:#f8f8f2;">
+<pre style="background-color:#191919;color:#f8f8f2;"><code><span>sudo aptitude install gtk-recordmydesktop</span><span>
 </span></code></pre>
 <p>The output file it creates uses the Ogg Theroa Video format, which is free and open, but unfortunately not used on a lot on other platforms. For HTML5 video H.264/MPEG-4 now seems to be the most widely spread format, so we need to convert that. I tried with various graphical video editors such as PiTiVi, kdenlive and OpenShot, but not any of them produced useful results. They always changed the resolution, used the wrong codec, a different frame rate or blew up the output file. Their preconfigured rendering profiles just don't make sense for simply converting and cutting a video for the web.</p>
 <p>I decided to look into the command line tool ffmpeg directly and found it surprisingly easy to use. Installation with the H.264 codec:</p>
-<pre style="background-color:#191919;">
-<code><span style="color:#f8f8f2;">sudo aptitude install ffmpeg x264</span><span style="color:#f8f8f2;">
+<pre style="background-color:#191919;color:#f8f8f2;"><code><span>sudo aptitude install ffmpeg x264</span><span>
 </span></code></pre>
 <p>To convert the video file, cut off everything after minute 1:34 and remove the audio track I used this command:</p>
-<pre style="background-color:#191919;">
-<code><span style="color:#f8f8f2;">ffmpeg -i input-file.ogv -vcodec libx264 -acodec none -t 00:01:34.0 output-file.mp4</span><span style="color:#f8f8f2;">
+<pre style="background-color:#191919;color:#f8f8f2;"><code><span>ffmpeg -i input-file.ogv -vcodec libx264 -acodec none -t 00:01:34.0 output-file.mp4</span><span>
 </span></code></pre>
 <p>Done! It also reduced the file size from 4 MB for the Ogg file to 1.4 MB for the MP4 file without reducing the visual quality, thank you ffmpeg :-)</p>
 
@@ -160,9 +157,9 @@
             
                 <div class="post-tags">
                     
-                        <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;software&#x2F;">#software</a>
+                        <a href="https://klau.si/tags/software/">#software</a>
                     
-                        <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;ubuntu&#x2F;">#ubuntu</a>
+                        <a href="https://klau.si/tags/ubuntu/">#ubuntu</a>
                     
                 </div>
             
@@ -204,7 +201,7 @@
   </div>
 
   
-  <script type="text/javascript" src="https:&#x2F;&#x2F;klau.si&#x2F;even.js"></script>
+  <script type="text/javascript" src="https://klau.si/even.js"></script>
   
 </body>
 

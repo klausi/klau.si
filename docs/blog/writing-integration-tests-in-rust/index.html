@@ -22,7 +22,7 @@
   
 
   
-  <link rel="stylesheet" href="https:&#x2F;&#x2F;klau.si&#x2F;site.css">
+  <link rel="stylesheet" href="https://klau.si/site.css">
   
   
 
@@ -36,7 +36,7 @@
     <div id="mobile-navbar" class="mobile-navbar">
       <div class="mobile-header-logo">
         <a href="https:&#x2F;&#x2F;klau.si" title="Klausi&#x27;s Weblog" rel="home" class="site-logo site-title">
-          <img src="https:&#x2F;&#x2F;klau.si&#x2F;logo.png" alt="Klausi&#x27;s Weblog logo">
+          <img src="https://klau.si/logo.png" alt="Klausi&#x27;s Weblog logo">
         </a>
         <a href="/" class="logo">Klausi&#x27;s Weblog</a>
       </div>
@@ -80,7 +80,7 @@
     <header id="header">
       <div class="logo">
         <a href="https:&#x2F;&#x2F;klau.si" title="Klausi&#x27;s Weblog" rel="home" class="site-logo site-title">
-          <img src="https:&#x2F;&#x2F;klau.si&#x2F;logo.png" alt="Klausi&#x27;s Weblog logo">
+          <img src="https://klau.si/logo.png" alt="Klausi&#x27;s Weblog logo">
         </a>
         <a href="https:&#x2F;&#x2F;klau.si">Klausi&#x27;s Weblog</a>
       </div>
@@ -180,15 +180,14 @@ access to bind on port 80.</p>
 testing</a> which describes that you
 put integration tests into a &quot;tests&quot; folder in your project. We create a file
 tests/integration_tests.rs with the following content:</p>
-<pre style="background-color:#191919;">
-<code class="language-rust" data-lang="rust"><span style="color:#ff5e5e;">extern crate</span><span style="color:#f8f8f2;"> rustnish;
-
-#[</span><span style="color:#e9fdac;">test</span><span style="color:#f8f8f2;">]
-</span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">test_pass_through</span><span style="color:#f8f8f2;">() {
-    </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> port </span><span style="color:#ff5e5e;">= </span><span style="color:#fdb082;">9090</span><span style="color:#f8f8f2;">;
-    </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> upstream_port </span><span style="color:#ff5e5e;">= </span><span style="color:#fdb082;">9091</span><span style="color:#f8f8f2;">;
-    </span><span style="font-style:italic;color:#fbdfb5;">let </span><span style="color:#ff5e5e;">mut</span><span style="color:#f8f8f2;"> listening </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">rustnish::start_server(port, upstream_port);
-}
+<pre data-lang="rust" style="background-color:#191919;color:#f8f8f2;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#ff5e5e;">extern crate</span><span> rustnish;
+</span><span>
+</span><span>#[</span><span style="color:#e9fdac;">test</span><span>]
+</span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">test_pass_through</span><span>() {
+</span><span>    </span><span style="font-style:italic;color:#fbdfb5;">let</span><span> port </span><span style="color:#ff5e5e;">= </span><span style="color:#fdb082;">9090</span><span>;
+</span><span>    </span><span style="font-style:italic;color:#fbdfb5;">let</span><span> upstream_port </span><span style="color:#ff5e5e;">= </span><span style="color:#fdb082;">9091</span><span>;
+</span><span>    </span><span style="font-style:italic;color:#fbdfb5;">let </span><span style="color:#ff5e5e;">mut</span><span> listening </span><span style="color:#ff5e5e;">= </span><span>rustnish::start_server(port, upstream_port);
+</span><span>}
 </span></code></pre>
 <p>Because this is an integration test we have to treat our own application
 &quot;rustnish&quot; as external crate that needs to be included here. The <code>#[test]</code>
@@ -196,66 +195,62 @@ attribute tells the test runner (cargo) that this function should be executed
 as test. Since the start_server() function does not exist yet this test should
 fail because it will not even compile.</p>
 <p>The tests can be run with cargo:</p>
-<pre style="background-color:#191919;">
-<code><span style="color:#f8f8f2;">$ cargo test
-   Compiling rustnish v0.0.1 (file:///home/klausi/workspace/rustnish)
-error[E0425]: cannot find function `start_server` in module `rustnish`
-  --&gt; tests/integration_tests.rs:21:35
-   |
-21 |     let mut listening = rustnish::start_server(port, upstream_port);
-   |                                   ^^^^^^^^^^^^ not found in `rustnish`
-
-error: aborting due to previous error
-
-error: Could not compile `rustnish`.
+<pre style="background-color:#191919;color:#f8f8f2;"><code><span>$ cargo test
+</span><span>   Compiling rustnish v0.0.1 (file:///home/klausi/workspace/rustnish)
+</span><span>error[E0425]: cannot find function `start_server` in module `rustnish`
+</span><span>  --&gt; tests/integration_tests.rs:21:35
+</span><span>   |
+</span><span>21 |     let mut listening = rustnish::start_server(port, upstream_port);
+</span><span>   |                                   ^^^^^^^^^^^^ not found in `rustnish`
+</span><span>
+</span><span>error: aborting due to previous error
+</span><span>
+</span><span>error: Could not compile `rustnish`.
 </span></code></pre>
 <p>In order to integration test your Rust application <strong>you need to split it up
 into a main.rs file and a lib.rs file</strong>.</p>
 <p>main.rs is a thin wrapper that just launches the reverse proxy server:</p>
-<pre style="background-color:#191919;">
-<code class="language-rust" data-lang="rust"><span style="color:#ff5e5e;">extern crate</span><span style="color:#f8f8f2;"> rustnish;
-
-</span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">main</span><span style="color:#f8f8f2;">() {
-    </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> port: </span><span style="font-style:italic;color:#fbdfb5;">u16 </span><span style="color:#ff5e5e;">= </span><span style="color:#fdb082;">9090</span><span style="color:#f8f8f2;">;
-    </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> upstream_port: </span><span style="font-style:italic;color:#fbdfb5;">u16 </span><span style="color:#ff5e5e;">= </span><span style="color:#fdb082;">80</span><span style="color:#f8f8f2;">;
-    rustnish::start_server(port, upstream_port);
-}
+<pre data-lang="rust" style="background-color:#191919;color:#f8f8f2;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#ff5e5e;">extern crate</span><span> rustnish;
+</span><span>
+</span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">main</span><span>() {
+</span><span>    </span><span style="font-style:italic;color:#fbdfb5;">let</span><span> port: </span><span style="font-style:italic;color:#fbdfb5;">u16 </span><span style="color:#ff5e5e;">= </span><span style="color:#fdb082;">9090</span><span>;
+</span><span>    </span><span style="font-style:italic;color:#fbdfb5;">let</span><span> upstream_port: </span><span style="font-style:italic;color:#fbdfb5;">u16 </span><span style="color:#ff5e5e;">= </span><span style="color:#fdb082;">80</span><span>;
+</span><span>    rustnish::start_server(port, upstream_port);
+</span><span>}
 </span></code></pre>
 <p>Our own code is now the rustnish library crate that we need to include here.</p>
 <p>In lib.rs we create an empty dummy start_server() function:</p>
-<pre style="background-color:#191919;">
-<code class="language-rust" data-lang="rust"><span style="color:#ff5e5e;">pub </span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">start_server</span><span style="color:#f8f8f2;">(</span><span style="font-style:italic;color:#fc9354;">port</span><span style="color:#f8f8f2;">: </span><span style="font-style:italic;color:#fbdfb5;">u16</span><span style="color:#f8f8f2;">, </span><span style="font-style:italic;color:#fc9354;">upstream_port</span><span style="color:#f8f8f2;">: </span><span style="font-style:italic;color:#fbdfb5;">u16</span><span style="color:#f8f8f2;">) {}
+<pre data-lang="rust" style="background-color:#191919;color:#f8f8f2;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#ff5e5e;">pub </span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">start_server</span><span>(</span><span style="font-style:italic;color:#fc9354;">port</span><span>: </span><span style="font-style:italic;color:#fbdfb5;">u16</span><span>, </span><span style="font-style:italic;color:#fc9354;">upstream_port</span><span>: </span><span style="font-style:italic;color:#fbdfb5;">u16</span><span>) {}
 </span></code></pre>
 <p>The function needs to be marked as public (<code>pub</code>) so that it is visible to
 consumers of our crate. Running the tests again:</p>
-<pre style="background-color:#191919;">
-<code><span style="color:#f8f8f2;">$ cargo test
-   Compiling rustnish v0.0.1 (file:///home/klausi/workspace/rustnish)
-    Finished dev [unoptimized + debuginfo] target(s) in 0.60 secs
-     Running target/debug/deps/rustnish-64c4558d64f77466
-
-running 0 tests
-
-test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured
-
-     Running target/debug/deps/rustnish-a8d8bad65e5d7764
-
-running 0 tests
-
-test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured
-
-     Running target/debug/deps/integration_tests-66e61bd575a35301
-
-running 1 test
-test test_pass_through ... ok
-
-test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured
-
-   Doc-tests rustnish
-
-running 0 tests
-
-test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured
+<pre style="background-color:#191919;color:#f8f8f2;"><code><span>$ cargo test
+</span><span>   Compiling rustnish v0.0.1 (file:///home/klausi/workspace/rustnish)
+</span><span>    Finished dev [unoptimized + debuginfo] target(s) in 0.60 secs
+</span><span>     Running target/debug/deps/rustnish-64c4558d64f77466
+</span><span>
+</span><span>running 0 tests
+</span><span>
+</span><span>test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured
+</span><span>
+</span><span>     Running target/debug/deps/rustnish-a8d8bad65e5d7764
+</span><span>
+</span><span>running 0 tests
+</span><span>
+</span><span>test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured
+</span><span>
+</span><span>     Running target/debug/deps/integration_tests-66e61bd575a35301
+</span><span>
+</span><span>running 1 test
+</span><span>test test_pass_through ... ok
+</span><span>
+</span><span>test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured
+</span><span>
+</span><span>   Doc-tests rustnish
+</span><span>
+</span><span>running 0 tests
+</span><span>
+</span><span>test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured
 </span></code></pre>
 <p>All green, tests are passing the first time! The output is a bit long and
 confusing and consists of 4 groups:</p>
@@ -283,45 +278,42 @@ the dummy backend server.</li>
 reverse proxy works. You can find the whole <a href="https://github.com/klausi/rustnish/blob/goal-02/tests/integration_tests.rs">test source code on
 Github</a>,
 let's examine the parts of the test:</p>
-<pre style="background-color:#191919;">
-<code class="language-rust" data-lang="rust"><span style="color:#f8f8f2;">#[</span><span style="color:#e9fdac;">test</span><span style="color:#f8f8f2;">]
-</span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">test_pass_through</span><span style="color:#f8f8f2;">() {
-    </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> port </span><span style="color:#ff5e5e;">= </span><span style="color:#fdb082;">9090</span><span style="color:#f8f8f2;">;
-    </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> upstream_port </span><span style="color:#ff5e5e;">= </span><span style="color:#fdb082;">9091</span><span style="color:#f8f8f2;">;
-
-    </span><span style="font-style:italic;color:#fbdfb5;">let </span><span style="color:#ff5e5e;">mut</span><span style="color:#f8f8f2;"> dummy_server </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">Server::http(</span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">127.0.0.1:</span><span style="color:#ffffff;">&quot;</span><span style="color:#f8f8f2;">.</span><span style="color:#6699cc;">to_string</span><span style="color:#f8f8f2;">() </span><span style="color:#ff5e5e;">+ &amp;</span><span style="color:#f8f8f2;">upstream_port.</span><span style="color:#6699cc;">to_string</span><span style="color:#f8f8f2;">())
-        .</span><span style="color:#6699cc;">unwrap</span><span style="color:#f8f8f2;">()
-        .</span><span style="color:#6699cc;">handle</span><span style="color:#f8f8f2;">(|_: </span><span style="font-style:italic;color:#fc9354;">Request</span><span style="color:#f8f8f2;">, </span><span style="font-style:italic;color:#fc9354;">response</span><span style="color:#f8f8f2;">: Response| { response.</span><span style="color:#6699cc;">send</span><span style="color:#f8f8f2;">(</span><span style="font-style:italic;color:#fbdfb5;">b</span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">hello</span><span style="color:#ffffff;">&quot;</span><span style="color:#f8f8f2;">).</span><span style="color:#6699cc;">unwrap</span><span style="color:#f8f8f2;">(); })
-        .</span><span style="color:#6699cc;">unwrap</span><span style="color:#f8f8f2;">();
+<pre data-lang="rust" style="background-color:#191919;color:#f8f8f2;" class="language-rust "><code class="language-rust" data-lang="rust"><span>#[</span><span style="color:#e9fdac;">test</span><span>]
+</span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">test_pass_through</span><span>() {
+</span><span>    </span><span style="font-style:italic;color:#fbdfb5;">let</span><span> port </span><span style="color:#ff5e5e;">= </span><span style="color:#fdb082;">9090</span><span>;
+</span><span>    </span><span style="font-style:italic;color:#fbdfb5;">let</span><span> upstream_port </span><span style="color:#ff5e5e;">= </span><span style="color:#fdb082;">9091</span><span>;
+</span><span>
+</span><span>    </span><span style="font-style:italic;color:#fbdfb5;">let </span><span style="color:#ff5e5e;">mut</span><span> dummy_server </span><span style="color:#ff5e5e;">= </span><span>Server::http(</span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">127.0.0.1:</span><span style="color:#ffffff;">&quot;</span><span>.</span><span style="color:#6699cc;">to_string</span><span>() </span><span style="color:#ff5e5e;">+ &amp;</span><span>upstream_port.</span><span style="color:#6699cc;">to_string</span><span>())
+</span><span>        .</span><span style="color:#6699cc;">unwrap</span><span>()
+</span><span>        .</span><span style="color:#6699cc;">handle</span><span>(|_: </span><span style="font-style:italic;color:#fc9354;">Request</span><span>, </span><span style="font-style:italic;color:#fc9354;">response</span><span>: Response| { response.</span><span style="color:#6699cc;">send</span><span>(</span><span style="font-style:italic;color:#fbdfb5;">b</span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">hello</span><span style="color:#ffffff;">&quot;</span><span>).</span><span style="color:#6699cc;">unwrap</span><span>(); })
+</span><span>        .</span><span style="color:#6699cc;">unwrap</span><span>();
 </span></code></pre>
 <p>This starts the dummy server that simply responds with a &quot;hello&quot; response to
 any request it receives. The actual request handling is done in a <a href="https://doc.rust-lang.org/book/closures.html">Rust
 closure</a> (anonymous function)
 which is expressed by the two pipes <code>|</code>. Easy, expressive and powerful -
 thanks Hyper!</p>
-<pre style="background-color:#191919;">
-<code class="language-rust" data-lang="rust"><span style="font-style:italic;color:#fbdfb5;">let </span><span style="color:#ff5e5e;">mut</span><span style="color:#f8f8f2;"> listening </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">rustnish::start_server(port, upstream_port);
-
-</span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> client </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">Client::new();
-
-</span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> url </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">(</span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">http://127.0.0.1:</span><span style="color:#ffffff;">&quot;</span><span style="color:#f8f8f2;">.</span><span style="color:#6699cc;">to_string</span><span style="color:#f8f8f2;">() </span><span style="color:#ff5e5e;">+ &amp;</span><span style="color:#f8f8f2;">port.</span><span style="color:#6699cc;">to_string</span><span style="color:#f8f8f2;">())
-    .</span><span style="color:#6699cc;">into_url</span><span style="color:#f8f8f2;">()
-    .</span><span style="color:#6699cc;">unwrap</span><span style="color:#f8f8f2;">();
-</span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> request_builder </span><span style="color:#ff5e5e;">=</span><span style="color:#f8f8f2;"> client.</span><span style="color:#6699cc;">get</span><span style="color:#f8f8f2;">(url);
-</span><span style="font-style:italic;color:#fbdfb5;">let </span><span style="color:#ff5e5e;">mut</span><span style="color:#f8f8f2;"> upstream_response </span><span style="color:#ff5e5e;">=</span><span style="color:#f8f8f2;"> request_builder.</span><span style="color:#6699cc;">send</span><span style="color:#f8f8f2;">().</span><span style="color:#6699cc;">unwrap</span><span style="color:#f8f8f2;">();
+<pre data-lang="rust" style="background-color:#191919;color:#f8f8f2;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="font-style:italic;color:#fbdfb5;">let </span><span style="color:#ff5e5e;">mut</span><span> listening </span><span style="color:#ff5e5e;">= </span><span>rustnish::start_server(port, upstream_port);
+</span><span>
+</span><span style="font-style:italic;color:#fbdfb5;">let</span><span> client </span><span style="color:#ff5e5e;">= </span><span>Client::new();
+</span><span>
+</span><span style="font-style:italic;color:#fbdfb5;">let</span><span> url </span><span style="color:#ff5e5e;">= </span><span>(</span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">http://127.0.0.1:</span><span style="color:#ffffff;">&quot;</span><span>.</span><span style="color:#6699cc;">to_string</span><span>() </span><span style="color:#ff5e5e;">+ &amp;</span><span>port.</span><span style="color:#6699cc;">to_string</span><span>())
+</span><span>    .</span><span style="color:#6699cc;">into_url</span><span>()
+</span><span>    .</span><span style="color:#6699cc;">unwrap</span><span>();
+</span><span style="font-style:italic;color:#fbdfb5;">let</span><span> request_builder </span><span style="color:#ff5e5e;">=</span><span> client.</span><span style="color:#6699cc;">get</span><span>(url);
+</span><span style="font-style:italic;color:#fbdfb5;">let </span><span style="color:#ff5e5e;">mut</span><span> upstream_response </span><span style="color:#ff5e5e;">=</span><span> request_builder.</span><span style="color:#6699cc;">send</span><span>().</span><span style="color:#6699cc;">unwrap</span><span>();
 </span></code></pre>
 <p>Next we start our reverse proxy, configured with the port it should listen on
 and the upstream port it should forward requests to. Then we make a request to
 the reverse proxy and read the response. Again, doing that with the HTTP client
 API Hyper provides is fairly easy.</p>
-<pre style="background-color:#191919;">
-<code class="language-rust" data-lang="rust"><span style="font-style:italic;color:#fbdfb5;">let </span><span style="color:#ff5e5e;">mut</span><span style="color:#f8f8f2;"> body </span><span style="color:#ff5e5e;">= </span><span style="color:#fbe3bf;">String</span><span style="color:#f8f8f2;">::new();
-</span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> _size </span><span style="color:#ff5e5e;">=</span><span style="color:#f8f8f2;"> upstream_response.</span><span style="color:#6699cc;">read_to_string</span><span style="color:#f8f8f2;">(</span><span style="color:#ff5e5e;">&amp;mut</span><span style="color:#f8f8f2;"> body).</span><span style="color:#6699cc;">unwrap</span><span style="color:#f8f8f2;">();
-
-</span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> _guard </span><span style="color:#ff5e5e;">=</span><span style="color:#f8f8f2;"> listening.</span><span style="color:#6699cc;">close</span><span style="color:#f8f8f2;">();
-</span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> _dummy_guard </span><span style="color:#ff5e5e;">=</span><span style="color:#f8f8f2;"> dummy_server.</span><span style="color:#6699cc;">close</span><span style="color:#f8f8f2;">();
-
-assert_eq!(</span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">hello</span><span style="color:#ffffff;">&quot;</span><span style="color:#f8f8f2;">, body);
+<pre data-lang="rust" style="background-color:#191919;color:#f8f8f2;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="font-style:italic;color:#fbdfb5;">let </span><span style="color:#ff5e5e;">mut</span><span> body </span><span style="color:#ff5e5e;">= </span><span style="color:#fbe3bf;">String</span><span>::new();
+</span><span style="font-style:italic;color:#fbdfb5;">let</span><span> _size </span><span style="color:#ff5e5e;">=</span><span> upstream_response.</span><span style="color:#6699cc;">read_to_string</span><span>(</span><span style="color:#ff5e5e;">&amp;mut</span><span> body).</span><span style="color:#6699cc;">unwrap</span><span>();
+</span><span>
+</span><span style="font-style:italic;color:#fbdfb5;">let</span><span> _guard </span><span style="color:#ff5e5e;">=</span><span> listening.</span><span style="color:#6699cc;">close</span><span>();
+</span><span style="font-style:italic;color:#fbdfb5;">let</span><span> _dummy_guard </span><span style="color:#ff5e5e;">=</span><span> dummy_server.</span><span style="color:#6699cc;">close</span><span>();
+</span><span>
+</span><span>assert_eq!(</span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">hello</span><span style="color:#ffffff;">&quot;</span><span>, body);
 </span></code></pre>
 <p>The last part of the test is to make sure that the response received matches
 what we expect. For reading the response body we need to make room for it by
@@ -361,9 +353,9 @@ initialization and shutdown code for tests.</p>
             
                 <div class="post-tags">
                     
-                        <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;rust&#x2F;">#rust</a>
+                        <a href="https://klau.si/tags/rust/">#rust</a>
                     
-                        <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;rustnish&#x2F;">#rustnish</a>
+                        <a href="https://klau.si/tags/rustnish/">#rustnish</a>
                     
                 </div>
             
@@ -405,7 +397,7 @@ initialization and shutdown code for tests.</p>
   </div>
 
   
-  <script type="text/javascript" src="https:&#x2F;&#x2F;klau.si&#x2F;even.js"></script>
+  <script type="text/javascript" src="https://klau.si/even.js"></script>
   
 </body>
 

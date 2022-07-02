@@ -22,7 +22,7 @@
   
 
   
-  <link rel="stylesheet" href="https:&#x2F;&#x2F;klau.si&#x2F;site.css">
+  <link rel="stylesheet" href="https://klau.si/site.css">
   
   
 
@@ -36,7 +36,7 @@
     <div id="mobile-navbar" class="mobile-navbar">
       <div class="mobile-header-logo">
         <a href="https:&#x2F;&#x2F;klau.si" title="Klausi&#x27;s Weblog" rel="home" class="site-logo site-title">
-          <img src="https:&#x2F;&#x2F;klau.si&#x2F;logo.png" alt="Klausi&#x27;s Weblog logo">
+          <img src="https://klau.si/logo.png" alt="Klausi&#x27;s Weblog logo">
         </a>
         <a href="/" class="logo">Klausi&#x27;s Weblog</a>
       </div>
@@ -80,7 +80,7 @@
     <header id="header">
       <div class="logo">
         <a href="https:&#x2F;&#x2F;klau.si" title="Klausi&#x27;s Weblog" rel="home" class="site-logo site-title">
-          <img src="https:&#x2F;&#x2F;klau.si&#x2F;logo.png" alt="Klausi&#x27;s Weblog logo">
+          <img src="https://klau.si/logo.png" alt="Klausi&#x27;s Weblog logo">
         </a>
         <a href="https:&#x2F;&#x2F;klau.si">Klausi&#x27;s Weblog</a>
       </div>
@@ -184,15 +184,14 @@ case we do not fear panics triggered by unwrap() because the test runner will
 catch them and just mark the test run as failed. That means we can be super
 lazy when writing test code and use <code>unwrap()</code> all the time. For example
 using a Hyper client in tests:</p>
-<pre style="background-color:#191919;">
-<code class="language-rust" data-lang="rust"><span style="color:#6d6d6d;">// Since it so complicated to make a client request with a Tokio core we have
-// this helper function.
-</span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">client_get</span><span style="color:#f8f8f2;">(</span><span style="font-style:italic;color:#fc9354;">url</span><span style="color:#f8f8f2;">: Uri) -&gt; Response {
-    </span><span style="font-style:italic;color:#fbdfb5;">let </span><span style="color:#ff5e5e;">mut</span><span style="color:#f8f8f2;"> core </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">Core::new().</span><span style="color:#6699cc;">unwrap</span><span style="color:#f8f8f2;">();
-    </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> client </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">Client::new(</span><span style="color:#ff5e5e;">&amp;</span><span style="color:#f8f8f2;">core.</span><span style="color:#6699cc;">handle</span><span style="color:#f8f8f2;">());
-    </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> work </span><span style="color:#ff5e5e;">=</span><span style="color:#f8f8f2;"> client.</span><span style="color:#6699cc;">get</span><span style="color:#f8f8f2;">(url).</span><span style="color:#6699cc;">and_then</span><span style="color:#f8f8f2;">(|</span><span style="font-style:italic;color:#fc9354;">response</span><span style="color:#f8f8f2;">| </span><span style="color:#fbe3bf;">Ok</span><span style="color:#f8f8f2;">(response));
-    core.</span><span style="color:#6699cc;">run</span><span style="color:#f8f8f2;">(work).</span><span style="color:#6699cc;">unwrap</span><span style="color:#f8f8f2;">()
-}
+<pre data-lang="rust" style="background-color:#191919;color:#f8f8f2;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#6d6d6d;">// Since it so complicated to make a client request with a Tokio core we have
+</span><span style="color:#6d6d6d;">// this helper function.
+</span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">client_get</span><span>(</span><span style="font-style:italic;color:#fc9354;">url</span><span>: Uri) -&gt; Response {
+</span><span>    </span><span style="font-style:italic;color:#fbdfb5;">let </span><span style="color:#ff5e5e;">mut</span><span> core </span><span style="color:#ff5e5e;">= </span><span>Core::new().</span><span style="color:#6699cc;">unwrap</span><span>();
+</span><span>    </span><span style="font-style:italic;color:#fbdfb5;">let</span><span> client </span><span style="color:#ff5e5e;">= </span><span>Client::new(</span><span style="color:#ff5e5e;">&amp;</span><span>core.</span><span style="color:#6699cc;">handle</span><span>());
+</span><span>    </span><span style="font-style:italic;color:#fbdfb5;">let</span><span> work </span><span style="color:#ff5e5e;">=</span><span> client.</span><span style="color:#6699cc;">get</span><span>(url).</span><span style="color:#6699cc;">and_then</span><span>(|</span><span style="font-style:italic;color:#fc9354;">response</span><span>| </span><span style="color:#fbe3bf;">Ok</span><span>(response));
+</span><span>    core.</span><span style="color:#6699cc;">run</span><span>(work).</span><span style="color:#6699cc;">unwrap</span><span>()
+</span><span>}
 </span></code></pre>
 <p>This helper function issues a GET request and returns a Response struct - we
 don't care if something goes wrong (e.g. network problems or the server does
@@ -205,28 +204,26 @@ keeping the test code minimal.</p>
 application, but the underlying error case should be communicated back to the
 application user. For example in my reverse proxy the user provided Host header
 is used:</p>
-<pre style="background-color:#191919;">
-<code class="language-rust" data-lang="rust"><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> upstream_uri </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">(</span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">http://</span><span style="color:#ffffff;">&quot;</span><span style="color:#f8f8f2;">.</span><span style="color:#6699cc;">to_string</span><span style="color:#f8f8f2;">() </span><span style="color:#ff5e5e;">+</span><span style="color:#f8f8f2;"> host </span><span style="color:#ff5e5e;">+ </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">:</span><span style="color:#ffffff;">&quot; </span><span style="color:#ff5e5e;">+
-    &amp;</span><span style="color:#e9fdac;">self</span><span style="color:#f8f8f2;">.upstream_port.</span><span style="color:#6699cc;">to_string</span><span style="color:#f8f8f2;">() </span><span style="color:#ff5e5e;">+</span><span style="color:#f8f8f2;"> request_uri.</span><span style="color:#6699cc;">path</span><span style="color:#f8f8f2;">())
-    .</span><span style="color:#6699cc;">parse</span><span style="color:#f8f8f2;">()
-    .</span><span style="color:#6699cc;">unwrap</span><span style="color:#f8f8f2;">();
+<pre data-lang="rust" style="background-color:#191919;color:#f8f8f2;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="font-style:italic;color:#fbdfb5;">let</span><span> upstream_uri </span><span style="color:#ff5e5e;">= </span><span>(</span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">http://</span><span style="color:#ffffff;">&quot;</span><span>.</span><span style="color:#6699cc;">to_string</span><span>() </span><span style="color:#ff5e5e;">+</span><span> host </span><span style="color:#ff5e5e;">+ </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">:</span><span style="color:#ffffff;">&quot; </span><span style="color:#ff5e5e;">+
+</span><span>    </span><span style="color:#ff5e5e;">&amp;</span><span style="color:#e9fdac;">self</span><span>.upstream_port.</span><span style="color:#6699cc;">to_string</span><span>() </span><span style="color:#ff5e5e;">+</span><span> request_uri.</span><span style="color:#6699cc;">path</span><span>())
+</span><span>    .</span><span style="color:#6699cc;">parse</span><span>()
+</span><span>    .</span><span style="color:#6699cc;">unwrap</span><span>();
 </span></code></pre>
 <p>If the user supplies a bad Host header then this will cause a panic on the
 server and the user will get no response. The solution is to handle the error
 and report back a response to the user:</p>
-<pre style="background-color:#191919;">
-<code class="language-rust" data-lang="rust"><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> upstream_string_uri </span><span style="color:#ff5e5e;">= </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">http://</span><span style="color:#ffffff;">&quot;</span><span style="color:#f8f8f2;">.</span><span style="color:#6699cc;">to_string</span><span style="color:#f8f8f2;">() </span><span style="color:#ff5e5e;">+ &amp;</span><span style="color:#f8f8f2;">host </span><span style="color:#ff5e5e;">+ </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">:</span><span style="color:#ffffff;">&quot; </span><span style="color:#ff5e5e;">+
-    &amp;</span><span style="color:#e9fdac;">self</span><span style="color:#f8f8f2;">.upstream_port.</span><span style="color:#6699cc;">to_string</span><span style="color:#f8f8f2;">() </span><span style="color:#ff5e5e;">+</span><span style="color:#f8f8f2;"> request_uri.</span><span style="color:#6699cc;">path</span><span style="color:#f8f8f2;">();
-</span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> upstream_uri </span><span style="color:#ff5e5e;">= match</span><span style="color:#f8f8f2;"> upstream_string_uri.</span><span style="color:#6699cc;">parse</span><span style="color:#f8f8f2;">() {
-    </span><span style="color:#fbe3bf;">Ok</span><span style="color:#f8f8f2;">(u) </span><span style="color:#ff5e5e;">=&gt;</span><span style="color:#f8f8f2;"> u,
-    </span><span style="color:#ff5e5e;">_ =&gt; </span><span style="color:#f8f8f2;">{
-        </span><span style="color:#ff5e5e;">return </span><span style="color:#f8f8f2;">Either::A(futures::future::ok(
-            Response::new()
-                .</span><span style="color:#6699cc;">with_status</span><span style="color:#f8f8f2;">(StatusCode::BadRequest)
-                .</span><span style="color:#6699cc;">with_body</span><span style="color:#f8f8f2;">(</span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">Invalid host header in request</span><span style="color:#ffffff;">&quot;</span><span style="color:#f8f8f2;">),
-        ));
-    }
-};
+<pre data-lang="rust" style="background-color:#191919;color:#f8f8f2;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="font-style:italic;color:#fbdfb5;">let</span><span> upstream_string_uri </span><span style="color:#ff5e5e;">= </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">http://</span><span style="color:#ffffff;">&quot;</span><span>.</span><span style="color:#6699cc;">to_string</span><span>() </span><span style="color:#ff5e5e;">+ &amp;</span><span>host </span><span style="color:#ff5e5e;">+ </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">:</span><span style="color:#ffffff;">&quot; </span><span style="color:#ff5e5e;">+
+</span><span>    </span><span style="color:#ff5e5e;">&amp;</span><span style="color:#e9fdac;">self</span><span>.upstream_port.</span><span style="color:#6699cc;">to_string</span><span>() </span><span style="color:#ff5e5e;">+</span><span> request_uri.</span><span style="color:#6699cc;">path</span><span>();
+</span><span style="font-style:italic;color:#fbdfb5;">let</span><span> upstream_uri </span><span style="color:#ff5e5e;">= match</span><span> upstream_string_uri.</span><span style="color:#6699cc;">parse</span><span>() {
+</span><span>    </span><span style="color:#fbe3bf;">Ok</span><span>(u) </span><span style="color:#ff5e5e;">=&gt;</span><span> u,
+</span><span>    </span><span style="color:#ff5e5e;">_ =&gt; </span><span>{
+</span><span>        </span><span style="color:#ff5e5e;">return </span><span>Either::A(futures::future::ok(
+</span><span>            Response::new()
+</span><span>                .</span><span style="color:#6699cc;">with_status</span><span>(StatusCode::BadRequest)
+</span><span>                .</span><span style="color:#6699cc;">with_body</span><span>(</span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">Invalid host header in request</span><span style="color:#ffffff;">&quot;</span><span>),
+</span><span>        ));
+</span><span>    }
+</span><span>};
 </span></code></pre>
 <p>This is certainly application specific how you process the error, but a
 <code>match()</code> expression is likely to be useful.</p>
@@ -240,13 +237,12 @@ reasoning behind it.</p>
 <p>Let's consider an example: if a caller wants to start the reverse proxy on a
 port that is already occupied then that will cause an error we want to bubble
 up instead of panicking:</p>
-<pre style="background-color:#191919;">
-<code class="language-rust" data-lang="rust"><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> thread </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">thread::Builder::new().</span><span style="color:#6699cc;">spawn</span><span style="color:#f8f8f2;">(</span><span style="color:#ff5e5e;">move || </span><span style="color:#f8f8f2;">{
-    </span><span style="color:#6d6d6d;">// ... some not so relevant code here.
-    </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> listener </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">TcpListener::bind(</span><span style="color:#ff5e5e;">&amp;</span><span style="color:#f8f8f2;">addr, </span><span style="color:#ff5e5e;">&amp;</span><span style="color:#f8f8f2;">handle).</span><span style="color:#6699cc;">unwrap</span><span style="color:#f8f8f2;">();
-    </span><span style="color:#6d6d6d;">// ... some more code here.
-</span><span style="color:#f8f8f2;">})
-.</span><span style="color:#6699cc;">unwrap</span><span style="color:#f8f8f2;">();
+<pre data-lang="rust" style="background-color:#191919;color:#f8f8f2;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="font-style:italic;color:#fbdfb5;">let</span><span> thread </span><span style="color:#ff5e5e;">= </span><span>thread::Builder::new().</span><span style="color:#6699cc;">spawn</span><span>(</span><span style="color:#ff5e5e;">move || </span><span>{
+</span><span>    </span><span style="color:#6d6d6d;">// ... some not so relevant code here.
+</span><span>    </span><span style="font-style:italic;color:#fbdfb5;">let</span><span> listener </span><span style="color:#ff5e5e;">= </span><span>TcpListener::bind(</span><span style="color:#ff5e5e;">&amp;</span><span>addr, </span><span style="color:#ff5e5e;">&amp;</span><span>handle).</span><span style="color:#6699cc;">unwrap</span><span>();
+</span><span>    </span><span style="color:#6d6d6d;">// ... some more code here.
+</span><span>})
+</span><span>.</span><span style="color:#6699cc;">unwrap</span><span>();
 </span></code></pre>
 <p>We need to follow a couple of steps for the first error chain setup:</p>
 <ol>
@@ -255,14 +251,14 @@ up instead of panicking:</p>
 </li>
 <li>
 <p>Add the error_chain!() macro to your code:</p>
-<pre style="background-color:#191919;">
-<code class="language-rust" data-lang="rust"><span style="color:#f8f8f2;">#[</span><span style="color:#e9fdac;">macro_use</span><span style="color:#f8f8f2;">]
-</span><span style="color:#ff5e5e;">extern crate</span><span style="color:#f8f8f2;"> error_chain;
-</span><span style="font-style:italic;color:#fbdfb5;">mod </span><span style="color:#f8f8f2;">errors {
-</span><span style="color:#f8f8f2;">    </span><span style="color:#6d6d6d;">// Create the Error, ErrorKind, ResultExt, and Result types
-</span><span style="color:#f8f8f2;">    error_chain!{}
-</span><span style="color:#f8f8f2;">}
-</span></code></pre></li>
+<pre data-lang="rust" style="background-color:#191919;color:#f8f8f2;" class="language-rust "><code class="language-rust" data-lang="rust"><span>#[</span><span style="color:#e9fdac;">macro_use</span><span>]
+</span><span style="color:#ff5e5e;">extern crate</span><span> error_chain;
+</span><span style="font-style:italic;color:#fbdfb5;">mod </span><span>errors {
+</span><span>    </span><span style="color:#6d6d6d;">// Create the Error, ErrorKind, ResultExt, and Result types
+</span><span>    error_chain!{}
+</span><span>}
+</span></code></pre>
+</li>
 <li>
 <p>Change the return type of your function to <code>Result</code> so that it can
 return errors. Note: a convention in Rust is that Results must be used instead
@@ -276,45 +272,43 @@ errors.</p>
 </li>
 </ol>
 <p>That way we can convert our <code>unwrap()</code> calls into this:</p>
-<pre style="background-color:#191919;">
-<code class="language-rust" data-lang="rust"><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> thread </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">thread::Builder::new()</span><span style="color:#ff5e5e;">..</span><span style="color:#6699cc;">spawn</span><span style="color:#f8f8f2;">(</span><span style="color:#ff5e5e;">move || </span><span style="color:#f8f8f2;">-&gt; </span><span style="color:#fbe3bf;">Result</span><span style="color:#f8f8f2;">&lt;()&gt; {
-    </span><span style="color:#6d6d6d;">// ... some not so relevant code here.
-    </span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> listener </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">TcpListener::bind(</span><span style="color:#ff5e5e;">&amp;</span><span style="color:#f8f8f2;">address, </span><span style="color:#ff5e5e;">&amp;</span><span style="color:#f8f8f2;">handle)
-        .</span><span style="color:#6699cc;">chain_err</span><span style="color:#f8f8f2;">(|| format!(</span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">Failed to bind server to address </span><span style="color:#fdb082;">{}</span><span style="color:#ffffff;">&quot;</span><span style="color:#f8f8f2;">, address))</span><span style="color:#ff5e5e;">?</span><span style="color:#f8f8f2;">;
-    </span><span style="color:#6d6d6d;">// ... some more code here.
-</span><span style="color:#f8f8f2;">})
-.</span><span style="color:#6699cc;">chain_err</span><span style="color:#f8f8f2;">(|| </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">Spawning server thread failed</span><span style="color:#ffffff;">&quot;</span><span style="color:#f8f8f2;">)</span><span style="color:#ff5e5e;">?</span><span style="color:#f8f8f2;">;
+<pre data-lang="rust" style="background-color:#191919;color:#f8f8f2;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="font-style:italic;color:#fbdfb5;">let</span><span> thread </span><span style="color:#ff5e5e;">= </span><span>thread::Builder::new()</span><span style="color:#ff5e5e;">..</span><span style="color:#6699cc;">spawn</span><span>(</span><span style="color:#ff5e5e;">move || </span><span>-&gt; </span><span style="color:#fbe3bf;">Result</span><span>&lt;()&gt; {
+</span><span>    </span><span style="color:#6d6d6d;">// ... some not so relevant code here.
+</span><span>    </span><span style="font-style:italic;color:#fbdfb5;">let</span><span> listener </span><span style="color:#ff5e5e;">= </span><span>TcpListener::bind(</span><span style="color:#ff5e5e;">&amp;</span><span>address, </span><span style="color:#ff5e5e;">&amp;</span><span>handle)
+</span><span>        .</span><span style="color:#6699cc;">chain_err</span><span>(|| format!(</span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">Failed to bind server to address </span><span style="color:#fdb082;">{}</span><span style="color:#ffffff;">&quot;</span><span>, address))</span><span style="color:#ff5e5e;">?</span><span>;
+</span><span>    </span><span style="color:#6d6d6d;">// ... some more code here.
+</span><span>})
+</span><span>.</span><span style="color:#6699cc;">chain_err</span><span>(|| </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">Spawning server thread failed</span><span style="color:#ffffff;">&quot;</span><span>)</span><span style="color:#ff5e5e;">?</span><span>;
 </span></code></pre>
 <p>We introduced the empty <code>Result&lt;()&gt;</code> as return type and use <a href="https://doc.rust-lang.org/book/second-edition/ch09-02-recoverable-errors-with-result.html#a-shortcut-for-propagating-errors-">the <code>?</code> operator</a> to early return errors.</p>
 <p>By adding a new error to the error chain we give meaning and context where and
 how the error occurred - which makes it easier to get to the problem when
 diagnosing errors. The output of such an error chain looks like this:</p>
-<pre style="background-color:#191919;">
-<code><span style="color:#f8f8f2;">Error: The server thread stopped with an error
-Caused by: Failed to bind server to address 127.0.0.1:3306
-Caused by: Address already in use (os error 98)
+<pre style="background-color:#191919;color:#f8f8f2;"><code><span>Error: The server thread stopped with an error
+</span><span>Caused by: Failed to bind server to address 127.0.0.1:3306
+</span><span>Caused by: Address already in use (os error 98)
 </span></code></pre>
 <p>Now this is much more useful than just the last error - with the help of an
 error chain we know which port is already in use.</p>
 <p>The consumer that gets an error chain returned can iterate through it, inspect
 and examine it. For example in test code:</p>
-<pre style="background-color:#191919;">
-<code class="language-rust" data-lang="rust"><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> error_chain </span><span style="color:#ff5e5e;">= </span><span style="color:#f8f8f2;">rustnish::start_server_blocking(port, upstream_port)
-    .</span><span style="color:#6699cc;">unwrap_err</span><span style="color:#f8f8f2;">();
-assert_eq!(
-    error_chain.</span><span style="color:#6699cc;">description</span><span style="color:#f8f8f2;">(),
-    </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">The server thread stopped with an error</span><span style="color:#ffffff;">&quot;
-</span><span style="color:#f8f8f2;">);
-</span><span style="font-style:italic;color:#fbdfb5;">let </span><span style="color:#ff5e5e;">mut</span><span style="color:#f8f8f2;"> iter </span><span style="color:#ff5e5e;">=</span><span style="color:#f8f8f2;"> error_chain.</span><span style="color:#6699cc;">iter</span><span style="color:#f8f8f2;">();
-</span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> _first </span><span style="color:#ff5e5e;">=</span><span style="color:#f8f8f2;"> iter.</span><span style="color:#6699cc;">next</span><span style="color:#f8f8f2;">();
-</span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> second </span><span style="color:#ff5e5e;">=</span><span style="color:#f8f8f2;"> iter.</span><span style="color:#6699cc;">next</span><span style="color:#f8f8f2;">().</span><span style="color:#6699cc;">unwrap</span><span style="color:#f8f8f2;">();
-assert_eq!(
-    second.</span><span style="color:#6699cc;">to_string</span><span style="color:#f8f8f2;">(),
-    </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">Failed to bind server to address 127.0.0.1:3306</span><span style="color:#ffffff;">&quot;
-</span><span style="color:#f8f8f2;">);
-</span><span style="font-style:italic;color:#fbdfb5;">let</span><span style="color:#f8f8f2;"> third </span><span style="color:#ff5e5e;">=</span><span style="color:#f8f8f2;"> iter.</span><span style="color:#6699cc;">next</span><span style="color:#f8f8f2;">().</span><span style="color:#6699cc;">unwrap</span><span style="color:#f8f8f2;">();
-assert_eq!(third.</span><span style="color:#6699cc;">to_string</span><span style="color:#f8f8f2;">(), </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">Address already in use (os error 98)</span><span style="color:#ffffff;">&quot;</span><span style="color:#f8f8f2;">);
-</span></code></pre><h2 id="conclusion">Conclusion</h2>
+<pre data-lang="rust" style="background-color:#191919;color:#f8f8f2;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="font-style:italic;color:#fbdfb5;">let</span><span> error_chain </span><span style="color:#ff5e5e;">= </span><span>rustnish::start_server_blocking(port, upstream_port)
+</span><span>    .</span><span style="color:#6699cc;">unwrap_err</span><span>();
+</span><span>assert_eq!(
+</span><span>    error_chain.</span><span style="color:#6699cc;">description</span><span>(),
+</span><span>    </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">The server thread stopped with an error</span><span style="color:#ffffff;">&quot;
+</span><span>);
+</span><span style="font-style:italic;color:#fbdfb5;">let </span><span style="color:#ff5e5e;">mut</span><span> iter </span><span style="color:#ff5e5e;">=</span><span> error_chain.</span><span style="color:#6699cc;">iter</span><span>();
+</span><span style="font-style:italic;color:#fbdfb5;">let</span><span> _first </span><span style="color:#ff5e5e;">=</span><span> iter.</span><span style="color:#6699cc;">next</span><span>();
+</span><span style="font-style:italic;color:#fbdfb5;">let</span><span> second </span><span style="color:#ff5e5e;">=</span><span> iter.</span><span style="color:#6699cc;">next</span><span>().</span><span style="color:#6699cc;">unwrap</span><span>();
+</span><span>assert_eq!(
+</span><span>    second.</span><span style="color:#6699cc;">to_string</span><span>(),
+</span><span>    </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">Failed to bind server to address 127.0.0.1:3306</span><span style="color:#ffffff;">&quot;
+</span><span>);
+</span><span style="font-style:italic;color:#fbdfb5;">let</span><span> third </span><span style="color:#ff5e5e;">=</span><span> iter.</span><span style="color:#6699cc;">next</span><span>().</span><span style="color:#6699cc;">unwrap</span><span>();
+</span><span>assert_eq!(third.</span><span style="color:#6699cc;">to_string</span><span>(), </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">Address already in use (os error 98)</span><span style="color:#ffffff;">&quot;</span><span>);
+</span></code></pre>
+<h2 id="conclusion">Conclusion</h2>
 <p><code>unwrap()</code> is your friend in test code where panics are allowed. Error
 chains are a powerful concept of handling errors by providing better context.
 They are comparable to exception handling in languages such as PHP and Java.</p>
@@ -329,9 +323,9 @@ They are comparable to exception handling in languages such as PHP and Java.</p>
             
                 <div class="post-tags">
                     
-                        <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;rust&#x2F;">#rust</a>
+                        <a href="https://klau.si/tags/rust/">#rust</a>
                     
-                        <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;rustnish&#x2F;">#rustnish</a>
+                        <a href="https://klau.si/tags/rustnish/">#rustnish</a>
                     
                 </div>
             
@@ -373,7 +367,7 @@ They are comparable to exception handling in languages such as PHP and Java.</p>
   </div>
 
   
-  <script type="text/javascript" src="https:&#x2F;&#x2F;klau.si&#x2F;even.js"></script>
+  <script type="text/javascript" src="https://klau.si/even.js"></script>
   
 </body>
 
