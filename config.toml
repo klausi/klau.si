@@ -18,6 +18,7 @@ taxonomies = [
 
 generate_feed = true
 feed_filename = "rss.xml"
+author = "Klaus Purer"
 
 [markdown]
 # Whether to do syntax highlighting
@@ -29,8 +30,6 @@ highlight_theme = "1337"
 # Put all your custom variables here
 
 even_title = "Klausi's Weblog"
-
-author = "Klaus Purer"
 
 even_menu = [
     {url = "$BASE_URL", name = "Home"},

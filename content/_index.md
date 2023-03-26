@@ -11,5 +11,4 @@ Some projects I work on:
 
 * [Coder](https://www.drupal.org/project/coder), a coding standards checker for Drupal
 * [Mastodon Twitter Sync](https://github.com/klausi/mastodon-twitter-sync), a tool to synchronize posts between Mastodon and Twitter
-* [Rustnish](/tags/rustnish), a Rust learning project with the example of a reverse proxy
 * [GraphQL for Drupal](https://www.drupal.org/project/graphql), a Drupal module that implements a GraphQL server API

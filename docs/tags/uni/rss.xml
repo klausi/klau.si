@@ -2,18 +2,19 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
       <title>Klausi&#x27;s Weblog - uni</title>
-        <link>https://klau.si</link>
-        <description></description>
-        <generator>Zola</generator>
-        <language>en</language>
-        <atom:link href="https://klau.si/tags/uni/rss.xml" rel="self" type="application/rss+xml"/>
-        <lastBuildDate>Thu, 23 Jun 2011 00:00:00 +0000</lastBuildDate>
-        <item>
-            <title>Ein Rückblick auf 7 Jahre TU Wien</title>
-            <pubDate>Thu, 23 Jun 2011 00:00:00 +0000</pubDate>
-            <link>https://klau.si/ein-rückblick-auf-7-jahre-tu-wien/</link>
-            <guid>https://klau.si/ein-rückblick-auf-7-jahre-tu-wien/</guid>
-            <description>&lt;p&gt;
+      <link>https://klau.si</link>
+      <description></description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://klau.si/tags/uni/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Thu, 23 Jun 2011 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Ein Rückblick auf 7 Jahre TU Wien</title>
+          <pubDate>Thu, 23 Jun 2011 00:00:00 +0000</pubDate>
+          <author>Klaus Purer</author>
+          <link>https://klau.si/ein-rückblick-auf-7-jahre-tu-wien/</link>
+          <guid>https://klau.si/ein-rückblick-auf-7-jahre-tu-wien/</guid>
+          <description>&lt;p&gt;
 	Ich habe vor kurzem mein Informatikstudium an der TU Wien abgeschlossen, Zeit für einen kleinen Rückblick. Obwohl in diesem Artikel auch viele für mich negative Dinge vorkommen werden, so habe ich doch die Jahre sehr genossen, viel dazu gelernt und viele interessante Menschen getroffen. Ich möchte diesen Lebensabschnitt nicht missen und würde mich wohl wieder für die TU Wien entscheiden.&lt;&#x2F;p&gt;
 &lt;h3&gt;
 	Der Anfang&lt;&#x2F;h3&gt;
@@ -72,42 +73,46 @@
 &lt;p&gt;
 	Nichts desto trotz entspreche ich wahrscheinlich nicht den Wunschvorstellungen, die unsere ProfessorInnen an AbsolventInnen haben: &quot;Wie viel ist log(1)? Wer diese Frage nicht sofort beantworten kann, hat den Abschluss nicht verdient.&quot; Tja, nach der Definition habe ich den Abschluss nicht verdient, ich kann die Frage natürlich nicht sofort beantworten. Dazu habe ich mich in meinem Studium viel zu wenig mit Mathematik beschäftigt und bin eingerostet. Was ich allerdings schon tun kann, ist kurz Nachzudenken und mir im Kopf eine Herleitung zu basteln, ich weiß der Logarithmus ist die Umkehrfunktion einer Exponentialfunktion, ich kann visualisieren wie sich diese Kurve verhält ... letztlich würde ich wohl dahinter kommen (auch ohne Internet). Jedenfalls ist mir diese Fähigkeit zur Problemlösung lieber als eine zufällig auswendig gekonnte Lösung.&lt;&#x2F;p&gt;
 </description>
-        </item>
-        <item>
-            <title>Web Service Composition in Drupal</title>
-            <pubDate>Wed, 11 May 2011 00:00:00 +0000</pubDate>
-            <link>https://klau.si/thesis/</link>
-            <guid>https://klau.si/thesis/</guid>
-            <description>&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;&#x2F;sites&#x2F;default&#x2F;files&#x2F;wsclient_logo_300_0.thumbnail.png&quot; style=&quot;width: 209px; height: 217px; float: right;&quot; &#x2F;&gt;A master thesis written by Klaus Purer at the Vienna University of Technology, released in May 2011.&lt;&#x2F;p&gt;
+      </item>
+      <item>
+          <title>Web Service Composition in Drupal</title>
+          <pubDate>Wed, 11 May 2011 00:00:00 +0000</pubDate>
+          <author>Klaus Purer</author>
+          <link>https://klau.si/thesis/</link>
+          <guid>https://klau.si/thesis/</guid>
+          <description>&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;&#x2F;sites&#x2F;default&#x2F;files&#x2F;wsclient_logo_300_0.thumbnail.png&quot; style=&quot;width: 209px; height: 217px; float: right;&quot; &#x2F;&gt;A master thesis written by Klaus Purer at the Vienna University of Technology, released in May 2011.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;strong&gt;Abstract:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;Building web applications has become a complex task and often requires interaction with other web applications, such as web services. Drupal is a free and open source content management system and framework that provides a rich platform for rapid web development. The modular and extensible nature of Drupal allows developers to customize and embrace the core functionality and to create new features. This thesis is about investigating and implementing a web service client module for Drupal that is able to consume classical WS* web services as well as RESTful web services.&lt;&#x2F;p&gt;
 </description>
-        </item>
-        <item>
-            <title>A master thesis about Drupal and Web Services</title>
-            <pubDate>Mon, 15 Feb 2010 00:00:00 +0000</pubDate>
-            <link>https://klau.si/master-thesis-about-drupal-and-web-services/</link>
-            <guid>https://klau.si/master-thesis-about-drupal-and-web-services/</guid>
-            <description>&lt;p&gt;
+      </item>
+      <item>
+          <title>A master thesis about Drupal and Web Services</title>
+          <pubDate>Mon, 15 Feb 2010 00:00:00 +0000</pubDate>
+          <author>Klaus Purer</author>
+          <link>https://klau.si/master-thesis-about-drupal-and-web-services/</link>
+          <guid>https://klau.si/master-thesis-about-drupal-and-web-services/</guid>
+          <description>&lt;p&gt;
 	In the last weeks I thought about a topic for my master thesis at the Vienna University of Technology, and I came up with the idea of integrating Drupal and Web Services.&lt;&#x2F;p&gt;
 </description>
-        </item>
-        <item>
-            <title>PHP vs. Python vs. Ruby</title>
-            <pubDate>Sun, 22 Nov 2009 00:00:00 +0000</pubDate>
-            <link>https://klau.si/php-vs-python-vs-ruby/</link>
-            <guid>https://klau.si/php-vs-python-vs-ruby/</guid>
-            <description>&lt;p&gt;I did an interesting programming language comparison last semester and wrote up a paper called &amp;quot;&lt;a href=&quot;&#x2F;sites&#x2F;default&#x2F;files&#x2F;php-vs-python-vs-ruby.pdf&quot;&gt;PHP vs. Python vs. Ruby &amp;ndash; The web scripting language shootout&amp;quot;&lt;&#x2F;a&gt;. I&#x27;m not completely satisfied with it as it does not dig deep enough into the details, but it provides a good introduction and overview. As my time was limited and the seminar was only worth 3 ECTS, further investigation and experiments were not done - I would appreciate any additional references on this topic, feel free to post a comment or contact me. &lt;&#x2F;p&gt;
+      </item>
+      <item>
+          <title>PHP vs. Python vs. Ruby</title>
+          <pubDate>Sun, 22 Nov 2009 00:00:00 +0000</pubDate>
+          <author>Klaus Purer</author>
+          <link>https://klau.si/php-vs-python-vs-ruby/</link>
+          <guid>https://klau.si/php-vs-python-vs-ruby/</guid>
+          <description>&lt;p&gt;I did an interesting programming language comparison last semester and wrote up a paper called &amp;quot;&lt;a href=&quot;&#x2F;sites&#x2F;default&#x2F;files&#x2F;php-vs-python-vs-ruby.pdf&quot;&gt;PHP vs. Python vs. Ruby &amp;ndash; The web scripting language shootout&amp;quot;&lt;&#x2F;a&gt;. I&#x27;m not completely satisfied with it as it does not dig deep enough into the details, but it provides a good introduction and overview. As my time was limited and the seminar was only worth 3 ECTS, further investigation and experiments were not done - I would appreciate any additional references on this topic, feel free to post a comment or contact me. &lt;&#x2F;p&gt;
 </description>
-        </item>
-        <item>
-            <title>Die Vorlesung über die Vorlesung an sich</title>
-            <pubDate>Wed, 27 Jun 2007 00:00:00 +0000</pubDate>
-            <link>https://klau.si/die-vorlesung-über-die-vorlesung-sich/</link>
-            <guid>https://klau.si/die-vorlesung-über-die-vorlesung-sich/</guid>
-            <description>&lt;p&gt;Ich habe gerade die Online-Prüfung zur &lt;a href=&quot;http:&#x2F;&#x2F;ringvorlesung.univie.ac.at&#x2F;&quot; title=&quot;Homepage der Ringvorlesung&quot; target=&quot;_blank&quot;&gt;Ringvorlesung zum Thema Vorlesung&lt;&#x2F;a&gt; aus dem WS 06&#x2F;07 abgelegt. Man musste eine Prüfungsfrage in einem MS-Word Dokument beantworten und auf die &lt;a href=&quot;http:&#x2F;&#x2F;webct.univie.ac.at&quot; target=&quot;_blank&quot; title=&quot;WebCT Plattform&quot;&gt;E-Lerning Plattform der Uni Wien&lt;&#x2F;a&gt; hinaufladen.&lt;&#x2F;p&gt;
+      </item>
+      <item>
+          <title>Die Vorlesung über die Vorlesung an sich</title>
+          <pubDate>Wed, 27 Jun 2007 00:00:00 +0000</pubDate>
+          <author>Klaus Purer</author>
+          <link>https://klau.si/die-vorlesung-über-die-vorlesung-sich/</link>
+          <guid>https://klau.si/die-vorlesung-über-die-vorlesung-sich/</guid>
+          <description>&lt;p&gt;Ich habe gerade die Online-Prüfung zur &lt;a href=&quot;http:&#x2F;&#x2F;ringvorlesung.univie.ac.at&#x2F;&quot; title=&quot;Homepage der Ringvorlesung&quot; target=&quot;_blank&quot;&gt;Ringvorlesung zum Thema Vorlesung&lt;&#x2F;a&gt; aus dem WS 06&#x2F;07 abgelegt. Man musste eine Prüfungsfrage in einem MS-Word Dokument beantworten und auf die &lt;a href=&quot;http:&#x2F;&#x2F;webct.univie.ac.at&quot; target=&quot;_blank&quot; title=&quot;WebCT Plattform&quot;&gt;E-Lerning Plattform der Uni Wien&lt;&#x2F;a&gt; hinaufladen.&lt;&#x2F;p&gt;
 &lt;p&gt;Prüfungsfrage: &amp;quot;Welche Probleme der Wissensvermittlung ergeben sich aus dem Mitschreiben und den Mitschriften einer Vorlesung?&amp;quot;&lt;&#x2F;p&gt;
 </description>
-        </item>
+      </item>
     </channel>
 </rss>

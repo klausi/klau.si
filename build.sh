@@ -4,6 +4,7 @@
 # output the site there. That way we avoid a Travis build job, which is really
 # not necessary.
 
+rm -rf docs
 zola build --output-dir=docs
 
 # Manually copy the old Drupal Planet feed URL because we can't do a HTML
