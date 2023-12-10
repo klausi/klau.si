@@ -6,6 +6,8 @@ draft = true
 tags = ["drupal", "drupal planet"]
 +++
 
+![Screenshot of a drupal.org release settings page. Contains a warning box with the text "Branches compatible with Drupal 7.x that are set as unsupported cannot be set as supported again.". A big thinking emoji is inserted on the screenshot.](unsupported-hm.png)
+
 The Drupal Security Team has announced in [PSA-2023-06-07](https://www.drupal.org/psa-2023-06-07) that unsupported Drupal 7 modules/themes cannot be supported again. I'm proposing to create a D7Security team on Github that can provide security fixes for those unsupported modules. A small update module can then notify Drupal 7 site owners when new security releases are available on Github.
 
 <!-- more -->
