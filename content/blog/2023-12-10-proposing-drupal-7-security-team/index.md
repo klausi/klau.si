@@ -14,17 +14,19 @@ The Drupal Security Team has announced in [PSA-2023-06-07](https://www.drupal.or
 
 ## Background
 
-At my company [Jobiqo](https://www.jobiqo.com/) we are still running lots of Drupal 7 sites. Some will be upgraded to our Drupal 10 stack, but we expect that we will run many of those sites beyond the official support date of Drupal 7 on January 5, 2025.
+A significant number of Drupal 7 sites are still operational. Some of these are scheduled for an upgrade to the more recent Drupal 10 platform, yet it is expected that a considerable number will continue to use Drupal 7 beyond its official support end date on January 5, 2025.
 
-We use around 220 Drupal 7 contributed projects that are published on drupal.org. Some of those modules we maintain ourselves in collaboration with the Drupal community, for many others we rely on the respective maintainers to publish security updates and PHP compatibility fixes.
+Those sites often include hundreds of Drupal 7 contributed projects from drupal.org. While some modules are maintained by the site owners in collaboration with the Drupal community, for many others, there's reliance on other maintainers for critical updates such as security and PHP compatibility.
 
-Whenever a module that we use is about to get unsupported we want to step up as maintainers and continue the security support. The reasoning is simple: we need to maintain the code in-house anyway to keep our sites secure, so we might as well publish the fixes as proper releases for the community. If other companies do the same we profit from a shared ownership over the contributed projects.
+## Proactive Maintenance Approach
+
+When a module in use cannot be supported by the original maintainers, the strategy is to assume the role of maintainers to extend security support. This is a practical decision: maintaining the code internally is essential for site security, so sharing these updates with the community as official releases is beneficial. This shared responsibility model is very common in the Drupal community.
 
 ## Blocked on unsupported projects
 
-Stepping up as maintainers has worked well for us in the past, but now we are blocked from doing that on drupal.org. The Drupal Security Team wants to phase out support for Drupal 7 projects, so when a project gets unsupported it is policy to not mark it as supported again.
+While taking on the role of maintainers has been effective previously, there are now obstacles in continuing this on drupal.org. The Drupal Security Team is inclined to discontinue support for Drupal 7 projects. As a result, once a Drupal 7 project loses support, the policy is now to not mark it as supported again.
 
-I have a lot of empathy for the Drupal Security Team: many of the members don't run Drupal 7 sites anymore and it can be a hassle to track down Drupal 7 module maintainers when preparing security releases. That's why they want to phase out Drupal 7 support where possible. I would love to unburden them by shifting the Drupal 7 security team work to a group of people that have an interest in running Drupal 7.
+I have a lot of empathy for the Drupal Security Team: many of the members don't run Drupal 7 sites anymore and it can be a hassle to track down Drupal 7 module maintainers when preparing security releases. That's why they want to phase out Drupal 7 support where possible. However, there's potential to reallocate the tasks related to Drupal 7 security to a group specifically interested in maintaining these older versions.
 
 ## Establishing an unofficial D7Security team on Github
 
