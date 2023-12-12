@@ -86,4 +86,4 @@ It should be possible to do a similar approach on drupal.org's Gitlab, but I thi
 
 ## Conclusion
 
-This is currently a proposal that I would like to get feedback on. Feel free to reach out and discuss in the Drupal ideas issue (will link this soon).
+This is currently a proposal that I would like to get feedback on. Feel free to reach out and discuss in [the Drupal ideas issue](https://www.drupal.org/project/ideas/issues/3408125).
