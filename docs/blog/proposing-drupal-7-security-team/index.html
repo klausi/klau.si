@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title>Klausi&#x27;s Weblog - Proposing a Drupal 7 security team</title>
+
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="https://klau.si/rss.xml">
+      
+
+      
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
+          
+      
+
+      
+          <link rel="stylesheet" href="https://klau.si/site.css">
+          
+      
+
+      
+      
+    </head>
+
+    <body>
+        <div class="container">
+
+            <div id="mobile-navbar" class="mobile-navbar">
+              <div class="mobile-header-logo">
+                <a href="https:&#x2F;&#x2F;klau.si" title="Klausi&#x27;s Weblog" rel="home" class="site-logo site-title">
+                    <img src="https://klau.si/logo.png" alt="Klausi&#x27;s Weblog logo">
+                </a>
+                <a href="/" class="logo">Klausi&#x27;s Weblog</a>
+              </div>
+              <div class="mobile-navbar-icon icon-out">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <nav id="mobile-menu" class="mobile-menu slideout-menu slideout-menu-left">
+              <ul class="mobile-menu-list">
+                
+                    <li class="mobile-menu-item">
+                        <a href="https:&#x2F;&#x2F;klau.si">
+                            Home
+                        </a>
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;speaking">
+                            Speaking
+                        </a>
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags">
+                            Categories
+                        </a>
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+                            RSS
+                        </a>
+                    </li>
+                
+              </ul>
+            </nav>
+
+            <header id="header">
+                <div class="logo">
+                    <a href="https:&#x2F;&#x2F;klau.si" title="Klausi&#x27;s Weblog" rel="home" class="site-logo site-title">
+                        <img src="https://klau.si/logo.png" alt="Klausi&#x27;s Weblog logo">
+                    </a>
+                    <a href="https:&#x2F;&#x2F;klau.si">Klausi&#x27;s Weblog</a>
+                </div>
+                <nav class="menu">
+                    <ul>
+                        
+                            <li>
+                                <a href="https:&#x2F;&#x2F;klau.si">
+                                    Home
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;speaking">
+                                    Speaking
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags">
+                                    Categories
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+                                    RSS
+                                </a>
+                            </li>
+                        
+                    </ul>
+                </nav>
+            </header>
+
+            <main>
+                <div class="content" id="mobile-panel">
+                    
+
+
+<div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">Contents</h2>
+    <div class="post-toc-content always-active">
+        <nav id="TableOfContents">
+            <ul>
+                
+                <li>
+                    <a href="https://klau.si/blog/proposing-drupal-7-security-team/#background" class="toc-link">Background</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://klau.si/blog/proposing-drupal-7-security-team/#proactive-maintenance-approach" class="toc-link">Proactive Maintenance Approach</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://klau.si/blog/proposing-drupal-7-security-team/#blocked-on-unsupported-projects" class="toc-link">Blocked on unsupported projects</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://klau.si/blog/proposing-drupal-7-security-team/#establishing-an-unofficial-d7security-team-on-github" class="toc-link">Establishing an unofficial D7Security team on Github</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://klau.si/blog/proposing-drupal-7-security-team/#pushing-update-notifications-from-github-to-drupal-7-sites" class="toc-link">Pushing update notifications from Github to Drupal 7 sites</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://klau.si/blog/proposing-drupal-7-security-team/#why-github" class="toc-link">Why Github?</a>
+                    
+                </li>
+                
+                <li>
+                    <a href="https://klau.si/blog/proposing-drupal-7-security-team/#conclusion" class="toc-link">Conclusion</a>
+                    
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+<article class="post">
+    
+    <header class="post__header">
+        <h1 class="post__title">
+            <a href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;proposing-drupal-7-security-team&#x2F;">Proposing a Drupal 7 security team</a>
+        </h1>
+        <div class="post__meta">
+            <span class="post__time">2023-12-12</span>
+            
+        </div>
+    </header>
+
+    <div class="post-content">
+      <p><img src="https://klau.si/blog/proposing-drupal-7-security-team/unsupported-hm.png" alt="Screenshot of a drupal.org release settings page. Contains a warning box with the text &quot;Branches compatible with Drupal 7.x that are set as unsupported cannot be set as supported again.&quot;. A big thinking emoji is inserted on the screenshot." /></p>
+<p>The Drupal Security Team has announced in <a href="https://www.drupal.org/psa-2023-06-07">PSA-2023-06-07</a> that unsupported Drupal 7 modules/themes cannot be supported again. I'm proposing to create a D7Security team on Github that can provide security fixes for those unsupported modules. A small update module can then notify Drupal 7 site owners when new security releases are available on Github.</p>
+<span id="continue-reading"></span><h2 id="background">Background</h2>
+<p>A significant number of Drupal 7 sites are still operational. Some of these are scheduled for an upgrade to the more recent Drupal 10 platform, yet it is expected that a considerable number will continue to use Drupal 7 beyond its official support end date on January 5, 2025.</p>
+<p>Those sites often include hundreds of Drupal 7 contributed projects from drupal.org. While some modules are maintained by the site owners in collaboration with the Drupal community, for many others, there's reliance on other maintainers for critical updates such as security and PHP compatibility.</p>
+<h2 id="proactive-maintenance-approach">Proactive Maintenance Approach</h2>
+<p>When a module in use cannot be supported by the original maintainers, the strategy is to assume the role of maintainers to extend security support. This is a practical decision: maintaining the code internally is essential for site security, so sharing these updates with the community as official releases is beneficial. This shared responsibility model is very common in the Drupal community.</p>
+<h2 id="blocked-on-unsupported-projects">Blocked on unsupported projects</h2>
+<p>While taking on the role of maintainers has been effective previously, there are now obstacles in continuing this on drupal.org. The Drupal Security Team is inclined to discontinue support for Drupal 7 projects. As a result, once a Drupal 7 project loses support, the policy is now to not mark it as supported again.</p>
+<p>I have a lot of empathy for the Drupal Security Team: many of the members don't run Drupal 7 sites anymore and it can be a hassle to track down Drupal 7 module maintainers when preparing security releases. That's why they want to phase out Drupal 7 support where possible. However, there's potential to reallocate the tasks related to Drupal 7 security to a group specifically interested in maintaining these older versions.</p>
+<h2 id="establishing-an-unofficial-d7security-team-on-github">Establishing an unofficial D7Security team on Github</h2>
+<p>In order to unburden the Drupal Security Team and the Drupal Infrastructure team I think it would be best to establish an unofficial Drupal 7 security team (let's call it D7Security team) on Github. I will describe later how we can communicate security releases from Github through the standard Drupal 7 update notification system.</p>
+<p>The D7Security organization on Github would be completely independent of the Drupal Security Team with these benefits:</p>
+<ol>
+<li>Drupal 7 modules can get unsupported on drupal.org, but releases (including security updates) can be made on Github. Maintainers and the security team don't have to feel guilty: D7Security will pick it up if it is used by a member company.</li>
+<li>The Drupal Security team can publish any non mass-exploitable Drupal 7 vulnerability, as <a href="https://www.drupal.org/psa-2023-06-07">is already policy</a>. Then the D7Security team can pick it up.</li>
+<li>For mass-exploitable remote code execution vulnerabilities the Drupal Security Team can reach out to the D7Security team with a warning even beyond January 5, 2025.</li>
+</ol>
+<h2 id="pushing-update-notifications-from-github-to-drupal-7-sites">Pushing update notifications from Github to Drupal 7 sites</h2>
+<p>The update notification system of Drupal 7 works with XML feeds that are downloaded from drupal.org (<a href="https://updates.drupal.org/release-history/devel/7.x">example for devel module</a>). Luckily this update system is pluggable and we can apply some nice tricks to download update information XML from static Github files instead.</p>
+<p>The rough workflow would go like this:</p>
+<ol>
+<li>The unsupported module code is forked to a Github repository.</li>
+<li>A fix is committed, a new git tag and a release is created on Github.</li>
+<li>The update XML is crafted by hand (later automated) in a central Github repository pointing to the Github release (<a href="https://github.com/klausi/d7sec_update/blob/main/devel/7.x">dummy example for devel</a>). The path <code>devel/7.x</code> is important as that will be appended by update module when fetching the XML.</li>
+<li>The module is added to the list of supported modules on Github (<a href="https://github.com/klausi/d7sec_update/blob/main/supported_projects.txt">dummy example for devel</a>)</li>
+<li>The Drupal 7 site operator installs a small helper module that fetches update information from Github on top of the default drupal.org source. The <a href="https://github.com/klausi/d7sec_client">example code</a> for that is just a few lines of code:</li>
+</ol>
+<pre data-lang="php" style="background-color:#191919;color:#f8f8f2;" class="language-php "><code class="language-php" data-lang="php"><span>/**
+</span><span> * Implements hook_update_projects_alter().
+</span><span> */
+</span><span>function d7sec_client_update_projects_alter(array &amp;$projects) {
+</span><span>  // Fetch the list of supported D7 projects from GitHub.
+</span><span>  $d7sec_supported = drupal_http_request(&#39;https://raw.githubusercontent.com/klausi/d7sec_update/main/supported_projects.txt&#39;);
+</span><span>  if ($d7sec_supported-&gt;code == 200) {
+</span><span>    $supported_projects = explode(&quot;\n&quot;, $d7sec_supported-&gt;data);
+</span><span>    foreach ($supported_projects as $supported_project) {
+</span><span>      $supported_project = trim($supported_project);
+</span><span>      if (isset($projects[$supported_project])) {
+</span><span>        // Replace the project update XML URL with our own, pointing to Github.
+</span><span>        $projects[$supported_project][&#39;info&#39;][&#39;project status url&#39;] = &#39;https://raw.githubusercontent.com/klausi/d7sec_update/main&#39;;
+</span><span>      }
+</span><span>    }
+</span><span>  }
+</span><span>  else {
+</span><span>    watchdog(&#39;d7sec_client&#39;, &#39;Could not fetch supported projects list from GitHub: &lt;</span><span style="color:#ff5e5e;">pre</span><span>&gt;@error&lt;/</span><span style="color:#ff5e5e;">pre</span><span>&gt;&#39;, [
+</span><span>      &#39;@error&#39; =&gt; print_r($d7sec_supported)
+</span><span>    ], WATCHDOG_ERROR);
+</span><span>  }
+</span><span>}
+</span></code></pre>
+<p>This will now show any new releases in the Drupal 7 backend as usual and trigger update notification emails.</p>
+<p>The great benefit of this static file approach is that there are no update server operation costs.</p>
+<p>One important thing missing here is the drupal.org packaging script which adds version information into the module's info file. I'm sure there are some other details as well that I have missed, but the approach should work in general.</p>
+<h2 id="why-github">Why Github?</h2>
+<p>It should be possible to do a similar approach on drupal.org's Gitlab, but I think it could get very confusing where the actual replacement code for a module lives. I prefer Github for organization governance reasons, then it is easy to define repository access based on groups.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>This is currently a proposal that I would like to get feedback on. Feel free to reach out and discuss in the Drupal ideas issue (will link this soon).</p>
+
+    </div>
+
+    
+    
+
+    <div class="post-footer">
+        
+            
+                <div class="post-tags">
+                    
+                        <a href="https://klau.si/tags/drupal/">#drupal</a>
+                    
+                        <a href="https://klau.si/tags/drupal-planet/">#drupal planet</a>
+                    
+                </div>
+            
+            
+                <div class="post-nav">
+                    
+                    
+                        <a class="next" href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;fully-hidden-automatic-system-updates-ubuntu&#x2F;">Fully hidden automatic system updates on Ubuntu 20.04 ›</a>
+                    
+                </div>
+            
+
+        
+
+    </div>
+
+    
+    
+</article>
+
+
+                </div>
+            </main>
+
+            
+              <footer>
+                <p><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License"
+                      style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work by
+                  <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Klaus Purer</span> is licensed
+                  under a <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
+                    Attribution-ShareAlike 4.0 International License</a>.
+                </p>
+              </footer>
+            
+        </div>
+
+      
+          <script type="text/javascript" src="https://klau.si/even.js" ></script>
+      
+    </body>
+
+</html>

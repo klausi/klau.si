@@ -1,7 +1,6 @@
 +++
 title = "Proposing a Drupal 7 security team"
-date = 2023-12-10
-draft = true
+date = 2023-12-12
 [taxonomies]
 tags = ["drupal", "drupal planet"]
 +++

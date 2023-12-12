@@ -87,6 +87,10 @@
         <lastmod>2019-03-31</lastmod>
     </url>
     <url>
+        <loc>https://klau.si/blog/proposing-drupal-7-security-team/</loc>
+        <lastmod>2023-12-12</lastmod>
+    </url>
+    <url>
         <loc>https://klau.si/blog/replacing-unwrap-and-avoiding-panics-in-rust/</loc>
         <lastmod>2017-08-16</lastmod>
     </url>
