@@ -10,5 +10,6 @@ You can contact me on <a rel="me" href="https://mastodon.social/@klausi">Mastodo
 
 Some projects I work on:
 
+* [D7Security](https://www.d7security.org), unofficial extended security support for Drupal 7
 * [Coder](https://www.drupal.org/project/coder), a coding standards checker for Drupal
 * [GraphQL for Drupal](https://www.drupal.org/project/graphql), a Drupal module that implements a GraphQL server API

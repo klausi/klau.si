@@ -7,14 +7,24 @@
       <generator>Zola</generator>
       <language>en</language>
       <atom:link href="https://klau.si/rss.xml" rel="self" type="application/rss+xml"/>
-      <lastBuildDate>Tue, 12 Dec 2023 00:00:00 +0000</lastBuildDate>
+      <lastBuildDate>Sun, 31 Dec 2023 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Drupal 7 end of life podcast: Unofficial Drupal 7 Security Team</title>
+          <pubDate>Sun, 31 Dec 2023 00:00:00 +0000</pubDate>
+          <author>Klaus Purer</author>
+          <link>https://klau.si/blog/d7-eol-podcast/</link>
+          <guid>https://klau.si/blog/d7-eol-podcast/</guid>
+          <description xml:base="https://klau.si/blog/d7-eol-podcast/">&lt;p&gt;Here is the video of my appearance on the Drupal 7 end of life podcast, talking about plans for the &lt;a href=&quot;https:&#x2F;&#x2F;www.d7security.org&#x2F;&quot;&gt;D7Security&lt;&#x2F;a&gt; group. Thank you Mark Dorison and Chris Free from Chromatic for the recording!&lt;&#x2F;p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;embed&#x2F;hNI73M0ftOM?si=mPReJ3ZTMT7-8f7_&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
+</description>
+      </item>
       <item>
           <title>Proposing a Drupal 7 security team</title>
           <pubDate>Tue, 12 Dec 2023 00:00:00 +0000</pubDate>
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/proposing-drupal-7-security-team/</link>
           <guid>https://klau.si/blog/proposing-drupal-7-security-team/</guid>
-          <description>&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;proposing-drupal-7-security-team&#x2F;unsupported-hm.png&quot; alt=&quot;Screenshot of a drupal.org release settings page. Contains a warning box with the text &amp;quot;Branches compatible with Drupal 7.x that are set as unsupported cannot be set as supported again.&amp;quot;. A big thinking emoji is inserted on the screenshot.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/proposing-drupal-7-security-team/">&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;proposing-drupal-7-security-team&#x2F;unsupported-hm.png&quot; alt=&quot;Screenshot of a drupal.org release settings page. Contains a warning box with the text &amp;quot;Branches compatible with Drupal 7.x that are set as unsupported cannot be set as supported again.&amp;quot;. A big thinking emoji is inserted on the screenshot.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;The Drupal Security Team has announced in &lt;a href=&quot;https:&#x2F;&#x2F;www.drupal.org&#x2F;psa-2023-06-07&quot;&gt;PSA-2023-06-07&lt;&#x2F;a&gt; that unsupported Drupal 7 modules&#x2F;themes cannot be supported again. I&#x27;m proposing to create a D7Security team on Github that can provide security fixes for those unsupported modules. A small update module can then notify Drupal 7 site owners when new security releases are available on Github.&lt;&#x2F;p&gt;
 </description>
       </item>
@@ -24,7 +34,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/fully-hidden-automatic-system-updates-ubuntu/</link>
           <guid>https://klau.si/blog/fully-hidden-automatic-system-updates-ubuntu/</guid>
-          <description>&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;fully-hidden-automatic-system-updates-ubuntu&#x2F;tank-girl-update-smaller.png&quot; alt=&quot;Screenshot of Ubuntu&#x27;s update manager popping up during the movie &amp;quot;Tank Girl.&amp;quot;&quot; &#x2F;&gt;
+          <description xml:base="https://klau.si/blog/fully-hidden-automatic-system-updates-ubuntu/">&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;fully-hidden-automatic-system-updates-ubuntu&#x2F;tank-girl-update-smaller.png&quot; alt=&quot;Screenshot of Ubuntu&#x27;s update manager popping up during the movie &amp;quot;Tank Girl.&amp;quot;&quot; &#x2F;&gt;
 &lt;em&gt;Screenshot of Ubuntu&#x27;s update manager popping up during the movie &amp;quot;Tank Girl.&amp;quot;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;Ubuntu&#x27;s graphical update manager pops up every time you need to install updates. That can be annoying when you are watching a movie or doing other things and don&#x27;t want to be bothered all the time. Yes, I want to always apply all updates from all sources, but please do it silently. Here is a small script I use to do that with Anacron.&lt;&#x2F;p&gt;
 </description>
@@ -35,7 +45,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/russmedia-cto-meetup-talk-pull-request-review/</link>
           <guid>https://klau.si/blog/russmedia-cto-meetup-talk-pull-request-review/</guid>
-          <description>&lt;p&gt;Here is the video of my Russmedia CTO &amp;amp; product meetup talk &amp;quot;Pull Request Review best practices&amp;quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/russmedia-cto-meetup-talk-pull-request-review/">&lt;p&gt;Here is the video of my Russmedia CTO &amp;amp; product meetup talk &amp;quot;Pull Request Review best practices&amp;quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;6CbdQaWI5Hk&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
       </item>
@@ -45,7 +55,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-security-code-review/</link>
           <guid>https://klau.si/blog/drupalcon-security-code-review/</guid>
-          <description>&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;klausi.github.io&#x2F;sec-code-review2019&#x2F;#&#x2F;&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of my DrupalCon Amsterdam 2019 talk &amp;quot;Find security vulnerabilities through code review&amp;quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-security-code-review/">&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;klausi.github.io&#x2F;sec-code-review2019&#x2F;#&#x2F;&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of my DrupalCon Amsterdam 2019 talk &amp;quot;Find security vulnerabilities through code review&amp;quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;Oyoja2rfqSk&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
       </item>
@@ -55,7 +65,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/a-new-blog-on-zola/</link>
           <guid>https://klau.si/blog/a-new-blog-on-zola/</guid>
-          <description>&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;a-new-blog-on-zola&#x2F;zola.ico&quot; alt=&quot;Zola logo&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/a-new-blog-on-zola/">&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;a-new-blog-on-zola&#x2F;zola.ico&quot; alt=&quot;Zola logo&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;I converted my old blog posts from Drupal to static files and now I&#x27;m trying out &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&quot;&gt;Zola&lt;&#x2F;a&gt;. The static files are hosted on &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;github-pages&#x2F;&quot;&gt;Github Pages&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 </description>
       </item>
@@ -65,7 +75,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/mocking-in-rust-with-conditional-compilation/</link>
           <guid>https://klau.si/blog/mocking-in-rust-with-conditional-compilation/</guid>
-          <description>&lt;p&gt;When writing automated unit tests for your application you will probably need to use &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Mock_object&quot;&gt;mocks&lt;&#x2F;a&gt; at some point. Classical object-oriented programming languages such as PHP solve this with reflection where mock object types are created during test runtime. The code under test expects a certain interface or class and the test code passes mock objects that implement the interface or are a subclass.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/mocking-in-rust-with-conditional-compilation/">&lt;p&gt;When writing automated unit tests for your application you will probably need to use &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Mock_object&quot;&gt;mocks&lt;&#x2F;a&gt; at some point. Classical object-oriented programming languages such as PHP solve this with reflection where mock object types are created during test runtime. The code under test expects a certain interface or class and the test code passes mock objects that implement the interface or are a subclass.&lt;&#x2F;p&gt;
 &lt;p&gt;Similar approaches exist in Rust where mock objects are used to test code that expects a trait type. There is a wonderful &lt;a href=&quot;https:&#x2F;&#x2F;asomers.github.io&#x2F;mock_shootout&#x2F;&quot;&gt;Rust mock framework comparison&lt;&#x2F;a&gt; by Alan Somers that lists their features. The biggest problem with most of them as far as I can see is that they cannot mock a foreign &lt;code&gt;struct&lt;&#x2F;code&gt; you are using in your code. Rust does not have a concept of object inheritance for structs so there is no way to mimic a struct type from the standard library or an external crate.&lt;&#x2F;p&gt;
 &lt;p&gt;One workaround for that is to refactor your code to use traits&#x2F;generics instead of concrete structs. That way the implementation is agnostic to whatever struct is used - test code can pass mocks that satisfy the expected trait bounds. The downside is that you might have to invent traits which can make your code more complex just to satisfy test requirements.&lt;&#x2F;p&gt;
 &lt;p&gt;Another solution is to use one of Rust&#x27;s powerful meta programming capabilities: &lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;reference&#x2F;conditional-compilation.html&quot;&gt;conditional compilation&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
@@ -160,7 +170,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupal-security-vulnerability-learnings/</link>
           <guid>https://klau.si/blog/drupal-security-vulnerability-learnings/</guid>
-          <description>&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;drupal-security-vulnerability-learnings&#x2F;meetup_security.jpeg&quot; alt=&quot;Drupal Austria security meetup&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupal-security-vulnerability-learnings/">&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;drupal-security-vulnerability-learnings&#x2F;meetup_security.jpeg&quot; alt=&quot;Drupal Austria security meetup&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;Here are &lt;a href=&quot;&#x2F;presentations&#x2F;sec-learnings2019&#x2F;index.html&quot;&gt;the slides&lt;&#x2F;a&gt; of my Drupal Austria Meetup talk &amp;quot;Drupal security learnings&amp;quot;.&lt;&#x2F;p&gt;
 </description>
       </item>
@@ -170,7 +180,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/benchmarking-a-rust-web-application/</link>
           <guid>https://klau.si/blog/benchmarking-a-rust-web-application/</guid>
-          <description>&lt;p&gt;Performance testing is an important part when developing a network application - you want to know when you have a regression in request throughput in your service.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/benchmarking-a-rust-web-application/">&lt;p&gt;Performance testing is an important part when developing a network application - you want to know when you have a regression in request throughput in your service.&lt;&#x2F;p&gt;
 &lt;p&gt;I set out out my goal 9 for Rustnish:&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Write benchmark code that compares runtime performance of Rustnish against
@@ -366,7 +376,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/crashing-a-rust-hyper-server-with-a-denial-of-service-attack/</link>
           <guid>https://klau.si/blog/crashing-a-rust-hyper-server-with-a-denial-of-service-attack/</guid>
-          <description>&lt;p&gt;I&#x27;m writing a reverse proxy in Rust using &lt;a href=&quot;https:&#x2F;&#x2F;hyper.rs&#x2F;&quot;&gt;Hyper&lt;&#x2F;a&gt; and I want
+          <description xml:base="https://klau.si/blog/crashing-a-rust-hyper-server-with-a-denial-of-service-attack/">&lt;p&gt;I&#x27;m writing a reverse proxy in Rust using &lt;a href=&quot;https:&#x2F;&#x2F;hyper.rs&#x2F;&quot;&gt;Hyper&lt;&#x2F;a&gt; and I want
 to measure performance a bit to know if I&#x27;m doing something terribly wrong. By
 doing that I discovered a Denial of Service vulnerability in Hyper when IO
 errors are not properly handled. Note that &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;hyperium&#x2F;hyper&#x2F;releases&#x2F;tag&#x2F;v0.11.20&quot;&gt;a workaround has been released in
@@ -510,7 +520,7 @@ prevent server exits where possible. We will get there hopefully!&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/testing-memory-leaks-in-rust/</link>
           <guid>https://klau.si/blog/testing-memory-leaks-in-rust/</guid>
-          <description>&lt;p&gt;Rust has many built-in concepts for memory safety, but it cannot prevent
+          <description xml:base="https://klau.si/blog/testing-memory-leaks-in-rust/">&lt;p&gt;Rust has many built-in concepts for memory safety, but it cannot prevent
 application level logic errors that take up system memory. An example would be
 a server application that stores something for each incoming request in a
 growing collection or list. If the program does not clean up the growing list
@@ -726,7 +736,7 @@ still very practical and useful.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/static-variables-made-thread-safe-in-rust/</link>
           <guid>https://klau.si/blog/static-variables-made-thread-safe-in-rust/</guid>
-          <description>&lt;p&gt;When writing &lt;a href=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;writing-integration-tests-in-rust&#x2F;&quot;&gt;integration tests for my Rustnish reverse proxy project&lt;&#x2F;a&gt; I
+          <description xml:base="https://klau.si/blog/static-variables-made-thread-safe-in-rust/">&lt;p&gt;When writing &lt;a href=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;writing-integration-tests-in-rust&#x2F;&quot;&gt;integration tests for my Rustnish reverse proxy project&lt;&#x2F;a&gt; I
 have hard-coded port numbers in tests. This is not ideal because it is hard to
 keep track of which port numbers have already been used and which ones are
 available when writing a new test. Because Rust&#x27;s test runner &lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;book&#x2F;second-edition&#x2F;ch11-02-running-tests.html#running-tests-in-parallel-or-consecutively&quot;&gt;executes test cases in parallel&lt;&#x2F;a&gt; it is important to coordinate
@@ -832,7 +842,7 @@ have not discovered yet.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/replacing-unwrap-and-avoiding-panics-in-rust/</link>
           <guid>https://klau.si/blog/replacing-unwrap-and-avoiding-panics-in-rust/</guid>
-          <description>&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;std&#x2F;result&#x2F;enum.Result.html#method.unwrap&quot;&gt;&lt;code&gt;unwrap()&lt;&#x2F;code&gt;&lt;&#x2F;a&gt; is a useful tool in Rust but is also bad practice in production code that
+          <description xml:base="https://klau.si/blog/replacing-unwrap-and-avoiding-panics-in-rust/">&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;std&#x2F;result&#x2F;enum.Result.html#method.unwrap&quot;&gt;&lt;code&gt;unwrap()&lt;&#x2F;code&gt;&lt;&#x2F;a&gt; is a useful tool in Rust but is also bad practice in production code that
 should not abort with unpredictable panics.&lt;&#x2F;p&gt;
 &lt;p&gt;Therefore my goal 4 for Rustnish is full integration tests with no panics
 allowed:&lt;&#x2F;p&gt;
@@ -987,7 +997,7 @@ They are comparable to exception handling in languages such as PHP and Java.&lt;
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/converting-a-hyper-server-to-tokio/</link>
           <guid>https://klau.si/blog/converting-a-hyper-server-to-tokio/</guid>
-          <description>&lt;p&gt;Since my &lt;a href=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;getting-started-with-rust&#x2F;&quot;&gt;first blog post where I constructed a server with Hyper&lt;&#x2F;a&gt; some time
+          <description xml:base="https://klau.si/blog/converting-a-hyper-server-to-tokio/">&lt;p&gt;Since my &lt;a href=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;getting-started-with-rust&#x2F;&quot;&gt;first blog post where I constructed a server with Hyper&lt;&#x2F;a&gt; some time
 has passed and there is now a new version of the library that is based on
 &lt;a href=&quot;https:&#x2F;&#x2F;tokio.rs&quot;&gt;Tokio&lt;&#x2F;a&gt;. My goal 3:&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
@@ -1210,7 +1220,7 @@ up the rest of your server implementation falls into place nicely.&lt;&#x2F;p&gt
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/using-visual-studio-code-for-rust-on-ubuntu/</link>
           <guid>https://klau.si/blog/using-visual-studio-code-for-rust-on-ubuntu/</guid>
-          <description>&lt;p&gt;I already wrote about &lt;a href=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;using-eclipse-ide-for-rust-on-ubuntu&#x2F;&quot;&gt;using Eclipse for Rust development&lt;&#x2F;a&gt; but after trying
+          <description xml:base="https://klau.si/blog/using-visual-studio-code-for-rust-on-ubuntu/">&lt;p&gt;I already wrote about &lt;a href=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;using-eclipse-ide-for-rust-on-ubuntu&#x2F;&quot;&gt;using Eclipse for Rust development&lt;&#x2F;a&gt; but after trying
 &lt;a href=&quot;https:&#x2F;&#x2F;code.visualstudio.com&#x2F;&quot;&gt;Visual Studio Code&lt;&#x2F;a&gt; (VSCode) I think it is
 slightly better than the Eclipse integration:&lt;&#x2F;p&gt;
 &lt;ul&gt;
@@ -1278,7 +1288,7 @@ for Eclipse IDE.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/writing-integration-tests-in-rust/</link>
           <guid>https://klau.si/blog/writing-integration-tests-in-rust/</guid>
-          <description>&lt;p&gt;In my first post I wrote a quite fragile, minimally working prototype that uses
+          <description xml:base="https://klau.si/blog/writing-integration-tests-in-rust/">&lt;p&gt;In my first post I wrote a quite fragile, minimally working prototype that uses
 many &lt;code&gt;unwrap()&lt;&#x2F;code&gt; calls thereby raising lots of panics during execution.
 Implementing and verifying proper error handling requires testing. I don&#x27;t want
 to do unit testing yet because that would require research about complicated
@@ -1468,7 +1478,7 @@ initialization and shutdown code for tests.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/using-eclipse-ide-for-rust-on-ubuntu/</link>
           <guid>https://klau.si/blog/using-eclipse-ide-for-rust-on-ubuntu/</guid>
-          <description>&lt;p&gt;&lt;strong&gt;Update: &lt;a href=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;using-visual-studio-code-for-rust-on-ubuntu&#x2F;&quot;&gt;New blog post about choosing Visual Studio Code for Rust&lt;&#x2F;a&gt;
+          <description xml:base="https://klau.si/blog/using-eclipse-ide-for-rust-on-ubuntu/">&lt;p&gt;&lt;strong&gt;Update: &lt;a href=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;using-visual-studio-code-for-rust-on-ubuntu&#x2F;&quot;&gt;New blog post about choosing Visual Studio Code for Rust&lt;&#x2F;a&gt;
 because of better IDE support.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;In &lt;a href=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;getting-started-with-rust&#x2F;&quot;&gt;my first blog post&lt;&#x2F;a&gt; I was
 starting out with Atom editor but quickly realized that it is lacking features
@@ -1554,7 +1564,7 @@ areweideyet.com&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/getting-started-with-rust/</link>
           <guid>https://klau.si/blog/getting-started-with-rust/</guid>
-          <description>&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;getting-started-with-rust&#x2F;rustnish2.png&quot; alt=&quot;Rustnish logo&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/getting-started-with-rust/">&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;getting-started-with-rust&#x2F;rustnish2.png&quot; alt=&quot;Rustnish logo&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.rust-lang.org&quot;&gt;Rust&lt;&#x2F;a&gt; is still very alien to me and I want to write
 a bit of code in it to get a feeling of the concepts and restrictions it
 enforces.&lt;&#x2F;p&gt;
@@ -1566,7 +1576,7 @@ enforces.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/go-easy-code-review-she-woman-after-all/</link>
           <guid>https://klau.si/go-easy-code-review-she-woman-after-all/</guid>
-          <description>&lt;p&gt;What is the appropriate response if a fellow woman pulls you aside and says &amp;quot;Go easy on this code review, she is a woman after all and already gets a lot of shit.&amp;quot;? Of course it is &amp;quot;Sure, this will be my friendliest code review ever!&amp;quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/go-easy-code-review-she-woman-after-all/">&lt;p&gt;What is the appropriate response if a fellow woman pulls you aside and says &amp;quot;Go easy on this code review, she is a woman after all and already gets a lot of shit.&amp;quot;? Of course it is &amp;quot;Sure, this will be my friendliest code review ever!&amp;quot;.&lt;&#x2F;p&gt;
 </description>
       </item>
       <item>
@@ -1575,7 +1585,7 @@ enforces.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-automated-testing-phpunit/</link>
           <guid>https://klau.si/blog/drupalcon-automated-testing-phpunit/</guid>
-          <description>&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;docs.google.com&#x2F;presentation&#x2F;d&#x2F;1Uhw3wYfcC_axz6SRTxEHVe8FZHbA-tUGN7dr7YyHMXg&#x2F;edit#slide=id.p&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of our DrupalCon Dublin 2016 talk &amp;quot;Automated Testing: PHPUnit all the way&amp;quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-automated-testing-phpunit/">&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;docs.google.com&#x2F;presentation&#x2F;d&#x2F;1Uhw3wYfcC_axz6SRTxEHVe8FZHbA-tUGN7dr7YyHMXg&#x2F;edit#slide=id.p&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of our DrupalCon Dublin 2016 talk &amp;quot;Automated Testing: PHPUnit all the way&amp;quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;jcdEp3YGa94&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
       </item>
@@ -1585,7 +1595,7 @@ enforces.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-publish-module/</link>
           <guid>https://klau.si/blog/drupalcon-publish-module/</guid>
-          <description>&lt;p&gt;Here is the video of my DrupalCon Asia 2016 talk &amp;quot;How to publish a module on drupal.org&amp;quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-publish-module/">&lt;p&gt;Here is the video of my DrupalCon Asia 2016 talk &amp;quot;How to publish a module on drupal.org&amp;quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;JWLb--cb33E&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
       </item>
@@ -1595,7 +1605,7 @@ enforces.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/dev/</link>
           <guid>https://klau.si/dev/</guid>
-          <description>&lt;p&gt;I upgraded my local computer to Ubuntu 15.10 today and revisited my Drupal development environment (this &lt;a href=&quot;&#x2F;drupal-development-setup-ubuntu-1310&quot;&gt;guide is also available for Ubuntu 13.10&lt;&#x2F;a&gt;). Here is a simple and fast guide how to configure Ubuntu for development. There are a number of &lt;a href=&quot;https:&#x2F;&#x2F;www.drupal.org&#x2F;node&#x2F;262&quot;&gt;installation documentation pages on this topic on drupal.org&lt;&#x2F;a&gt;, but they suggest to use the packaged Drupal installation and to run Drupal in subfolders (e.g. http:&#x2F;&#x2F;localhost&#x2F;drupal6). They also do not cover some other important development tools like Phpmyadmin or php.ini settings. During development we want to edit files and we want to do that somewhere in our home directory to avoid any permission problems. There is also &lt;a href=&quot;https:&#x2F;&#x2F;www.drupal.org&#x2F;project&#x2F;drubuntu&quot;&gt;Drubuntu&lt;&#x2F;a&gt;, but it is outdated and does way too much magic in my opinion. So here is a more transparent tutorial that highlights the key development configuration settings for Drupal development on a local computer (do not use this for a production server!).</description>
+          <description xml:base="https://klau.si/dev/">&lt;p&gt;I upgraded my local computer to Ubuntu 15.10 today and revisited my Drupal development environment (this &lt;a href=&quot;&#x2F;drupal-development-setup-ubuntu-1310&quot;&gt;guide is also available for Ubuntu 13.10&lt;&#x2F;a&gt;). Here is a simple and fast guide how to configure Ubuntu for development. There are a number of &lt;a href=&quot;https:&#x2F;&#x2F;www.drupal.org&#x2F;node&#x2F;262&quot;&gt;installation documentation pages on this topic on drupal.org&lt;&#x2F;a&gt;, but they suggest to use the packaged Drupal installation and to run Drupal in subfolders (e.g. http:&#x2F;&#x2F;localhost&#x2F;drupal6). They also do not cover some other important development tools like Phpmyadmin or php.ini settings. During development we want to edit files and we want to do that somewhere in our home directory to avoid any permission problems. There is also &lt;a href=&quot;https:&#x2F;&#x2F;www.drupal.org&#x2F;project&#x2F;drubuntu&quot;&gt;Drubuntu&lt;&#x2F;a&gt;, but it is outdated and does way too much magic in my opinion. So here is a more transparent tutorial that highlights the key development configuration settings for Drupal development on a local computer (do not use this for a production server!).</description>
       </item>
       <item>
           <title>Wie viele Frauen sprechen eigentlich bei &quot;Am Schauplatz&quot;?</title>
@@ -1603,7 +1613,7 @@ enforces.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/wie-viele-frauen-sprechen-eigentlich-bei-am-schauplatz/</link>
           <guid>https://klau.si/wie-viele-frauen-sprechen-eigentlich-bei-am-schauplatz/</guid>
-          <description>&lt;p&gt;Ich habe mir die ORF Sendung &lt;a href=&quot;http:&#x2F;&#x2F;tvthek.orf.at&#x2F;program&#x2F;Am-Schauplatz&#x2F;1239&#x2F;Am-Schauplatz-An-der-Grenze&#x2F;10644782&quot;&gt;&amp;quot;Am Schauplatz: An der Grenze&amp;quot; vom 24.09.2015&lt;&#x2F;a&gt; angesehen und stellte fest, dass keine einzige flüchtende Frau* zu Wort kam. Auch die anderen Interviewten waren Großteils Männer*, also habe ich einfach mal nachgezählt: in der Sendung sprachen 38 Personen direkt in die Kamera, davon 9 Frauen* (24%). Was jetzt klingt wie eine Männersendung &amp;quot;Patriachat Reprodzuieren: Folge 5327&amp;quot; entpuppt sich aber als Produktion der Reporterinnen Gudrun Kampelmüller, Julia Kovarik und Doris Plank. Ich bin enttäuscht.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/wie-viele-frauen-sprechen-eigentlich-bei-am-schauplatz/">&lt;p&gt;Ich habe mir die ORF Sendung &lt;a href=&quot;http:&#x2F;&#x2F;tvthek.orf.at&#x2F;program&#x2F;Am-Schauplatz&#x2F;1239&#x2F;Am-Schauplatz-An-der-Grenze&#x2F;10644782&quot;&gt;&amp;quot;Am Schauplatz: An der Grenze&amp;quot; vom 24.09.2015&lt;&#x2F;a&gt; angesehen und stellte fest, dass keine einzige flüchtende Frau* zu Wort kam. Auch die anderen Interviewten waren Großteils Männer*, also habe ich einfach mal nachgezählt: in der Sendung sprachen 38 Personen direkt in die Kamera, davon 9 Frauen* (24%). Was jetzt klingt wie eine Männersendung &amp;quot;Patriachat Reprodzuieren: Folge 5327&amp;quot; entpuppt sich aber als Produktion der Reporterinnen Gudrun Kampelmüller, Julia Kovarik und Doris Plank. Ich bin enttäuscht.&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;Die Einteilung nach Frau&#x2F;Mann wurde nach meiner subjektiven Wahrnehmung durchgeführt. Wir sind uns bewusst, dass die Zahlen und Zuschreibungen dadurch nie ganz genau sein können und auch nicht sein sollen.&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
@@ -1615,7 +1625,7 @@ enforces.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-security-what-you-need-to-know/</link>
           <guid>https://klau.si/blog/drupalcon-security-what-you-need-to-know/</guid>
-          <description>&lt;p&gt;Here are &lt;a href=&quot;http:&#x2F;&#x2F;scor.github.io&#x2F;drupal-security-2015&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of our DrupalCon Barcelona 2015 talk &amp;quot;Drupal and Security: what you need to know&amp;quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-security-what-you-need-to-know/">&lt;p&gt;Here are &lt;a href=&quot;http:&#x2F;&#x2F;scor.github.io&#x2F;drupal-security-2015&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of our DrupalCon Barcelona 2015 talk &amp;quot;Drupal and Security: what you need to know&amp;quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;5LpKelSMsas&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
       </item>
@@ -1625,7 +1635,7 @@ enforces.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-coding-with-rules-drupal-8/</link>
           <guid>https://klau.si/blog/drupalcon-coding-with-rules-drupal-8/</guid>
-          <description>&lt;p&gt;Here is the video of our DrupalCon Barcelona 2015 talk &amp;quot;Coding with Rules for Drupal 8&amp;quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-coding-with-rules-drupal-8/">&lt;p&gt;Here is the video of our DrupalCon Barcelona 2015 talk &amp;quot;Coding with Rules for Drupal 8&amp;quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;QcU_LCAHNLg&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
       </item>
@@ -1635,7 +1645,7 @@ enforces.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-cracking-drupal/</link>
           <guid>https://klau.si/blog/drupalcon-cracking-drupal/</guid>
-          <description>&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;docs.google.com&#x2F;presentation&#x2F;d&#x2F;1LWXRbcQUTj9NDHg8gHplAc7EGy94nmbUEUryWLHJqBg&#x2F;edit?usp=sharing&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of our DrupalCon Amsterdam 2014 talk &amp;quot;Cracking Drupal&amp;quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-cracking-drupal/">&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;docs.google.com&#x2F;presentation&#x2F;d&#x2F;1LWXRbcQUTj9NDHg8gHplAc7EGy94nmbUEUryWLHJqBg&#x2F;edit?usp=sharing&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of our DrupalCon Amsterdam 2014 talk &amp;quot;Cracking Drupal&amp;quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;ZkNGObI4nlU&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
       </item>
@@ -1645,7 +1655,7 @@ enforces.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/how-i-became-aware-sexism/</link>
           <guid>https://klau.si/how-i-became-aware-sexism/</guid>
-          <description>&lt;p&gt;This is a cross post to the &lt;a href=&quot;http:&#x2F;&#x2F;groups.drupal.org&#x2F;node&#x2F;419973&quot;&gt;&amp;quot;ah-ha moment regarding sexism in tech&amp;quot; discussion on groups.drupal.org&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/how-i-became-aware-sexism/">&lt;p&gt;This is a cross post to the &lt;a href=&quot;http:&#x2F;&#x2F;groups.drupal.org&#x2F;node&#x2F;419973&quot;&gt;&amp;quot;ah-ha moment regarding sexism in tech&amp;quot; discussion on groups.drupal.org&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;I have never been devalued because of my gender, that&#x27;s why I was long blind to sexism and feminism. I thought this topic has been solved since 1920 when women were allowed to vote in Austria.</description>
       </item>
       <item>
@@ -1654,7 +1664,7 @@ enforces.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcamp-cracking-drupal/</link>
           <guid>https://klau.si/blog/drupalcamp-cracking-drupal/</guid>
-          <description>&lt;p&gt;Here is the video of my Drupalcamp Vienna 2013 talk &amp;quot;Cracking Drupal&amp;quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcamp-cracking-drupal/">&lt;p&gt;Here is the video of my Drupalcamp Vienna 2013 talk &amp;quot;Cracking Drupal&amp;quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;-Lxz7YZ4Cr8&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
       </item>
@@ -1664,7 +1674,7 @@ enforces.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/drupal-development-setup-ubuntu-1310/</link>
           <guid>https://klau.si/drupal-development-setup-ubuntu-1310/</guid>
-          <description>&lt;p&gt;I upgraded my local computer to Ubuntu 13.10 today and revisited my Drupal development environment (this &lt;a href=&quot;&#x2F;dev-ubuntu-12-04&quot;&gt;guide is also available for Ubuntu 12.04&lt;&#x2F;a&gt;). Here is a simple and fast guide how to configure Ubuntu for development. There are a number of &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;node&#x2F;262&quot;&gt;installation documentation pages on this topic on drupal.org&lt;&#x2F;a&gt;, but they suggest to use the packaged Drupal installation and to run Drupal in subfolders (e.g. http:&#x2F;&#x2F;localhost&#x2F;drupal6). They also do not cover some other important development tools like Phpmyadmin or php.ini settings. During development we want to edit files and we want to do that somewhere in our home directory to avoid any permission problems. There is also &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;project&#x2F;drubuntu&quot;&gt;Drubuntu&lt;&#x2F;a&gt;, but it is outdated and does way too much magic in my opinion. So here is a more transparent tutorial that highlights the key development configuration settings for Drupal development on a local computer (do not use this for a production server!).</description>
+          <description xml:base="https://klau.si/drupal-development-setup-ubuntu-1310/">&lt;p&gt;I upgraded my local computer to Ubuntu 13.10 today and revisited my Drupal development environment (this &lt;a href=&quot;&#x2F;dev-ubuntu-12-04&quot;&gt;guide is also available for Ubuntu 12.04&lt;&#x2F;a&gt;). Here is a simple and fast guide how to configure Ubuntu for development. There are a number of &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;node&#x2F;262&quot;&gt;installation documentation pages on this topic on drupal.org&lt;&#x2F;a&gt;, but they suggest to use the packaged Drupal installation and to run Drupal in subfolders (e.g. http:&#x2F;&#x2F;localhost&#x2F;drupal6). They also do not cover some other important development tools like Phpmyadmin or php.ini settings. During development we want to edit files and we want to do that somewhere in our home directory to avoid any permission problems. There is also &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;project&#x2F;drubuntu&quot;&gt;Drubuntu&lt;&#x2F;a&gt;, but it is outdated and does way too much magic in my opinion. So here is a more transparent tutorial that highlights the key development configuration settings for Drupal development on a local computer (do not use this for a production server!).</description>
       </item>
       <item>
           <title>Drupalcon Prague 2013 talk: REST and Serialization in Drupal 8</title>
@@ -1672,7 +1682,7 @@ enforces.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-prague-rest-serialization-drupal-8/</link>
           <guid>https://klau.si/blog/drupalcon-prague-rest-serialization-drupal-8/</guid>
-          <description>&lt;p&gt;Here is the video of our DrupalCon Prague 2013 talk &amp;quot;REST and serialization in Drupal 8&amp;quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-prague-rest-serialization-drupal-8/">&lt;p&gt;Here is the video of our DrupalCon Prague 2013 talk &amp;quot;REST and serialization in Drupal 8&amp;quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;w6dqzDbY78k&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
       </item>
@@ -1682,7 +1692,7 @@ enforces.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-portland-rest-serialization-drupal-8/</link>
           <guid>https://klau.si/blog/drupalcon-portland-rest-serialization-drupal-8/</guid>
-          <description>&lt;p&gt;Here is the video of our DrupalCon Portland 2013 talk &amp;quot;REST and serialization in Drupal 8&amp;quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-portland-rest-serialization-drupal-8/">&lt;p&gt;Here is the video of our DrupalCon Portland 2013 talk &amp;quot;REST and serialization in Drupal 8&amp;quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;6FNfy7pU6mE&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
       </item>
@@ -1692,7 +1702,7 @@ enforces.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/screencasts-recordmydesktop-ffmpeg-conversion-html5-video/</link>
           <guid>https://klau.si/screencasts-recordmydesktop-ffmpeg-conversion-html5-video/</guid>
-          <description>&lt;p&gt;Producing a demo video for &lt;a href=&quot;http:&#x2F;&#x2F;portland2013.drupal.org&#x2F;session&#x2F;rest-and-serialization-drupal-8&quot;&gt;my DrupalCon Portland presentation&lt;&#x2F;a&gt; caused a bit frustration with video editing tools, so here is a simple solution to cut and convert a video on Ubuntu.</description>
+          <description xml:base="https://klau.si/screencasts-recordmydesktop-ffmpeg-conversion-html5-video/">&lt;p&gt;Producing a demo video for &lt;a href=&quot;http:&#x2F;&#x2F;portland2013.drupal.org&#x2F;session&#x2F;rest-and-serialization-drupal-8&quot;&gt;my DrupalCon Portland presentation&lt;&#x2F;a&gt; caused a bit frustration with video editing tools, so here is a simple solution to cut and convert a video on Ubuntu.</description>
       </item>
       <item>
           <title>State of the project application issue queue 2013</title>
@@ -1700,7 +1710,7 @@ enforces.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/state-project-application-issue-queue-2013/</link>
           <guid>https://klau.si/state-project-application-issue-queue-2013/</guid>
-          <description>&lt;p&gt;I wrote a brief status update of what is going on in the Drupal project application issue queue lately. Read more at &lt;a href=&quot;http:&#x2F;&#x2F;groups.drupal.org&#x2F;node&#x2F;281758&quot;&gt;groups.drupal.org&lt;&#x2F;a&gt;.</description>
+          <description xml:base="https://klau.si/state-project-application-issue-queue-2013/">&lt;p&gt;I wrote a brief status update of what is going on in the Drupal project application issue queue lately. Read more at &lt;a href=&quot;http:&#x2F;&#x2F;groups.drupal.org&#x2F;node&#x2F;281758&quot;&gt;groups.drupal.org&lt;&#x2F;a&gt;.</description>
       </item>
       <item>
           <title>REST module status report</title>
@@ -1708,7 +1718,7 @@ enforces.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/rest-module-status-report/</link>
           <guid>https://klau.si/rest-module-status-report/</guid>
-          <description>&lt;p&gt;I posted a &lt;a href=&quot;http:&#x2F;&#x2F;groups.drupal.org&#x2F;node&#x2F;273413&quot;&gt;status report on g.d.o&lt;&#x2F;a&gt; on the work that has been going into the Restful Web Services module for Drupal 8. I would like to thank &lt;a href=&quot;http:&#x2F;&#x2F;www.acquia.com&#x2F;&quot;&gt;Acquia&lt;&#x2F;a&gt; and &lt;a href=&quot;http:&#x2F;&#x2F;epiqo.com&#x2F;&quot;&gt;epiqo&lt;&#x2F;a&gt; again who have extended their sponsorship so that I can get further things done in the &lt;a href=&quot;http:&#x2F;&#x2F;buytaert.net&#x2F;drupal-8-feature-freeze-extended&quot;&gt;Drupal 8 feature completion phase&lt;&#x2F;a&gt;.</description>
+          <description xml:base="https://klau.si/rest-module-status-report/">&lt;p&gt;I posted a &lt;a href=&quot;http:&#x2F;&#x2F;groups.drupal.org&#x2F;node&#x2F;273413&quot;&gt;status report on g.d.o&lt;&#x2F;a&gt; on the work that has been going into the Restful Web Services module for Drupal 8. I would like to thank &lt;a href=&quot;http:&#x2F;&#x2F;www.acquia.com&#x2F;&quot;&gt;Acquia&lt;&#x2F;a&gt; and &lt;a href=&quot;http:&#x2F;&#x2F;epiqo.com&#x2F;&quot;&gt;epiqo&lt;&#x2F;a&gt; again who have extended their sponsorship so that I can get further things done in the &lt;a href=&quot;http:&#x2F;&#x2F;buytaert.net&#x2F;drupal-8-feature-freeze-extended&quot;&gt;Drupal 8 feature completion phase&lt;&#x2F;a&gt;.</description>
       </item>
       <item>
           <title>A RESTful entity web API for Drupal 8</title>
@@ -1716,7 +1726,7 @@ enforces.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/restful-entity-web-api-drupal-8/</link>
           <guid>https://klau.si/restful-entity-web-api-drupal-8/</guid>
-          <description>&lt;p&gt;I&#x27;m happy to announce that I will join the &lt;a href=&quot;http:&#x2F;&#x2F;groups.drupal.org&#x2F;wscci&quot;&gt;WSCCI initiative&lt;&#x2F;a&gt; to help develop web service interfaces in Drupal 8. Big thanks to my team at &lt;a href=&quot;http:&#x2F;&#x2F;epiqo.com&#x2F;&quot;&gt;epiqo&lt;&#x2F;a&gt; for sponsoring and making time for me to work on this, as well as &lt;a href=&quot;https:&#x2F;&#x2F;www.acquia.com&#x2F;&quot;&gt;Acquia&lt;&#x2F;a&gt; for providing a crucial financial part to make this happen.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/restful-entity-web-api-drupal-8/">&lt;p&gt;I&#x27;m happy to announce that I will join the &lt;a href=&quot;http:&#x2F;&#x2F;groups.drupal.org&#x2F;wscci&quot;&gt;WSCCI initiative&lt;&#x2F;a&gt; to help develop web service interfaces in Drupal 8. Big thanks to my team at &lt;a href=&quot;http:&#x2F;&#x2F;epiqo.com&#x2F;&quot;&gt;epiqo&lt;&#x2F;a&gt; for sponsoring and making time for me to work on this, as well as &lt;a href=&quot;https:&#x2F;&#x2F;www.acquia.com&#x2F;&quot;&gt;Acquia&lt;&#x2F;a&gt; for providing a crucial financial part to make this happen.&lt;&#x2F;p&gt;
 &lt;p&gt;Read the &lt;a href=&quot;http:&#x2F;&#x2F;groups.drupal.org&#x2F;node&#x2F;262063&quot;&gt;full announcement on groups.drupal.org&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 </description>
       </item>
@@ -1726,7 +1736,7 @@ enforces.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-project-application-process/</link>
           <guid>https://klau.si/blog/drupalcon-project-application-process/</guid>
-          <description>&lt;p&gt;Here is the video of our DrupalCon Munich 2012 talk &amp;quot;The project application process&amp;quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-project-application-process/">&lt;p&gt;Here is the video of our DrupalCon Munich 2012 talk &amp;quot;The project application process&amp;quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;jLj0K8Trvus&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
       </item>
@@ -1736,7 +1746,7 @@ enforces.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/dev-ubuntu-12-04/</link>
           <guid>https://klau.si/dev-ubuntu-12-04/</guid>
-          <description>&lt;p&gt;I upgraded my local computer to Ubuntu 12.04 today and revisited my Drupal development environment. Here is a simple and fast guide how to configure Ubuntu for development. There are a number of &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;node&#x2F;262&quot;&gt;installation documentation pages on this topic on drupal.org&lt;&#x2F;a&gt;, but they suggest to use the packaged Drupal installation and to run Drupal in subfolders (e.g. http:&#x2F;&#x2F;localhost&#x2F;drupal6). They also do not cover some other important development tools like Phpmyadmin or php.ini settings. During development we want to edit files and we want to do that somewhere in our home directory to avoid any permission problems. There is also &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;project&#x2F;drubuntu&quot;&gt;Drubuntu&lt;&#x2F;a&gt;, but it is outdated and does way too much magic in my opinion. So here is a more transparent tutorial that highlights the key development configuration settings for Drupal development.</description>
+          <description xml:base="https://klau.si/dev-ubuntu-12-04/">&lt;p&gt;I upgraded my local computer to Ubuntu 12.04 today and revisited my Drupal development environment. Here is a simple and fast guide how to configure Ubuntu for development. There are a number of &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;node&#x2F;262&quot;&gt;installation documentation pages on this topic on drupal.org&lt;&#x2F;a&gt;, but they suggest to use the packaged Drupal installation and to run Drupal in subfolders (e.g. http:&#x2F;&#x2F;localhost&#x2F;drupal6). They also do not cover some other important development tools like Phpmyadmin or php.ini settings. During development we want to edit files and we want to do that somewhere in our home directory to avoid any permission problems. There is also &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;project&#x2F;drubuntu&quot;&gt;Drubuntu&lt;&#x2F;a&gt;, but it is outdated and does way too much magic in my opinion. So here is a more transparent tutorial that highlights the key development configuration settings for Drupal development.</description>
       </item>
       <item>
           <title>Installation of a Drupal Upgrade Path Test DB</title>
@@ -1744,7 +1754,7 @@ enforces.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/installation-drupal-upgrade-path-test-db/</link>
           <guid>https://klau.si/installation-drupal-upgrade-path-test-db/</guid>
-          <description>&lt;p&gt;While working on the &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;node&#x2F;935062&quot;&gt;Kill role IDs patch&lt;&#x2F;a&gt; I had to develop some upgrade path Simpletests. Unfortunately the &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;node&#x2F;1429136&quot;&gt;documentation for upgrade path tests&lt;&#x2F;a&gt; currently lacks installtion instructions on how to work with the existing bare and filled exported test databases. Here is a small writeup of what I did until we document that properly.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/installation-drupal-upgrade-path-test-db/">&lt;p&gt;While working on the &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;node&#x2F;935062&quot;&gt;Kill role IDs patch&lt;&#x2F;a&gt; I had to develop some upgrade path Simpletests. Unfortunately the &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;node&#x2F;1429136&quot;&gt;documentation for upgrade path tests&lt;&#x2F;a&gt; currently lacks installtion instructions on how to work with the existing bare and filled exported test databases. Here is a small writeup of what I did until we document that properly.&lt;&#x2F;p&gt;
 </description>
       </item>
       <item>
@@ -1753,7 +1763,7 @@ enforces.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/drupal-project-application-issue-slaughter/</link>
           <guid>https://klau.si/drupal-project-application-issue-slaughter/</guid>
-          <description>&lt;p&gt;This is a happy day: the &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;project&#x2F;issues&#x2F;projectapplications?status=8&quot;&gt;issues needing review&lt;&#x2F;a&gt; count is down to zero at this moment in the Drupal project application issue queue. I have attached a screenshot as proof.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/drupal-project-application-issue-slaughter/">&lt;p&gt;This is a happy day: the &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;project&#x2F;issues&#x2F;projectapplications?status=8&quot;&gt;issues needing review&lt;&#x2F;a&gt; count is down to zero at this moment in the Drupal project application issue queue. I have attached a screenshot as proof.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;a href=&quot;&#x2F;sites&#x2F;default&#x2F;files&#x2F;Screenshot at 2011-11-07 00%3A22%3A36.png&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;&#x2F;sites&#x2F;default&#x2F;files&#x2F;Screenshot%20at%202011-11-07%2000%3A22%3A36.png&quot; style=&quot;width: 600px; height: 303px; margin: 10px;&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;I started my involvement with project applications a few weeks ago, where &lt;a href=&quot;http:&#x2F;&#x2F;groups.drupal.org&#x2F;node&#x2F;187939#comment-620579&quot;&gt;we had 250 open issues&lt;&#x2F;a&gt; needing review. I saw it as a challenge to bring this number down radically and invested some hours pursuing it. I even &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;node&#x2F;1325258&quot;&gt;got into community spotlight&lt;&#x2F;a&gt; for this effort, which would not have been possible without the mentorship and support of many people. I want to thank greggles, sreynen, jthorson, ELC and all others that helped to resolve this 250 issue backlog and supported me in my addiction. Keep up the good work!&lt;&#x2F;p&gt;
 </description>
@@ -1764,7 +1774,7 @@ enforces.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/git-diff-color-words/</link>
           <guid>https://klau.si/git-diff-color-words/</guid>
-          <description>&lt;p&gt;Git command for better patch review.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/git-diff-color-words/">&lt;p&gt;Git command for better patch review.&lt;&#x2F;p&gt;
 &lt;p&gt;The usual patch format is often not really human readable. Consider &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;files&#x2F;issues&#x2F;dependent-clause-errors-806974-8.patch&quot;&gt;this patch on drupal.org&lt;&#x2F;a&gt; (&lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;node&#x2F;806974&quot;&gt;issue&lt;&#x2F;a&gt;) that only removes commas. How can I be sure that only the comma was removed on the changed lines? Fortunately, Git can help here. Download the patch, apply it to your repository and use the following command to get a colored output:&lt;&#x2F;p&gt;
 &lt;pre&gt;
 git diff --color-words&lt;&#x2F;pre&gt;
@@ -1777,7 +1787,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-rules-way-of-life/</link>
           <guid>https://klau.si/blog/drupalcon-rules-way-of-life/</guid>
-          <description>&lt;p&gt;Here is the video of our DrupalCon London 2011 talk &amp;quot;The Rules way of life&amp;quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-rules-way-of-life/">&lt;p&gt;Here is the video of our DrupalCon London 2011 talk &amp;quot;The Rules way of life&amp;quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;xXcbPi16VAU&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
       </item>
@@ -1787,7 +1797,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/ein-rückblick-auf-7-jahre-tu-wien/</link>
           <guid>https://klau.si/ein-rückblick-auf-7-jahre-tu-wien/</guid>
-          <description>&lt;p&gt;
+          <description xml:base="https://klau.si/ein-rückblick-auf-7-jahre-tu-wien/">&lt;p&gt;
 	Ich habe vor kurzem mein Informatikstudium an der TU Wien abgeschlossen, Zeit für einen kleinen Rückblick. Obwohl in diesem Artikel auch viele für mich negative Dinge vorkommen werden, so habe ich doch die Jahre sehr genossen, viel dazu gelernt und viele interessante Menschen getroffen. Ich möchte diesen Lebensabschnitt nicht missen und würde mich wohl wieder für die TU Wien entscheiden.&lt;&#x2F;p&gt;
 &lt;h3&gt;
 	Der Anfang&lt;&#x2F;h3&gt;
@@ -1853,7 +1863,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/nginx-configuration-drupal/</link>
           <guid>https://klau.si/nginx-configuration-drupal/</guid>
-          <description>&lt;p&gt;While nginx is highly configurable, you might encounter some problems and pitfalls when configuring it with Drupal. This post contains our configuration and solutions to those problems.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/nginx-configuration-drupal/">&lt;p&gt;While nginx is highly configurable, you might encounter some problems and pitfalls when configuring it with Drupal. This post contains our configuration and solutions to those problems.&lt;&#x2F;p&gt;
 </description>
       </item>
       <item>
@@ -1862,7 +1872,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/thesis/</link>
           <guid>https://klau.si/thesis/</guid>
-          <description>&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;&#x2F;sites&#x2F;default&#x2F;files&#x2F;wsclient_logo_300_0.thumbnail.png&quot; style=&quot;width: 209px; height: 217px; float: right;&quot; &#x2F;&gt;A master thesis written by Klaus Purer at the Vienna University of Technology, released in May 2011.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/thesis/">&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;&#x2F;sites&#x2F;default&#x2F;files&#x2F;wsclient_logo_300_0.thumbnail.png&quot; style=&quot;width: 209px; height: 217px; float: right;&quot; &#x2F;&gt;A master thesis written by Klaus Purer at the Vienna University of Technology, released in May 2011.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;strong&gt;Abstract:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;Building web applications has become a complex task and often requires interaction with other web applications, such as web services. Drupal is a free and open source content management system and framework that provides a rich platform for rapid web development. The modular and extensible nature of Drupal allows developers to customize and embrace the core functionality and to create new features. This thesis is about investigating and implementing a web service client module for Drupal that is able to consume classical WS* web services as well as RESTful web services.&lt;&#x2F;p&gt;
 </description>
@@ -1873,7 +1883,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/home-wifi-setup-ubuntu-asus-rt-n56u-and-linksys-wmp600n/</link>
           <guid>https://klau.si/home-wifi-setup-ubuntu-asus-rt-n56u-and-linksys-wmp600n/</guid>
-          <description>&lt;p&gt;
+          <description xml:base="https://klau.si/home-wifi-setup-ubuntu-asus-rt-n56u-and-linksys-wmp600n/">&lt;p&gt;
 	A summary about setting up a 802.11n wireless network at home, also for future self-reference.&lt;&#x2F;p&gt;
 </description>
       </item>
@@ -1883,7 +1893,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/running-php-53-and-52-parallel-nginx/</link>
           <guid>https://klau.si/running-php-53-and-52-parallel-nginx/</guid>
-          <description>&lt;p&gt;
+          <description xml:base="https://klau.si/running-php-53-and-52-parallel-nginx/">&lt;p&gt;
 	The problem: you want to upgrade your Ubuntu server, but you still need PHP 5.2 for some old web sites (i.e. Drupal 5 is not PHP 5.3 compatible).&lt;br &#x2F;&gt;
 	The solution: Go with the packaged PHP 5.3 for your new sites and compile PHP 5.2 yourself for the old ones. As we use the nginx webserver with FastCGI, we can choose per site which PHP CGI binary will handle the requests.&lt;&#x2F;p&gt;
 </description>
@@ -1894,7 +1904,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-rules-ecosystem/</link>
           <guid>https://klau.si/blog/drupalcon-rules-ecosystem/</guid>
-          <description>&lt;p&gt;Here is the video of our DrupalCon Copenhagen 2010 talk &amp;quot;About the Rules ecosystem&amp;quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-rules-ecosystem/">&lt;p&gt;Here is the video of our DrupalCon Copenhagen 2010 talk &amp;quot;About the Rules ecosystem&amp;quot;.&lt;&#x2F;p&gt;
 &lt;iframe src=&quot;https:&#x2F;&#x2F;archive.org&#x2F;embed&#x2F;AboutTheRulesEcosystem&quot; width=&quot;420&quot; height=&quot;236&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
       </item>
@@ -1904,7 +1914,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/git-cvs-export/</link>
           <guid>https://klau.si/git-cvs-export/</guid>
-          <description>&lt;p&gt;
+          <description xml:base="https://klau.si/git-cvs-export/">&lt;p&gt;
 	Sick of developing a Drupal module with CVS? Want to use git but also want your code in CVS on drupal.org for development snapshots? This is an approach to get rid of using CVS completely by synchronizing a git repository automatically to CVS. Basic git knowledge required. Script is on &lt;a href=&quot;http:&#x2F;&#x2F;github.com&#x2F;klausi&#x2F;git-cvs-export&quot;&gt;Github&lt;&#x2F;a&gt;. Needs some testing though.&lt;&#x2F;p&gt;
 </description>
       </item>
@@ -1914,7 +1924,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/integration/</link>
           <guid>https://klau.si/integration/</guid>
-          <description>&lt;p&gt;
+          <description xml:base="https://klau.si/integration/">&lt;p&gt;
 	Eine &lt;a href=&quot;http:&#x2F;&#x2F;fsinf.at&#x2F;humanit%C3%A4res-bleiberecht-f%C3%BCr-alle-petition-der-gr%C3%BCnen&quot;&gt;Diskussion rund ums Bleiberecht auf fsinf.at&lt;&#x2F;a&gt; hat mich dazu bewegt auch wiedermal ein bisschen nachzudenken und politischen Senf abzugeben, hier nochmal mein Kommentar zur Frage was denn Integration eigentlich ist:&lt;&#x2F;p&gt;
 </description>
       </item>
@@ -1924,7 +1934,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/ubuntu-talking-elvish-or-klingon/</link>
           <guid>https://klau.si/ubuntu-talking-elvish-or-klingon/</guid>
-          <description>&lt;p&gt;
+          <description xml:base="https://klau.si/ubuntu-talking-elvish-or-klingon/">&lt;p&gt;
 	Funny screenshot I captured yesterday (I guess this bug was originally caused by outputting binary data in a terminal):&lt;&#x2F;p&gt;
 &lt;p&gt;
 	&lt;a href=&quot;&#x2F;files&#x2F;ubuntu-elvish-klingon.png&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;&#x2F;files&#x2F;ubuntu-elvish-klingon.png&quot; style=&quot;width: 500px; height: 313px;&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
@@ -1936,7 +1946,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/lightning-talk-about-hooks-drupal/</link>
           <guid>https://klau.si/lightning-talk-about-hooks-drupal/</guid>
-          <description>&lt;p&gt;
+          <description xml:base="https://klau.si/lightning-talk-about-hooks-drupal/">&lt;p&gt;
 	I will attend the &lt;a href=&quot;http:&#x2F;&#x2F;sf2010.drupal.org&#x2F;conference&#x2F;core-developer-summit&quot;&gt;Drupal Core Developer Summit&lt;&#x2F;a&gt; at Drupalcon San Francisco, so I had to prepare a short lighting talk about a topic that bothers me in Drupal. As I ran into an issue of implementing a hook by accident recently, I decided to come up with some suggestions how to improve the situation. I have attached &lt;a href=&quot;&#x2F;files&#x2F;hooks_drupal.pdf&quot;&gt;the PDF&lt;&#x2F;a&gt; I will submit.&lt;&#x2F;p&gt;
 </description>
       </item>
@@ -1946,7 +1956,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/gmail-and-postmaster/</link>
           <guid>https://klau.si/gmail-and-postmaster/</guid>
-          <description>&lt;p&gt;The Gmail spam filter works fine most time, but be careful if you are the postmaster of a mail server and want to check delivery failure notifications in your Gmail account.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/gmail-and-postmaster/">&lt;p&gt;The Gmail spam filter works fine most time, but be careful if you are the postmaster of a mail server and want to check delivery failure notifications in your Gmail account.&lt;&#x2F;p&gt;
 </description>
       </item>
       <item>
@@ -1955,7 +1965,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/master-thesis-about-drupal-and-web-services/</link>
           <guid>https://klau.si/master-thesis-about-drupal-and-web-services/</guid>
-          <description>&lt;p&gt;
+          <description xml:base="https://klau.si/master-thesis-about-drupal-and-web-services/">&lt;p&gt;
 	In the last weeks I thought about a topic for my master thesis at the Vienna University of Technology, and I came up with the idea of integrating Drupal and Web Services.&lt;&#x2F;p&gt;
 </description>
       </item>
@@ -1965,7 +1975,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/drupal-core-update-script/</link>
           <guid>https://klau.si/drupal-core-update-script/</guid>
-          <description>&lt;p&gt;
+          <description xml:base="https://klau.si/drupal-core-update-script/">&lt;p&gt;
 	&lt;strong&gt;Update: Do not use this script anymore, drush provides a very good upgrade mechanism itself now!&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;
 	Upgrading &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&quot;&gt;Drupal&lt;&#x2F;a&gt; core can be a very tedious task - especially if you run a Drupal multi site installation (backup database, put site into maintenance mode, run update DB script, put site online again - repeat for every single site). We use &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;project&#x2F;drush&quot;&gt;Drush&lt;&#x2F;a&gt; and a custom bash script to make life much more easier on our fsinf.at Drupal farm.&lt;&#x2F;p&gt;
@@ -1977,7 +1987,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/ruby-rails-setup-ubuntu-910/</link>
           <guid>https://klau.si/ruby-rails-setup-ubuntu-910/</guid>
-          <description>&lt;p&gt;I&#x27;m working on a Ruby on Rails project right now and had to setup an environment on my Ubuntu 9.10 system. Here are the install commands for your reference if you want to get it done fast.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/ruby-rails-setup-ubuntu-910/">&lt;p&gt;I&#x27;m working on a Ruby on Rails project right now and had to setup an environment on my Ubuntu 9.10 system. Here are the install commands for your reference if you want to get it done fast.&lt;&#x2F;p&gt;
 </description>
       </item>
       <item>
@@ -1986,7 +1996,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/thunderbird-3-quick-test/</link>
           <guid>https://klau.si/thunderbird-3-quick-test/</guid>
-          <description>&lt;p&gt;Just tested the new Mozilla Thunderbird 3 mailclient, here is a very short review what has changed since version 2.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/thunderbird-3-quick-test/">&lt;p&gt;Just tested the new Mozilla Thunderbird 3 mailclient, here is a very short review what has changed since version 2.&lt;&#x2F;p&gt;
 </description>
       </item>
       <item>
@@ -1995,7 +2005,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/development-and-deployment-workflow-absolventenat/</link>
           <guid>https://klau.si/development-and-deployment-workflow-absolventenat/</guid>
-          <description>&lt;p&gt;Here you can find the slides to my &lt;a href=&quot;http:&#x2F;&#x2F;drupalcamp.at&quot;&gt;Drupalcamp Vienna&lt;&#x2F;a&gt; presentation about development and deployment at &lt;a href=&quot;http:&#x2F;&#x2F;absolventen.at&quot;&gt;Absolventen.at&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/development-and-deployment-workflow-absolventenat/">&lt;p&gt;Here you can find the slides to my &lt;a href=&quot;http:&#x2F;&#x2F;drupalcamp.at&quot;&gt;Drupalcamp Vienna&lt;&#x2F;a&gt; presentation about development and deployment at &lt;a href=&quot;http:&#x2F;&#x2F;absolventen.at&quot;&gt;Absolventen.at&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;a href=&quot;&#x2F;files&#x2F;absolventen-dev-workflow.pdf&quot;&gt;Presentation as PDF&lt;&#x2F;a&gt; or as &lt;a href=&quot;&#x2F;files&#x2F;absolventen-dev-workflow.odp&quot;&gt;ODP&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </description>
       </item>
@@ -2005,7 +2015,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/php-vs-python-vs-ruby/</link>
           <guid>https://klau.si/php-vs-python-vs-ruby/</guid>
-          <description>&lt;p&gt;I did an interesting programming language comparison last semester and wrote up a paper called &amp;quot;&lt;a href=&quot;&#x2F;sites&#x2F;default&#x2F;files&#x2F;php-vs-python-vs-ruby.pdf&quot;&gt;PHP vs. Python vs. Ruby &amp;ndash; The web scripting language shootout&amp;quot;&lt;&#x2F;a&gt;. I&#x27;m not completely satisfied with it as it does not dig deep enough into the details, but it provides a good introduction and overview. As my time was limited and the seminar was only worth 3 ECTS, further investigation and experiments were not done - I would appreciate any additional references on this topic, feel free to post a comment or contact me. &lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/php-vs-python-vs-ruby/">&lt;p&gt;I did an interesting programming language comparison last semester and wrote up a paper called &amp;quot;&lt;a href=&quot;&#x2F;sites&#x2F;default&#x2F;files&#x2F;php-vs-python-vs-ruby.pdf&quot;&gt;PHP vs. Python vs. Ruby &amp;ndash; The web scripting language shootout&amp;quot;&lt;&#x2F;a&gt;. I&#x27;m not completely satisfied with it as it does not dig deep enough into the details, but it provides a good introduction and overview. As my time was limited and the seminar was only worth 3 ECTS, further investigation and experiments were not done - I would appreciate any additional references on this topic, feel free to post a comment or contact me. &lt;&#x2F;p&gt;
 </description>
       </item>
       <item>
@@ -2014,7 +2024,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/yet-another-blog-move/</link>
           <guid>https://klau.si/yet-another-blog-move/</guid>
-          <description>&lt;p&gt;While I liked the &lt;a href=&quot;https:&#x2F;&#x2F;web.student.tuwien.ac.at&#x2F;~e0426223&#x2F;&quot;&gt;webspace&lt;&#x2F;a&gt; offered by the Vienna university of technology, I decided to move my Drupal blog to the Drupal farm at fsinf.at. This has two advantages: less administration&#x2F;update overhead (I&#x27;m responsible for Drupal updates on fsinf.at as well) and a much shorter, easy to remember URL.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/yet-another-blog-move/">&lt;p&gt;While I liked the &lt;a href=&quot;https:&#x2F;&#x2F;web.student.tuwien.ac.at&#x2F;~e0426223&#x2F;&quot;&gt;webspace&lt;&#x2F;a&gt; offered by the Vienna university of technology, I decided to move my Drupal blog to the Drupal farm at fsinf.at. This has two advantages: less administration&#x2F;update overhead (I&#x27;m responsible for Drupal updates on fsinf.at as well) and a much shorter, easy to remember URL.&lt;&#x2F;p&gt;
 </description>
       </item>
       <item>
@@ -2023,7 +2033,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/pro-e-voting/</link>
           <guid>https://klau.si/pro-e-voting/</guid>
-          <description>&lt;p&gt;Bei den &amp;Ouml;H-Wahlen 2009 kommt ja erstmals E-Voting in &amp;Ouml;sterreich zum Einsatz (Abgabe der Stimme &amp;uuml;ber das Internet). Es gibt viele gute Gr&amp;uuml;nde, warum E-Voting gef&amp;auml;hrlich ist, siehe dazu z.B. &lt;a href=&quot;http:&#x2F;&#x2F;papierwahl.at&#x2F;&quot;&gt;papierwahl.at&lt;&#x2F;a&gt; oder einen &lt;a href=&quot;http:&#x2F;&#x2F;sendungsarchiv.o94.at&#x2F;get.php?id=094pr3327&quot;&gt;Podcast von Peter Purgathofer&lt;&#x2F;a&gt;. Ich war letztens auf einer Podiumsdiskussion zu dem Thema und es war erschreckend, wie schlecht das System von einem &amp;Ouml;VP-Abgeordneten und einem Beamten aus dem Ministerium verkauft wurde. Es gab praktisch nur zwei Pro-Argumente: E-Voting erh&amp;ouml;ht die Wahlbeteiligung und E-Voting ist eh sicher. Weil aber mein gesamtes Umfeld gegen E-Voting ist, will keine produktive Diskussion aufkommen. Muss ich eben selbst als Advocatus Diaboli schl&amp;uuml;ssige Argumente f&amp;uuml;r E-Voting liefern, um ein bisschen einzuheizen:&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/pro-e-voting/">&lt;p&gt;Bei den &amp;Ouml;H-Wahlen 2009 kommt ja erstmals E-Voting in &amp;Ouml;sterreich zum Einsatz (Abgabe der Stimme &amp;uuml;ber das Internet). Es gibt viele gute Gr&amp;uuml;nde, warum E-Voting gef&amp;auml;hrlich ist, siehe dazu z.B. &lt;a href=&quot;http:&#x2F;&#x2F;papierwahl.at&#x2F;&quot;&gt;papierwahl.at&lt;&#x2F;a&gt; oder einen &lt;a href=&quot;http:&#x2F;&#x2F;sendungsarchiv.o94.at&#x2F;get.php?id=094pr3327&quot;&gt;Podcast von Peter Purgathofer&lt;&#x2F;a&gt;. Ich war letztens auf einer Podiumsdiskussion zu dem Thema und es war erschreckend, wie schlecht das System von einem &amp;Ouml;VP-Abgeordneten und einem Beamten aus dem Ministerium verkauft wurde. Es gab praktisch nur zwei Pro-Argumente: E-Voting erh&amp;ouml;ht die Wahlbeteiligung und E-Voting ist eh sicher. Weil aber mein gesamtes Umfeld gegen E-Voting ist, will keine produktive Diskussion aufkommen. Muss ich eben selbst als Advocatus Diaboli schl&amp;uuml;ssige Argumente f&amp;uuml;r E-Voting liefern, um ein bisschen einzuheizen:&lt;&#x2F;p&gt;
 &lt;ul&gt;
     &lt;li&gt;E-Voting ist ein unglaublich schnelles Mittel zur Partizipation von Studierenden, B&amp;uuml;rgerInnen etc. Sollte E-Voting bei den &amp;Ouml;H-Wahlen erfolgreich getestet werden, k&amp;ouml;nnte es auch f&amp;uuml;r andere Entscheidungen des &amp;quot;Volkes&amp;quot; herangezogen werden. Im Idealfall wird damit eine rein representative Demokratie durch eine mehr direkte Demokratie abgel&amp;ouml;st, wo wichtige Entscheidungen schnell und effektiv mit direkten Stimmen getroffen werden k&amp;ouml;nnen. E-Voting f&amp;ouml;rdert also den demokratischen Beitrag und die Mitbestimmung jeder einzelnen Person.&lt;&#x2F;li&gt;
     &lt;li&gt;E-Voting ist bequem. Kein m&amp;uuml;hsames Herumwarten in endlosen Schlangen bei den Wahllokalen, sondern zeitlich selbstbestimmtes Abegeben einer Stimme in wenigen Sekunden. Keine l&amp;auml;stige Pflicht, sondern ein angenehmes Recht.&lt;&#x2F;li&gt;
@@ -2040,7 +2050,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/stirb-wordpress-stirb/</link>
           <guid>https://klau.si/stirb-wordpress-stirb/</guid>
-          <description>&lt;p&gt;Endlich geschafft: Mein Weblog l&amp;auml;uft jetzt auf &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&quot;&gt;Drupal&lt;&#x2F;a&gt; und nicht mehr auf dem unsympathischen &lt;a href=&quot;http:&#x2F;&#x2F;wordpress.org&quot;&gt;Wordpress&lt;&#x2F;a&gt;. Gleichzeitig bin ich umgezogen - ich will mal den Webspace der TU ausprobieren. Seit einiger Zeit bietet der ZID ja PHP- und Mysql-Unterst&amp;uuml;tzung an, sodass hier auch Content Management Systeme aufgezogen werden k&amp;ouml;nnen.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/stirb-wordpress-stirb/">&lt;p&gt;Endlich geschafft: Mein Weblog l&amp;auml;uft jetzt auf &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&quot;&gt;Drupal&lt;&#x2F;a&gt; und nicht mehr auf dem unsympathischen &lt;a href=&quot;http:&#x2F;&#x2F;wordpress.org&quot;&gt;Wordpress&lt;&#x2F;a&gt;. Gleichzeitig bin ich umgezogen - ich will mal den Webspace der TU ausprobieren. Seit einiger Zeit bietet der ZID ja PHP- und Mysql-Unterst&amp;uuml;tzung an, sodass hier auch Content Management Systeme aufgezogen werden k&amp;ouml;nnen.&lt;&#x2F;p&gt;
 </description>
       </item>
       <item>
@@ -2049,7 +2059,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/sidux-way-life-beispiel-openoffice-3/</link>
           <guid>https://klau.si/sidux-way-life-beispiel-openoffice-3/</guid>
-          <description>&lt;p&gt;Eine &lt;a href=&quot;http:&#x2F;&#x2F;ikhaya.ubuntuusers.de&#x2F;2008&#x2F;10&#x2F;25&#x2F;ubuntu-rechtfertigt-entscheidung-gegen-openoffice.org-3.0&#x2F;&quot; target=&quot;_blank&quot;&gt;Ikhaya Meldung auf ubuntuusers.de&lt;&#x2F;a&gt; samt &lt;a href=&quot;http:&#x2F;&#x2F;forum.ubuntuusers.de&#x2F;topic&#x2F;ikhaya-ubuntu-rechtfertigt-entscheidung-gegen&#x2F;&quot;&gt;Diskussion&lt;&#x2F;a&gt; brachte mich letztens ein bisschen zum Lächeln: OpenOffice 3 wird nicht in Ubuntu 8.10 Intrepid Ibex enthalten sein. Großes Wehklagen war bei den Fans von Ubuntu (gleichzeitig Fans aktueller Software) zu hören, so was wird mir bei der Distribution meiner Wahl jedenfalls nicht passieren.</description>
+          <description xml:base="https://klau.si/sidux-way-life-beispiel-openoffice-3/">&lt;p&gt;Eine &lt;a href=&quot;http:&#x2F;&#x2F;ikhaya.ubuntuusers.de&#x2F;2008&#x2F;10&#x2F;25&#x2F;ubuntu-rechtfertigt-entscheidung-gegen-openoffice.org-3.0&#x2F;&quot; target=&quot;_blank&quot;&gt;Ikhaya Meldung auf ubuntuusers.de&lt;&#x2F;a&gt; samt &lt;a href=&quot;http:&#x2F;&#x2F;forum.ubuntuusers.de&#x2F;topic&#x2F;ikhaya-ubuntu-rechtfertigt-entscheidung-gegen&#x2F;&quot;&gt;Diskussion&lt;&#x2F;a&gt; brachte mich letztens ein bisschen zum Lächeln: OpenOffice 3 wird nicht in Ubuntu 8.10 Intrepid Ibex enthalten sein. Großes Wehklagen war bei den Fans von Ubuntu (gleichzeitig Fans aktueller Software) zu hören, so was wird mir bei der Distribution meiner Wahl jedenfalls nicht passieren.</description>
       </item>
       <item>
           <title>Python Dbus Gajim Magic</title>
@@ -2057,7 +2067,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/python-dbus-gajim-magic/</link>
           <guid>https://klau.si/python-dbus-gajim-magic/</guid>
-          <description>&lt;p&gt;I like &lt;a href=&quot;http:&#x2F;&#x2F;freedesktop.org&#x2F;wiki&#x2F;Software&#x2F;dbus&quot;&gt;Dbus&lt;&#x2F;a&gt; because it allows desktop applications to communicate with each other. I also like &lt;a href=&quot;http:&#x2F;&#x2F;www.python.org&#x2F;&quot;&gt;Python&lt;&#x2F;a&gt;, a powerful scripting language that is perfect for short tasks with a minimum of commands. And finally I like &lt;a href=&quot;http:&#x2F;&#x2F;www.gajim.org&quot;&gt;Gajim&lt;&#x2F;a&gt;, the instant messenger of my choice for the &lt;a href=&quot;http:&#x2F;&#x2F;jabber.rwth-aachen.de&#x2F;wiki&#x2F;index.php&#x2F;Jabber_-_Einfach_erkl%C3%A4rt!&quot;&gt;XMPP-Jabber network&lt;&#x2F;a&gt; (the only free [free as in free speech] instant messaging network!).&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/python-dbus-gajim-magic/">&lt;p&gt;I like &lt;a href=&quot;http:&#x2F;&#x2F;freedesktop.org&#x2F;wiki&#x2F;Software&#x2F;dbus&quot;&gt;Dbus&lt;&#x2F;a&gt; because it allows desktop applications to communicate with each other. I also like &lt;a href=&quot;http:&#x2F;&#x2F;www.python.org&#x2F;&quot;&gt;Python&lt;&#x2F;a&gt;, a powerful scripting language that is perfect for short tasks with a minimum of commands. And finally I like &lt;a href=&quot;http:&#x2F;&#x2F;www.gajim.org&quot;&gt;Gajim&lt;&#x2F;a&gt;, the instant messenger of my choice for the &lt;a href=&quot;http:&#x2F;&#x2F;jabber.rwth-aachen.de&#x2F;wiki&#x2F;index.php&#x2F;Jabber_-_Einfach_erkl%C3%A4rt!&quot;&gt;XMPP-Jabber network&lt;&#x2F;a&gt; (the only free [free as in free speech] instant messaging network!).&lt;&#x2F;p&gt;
 </description>
       </item>
       <item>
@@ -2066,7 +2076,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/mit-dem-schlauchboot-die-donau-runter/</link>
           <guid>https://klau.si/mit-dem-schlauchboot-die-donau-runter/</guid>
-          <description>&lt;p&gt;Ein etwas sp&amp;auml;ter Nachbericht meiner Reise im Juli.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/mit-dem-schlauchboot-die-donau-runter/">&lt;p&gt;Ein etwas sp&amp;auml;ter Nachbericht meiner Reise im Juli.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;img height=&quot;240&quot; width=&quot;320&quot; style=&quot;vertical-align: middle;&quot; src=&quot;&#x2F;files&#x2F;donau-fahrt.png&quot; alt=&quot;Auf der Donau mit Peace-Flagge&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;Was als Schnapsidee entstand, haben wir diesen Sommer realisiert: Mit einem gebrauchten, motorlosen Schlauboot traten wir Anfang Juli eine vierw&amp;ouml;chige Abenteuerfahrt die Donau hinunter an. Ausger&amp;uuml;stet mit Zelten, wasserdichten S&amp;auml;cken, einem ausf&amp;uuml;hrlichen Buch &amp;uuml;ber die Donaubefahrung, einem billigen 40 Euro Beiboot und zwei Paddeln machten wir uns zu dritt von Wien aus auf einen gem&amp;uuml;tlichen Trip auf.&lt;&#x2F;p&gt;
 </description>
@@ -2077,7 +2087,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/mach-der-volksfront-den-garaus/</link>
           <guid>https://klau.si/mach-der-volksfront-den-garaus/</guid>
-          <description>&lt;p&gt;Es ist wieder Wahlkampf in Österreich - passend dazu hier ein Schmakerl der ÖVP Propaganda aus dem Jahre 1966: Ein schönes Marsch-Lied mit schrägem, lustigem Text. Eignet sich perfekt zum Grölen im alkoholisiertem Zustand, beispielsweise auf Festivals (heuer am &lt;a title=&quot;Sauzipf Rocks&quot; href=&quot;http:&#x2F;&#x2F;www.sauzipfrocks.com&quot; target=&quot;_blank&quot;&gt;Sauzip&lt;&#x2F;a&gt;&lt;a title=&quot;Sauzipf Rocks&quot; href=&quot;http:&#x2F;&#x2F;www.sauzipfrocks.com&quot; target=&quot;_blank&quot;&gt;f&lt;&#x2F;a&gt; Camping Platz zu hören gewesen).&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/mach-der-volksfront-den-garaus/">&lt;p&gt;Es ist wieder Wahlkampf in Österreich - passend dazu hier ein Schmakerl der ÖVP Propaganda aus dem Jahre 1966: Ein schönes Marsch-Lied mit schrägem, lustigem Text. Eignet sich perfekt zum Grölen im alkoholisiertem Zustand, beispielsweise auf Festivals (heuer am &lt;a title=&quot;Sauzipf Rocks&quot; href=&quot;http:&#x2F;&#x2F;www.sauzipfrocks.com&quot; target=&quot;_blank&quot;&gt;Sauzip&lt;&#x2F;a&gt;&lt;a title=&quot;Sauzipf Rocks&quot; href=&quot;http:&#x2F;&#x2F;www.sauzipfrocks.com&quot; target=&quot;_blank&quot;&gt;f&lt;&#x2F;a&gt; Camping Platz zu hören gewesen).&lt;&#x2F;p&gt;
 &lt;p&gt;Hier der Link zum Lied als MP3: &lt;a title=&quot;ÖVP Wahkampfsong 1966&quot; href=&quot;http:&#x2F;&#x2F;stud4.tuwien.ac.at&#x2F;~e0426223&#x2F;oevp66.mp3&quot; target=&quot;_blank&quot;&gt;Download&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;a title=&quot;ÖVP Wahkampfsong 1966&quot; href=&quot;http:&#x2F;&#x2F;stud4.tuwien.ac.at&#x2F;~e0426223&#x2F;oevp66.mp3&quot; target=&quot;_blank&quot;&gt;
 </description>
@@ -2088,7 +2098,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/die-deutsche-wikipedia-ist-tot/</link>
           <guid>https://klau.si/die-deutsche-wikipedia-ist-tot/</guid>
-          <description>&lt;p&gt;Ich mag die &lt;a title=&quot;Wikipedia&quot; href=&quot;http:&#x2F;&#x2F;wikipedia.org&#x2F;&quot; target=&quot;_blank&quot;&gt;Wikipedia&lt;&#x2F;a&gt; eigentlich. Du weißt über einen Begriff nicht wirklich Bescheid und willst kurz wissen wo du ihn einordnen sollst - dafür war die &lt;a title=&quot;die &quot; href=&quot;http:&#x2F;&#x2F;de.wikipedia.org&#x2F;wiki&#x2F;Hauptseite&quot; target=&quot;_blank&quot;&gt;deutsche Wikipedia&lt;&#x2F;a&gt; zum Nachschlagen bestens geeignet. Klar, eine jede weiß, dass man den Inhalten nur bedingt vertrauen kann, aber für den Einstieg und für weiterführende Links war es immer noch gut genug.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/die-deutsche-wikipedia-ist-tot/">&lt;p&gt;Ich mag die &lt;a title=&quot;Wikipedia&quot; href=&quot;http:&#x2F;&#x2F;wikipedia.org&#x2F;&quot; target=&quot;_blank&quot;&gt;Wikipedia&lt;&#x2F;a&gt; eigentlich. Du weißt über einen Begriff nicht wirklich Bescheid und willst kurz wissen wo du ihn einordnen sollst - dafür war die &lt;a title=&quot;die &quot; href=&quot;http:&#x2F;&#x2F;de.wikipedia.org&#x2F;wiki&#x2F;Hauptseite&quot; target=&quot;_blank&quot;&gt;deutsche Wikipedia&lt;&#x2F;a&gt; zum Nachschlagen bestens geeignet. Klar, eine jede weiß, dass man den Inhalten nur bedingt vertrauen kann, aber für den Einstieg und für weiterführende Links war es immer noch gut genug.&lt;&#x2F;p&gt;
 &lt;p&gt;Unlängst wollte ich mal schauen, was in der deutschen Wikipedia eigentlich über das Betriebssystem, das ich auf meinem Desktop-Rechner benutze, steht (&lt;a title=&quot;Sidux Home&quot; href=&quot;http:&#x2F;&#x2F;sidux.com&quot; target=&quot;_blank&quot;&gt;Sidux&lt;&#x2F;a&gt; - darüber habe ich auch schon mal &lt;a href=&quot;https:&#x2F;&#x2F;klau.si&#x2F;sidux-der-n%C3%A4chste-schritt&#x2F;&quot;&gt;was geschrieben&lt;&#x2F;a&gt;). Zu meiner Verwunderung existierte kein Artikel dazu, also dachte ich mir ich lege mal schnell einen an mit ein paar Sätzen Inhalt, damit zumindest irgendwas über Sidux drinsteht, falls jemand mal nach dem Begriff sucht.&lt;&#x2F;p&gt;
 &lt;p&gt;Leider kam ich nicht weit, weil mich ein roter Banner vom Bearbeiten abhielt: &amp;quot;&lt;strong&gt;Eine Seite mit diesem Namen kann nicht angelegt werden. Die Sperre wurde durch FritzG mit der Begründung &lt;em&gt;„“&lt;&#x2F;em&gt; eingerichtet.&lt;&#x2F;strong&gt;&amp;quot;&lt;&#x2F;p&gt;
 </description>
@@ -2099,7 +2109,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/display-currently-playing-song-rythmbox-gajim-status-message/</link>
           <guid>https://klau.si/display-currently-playing-song-rythmbox-gajim-status-message/</guid>
-          <description>&lt;p&gt;I found a nice feature in the preferences of my instant messenger &lt;a href=&quot;http:&#x2F;&#x2F;www.gajim.org&quot; title=&quot;Gajim home&quot;&gt;gajim&lt;&#x2F;a&gt;, where a check box says &amp;quot;Set status message to reflect currently playing music track&amp;quot;. My only problem was that i could not enable the option, because it was greyed out and not active. First I tried to find a plugin for my musicplayer &lt;a href=&quot;http:&#x2F;&#x2F;rhythmbox.org&quot; title=&quot;Rhythmbox home&quot;&gt;r&lt;&#x2F;a&gt;&lt;a href=&quot;http:&#x2F;&#x2F;rhythmbox.org&quot; title=&quot;Rhythmbox home&quot;&gt;hythmbox&lt;&#x2F;a&gt;, but the information I found seemed to be old and several web pages said that gajim and rhythmbox should work together natively. I remembered that most &lt;a href=&quot;http:&#x2F;&#x2F;gnome.org&quot; title=&quot;GNOME home&quot;&gt;GNOME&lt;&#x2F;a&gt; applications use &lt;a href=&quot;http:&#x2F;&#x2F;www.freedesktop.org&#x2F;wiki&#x2F;Software&#x2F;dbus&quot; title=&quot;D-Bus home&quot;&gt;D-Bus&lt;&#x2F;a&gt; to communicate with each other. I supposed that there was a D-Bus package missing on my &lt;a href=&quot;http:&#x2F;&#x2F;sidux.com&quot; title=&quot;Sidux home&quot;&gt;Sidux&lt;&#x2F;a&gt; system, so I searched the package repository with &amp;quot;apt-cache search dbus&amp;quot; and found a package named &amp;quot;&lt;a href=&quot;http:&#x2F;&#x2F;packages.debian.org&#x2F;sid&#x2F;python-dbus&quot; title=&quot;Debian package info&quot;&gt;python-dbus&lt;&#x2F;a&gt;&amp;quot;. Since I know that gajim is written in &lt;a href=&quot;http:&#x2F;&#x2F;python.org&quot; title=&quot;Python home&quot;&gt;python&lt;&#x2F;a&gt; I installed the package and had success: After a restart of gajim the option was now available and worked when enabled.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/display-currently-playing-song-rythmbox-gajim-status-message/">&lt;p&gt;I found a nice feature in the preferences of my instant messenger &lt;a href=&quot;http:&#x2F;&#x2F;www.gajim.org&quot; title=&quot;Gajim home&quot;&gt;gajim&lt;&#x2F;a&gt;, where a check box says &amp;quot;Set status message to reflect currently playing music track&amp;quot;. My only problem was that i could not enable the option, because it was greyed out and not active. First I tried to find a plugin for my musicplayer &lt;a href=&quot;http:&#x2F;&#x2F;rhythmbox.org&quot; title=&quot;Rhythmbox home&quot;&gt;r&lt;&#x2F;a&gt;&lt;a href=&quot;http:&#x2F;&#x2F;rhythmbox.org&quot; title=&quot;Rhythmbox home&quot;&gt;hythmbox&lt;&#x2F;a&gt;, but the information I found seemed to be old and several web pages said that gajim and rhythmbox should work together natively. I remembered that most &lt;a href=&quot;http:&#x2F;&#x2F;gnome.org&quot; title=&quot;GNOME home&quot;&gt;GNOME&lt;&#x2F;a&gt; applications use &lt;a href=&quot;http:&#x2F;&#x2F;www.freedesktop.org&#x2F;wiki&#x2F;Software&#x2F;dbus&quot; title=&quot;D-Bus home&quot;&gt;D-Bus&lt;&#x2F;a&gt; to communicate with each other. I supposed that there was a D-Bus package missing on my &lt;a href=&quot;http:&#x2F;&#x2F;sidux.com&quot; title=&quot;Sidux home&quot;&gt;Sidux&lt;&#x2F;a&gt; system, so I searched the package repository with &amp;quot;apt-cache search dbus&amp;quot; and found a package named &amp;quot;&lt;a href=&quot;http:&#x2F;&#x2F;packages.debian.org&#x2F;sid&#x2F;python-dbus&quot; title=&quot;Debian package info&quot;&gt;python-dbus&lt;&#x2F;a&gt;&amp;quot;. Since I know that gajim is written in &lt;a href=&quot;http:&#x2F;&#x2F;python.org&quot; title=&quot;Python home&quot;&gt;python&lt;&#x2F;a&gt; I installed the package and had success: After a restart of gajim the option was now available and worked when enabled.&lt;&#x2F;p&gt;
 &lt;p&gt;Solution worked with gajim 0.11.4 and rhythmbox 0.10.1.&lt;&#x2F;p&gt;
 </description>
       </item>
@@ -2109,7 +2119,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/sidux-der-nächste-schritt/</link>
           <guid>https://klau.si/sidux-der-nächste-schritt/</guid>
-          <description>&lt;p&gt;Lange habe ich auf meinem Desktop-Rechner &lt;a href=&quot;http:&#x2F;&#x2F;ubuntu.com&quot; title=&quot;Ubuntu Home&quot;&gt;Ubuntu GNU&#x2F;Linux&lt;&#x2F;a&gt; eingesetzt, was für mich zumeist sehr bequem funktioniert hat. Am Anfang wusste ich kaum wie man eine Shell  bedient - es war bei Ubuntu auch nur selten notwendig, vieles ging über grafische Konfigurationstools oder man befragte einfach das ausgezeichnete &lt;a href=&quot;http:&#x2F;&#x2F;wiki.ubuntuusers.de&#x2F;&quot; title=&quot;deutsches Ubuntu Wiki&quot;&gt;Ubuntuusers-Wiki&lt;&#x2F;a&gt;. Die Jahre zogen ins Land, auf der Uni wurde auch viel mit GNU&#x2F;Linux&#x2F;Unix gemacht und ich begann schön langsam die Innereien eines debian-artigen Betriebssystems kennenzulernen (Ubuntu basiert ja auf &lt;a href=&quot;http:&#x2F;&#x2F;debian.org&quot; title=&quot;Debian Home&quot;&gt;Debian&lt;&#x2F;a&gt;). Die Philosophie von freier bzw. open source Software überzeugte mich immer mehr, und ich konnte fast ganz auf Windows XP verzichten (XP habe ich heute noch im &lt;a href=&quot;http:&#x2F;&#x2F;wiki.ubuntuusers.de&#x2F;Dualboot&quot; title=&quot;Wikibeitrag zu Dualboot&quot;&gt;Dualboot&lt;&#x2F;a&gt;, Vista habe ich gar nie probiert).&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/sidux-der-nächste-schritt/">&lt;p&gt;Lange habe ich auf meinem Desktop-Rechner &lt;a href=&quot;http:&#x2F;&#x2F;ubuntu.com&quot; title=&quot;Ubuntu Home&quot;&gt;Ubuntu GNU&#x2F;Linux&lt;&#x2F;a&gt; eingesetzt, was für mich zumeist sehr bequem funktioniert hat. Am Anfang wusste ich kaum wie man eine Shell  bedient - es war bei Ubuntu auch nur selten notwendig, vieles ging über grafische Konfigurationstools oder man befragte einfach das ausgezeichnete &lt;a href=&quot;http:&#x2F;&#x2F;wiki.ubuntuusers.de&#x2F;&quot; title=&quot;deutsches Ubuntu Wiki&quot;&gt;Ubuntuusers-Wiki&lt;&#x2F;a&gt;. Die Jahre zogen ins Land, auf der Uni wurde auch viel mit GNU&#x2F;Linux&#x2F;Unix gemacht und ich begann schön langsam die Innereien eines debian-artigen Betriebssystems kennenzulernen (Ubuntu basiert ja auf &lt;a href=&quot;http:&#x2F;&#x2F;debian.org&quot; title=&quot;Debian Home&quot;&gt;Debian&lt;&#x2F;a&gt;). Die Philosophie von freier bzw. open source Software überzeugte mich immer mehr, und ich konnte fast ganz auf Windows XP verzichten (XP habe ich heute noch im &lt;a href=&quot;http:&#x2F;&#x2F;wiki.ubuntuusers.de&#x2F;Dualboot&quot; title=&quot;Wikibeitrag zu Dualboot&quot;&gt;Dualboot&lt;&#x2F;a&gt;, Vista habe ich gar nie probiert).&lt;&#x2F;p&gt;
 </description>
       </item>
       <item>
@@ -2118,7 +2128,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/klitoris-die-schöne-unbekannte/</link>
           <guid>https://klau.si/klitoris-die-schöne-unbekannte/</guid>
-          <description>&lt;p&gt;Ich habe den spannenden Themenabend &lt;a href=&quot;http:&#x2F;&#x2F;www.arte.tv&#x2F;de&#x2F;woche&#x2F;244,broadcastingNum=775128,day=7,week=47,year=2007.html&quot;&gt;&amp;quot;Jetzt Onanie!&amp;quot;&lt;&#x2F;a&gt; auf &lt;a href=&quot;http:&#x2F;&#x2F;www.arte.tv&quot;&gt;arte&lt;&#x2F;a&gt; gesehen, wo es um Selbstbefriedigung und Sexualit&amp;auml;t ging. Besonders interessant war ein Beitrag zum weiblichen Sexualorgan schlechthin: der Klitoris. Seien wir ehrlich: Wer wei&amp;szlig; schon wirklich wie sie funktioniert?  Das liegt vor allem daran, dass die weibliche Sexualit&amp;auml;t nur schlecht erforscht und dokumentiert ist, und dass erst allm&amp;auml;hlich neue Erkenntnisse aus der Forschung gewonnen werden.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/klitoris-die-schöne-unbekannte/">&lt;p&gt;Ich habe den spannenden Themenabend &lt;a href=&quot;http:&#x2F;&#x2F;www.arte.tv&#x2F;de&#x2F;woche&#x2F;244,broadcastingNum=775128,day=7,week=47,year=2007.html&quot;&gt;&amp;quot;Jetzt Onanie!&amp;quot;&lt;&#x2F;a&gt; auf &lt;a href=&quot;http:&#x2F;&#x2F;www.arte.tv&quot;&gt;arte&lt;&#x2F;a&gt; gesehen, wo es um Selbstbefriedigung und Sexualit&amp;auml;t ging. Besonders interessant war ein Beitrag zum weiblichen Sexualorgan schlechthin: der Klitoris. Seien wir ehrlich: Wer wei&amp;szlig; schon wirklich wie sie funktioniert?  Das liegt vor allem daran, dass die weibliche Sexualit&amp;auml;t nur schlecht erforscht und dokumentiert ist, und dass erst allm&amp;auml;hlich neue Erkenntnisse aus der Forschung gewonnen werden.&lt;&#x2F;p&gt;
 </description>
       </item>
       <item>
@@ -2127,7 +2137,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/windows-vista-gratis/</link>
           <guid>https://klau.si/windows-vista-gratis/</guid>
-          <description>&lt;p&gt;Jetzt gibt es ein unglaubliches Angebot: &lt;a href=&quot;http:&#x2F;&#x2F;www.ubuntu.com&#x2F;&quot;&gt;Microsoft Windows Vista Ultimate Edition&lt;&#x2F;a&gt; kann gratis aus dem Internet heruntergeladen werden, und das völlig legal! Diese Version ist außerdem auf Sicherheit ausgelegt und benötigt daher keinen Virenscanner und keine Firewall! Mitgeliefert werden volle 3D-Effekte, das &lt;a href=&quot;http:&#x2F;&#x2F;www.openoffice.org&#x2F;&quot;&gt;Microsoft Office Professional&lt;&#x2F;a&gt; Paket und &lt;a href=&quot;http:&#x2F;&#x2F;www.gimp.org&#x2F;&quot;&gt;Adobe Photoshop&lt;&#x2F;a&gt;!&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/windows-vista-gratis/">&lt;p&gt;Jetzt gibt es ein unglaubliches Angebot: &lt;a href=&quot;http:&#x2F;&#x2F;www.ubuntu.com&#x2F;&quot;&gt;Microsoft Windows Vista Ultimate Edition&lt;&#x2F;a&gt; kann gratis aus dem Internet heruntergeladen werden, und das völlig legal! Diese Version ist außerdem auf Sicherheit ausgelegt und benötigt daher keinen Virenscanner und keine Firewall! Mitgeliefert werden volle 3D-Effekte, das &lt;a href=&quot;http:&#x2F;&#x2F;www.openoffice.org&#x2F;&quot;&gt;Microsoft Office Professional&lt;&#x2F;a&gt; Paket und &lt;a href=&quot;http:&#x2F;&#x2F;www.gimp.org&#x2F;&quot;&gt;Adobe Photoshop&lt;&#x2F;a&gt;!&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;ubuntu.gds.tuwien.ac.at&#x2F;cdimage&#x2F;releases&#x2F;gutsy&#x2F;ubuntu-7.10-desktop-i386.iso&quot;&gt;Hier geht&#x27;s zum Download ...&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </description>
       </item>
@@ -2137,7 +2147,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/meine-lieblingsseiten-meine-lieblingssoftware/</link>
           <guid>https://klau.si/meine-lieblingsseiten-meine-lieblingssoftware/</guid>
-          <description>&lt;p&gt;Ich habe mal auf &lt;a href=&quot;http:&#x2F;&#x2F;vowi.fsinf.at&#x2F;wiki&#x2F;Benutzer:Klausi&quot; title=&quot;Meine Seite im VoWi&quot; target=&quot;_blank&quot;&gt;meiner Benutzerseite&lt;&#x2F;a&gt; im &lt;a href=&quot;http:&#x2F;&#x2F;vowi.fsinf.at&quot; title=&quot;VorlesungsWiki&quot; target=&quot;_blank&quot;&gt;VoWi&lt;&#x2F;a&gt; eine Auflistung zu meinem elektronischen Alltag erstellt. Kommentare zu besseren Seiten und besseren Programmen sind willkommen!&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/meine-lieblingsseiten-meine-lieblingssoftware/">&lt;p&gt;Ich habe mal auf &lt;a href=&quot;http:&#x2F;&#x2F;vowi.fsinf.at&#x2F;wiki&#x2F;Benutzer:Klausi&quot; title=&quot;Meine Seite im VoWi&quot; target=&quot;_blank&quot;&gt;meiner Benutzerseite&lt;&#x2F;a&gt; im &lt;a href=&quot;http:&#x2F;&#x2F;vowi.fsinf.at&quot; title=&quot;VorlesungsWiki&quot; target=&quot;_blank&quot;&gt;VoWi&lt;&#x2F;a&gt; eine Auflistung zu meinem elektronischen Alltag erstellt. Kommentare zu besseren Seiten und besseren Programmen sind willkommen!&lt;&#x2F;p&gt;
 </description>
       </item>
       <item>
@@ -2146,7 +2156,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/brecht-das-gesetz-brecht-die-abschiebung/</link>
           <guid>https://klau.si/brecht-das-gesetz-brecht-die-abschiebung/</guid>
-          <description>&lt;p&gt;Abgesehen von dem etwas grauslichen Fremdenrecht sind leider auch die Asylverfahren in Österreich ja nicht gerade schnell. Was dann passiert, haben wir in letzter Zeit deutlich mitbekommen: Menschen, die seit vielen Jahren in Österreich leben, werden abgeschoben.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/brecht-das-gesetz-brecht-die-abschiebung/">&lt;p&gt;Abgesehen von dem etwas grauslichen Fremdenrecht sind leider auch die Asylverfahren in Österreich ja nicht gerade schnell. Was dann passiert, haben wir in letzter Zeit deutlich mitbekommen: Menschen, die seit vielen Jahren in Österreich leben, werden abgeschoben.&lt;&#x2F;p&gt;
 &lt;p&gt;Was also tun? Es wurde eine &lt;a href=&quot;http:&#x2F;&#x2F;gegenabschiebung.wordpress.com&#x2F;&quot; title=&quot;Online Unterschriftenliste&quot; target=&quot;_blank&quot;&gt;Solidaritätsliste&lt;&#x2F;a&gt; ins Leben gerufen, die sich eindeutig dazu bekennt, von der Abschiebung bedrohten Menschen im Ernstfall weiterzuhelfen, auch wenn das bedeutet, dass damit geltende Gesetze gebrochen werden.&lt;&#x2F;p&gt;
 &lt;p&gt;Wie immer muss sich jede einzelne darüber Gedanken machen, ob sie den Gesetzen oder der Menschlichkeit folgen will. Wir sind auch in einer demokratischen Republik nicht davor gefeit mitzudenken bzw. mitzuhelfen und dürfen uns nicht auf die &amp;quot;Gerechtigkeit&amp;quot; des Staates verlassen. Je mehr Menschen sich der Aktion anschließen, desto eher wird auch eine Verbesserung der Gesetze passieren.&lt;&#x2F;p&gt;
 </description>
@@ -2157,7 +2167,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/telling-gajim-remember-window-position/</link>
           <guid>https://klau.si/telling-gajim-remember-window-position/</guid>
-          <description>&lt;p&gt;Recently I deprecated my ICQ account and switched from my old Instant Messaging Client &lt;a href=&quot;http:&#x2F;&#x2F;www.pidgin.im&quot; title=&quot;Pidign Project Site&quot; target=&quot;_blank&quot;&gt;Pidgin&lt;&#x2F;a&gt; to &lt;a href=&quot;http:&#x2F;&#x2F;www.gajim.org&#x2F;&quot; title=&quot;Gajim Project Site&quot; target=&quot;_blank&quot;&gt;Gajim&lt;&#x2F;a&gt;, a &lt;a href=&quot;http:&#x2F;&#x2F;www.jabber.org&#x2F;about&#x2F;overview.shtml&quot; title=&quot;Jabber Protocol Overview&quot;&gt;Jabber&lt;&#x2F;a&gt;-only IM-client. The good thing: Messages can now be encrypted with &lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Pretty_Good_Privacy&quot; title=&quot;Wikipedia about PGP&quot; target=&quot;_blank&quot;&gt;PGP&#x2F;GPG&lt;&#x2F;a&gt;! The bad thing: The Window position and size was not remembered by Gajim, so the program appeared always on the left instead of the right side, where I placed it, and that on every program start.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/telling-gajim-remember-window-position/">&lt;p&gt;Recently I deprecated my ICQ account and switched from my old Instant Messaging Client &lt;a href=&quot;http:&#x2F;&#x2F;www.pidgin.im&quot; title=&quot;Pidign Project Site&quot; target=&quot;_blank&quot;&gt;Pidgin&lt;&#x2F;a&gt; to &lt;a href=&quot;http:&#x2F;&#x2F;www.gajim.org&#x2F;&quot; title=&quot;Gajim Project Site&quot; target=&quot;_blank&quot;&gt;Gajim&lt;&#x2F;a&gt;, a &lt;a href=&quot;http:&#x2F;&#x2F;www.jabber.org&#x2F;about&#x2F;overview.shtml&quot; title=&quot;Jabber Protocol Overview&quot;&gt;Jabber&lt;&#x2F;a&gt;-only IM-client. The good thing: Messages can now be encrypted with &lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Pretty_Good_Privacy&quot; title=&quot;Wikipedia about PGP&quot; target=&quot;_blank&quot;&gt;PGP&#x2F;GPG&lt;&#x2F;a&gt;! The bad thing: The Window position and size was not remembered by Gajim, so the program appeared always on the left instead of the right side, where I placed it, and that on every program start.&lt;&#x2F;p&gt;
 &lt;p&gt;Solution:&lt;&#x2F;p&gt;
 &lt;ol&gt;
 	&lt;li&gt;Go to preferences  ==&amp;gt; Advanced ==&amp;gt; Advanced Configuration Editor&lt;&#x2F;li&gt;
@@ -2174,7 +2184,7 @@ Solution worked with Gajim version 0.11.1.
           <author>Klaus Purer</author>
           <link>https://klau.si/frauinnen-emanzencodex-und-das-ganze-gender-blabla/</link>
           <guid>https://klau.si/frauinnen-emanzencodex-und-das-ganze-gender-blabla/</guid>
-          <description>&lt;p&gt;Nette Überschrift, etwas übertrieben vielleicht, aber nett. In letzter Zeit gab es viele Diskussionen zum Thema Gleichberechtigung in meinem Online-Umfeld, angefangen bei &lt;a href=&quot;http:&#x2F;&#x2F;fsinf.at&#x2F;node&#x2F;449&quot;&gt;Kommentaren auf fsinf.at&lt;&#x2F;a&gt;, über einen &lt;a href=&quot;http:&#x2F;&#x2F;www.informatik-forum.at&#x2F;showthread.php?t=54487&quot;&gt;Frauenräume-Thread&lt;&#x2F;a&gt; im Informatik-Forum, bis hin zu einer Offtopic-Grundsatzdiskussion über geschlechtergerechte Sprache im &lt;a href=&quot;http:&#x2F;&#x2F;www.informatik-forum.at&#x2F;showthread.php?t=53667&quot;&gt;Veganismus-Thread&lt;&#x2F;a&gt;, ebenfalls im Informatik-Forum. Ich möchte hier nochmals meine Meinung zusammenfassen.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/frauinnen-emanzencodex-und-das-ganze-gender-blabla/">&lt;p&gt;Nette Überschrift, etwas übertrieben vielleicht, aber nett. In letzter Zeit gab es viele Diskussionen zum Thema Gleichberechtigung in meinem Online-Umfeld, angefangen bei &lt;a href=&quot;http:&#x2F;&#x2F;fsinf.at&#x2F;node&#x2F;449&quot;&gt;Kommentaren auf fsinf.at&lt;&#x2F;a&gt;, über einen &lt;a href=&quot;http:&#x2F;&#x2F;www.informatik-forum.at&#x2F;showthread.php?t=54487&quot;&gt;Frauenräume-Thread&lt;&#x2F;a&gt; im Informatik-Forum, bis hin zu einer Offtopic-Grundsatzdiskussion über geschlechtergerechte Sprache im &lt;a href=&quot;http:&#x2F;&#x2F;www.informatik-forum.at&#x2F;showthread.php?t=53667&quot;&gt;Veganismus-Thread&lt;&#x2F;a&gt;, ebenfalls im Informatik-Forum. Ich möchte hier nochmals meine Meinung zusammenfassen.&lt;&#x2F;p&gt;
 </description>
       </item>
       <item>
@@ -2183,7 +2193,7 @@ Solution worked with Gajim version 0.11.1.
           <author>Klaus Purer</author>
           <link>https://klau.si/der-nationalsozialismus-und-ich/</link>
           <guid>https://klau.si/der-nationalsozialismus-und-ich/</guid>
-          <description>&lt;p&gt;Oft erwähnt, oft für Beispiele herangezogen (siehe auch &lt;a href=&quot;http:&#x2F;&#x2F;de.wikipedia.org&#x2F;wiki&#x2F;Godwins_law&quot; title=&quot;Godwins Law&quot; target=&quot;_blank&quot;&gt;Godwins Law&lt;&#x2F;a&gt;), gut dokumentiert und wohlbekannt: der Nationalsozialismus. Wir alle wissen was in den Dreißiger Jahren und im zweiten Weltkrieg passiert ist, es wurde uns in der Schule beigebracht und von der älteren Generation überliefert. Wir wissen auch wie es dazu gekommen ist, zumindest ungefähr. Die Frage &amp;quot;Wie konnte das nur passieren?&amp;quot; steht für mich trotzdem immer noch im Raum, die Frage &amp;quot;Wie können wir verhindern, dass so etwas jetzt und in Zukunft nicht mehr passiert?&amp;quot; scheint mir auch viel zuwenig oft diskutiert worden.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/der-nationalsozialismus-und-ich/">&lt;p&gt;Oft erwähnt, oft für Beispiele herangezogen (siehe auch &lt;a href=&quot;http:&#x2F;&#x2F;de.wikipedia.org&#x2F;wiki&#x2F;Godwins_law&quot; title=&quot;Godwins Law&quot; target=&quot;_blank&quot;&gt;Godwins Law&lt;&#x2F;a&gt;), gut dokumentiert und wohlbekannt: der Nationalsozialismus. Wir alle wissen was in den Dreißiger Jahren und im zweiten Weltkrieg passiert ist, es wurde uns in der Schule beigebracht und von der älteren Generation überliefert. Wir wissen auch wie es dazu gekommen ist, zumindest ungefähr. Die Frage &amp;quot;Wie konnte das nur passieren?&amp;quot; steht für mich trotzdem immer noch im Raum, die Frage &amp;quot;Wie können wir verhindern, dass so etwas jetzt und in Zukunft nicht mehr passiert?&amp;quot; scheint mir auch viel zuwenig oft diskutiert worden.&lt;&#x2F;p&gt;
 </description>
       </item>
       <item>
@@ -2192,7 +2202,7 @@ Solution worked with Gajim version 0.11.1.
           <author>Klaus Purer</author>
           <link>https://klau.si/die-vorlesung-über-die-vorlesung-sich/</link>
           <guid>https://klau.si/die-vorlesung-über-die-vorlesung-sich/</guid>
-          <description>&lt;p&gt;Ich habe gerade die Online-Prüfung zur &lt;a href=&quot;http:&#x2F;&#x2F;ringvorlesung.univie.ac.at&#x2F;&quot; title=&quot;Homepage der Ringvorlesung&quot; target=&quot;_blank&quot;&gt;Ringvorlesung zum Thema Vorlesung&lt;&#x2F;a&gt; aus dem WS 06&#x2F;07 abgelegt. Man musste eine Prüfungsfrage in einem MS-Word Dokument beantworten und auf die &lt;a href=&quot;http:&#x2F;&#x2F;webct.univie.ac.at&quot; target=&quot;_blank&quot; title=&quot;WebCT Plattform&quot;&gt;E-Lerning Plattform der Uni Wien&lt;&#x2F;a&gt; hinaufladen.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/die-vorlesung-über-die-vorlesung-sich/">&lt;p&gt;Ich habe gerade die Online-Prüfung zur &lt;a href=&quot;http:&#x2F;&#x2F;ringvorlesung.univie.ac.at&#x2F;&quot; title=&quot;Homepage der Ringvorlesung&quot; target=&quot;_blank&quot;&gt;Ringvorlesung zum Thema Vorlesung&lt;&#x2F;a&gt; aus dem WS 06&#x2F;07 abgelegt. Man musste eine Prüfungsfrage in einem MS-Word Dokument beantworten und auf die &lt;a href=&quot;http:&#x2F;&#x2F;webct.univie.ac.at&quot; target=&quot;_blank&quot; title=&quot;WebCT Plattform&quot;&gt;E-Lerning Plattform der Uni Wien&lt;&#x2F;a&gt; hinaufladen.&lt;&#x2F;p&gt;
 &lt;p&gt;Prüfungsfrage: &amp;quot;Welche Probleme der Wissensvermittlung ergeben sich aus dem Mitschreiben und den Mitschriften einer Vorlesung?&amp;quot;&lt;&#x2F;p&gt;
 </description>
       </item>
@@ -2202,7 +2212,7 @@ Solution worked with Gajim version 0.11.1.
           <author>Klaus Purer</author>
           <link>https://klau.si/oida-bist-schwul-oder-was/</link>
           <guid>https://klau.si/oida-bist-schwul-oder-was/</guid>
-          <description>&lt;p&gt;Nein, eigentlich nicht. Vielleicht ein bisschen bisexuell, wie wahrscheinlich jeder Mensch, aber davon merke ich bis jetzt nichts. Homosexualit&amp;auml;t scheint noch immer ein Tabu-Thema zu sein, selbst in Zeiten politischer Akzeptanz und sogenannten aufgekl&amp;auml;rten Jugendlichen. Es wird von den einen als etwas besonderes, etwas au&amp;szlig;erhalb der Norm angesehen, von den anderen als abartig oder sogar als Krankheit betrachtet.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/oida-bist-schwul-oder-was/">&lt;p&gt;Nein, eigentlich nicht. Vielleicht ein bisschen bisexuell, wie wahrscheinlich jeder Mensch, aber davon merke ich bis jetzt nichts. Homosexualit&amp;auml;t scheint noch immer ein Tabu-Thema zu sein, selbst in Zeiten politischer Akzeptanz und sogenannten aufgekl&amp;auml;rten Jugendlichen. Es wird von den einen als etwas besonderes, etwas au&amp;szlig;erhalb der Norm angesehen, von den anderen als abartig oder sogar als Krankheit betrachtet.&lt;&#x2F;p&gt;
 </description>
       </item>
       <item>
@@ -2211,7 +2221,7 @@ Solution worked with Gajim version 0.11.1.
           <author>Klaus Purer</author>
           <link>https://klau.si/hello-world/</link>
           <guid>https://klau.si/hello-world/</guid>
-          <description>&lt;p&gt;Wahrscheinlich der 100.000ste WordPress-Weblog der Welt. Ja auch ich halte dem Gruppendruck nicht mehr Stand und eröffne meinen zweiten Weblog (im Gegensatz zu &lt;a href=&quot;http:&#x2F;&#x2F;twoday.tuwien.ac.at&#x2F;klausi&#x2F;&quot;&gt;meinem ersten Weblog&lt;&#x2F;a&gt; verspreche ich diesmal tatsächlich Inhalt zu produzieren ;-) ).&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/hello-world/">&lt;p&gt;Wahrscheinlich der 100.000ste WordPress-Weblog der Welt. Ja auch ich halte dem Gruppendruck nicht mehr Stand und eröffne meinen zweiten Weblog (im Gegensatz zu &lt;a href=&quot;http:&#x2F;&#x2F;twoday.tuwien.ac.at&#x2F;klausi&#x2F;&quot;&gt;meinem ersten Weblog&lt;&#x2F;a&gt; verspreche ich diesmal tatsächlich Inhalt zu produzieren ;-) ).&lt;&#x2F;p&gt;
 </description>
       </item>
     </channel>

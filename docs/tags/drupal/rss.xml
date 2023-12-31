@@ -7,14 +7,24 @@
       <generator>Zola</generator>
       <language>en</language>
       <atom:link href="https://klau.si/tags/drupal/rss.xml" rel="self" type="application/rss+xml"/>
-      <lastBuildDate>Tue, 12 Dec 2023 00:00:00 +0000</lastBuildDate>
+      <lastBuildDate>Sun, 31 Dec 2023 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Drupal 7 end of life podcast: Unofficial Drupal 7 Security Team</title>
+          <pubDate>Sun, 31 Dec 2023 00:00:00 +0000</pubDate>
+          <author>Klaus Purer</author>
+          <link>https://klau.si/blog/d7-eol-podcast/</link>
+          <guid>https://klau.si/blog/d7-eol-podcast/</guid>
+          <description xml:base="https://klau.si/blog/d7-eol-podcast/">&lt;p&gt;Here is the video of my appearance on the Drupal 7 end of life podcast, talking about plans for the &lt;a href=&quot;https:&#x2F;&#x2F;www.d7security.org&#x2F;&quot;&gt;D7Security&lt;&#x2F;a&gt; group. Thank you Mark Dorison and Chris Free from Chromatic for the recording!&lt;&#x2F;p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;embed&#x2F;hNI73M0ftOM?si=mPReJ3ZTMT7-8f7_&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
+</description>
+      </item>
       <item>
           <title>Proposing a Drupal 7 security team</title>
           <pubDate>Tue, 12 Dec 2023 00:00:00 +0000</pubDate>
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/proposing-drupal-7-security-team/</link>
           <guid>https://klau.si/blog/proposing-drupal-7-security-team/</guid>
-          <description>&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;proposing-drupal-7-security-team&#x2F;unsupported-hm.png&quot; alt=&quot;Screenshot of a drupal.org release settings page. Contains a warning box with the text &amp;quot;Branches compatible with Drupal 7.x that are set as unsupported cannot be set as supported again.&amp;quot;. A big thinking emoji is inserted on the screenshot.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/proposing-drupal-7-security-team/">&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;proposing-drupal-7-security-team&#x2F;unsupported-hm.png&quot; alt=&quot;Screenshot of a drupal.org release settings page. Contains a warning box with the text &amp;quot;Branches compatible with Drupal 7.x that are set as unsupported cannot be set as supported again.&amp;quot;. A big thinking emoji is inserted on the screenshot.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;The Drupal Security Team has announced in &lt;a href=&quot;https:&#x2F;&#x2F;www.drupal.org&#x2F;psa-2023-06-07&quot;&gt;PSA-2023-06-07&lt;&#x2F;a&gt; that unsupported Drupal 7 modules&#x2F;themes cannot be supported again. I&#x27;m proposing to create a D7Security team on Github that can provide security fixes for those unsupported modules. A small update module can then notify Drupal 7 site owners when new security releases are available on Github.&lt;&#x2F;p&gt;
 </description>
       </item>
@@ -24,7 +34,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-security-code-review/</link>
           <guid>https://klau.si/blog/drupalcon-security-code-review/</guid>
-          <description>&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;klausi.github.io&#x2F;sec-code-review2019&#x2F;#&#x2F;&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of my DrupalCon Amsterdam 2019 talk &amp;quot;Find security vulnerabilities through code review&amp;quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-security-code-review/">&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;klausi.github.io&#x2F;sec-code-review2019&#x2F;#&#x2F;&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of my DrupalCon Amsterdam 2019 talk &amp;quot;Find security vulnerabilities through code review&amp;quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;Oyoja2rfqSk&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
       </item>
@@ -34,7 +44,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupal-security-vulnerability-learnings/</link>
           <guid>https://klau.si/blog/drupal-security-vulnerability-learnings/</guid>
-          <description>&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;drupal-security-vulnerability-learnings&#x2F;meetup_security.jpeg&quot; alt=&quot;Drupal Austria security meetup&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupal-security-vulnerability-learnings/">&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;drupal-security-vulnerability-learnings&#x2F;meetup_security.jpeg&quot; alt=&quot;Drupal Austria security meetup&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;Here are &lt;a href=&quot;&#x2F;presentations&#x2F;sec-learnings2019&#x2F;index.html&quot;&gt;the slides&lt;&#x2F;a&gt; of my Drupal Austria Meetup talk &amp;quot;Drupal security learnings&amp;quot;.&lt;&#x2F;p&gt;
 </description>
       </item>
@@ -44,7 +54,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-automated-testing-phpunit/</link>
           <guid>https://klau.si/blog/drupalcon-automated-testing-phpunit/</guid>
-          <description>&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;docs.google.com&#x2F;presentation&#x2F;d&#x2F;1Uhw3wYfcC_axz6SRTxEHVe8FZHbA-tUGN7dr7YyHMXg&#x2F;edit#slide=id.p&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of our DrupalCon Dublin 2016 talk &amp;quot;Automated Testing: PHPUnit all the way&amp;quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-automated-testing-phpunit/">&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;docs.google.com&#x2F;presentation&#x2F;d&#x2F;1Uhw3wYfcC_axz6SRTxEHVe8FZHbA-tUGN7dr7YyHMXg&#x2F;edit#slide=id.p&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of our DrupalCon Dublin 2016 talk &amp;quot;Automated Testing: PHPUnit all the way&amp;quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;jcdEp3YGa94&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
       </item>
@@ -54,7 +64,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-publish-module/</link>
           <guid>https://klau.si/blog/drupalcon-publish-module/</guid>
-          <description>&lt;p&gt;Here is the video of my DrupalCon Asia 2016 talk &amp;quot;How to publish a module on drupal.org&amp;quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-publish-module/">&lt;p&gt;Here is the video of my DrupalCon Asia 2016 talk &amp;quot;How to publish a module on drupal.org&amp;quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;JWLb--cb33E&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
       </item>
@@ -64,7 +74,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/dev/</link>
           <guid>https://klau.si/dev/</guid>
-          <description>&lt;p&gt;I upgraded my local computer to Ubuntu 15.10 today and revisited my Drupal development environment (this &lt;a href=&quot;&#x2F;drupal-development-setup-ubuntu-1310&quot;&gt;guide is also available for Ubuntu 13.10&lt;&#x2F;a&gt;). Here is a simple and fast guide how to configure Ubuntu for development. There are a number of &lt;a href=&quot;https:&#x2F;&#x2F;www.drupal.org&#x2F;node&#x2F;262&quot;&gt;installation documentation pages on this topic on drupal.org&lt;&#x2F;a&gt;, but they suggest to use the packaged Drupal installation and to run Drupal in subfolders (e.g. http:&#x2F;&#x2F;localhost&#x2F;drupal6). They also do not cover some other important development tools like Phpmyadmin or php.ini settings. During development we want to edit files and we want to do that somewhere in our home directory to avoid any permission problems. There is also &lt;a href=&quot;https:&#x2F;&#x2F;www.drupal.org&#x2F;project&#x2F;drubuntu&quot;&gt;Drubuntu&lt;&#x2F;a&gt;, but it is outdated and does way too much magic in my opinion. So here is a more transparent tutorial that highlights the key development configuration settings for Drupal development on a local computer (do not use this for a production server!).</description>
+          <description xml:base="https://klau.si/dev/">&lt;p&gt;I upgraded my local computer to Ubuntu 15.10 today and revisited my Drupal development environment (this &lt;a href=&quot;&#x2F;drupal-development-setup-ubuntu-1310&quot;&gt;guide is also available for Ubuntu 13.10&lt;&#x2F;a&gt;). Here is a simple and fast guide how to configure Ubuntu for development. There are a number of &lt;a href=&quot;https:&#x2F;&#x2F;www.drupal.org&#x2F;node&#x2F;262&quot;&gt;installation documentation pages on this topic on drupal.org&lt;&#x2F;a&gt;, but they suggest to use the packaged Drupal installation and to run Drupal in subfolders (e.g. http:&#x2F;&#x2F;localhost&#x2F;drupal6). They also do not cover some other important development tools like Phpmyadmin or php.ini settings. During development we want to edit files and we want to do that somewhere in our home directory to avoid any permission problems. There is also &lt;a href=&quot;https:&#x2F;&#x2F;www.drupal.org&#x2F;project&#x2F;drubuntu&quot;&gt;Drubuntu&lt;&#x2F;a&gt;, but it is outdated and does way too much magic in my opinion. So here is a more transparent tutorial that highlights the key development configuration settings for Drupal development on a local computer (do not use this for a production server!).</description>
       </item>
       <item>
           <title>Drupalcon 2015 talk: Drupal and Security: what you need to know</title>
@@ -72,7 +82,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-security-what-you-need-to-know/</link>
           <guid>https://klau.si/blog/drupalcon-security-what-you-need-to-know/</guid>
-          <description>&lt;p&gt;Here are &lt;a href=&quot;http:&#x2F;&#x2F;scor.github.io&#x2F;drupal-security-2015&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of our DrupalCon Barcelona 2015 talk &amp;quot;Drupal and Security: what you need to know&amp;quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-security-what-you-need-to-know/">&lt;p&gt;Here are &lt;a href=&quot;http:&#x2F;&#x2F;scor.github.io&#x2F;drupal-security-2015&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of our DrupalCon Barcelona 2015 talk &amp;quot;Drupal and Security: what you need to know&amp;quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;5LpKelSMsas&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
       </item>
@@ -82,7 +92,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-coding-with-rules-drupal-8/</link>
           <guid>https://klau.si/blog/drupalcon-coding-with-rules-drupal-8/</guid>
-          <description>&lt;p&gt;Here is the video of our DrupalCon Barcelona 2015 talk &amp;quot;Coding with Rules for Drupal 8&amp;quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-coding-with-rules-drupal-8/">&lt;p&gt;Here is the video of our DrupalCon Barcelona 2015 talk &amp;quot;Coding with Rules for Drupal 8&amp;quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;QcU_LCAHNLg&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
       </item>
@@ -92,7 +102,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-cracking-drupal/</link>
           <guid>https://klau.si/blog/drupalcon-cracking-drupal/</guid>
-          <description>&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;docs.google.com&#x2F;presentation&#x2F;d&#x2F;1LWXRbcQUTj9NDHg8gHplAc7EGy94nmbUEUryWLHJqBg&#x2F;edit?usp=sharing&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of our DrupalCon Amsterdam 2014 talk &amp;quot;Cracking Drupal&amp;quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-cracking-drupal/">&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;docs.google.com&#x2F;presentation&#x2F;d&#x2F;1LWXRbcQUTj9NDHg8gHplAc7EGy94nmbUEUryWLHJqBg&#x2F;edit?usp=sharing&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of our DrupalCon Amsterdam 2014 talk &amp;quot;Cracking Drupal&amp;quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;ZkNGObI4nlU&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
       </item>
@@ -102,7 +112,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/drupal-development-setup-ubuntu-1310/</link>
           <guid>https://klau.si/drupal-development-setup-ubuntu-1310/</guid>
-          <description>&lt;p&gt;I upgraded my local computer to Ubuntu 13.10 today and revisited my Drupal development environment (this &lt;a href=&quot;&#x2F;dev-ubuntu-12-04&quot;&gt;guide is also available for Ubuntu 12.04&lt;&#x2F;a&gt;). Here is a simple and fast guide how to configure Ubuntu for development. There are a number of &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;node&#x2F;262&quot;&gt;installation documentation pages on this topic on drupal.org&lt;&#x2F;a&gt;, but they suggest to use the packaged Drupal installation and to run Drupal in subfolders (e.g. http:&#x2F;&#x2F;localhost&#x2F;drupal6). They also do not cover some other important development tools like Phpmyadmin or php.ini settings. During development we want to edit files and we want to do that somewhere in our home directory to avoid any permission problems. There is also &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;project&#x2F;drubuntu&quot;&gt;Drubuntu&lt;&#x2F;a&gt;, but it is outdated and does way too much magic in my opinion. So here is a more transparent tutorial that highlights the key development configuration settings for Drupal development on a local computer (do not use this for a production server!).</description>
+          <description xml:base="https://klau.si/drupal-development-setup-ubuntu-1310/">&lt;p&gt;I upgraded my local computer to Ubuntu 13.10 today and revisited my Drupal development environment (this &lt;a href=&quot;&#x2F;dev-ubuntu-12-04&quot;&gt;guide is also available for Ubuntu 12.04&lt;&#x2F;a&gt;). Here is a simple and fast guide how to configure Ubuntu for development. There are a number of &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;node&#x2F;262&quot;&gt;installation documentation pages on this topic on drupal.org&lt;&#x2F;a&gt;, but they suggest to use the packaged Drupal installation and to run Drupal in subfolders (e.g. http:&#x2F;&#x2F;localhost&#x2F;drupal6). They also do not cover some other important development tools like Phpmyadmin or php.ini settings. During development we want to edit files and we want to do that somewhere in our home directory to avoid any permission problems. There is also &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;project&#x2F;drubuntu&quot;&gt;Drubuntu&lt;&#x2F;a&gt;, but it is outdated and does way too much magic in my opinion. So here is a more transparent tutorial that highlights the key development configuration settings for Drupal development on a local computer (do not use this for a production server!).</description>
       </item>
       <item>
           <title>Drupalcon Prague 2013 talk: REST and Serialization in Drupal 8</title>
@@ -110,7 +120,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-prague-rest-serialization-drupal-8/</link>
           <guid>https://klau.si/blog/drupalcon-prague-rest-serialization-drupal-8/</guid>
-          <description>&lt;p&gt;Here is the video of our DrupalCon Prague 2013 talk &amp;quot;REST and serialization in Drupal 8&amp;quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-prague-rest-serialization-drupal-8/">&lt;p&gt;Here is the video of our DrupalCon Prague 2013 talk &amp;quot;REST and serialization in Drupal 8&amp;quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;w6dqzDbY78k&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
       </item>
@@ -120,7 +130,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-portland-rest-serialization-drupal-8/</link>
           <guid>https://klau.si/blog/drupalcon-portland-rest-serialization-drupal-8/</guid>
-          <description>&lt;p&gt;Here is the video of our DrupalCon Portland 2013 talk &amp;quot;REST and serialization in Drupal 8&amp;quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-portland-rest-serialization-drupal-8/">&lt;p&gt;Here is the video of our DrupalCon Portland 2013 talk &amp;quot;REST and serialization in Drupal 8&amp;quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;6FNfy7pU6mE&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
       </item>
@@ -130,7 +140,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/state-project-application-issue-queue-2013/</link>
           <guid>https://klau.si/state-project-application-issue-queue-2013/</guid>
-          <description>&lt;p&gt;I wrote a brief status update of what is going on in the Drupal project application issue queue lately. Read more at &lt;a href=&quot;http:&#x2F;&#x2F;groups.drupal.org&#x2F;node&#x2F;281758&quot;&gt;groups.drupal.org&lt;&#x2F;a&gt;.</description>
+          <description xml:base="https://klau.si/state-project-application-issue-queue-2013/">&lt;p&gt;I wrote a brief status update of what is going on in the Drupal project application issue queue lately. Read more at &lt;a href=&quot;http:&#x2F;&#x2F;groups.drupal.org&#x2F;node&#x2F;281758&quot;&gt;groups.drupal.org&lt;&#x2F;a&gt;.</description>
       </item>
       <item>
           <title>REST module status report</title>
@@ -138,7 +148,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/rest-module-status-report/</link>
           <guid>https://klau.si/rest-module-status-report/</guid>
-          <description>&lt;p&gt;I posted a &lt;a href=&quot;http:&#x2F;&#x2F;groups.drupal.org&#x2F;node&#x2F;273413&quot;&gt;status report on g.d.o&lt;&#x2F;a&gt; on the work that has been going into the Restful Web Services module for Drupal 8. I would like to thank &lt;a href=&quot;http:&#x2F;&#x2F;www.acquia.com&#x2F;&quot;&gt;Acquia&lt;&#x2F;a&gt; and &lt;a href=&quot;http:&#x2F;&#x2F;epiqo.com&#x2F;&quot;&gt;epiqo&lt;&#x2F;a&gt; again who have extended their sponsorship so that I can get further things done in the &lt;a href=&quot;http:&#x2F;&#x2F;buytaert.net&#x2F;drupal-8-feature-freeze-extended&quot;&gt;Drupal 8 feature completion phase&lt;&#x2F;a&gt;.</description>
+          <description xml:base="https://klau.si/rest-module-status-report/">&lt;p&gt;I posted a &lt;a href=&quot;http:&#x2F;&#x2F;groups.drupal.org&#x2F;node&#x2F;273413&quot;&gt;status report on g.d.o&lt;&#x2F;a&gt; on the work that has been going into the Restful Web Services module for Drupal 8. I would like to thank &lt;a href=&quot;http:&#x2F;&#x2F;www.acquia.com&#x2F;&quot;&gt;Acquia&lt;&#x2F;a&gt; and &lt;a href=&quot;http:&#x2F;&#x2F;epiqo.com&#x2F;&quot;&gt;epiqo&lt;&#x2F;a&gt; again who have extended their sponsorship so that I can get further things done in the &lt;a href=&quot;http:&#x2F;&#x2F;buytaert.net&#x2F;drupal-8-feature-freeze-extended&quot;&gt;Drupal 8 feature completion phase&lt;&#x2F;a&gt;.</description>
       </item>
       <item>
           <title>A RESTful entity web API for Drupal 8</title>
@@ -146,7 +156,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/restful-entity-web-api-drupal-8/</link>
           <guid>https://klau.si/restful-entity-web-api-drupal-8/</guid>
-          <description>&lt;p&gt;I&#x27;m happy to announce that I will join the &lt;a href=&quot;http:&#x2F;&#x2F;groups.drupal.org&#x2F;wscci&quot;&gt;WSCCI initiative&lt;&#x2F;a&gt; to help develop web service interfaces in Drupal 8. Big thanks to my team at &lt;a href=&quot;http:&#x2F;&#x2F;epiqo.com&#x2F;&quot;&gt;epiqo&lt;&#x2F;a&gt; for sponsoring and making time for me to work on this, as well as &lt;a href=&quot;https:&#x2F;&#x2F;www.acquia.com&#x2F;&quot;&gt;Acquia&lt;&#x2F;a&gt; for providing a crucial financial part to make this happen.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/restful-entity-web-api-drupal-8/">&lt;p&gt;I&#x27;m happy to announce that I will join the &lt;a href=&quot;http:&#x2F;&#x2F;groups.drupal.org&#x2F;wscci&quot;&gt;WSCCI initiative&lt;&#x2F;a&gt; to help develop web service interfaces in Drupal 8. Big thanks to my team at &lt;a href=&quot;http:&#x2F;&#x2F;epiqo.com&#x2F;&quot;&gt;epiqo&lt;&#x2F;a&gt; for sponsoring and making time for me to work on this, as well as &lt;a href=&quot;https:&#x2F;&#x2F;www.acquia.com&#x2F;&quot;&gt;Acquia&lt;&#x2F;a&gt; for providing a crucial financial part to make this happen.&lt;&#x2F;p&gt;
 &lt;p&gt;Read the &lt;a href=&quot;http:&#x2F;&#x2F;groups.drupal.org&#x2F;node&#x2F;262063&quot;&gt;full announcement on groups.drupal.org&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 </description>
       </item>
@@ -156,7 +166,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-project-application-process/</link>
           <guid>https://klau.si/blog/drupalcon-project-application-process/</guid>
-          <description>&lt;p&gt;Here is the video of our DrupalCon Munich 2012 talk &amp;quot;The project application process&amp;quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-project-application-process/">&lt;p&gt;Here is the video of our DrupalCon Munich 2012 talk &amp;quot;The project application process&amp;quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;jLj0K8Trvus&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
       </item>
@@ -166,7 +176,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/dev-ubuntu-12-04/</link>
           <guid>https://klau.si/dev-ubuntu-12-04/</guid>
-          <description>&lt;p&gt;I upgraded my local computer to Ubuntu 12.04 today and revisited my Drupal development environment. Here is a simple and fast guide how to configure Ubuntu for development. There are a number of &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;node&#x2F;262&quot;&gt;installation documentation pages on this topic on drupal.org&lt;&#x2F;a&gt;, but they suggest to use the packaged Drupal installation and to run Drupal in subfolders (e.g. http:&#x2F;&#x2F;localhost&#x2F;drupal6). They also do not cover some other important development tools like Phpmyadmin or php.ini settings. During development we want to edit files and we want to do that somewhere in our home directory to avoid any permission problems. There is also &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;project&#x2F;drubuntu&quot;&gt;Drubuntu&lt;&#x2F;a&gt;, but it is outdated and does way too much magic in my opinion. So here is a more transparent tutorial that highlights the key development configuration settings for Drupal development.</description>
+          <description xml:base="https://klau.si/dev-ubuntu-12-04/">&lt;p&gt;I upgraded my local computer to Ubuntu 12.04 today and revisited my Drupal development environment. Here is a simple and fast guide how to configure Ubuntu for development. There are a number of &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;node&#x2F;262&quot;&gt;installation documentation pages on this topic on drupal.org&lt;&#x2F;a&gt;, but they suggest to use the packaged Drupal installation and to run Drupal in subfolders (e.g. http:&#x2F;&#x2F;localhost&#x2F;drupal6). They also do not cover some other important development tools like Phpmyadmin or php.ini settings. During development we want to edit files and we want to do that somewhere in our home directory to avoid any permission problems. There is also &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;project&#x2F;drubuntu&quot;&gt;Drubuntu&lt;&#x2F;a&gt;, but it is outdated and does way too much magic in my opinion. So here is a more transparent tutorial that highlights the key development configuration settings for Drupal development.</description>
       </item>
       <item>
           <title>Installation of a Drupal Upgrade Path Test DB</title>
@@ -174,7 +184,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/installation-drupal-upgrade-path-test-db/</link>
           <guid>https://klau.si/installation-drupal-upgrade-path-test-db/</guid>
-          <description>&lt;p&gt;While working on the &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;node&#x2F;935062&quot;&gt;Kill role IDs patch&lt;&#x2F;a&gt; I had to develop some upgrade path Simpletests. Unfortunately the &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;node&#x2F;1429136&quot;&gt;documentation for upgrade path tests&lt;&#x2F;a&gt; currently lacks installtion instructions on how to work with the existing bare and filled exported test databases. Here is a small writeup of what I did until we document that properly.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/installation-drupal-upgrade-path-test-db/">&lt;p&gt;While working on the &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;node&#x2F;935062&quot;&gt;Kill role IDs patch&lt;&#x2F;a&gt; I had to develop some upgrade path Simpletests. Unfortunately the &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;node&#x2F;1429136&quot;&gt;documentation for upgrade path tests&lt;&#x2F;a&gt; currently lacks installtion instructions on how to work with the existing bare and filled exported test databases. Here is a small writeup of what I did until we document that properly.&lt;&#x2F;p&gt;
 </description>
       </item>
       <item>
@@ -183,7 +193,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/drupal-project-application-issue-slaughter/</link>
           <guid>https://klau.si/drupal-project-application-issue-slaughter/</guid>
-          <description>&lt;p&gt;This is a happy day: the &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;project&#x2F;issues&#x2F;projectapplications?status=8&quot;&gt;issues needing review&lt;&#x2F;a&gt; count is down to zero at this moment in the Drupal project application issue queue. I have attached a screenshot as proof.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/drupal-project-application-issue-slaughter/">&lt;p&gt;This is a happy day: the &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;project&#x2F;issues&#x2F;projectapplications?status=8&quot;&gt;issues needing review&lt;&#x2F;a&gt; count is down to zero at this moment in the Drupal project application issue queue. I have attached a screenshot as proof.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;a href=&quot;&#x2F;sites&#x2F;default&#x2F;files&#x2F;Screenshot at 2011-11-07 00%3A22%3A36.png&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;&#x2F;sites&#x2F;default&#x2F;files&#x2F;Screenshot%20at%202011-11-07%2000%3A22%3A36.png&quot; style=&quot;width: 600px; height: 303px; margin: 10px;&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;I started my involvement with project applications a few weeks ago, where &lt;a href=&quot;http:&#x2F;&#x2F;groups.drupal.org&#x2F;node&#x2F;187939#comment-620579&quot;&gt;we had 250 open issues&lt;&#x2F;a&gt; needing review. I saw it as a challenge to bring this number down radically and invested some hours pursuing it. I even &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;node&#x2F;1325258&quot;&gt;got into community spotlight&lt;&#x2F;a&gt; for this effort, which would not have been possible without the mentorship and support of many people. I want to thank greggles, sreynen, jthorson, ELC and all others that helped to resolve this 250 issue backlog and supported me in my addiction. Keep up the good work!&lt;&#x2F;p&gt;
 </description>
@@ -194,7 +204,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/git-diff-color-words/</link>
           <guid>https://klau.si/git-diff-color-words/</guid>
-          <description>&lt;p&gt;Git command for better patch review.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/git-diff-color-words/">&lt;p&gt;Git command for better patch review.&lt;&#x2F;p&gt;
 &lt;p&gt;The usual patch format is often not really human readable. Consider &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;files&#x2F;issues&#x2F;dependent-clause-errors-806974-8.patch&quot;&gt;this patch on drupal.org&lt;&#x2F;a&gt; (&lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;node&#x2F;806974&quot;&gt;issue&lt;&#x2F;a&gt;) that only removes commas. How can I be sure that only the comma was removed on the changed lines? Fortunately, Git can help here. Download the patch, apply it to your repository and use the following command to get a colored output:&lt;&#x2F;p&gt;
 &lt;pre&gt;
 git diff --color-words&lt;&#x2F;pre&gt;
@@ -207,7 +217,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-rules-way-of-life/</link>
           <guid>https://klau.si/blog/drupalcon-rules-way-of-life/</guid>
-          <description>&lt;p&gt;Here is the video of our DrupalCon London 2011 talk &amp;quot;The Rules way of life&amp;quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-rules-way-of-life/">&lt;p&gt;Here is the video of our DrupalCon London 2011 talk &amp;quot;The Rules way of life&amp;quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;xXcbPi16VAU&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
       </item>
@@ -217,7 +227,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/nginx-configuration-drupal/</link>
           <guid>https://klau.si/nginx-configuration-drupal/</guid>
-          <description>&lt;p&gt;While nginx is highly configurable, you might encounter some problems and pitfalls when configuring it with Drupal. This post contains our configuration and solutions to those problems.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/nginx-configuration-drupal/">&lt;p&gt;While nginx is highly configurable, you might encounter some problems and pitfalls when configuring it with Drupal. This post contains our configuration and solutions to those problems.&lt;&#x2F;p&gt;
 </description>
       </item>
       <item>
@@ -226,7 +236,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/thesis/</link>
           <guid>https://klau.si/thesis/</guid>
-          <description>&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;&#x2F;sites&#x2F;default&#x2F;files&#x2F;wsclient_logo_300_0.thumbnail.png&quot; style=&quot;width: 209px; height: 217px; float: right;&quot; &#x2F;&gt;A master thesis written by Klaus Purer at the Vienna University of Technology, released in May 2011.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/thesis/">&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;&#x2F;sites&#x2F;default&#x2F;files&#x2F;wsclient_logo_300_0.thumbnail.png&quot; style=&quot;width: 209px; height: 217px; float: right;&quot; &#x2F;&gt;A master thesis written by Klaus Purer at the Vienna University of Technology, released in May 2011.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;strong&gt;Abstract:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;Building web applications has become a complex task and often requires interaction with other web applications, such as web services. Drupal is a free and open source content management system and framework that provides a rich platform for rapid web development. The modular and extensible nature of Drupal allows developers to customize and embrace the core functionality and to create new features. This thesis is about investigating and implementing a web service client module for Drupal that is able to consume classical WS* web services as well as RESTful web services.&lt;&#x2F;p&gt;
 </description>
@@ -237,7 +247,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/running-php-53-and-52-parallel-nginx/</link>
           <guid>https://klau.si/running-php-53-and-52-parallel-nginx/</guid>
-          <description>&lt;p&gt;
+          <description xml:base="https://klau.si/running-php-53-and-52-parallel-nginx/">&lt;p&gt;
 	The problem: you want to upgrade your Ubuntu server, but you still need PHP 5.2 for some old web sites (i.e. Drupal 5 is not PHP 5.3 compatible).&lt;br &#x2F;&gt;
 	The solution: Go with the packaged PHP 5.3 for your new sites and compile PHP 5.2 yourself for the old ones. As we use the nginx webserver with FastCGI, we can choose per site which PHP CGI binary will handle the requests.&lt;&#x2F;p&gt;
 </description>
@@ -248,7 +258,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-rules-ecosystem/</link>
           <guid>https://klau.si/blog/drupalcon-rules-ecosystem/</guid>
-          <description>&lt;p&gt;Here is the video of our DrupalCon Copenhagen 2010 talk &amp;quot;About the Rules ecosystem&amp;quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-rules-ecosystem/">&lt;p&gt;Here is the video of our DrupalCon Copenhagen 2010 talk &amp;quot;About the Rules ecosystem&amp;quot;.&lt;&#x2F;p&gt;
 &lt;iframe src=&quot;https:&#x2F;&#x2F;archive.org&#x2F;embed&#x2F;AboutTheRulesEcosystem&quot; width=&quot;420&quot; height=&quot;236&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
       </item>
@@ -258,7 +268,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/git-cvs-export/</link>
           <guid>https://klau.si/git-cvs-export/</guid>
-          <description>&lt;p&gt;
+          <description xml:base="https://klau.si/git-cvs-export/">&lt;p&gt;
 	Sick of developing a Drupal module with CVS? Want to use git but also want your code in CVS on drupal.org for development snapshots? This is an approach to get rid of using CVS completely by synchronizing a git repository automatically to CVS. Basic git knowledge required. Script is on &lt;a href=&quot;http:&#x2F;&#x2F;github.com&#x2F;klausi&#x2F;git-cvs-export&quot;&gt;Github&lt;&#x2F;a&gt;. Needs some testing though.&lt;&#x2F;p&gt;
 </description>
       </item>
@@ -268,7 +278,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/lightning-talk-about-hooks-drupal/</link>
           <guid>https://klau.si/lightning-talk-about-hooks-drupal/</guid>
-          <description>&lt;p&gt;
+          <description xml:base="https://klau.si/lightning-talk-about-hooks-drupal/">&lt;p&gt;
 	I will attend the &lt;a href=&quot;http:&#x2F;&#x2F;sf2010.drupal.org&#x2F;conference&#x2F;core-developer-summit&quot;&gt;Drupal Core Developer Summit&lt;&#x2F;a&gt; at Drupalcon San Francisco, so I had to prepare a short lighting talk about a topic that bothers me in Drupal. As I ran into an issue of implementing a hook by accident recently, I decided to come up with some suggestions how to improve the situation. I have attached &lt;a href=&quot;&#x2F;files&#x2F;hooks_drupal.pdf&quot;&gt;the PDF&lt;&#x2F;a&gt; I will submit.&lt;&#x2F;p&gt;
 </description>
       </item>
@@ -278,7 +288,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/master-thesis-about-drupal-and-web-services/</link>
           <guid>https://klau.si/master-thesis-about-drupal-and-web-services/</guid>
-          <description>&lt;p&gt;
+          <description xml:base="https://klau.si/master-thesis-about-drupal-and-web-services/">&lt;p&gt;
 	In the last weeks I thought about a topic for my master thesis at the Vienna University of Technology, and I came up with the idea of integrating Drupal and Web Services.&lt;&#x2F;p&gt;
 </description>
       </item>
@@ -288,7 +298,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/drupal-core-update-script/</link>
           <guid>https://klau.si/drupal-core-update-script/</guid>
-          <description>&lt;p&gt;
+          <description xml:base="https://klau.si/drupal-core-update-script/">&lt;p&gt;
 	&lt;strong&gt;Update: Do not use this script anymore, drush provides a very good upgrade mechanism itself now!&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;
 	Upgrading &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&quot;&gt;Drupal&lt;&#x2F;a&gt; core can be a very tedious task - especially if you run a Drupal multi site installation (backup database, put site into maintenance mode, run update DB script, put site online again - repeat for every single site). We use &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;project&#x2F;drush&quot;&gt;Drush&lt;&#x2F;a&gt; and a custom bash script to make life much more easier on our fsinf.at Drupal farm.&lt;&#x2F;p&gt;
