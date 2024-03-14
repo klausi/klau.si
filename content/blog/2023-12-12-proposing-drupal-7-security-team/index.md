@@ -2,7 +2,7 @@
 title = "Proposing a Drupal 7 security team"
 date = 2023-12-12
 [taxonomies]
-tags = ["drupal", "drupal planet"]
+tags = ["d7security", "drupal", "drupal planet"]
 +++
 
 ![Screenshot of a drupal.org release settings page. Contains a warning box with the text "Branches compatible with Drupal 7.x that are set as unsupported cannot be set as supported again.". A big thinking emoji is inserted on the screenshot.](unsupported-hm.png)

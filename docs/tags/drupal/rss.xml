@@ -7,7 +7,17 @@
       <generator>Zola</generator>
       <language>en</language>
       <atom:link href="https://klau.si/tags/drupal/rss.xml" rel="self" type="application/rss+xml"/>
-      <lastBuildDate>Sun, 31 Dec 2023 00:00:00 +0000</lastBuildDate>
+      <lastBuildDate>Wed, 13 Mar 2024 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>D7Security presentation at Drupal Austria Meetup</title>
+          <pubDate>Wed, 13 Mar 2024 00:00:00 +0000</pubDate>
+          <author>Klaus Purer</author>
+          <link>https://klau.si/blog/d7security-drupal-austria-meetup/</link>
+          <guid>https://klau.si/blog/d7security-drupal-austria-meetup/</guid>
+          <description xml:base="https://klau.si/blog/d7security-drupal-austria-meetup/">&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;d7security-drupal-austria-meetup&#x2F;d7security_meetup.png&quot; alt=&quot;D7Security presentation title slide&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;d7security-drupal-austria-meetup&#x2F;d7security-drupal-austria-2024.pdf&quot;&gt;the slides&lt;&#x2F;a&gt; of my Drupal Austria Meetup presentation about &lt;a href=&quot;https:&#x2F;&#x2F;www.d7security.org&quot;&gt;D7Security&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</description>
+      </item>
       <item>
           <title>Drupal 7 end of life podcast: Unofficial Drupal 7 Security Team</title>
           <pubDate>Sun, 31 Dec 2023 00:00:00 +0000</pubDate>

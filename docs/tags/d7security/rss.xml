@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>Klausi&#x27;s Weblog - d7security</title>
+      <link>https://klau.si</link>
+      <description></description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://klau.si/tags/d7security/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Wed, 13 Mar 2024 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>D7Security presentation at Drupal Austria Meetup</title>
+          <pubDate>Wed, 13 Mar 2024 00:00:00 +0000</pubDate>
+          <author>Klaus Purer</author>
+          <link>https://klau.si/blog/d7security-drupal-austria-meetup/</link>
+          <guid>https://klau.si/blog/d7security-drupal-austria-meetup/</guid>
+          <description xml:base="https://klau.si/blog/d7security-drupal-austria-meetup/">&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;d7security-drupal-austria-meetup&#x2F;d7security_meetup.png&quot; alt=&quot;D7Security presentation title slide&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;d7security-drupal-austria-meetup&#x2F;d7security-drupal-austria-2024.pdf&quot;&gt;the slides&lt;&#x2F;a&gt; of my Drupal Austria Meetup presentation about &lt;a href=&quot;https:&#x2F;&#x2F;www.d7security.org&quot;&gt;D7Security&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>Drupal 7 end of life podcast: Unofficial Drupal 7 Security Team</title>
+          <pubDate>Sun, 31 Dec 2023 00:00:00 +0000</pubDate>
+          <author>Klaus Purer</author>
+          <link>https://klau.si/blog/d7-eol-podcast/</link>
+          <guid>https://klau.si/blog/d7-eol-podcast/</guid>
+          <description xml:base="https://klau.si/blog/d7-eol-podcast/">&lt;p&gt;Here is the video of my appearance on the Drupal 7 end of life podcast, talking about plans for the &lt;a href=&quot;https:&#x2F;&#x2F;www.d7security.org&#x2F;&quot;&gt;D7Security&lt;&#x2F;a&gt; group. Thank you Mark Dorison and Chris Free from Chromatic for the recording!&lt;&#x2F;p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;embed&#x2F;hNI73M0ftOM?si=mPReJ3ZTMT7-8f7_&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
+</description>
+      </item>
+      <item>
+          <title>Proposing a Drupal 7 security team</title>
+          <pubDate>Tue, 12 Dec 2023 00:00:00 +0000</pubDate>
+          <author>Klaus Purer</author>
+          <link>https://klau.si/blog/proposing-drupal-7-security-team/</link>
+          <guid>https://klau.si/blog/proposing-drupal-7-security-team/</guid>
+          <description xml:base="https://klau.si/blog/proposing-drupal-7-security-team/">&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;proposing-drupal-7-security-team&#x2F;unsupported-hm.png&quot; alt=&quot;Screenshot of a drupal.org release settings page. Contains a warning box with the text &amp;quot;Branches compatible with Drupal 7.x that are set as unsupported cannot be set as supported again.&amp;quot;. A big thinking emoji is inserted on the screenshot.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The Drupal Security Team has announced in &lt;a href=&quot;https:&#x2F;&#x2F;www.drupal.org&#x2F;psa-2023-06-07&quot;&gt;PSA-2023-06-07&lt;&#x2F;a&gt; that unsupported Drupal 7 modules&#x2F;themes cannot be supported again. I&#x27;m proposing to create a D7Security team on Github that can provide security fixes for those unsupported modules. A small update module can then notify Drupal 7 site owners when new security releases are available on Github.&lt;&#x2F;p&gt;
+</description>
+      </item>
+    </channel>
+</rss>
