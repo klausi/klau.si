@@ -5,8 +5,8 @@ date = 2024-03-13
 tags = ["d7security", "drupal", "drupal planet", "speaking", "security"]
 +++
 
-![D7Security presentation title slide](d7security_meetup.png)
+Here are [the slides](d7security-drupal-austria-2024.pdf) and a recording of my Drupal Austria Meetup presentation about [D7Security](https://www.d7security.org).
 
-Here are [the slides](d7security-drupal-austria-2024.pdf) of my Drupal Austria Meetup presentation about [D7Security](https://www.d7security.org).
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1vLU1Eo0Tkk?si=ooNMcTeensXmMNom" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <!-- more -->
