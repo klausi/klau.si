@@ -7,7 +7,16 @@
       <generator>Zola</generator>
       <language>en</language>
       <atom:link href="https://klau.si/tags/security/rss.xml" rel="self" type="application/rss+xml"/>
-      <lastBuildDate>Wed, 13 Mar 2024 00:00:00 +0000</lastBuildDate>
+      <lastBuildDate>Wed, 26 Jun 2024 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>D7Security presentation at Drupal Dev Days Bourgas</title>
+          <pubDate>Wed, 26 Jun 2024 00:00:00 +0000</pubDate>
+          <author>Klaus Purer</author>
+          <link>https://klau.si/blog/d7security-devdays/</link>
+          <guid>https://klau.si/blog/d7security-devdays/</guid>
+          <description xml:base="https://klau.si/blog/d7security-devdays/">&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;d7security-devdays&#x2F;d7security-dev-days-bourgas-2024.pdf&quot;&gt;the slides&lt;&#x2F;a&gt; of my &lt;a href=&quot;https:&#x2F;&#x2F;ddd2024.drupalcamp.bg&#x2F;drupal-dev-days-2024&#x2F;session&#x2F;d7security-drupal-7-long-term-support&quot;&gt;Drupal Dev Days presentation&lt;&#x2F;a&gt; about &lt;a href=&quot;https:&#x2F;&#x2F;www.d7security.org&quot;&gt;D7Security&lt;&#x2F;a&gt; in Bourgas. The recording will hopefully follow soon!&lt;&#x2F;p&gt;
+</description>
+      </item>
       <item>
           <title>D7Security presentation at Drupal Austria Meetup</title>
           <pubDate>Wed, 13 Mar 2024 00:00:00 +0000</pubDate>
@@ -34,7 +43,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-security-code-review/</link>
           <guid>https://klau.si/blog/drupalcon-security-code-review/</guid>
-          <description xml:base="https://klau.si/blog/drupalcon-security-code-review/">&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;klausi.github.io&#x2F;sec-code-review2019&#x2F;#&#x2F;&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of my DrupalCon Amsterdam 2019 talk &amp;quot;Find security vulnerabilities through code review&amp;quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-security-code-review/">&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;klausi.github.io&#x2F;sec-code-review2019&#x2F;#&#x2F;&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of my DrupalCon Amsterdam 2019 talk &quot;Find security vulnerabilities through code review&quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;Oyoja2rfqSk&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
       </item>
@@ -45,7 +54,7 @@
           <link>https://klau.si/blog/drupal-security-vulnerability-learnings/</link>
           <guid>https://klau.si/blog/drupal-security-vulnerability-learnings/</guid>
           <description xml:base="https://klau.si/blog/drupal-security-vulnerability-learnings/">&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;drupal-security-vulnerability-learnings&#x2F;meetup_security.jpeg&quot; alt=&quot;Drupal Austria security meetup&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;Here are &lt;a href=&quot;&#x2F;presentations&#x2F;sec-learnings2019&#x2F;index.html&quot;&gt;the slides&lt;&#x2F;a&gt; of my Drupal Austria Meetup talk &amp;quot;Drupal security learnings&amp;quot;.&lt;&#x2F;p&gt;
+&lt;p&gt;Here are &lt;a href=&quot;&#x2F;presentations&#x2F;sec-learnings2019&#x2F;index.html&quot;&gt;the slides&lt;&#x2F;a&gt; of my Drupal Austria Meetup talk &quot;Drupal security learnings&quot;.&lt;&#x2F;p&gt;
 </description>
       </item>
       <item>
@@ -54,7 +63,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-security-what-you-need-to-know/</link>
           <guid>https://klau.si/blog/drupalcon-security-what-you-need-to-know/</guid>
-          <description xml:base="https://klau.si/blog/drupalcon-security-what-you-need-to-know/">&lt;p&gt;Here are &lt;a href=&quot;http:&#x2F;&#x2F;scor.github.io&#x2F;drupal-security-2015&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of our DrupalCon Barcelona 2015 talk &amp;quot;Drupal and Security: what you need to know&amp;quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-security-what-you-need-to-know/">&lt;p&gt;Here are &lt;a href=&quot;http:&#x2F;&#x2F;scor.github.io&#x2F;drupal-security-2015&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of our DrupalCon Barcelona 2015 talk &quot;Drupal and Security: what you need to know&quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;5LpKelSMsas&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
       </item>
@@ -64,7 +73,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-cracking-drupal/</link>
           <guid>https://klau.si/blog/drupalcon-cracking-drupal/</guid>
-          <description xml:base="https://klau.si/blog/drupalcon-cracking-drupal/">&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;docs.google.com&#x2F;presentation&#x2F;d&#x2F;1LWXRbcQUTj9NDHg8gHplAc7EGy94nmbUEUryWLHJqBg&#x2F;edit?usp=sharing&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of our DrupalCon Amsterdam 2014 talk &amp;quot;Cracking Drupal&amp;quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-cracking-drupal/">&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;docs.google.com&#x2F;presentation&#x2F;d&#x2F;1LWXRbcQUTj9NDHg8gHplAc7EGy94nmbUEUryWLHJqBg&#x2F;edit?usp=sharing&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of our DrupalCon Amsterdam 2014 talk &quot;Cracking Drupal&quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;ZkNGObI4nlU&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
       </item>
@@ -74,7 +83,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcamp-cracking-drupal/</link>
           <guid>https://klau.si/blog/drupalcamp-cracking-drupal/</guid>
-          <description xml:base="https://klau.si/blog/drupalcamp-cracking-drupal/">&lt;p&gt;Here is the video of my Drupalcamp Vienna 2013 talk &amp;quot;Cracking Drupal&amp;quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcamp-cracking-drupal/">&lt;p&gt;Here is the video of my Drupalcamp Vienna 2013 talk &quot;Cracking Drupal&quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;-Lxz7YZ4Cr8&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
       </item>

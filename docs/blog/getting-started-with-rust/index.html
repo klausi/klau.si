@@ -238,10 +238,10 @@ gives you the following:</p>
 <p>We can use <code>cargo</code> to create a new project:</p>
 <pre style="background-color:#191919;color:#f8f8f2;"><code><span>cargo new --bin rustnish
 </span></code></pre>
-<p>That creates a new folder &quot;rustnish&quot; (the project name) and the <code>--bin</code>
+<p>That creates a new folder "rustnish" (the project name) and the <code>--bin</code>
 option tells cargo to create a standalone application (instead of a library).</p>
 <h2 id="running-the-project">Running the project</h2>
-<p>Cargo has created a &quot;Hello World!&quot; example in src/main.rs in our project. We
+<p>Cargo has created a "Hello World!" example in src/main.rs in our project. We
 can execute it like this:</p>
 <pre style="background-color:#191919;color:#f8f8f2;"><code><span>$ cargo run
 </span><span>   Compiling rustnish v0.1.0 (file:///home/klausi/workspace/rustnish)
@@ -291,8 +291,8 @@ straightforward:</p>
 <pre data-lang="rust" style="background-color:#191919;color:#f8f8f2;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#ff5e5e;">extern crate</span><span> hyper;
 </span><span style="color:#ff5e5e;">use </span><span>hyper::server::{Server, Request, Response};
 </span></code></pre>
-<p>That tells the compiler to use the Hyper library and import the &quot;Server&quot; type
-for example to make use of it in our program. &quot;Server&quot; is a complex type called
+<p>That tells the compiler to use the Hyper library and import the "Server" type
+for example to make use of it in our program. "Server" is a complex type called
 a <code>struct</code> in Rust (comparable to a class in PHP/Java, but without
 inheritance and instead a trait system). I'm still confused by all the Rust
 terminology because an instance of a struct is not called on object. But there
@@ -306,9 +306,9 @@ wrong</a> :-)</p>
 <p>The main() function is the entry point for the program execution:</p>
 <pre data-lang="rust" style="background-color:#191919;color:#f8f8f2;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">main</span><span>() {}
 </span></code></pre>
-<p>Rust uses the fn keyword to define a function. &quot;fn&quot; instead of &quot;function&quot; is an
+<p>Rust uses the fn keyword to define a function. "fn" instead of "function" is an
 optimization to quicker write programs, but of course we know that we should
-optimize for humans reading programs faster instead. &quot;fn&quot; is not a natural word
+optimize for humans reading programs faster instead. "fn" is not a natural word
 and harder to recognize for newcomers. (General programming rant: never
 abbreviate things because somebody will have to read and understand this.)</p>
 <pre data-lang="rust" style="background-color:#191919;color:#f8f8f2;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">main</span><span>() {
@@ -336,10 +336,10 @@ function can have.</p>
 </span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">pipe_through</span><span>(</span><span style="font-style:italic;color:#fc9354;">request</span><span>: Request, </span><span style="color:#ff5e5e;">mut </span><span style="font-style:italic;color:#fc9354;">response</span><span>: Response) {}
 </span></code></pre>
 <p>Next we tell the server instance which of our function will handle requests by
-passing in the function name &quot;pipe_through&quot;. It receives an HTTP request
+passing in the function name "pipe_through". It receives an HTTP request
 instance and a mutable HTTP response instance that we will populate later.</p>
 <p>If a function returns something in Rust you can't ignore it, so we need this
-superfluous unused variable here. Starting it with &quot;_&quot; tells the compiler to
+superfluous unused variable here. Starting it with "_" tells the compiler to
 ignore it.</p>
 <p>The Hyper server will now listen in the background for incoming requests while
 we write an output message in parallel that the server is running.
@@ -381,7 +381,7 @@ mismatch.</p>
 <p>A simple task such as string concatenation is really complicated in Rust. Why
 is the protocol variable the only one without the reference operator? Why do I
 have to convert the hostname variable to a string first if it is a reference
-already? Same spiel as before: randomly throwing in <code>to_string()</code> and &quot;&amp;&quot;
+already? Same spiel as before: randomly throwing in <code>to_string()</code> and "&amp;"
 operators until the compiler shuts up and we have our desired result in the
 url_string variable.</p>
 <pre data-lang="rust" style="background-color:#191919;color:#f8f8f2;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="font-style:italic;color:#fbdfb5;">let</span><span> client </span><span style="color:#ff5e5e;">= </span><span>Client::new();
@@ -400,7 +400,7 @@ the Rust ownership model, but the compiler errors were not clear on that.</p>
 </span><span>io::copy(</span><span style="color:#ff5e5e;">&amp;mut</span><span> upstream_response, </span><span style="color:#ff5e5e;">&amp;mut</span><span> response.</span><span style="color:#6699cc;">start</span><span>().</span><span style="color:#6699cc;">unwrap</span><span>()).</span><span style="color:#6699cc;">unwrap</span><span>();
 </span></code></pre>
 <p>OK, I admit that in those last 3 lines I really have no idea anymore what I'm
-doing. I have to use the &quot;*&quot; operator because there is no other way to modify
+doing. I have to use the "*" operator because there is no other way to modify
 the response instance. Headers are weird again of course, so we do some cloning
 for good measure. The IO copying is moving over the HTTP response body which is
 represented by streams (which makes sense, you can have large data bodies). It

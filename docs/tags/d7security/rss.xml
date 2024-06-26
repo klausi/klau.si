@@ -7,7 +7,16 @@
       <generator>Zola</generator>
       <language>en</language>
       <atom:link href="https://klau.si/tags/d7security/rss.xml" rel="self" type="application/rss+xml"/>
-      <lastBuildDate>Wed, 13 Mar 2024 00:00:00 +0000</lastBuildDate>
+      <lastBuildDate>Wed, 26 Jun 2024 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>D7Security presentation at Drupal Dev Days Bourgas</title>
+          <pubDate>Wed, 26 Jun 2024 00:00:00 +0000</pubDate>
+          <author>Klaus Purer</author>
+          <link>https://klau.si/blog/d7security-devdays/</link>
+          <guid>https://klau.si/blog/d7security-devdays/</guid>
+          <description xml:base="https://klau.si/blog/d7security-devdays/">&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;d7security-devdays&#x2F;d7security-dev-days-bourgas-2024.pdf&quot;&gt;the slides&lt;&#x2F;a&gt; of my &lt;a href=&quot;https:&#x2F;&#x2F;ddd2024.drupalcamp.bg&#x2F;drupal-dev-days-2024&#x2F;session&#x2F;d7security-drupal-7-long-term-support&quot;&gt;Drupal Dev Days presentation&lt;&#x2F;a&gt; about &lt;a href=&quot;https:&#x2F;&#x2F;www.d7security.org&quot;&gt;D7Security&lt;&#x2F;a&gt; in Bourgas. The recording will hopefully follow soon!&lt;&#x2F;p&gt;
+</description>
+      </item>
       <item>
           <title>D7Security presentation at Drupal Austria Meetup</title>
           <pubDate>Wed, 13 Mar 2024 00:00:00 +0000</pubDate>

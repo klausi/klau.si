@@ -175,7 +175,7 @@ access to bind on port 80.</p>
 <h2 id="integration-test-setup">Integration test setup</h2>
 <p>The <a href="https://doc.rust-lang.org/book/testing.html">Rust book has a section about
 testing</a> which describes that you
-put integration tests into a &quot;tests&quot; folder in your project. We create a file
+put integration tests into a "tests" folder in your project. We create a file
 tests/integration_tests.rs with the following content:</p>
 <pre data-lang="rust" style="background-color:#191919;color:#f8f8f2;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#ff5e5e;">extern crate</span><span> rustnish;
 </span><span>
@@ -187,7 +187,7 @@ tests/integration_tests.rs with the following content:</p>
 </span><span>}
 </span></code></pre>
 <p>Because this is an integration test we have to treat our own application
-&quot;rustnish&quot; as external crate that needs to be included here. The <code>#[test]</code>
+"rustnish" as external crate that needs to be included here. The <code>#[test]</code>
 attribute tells the test runner (cargo) that this function should be executed
 as test. Since the start_server() function does not exist yet this test should
 fail because it will not even compile.</p>
@@ -285,7 +285,7 @@ let's examine the parts of the test:</p>
 </span><span>        .</span><span style="color:#6699cc;">handle</span><span>(|_: </span><span style="font-style:italic;color:#fc9354;">Request</span><span>, </span><span style="font-style:italic;color:#fc9354;">response</span><span>: Response| { response.</span><span style="color:#6699cc;">send</span><span>(</span><span style="font-style:italic;color:#fbdfb5;">b</span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">hello</span><span style="color:#ffffff;">&quot;</span><span>).</span><span style="color:#6699cc;">unwrap</span><span>(); })
 </span><span>        .</span><span style="color:#6699cc;">unwrap</span><span>();
 </span></code></pre>
-<p>This starts the dummy server that simply responds with a &quot;hello&quot; response to
+<p>This starts the dummy server that simply responds with a "hello" response to
 any request it receives. The actual request handling is done in a <a href="https://doc.rust-lang.org/book/closures.html">Rust
 closure</a> (anonymous function)
 which is expressed by the two pipes <code>|</code>. Easy, expressive and powerful -

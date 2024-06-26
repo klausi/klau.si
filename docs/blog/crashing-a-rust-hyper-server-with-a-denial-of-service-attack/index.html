@@ -176,7 +176,7 @@ the meantime in Hyper
 background info can be found in <a href="https://github.com/hyperium/hyper/issues/1358">this Hyper
 issue</a>.</p>
 <h2 id="a-vulnerable-hello-world-server-example">A vulnerable Hello world server example</h2>
-<p>Let's look at the simplest Hyper server example that just serves &quot;Hello world&quot;
+<p>Let's look at the simplest Hyper server example that just serves "Hello world"
 HTTP responses
 (<a href="https://github.com/hyperium/hyper/blob/v0.11.19/examples/hello.rs">source</a>):</p>
 <pre data-lang="rust" style="background-color:#191919;color:#f8f8f2;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="font-style:italic;color:#fbdfb5;">static </span><span style="color:#fdb082;">PHRASE</span><span>: </span><span style="color:#ff5e5e;">&amp;&#39;static </span><span>[</span><span style="font-style:italic;color:#fbdfb5;">u8</span><span>] </span><span style="color:#ff5e5e;">= </span><span style="font-style:italic;color:#fbdfb5;">b</span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">Hello World!</span><span style="color:#ffffff;">&quot;</span><span>;
@@ -269,14 +269,14 @@ die.</p>
 </span><span>    }
 </span><span>}
 </span></code></pre>
-<p>This &quot;works&quot; in the sense that the server does not die and just restarts
+<p>This "works" in the sense that the server does not die and just restarts
 itself. The problem with this approach is that other connections are dropped
 when an IO error occurs, causing a service interruption.</p>
 <h2 id="the-fix-in-hyper">The fix in Hyper</h2>
 <p>In order to fix this in Hyper itself I contributed
 <a href="https://docs.rs/hyper/0.11.22/hyper/server/struct.Http.html#method.sleep_on_errors"><code>sleep_on_errors()</code></a>. Starting a HTTP server with that setting will
 swallow IO errors internally and library users do not have to worry about it.
-In the case of &quot;Too many open files&quot; errors the server will just wait 10ms
+In the case of "Too many open files" errors the server will just wait 10ms
 before trying to accept the TCP connection again, hoping that free ports have
 become available in the meantime.</p>
 <p>This setting is currently (Hyper v0.11.22) disabled by default and you must

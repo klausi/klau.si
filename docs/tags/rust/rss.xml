@@ -94,7 +94,7 @@
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;&lt;code&gt;FakeClock&lt;&#x2F;code&gt; exhibits the same methods as &lt;code&gt;Instant&lt;&#x2F;code&gt; from the standard library, so the compiler has no problem to use it as a drop-in replacement. We can manipulate the FakeClock from the outside and pretend that a certain amount of time has passed while we really just increase a counter. Super fast unit test, no waiting with a &lt;code&gt;thread::sleep()&lt;&#x2F;code&gt; needed!&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;integration-tests-not-affected&quot;&gt;Integration tests not affected&lt;&#x2F;h2&gt;
-&lt;p&gt;&amp;quot;But Klausi!&amp;quot; you scream &amp;quot;Now your reverse proxy integration tests are broken because they will also run with the fake clock!&amp;quot;&lt;&#x2F;p&gt;
+&lt;p&gt;&quot;But Klausi!&quot; you scream &quot;Now your reverse proxy integration tests are broken because they will also run with the fake clock!&quot;&lt;&#x2F;p&gt;
 &lt;p&gt;No, because Rust compiles each &lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;rust-by-example&#x2F;testing&#x2F;integration_testing.html&quot;&gt;integration test&lt;&#x2F;a&gt; as separate crate. It links it with your main crate, but only the integration test code has &lt;code&gt;#[cfg(test)]&lt;&#x2F;code&gt; mode on during that test run. The main crate will use the production &lt;code&gt;Instant&lt;&#x2F;code&gt; type and everything still works as before.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;downsides-of-conditional-compilation-mocks&quot;&gt;Downsides of conditional compilation mocks&lt;&#x2F;h2&gt;
 &lt;p&gt;So far so good, but there are some downsides to consider with this approach:&lt;&#x2F;p&gt;
@@ -324,7 +324,7 @@ the meantime in Hyper
 background info can be found in &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;hyperium&#x2F;hyper&#x2F;issues&#x2F;1358&quot;&gt;this Hyper
 issue&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;a-vulnerable-hello-world-server-example&quot;&gt;A vulnerable Hello world server example&lt;&#x2F;h2&gt;
-&lt;p&gt;Let&#x27;s look at the simplest Hyper server example that just serves &amp;quot;Hello world&amp;quot;
+&lt;p&gt;Let&#x27;s look at the simplest Hyper server example that just serves &quot;Hello world&quot;
 HTTP responses
 (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;hyperium&#x2F;hyper&#x2F;blob&#x2F;v0.11.19&#x2F;examples&#x2F;hello.rs&quot;&gt;source&lt;&#x2F;a&gt;):&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#191919;color:#f8f8f2;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;font-style:italic;color:#fbdfb5;&quot;&gt;static &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdb082;&quot;&gt;PHRASE&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff5e5e;&quot;&gt;&amp;amp;&amp;#39;static &lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fbdfb5;&quot;&gt;u8&lt;&#x2F;span&gt;&lt;span&gt;] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff5e5e;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fbdfb5;&quot;&gt;b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffffff;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fbe3bf;&quot;&gt;Hello World!&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffffff;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;;
@@ -417,14 +417,14 @@ die.&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;    }
 &lt;&#x2F;span&gt;&lt;span&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;This &amp;quot;works&amp;quot; in the sense that the server does not die and just restarts
+&lt;p&gt;This &quot;works&quot; in the sense that the server does not die and just restarts
 itself. The problem with this approach is that other connections are dropped
 when an IO error occurs, causing a service interruption.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;the-fix-in-hyper&quot;&gt;The fix in Hyper&lt;&#x2F;h2&gt;
 &lt;p&gt;In order to fix this in Hyper itself I contributed
 &lt;a href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;hyper&#x2F;0.11.22&#x2F;hyper&#x2F;server&#x2F;struct.Http.html#method.sleep_on_errors&quot;&gt;&lt;code&gt;sleep_on_errors()&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;. Starting a HTTP server with that setting will
 swallow IO errors internally and library users do not have to worry about it.
-In the case of &amp;quot;Too many open files&amp;quot; errors the server will just wait 10ms
+In the case of &quot;Too many open files&quot; errors the server will just wait 10ms
 before trying to accept the TCP connection again, hoping that free ports have
 become available in the meantime.&lt;&#x2F;p&gt;
 &lt;p&gt;This setting is currently (Hyper v0.11.22) disabled by default and you must
@@ -863,7 +863,7 @@ up instead of panicking:&lt;&#x2F;p&gt;
 &lt;p&gt;We need to follow a couple of steps for the first error chain setup:&lt;&#x2F;p&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;Add &lt;code&gt;error-chain = &amp;quot;*&amp;quot;&lt;&#x2F;code&gt; to Cargo.toml&lt;&#x2F;p&gt;
+&lt;p&gt;Add &lt;code&gt;error-chain = &quot;*&quot;&lt;&#x2F;code&gt; to Cargo.toml&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;Add the error_chain!() macro to your code:&lt;&#x2F;p&gt;
@@ -991,7 +991,7 @@ to hold a Hyper client instance. This is a bit of an implementation detail of
 my specific reverse proxy use case here. Since I&#x27;m using a Hyper server and a
 Hyper client at the same time in my program I want them to run on the same
 Tokio core (the event loop). Which means that I need to pre-construct my HTTP
-client and &amp;quot;inject&amp;quot; it into my Proxy service.&lt;&#x2F;p&gt;
+client and &quot;inject&quot; it into my Proxy service.&lt;&#x2F;p&gt;
 &lt;p&gt;The types of the Service determine what kind of requests and responses go in
 and out of it.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;a-word-on-futures&quot;&gt;A word on Futures&lt;&#x2F;h2&gt;
@@ -1245,7 +1245,7 @@ access to bind on port 80.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;integration-test-setup&quot;&gt;Integration test setup&lt;&#x2F;h2&gt;
 &lt;p&gt;The &lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;book&#x2F;testing.html&quot;&gt;Rust book has a section about
 testing&lt;&#x2F;a&gt; which describes that you
-put integration tests into a &amp;quot;tests&amp;quot; folder in your project. We create a file
+put integration tests into a &quot;tests&quot; folder in your project. We create a file
 tests&#x2F;integration_tests.rs with the following content:&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#191919;color:#f8f8f2;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#ff5e5e;&quot;&gt;extern crate&lt;&#x2F;span&gt;&lt;span&gt; rustnish;
 &lt;&#x2F;span&gt;&lt;span&gt;
@@ -1257,7 +1257,7 @@ tests&#x2F;integration_tests.rs with the following content:&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Because this is an integration test we have to treat our own application
-&amp;quot;rustnish&amp;quot; as external crate that needs to be included here. The &lt;code&gt;#[test]&lt;&#x2F;code&gt;
+&quot;rustnish&quot; as external crate that needs to be included here. The &lt;code&gt;#[test]&lt;&#x2F;code&gt;
 attribute tells the test runner (cargo) that this function should be executed
 as test. Since the start_server() function does not exist yet this test should
 fail because it will not even compile.&lt;&#x2F;p&gt;
@@ -1355,7 +1355,7 @@ let&#x27;s examine the parts of the test:&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;        .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;handle&lt;&#x2F;span&gt;&lt;span&gt;(|_: &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fc9354;&quot;&gt;Request&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fc9354;&quot;&gt;response&lt;&#x2F;span&gt;&lt;span&gt;: Response| { response.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;send&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fbdfb5;&quot;&gt;b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffffff;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fbe3bf;&quot;&gt;hello&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffffff;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;).&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;unwrap&lt;&#x2F;span&gt;&lt;span&gt;(); })
 &lt;&#x2F;span&gt;&lt;span&gt;        .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;unwrap&lt;&#x2F;span&gt;&lt;span&gt;();
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;This starts the dummy server that simply responds with a &amp;quot;hello&amp;quot; response to
+&lt;p&gt;This starts the dummy server that simply responds with a &quot;hello&quot; response to
 any request it receives. The actual request handling is done in a &lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;book&#x2F;closures.html&quot;&gt;Rust
 closure&lt;&#x2F;a&gt; (anonymous function)
 which is expressed by the two pipes &lt;code&gt;|&lt;&#x2F;code&gt;. Easy, expressive and powerful -
@@ -1442,9 +1442,9 @@ for missing Java SSL certificates&lt;&#x2F;a&gt;:&lt;&#x2F;p&gt;
 &lt;p&gt;The &lt;a href=&quot;https:&#x2F;&#x2F;www.eclipse.org&#x2F;downloads&#x2F;&quot;&gt;Eclipse downloads page&lt;&#x2F;a&gt; gives you an
 installer where you select additional packages for whatever platform you want
 to develop on. You can skip all of that because we will install the external
-Rust extension later, so we select &amp;quot;Eclipse Platform (Neon)&amp;quot;.&lt;&#x2F;p&gt;
-&lt;p&gt;On the &amp;quot;Projects&amp;quot; step of the installer I only selected EGit for Git support in
-Eclipse which I always need. As installation folder I picked &amp;quot;eclipse&amp;quot; which
+Rust extension later, so we select &quot;Eclipse Platform (Neon)&quot;.&lt;&#x2F;p&gt;
+&lt;p&gt;On the &quot;Projects&quot; step of the installer I only selected EGit for Git support in
+Eclipse which I always need. As installation folder I picked &quot;eclipse&quot; which
 means Eclipse will end up in your home directory for example at
 &lt;code&gt;&#x2F;home&#x2F;klausi&#x2F;eclipse&lt;&#x2F;code&gt;. When you finish the installation you will have to
 accept some license agreements and trust some certificates.&lt;&#x2F;p&gt;
@@ -1481,13 +1481,13 @@ configuration instructions there closely.&lt;&#x2F;p&gt;
 &lt;p&gt;My settings in Window -&amp;gt; Preferences -&amp;gt; Rust:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;Rust installation directory: &lt;code&gt;&#x2F;home&#x2F;klausi&#x2F;.cargo&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;Rust &amp;quot;src&amp;quot; directory:
+&lt;li&gt;Rust &quot;src&quot; directory:
 &lt;code&gt;&#x2F;home&#x2F;klausi&#x2F;.rustup&#x2F;toolchains&#x2F;stable-x86_64-unknown-linux-gnu&#x2F;lib&#x2F;rustlib&#x2F;src&#x2F;rust&#x2F;src&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;Racer: &lt;code&gt;&#x2F;home&#x2F;klausi&#x2F;.cargo&#x2F;bin&#x2F;racer&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;Rainicorn: &lt;code&gt;&#x2F;home&#x2F;klausi&#x2F;.cargo&#x2F;bin&#x2F;parse_describe&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;rustfmt: &lt;code&gt;&#x2F;home&#x2F;klausi&#x2F;.cargo&#x2F;bin&#x2F;rustfmt&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;p&gt;I&#x27;m also using the option &amp;quot;Format automatically on editor save&amp;quot;. No questions
+&lt;p&gt;I&#x27;m also using the option &quot;Format automatically on editor save&quot;. No questions
 anymore what the correct code style is :-)&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h2&gt;
 &lt;p&gt;The installation of Eclipse is a bit tedious and RustDT takes a bit of

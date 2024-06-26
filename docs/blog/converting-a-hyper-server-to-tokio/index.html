@@ -232,7 +232,7 @@ to hold a Hyper client instance. This is a bit of an implementation detail of
 my specific reverse proxy use case here. Since I'm using a Hyper server and a
 Hyper client at the same time in my program I want them to run on the same
 Tokio core (the event loop). Which means that I need to pre-construct my HTTP
-client and &quot;inject&quot; it into my Proxy service.</p>
+client and "inject" it into my Proxy service.</p>
 <p>The types of the Service determine what kind of requests and responses go in
 and out of it.</p>
 <h2 id="a-word-on-futures">A word on Futures</h2>

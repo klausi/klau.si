@@ -232,7 +232,7 @@
 </span></code></pre>
 <p><code>FakeClock</code> exhibits the same methods as <code>Instant</code> from the standard library, so the compiler has no problem to use it as a drop-in replacement. We can manipulate the FakeClock from the outside and pretend that a certain amount of time has passed while we really just increase a counter. Super fast unit test, no waiting with a <code>thread::sleep()</code> needed!</p>
 <h2 id="integration-tests-not-affected">Integration tests not affected</h2>
-<p>&quot;But Klausi!&quot; you scream &quot;Now your reverse proxy integration tests are broken because they will also run with the fake clock!&quot;</p>
+<p>"But Klausi!" you scream "Now your reverse proxy integration tests are broken because they will also run with the fake clock!"</p>
 <p>No, because Rust compiles each <a href="https://doc.rust-lang.org/rust-by-example/testing/integration_testing.html">integration test</a> as separate crate. It links it with your main crate, but only the integration test code has <code>#[cfg(test)]</code> mode on during that test run. The main crate will use the production <code>Instant</code> type and everything still works as before.</p>
 <h2 id="downsides-of-conditional-compilation-mocks">Downsides of conditional compilation mocks</h2>
 <p>So far so good, but there are some downsides to consider with this approach:</p>

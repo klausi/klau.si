@@ -131,13 +131,13 @@
     </header>
 
     <div class="post-content">
-      <p>I upgraded my local computer to Ubuntu 13.10 today and revisited my Drupal development environment (this <a href="/dev-ubuntu-12-04">guide is also available for Ubuntu 12.04</a>). Here is a simple and fast guide how to configure Ubuntu for development. There are a number of <a href="http://drupal.org/node/262">installation documentation pages on this topic on drupal.org</a>, but they suggest to use the packaged Drupal installation and to run Drupal in subfolders (e.g. http://localhost/drupal6). They also do not cover some other important development tools like Phpmyadmin or php.ini settings. During development we want to edit files and we want to do that somewhere in our home directory to avoid any permission problems. There is also <a href="http://drupal.org/project/drubuntu">Drubuntu</a>, but it is outdated and does way too much magic in my opinion. So here is a more transparent tutorial that highlights the key development configuration settings for Drupal development on a local computer (do not use this for a production server!).<span id="continue-reading"></span></p>
+      <p>I upgraded my local computer to Ubuntu 13.10 today and revisited my Drupal development environment (this <a href="/dev-ubuntu-12-04">guide is also available for Ubuntu 12.04</a>). Here is a simple and fast guide how to configure Ubuntu for development. There are a number of <a href="http://drupal.org/node/262">installation documentation pages on this topic on drupal.org</a>, but they suggest to use the packaged Drupal installation and to run Drupal in subfolders (e.g. http://localhost/drupal6). They also do not cover some other important development tools like Phpmyadmin or php.ini settings. During development we want to edit files and we want to do that somewhere in our home directory to avoid any permission problems. There is also <a href="http://drupal.org/project/drubuntu">Drubuntu</a>, but it is outdated and does way too much magic in my opinion. So here is a more transparent tutorial that highlights the key development configuration settings for Drupal development on a local computer (do not use this for a production server!).<!-- more --></p>
 <h2>Installation</h2>
 <p>To install a web server and MySQL and PHP and all the dependencies we simply install the default Ubuntu drupal7 package:</p>
 <pre style="background-color:#191919;color:#f8f8f2;"><code><span>sudo aptitude install drupal7
 </span></code></pre>
-<p>The installation will probably prompt you for a few things: Set a password for the MySQL root user. For the Postfix configuration you can select the &quot;Local only&quot; profile, so that no outgoing mail will be sent by PHP from your computer. For the postfix system mail name you can just leave it at your default hostname. The installation will probably prompt you to configure a default drupal database, but we will do that manually afterwards, so skip it.</p>
-<p>We don't want to expose any of our sites to the outside world, so we limit Apache to only listen on the localhost interface. Edit <strong>/etc/apache2/ports.conf</strong> and replace &quot;Listen 80&quot; with &quot;Listen 127.0.0.1:80&quot;.</p>
+<p>The installation will probably prompt you for a few things: Set a password for the MySQL root user. For the Postfix configuration you can select the "Local only" profile, so that no outgoing mail will be sent by PHP from your computer. For the postfix system mail name you can just leave it at your default hostname. The installation will probably prompt you to configure a default drupal database, but we will do that manually afterwards, so skip it.</p>
+<p>We don't want to expose any of our sites to the outside world, so we limit Apache to only listen on the localhost interface. Edit <strong>/etc/apache2/ports.conf</strong> and replace "Listen 80" with "Listen 127.0.0.1:80".</p>
 <pre style="background-color:#191919;color:#f8f8f2;"><code><span>Listen 127.0.0.1:80
 </span></code></pre>
 <p>We want Apache to run as our own user account to avoid any permission problems or conflicts when running drush or editing config files. Edit <strong>/etc/apache2/envvars</strong> and change the user to your account name. Example:</p>
@@ -167,7 +167,7 @@
 </span><span>session.gc_probability = 1
 </span></code></pre>
 <h2>Folder setup</h2>
-<p>The next step is the setup of a workspace environment in my home folder where I will develop my Drupal projects. Example for my &quot;drupal-8&quot; development environment:</p>
+<p>The next step is the setup of a workspace environment in my home folder where I will develop my Drupal projects. Example for my "drupal-8" development environment:</p>
 <ul>
   <li>Drupal root: /home/klausi/workspace/drupal-8</li>
   <li>Apache config: /etc/apache2/sites-available/drupal-8.conf</li>
@@ -198,12 +198,12 @@
 </span></code></pre>
 <p>You might wonder why I do not use an <a href="http://randyfay.com/content/quick-guide-wildcard-apache-vhosts">Apache wildcard/catchall configuration</a>, here is the reason why: unfortunately the VirtualDocumentRoot directive requires that you modify your .htaccess in your Drupal installation (you have to enable the RewriteBase /). This is bad because then you always have local changes in that file if you are working with a Drupal core git checkout.</p>
 <h2>localhost DNS</h2>
-<p>Create the domain entry for drupal-8.localhost in /etc/hosts. Add &quot;127.0.0.1  drupal-8.localhost&quot;. You will have to add each new project name in this file (you could also install Bind to automatically resolve this, but seems like an overkill to me).</p>
+<p>Create the domain entry for drupal-8.localhost in /etc/hosts. Add "127.0.0.1  drupal-8.localhost". You will have to add each new project name in this file (you could also install Bind to automatically resolve this, but seems like an overkill to me).</p>
 <p>I wrote a <a href="/sites/default/files/deploy-site.sh_.txt">simple bash script</a> that automatically creates the Apache site config and the site's hosts entry for me. Make sure to change the WORKDIR to your directory and run it like this:</p>
 <pre style="background-color:#191919;color:#f8f8f2;"><code><span>sudo deploy-site.sh drupal-8
 </span></code></pre>
 <h2>Database</h2>
-<p>Create the database in Phpmyadmin: Go to http://localhost/phpmyadmin , then &quot;Privileges&quot;, then &quot;Add a new User&quot;. Fill out the user name with &quot;drupal-8&quot;, host localhost and generate a password (copy that password to use it later during the Drupal install process). Use the &quot;Database for user&quot; section and select &quot;Create database with same name and grant all privileges&quot;.</p>
+<p>Create the database in Phpmyadmin: Go to http://localhost/phpmyadmin , then "Privileges", then "Add a new User". Fill out the user name with "drupal-8", host localhost and generate a password (copy that password to use it later during the Drupal install process). Use the "Database for user" section and select "Create database with same name and grant all privileges".</p>
 <h2>Install Drupal</h2>
 <p>Now your Drupal installation should be reachable in your browser at http://drupal-8.localhost and you can start the installation. Done!</p>
 <p>You can also use <a href="https://github.com/drush-ops/drush">drush</a> to install Drupal from the command line:</p>

@@ -7,7 +7,16 @@
       <generator>Zola</generator>
       <language>en</language>
       <atom:link href="https://klau.si/rss.xml" rel="self" type="application/rss+xml"/>
-      <lastBuildDate>Wed, 13 Mar 2024 00:00:00 +0000</lastBuildDate>
+      <lastBuildDate>Wed, 26 Jun 2024 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>D7Security presentation at Drupal Dev Days Bourgas</title>
+          <pubDate>Wed, 26 Jun 2024 00:00:00 +0000</pubDate>
+          <author>Klaus Purer</author>
+          <link>https://klau.si/blog/d7security-devdays/</link>
+          <guid>https://klau.si/blog/d7security-devdays/</guid>
+          <description xml:base="https://klau.si/blog/d7security-devdays/">&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;d7security-devdays&#x2F;d7security-dev-days-bourgas-2024.pdf&quot;&gt;the slides&lt;&#x2F;a&gt; of my &lt;a href=&quot;https:&#x2F;&#x2F;ddd2024.drupalcamp.bg&#x2F;drupal-dev-days-2024&#x2F;session&#x2F;d7security-drupal-7-long-term-support&quot;&gt;Drupal Dev Days presentation&lt;&#x2F;a&gt; about &lt;a href=&quot;https:&#x2F;&#x2F;www.d7security.org&quot;&gt;D7Security&lt;&#x2F;a&gt; in Bourgas. The recording will hopefully follow soon!&lt;&#x2F;p&gt;
+</description>
+      </item>
       <item>
           <title>D7Security presentation at Drupal Austria Meetup</title>
           <pubDate>Wed, 13 Mar 2024 00:00:00 +0000</pubDate>
@@ -44,8 +53,8 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/fully-hidden-automatic-system-updates-ubuntu/</link>
           <guid>https://klau.si/blog/fully-hidden-automatic-system-updates-ubuntu/</guid>
-          <description xml:base="https://klau.si/blog/fully-hidden-automatic-system-updates-ubuntu/">&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;fully-hidden-automatic-system-updates-ubuntu&#x2F;tank-girl-update-smaller.png&quot; alt=&quot;Screenshot of Ubuntu&#x27;s update manager popping up during the movie &amp;quot;Tank Girl.&amp;quot;&quot; &#x2F;&gt;
-&lt;em&gt;Screenshot of Ubuntu&#x27;s update manager popping up during the movie &amp;quot;Tank Girl.&amp;quot;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/fully-hidden-automatic-system-updates-ubuntu/">&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;fully-hidden-automatic-system-updates-ubuntu&#x2F;tank-girl-update-smaller.png&quot; alt=&quot;Screenshot of Ubuntu&amp;#39;s update manager popping up during the movie &amp;quot;Tank Girl.&amp;quot;&quot; &#x2F;&gt;
+&lt;em&gt;Screenshot of Ubuntu&#x27;s update manager popping up during the movie &quot;Tank Girl.&quot;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;Ubuntu&#x27;s graphical update manager pops up every time you need to install updates. That can be annoying when you are watching a movie or doing other things and don&#x27;t want to be bothered all the time. Yes, I want to always apply all updates from all sources, but please do it silently. Here is a small script I use to do that with Anacron.&lt;&#x2F;p&gt;
 </description>
       </item>
@@ -55,7 +64,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/russmedia-cto-meetup-talk-pull-request-review/</link>
           <guid>https://klau.si/blog/russmedia-cto-meetup-talk-pull-request-review/</guid>
-          <description xml:base="https://klau.si/blog/russmedia-cto-meetup-talk-pull-request-review/">&lt;p&gt;Here is the video of my Russmedia CTO &amp;amp; product meetup talk &amp;quot;Pull Request Review best practices&amp;quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/russmedia-cto-meetup-talk-pull-request-review/">&lt;p&gt;Here is the video of my Russmedia CTO &amp;amp; product meetup talk &quot;Pull Request Review best practices&quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;6CbdQaWI5Hk&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
       </item>
@@ -65,7 +74,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-security-code-review/</link>
           <guid>https://klau.si/blog/drupalcon-security-code-review/</guid>
-          <description xml:base="https://klau.si/blog/drupalcon-security-code-review/">&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;klausi.github.io&#x2F;sec-code-review2019&#x2F;#&#x2F;&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of my DrupalCon Amsterdam 2019 talk &amp;quot;Find security vulnerabilities through code review&amp;quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-security-code-review/">&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;klausi.github.io&#x2F;sec-code-review2019&#x2F;#&#x2F;&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of my DrupalCon Amsterdam 2019 talk &quot;Find security vulnerabilities through code review&quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;Oyoja2rfqSk&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
       </item>
@@ -155,7 +164,7 @@
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;&lt;code&gt;FakeClock&lt;&#x2F;code&gt; exhibits the same methods as &lt;code&gt;Instant&lt;&#x2F;code&gt; from the standard library, so the compiler has no problem to use it as a drop-in replacement. We can manipulate the FakeClock from the outside and pretend that a certain amount of time has passed while we really just increase a counter. Super fast unit test, no waiting with a &lt;code&gt;thread::sleep()&lt;&#x2F;code&gt; needed!&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;integration-tests-not-affected&quot;&gt;Integration tests not affected&lt;&#x2F;h2&gt;
-&lt;p&gt;&amp;quot;But Klausi!&amp;quot; you scream &amp;quot;Now your reverse proxy integration tests are broken because they will also run with the fake clock!&amp;quot;&lt;&#x2F;p&gt;
+&lt;p&gt;&quot;But Klausi!&quot; you scream &quot;Now your reverse proxy integration tests are broken because they will also run with the fake clock!&quot;&lt;&#x2F;p&gt;
 &lt;p&gt;No, because Rust compiles each &lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;rust-by-example&#x2F;testing&#x2F;integration_testing.html&quot;&gt;integration test&lt;&#x2F;a&gt; as separate crate. It links it with your main crate, but only the integration test code has &lt;code&gt;#[cfg(test)]&lt;&#x2F;code&gt; mode on during that test run. The main crate will use the production &lt;code&gt;Instant&lt;&#x2F;code&gt; type and everything still works as before.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;downsides-of-conditional-compilation-mocks&quot;&gt;Downsides of conditional compilation mocks&lt;&#x2F;h2&gt;
 &lt;p&gt;So far so good, but there are some downsides to consider with this approach:&lt;&#x2F;p&gt;
@@ -181,7 +190,7 @@
           <link>https://klau.si/blog/drupal-security-vulnerability-learnings/</link>
           <guid>https://klau.si/blog/drupal-security-vulnerability-learnings/</guid>
           <description xml:base="https://klau.si/blog/drupal-security-vulnerability-learnings/">&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;drupal-security-vulnerability-learnings&#x2F;meetup_security.jpeg&quot; alt=&quot;Drupal Austria security meetup&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;Here are &lt;a href=&quot;&#x2F;presentations&#x2F;sec-learnings2019&#x2F;index.html&quot;&gt;the slides&lt;&#x2F;a&gt; of my Drupal Austria Meetup talk &amp;quot;Drupal security learnings&amp;quot;.&lt;&#x2F;p&gt;
+&lt;p&gt;Here are &lt;a href=&quot;&#x2F;presentations&#x2F;sec-learnings2019&#x2F;index.html&quot;&gt;the slides&lt;&#x2F;a&gt; of my Drupal Austria Meetup talk &quot;Drupal security learnings&quot;.&lt;&#x2F;p&gt;
 </description>
       </item>
       <item>
@@ -395,7 +404,7 @@ the meantime in Hyper
 background info can be found in &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;hyperium&#x2F;hyper&#x2F;issues&#x2F;1358&quot;&gt;this Hyper
 issue&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;a-vulnerable-hello-world-server-example&quot;&gt;A vulnerable Hello world server example&lt;&#x2F;h2&gt;
-&lt;p&gt;Let&#x27;s look at the simplest Hyper server example that just serves &amp;quot;Hello world&amp;quot;
+&lt;p&gt;Let&#x27;s look at the simplest Hyper server example that just serves &quot;Hello world&quot;
 HTTP responses
 (&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;hyperium&#x2F;hyper&#x2F;blob&#x2F;v0.11.19&#x2F;examples&#x2F;hello.rs&quot;&gt;source&lt;&#x2F;a&gt;):&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#191919;color:#f8f8f2;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;font-style:italic;color:#fbdfb5;&quot;&gt;static &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdb082;&quot;&gt;PHRASE&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff5e5e;&quot;&gt;&amp;amp;&amp;#39;static &lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fbdfb5;&quot;&gt;u8&lt;&#x2F;span&gt;&lt;span&gt;] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff5e5e;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fbdfb5;&quot;&gt;b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffffff;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fbe3bf;&quot;&gt;Hello World!&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffffff;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;;
@@ -488,14 +497,14 @@ die.&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;    }
 &lt;&#x2F;span&gt;&lt;span&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;This &amp;quot;works&amp;quot; in the sense that the server does not die and just restarts
+&lt;p&gt;This &quot;works&quot; in the sense that the server does not die and just restarts
 itself. The problem with this approach is that other connections are dropped
 when an IO error occurs, causing a service interruption.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;the-fix-in-hyper&quot;&gt;The fix in Hyper&lt;&#x2F;h2&gt;
 &lt;p&gt;In order to fix this in Hyper itself I contributed
 &lt;a href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;hyper&#x2F;0.11.22&#x2F;hyper&#x2F;server&#x2F;struct.Http.html#method.sleep_on_errors&quot;&gt;&lt;code&gt;sleep_on_errors()&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;. Starting a HTTP server with that setting will
 swallow IO errors internally and library users do not have to worry about it.
-In the case of &amp;quot;Too many open files&amp;quot; errors the server will just wait 10ms
+In the case of &quot;Too many open files&quot; errors the server will just wait 10ms
 before trying to accept the TCP connection again, hoping that free ports have
 become available in the meantime.&lt;&#x2F;p&gt;
 &lt;p&gt;This setting is currently (Hyper v0.11.22) disabled by default and you must
@@ -934,7 +943,7 @@ up instead of panicking:&lt;&#x2F;p&gt;
 &lt;p&gt;We need to follow a couple of steps for the first error chain setup:&lt;&#x2F;p&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;Add &lt;code&gt;error-chain = &amp;quot;*&amp;quot;&lt;&#x2F;code&gt; to Cargo.toml&lt;&#x2F;p&gt;
+&lt;p&gt;Add &lt;code&gt;error-chain = &quot;*&quot;&lt;&#x2F;code&gt; to Cargo.toml&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;Add the error_chain!() macro to your code:&lt;&#x2F;p&gt;
@@ -1062,7 +1071,7 @@ to hold a Hyper client instance. This is a bit of an implementation detail of
 my specific reverse proxy use case here. Since I&#x27;m using a Hyper server and a
 Hyper client at the same time in my program I want them to run on the same
 Tokio core (the event loop). Which means that I need to pre-construct my HTTP
-client and &amp;quot;inject&amp;quot; it into my Proxy service.&lt;&#x2F;p&gt;
+client and &quot;inject&quot; it into my Proxy service.&lt;&#x2F;p&gt;
 &lt;p&gt;The types of the Service determine what kind of requests and responses go in
 and out of it.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;a-word-on-futures&quot;&gt;A word on Futures&lt;&#x2F;h2&gt;
@@ -1316,7 +1325,7 @@ access to bind on port 80.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;integration-test-setup&quot;&gt;Integration test setup&lt;&#x2F;h2&gt;
 &lt;p&gt;The &lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;book&#x2F;testing.html&quot;&gt;Rust book has a section about
 testing&lt;&#x2F;a&gt; which describes that you
-put integration tests into a &amp;quot;tests&amp;quot; folder in your project. We create a file
+put integration tests into a &quot;tests&quot; folder in your project. We create a file
 tests&#x2F;integration_tests.rs with the following content:&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#191919;color:#f8f8f2;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#ff5e5e;&quot;&gt;extern crate&lt;&#x2F;span&gt;&lt;span&gt; rustnish;
 &lt;&#x2F;span&gt;&lt;span&gt;
@@ -1328,7 +1337,7 @@ tests&#x2F;integration_tests.rs with the following content:&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Because this is an integration test we have to treat our own application
-&amp;quot;rustnish&amp;quot; as external crate that needs to be included here. The &lt;code&gt;#[test]&lt;&#x2F;code&gt;
+&quot;rustnish&quot; as external crate that needs to be included here. The &lt;code&gt;#[test]&lt;&#x2F;code&gt;
 attribute tells the test runner (cargo) that this function should be executed
 as test. Since the start_server() function does not exist yet this test should
 fail because it will not even compile.&lt;&#x2F;p&gt;
@@ -1426,7 +1435,7 @@ let&#x27;s examine the parts of the test:&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;        .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;handle&lt;&#x2F;span&gt;&lt;span&gt;(|_: &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fc9354;&quot;&gt;Request&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fc9354;&quot;&gt;response&lt;&#x2F;span&gt;&lt;span&gt;: Response| { response.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;send&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fbdfb5;&quot;&gt;b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffffff;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fbe3bf;&quot;&gt;hello&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffffff;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;).&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;unwrap&lt;&#x2F;span&gt;&lt;span&gt;(); })
 &lt;&#x2F;span&gt;&lt;span&gt;        .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;unwrap&lt;&#x2F;span&gt;&lt;span&gt;();
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;This starts the dummy server that simply responds with a &amp;quot;hello&amp;quot; response to
+&lt;p&gt;This starts the dummy server that simply responds with a &quot;hello&quot; response to
 any request it receives. The actual request handling is done in a &lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;book&#x2F;closures.html&quot;&gt;Rust
 closure&lt;&#x2F;a&gt; (anonymous function)
 which is expressed by the two pipes &lt;code&gt;|&lt;&#x2F;code&gt;. Easy, expressive and powerful -
@@ -1513,9 +1522,9 @@ for missing Java SSL certificates&lt;&#x2F;a&gt;:&lt;&#x2F;p&gt;
 &lt;p&gt;The &lt;a href=&quot;https:&#x2F;&#x2F;www.eclipse.org&#x2F;downloads&#x2F;&quot;&gt;Eclipse downloads page&lt;&#x2F;a&gt; gives you an
 installer where you select additional packages for whatever platform you want
 to develop on. You can skip all of that because we will install the external
-Rust extension later, so we select &amp;quot;Eclipse Platform (Neon)&amp;quot;.&lt;&#x2F;p&gt;
-&lt;p&gt;On the &amp;quot;Projects&amp;quot; step of the installer I only selected EGit for Git support in
-Eclipse which I always need. As installation folder I picked &amp;quot;eclipse&amp;quot; which
+Rust extension later, so we select &quot;Eclipse Platform (Neon)&quot;.&lt;&#x2F;p&gt;
+&lt;p&gt;On the &quot;Projects&quot; step of the installer I only selected EGit for Git support in
+Eclipse which I always need. As installation folder I picked &quot;eclipse&quot; which
 means Eclipse will end up in your home directory for example at
 &lt;code&gt;&#x2F;home&#x2F;klausi&#x2F;eclipse&lt;&#x2F;code&gt;. When you finish the installation you will have to
 accept some license agreements and trust some certificates.&lt;&#x2F;p&gt;
@@ -1552,13 +1561,13 @@ configuration instructions there closely.&lt;&#x2F;p&gt;
 &lt;p&gt;My settings in Window -&amp;gt; Preferences -&amp;gt; Rust:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;Rust installation directory: &lt;code&gt;&#x2F;home&#x2F;klausi&#x2F;.cargo&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;Rust &amp;quot;src&amp;quot; directory:
+&lt;li&gt;Rust &quot;src&quot; directory:
 &lt;code&gt;&#x2F;home&#x2F;klausi&#x2F;.rustup&#x2F;toolchains&#x2F;stable-x86_64-unknown-linux-gnu&#x2F;lib&#x2F;rustlib&#x2F;src&#x2F;rust&#x2F;src&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;Racer: &lt;code&gt;&#x2F;home&#x2F;klausi&#x2F;.cargo&#x2F;bin&#x2F;racer&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;Rainicorn: &lt;code&gt;&#x2F;home&#x2F;klausi&#x2F;.cargo&#x2F;bin&#x2F;parse_describe&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;rustfmt: &lt;code&gt;&#x2F;home&#x2F;klausi&#x2F;.cargo&#x2F;bin&#x2F;rustfmt&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;p&gt;I&#x27;m also using the option &amp;quot;Format automatically on editor save&amp;quot;. No questions
+&lt;p&gt;I&#x27;m also using the option &quot;Format automatically on editor save&quot;. No questions
 anymore what the correct code style is :-)&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h2&gt;
 &lt;p&gt;The installation of Eclipse is a bit tedious and RustDT takes a bit of
@@ -1586,7 +1595,7 @@ enforces.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/go-easy-code-review-she-woman-after-all/</link>
           <guid>https://klau.si/go-easy-code-review-she-woman-after-all/</guid>
-          <description xml:base="https://klau.si/go-easy-code-review-she-woman-after-all/">&lt;p&gt;What is the appropriate response if a fellow woman pulls you aside and says &amp;quot;Go easy on this code review, she is a woman after all and already gets a lot of shit.&amp;quot;? Of course it is &amp;quot;Sure, this will be my friendliest code review ever!&amp;quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/go-easy-code-review-she-woman-after-all/">&lt;p&gt;What is the appropriate response if a fellow woman pulls you aside and says &quot;Go easy on this code review, she is a woman after all and already gets a lot of shit.&quot;? Of course it is &quot;Sure, this will be my friendliest code review ever!&quot;.&lt;&#x2F;p&gt;
 </description>
       </item>
       <item>
@@ -1595,7 +1604,7 @@ enforces.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-automated-testing-phpunit/</link>
           <guid>https://klau.si/blog/drupalcon-automated-testing-phpunit/</guid>
-          <description xml:base="https://klau.si/blog/drupalcon-automated-testing-phpunit/">&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;docs.google.com&#x2F;presentation&#x2F;d&#x2F;1Uhw3wYfcC_axz6SRTxEHVe8FZHbA-tUGN7dr7YyHMXg&#x2F;edit#slide=id.p&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of our DrupalCon Dublin 2016 talk &amp;quot;Automated Testing: PHPUnit all the way&amp;quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-automated-testing-phpunit/">&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;docs.google.com&#x2F;presentation&#x2F;d&#x2F;1Uhw3wYfcC_axz6SRTxEHVe8FZHbA-tUGN7dr7YyHMXg&#x2F;edit#slide=id.p&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of our DrupalCon Dublin 2016 talk &quot;Automated Testing: PHPUnit all the way&quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;jcdEp3YGa94&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
       </item>
@@ -1605,7 +1614,7 @@ enforces.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-publish-module/</link>
           <guid>https://klau.si/blog/drupalcon-publish-module/</guid>
-          <description xml:base="https://klau.si/blog/drupalcon-publish-module/">&lt;p&gt;Here is the video of my DrupalCon Asia 2016 talk &amp;quot;How to publish a module on drupal.org&amp;quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-publish-module/">&lt;p&gt;Here is the video of my DrupalCon Asia 2016 talk &quot;How to publish a module on drupal.org&quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;JWLb--cb33E&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
       </item>
@@ -1615,7 +1624,97 @@ enforces.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/dev/</link>
           <guid>https://klau.si/dev/</guid>
-          <description xml:base="https://klau.si/dev/">&lt;p&gt;I upgraded my local computer to Ubuntu 15.10 today and revisited my Drupal development environment (this &lt;a href=&quot;&#x2F;drupal-development-setup-ubuntu-1310&quot;&gt;guide is also available for Ubuntu 13.10&lt;&#x2F;a&gt;). Here is a simple and fast guide how to configure Ubuntu for development. There are a number of &lt;a href=&quot;https:&#x2F;&#x2F;www.drupal.org&#x2F;node&#x2F;262&quot;&gt;installation documentation pages on this topic on drupal.org&lt;&#x2F;a&gt;, but they suggest to use the packaged Drupal installation and to run Drupal in subfolders (e.g. http:&#x2F;&#x2F;localhost&#x2F;drupal6). They also do not cover some other important development tools like Phpmyadmin or php.ini settings. During development we want to edit files and we want to do that somewhere in our home directory to avoid any permission problems. There is also &lt;a href=&quot;https:&#x2F;&#x2F;www.drupal.org&#x2F;project&#x2F;drubuntu&quot;&gt;Drubuntu&lt;&#x2F;a&gt;, but it is outdated and does way too much magic in my opinion. So here is a more transparent tutorial that highlights the key development configuration settings for Drupal development on a local computer (do not use this for a production server!).</description>
+          <description xml:base="https://klau.si/dev/">&lt;p&gt;I upgraded my local computer to Ubuntu 15.10 today and revisited my Drupal development environment (this &lt;a href=&quot;&#x2F;drupal-development-setup-ubuntu-1310&quot;&gt;guide is also available for Ubuntu 13.10&lt;&#x2F;a&gt;). Here is a simple and fast guide how to configure Ubuntu for development. There are a number of &lt;a href=&quot;https:&#x2F;&#x2F;www.drupal.org&#x2F;node&#x2F;262&quot;&gt;installation documentation pages on this topic on drupal.org&lt;&#x2F;a&gt;, but they suggest to use the packaged Drupal installation and to run Drupal in subfolders (e.g. http:&#x2F;&#x2F;localhost&#x2F;drupal6). They also do not cover some other important development tools like Phpmyadmin or php.ini settings. During development we want to edit files and we want to do that somewhere in our home directory to avoid any permission problems. There is also &lt;a href=&quot;https:&#x2F;&#x2F;www.drupal.org&#x2F;project&#x2F;drubuntu&quot;&gt;Drubuntu&lt;&#x2F;a&gt;, but it is outdated and does way too much magic in my opinion. So here is a more transparent tutorial that highlights the key development configuration settings for Drupal development on a local computer (do not use this for a production server!).&lt;!-- more --&gt;&lt;&#x2F;p&gt;
+&lt;h2&gt;Installation&lt;&#x2F;h2&gt;
+&lt;p&gt;To install a web server and MySQL and PHP and all the dependencies we simply install the default Ubuntu drupal7 package:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;sudo aptitude install drupal7
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The installation will probably prompt you for a few things: Set a password for the MySQL root user. For the Postfix configuration you can select the &quot;Local only&quot; profile, so that no outgoing mail will be sent by PHP from your computer. For the postfix system mail name you can just leave it at your default hostname. The installation will probably prompt you to configure a default drupal database with dbconfig-common, but we will do that manually afterwards, so skip it.&lt;&#x2F;p&gt;
+&lt;p&gt;We don&#x27;t want to expose any of our sites to the outside world, so we limit Apache to only listen on the localhost interface. Edit &lt;strong&gt;&#x2F;etc&#x2F;apache2&#x2F;ports.conf&lt;&#x2F;strong&gt; and replace &quot;Listen 80&quot; with &quot;Listen 127.0.0.1:80&quot;.&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;Listen 127.0.0.1:80
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;We want Apache to run as our own user account to avoid any permission problems or conflicts when running drush or editing config files. Edit &lt;strong&gt;&#x2F;etc&#x2F;apache2&#x2F;envvars&lt;&#x2F;strong&gt; and change the user to your account name. Example:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;export APACHE_RUN_USER=klausi
+&lt;&#x2F;span&gt;&lt;span&gt;export APACHE_RUN_GROUP=klausi
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Enable the Rewrite mod and restart Apache.&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;sudo a2enmod rewrite
+&lt;&#x2F;span&gt;&lt;span&gt;sudo service apache2 restart
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Now we would like to have Phpmyadmin to easily create, inspect and manipulate MySQL databases.&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;sudo aptitude install phpmyadmin
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The installation will probably prompt you for a few things: Confirm that you want to automatically configure a database with dbconfig-common. Select Apache as web server to configure automatically.&lt;&#x2F;p&gt;
+&lt;p&gt;Now your Phpmyadmin installation should be reachable at http:&#x2F;&#x2F;localhost&#x2F;phpmyadmin&#x2F; .&lt;&#x2F;p&gt;
+&lt;p&gt;We will need some tools for development:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;sudo aptitude install git php5-xdebug php5-curl
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2&gt;&lt;a name=&quot;php.ini&quot;&gt;php.ini&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;It is important to tune your &#x2F;etc&#x2F;php5&#x2F;apache2&#x2F;&lt;strong&gt;php.ini&lt;&#x2F;strong&gt; for development purposes to show all PHP warnings. I changed the following entries:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;memory_limit = 256M
+&lt;&#x2F;span&gt;&lt;span&gt;error_reporting = E_ALL
+&lt;&#x2F;span&gt;&lt;span&gt;display_errors = On
+&lt;&#x2F;span&gt;&lt;span&gt;display_startup_errors = On
+&lt;&#x2F;span&gt;&lt;span&gt;track_errors = On
+&lt;&#x2F;span&gt;&lt;span&gt;html_errors = On
+&lt;&#x2F;span&gt;&lt;span&gt;session.gc_probability = 1
+&lt;&#x2F;span&gt;&lt;span&gt;opcache.enable = 1
+&lt;&#x2F;span&gt;&lt;span&gt;opcache.memory_consumption = 256
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Restart Apache again so that the php.ini changes are picked up.&lt;&#x2F;p&gt;
+&lt;h2&gt;Folder setup&lt;&#x2F;h2&gt;
+&lt;p&gt;The next step is the setup of a workspace environment in my home folder where I will develop my Drupal projects. Example for my &quot;drupal-8&quot; development environment:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Drupal root: &#x2F;home&#x2F;klausi&#x2F;workspace&#x2F;drupal-8&lt;&#x2F;li&gt;
+  &lt;li&gt;Apache config: &#x2F;etc&#x2F;apache2&#x2F;sites-available&#x2F;drupal-8.conf&lt;&#x2F;li&gt;
+  &lt;li&gt;Browser: http:&#x2F;&#x2F;drupal-8.localhost&lt;&#x2F;li&gt;
+  &lt;li&gt;Database: drupal-8&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Checkout Drupal 8:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;cd ~
+&lt;&#x2F;span&gt;&lt;span&gt;mkdir workspace
+&lt;&#x2F;span&gt;&lt;span&gt;cd workspace
+&lt;&#x2F;span&gt;&lt;span&gt;git clone --branch 8.1.x http:&#x2F;&#x2F;git.drupal.org&#x2F;project&#x2F;drupal.git drupal-8
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2&gt;Apache config&lt;&#x2F;h2&gt;
+&lt;p&gt;Create an Apache configuration for your drupal-8 folder at &#x2F;etc&#x2F;apache2&#x2F;sites-available&#x2F;drupal-8.conf:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;lt;VirtualHost *:80&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        ServerAlias drupal-8.localhost
+&lt;&#x2F;span&gt;&lt;span&gt;        DocumentRoot &#x2F;home&#x2F;klausi&#x2F;workspace&#x2F;drupal-8
+&lt;&#x2F;span&gt;&lt;span&gt;        &amp;lt;Directory &amp;quot;&#x2F;home&#x2F;klausi&#x2F;workspace&#x2F;drupal-8&amp;quot;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;                Options FollowSymLinks
+&lt;&#x2F;span&gt;&lt;span&gt;                AllowOverride All
+&lt;&#x2F;span&gt;&lt;span&gt;                Require all granted
+&lt;&#x2F;span&gt;&lt;span&gt;        &amp;lt;&#x2F;Directory&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&#x2F;VirtualHost&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Enable the configuration and restart Apache:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;sudo a2ensite drupal-8
+&lt;&#x2F;span&gt;&lt;span&gt;sudo service apache2 restart
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;You might wonder why I do not use an &lt;a href=&quot;http:&#x2F;&#x2F;randyfay.com&#x2F;content&#x2F;quick-guide-wildcard-apache-vhosts&quot;&gt;Apache wildcard&#x2F;catchall configuration&lt;&#x2F;a&gt;, here is the reason why: unfortunately the VirtualDocumentRoot directive requires that you modify your .htaccess in your Drupal installation (you have to enable the RewriteBase &#x2F;). This is bad because then you always have local changes in that file if you are working with a Drupal core git checkout.&lt;&#x2F;p&gt;
+&lt;h2&gt;localhost DNS&lt;&#x2F;h2&gt;
+&lt;p&gt;Create the domain entry for drupal-8.localhost in &#x2F;etc&#x2F;hosts. Add &quot;127.0.0.1  drupal-8.localhost&quot;. You will have to add each new project name in this file (you could also install Bind to automatically resolve this, but seems like an overkill to me).&lt;&#x2F;p&gt;
+&lt;p&gt;I wrote a &lt;a href=&quot;&#x2F;sites&#x2F;default&#x2F;files&#x2F;deploy-site.sh_.txt&quot;&gt;simple bash script&lt;&#x2F;a&gt; that automatically creates the Apache site config and the site&#x27;s hosts entry for me. Make sure to change the WORKDIR to your directory and run it like this:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;sudo deploy-site.sh drupal-8
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2&gt;Database&lt;&#x2F;h2&gt;
+&lt;p&gt;Create the database in Phpmyadmin: Go to http:&#x2F;&#x2F;localhost&#x2F;phpmyadmin , then &quot;Users&quot;, then &quot;Add User&quot;. Fill out the user name with &quot;drupal-8&quot;, host localhost and generate a password (copy that password to use it later during the Drupal install process). Use the &quot;Database for user&quot; section and select &quot;Create database with same name and grant all privileges&quot;.&lt;&#x2F;p&gt;
+&lt;h2&gt;Install Drupal&lt;&#x2F;h2&gt;
+&lt;p&gt;Now your Drupal installation should be reachable in your browser at http:&#x2F;&#x2F;drupal-8.localhost and you can start the installation. Done!&lt;&#x2F;p&gt;
+&lt;p&gt;You can also use &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;drush-ops&#x2F;drush&quot;&gt;drush&lt;&#x2F;a&gt; to install Drupal from the command line:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;drush site-install --account-name=klausi --account-pass=klausi --site-name=drupal-8.localhost
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2&gt;Development tips&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;I highly recommend using an IDE for source code editing such as Netbeans or Phpstorm. Drupal is spread over thousands of files and shortcuts to jump to other files are a real time saver, same for code completion as you type. And having a debugger to step through the code is very helpful.&lt;&#x2F;li&gt;
+  &lt;li&gt;Use &lt;a href=&quot;https:&#x2F;&#x2F;www.drupal.org&#x2F;project&#x2F;coder&quot;&gt;Coder with PHP CodeSniffer&lt;&#x2F;a&gt; to automatically check and fix your files to Drupal coding standards&lt;&#x2F;li&gt;
+  &lt;li&gt;Read and use the file &lt;strong&gt;sites&#x2F;example.settings.local.php&lt;&#x2F;strong&gt; and include it from sites&#x2F;settings.php. It contains useful configuration options for development sites, but make sure to not use them on production sites.&lt;&#x2F;li&gt;
+  &lt;li&gt;You want to examine mails that Drupal sends out? &lt;a href=&quot;http:&#x2F;&#x2F;www.drupal4hu.com&#x2F;node&#x2F;55&quot;&gt;Configure PHP to write outgoing mails to temporary files&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+  &lt;li&gt;You like the command line? Check out &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;drush-ops&#x2F;drush&quot;&gt;drush&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;hechoendrupal&#x2F;DrupalConsole&quot;&gt;Drupal Console&lt;&#x2F;a&gt; to do all sorts of Drupal administration tasks faster.&lt;&#x2F;li&gt;
+  &lt;li&gt;You want to know what&#x27;s going on in that stupid function? Install the &lt;a href=&quot;https:&#x2F;&#x2F;www.drupal.org&#x2F;project&#x2F;devel&quot;&gt;devel module&lt;&#x2F;a&gt; for debugging purposes and insert &lt;code&gt;dpm($variable);&lt;&#x2F;code&gt; anywhere you want. It will pretty-print the variable in the browser for inspection.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
       </item>
       <item>
           <title>Wie viele Frauen sprechen eigentlich bei &quot;Am Schauplatz&quot;?</title>
@@ -1623,7 +1722,7 @@ enforces.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/wie-viele-frauen-sprechen-eigentlich-bei-am-schauplatz/</link>
           <guid>https://klau.si/wie-viele-frauen-sprechen-eigentlich-bei-am-schauplatz/</guid>
-          <description xml:base="https://klau.si/wie-viele-frauen-sprechen-eigentlich-bei-am-schauplatz/">&lt;p&gt;Ich habe mir die ORF Sendung &lt;a href=&quot;http:&#x2F;&#x2F;tvthek.orf.at&#x2F;program&#x2F;Am-Schauplatz&#x2F;1239&#x2F;Am-Schauplatz-An-der-Grenze&#x2F;10644782&quot;&gt;&amp;quot;Am Schauplatz: An der Grenze&amp;quot; vom 24.09.2015&lt;&#x2F;a&gt; angesehen und stellte fest, dass keine einzige flüchtende Frau* zu Wort kam. Auch die anderen Interviewten waren Großteils Männer*, also habe ich einfach mal nachgezählt: in der Sendung sprachen 38 Personen direkt in die Kamera, davon 9 Frauen* (24%). Was jetzt klingt wie eine Männersendung &amp;quot;Patriachat Reprodzuieren: Folge 5327&amp;quot; entpuppt sich aber als Produktion der Reporterinnen Gudrun Kampelmüller, Julia Kovarik und Doris Plank. Ich bin enttäuscht.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/wie-viele-frauen-sprechen-eigentlich-bei-am-schauplatz/">&lt;p&gt;Ich habe mir die ORF Sendung &lt;a href=&quot;http:&#x2F;&#x2F;tvthek.orf.at&#x2F;program&#x2F;Am-Schauplatz&#x2F;1239&#x2F;Am-Schauplatz-An-der-Grenze&#x2F;10644782&quot;&gt;&quot;Am Schauplatz: An der Grenze&quot; vom 24.09.2015&lt;&#x2F;a&gt; angesehen und stellte fest, dass keine einzige flüchtende Frau* zu Wort kam. Auch die anderen Interviewten waren Großteils Männer*, also habe ich einfach mal nachgezählt: in der Sendung sprachen 38 Personen direkt in die Kamera, davon 9 Frauen* (24%). Was jetzt klingt wie eine Männersendung &quot;Patriachat Reprodzuieren: Folge 5327&quot; entpuppt sich aber als Produktion der Reporterinnen Gudrun Kampelmüller, Julia Kovarik und Doris Plank. Ich bin enttäuscht.&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;Die Einteilung nach Frau&#x2F;Mann wurde nach meiner subjektiven Wahrnehmung durchgeführt. Wir sind uns bewusst, dass die Zahlen und Zuschreibungen dadurch nie ganz genau sein können und auch nicht sein sollen.&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
@@ -1635,7 +1734,7 @@ enforces.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-security-what-you-need-to-know/</link>
           <guid>https://klau.si/blog/drupalcon-security-what-you-need-to-know/</guid>
-          <description xml:base="https://klau.si/blog/drupalcon-security-what-you-need-to-know/">&lt;p&gt;Here are &lt;a href=&quot;http:&#x2F;&#x2F;scor.github.io&#x2F;drupal-security-2015&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of our DrupalCon Barcelona 2015 talk &amp;quot;Drupal and Security: what you need to know&amp;quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-security-what-you-need-to-know/">&lt;p&gt;Here are &lt;a href=&quot;http:&#x2F;&#x2F;scor.github.io&#x2F;drupal-security-2015&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of our DrupalCon Barcelona 2015 talk &quot;Drupal and Security: what you need to know&quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;5LpKelSMsas&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
       </item>
@@ -1645,7 +1744,7 @@ enforces.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-coding-with-rules-drupal-8/</link>
           <guid>https://klau.si/blog/drupalcon-coding-with-rules-drupal-8/</guid>
-          <description xml:base="https://klau.si/blog/drupalcon-coding-with-rules-drupal-8/">&lt;p&gt;Here is the video of our DrupalCon Barcelona 2015 talk &amp;quot;Coding with Rules for Drupal 8&amp;quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-coding-with-rules-drupal-8/">&lt;p&gt;Here is the video of our DrupalCon Barcelona 2015 talk &quot;Coding with Rules for Drupal 8&quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;QcU_LCAHNLg&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
       </item>
@@ -1655,7 +1754,7 @@ enforces.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-cracking-drupal/</link>
           <guid>https://klau.si/blog/drupalcon-cracking-drupal/</guid>
-          <description xml:base="https://klau.si/blog/drupalcon-cracking-drupal/">&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;docs.google.com&#x2F;presentation&#x2F;d&#x2F;1LWXRbcQUTj9NDHg8gHplAc7EGy94nmbUEUryWLHJqBg&#x2F;edit?usp=sharing&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of our DrupalCon Amsterdam 2014 talk &amp;quot;Cracking Drupal&amp;quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-cracking-drupal/">&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;docs.google.com&#x2F;presentation&#x2F;d&#x2F;1LWXRbcQUTj9NDHg8gHplAc7EGy94nmbUEUryWLHJqBg&#x2F;edit?usp=sharing&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of our DrupalCon Amsterdam 2014 talk &quot;Cracking Drupal&quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;ZkNGObI4nlU&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
       </item>
@@ -1665,8 +1764,20 @@ enforces.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/how-i-became-aware-sexism/</link>
           <guid>https://klau.si/how-i-became-aware-sexism/</guid>
-          <description xml:base="https://klau.si/how-i-became-aware-sexism/">&lt;p&gt;This is a cross post to the &lt;a href=&quot;http:&#x2F;&#x2F;groups.drupal.org&#x2F;node&#x2F;419973&quot;&gt;&amp;quot;ah-ha moment regarding sexism in tech&amp;quot; discussion on groups.drupal.org&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;I have never been devalued because of my gender, that&#x27;s why I was long blind to sexism and feminism. I thought this topic has been solved since 1920 when women were allowed to vote in Austria.</description>
+          <description xml:base="https://klau.si/how-i-became-aware-sexism/">&lt;p&gt;This is a cross post to the &lt;a href=&quot;http:&#x2F;&#x2F;groups.drupal.org&#x2F;node&#x2F;419973&quot;&gt;&quot;ah-ha moment regarding sexism in tech&quot; discussion on groups.drupal.org&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;I have never been devalued because of my gender, that&#x27;s why I was long blind to sexism and feminism. I thought this topic has been solved since 1920 when women were allowed to vote in Austria.&lt;!-- more --&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Then I went to the university (computer science, TU Vienna) and came to the students&#x27; union. Some sexist incident happened (a professor told a sexist joke or something) and we discussed it. I was pretty new in the group and expected an exchange of opinions how the professor could have really meant it or explanations why this was not sexist at all. Instead, the whole group (men+ and women+) fully acknowledged that this was a sexist incident and merely discussed how it was sexist and what could be done about it. I was stumped - this was so different that I actually had to listen to their well-worded points. I refrained from adding my usual &quot;mansplaining&quot; (applying flawed logic that makes the victim or the victim&#x27;s reaction invisible) which happens in most other groups when discussing sexism, because I felt the peer pressure of a group that will not accept such &lt;a href=&quot;http:&#x2F;&#x2F;allysonmwhipple.com&#x2F;2012&#x2F;12&#x2F;28&#x2F;feminist-friday-derailment-bingo&#x2F;&quot;&gt;derailment&lt;&#x2F;a&gt;. Many people of that group became friends and I explored structural sexism, the patriarchy and feminist resources with their help.&lt;&#x2F;p&gt;
+&lt;p&gt;So I realized a couple of things:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Sexism today is real and I take part in sexist behaviour, although I don&#x27;t want to and might not be aware of it.&lt;&#x2F;li&gt;
+&lt;li&gt;If I&#x27;m called out on sexism I immediately acknowledge that and apologize, even if I don&#x27;t understand it. Then I try to think and reflect about it. Most of the time there is nothing meaningful left to say, so I resist the urge to defend myself with mansplaining.&lt;&#x2F;li&gt;
+&lt;li&gt;I want women+ to be treated equally, so I&#x27;m a feminist. Just saying that out loud helps to identify oneself with the cause. It changed my point of view and my &quot;objectivity&quot;, you realize that when you suddenly agree with women+ more often in discussions about gender or sexism.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;I wondered whether sexism that devalues men exists on the internet, so there is the &lt;a href=&quot;http:&#x2F;&#x2F;sexismus.soup.io&#x2F;&quot;&gt;Sexismus soup&lt;&#x2F;a&gt; to collect sexism-related stuff. Surprise, surprise: sexism against men virtually does not not exist on the internet.&lt;&#x2F;p&gt;
+&lt;p&gt;A recent &lt;a href=&quot;http:&#x2F;&#x2F;blog.codinghorror.com&#x2F;what-can-men-do&#x2F;&quot;&gt;example of fine mansplaining is codinghorror&#x27;s &quot;What can men do?&quot;&lt;&#x2F;a&gt; which seems to be plagiarized from Shanley&#x27;s &lt;a href=&quot;https:&#x2F;&#x2F;medium.com&#x2F;tech-culture-briefs&#x2F;a1e93d985af0&quot;&gt;&quot;What can men do?&quot;&lt;&#x2F;a&gt;, which is far superior.&lt;&#x2F;p&gt;
+&lt;p&gt;P.S.: + =&amp;gt; hi there transgender people, the &quot;+&quot; is for you!
+P.P.S: There is still a lot to do to combat &lt;a href=&quot;http:&#x2F;&#x2F;sburtscher.wordpress.com&#x2F;2013&#x2F;10&#x2F;16&#x2F;tu-wien-needs-feminism&#x2F;&quot;&gt;sexism at TU Vienna&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</description>
       </item>
       <item>
           <title>Drupalcamp Vienna 2013 talk: Cracking Drupal</title>
@@ -1674,7 +1785,7 @@ enforces.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcamp-cracking-drupal/</link>
           <guid>https://klau.si/blog/drupalcamp-cracking-drupal/</guid>
-          <description xml:base="https://klau.si/blog/drupalcamp-cracking-drupal/">&lt;p&gt;Here is the video of my Drupalcamp Vienna 2013 talk &amp;quot;Cracking Drupal&amp;quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcamp-cracking-drupal/">&lt;p&gt;Here is the video of my Drupalcamp Vienna 2013 talk &quot;Cracking Drupal&quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;-Lxz7YZ4Cr8&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
       </item>
@@ -1684,7 +1795,93 @@ enforces.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/drupal-development-setup-ubuntu-1310/</link>
           <guid>https://klau.si/drupal-development-setup-ubuntu-1310/</guid>
-          <description xml:base="https://klau.si/drupal-development-setup-ubuntu-1310/">&lt;p&gt;I upgraded my local computer to Ubuntu 13.10 today and revisited my Drupal development environment (this &lt;a href=&quot;&#x2F;dev-ubuntu-12-04&quot;&gt;guide is also available for Ubuntu 12.04&lt;&#x2F;a&gt;). Here is a simple and fast guide how to configure Ubuntu for development. There are a number of &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;node&#x2F;262&quot;&gt;installation documentation pages on this topic on drupal.org&lt;&#x2F;a&gt;, but they suggest to use the packaged Drupal installation and to run Drupal in subfolders (e.g. http:&#x2F;&#x2F;localhost&#x2F;drupal6). They also do not cover some other important development tools like Phpmyadmin or php.ini settings. During development we want to edit files and we want to do that somewhere in our home directory to avoid any permission problems. There is also &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;project&#x2F;drubuntu&quot;&gt;Drubuntu&lt;&#x2F;a&gt;, but it is outdated and does way too much magic in my opinion. So here is a more transparent tutorial that highlights the key development configuration settings for Drupal development on a local computer (do not use this for a production server!).</description>
+          <description xml:base="https://klau.si/drupal-development-setup-ubuntu-1310/">&lt;p&gt;I upgraded my local computer to Ubuntu 13.10 today and revisited my Drupal development environment (this &lt;a href=&quot;&#x2F;dev-ubuntu-12-04&quot;&gt;guide is also available for Ubuntu 12.04&lt;&#x2F;a&gt;). Here is a simple and fast guide how to configure Ubuntu for development. There are a number of &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;node&#x2F;262&quot;&gt;installation documentation pages on this topic on drupal.org&lt;&#x2F;a&gt;, but they suggest to use the packaged Drupal installation and to run Drupal in subfolders (e.g. http:&#x2F;&#x2F;localhost&#x2F;drupal6). They also do not cover some other important development tools like Phpmyadmin or php.ini settings. During development we want to edit files and we want to do that somewhere in our home directory to avoid any permission problems. There is also &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;project&#x2F;drubuntu&quot;&gt;Drubuntu&lt;&#x2F;a&gt;, but it is outdated and does way too much magic in my opinion. So here is a more transparent tutorial that highlights the key development configuration settings for Drupal development on a local computer (do not use this for a production server!).&lt;!-- more --&gt;&lt;&#x2F;p&gt;
+&lt;h2&gt;Installation&lt;&#x2F;h2&gt;
+&lt;p&gt;To install a web server and MySQL and PHP and all the dependencies we simply install the default Ubuntu drupal7 package:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;sudo aptitude install drupal7
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The installation will probably prompt you for a few things: Set a password for the MySQL root user. For the Postfix configuration you can select the &quot;Local only&quot; profile, so that no outgoing mail will be sent by PHP from your computer. For the postfix system mail name you can just leave it at your default hostname. The installation will probably prompt you to configure a default drupal database, but we will do that manually afterwards, so skip it.&lt;&#x2F;p&gt;
+&lt;p&gt;We don&#x27;t want to expose any of our sites to the outside world, so we limit Apache to only listen on the localhost interface. Edit &lt;strong&gt;&#x2F;etc&#x2F;apache2&#x2F;ports.conf&lt;&#x2F;strong&gt; and replace &quot;Listen 80&quot; with &quot;Listen 127.0.0.1:80&quot;.&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;Listen 127.0.0.1:80
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;We want Apache to run as our own user account to avoid any permission problems or conflicts when running drush or editing config files. Edit &lt;strong&gt;&#x2F;etc&#x2F;apache2&#x2F;envvars&lt;&#x2F;strong&gt; and change the user to your account name. Example:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;export APACHE_RUN_USER=klausi
+&lt;&#x2F;span&gt;&lt;span&gt;export APACHE_RUN_GROUP=klausi
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Enable the Rewrite mod and restart Apache.&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;sudo a2enmod rewrite
+&lt;&#x2F;span&gt;&lt;span&gt;sudo service apache2 restart
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Now we would like to have Phpmyadmin to easily create, inspect and manipulate MySQL databases.&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;sudo aptitude install phpmyadmin
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The installation will probably prompt you for a few things: Confirm that you want to automatically configure a database with dbconfig-common. Select Apache as web server to configure automatically.&lt;&#x2F;p&gt;
+&lt;p&gt;Now your Phpmyadmin installation should be reachable at http:&#x2F;&#x2F;localhost&#x2F;phpmyadmin&#x2F; .&lt;&#x2F;p&gt;
+&lt;p&gt;We will need some tools for development:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;sudo aptitude install git php5-xdebug php5-curl
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2&gt;&lt;a name=&quot;php.ini&quot;&gt;php.ini&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;It is important to tune your &#x2F;etc&#x2F;php5&#x2F;apache2&#x2F;&lt;strong&gt;php.ini&lt;&#x2F;strong&gt; for development purposes to show all PHP warnings. I changed the following entries:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;memory_limit = 256M
+&lt;&#x2F;span&gt;&lt;span&gt;error_reporting = E_ALL
+&lt;&#x2F;span&gt;&lt;span&gt;display_errors = On
+&lt;&#x2F;span&gt;&lt;span&gt;display_startup_errors = On
+&lt;&#x2F;span&gt;&lt;span&gt;track_errors = On
+&lt;&#x2F;span&gt;&lt;span&gt;html_errors = On
+&lt;&#x2F;span&gt;&lt;span&gt;session.gc_probability = 1
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2&gt;Folder setup&lt;&#x2F;h2&gt;
+&lt;p&gt;The next step is the setup of a workspace environment in my home folder where I will develop my Drupal projects. Example for my &quot;drupal-8&quot; development environment:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Drupal root: &#x2F;home&#x2F;klausi&#x2F;workspace&#x2F;drupal-8&lt;&#x2F;li&gt;
+  &lt;li&gt;Apache config: &#x2F;etc&#x2F;apache2&#x2F;sites-available&#x2F;drupal-8.conf&lt;&#x2F;li&gt;
+  &lt;li&gt;Browser: http:&#x2F;&#x2F;drupal-8.localhost&lt;&#x2F;li&gt;
+  &lt;li&gt;Database: drupal-8&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Checkout Drupal 8:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;cd ~
+&lt;&#x2F;span&gt;&lt;span&gt;mkdir workspace
+&lt;&#x2F;span&gt;&lt;span&gt;cd workspace
+&lt;&#x2F;span&gt;&lt;span&gt;git clone --recursive --branch 8.x http:&#x2F;&#x2F;git.drupal.org&#x2F;project&#x2F;drupal.git drupal-8
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2&gt;Apache config&lt;&#x2F;h2&gt;
+&lt;p&gt;Create an Apache configuration for your drupal-8 folder at &#x2F;etc&#x2F;apache2&#x2F;sites-available&#x2F;drupal-8.conf:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;lt;VirtualHost *:80&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        ServerAlias drupal-8.localhost
+&lt;&#x2F;span&gt;&lt;span&gt;        DocumentRoot &#x2F;home&#x2F;klausi&#x2F;workspace&#x2F;drupal-8
+&lt;&#x2F;span&gt;&lt;span&gt;        &amp;lt;Directory &amp;quot;&#x2F;home&#x2F;klausi&#x2F;workspace&#x2F;drupal-8&amp;quot;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;                Options FollowSymLinks
+&lt;&#x2F;span&gt;&lt;span&gt;                AllowOverride All
+&lt;&#x2F;span&gt;&lt;span&gt;                Require all granted
+&lt;&#x2F;span&gt;&lt;span&gt;        &amp;lt;&#x2F;Directory&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&#x2F;VirtualHost&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Enable the configuration and restart Apache:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;sudo a2ensite drupal-8
+&lt;&#x2F;span&gt;&lt;span&gt;sudo service apache2 restart
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;You might wonder why I do not use an &lt;a href=&quot;http:&#x2F;&#x2F;randyfay.com&#x2F;content&#x2F;quick-guide-wildcard-apache-vhosts&quot;&gt;Apache wildcard&#x2F;catchall configuration&lt;&#x2F;a&gt;, here is the reason why: unfortunately the VirtualDocumentRoot directive requires that you modify your .htaccess in your Drupal installation (you have to enable the RewriteBase &#x2F;). This is bad because then you always have local changes in that file if you are working with a Drupal core git checkout.&lt;&#x2F;p&gt;
+&lt;h2&gt;localhost DNS&lt;&#x2F;h2&gt;
+&lt;p&gt;Create the domain entry for drupal-8.localhost in &#x2F;etc&#x2F;hosts. Add &quot;127.0.0.1  drupal-8.localhost&quot;. You will have to add each new project name in this file (you could also install Bind to automatically resolve this, but seems like an overkill to me).&lt;&#x2F;p&gt;
+&lt;p&gt;I wrote a &lt;a href=&quot;&#x2F;sites&#x2F;default&#x2F;files&#x2F;deploy-site.sh_.txt&quot;&gt;simple bash script&lt;&#x2F;a&gt; that automatically creates the Apache site config and the site&#x27;s hosts entry for me. Make sure to change the WORKDIR to your directory and run it like this:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;sudo deploy-site.sh drupal-8
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2&gt;Database&lt;&#x2F;h2&gt;
+&lt;p&gt;Create the database in Phpmyadmin: Go to http:&#x2F;&#x2F;localhost&#x2F;phpmyadmin , then &quot;Privileges&quot;, then &quot;Add a new User&quot;. Fill out the user name with &quot;drupal-8&quot;, host localhost and generate a password (copy that password to use it later during the Drupal install process). Use the &quot;Database for user&quot; section and select &quot;Create database with same name and grant all privileges&quot;.&lt;&#x2F;p&gt;
+&lt;h2&gt;Install Drupal&lt;&#x2F;h2&gt;
+&lt;p&gt;Now your Drupal installation should be reachable in your browser at http:&#x2F;&#x2F;drupal-8.localhost and you can start the installation. Done!&lt;&#x2F;p&gt;
+&lt;p&gt;You can also use &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;drush-ops&#x2F;drush&quot;&gt;drush&lt;&#x2F;a&gt; to install Drupal from the command line:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;drush site-install --account-name=klausi --account-pass=klausi --site-name=drupal-8.localhost
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2&gt;Development tips&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;I highly recommend using an IDE for source code editing such as Netbeans or Phpstorm. Drupal is spread over thousands of files and shortcuts to jump to other files are a real time saver, same for code completion as you type. And having a debugger to step through the code is very helpful.&lt;&#x2F;li&gt;
+  &lt;li&gt;You want to speed up MySQL because you don&#x27;t care about your local development databases anyway? Put &lt;a href=&quot;http:&#x2F;&#x2F;wolfgangziegler.net&#x2F;ubuntu-11.04-simpletest-performance-upstart-mysql-ramdisk&quot;&gt;MySQL on a RAM disc that syncs back to your hard drive on start&#x2F;stop&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+  &lt;li&gt;You want to examine mails that Drupal sends out? &lt;a href=&quot;http:&#x2F;&#x2F;www.drupal4hu.com&#x2F;node&#x2F;55&quot;&gt;Configure PHP to write outgoing mails to temporary files&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+  &lt;li&gt;You like the command line? Check out &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;drush-ops&#x2F;drush&quot;&gt;drush&lt;&#x2F;a&gt; to do all sorts of Drupal administration tasks faster.&lt;&#x2F;li&gt;
+  &lt;li&gt;You want to know what&#x27;s going on in that stupid function? Install the &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;project&#x2F;devel&quot;&gt;devel module&lt;&#x2F;a&gt; for debugging purposes and insert &lt;code&gt;dpm($variable);&lt;&#x2F;code&gt; anywhere you want. It will pretty-print the variable in the browser for inspection.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
       </item>
       <item>
           <title>Drupalcon Prague 2013 talk: REST and Serialization in Drupal 8</title>
@@ -1692,7 +1889,7 @@ enforces.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-prague-rest-serialization-drupal-8/</link>
           <guid>https://klau.si/blog/drupalcon-prague-rest-serialization-drupal-8/</guid>
-          <description xml:base="https://klau.si/blog/drupalcon-prague-rest-serialization-drupal-8/">&lt;p&gt;Here is the video of our DrupalCon Prague 2013 talk &amp;quot;REST and serialization in Drupal 8&amp;quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-prague-rest-serialization-drupal-8/">&lt;p&gt;Here is the video of our DrupalCon Prague 2013 talk &quot;REST and serialization in Drupal 8&quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;w6dqzDbY78k&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
       </item>
@@ -1702,7 +1899,7 @@ enforces.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-portland-rest-serialization-drupal-8/</link>
           <guid>https://klau.si/blog/drupalcon-portland-rest-serialization-drupal-8/</guid>
-          <description xml:base="https://klau.si/blog/drupalcon-portland-rest-serialization-drupal-8/">&lt;p&gt;Here is the video of our DrupalCon Portland 2013 talk &amp;quot;REST and serialization in Drupal 8&amp;quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-portland-rest-serialization-drupal-8/">&lt;p&gt;Here is the video of our DrupalCon Portland 2013 talk &quot;REST and serialization in Drupal 8&quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;6FNfy7pU6mE&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
       </item>
@@ -1712,7 +1909,19 @@ enforces.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/screencasts-recordmydesktop-ffmpeg-conversion-html5-video/</link>
           <guid>https://klau.si/screencasts-recordmydesktop-ffmpeg-conversion-html5-video/</guid>
-          <description xml:base="https://klau.si/screencasts-recordmydesktop-ffmpeg-conversion-html5-video/">&lt;p&gt;Producing a demo video for &lt;a href=&quot;http:&#x2F;&#x2F;portland2013.drupal.org&#x2F;session&#x2F;rest-and-serialization-drupal-8&quot;&gt;my DrupalCon Portland presentation&lt;&#x2F;a&gt; caused a bit frustration with video editing tools, so here is a simple solution to cut and convert a video on Ubuntu.</description>
+          <description xml:base="https://klau.si/screencasts-recordmydesktop-ffmpeg-conversion-html5-video/">&lt;p&gt;Producing a demo video for &lt;a href=&quot;http:&#x2F;&#x2F;portland2013.drupal.org&#x2F;session&#x2F;rest-and-serialization-drupal-8&quot;&gt;my DrupalCon Portland presentation&lt;&#x2F;a&gt; caused a bit frustration with video editing tools, so here is a simple solution to cut and convert a video on Ubuntu.&lt;!-- more --&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;First I recorded my screencast with RecordMyDesktop, a simple tool to capture the happenings on your screen. It even supports only recording one window, so you don&#x27;t need to include the rest of your irrelevant desktop. Installation:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;sudo aptitude install gtk-recordmydesktop
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The output file it creates uses the Ogg Theroa Video format, which is free and open, but unfortunately not used on a lot on other platforms. For HTML5 video H.264&#x2F;MPEG-4 now seems to be the most widely spread format, so we need to convert that. I tried with various graphical video editors such as PiTiVi, kdenlive and OpenShot, but not any of them produced useful results. They always changed the resolution, used the wrong codec, a different frame rate or blew up the output file. Their preconfigured rendering profiles just don&#x27;t make sense for simply converting and cutting a video for the web.&lt;&#x2F;p&gt;
+&lt;p&gt;I decided to look into the command line tool ffmpeg directly and found it surprisingly easy to use. Installation with the H.264 codec:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;sudo aptitude install ffmpeg x264
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;To convert the video file, cut off everything after minute 1:34 and remove the audio track I used this command:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;ffmpeg -i input-file.ogv -vcodec libx264 -acodec none -t 00:01:34.0 output-file.mp4
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Done! It also reduced the file size from 4 MB for the Ogg file to 1.4 MB for the MP4 file without reducing the visual quality, thank you ffmpeg :-)&lt;&#x2F;p&gt;
+</description>
       </item>
       <item>
           <title>State of the project application issue queue 2013</title>
@@ -1720,7 +1929,8 @@ enforces.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/state-project-application-issue-queue-2013/</link>
           <guid>https://klau.si/state-project-application-issue-queue-2013/</guid>
-          <description xml:base="https://klau.si/state-project-application-issue-queue-2013/">&lt;p&gt;I wrote a brief status update of what is going on in the Drupal project application issue queue lately. Read more at &lt;a href=&quot;http:&#x2F;&#x2F;groups.drupal.org&#x2F;node&#x2F;281758&quot;&gt;groups.drupal.org&lt;&#x2F;a&gt;.</description>
+          <description xml:base="https://klau.si/state-project-application-issue-queue-2013/">&lt;p&gt;I wrote a brief status update of what is going on in the Drupal project application issue queue lately. Read more at &lt;a href=&quot;http:&#x2F;&#x2F;groups.drupal.org&#x2F;node&#x2F;281758&quot;&gt;groups.drupal.org&lt;&#x2F;a&gt;.&lt;!-- more --&gt;&lt;&#x2F;p&gt;
+</description>
       </item>
       <item>
           <title>REST module status report</title>
@@ -1728,7 +1938,8 @@ enforces.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/rest-module-status-report/</link>
           <guid>https://klau.si/rest-module-status-report/</guid>
-          <description xml:base="https://klau.si/rest-module-status-report/">&lt;p&gt;I posted a &lt;a href=&quot;http:&#x2F;&#x2F;groups.drupal.org&#x2F;node&#x2F;273413&quot;&gt;status report on g.d.o&lt;&#x2F;a&gt; on the work that has been going into the Restful Web Services module for Drupal 8. I would like to thank &lt;a href=&quot;http:&#x2F;&#x2F;www.acquia.com&#x2F;&quot;&gt;Acquia&lt;&#x2F;a&gt; and &lt;a href=&quot;http:&#x2F;&#x2F;epiqo.com&#x2F;&quot;&gt;epiqo&lt;&#x2F;a&gt; again who have extended their sponsorship so that I can get further things done in the &lt;a href=&quot;http:&#x2F;&#x2F;buytaert.net&#x2F;drupal-8-feature-freeze-extended&quot;&gt;Drupal 8 feature completion phase&lt;&#x2F;a&gt;.</description>
+          <description xml:base="https://klau.si/rest-module-status-report/">&lt;p&gt;I posted a &lt;a href=&quot;http:&#x2F;&#x2F;groups.drupal.org&#x2F;node&#x2F;273413&quot;&gt;status report on g.d.o&lt;&#x2F;a&gt; on the work that has been going into the Restful Web Services module for Drupal 8. I would like to thank &lt;a href=&quot;http:&#x2F;&#x2F;www.acquia.com&#x2F;&quot;&gt;Acquia&lt;&#x2F;a&gt; and &lt;a href=&quot;http:&#x2F;&#x2F;epiqo.com&#x2F;&quot;&gt;epiqo&lt;&#x2F;a&gt; again who have extended their sponsorship so that I can get further things done in the &lt;a href=&quot;http:&#x2F;&#x2F;buytaert.net&#x2F;drupal-8-feature-freeze-extended&quot;&gt;Drupal 8 feature completion phase&lt;&#x2F;a&gt;.&lt;!-- more --&gt;&lt;&#x2F;p&gt;
+</description>
       </item>
       <item>
           <title>A RESTful entity web API for Drupal 8</title>
@@ -1746,7 +1957,7 @@ enforces.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-project-application-process/</link>
           <guid>https://klau.si/blog/drupalcon-project-application-process/</guid>
-          <description xml:base="https://klau.si/blog/drupalcon-project-application-process/">&lt;p&gt;Here is the video of our DrupalCon Munich 2012 talk &amp;quot;The project application process&amp;quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-project-application-process/">&lt;p&gt;Here is the video of our DrupalCon Munich 2012 talk &quot;The project application process&quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;jLj0K8Trvus&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
       </item>
@@ -1756,7 +1967,88 @@ enforces.&lt;&#x2F;p&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/dev-ubuntu-12-04/</link>
           <guid>https://klau.si/dev-ubuntu-12-04/</guid>
-          <description xml:base="https://klau.si/dev-ubuntu-12-04/">&lt;p&gt;I upgraded my local computer to Ubuntu 12.04 today and revisited my Drupal development environment. Here is a simple and fast guide how to configure Ubuntu for development. There are a number of &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;node&#x2F;262&quot;&gt;installation documentation pages on this topic on drupal.org&lt;&#x2F;a&gt;, but they suggest to use the packaged Drupal installation and to run Drupal in subfolders (e.g. http:&#x2F;&#x2F;localhost&#x2F;drupal6). They also do not cover some other important development tools like Phpmyadmin or php.ini settings. During development we want to edit files and we want to do that somewhere in our home directory to avoid any permission problems. There is also &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;project&#x2F;drubuntu&quot;&gt;Drubuntu&lt;&#x2F;a&gt;, but it is outdated and does way too much magic in my opinion. So here is a more transparent tutorial that highlights the key development configuration settings for Drupal development.</description>
+          <description xml:base="https://klau.si/dev-ubuntu-12-04/">&lt;p&gt;I upgraded my local computer to Ubuntu 12.04 today and revisited my Drupal development environment. Here is a simple and fast guide how to configure Ubuntu for development. There are a number of &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;node&#x2F;262&quot;&gt;installation documentation pages on this topic on drupal.org&lt;&#x2F;a&gt;, but they suggest to use the packaged Drupal installation and to run Drupal in subfolders (e.g. http:&#x2F;&#x2F;localhost&#x2F;drupal6). They also do not cover some other important development tools like Phpmyadmin or php.ini settings. During development we want to edit files and we want to do that somewhere in our home directory to avoid any permission problems. There is also &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;project&#x2F;drubuntu&quot;&gt;Drubuntu&lt;&#x2F;a&gt;, but it is outdated and does way too much magic in my opinion. So here is a more transparent tutorial that highlights the key development configuration settings for Drupal development.&lt;!-- more --&gt;&lt;&#x2F;p&gt;
+&lt;h2&gt;Installation&lt;&#x2F;h2&gt;
+&lt;p&gt;To install a web server and MySQL and PHP and all the dependencies we simply install the default Ubuntu drupal package:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;sudo aptitude install drupal7
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The installation will probably prompt you for a few things: Set a password for the MySQL root user. For the Postfix configuration you can select the &quot;Local only&quot; profile, so that no outgoing mail will be sent by PHP from your computer. For the postfix system mail name you can just leave it at your default hostname. The installation will probably prompt you to configure a default drupal database, but we will do that manually afterwards, so skip it.&lt;&#x2F;p&gt;
+&lt;p&gt;We don&#x27;t want to expose any of our sites to the outside world, so we limit Apache to only listen on the localhost interface. Edit &lt;strong&gt;&#x2F;etc&#x2F;apache2&#x2F;ports.conf&lt;&#x2F;strong&gt; and replace &quot;Listen 80&quot; with &quot;Listen 127.0.0.1:80&quot;.&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;Listen 127.0.0.1:80
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;We want Apache to run as our own user account to avoid any permission problems or conflicts when running drush or editing config files. Edit &lt;strong&gt;&#x2F;etc&#x2F;apache2&#x2F;envvars&lt;&#x2F;strong&gt; and change the user to your account name. Example:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;export APACHE_RUN_USER=klausi
+&lt;&#x2F;span&gt;&lt;span&gt;export APACHE_RUN_GROUP=klausi
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Enable the Rewrite mod and restart Apache.&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;sudo a2enmod rewrite
+&lt;&#x2F;span&gt;&lt;span&gt;sudo service apache2 restart
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Now we would like to have Phpmyadmin to easily create, inspect and manipulate MySQL databases.&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;sudo aptitude install phpmyadmin
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The installation will probably prompt you for a few things: Confirm that you want to automatically configure a database with dbconfig-common. Select Apache as web server to configure automatically.&lt;&#x2F;p&gt;
+&lt;p&gt;Now your Phpmyadmin installation should be reachable at http:&#x2F;&#x2F;localhost&#x2F;phpmyadmin&#x2F; .&lt;&#x2F;p&gt;
+&lt;p&gt;We will need some tools for development:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;sudo aptitude install git php5-xdebug php5-curl php-apc
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2&gt;&lt;a name=&quot;php.ini&quot;&gt;php.ini&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;It is important to tune your &#x2F;etc&#x2F;php5&#x2F;apache2&#x2F;&lt;strong&gt;php.ini&lt;&#x2F;strong&gt; for development purposes. I changed the following entries:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;memory_limit = 256M
+&lt;&#x2F;span&gt;&lt;span&gt;error_reporting = E_ALL | E_STRICT
+&lt;&#x2F;span&gt;&lt;span&gt;display_errors = On
+&lt;&#x2F;span&gt;&lt;span&gt;display_startup_errors = On
+&lt;&#x2F;span&gt;&lt;span&gt;track_errors = On
+&lt;&#x2F;span&gt;&lt;span&gt;html_errors = On
+&lt;&#x2F;span&gt;&lt;span&gt;session.gc_probability = 1
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2&gt;Folder setup&lt;&#x2F;h2&gt;
+&lt;p&gt;The next step is the setup of a workspace environment in my home folder where I will develop my Drupal projects. Example for my &quot;drupal-8&quot; development environment:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Drupal root: &#x2F;home&#x2F;klausi&#x2F;workspace&#x2F;drupal-8&lt;&#x2F;li&gt;
+  &lt;li&gt;Apache config: &#x2F;etc&#x2F;apache2&#x2F;sites-available&#x2F;drupal-8&lt;&#x2F;li&gt;
+  &lt;li&gt;Browser: http:&#x2F;&#x2F;drupal-8.localhost&lt;&#x2F;li&gt;
+  &lt;li&gt;Database: drupal-8&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Checkout Drupal 8:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;cd ~
+&lt;&#x2F;span&gt;&lt;span&gt;mkdir workspace
+&lt;&#x2F;span&gt;&lt;span&gt;cd workspace
+&lt;&#x2F;span&gt;&lt;span&gt;git clone --recursive --branch 8.x http:&#x2F;&#x2F;git.drupal.org&#x2F;project&#x2F;drupal.git drupal-8
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2&gt;Apache config&lt;&#x2F;h2&gt;
+&lt;p&gt;Create an Apache configuration for your drupal-8 folder at &#x2F;etc&#x2F;apache2&#x2F;site-available&#x2F;drupal-8:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;lt;VirtualHost *:80&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        ServerAlias drupal-8.localhost
+&lt;&#x2F;span&gt;&lt;span&gt;        DocumentRoot &#x2F;home&#x2F;klausi&#x2F;workspace&#x2F;drupal-8
+&lt;&#x2F;span&gt;&lt;span&gt;        &amp;lt;Directory &amp;quot;&#x2F;home&#x2F;klausi&#x2F;workspace&#x2F;drupal-8&amp;quot;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;                Options FollowSymLinks
+&lt;&#x2F;span&gt;&lt;span&gt;                AllowOverride All
+&lt;&#x2F;span&gt;&lt;span&gt;        &amp;lt;&#x2F;Directory&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&#x2F;VirtualHost&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Enable the configuration and restart Apache:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;sudo a2ensite drupal-8
+&lt;&#x2F;span&gt;&lt;span&gt;sudo service apache2 restart
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;You might wonder why I do not use an &lt;a href=&quot;http:&#x2F;&#x2F;randyfay.com&#x2F;content&#x2F;quick-guide-wildcard-apache-vhosts&quot;&gt;Apache wildcard&#x2F;catchall configuration&lt;&#x2F;a&gt;, here is the reason why: unfortunately the VirtualDocumentRoot directive requires that you modify your .htaccess in your Drupal installation (you have to enable the RewriteBase &#x2F;). This is bad because then you always have local changes in that file if you are working with a Drupal core git checkout.&lt;&#x2F;p&gt;
+&lt;h2&gt;localhost DNS&lt;&#x2F;h2&gt;
+&lt;p&gt;Create the domain entry for drupal-8.localhost in &#x2F;etc&#x2F;hosts. Add &quot;127.0.0.1  drupal-8.localhost&quot;. You will have to add each new project name in this file (you could also install Bind to automatically resolve this, but seems like an overkill to me).&lt;&#x2F;p&gt;
+&lt;p&gt;I wrote a &lt;a href=&quot;&#x2F;sites&#x2F;default&#x2F;files&#x2F;deploy-site.sh.txt&quot;&gt;simple bash script&lt;&#x2F;a&gt; that automatically creates the Apache site config and the site&#x27;s hosts entry for me. Make sure to change the WORKDIR to your directory and run it like this:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;sudo deploy-site.sh drupal-8
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2&gt;Database&lt;&#x2F;h2&gt;
+&lt;p&gt;Create the database in Phpmyadmin: Go to http:&#x2F;&#x2F;localhost&#x2F;phpmyadmin , then &quot;Privileges&quot;, then &quot;Add a new User&quot;. Fill out the user name with &quot;drupal-8&quot;, host localhost and generate a password (copy that password to use it later during the Drupal install process). Use the &quot;Database for user&quot; section and select &quot;Create database with same name and grant all privileges&quot;.&lt;&#x2F;p&gt;
+&lt;h2&gt;Install Drupal&lt;&#x2F;h2&gt;
+&lt;p&gt;Now your Drupal installation should be reachable in your browser at http:&#x2F;&#x2F;drupal-8.localhost and you can start the installation. Done!&lt;&#x2F;p&gt;
+&lt;h2&gt;Development tips&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;You want to speed up MySQL because you don&#x27;t care about your local development databases anyway? Put &lt;a href=&quot;http:&#x2F;&#x2F;wolfgangziegler.net&#x2F;ubuntu-11.04-simpletest-performance-upstart-mysql-ramdisk&quot;&gt;MySQL on a RAM disc that syncs back to your hard drive on start&#x2F;stop&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+  &lt;li&gt;You want to examine mails that Drupal sends out? &lt;a href=&quot;http:&#x2F;&#x2F;www.drupal4hu.com&#x2F;node&#x2F;55&quot;&gt;Configure PHP to write outgoing mails to temporary files&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+  &lt;li&gt;You like the command line? Check out &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;project&#x2F;drush&quot;&gt;drush&lt;&#x2F;a&gt; to do all sorts of Drupal administration tasks faster.&lt;&#x2F;li&gt;
+  &lt;li&gt;You want to know what&#x27;s going on in that stupid function? Install the &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;project&#x2F;devel&quot;&gt;devel module&lt;&#x2F;a&gt; for debugging purposes and insert &lt;code&gt;dpm($variable);&lt;&#x2F;code&gt; anywhere you want. It will pretty-print the variable in the browser for inspection.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
       </item>
       <item>
           <title>Installation of a Drupal Upgrade Path Test DB</title>
@@ -1797,7 +2089,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-rules-way-of-life/</link>
           <guid>https://klau.si/blog/drupalcon-rules-way-of-life/</guid>
-          <description xml:base="https://klau.si/blog/drupalcon-rules-way-of-life/">&lt;p&gt;Here is the video of our DrupalCon London 2011 talk &amp;quot;The Rules way of life&amp;quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-rules-way-of-life/">&lt;p&gt;Here is the video of our DrupalCon London 2011 talk &quot;The Rules way of life&quot;.&lt;&#x2F;p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;xXcbPi16VAU&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
       </item>
@@ -1914,7 +2206,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-rules-ecosystem/</link>
           <guid>https://klau.si/blog/drupalcon-rules-ecosystem/</guid>
-          <description xml:base="https://klau.si/blog/drupalcon-rules-ecosystem/">&lt;p&gt;Here is the video of our DrupalCon Copenhagen 2010 talk &amp;quot;About the Rules ecosystem&amp;quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-rules-ecosystem/">&lt;p&gt;Here is the video of our DrupalCon Copenhagen 2010 talk &quot;About the Rules ecosystem&quot;.&lt;&#x2F;p&gt;
 &lt;iframe src=&quot;https:&#x2F;&#x2F;archive.org&#x2F;embed&#x2F;AboutTheRulesEcosystem&quot; width=&quot;420&quot; height=&quot;236&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
 </description>
       </item>
@@ -2069,7 +2361,42 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/sidux-way-life-beispiel-openoffice-3/</link>
           <guid>https://klau.si/sidux-way-life-beispiel-openoffice-3/</guid>
-          <description xml:base="https://klau.si/sidux-way-life-beispiel-openoffice-3/">&lt;p&gt;Eine &lt;a href=&quot;http:&#x2F;&#x2F;ikhaya.ubuntuusers.de&#x2F;2008&#x2F;10&#x2F;25&#x2F;ubuntu-rechtfertigt-entscheidung-gegen-openoffice.org-3.0&#x2F;&quot; target=&quot;_blank&quot;&gt;Ikhaya Meldung auf ubuntuusers.de&lt;&#x2F;a&gt; samt &lt;a href=&quot;http:&#x2F;&#x2F;forum.ubuntuusers.de&#x2F;topic&#x2F;ikhaya-ubuntu-rechtfertigt-entscheidung-gegen&#x2F;&quot;&gt;Diskussion&lt;&#x2F;a&gt; brachte mich letztens ein bisschen zum Lächeln: OpenOffice 3 wird nicht in Ubuntu 8.10 Intrepid Ibex enthalten sein. Großes Wehklagen war bei den Fans von Ubuntu (gleichzeitig Fans aktueller Software) zu hören, so was wird mir bei der Distribution meiner Wahl jedenfalls nicht passieren.</description>
+          <description xml:base="https://klau.si/sidux-way-life-beispiel-openoffice-3/">&lt;p&gt;Eine &lt;a href=&quot;http:&#x2F;&#x2F;ikhaya.ubuntuusers.de&#x2F;2008&#x2F;10&#x2F;25&#x2F;ubuntu-rechtfertigt-entscheidung-gegen-openoffice.org-3.0&#x2F;&quot; target=&quot;_blank&quot;&gt;Ikhaya Meldung auf ubuntuusers.de&lt;&#x2F;a&gt; samt &lt;a href=&quot;http:&#x2F;&#x2F;forum.ubuntuusers.de&#x2F;topic&#x2F;ikhaya-ubuntu-rechtfertigt-entscheidung-gegen&#x2F;&quot;&gt;Diskussion&lt;&#x2F;a&gt; brachte mich letztens ein bisschen zum Lächeln: OpenOffice 3 wird nicht in Ubuntu 8.10 Intrepid Ibex enthalten sein. Großes Wehklagen war bei den Fans von Ubuntu (gleichzeitig Fans aktueller Software) zu hören, so was wird mir bei der Distribution meiner Wahl jedenfalls nicht passieren.&lt;!-- more --&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Wie wird OpenOffice 3 in Sidux behandelt? Nun, zum einen gibt es keine fixen Release-Termine bei Sidux, weil das System in kleinen inkrementellen Schritten auf Debian Unstable Basis immer aktuell gehalten wird (Rolling Release). Damit fallen grobe, halbjährliche Upgrades wie bei Ubuntu weg, aktuelle Software kommt ziemlich schnell in den Debian Unstable Zweig und kann unmittelbar verwendet werden. Zum anderen werden mit dem Sidux System- und Upgradewerkzeug &lt;a href=&quot;http:&#x2F;&#x2F;manual.sidux.com&#x2F;de&#x2F;smxi-de.htm&quot; target=&quot;_blank&quot;&gt;smxi&lt;&#x2F;a&gt; brandaktuelle Softwarepakete mit Fehlern zurückgehalten, sodass stabiles Arbeiten selbstverständlich ist. OpenOffice 3 ist aber so aktuell, dass es nach dem &lt;a href=&quot;http:&#x2F;&#x2F;lists.debian.org&#x2F;debian-devel-announce&#x2F;2008&#x2F;07&#x2F;msg00007.html&quot; target=&quot;_blank&quot;&gt;Feature Freeze von Debian&lt;&#x2F;a&gt; im Juli im Moment nicht in Debian Unstable aufgenommen wird.&lt;&#x2F;p&gt;
+&lt;p&gt;Kleiner Exkurs zur Wiederholung: Debian hat vier Entwicklungszweige:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+	&lt;li&gt;Stable (Codename Etch): Aktuelles Debian Relaese, hier werden hauptsächlich Security Updates vorgenommen. Die Software ist teiltweise hoffnungslos veraltet. Gut für StabilitätsfanatikerInnen.&lt;&#x2F;li&gt;
+	&lt;li&gt;Testing (Codename Lenny): Nächstes Debian Release, hier werden die Softwarepakete für den zukünftigen Einsatz in Debian 5.0 vorbereitet. Halbwegs aktuell, ziemlich stabil.&lt;&#x2F;li&gt;
+	&lt;li&gt;Unstable (Codename Sid): Alles was noch ins nächste Debian Release kommen soll wird einfach paketiert und reingeworfen. Da aber meist nur Software verwendet wird, die auch ein offizielles Release der ursprünglichen EntwicklerInnen (der sogenannte Upstream) darstellt, ist diese oft problemlos verwendbar und sehr aktuell. Was für lauffähig befunden wird, wandert nach einiger Zeit auch weiter nach Testing.&lt;&#x2F;li&gt;
+	&lt;li&gt;Experimental: Brandheiß - hier landet neue Software als erstes, oft gibt es nach wenigen Stunden oder Tagen eines Upstream-Releases (z.B. die offizielle Verlautbarung von OpenOffice 3 auf openoffice.org) bereits ein Debian Paket in diesem Zweig. Wird die Software für tauglich befunden, macht sie ihren Weg über Unstable und Testing schließlich irgendwann nach Stable.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+OpenOffice 3 ist also im Moment in Experimental, da komme ich als Sidux User auch problemlos ran:
+&lt;ul&gt;
+	&lt;li&gt;&lt;code&gt;&#x2F;etc&#x2F;apt&#x2F;sources.list.d&#x2F;debian.list&lt;&#x2F;code&gt; mit Rootrechten bearbeiten, die Zeile &lt;code&gt;#deb http:&#x2F;&#x2F;ftp.at.debian.org&#x2F;debian&#x2F; experimental main contrib non-free&lt;&#x2F;code&gt; aktivieren oder unten einfügen (dadurch ist eine zweite Quelle aktiv, automatische Upgrades werden aber nur über die erste Quelle, Unstable, durchgeführt)&lt;&#x2F;li&gt;
+	&lt;li&gt;&lt;code&gt;apt-get update&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+	&lt;li&gt;&lt;code&gt;apt-get install -t experimental openoffice.org&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+Fertig, jetzt ist OpenOffice 3 installiert und kann verwendet werden. Sollte ich draufkommen, dass OpenOffice 3 noch zu instabil ist, zuviele Bugs hat oder ähnliches, kann ich auch einfach wieder OpenOffice 2.4 aus Unstable installieren:
+&lt;ul&gt;
+	&lt;li&gt;&lt;code&gt;apt-get remove openoffice.org&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+	&lt;li&gt;&lt;code&gt;apt-get install openoffice.org&lt;&#x2F;code&gt; (Eine Fehlermeldung tritt auf, das sagt mir, dass ich andere openoffice.org Komponenten auch noch entfernen sollte)&lt;&#x2F;li&gt;
+	&lt;li&gt;&lt;code&gt;apt-get remove openoffice.org-core openoffice.org-common openoffice.org-l10n-de openoffice.org-base-core&lt;&#x2F;code&gt; (Jetzt werden auch noch alle anderen OpenOffice 3.0 Teile deinstalliert)&lt;&#x2F;li&gt;
+	&lt;li&gt;apt-get install openoffice.org&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+Fertig, jetzt habe ich wieder das alte OpenOffice 2.4 installiert und lauffähig (eventuell noch den experimental Eintrag aus der &#x2F;etc&#x2F;apt&#x2F;source.list.d&#x2F;debian.list entfernen).
+&lt;p&gt;Die Vorteile von Sidux dabei aus meiner Sicht:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+	&lt;li&gt;Keine Fremdquellen in meinen source.list Dateien. Die Pakete die ich installiere kommen von Debian selbst, ich muss mir also keine Gedanken wegen Sicherheitsproblemen machen.&lt;&#x2F;li&gt;
+	&lt;li&gt;Schnelle Paketierung: wie gesagt, Debian-Pakete werden sehr schnell nach Upstream-Releases gebaut und stehen in den offiziellen Repositories zur Verfügung (zumindest in experimental).&lt;&#x2F;li&gt;
+	&lt;li&gt;Immer auf dem Laufenden - keine halbjährlichen, riesigen Zitter-Upgrades, die spätestens nach dem 3. Mal (also nach 1.5 Jahren) schiefgehen (was mir bei Ubuntu passiert ist).&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+Nachteile gibt es aber auch:
+&lt;ol&gt;
+	&lt;li&gt;Schwierig für EinsteigerInnen: Du musst schon APT, deine installierten Pakete, smxi etc. etwas  kennen, um nicht überfordert zu sein.&lt;&#x2F;li&gt;
+	&lt;li&gt;Update-Flut: Bei Sidux gibt es immer was zu sehen und upzudaten - Leute mit Downloadlimit werden bald ihre Grenzen sprengen.&lt;&#x2F;li&gt;
+	&lt;li&gt;Stabil ist relativ - einige Debian-EntwicklerInnen verachten Sidux sogar, weil sie davon ausgehen, dass man ein produktives Betriebssystem gar nicht auf dem Unstable-Zweig betreiben kann. Sidux beweist das Gegenteil, kann aber kurzzeitig Fehler mit sich bringen, die aber sehr schnell behoben werden.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+</description>
       </item>
       <item>
           <title>Python Dbus Gajim Magic</title>
@@ -2110,7 +2437,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <guid>https://klau.si/die-deutsche-wikipedia-ist-tot/</guid>
           <description xml:base="https://klau.si/die-deutsche-wikipedia-ist-tot/">&lt;p&gt;Ich mag die &lt;a title=&quot;Wikipedia&quot; href=&quot;http:&#x2F;&#x2F;wikipedia.org&#x2F;&quot; target=&quot;_blank&quot;&gt;Wikipedia&lt;&#x2F;a&gt; eigentlich. Du weißt über einen Begriff nicht wirklich Bescheid und willst kurz wissen wo du ihn einordnen sollst - dafür war die &lt;a title=&quot;die &quot; href=&quot;http:&#x2F;&#x2F;de.wikipedia.org&#x2F;wiki&#x2F;Hauptseite&quot; target=&quot;_blank&quot;&gt;deutsche Wikipedia&lt;&#x2F;a&gt; zum Nachschlagen bestens geeignet. Klar, eine jede weiß, dass man den Inhalten nur bedingt vertrauen kann, aber für den Einstieg und für weiterführende Links war es immer noch gut genug.&lt;&#x2F;p&gt;
 &lt;p&gt;Unlängst wollte ich mal schauen, was in der deutschen Wikipedia eigentlich über das Betriebssystem, das ich auf meinem Desktop-Rechner benutze, steht (&lt;a title=&quot;Sidux Home&quot; href=&quot;http:&#x2F;&#x2F;sidux.com&quot; target=&quot;_blank&quot;&gt;Sidux&lt;&#x2F;a&gt; - darüber habe ich auch schon mal &lt;a href=&quot;https:&#x2F;&#x2F;klau.si&#x2F;sidux-der-n%C3%A4chste-schritt&#x2F;&quot;&gt;was geschrieben&lt;&#x2F;a&gt;). Zu meiner Verwunderung existierte kein Artikel dazu, also dachte ich mir ich lege mal schnell einen an mit ein paar Sätzen Inhalt, damit zumindest irgendwas über Sidux drinsteht, falls jemand mal nach dem Begriff sucht.&lt;&#x2F;p&gt;
-&lt;p&gt;Leider kam ich nicht weit, weil mich ein roter Banner vom Bearbeiten abhielt: &amp;quot;&lt;strong&gt;Eine Seite mit diesem Namen kann nicht angelegt werden. Die Sperre wurde durch FritzG mit der Begründung &lt;em&gt;„“&lt;&#x2F;em&gt; eingerichtet.&lt;&#x2F;strong&gt;&amp;quot;&lt;&#x2F;p&gt;
+&lt;p&gt;Leider kam ich nicht weit, weil mich ein roter Banner vom Bearbeiten abhielt: &quot;&lt;strong&gt;Eine Seite mit diesem Namen kann nicht angelegt werden. Die Sperre wurde durch FritzG mit der Begründung &lt;em&gt;„“&lt;&#x2F;em&gt; eingerichtet.&lt;&#x2F;strong&gt;&quot;&lt;&#x2F;p&gt;
 </description>
       </item>
       <item>
@@ -2119,7 +2446,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/display-currently-playing-song-rythmbox-gajim-status-message/</link>
           <guid>https://klau.si/display-currently-playing-song-rythmbox-gajim-status-message/</guid>
-          <description xml:base="https://klau.si/display-currently-playing-song-rythmbox-gajim-status-message/">&lt;p&gt;I found a nice feature in the preferences of my instant messenger &lt;a href=&quot;http:&#x2F;&#x2F;www.gajim.org&quot; title=&quot;Gajim home&quot;&gt;gajim&lt;&#x2F;a&gt;, where a check box says &amp;quot;Set status message to reflect currently playing music track&amp;quot;. My only problem was that i could not enable the option, because it was greyed out and not active. First I tried to find a plugin for my musicplayer &lt;a href=&quot;http:&#x2F;&#x2F;rhythmbox.org&quot; title=&quot;Rhythmbox home&quot;&gt;r&lt;&#x2F;a&gt;&lt;a href=&quot;http:&#x2F;&#x2F;rhythmbox.org&quot; title=&quot;Rhythmbox home&quot;&gt;hythmbox&lt;&#x2F;a&gt;, but the information I found seemed to be old and several web pages said that gajim and rhythmbox should work together natively. I remembered that most &lt;a href=&quot;http:&#x2F;&#x2F;gnome.org&quot; title=&quot;GNOME home&quot;&gt;GNOME&lt;&#x2F;a&gt; applications use &lt;a href=&quot;http:&#x2F;&#x2F;www.freedesktop.org&#x2F;wiki&#x2F;Software&#x2F;dbus&quot; title=&quot;D-Bus home&quot;&gt;D-Bus&lt;&#x2F;a&gt; to communicate with each other. I supposed that there was a D-Bus package missing on my &lt;a href=&quot;http:&#x2F;&#x2F;sidux.com&quot; title=&quot;Sidux home&quot;&gt;Sidux&lt;&#x2F;a&gt; system, so I searched the package repository with &amp;quot;apt-cache search dbus&amp;quot; and found a package named &amp;quot;&lt;a href=&quot;http:&#x2F;&#x2F;packages.debian.org&#x2F;sid&#x2F;python-dbus&quot; title=&quot;Debian package info&quot;&gt;python-dbus&lt;&#x2F;a&gt;&amp;quot;. Since I know that gajim is written in &lt;a href=&quot;http:&#x2F;&#x2F;python.org&quot; title=&quot;Python home&quot;&gt;python&lt;&#x2F;a&gt; I installed the package and had success: After a restart of gajim the option was now available and worked when enabled.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/display-currently-playing-song-rythmbox-gajim-status-message/">&lt;p&gt;I found a nice feature in the preferences of my instant messenger &lt;a href=&quot;http:&#x2F;&#x2F;www.gajim.org&quot; title=&quot;Gajim home&quot;&gt;gajim&lt;&#x2F;a&gt;, where a check box says &quot;Set status message to reflect currently playing music track&quot;. My only problem was that i could not enable the option, because it was greyed out and not active. First I tried to find a plugin for my musicplayer &lt;a href=&quot;http:&#x2F;&#x2F;rhythmbox.org&quot; title=&quot;Rhythmbox home&quot;&gt;r&lt;&#x2F;a&gt;&lt;a href=&quot;http:&#x2F;&#x2F;rhythmbox.org&quot; title=&quot;Rhythmbox home&quot;&gt;hythmbox&lt;&#x2F;a&gt;, but the information I found seemed to be old and several web pages said that gajim and rhythmbox should work together natively. I remembered that most &lt;a href=&quot;http:&#x2F;&#x2F;gnome.org&quot; title=&quot;GNOME home&quot;&gt;GNOME&lt;&#x2F;a&gt; applications use &lt;a href=&quot;http:&#x2F;&#x2F;www.freedesktop.org&#x2F;wiki&#x2F;Software&#x2F;dbus&quot; title=&quot;D-Bus home&quot;&gt;D-Bus&lt;&#x2F;a&gt; to communicate with each other. I supposed that there was a D-Bus package missing on my &lt;a href=&quot;http:&#x2F;&#x2F;sidux.com&quot; title=&quot;Sidux home&quot;&gt;Sidux&lt;&#x2F;a&gt; system, so I searched the package repository with &quot;apt-cache search dbus&quot; and found a package named &quot;&lt;a href=&quot;http:&#x2F;&#x2F;packages.debian.org&#x2F;sid&#x2F;python-dbus&quot; title=&quot;Debian package info&quot;&gt;python-dbus&lt;&#x2F;a&gt;&quot;. Since I know that gajim is written in &lt;a href=&quot;http:&#x2F;&#x2F;python.org&quot; title=&quot;Python home&quot;&gt;python&lt;&#x2F;a&gt; I installed the package and had success: After a restart of gajim the option was now available and worked when enabled.&lt;&#x2F;p&gt;
 &lt;p&gt;Solution worked with gajim 0.11.4 and rhythmbox 0.10.1.&lt;&#x2F;p&gt;
 </description>
       </item>
@@ -2168,7 +2495,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <guid>https://klau.si/brecht-das-gesetz-brecht-die-abschiebung/</guid>
           <description xml:base="https://klau.si/brecht-das-gesetz-brecht-die-abschiebung/">&lt;p&gt;Abgesehen von dem etwas grauslichen Fremdenrecht sind leider auch die Asylverfahren in Österreich ja nicht gerade schnell. Was dann passiert, haben wir in letzter Zeit deutlich mitbekommen: Menschen, die seit vielen Jahren in Österreich leben, werden abgeschoben.&lt;&#x2F;p&gt;
 &lt;p&gt;Was also tun? Es wurde eine &lt;a href=&quot;http:&#x2F;&#x2F;gegenabschiebung.wordpress.com&#x2F;&quot; title=&quot;Online Unterschriftenliste&quot; target=&quot;_blank&quot;&gt;Solidaritätsliste&lt;&#x2F;a&gt; ins Leben gerufen, die sich eindeutig dazu bekennt, von der Abschiebung bedrohten Menschen im Ernstfall weiterzuhelfen, auch wenn das bedeutet, dass damit geltende Gesetze gebrochen werden.&lt;&#x2F;p&gt;
-&lt;p&gt;Wie immer muss sich jede einzelne darüber Gedanken machen, ob sie den Gesetzen oder der Menschlichkeit folgen will. Wir sind auch in einer demokratischen Republik nicht davor gefeit mitzudenken bzw. mitzuhelfen und dürfen uns nicht auf die &amp;quot;Gerechtigkeit&amp;quot; des Staates verlassen. Je mehr Menschen sich der Aktion anschließen, desto eher wird auch eine Verbesserung der Gesetze passieren.&lt;&#x2F;p&gt;
+&lt;p&gt;Wie immer muss sich jede einzelne darüber Gedanken machen, ob sie den Gesetzen oder der Menschlichkeit folgen will. Wir sind auch in einer demokratischen Republik nicht davor gefeit mitzudenken bzw. mitzuhelfen und dürfen uns nicht auf die &quot;Gerechtigkeit&quot; des Staates verlassen. Je mehr Menschen sich der Aktion anschließen, desto eher wird auch eine Verbesserung der Gesetze passieren.&lt;&#x2F;p&gt;
 </description>
       </item>
       <item>
@@ -2203,7 +2530,7 @@ Solution worked with Gajim version 0.11.1.
           <author>Klaus Purer</author>
           <link>https://klau.si/der-nationalsozialismus-und-ich/</link>
           <guid>https://klau.si/der-nationalsozialismus-und-ich/</guid>
-          <description xml:base="https://klau.si/der-nationalsozialismus-und-ich/">&lt;p&gt;Oft erwähnt, oft für Beispiele herangezogen (siehe auch &lt;a href=&quot;http:&#x2F;&#x2F;de.wikipedia.org&#x2F;wiki&#x2F;Godwins_law&quot; title=&quot;Godwins Law&quot; target=&quot;_blank&quot;&gt;Godwins Law&lt;&#x2F;a&gt;), gut dokumentiert und wohlbekannt: der Nationalsozialismus. Wir alle wissen was in den Dreißiger Jahren und im zweiten Weltkrieg passiert ist, es wurde uns in der Schule beigebracht und von der älteren Generation überliefert. Wir wissen auch wie es dazu gekommen ist, zumindest ungefähr. Die Frage &amp;quot;Wie konnte das nur passieren?&amp;quot; steht für mich trotzdem immer noch im Raum, die Frage &amp;quot;Wie können wir verhindern, dass so etwas jetzt und in Zukunft nicht mehr passiert?&amp;quot; scheint mir auch viel zuwenig oft diskutiert worden.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/der-nationalsozialismus-und-ich/">&lt;p&gt;Oft erwähnt, oft für Beispiele herangezogen (siehe auch &lt;a href=&quot;http:&#x2F;&#x2F;de.wikipedia.org&#x2F;wiki&#x2F;Godwins_law&quot; title=&quot;Godwins Law&quot; target=&quot;_blank&quot;&gt;Godwins Law&lt;&#x2F;a&gt;), gut dokumentiert und wohlbekannt: der Nationalsozialismus. Wir alle wissen was in den Dreißiger Jahren und im zweiten Weltkrieg passiert ist, es wurde uns in der Schule beigebracht und von der älteren Generation überliefert. Wir wissen auch wie es dazu gekommen ist, zumindest ungefähr. Die Frage &quot;Wie konnte das nur passieren?&quot; steht für mich trotzdem immer noch im Raum, die Frage &quot;Wie können wir verhindern, dass so etwas jetzt und in Zukunft nicht mehr passiert?&quot; scheint mir auch viel zuwenig oft diskutiert worden.&lt;&#x2F;p&gt;
 </description>
       </item>
       <item>
@@ -2213,7 +2540,7 @@ Solution worked with Gajim version 0.11.1.
           <link>https://klau.si/die-vorlesung-über-die-vorlesung-sich/</link>
           <guid>https://klau.si/die-vorlesung-über-die-vorlesung-sich/</guid>
           <description xml:base="https://klau.si/die-vorlesung-über-die-vorlesung-sich/">&lt;p&gt;Ich habe gerade die Online-Prüfung zur &lt;a href=&quot;http:&#x2F;&#x2F;ringvorlesung.univie.ac.at&#x2F;&quot; title=&quot;Homepage der Ringvorlesung&quot; target=&quot;_blank&quot;&gt;Ringvorlesung zum Thema Vorlesung&lt;&#x2F;a&gt; aus dem WS 06&#x2F;07 abgelegt. Man musste eine Prüfungsfrage in einem MS-Word Dokument beantworten und auf die &lt;a href=&quot;http:&#x2F;&#x2F;webct.univie.ac.at&quot; target=&quot;_blank&quot; title=&quot;WebCT Plattform&quot;&gt;E-Lerning Plattform der Uni Wien&lt;&#x2F;a&gt; hinaufladen.&lt;&#x2F;p&gt;
-&lt;p&gt;Prüfungsfrage: &amp;quot;Welche Probleme der Wissensvermittlung ergeben sich aus dem Mitschreiben und den Mitschriften einer Vorlesung?&amp;quot;&lt;&#x2F;p&gt;
+&lt;p&gt;Prüfungsfrage: &quot;Welche Probleme der Wissensvermittlung ergeben sich aus dem Mitschreiben und den Mitschriften einer Vorlesung?&quot;&lt;&#x2F;p&gt;
 </description>
       </item>
       <item>

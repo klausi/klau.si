@@ -200,13 +200,13 @@
 <pre>
 # common fastcgi configuration for PHP files
 <p>                fastcgi_split_path_info ^(.+.php)(/.+)$;
-                #NOTE: You should have &quot;cgi.fix_pathinfo = 0;&quot; in php.ini
+                #NOTE: You should have "cgi.fix_pathinfo = 0;" in php.ini
                 include fastcgi_params;
                 fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
                 fastcgi_intercept_errors on;
                 fastcgi_pass $socket;
                 # workaround as fastcgi_param cannot be used inside if statements
-                set $https &quot;&quot;;
+                set $https "";
                 if ($scheme = https) {
                   set $https on;
                 }
