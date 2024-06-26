@@ -13,11 +13,11 @@ theme = "even"
 
 taxonomies = [
     # You can enable/disable RSS
-    {name = "tags", feed = true},
+    { name = "tags", feed = true },
 ]
 
-generate_feed = true
-feed_filename = "rss.xml"
+generate_feeds = true
+feed_filenames = ["rss.xml"]
 author = "Klaus Purer"
 
 [markdown]
@@ -32,8 +32,8 @@ highlight_theme = "1337"
 even_title = "Klausi's Weblog"
 
 even_menu = [
-    {url = "$BASE_URL", name = "Home"},
-    {url = "$BASE_URL/tags/speaking", name = "Speaking"},
-    {url = "$BASE_URL/tags", name = "Categories"},
-    {url = "$BASE_URL/rss.xml", name = "RSS"},
+    { url = "$BASE_URL", name = "Home" },
+    { url = "$BASE_URL/tags/speaking", name = "Speaking" },
+    { url = "$BASE_URL/tags", name = "Categories" },
+    { url = "$BASE_URL/rss.xml", name = "RSS" },
 ]
