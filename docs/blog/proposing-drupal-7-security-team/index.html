@@ -139,17 +139,17 @@
                 </li>
                 
                 <li>
-                    <a href="https://klau.si/blog/proposing-drupal-7-security-team/#establishing-an-unofficial-d7security-team-on-github" class="toc-link">Establishing an unofficial D7Security team on Github</a>
+                    <a href="https://klau.si/blog/proposing-drupal-7-security-team/#establishing-an-unofficial-d7security-team-on-gitlab-com" class="toc-link">Establishing an unofficial D7Security team on Gitlab.com</a>
                     
                 </li>
                 
                 <li>
-                    <a href="https://klau.si/blog/proposing-drupal-7-security-team/#pushing-update-notifications-from-github-to-drupal-7-sites" class="toc-link">Pushing update notifications from Github to Drupal 7 sites</a>
+                    <a href="https://klau.si/blog/proposing-drupal-7-security-team/#pushing-update-notifications-from-gitlab-com-to-drupal-7-sites" class="toc-link">Pushing update notifications from Gitlab.com to Drupal 7 sites</a>
                     
                 </li>
                 
                 <li>
-                    <a href="https://klau.si/blog/proposing-drupal-7-security-team/#why-github" class="toc-link">Why Github?</a>
+                    <a href="https://klau.si/blog/proposing-drupal-7-security-team/#why-gitlab-com" class="toc-link">Why Gitlab.com?</a>
                     
                 </li>
                 
@@ -177,8 +177,9 @@
     </header>
 
     <div class="post-content">
-      <p><img src="https://klau.si/blog/proposing-drupal-7-security-team/unsupported-hm.png" alt="Screenshot of a drupal.org release settings page. Contains a warning box with the text &quot;Branches compatible with Drupal 7.x that are set as unsupported cannot be set as supported again.&quot;. A big thinking emoji is inserted on the screenshot." /></p>
-<p>The Drupal Security Team has announced in <a href="https://www.drupal.org/psa-2023-06-07">PSA-2023-06-07</a> that unsupported Drupal 7 modules/themes cannot be supported again. I'm proposing to create a D7Security team on Github that can provide security fixes for those unsupported modules. A small update module can then notify Drupal 7 site owners when new security releases are available on Github.</p>
+      <p><strong>Update:</strong> The D7Security group is now established at <a href="https://gitlab.com/d7security">gitlab.com/d7security</a> and <a href="https://www.d7security.org/">d7security.org</a>!</p>
+<p><img src="https://klau.si/blog/proposing-drupal-7-security-team/unsupported-hm.png" alt="Screenshot of a drupal.org release settings page. Contains a warning box with the text &quot;Branches compatible with Drupal 7.x that are set as unsupported cannot be set as supported again.&quot;. A big thinking emoji is inserted on the screenshot." /></p>
+<p>The Drupal Security Team has announced in <a href="https://www.drupal.org/psa-2023-06-07">PSA-2023-06-07</a> that unsupported Drupal 7 modules/themes cannot be supported again. I'm proposing to create a D7Security team on Gitlab.com that can provide security fixes for those unsupported modules. A small update module can then notify Drupal 7 site owners when new security releases are available on Gitlab.com.</p>
 <span id="continue-reading"></span><h2 id="background">Background</h2>
 <p>A significant number of Drupal 7 sites are still operational. Some of these are scheduled for an upgrade to the more recent Drupal 10 platform, yet it is expected that a considerable number will continue to use Drupal 7 beyond its official support end date on January 5, 2025.</p>
 <p>Those sites often include hundreds of Drupal 7 contributed projects from drupal.org. While some modules are maintained by the site owners in collaboration with the Drupal community, for many others, there's reliance on other maintainers for critical updates such as security and PHP compatibility.</p>
@@ -187,52 +188,59 @@
 <h2 id="blocked-on-unsupported-projects">Blocked on unsupported projects</h2>
 <p>While taking on the role of maintainers has been effective previously, there are now obstacles in continuing this on drupal.org. The Drupal Security Team is inclined to discontinue support for Drupal 7 projects. As a result, once a Drupal 7 project loses support, the policy is now to not mark it as supported again.</p>
 <p>I have a lot of empathy for the Drupal Security Team: many of the members don't run Drupal 7 sites anymore and it can be a hassle to track down Drupal 7 module maintainers when preparing security releases. That's why they want to phase out Drupal 7 support where possible. However, there's potential to reallocate the tasks related to Drupal 7 security to a group specifically interested in maintaining these older versions.</p>
-<h2 id="establishing-an-unofficial-d7security-team-on-github">Establishing an unofficial D7Security team on Github</h2>
-<p>In order to unburden the Drupal Security Team and the Drupal Infrastructure team I think it would be best to establish an unofficial Drupal 7 security team (let's call it D7Security team) on Github. I will describe later how we can communicate security releases from Github through the standard Drupal 7 update notification system.</p>
-<p>The D7Security organization on Github would be completely independent of the Drupal Security Team with these benefits:</p>
+<h2 id="establishing-an-unofficial-d7security-team-on-gitlab-com">Establishing an unofficial D7Security team on Gitlab.com</h2>
+<p>In order to unburden the Drupal Security Team and the Drupal Infrastructure team I think it would be best to establish an unofficial Drupal 7 security team (let's call it D7Security team) on Gitlab.com. I will describe later how we can communicate security releases from Gitlab.com through the standard Drupal 7 update notification system.</p>
+<p>The D7Security organization on Gitlab.com would be completely independent of the Drupal Security Team with these benefits:</p>
 <ol>
-<li>Drupal 7 modules can get unsupported on drupal.org, but releases (including security updates) can be made on Github. Maintainers and the security team don't have to feel guilty: D7Security will pick it up if it is used by a member company.</li>
+<li>Drupal 7 modules can get unsupported on drupal.org, but releases (including security updates) can be made on Gitlab.com. Maintainers and the security team don't have to feel guilty: D7Security will pick it up if it is used by a member company.</li>
 <li>The Drupal Security team can publish any non mass-exploitable Drupal 7 vulnerability, as <a href="https://www.drupal.org/psa-2023-06-07">is already policy</a>. Then the D7Security team can pick it up.</li>
 <li>For mass-exploitable remote code execution vulnerabilities the Drupal Security Team can reach out to the D7Security team with a warning even beyond January 5, 2025.</li>
 </ol>
-<h2 id="pushing-update-notifications-from-github-to-drupal-7-sites">Pushing update notifications from Github to Drupal 7 sites</h2>
-<p>The update notification system of Drupal 7 works with XML feeds that are downloaded from drupal.org (<a href="https://updates.drupal.org/release-history/devel/7.x">example for devel module</a>). Luckily this update system is pluggable and we can apply some nice tricks to download update information XML from static Github files instead.</p>
+<h2 id="pushing-update-notifications-from-gitlab-com-to-drupal-7-sites">Pushing update notifications from Gitlab.com to Drupal 7 sites</h2>
+<p>The update notification system of Drupal 7 works with XML feeds that are downloaded from drupal.org (<a href="https://updates.drupal.org/release-history/devel/7.x">example for devel module</a>). Luckily this update system is pluggable and we can apply some nice tricks to download update information XML from static Gitlab.com files instead.</p>
 <p>The rough workflow would go like this:</p>
 <ol>
-<li>The unsupported module code is forked to a Github repository.</li>
-<li>A fix is committed, a new git tag and a release is created on Github.</li>
-<li>The update XML is crafted by hand (later automated) in a central Github repository pointing to the Github release (<a href="https://github.com/klausi/d7sec_update/blob/main/devel/7.x">dummy example for devel</a>). The path <code>devel/7.x</code> is important as that will be appended by update module when fetching the XML.</li>
-<li>The module is added to the list of supported modules on Github (<a href="https://github.com/klausi/d7sec_update/blob/main/supported_projects.txt">dummy example for devel</a>)</li>
-<li>The Drupal 7 site operator installs a small helper module that fetches update information from Github on top of the default drupal.org source. The <a href="https://github.com/klausi/d7sec_client">example code</a> for that is just a few lines of code:</li>
+<li>The unsupported module code is forked to a Gitlab.com repository.</li>
+<li>A fix is committed, a new git tag and a release is created on Gitlab.com.</li>
+<li>The update XML is crafted by hand (later automated) in a central Gitlab.com repository pointing to the Gitlab.com release (<a href="https://gitlab.com/d7security/d7security/-/blob/main/devel/7.x">example for devel</a>). The path <code>devel/7.x</code> is important as that will be appended by update module when fetching the XML.</li>
+<li>The module is added to the list of supported modules on Gitlab.com (<a href="https://gitlab.com/d7security/d7security/-/blob/main/supported_projects.txt">supported_projects.txt</a>)</li>
+<li>The Drupal 7 site operator installs a small helper module that fetches update information from Gitlab.com on top of the default drupal.org source. The <a href="https://gitlab.com/d7security/d7security_client">d7security_client</a> module for that is just a few lines of code:</li>
 </ol>
 <pre data-lang="php" style="background-color:#191919;color:#f8f8f2;" class="language-php "><code class="language-php" data-lang="php"><span>/**
-</span><span> * Implements hook_update_projects_alter().
+</span><span> * Implements hook_system_info_alter().
+</span><span> *
+</span><span> * This hook will swap out the update XML URL for projects now supported at
+</span><span> * D7Security.
+</span><span> *
 </span><span> */
-</span><span>function d7sec_client_update_projects_alter(array &amp;$projects) {
-</span><span>  // Fetch the list of supported D7 projects from GitHub.
-</span><span>  $d7sec_supported = drupal_http_request(&#39;https://raw.githubusercontent.com/klausi/d7sec_update/main/supported_projects.txt&#39;);
-</span><span>  if ($d7sec_supported-&gt;code == 200) {
-</span><span>    $supported_projects = explode(&quot;\n&quot;, $d7sec_supported-&gt;data);
-</span><span>    foreach ($supported_projects as $supported_project) {
-</span><span>      $supported_project = trim($supported_project);
-</span><span>      if (isset($projects[$supported_project])) {
-</span><span>        // Replace the project update XML URL with our own, pointing to Github.
-</span><span>        $projects[$supported_project][&#39;info&#39;][&#39;project status url&#39;] = &#39;https://raw.githubusercontent.com/klausi/d7sec_update/main&#39;;
-</span><span>      }
+</span><span>function d7security_client_system_info_alter(array &amp;$info, \stdClass $file, string $type) {
+</span><span>  // Statically cache the list of supported projects to make only 1 HTTP
+</span><span>  // request.
+</span><span>  $supported_projects = &amp;drupal_static(__FUNCTION__, NULL);
+</span><span>  if (is_null($supported_projects)) {
+</span><span>    $supported_projects = [];
+</span><span>    $supported_projects_url = variable_get(&#39;d7security_client_supported_projects_url&#39;, &#39;https://gitlab.com/d7security/d7security/-/raw/main/supported_projects.txt&#39;);
+</span><span>    $d7sec_supported = drupal_http_request($supported_projects_url);
+</span><span>    if ($d7sec_supported-&gt;code == 200) {
+</span><span>      $supported_projects = array_filter(array_map(&#39;trim&#39;, explode(&quot;\n&quot;, $d7sec_supported-&gt;data)));
+</span><span>    }
+</span><span>    else {
+</span><span>      watchdog(&#39;d7security_client&#39;, &#39;Could not fetch supported projects list from Gitlab: &lt;</span><span style="color:#ff5e5e;">pre</span><span>&gt;@error&lt;/</span><span style="color:#ff5e5e;">pre</span><span>&gt;&#39;, [
+</span><span>        &#39;@error&#39; =&gt; print_r($d7sec_supported, TRUE),
+</span><span>      ], WATCHDOG_ERROR);
 </span><span>    }
 </span><span>  }
-</span><span>  else {
-</span><span>    watchdog(&#39;d7sec_client&#39;, &#39;Could not fetch supported projects list from GitHub: &lt;</span><span style="color:#ff5e5e;">pre</span><span>&gt;@error&lt;/</span><span style="color:#ff5e5e;">pre</span><span>&gt;&#39;, [
-</span><span>      &#39;@error&#39; =&gt; print_r($d7sec_supported)
-</span><span>    ], WATCHDOG_ERROR);
+</span><span>  if (!empty($info[&#39;project&#39;]) &amp;&amp; in_array($info[&#39;project&#39;], $supported_projects)) {
+</span><span>    $info[&#39;project status url&#39;] = variable_get(&#39;d7security_client_project_status_base_url&#39;, &#39;https://gitlab.com/d7security/d7security/-/raw/main&#39;);
 </span><span>  }
+</span><span>  // ...
 </span><span>}
 </span></code></pre>
 <p>This will now show any new releases in the Drupal 7 backend as usual and trigger update notification emails.</p>
 <p>The great benefit of this static file approach is that there are no update server operation costs.</p>
 <p>One important thing missing here is the drupal.org packaging script which adds version information into the module's info file. I'm sure there are some other details as well that I have missed, but the approach should work in general.</p>
-<h2 id="why-github">Why Github?</h2>
-<p>It should be possible to do a similar approach on drupal.org's Gitlab, but I think it could get very confusing where the actual replacement code for a module lives. I prefer Github for organization governance reasons, then it is easy to define repository access based on groups.</p>
+<h2 id="why-gitlab-com">Why Gitlab.com?</h2>
+<p>It should be possible to do a similar approach on drupal.org's Gitlab, but I think it could get very confusing where the actual replacement code for a module lives. I prefer Gitlab.com for organization governance reasons, then it is easy to define repository access based on groups.</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>This is currently a proposal that I would like to get feedback on. Feel free to reach out and discuss in <a href="https://www.drupal.org/project/ideas/issues/3408125">the Drupal ideas issue</a>.</p>
 
