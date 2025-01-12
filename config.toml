@@ -18,6 +18,7 @@ taxonomies = [
 
 generate_feeds = true
 feed_filenames = ["rss.xml"]
+feed_limit = 20
 author = "Klaus Purer"
 
 [markdown]

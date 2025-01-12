@@ -253,31 +253,5 @@ Nachteile gibt es aber auch:
 &lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;ubuntu.gds.tuwien.ac.at&#x2F;cdimage&#x2F;releases&#x2F;gutsy&#x2F;ubuntu-7.10-desktop-i386.iso&quot;&gt;Hier geht&#x27;s zum Download ...&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 </description>
       </item>
-      <item>
-          <title>Meine Lieblingsseiten, meine Lieblingssoftware</title>
-          <pubDate>Fri, 09 Nov 2007 00:00:00 +0000</pubDate>
-          <author>Klaus Purer</author>
-          <link>https://klau.si/meine-lieblingsseiten-meine-lieblingssoftware/</link>
-          <guid>https://klau.si/meine-lieblingsseiten-meine-lieblingssoftware/</guid>
-          <description xml:base="https://klau.si/meine-lieblingsseiten-meine-lieblingssoftware/">&lt;p&gt;Ich habe mal auf &lt;a href=&quot;http:&#x2F;&#x2F;vowi.fsinf.at&#x2F;wiki&#x2F;Benutzer:Klausi&quot; title=&quot;Meine Seite im VoWi&quot; target=&quot;_blank&quot;&gt;meiner Benutzerseite&lt;&#x2F;a&gt; im &lt;a href=&quot;http:&#x2F;&#x2F;vowi.fsinf.at&quot; title=&quot;VorlesungsWiki&quot; target=&quot;_blank&quot;&gt;VoWi&lt;&#x2F;a&gt; eine Auflistung zu meinem elektronischen Alltag erstellt. Kommentare zu besseren Seiten und besseren Programmen sind willkommen!&lt;&#x2F;p&gt;
-</description>
-      </item>
-      <item>
-          <title>Telling Gajim to remember the Window position</title>
-          <pubDate>Sun, 26 Aug 2007 00:00:00 +0000</pubDate>
-          <author>Klaus Purer</author>
-          <link>https://klau.si/telling-gajim-remember-window-position/</link>
-          <guid>https://klau.si/telling-gajim-remember-window-position/</guid>
-          <description xml:base="https://klau.si/telling-gajim-remember-window-position/">&lt;p&gt;Recently I deprecated my ICQ account and switched from my old Instant Messaging Client &lt;a href=&quot;http:&#x2F;&#x2F;www.pidgin.im&quot; title=&quot;Pidign Project Site&quot; target=&quot;_blank&quot;&gt;Pidgin&lt;&#x2F;a&gt; to &lt;a href=&quot;http:&#x2F;&#x2F;www.gajim.org&#x2F;&quot; title=&quot;Gajim Project Site&quot; target=&quot;_blank&quot;&gt;Gajim&lt;&#x2F;a&gt;, a &lt;a href=&quot;http:&#x2F;&#x2F;www.jabber.org&#x2F;about&#x2F;overview.shtml&quot; title=&quot;Jabber Protocol Overview&quot;&gt;Jabber&lt;&#x2F;a&gt;-only IM-client. The good thing: Messages can now be encrypted with &lt;a href=&quot;http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Pretty_Good_Privacy&quot; title=&quot;Wikipedia about PGP&quot; target=&quot;_blank&quot;&gt;PGP&#x2F;GPG&lt;&#x2F;a&gt;! The bad thing: The Window position and size was not remembered by Gajim, so the program appeared always on the left instead of the right side, where I placed it, and that on every program start.&lt;&#x2F;p&gt;
-&lt;p&gt;Solution:&lt;&#x2F;p&gt;
-&lt;ol&gt;
-	&lt;li&gt;Go to preferences  ==&amp;gt; Advanced ==&amp;gt; Advanced Configuration Editor&lt;&#x2F;li&gt;
-	&lt;li&gt;Filter for &quot;roster_x-position&quot;, &quot;roster_y-position&quot; and &quot;saveposition&quot;&lt;&#x2F;li&gt;
-	&lt;li&gt;Set the values for each to &quot;Activated&quot; (you have to type the String &quot;Activated&quot; in case of &quot;roster_x-posotion&quot; and &quot;roster_y-position&quot;)&lt;&#x2F;li&gt;
-	&lt;li&gt;Change the position and size of your Gajim buddy list window, restart Gajim and check if the changes are remembered&lt;&#x2F;li&gt;
-&lt;&#x2F;ol&gt;
-Solution worked with Gajim version 0.11.1.
-</description>
-      </item>
     </channel>
 </rss>
