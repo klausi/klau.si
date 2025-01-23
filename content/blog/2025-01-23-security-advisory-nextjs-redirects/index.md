@@ -44,7 +44,7 @@ const nextConfig: NextConfig = {
 export default nextConfig;
 ```
 
-The problem is the `:path` placeholder. There must always be a slash `/` before the colon.
+The problem is the `:path` placeholder. There must be a slash `/` before the colon.
 
 ## Attack
 
