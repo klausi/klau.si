@@ -4,6 +4,9 @@ date = 2025-01-23
 [taxonomies]
 tags = ["security"]
 +++
+
+![Black Next.js logos arranged in a circle. In the middle is an emoji with closed eyes exhausting.](nextjs_exhale.png)
+
 Security Advisory: Next.js Denial of Service vulnerability in redirect misconfiguration
 
 * **Project**: [Next.js](https://nextjs.org/)
