@@ -1,6 +1,6 @@
 +++
 title = "Dangerous Next.js redirects - how misconfiguration can bring your website down"
-date = 2025-01-23
+date = 2025-01-30
 [taxonomies]
 tags = ["security"]
 +++
