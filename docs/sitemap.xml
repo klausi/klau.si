@@ -111,6 +111,10 @@
         <lastmod>2020-11-27</lastmod>
     </url>
     <url>
+        <loc>https://klau.si/blog/security-advisory-nextjs-redirects/</loc>
+        <lastmod>2025-01-30</lastmod>
+    </url>
+    <url>
         <loc>https://klau.si/blog/static-variables-made-thread-safe-in-rust/</loc>
         <lastmod>2017-09-09</lastmod>
     </url>
@@ -279,6 +283,9 @@
     </url>
     <url>
         <loc>https://klau.si/page/8/</loc>
+    </url>
+    <url>
+        <loc>https://klau.si/page/9/</loc>
     </url>
     <url>
         <loc>https://klau.si/php-vs-python-vs-ruby/</loc>

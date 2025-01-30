@@ -7,7 +7,25 @@
       <generator>Zola</generator>
       <language>en</language>
       <atom:link href="https://klau.si/tags/security/rss.xml" rel="self" type="application/rss+xml"/>
-      <lastBuildDate>Wed, 26 Jun 2024 00:00:00 +0000</lastBuildDate>
+      <lastBuildDate>Thu, 30 Jan 2025 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Dangerous Next.js redirects - how misconfiguration can bring your website down</title>
+          <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
+          <author>Klaus Purer</author>
+          <link>https://klau.si/blog/security-advisory-nextjs-redirects/</link>
+          <guid>https://klau.si/blog/security-advisory-nextjs-redirects/</guid>
+          <description xml:base="https://klau.si/blog/security-advisory-nextjs-redirects/">&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;security-advisory-nextjs-redirects&#x2F;nextjs_exhale.png&quot; alt=&quot;Black Next.js logos arranged in a circle. In the middle is an emoji with closed eyes exhausting.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Security Advisory: Next.js Denial of Service vulnerability in redirect misconfiguration&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Project&lt;&#x2F;strong&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;nextjs.org&#x2F;&quot;&gt;Next.js&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Security Risk&lt;&#x2F;strong&gt;: Less Critical&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Vulnerability&lt;&#x2F;strong&gt;: Denial of Service (DoS)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Category&lt;&#x2F;strong&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;owasp.org&#x2F;Top10&#x2F;A05_2021-Security_Misconfiguration&#x2F;&quot;&gt;OWASP A05:2021 – Security Misconfiguration&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Affected versions&lt;&#x2F;strong&gt;: all Next.js versions, for example 15.0.3&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Note: This vulnerability has been disclosed privately to the Vercel Security Team. They decided that this is a misconfiguration issue and not an inherent security issue.&lt;&#x2F;p&gt;
+</description>
+      </item>
       <item>
           <title>D7Security presentation at Drupal Dev Days Bourgas</title>
           <pubDate>Wed, 26 Jun 2024 00:00:00 +0000</pubDate>
