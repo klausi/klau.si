@@ -14,3 +14,7 @@ This is a Zola static site generator project.
 ## Static Assets Organization
 
 - Icon files (SVGs for social media, RSS, etc.) should be placed in `static/icons/`
+
+## Accessibility
+
+- Never leave image `alt` text empty. Always provide meaningful alt text for images.
