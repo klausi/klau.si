@@ -196,7 +196,7 @@
 </span><span>#[</span><span style="color:#e9fdac;">cfg</span><span>(</span><span style="color:#e9fdac;">not</span><span>(test))]
 </span><span style="color:#ff5e5e;">use </span><span>std::time::Instant;
 </span></code></pre>
-<p>The <code>cfg</code> attribute is used here to swap in a mock <code>Instant</code> type whenever the tests are executed. During production compilation the normal type is used. Luckily in this case a <a href="https://github.com/maidsafe/fake_clock">fake clock crate</a> already exists, so we don't even have to write the mock code and just use it:</p>
+<p>The <code>cfg</code> attribute is used here to swap in a mock <code>Instant</code> type whenever the tests are executed. During production compilation the normal type is used. Luckily in this case a <a href="https://crates.io/crates/fake_clock">fake_clock crate</a> already exists, so we don't even have to write the mock code and just use it:</p>
 <pre data-lang="rust" style="background-color:#191919;color:#f8f8f2;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">sleep</span><span>(</span><span style="font-style:italic;color:#fc9354;">time</span><span>: </span><span style="font-style:italic;color:#fbdfb5;">u64</span><span>) {
 </span><span>    </span><span style="color:#ff5e5e;">use </span><span>fake_clock::FakeClock;
 </span><span>    FakeClock::advance_time(time);

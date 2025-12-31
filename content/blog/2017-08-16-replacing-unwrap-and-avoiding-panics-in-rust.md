@@ -140,7 +140,7 @@ let thread = thread::Builder::new()..spawn(move || -> Result<()> {
 .chain_err(|| "Spawning server thread failed")?;
 ```
 
-We introduced the empty ```Result<()>``` as return type and use [the ```?``` operator](https://doc.rust-lang.org/book/second-edition/ch09-02-recoverable-errors-with-result.html#a-shortcut-for-propagating-errors-) to early return errors.
+We introduced the empty ```Result<()>``` as return type and use [the ```?``` operator](https://doc.rust-lang.org/book/ch09-02-recoverable-errors-with-result.html#the--operator-shortcut) to early return errors.
 
 By adding a new error to the error chain we give meaning and context where and
 how the error occurred - which makes it easier to get to the problem when

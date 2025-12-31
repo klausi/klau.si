@@ -263,10 +263,10 @@ dependent and can for example not work on MacOS or Windows.</p>
 </span><span>core.</span><span style="color:#6699cc;">run</span><span>(work).</span><span style="color:#6699cc;">unwrap</span><span>();
 </span></code></pre>
 <p>We are building 4 loop futures here with the
-<a href="https://docs.rs/futures/*/futures/future/fn.loop_fn.html"><code>loop_fn()</code></a>
-construct, each iteration sending one request. The 4 futures are executed in
+<code>loop_fn()</code> construct (note: this function was removed in later versions of the futures crate),
+each iteration sending one request. The 4 futures are executed in
 parallel and we wait with a
-<a href="https://docs.rs/futures/*/futures/future/fn.join_all.html"><code>join_all()</code></a>
+<a href="https://docs.rs/futures/latest/futures/future/fn.join_all.html"><code>join_all()</code></a>
 future until they all are finished.</p>
 <p>Note that this is test code, that's why there are lots of <code>unwrap()</code> calls
 because we don't care about errors (I have <a href="https://klau.si/blog/replacing-unwrap-and-avoiding-panics-in-rust/">written about <code>unwrap()</code> before</a>).</p>

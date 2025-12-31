@@ -171,7 +171,7 @@ So we went from 15 lines of code to 40 lines of code. What happened?
 
 1. ```core.run(server)``` is starting the event loop and blocking. That's why
 we need to set up our own thread handling. Inspired by [Hyper test
-code](https://github.com/hyperium/hyper/blob/master/tests/server.rs#L583).
+code](https://github.com/hyperium/hyper/blob/master/tests/server.rs).
 2. The Hyper server would create its own internal Tokio core event loop when
 using ```http.bind()```. But we need our event loop beforehand to initialize
 our HTTP client. That's why we need the complicated setup with
@@ -188,8 +188,7 @@ response types are now unified: a HTTP client response is the same as a HTTP
 server response! This is very useful in our reverse proxy use case where we can
 just pass through responses as is.
 
-I'm omitting [my old Hyper
-code](https://github.com/klausi/rustnish/blob/goal-02/src/lib.rs#L35) here
+I'm omitting my old Hyper code here
 because it is quite convoluted and long. The new code is so much nicer:
 
 ```rust

@@ -134,10 +134,10 @@ core.run(work).unwrap();
 ```
 
 We are building 4 loop futures here with the
-[`loop_fn()`](https://docs.rs/futures/*/futures/future/fn.loop_fn.html)
-construct, each iteration sending one request. The 4 futures are executed in
+`loop_fn()` construct (note: this function was removed in later versions of the futures crate),
+each iteration sending one request. The 4 futures are executed in
 parallel and we wait with a
-[`join_all()`](https://docs.rs/futures/*/futures/future/fn.join_all.html)
+[`join_all()`](https://docs.rs/futures/latest/futures/future/fn.join_all.html)
 future until they all are finished.
 
 Note that this is test code, that's why there are lots of `unwrap()` calls

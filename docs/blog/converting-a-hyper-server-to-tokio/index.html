@@ -319,7 +319,7 @@ We can use the <code>Either</code> helper Future to combine those 2 Future types
 <p>So we went from 15 lines of code to 40 lines of code. What happened?</p>
 <ol>
 <li><code>core.run(server)</code> is starting the event loop and blocking. That's why
-we need to set up our own thread handling. Inspired by <a href="https://github.com/hyperium/hyper/blob/master/tests/server.rs#L583">Hyper test
+we need to set up our own thread handling. Inspired by <a href="https://github.com/hyperium/hyper/blob/master/tests/server.rs">Hyper test
 code</a>.</li>
 <li>The Hyper server would create its own internal Tokio core event loop when
 using <code>http.bind()</code>. But we need our event loop beforehand to initialize
@@ -335,8 +335,7 @@ consumer can just wait indefinitely on the thread by calling <code>join()</code>
 response types are now unified: a HTTP client response is the same as a HTTP
 server response! This is very useful in our reverse proxy use case where we can
 just pass through responses as is.</p>
-<p>I'm omitting <a href="https://github.com/klausi/rustnish/blob/goal-02/src/lib.rs#L35">my old Hyper
-code</a> here
+<p>I'm omitting my old Hyper code here
 because it is quite convoluted and long. The new code is so much nicer:</p>
 <pre data-lang="rust" style="background-color:#191919;color:#f8f8f2;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="font-style:italic;color:#fbdfb5;">impl </span><span>Service </span><span style="color:#ff5e5e;">for </span><span>Proxy {
 </span><span>    </span><span style="font-style:italic;color:#fbdfb5;">type </span><span>Request </span><span style="color:#ff5e5e;">=</span><span> Request;

@@ -8,7 +8,7 @@ tags = ["rust", "rustnish"]
 When writing [integration tests for my Rustnish reverse proxy project](@/blog/2017-05-25-writing-integration-tests-in-rust.md) I
 have hard-coded port numbers in tests. This is not ideal because it is hard to
 keep track of which port numbers have already been used and which ones are
-available when writing a new test. Because Rust's test runner [executes test cases in parallel](https://doc.rust-lang.org/book/second-edition/ch11-02-running-tests.html#running-tests-in-parallel-or-consecutively) it is important to coordinate
+available when writing a new test. Because Rust's test runner [executes test cases in parallel](https://doc.rust-lang.org/book/ch11-02-running-tests.html#running-tests-in-parallel-or-consecutively) it is important to coordinate
 which test uses which ports so that there are no clashes that break the tests.
 
 One obvious solution to this problem would be to disable parallel test

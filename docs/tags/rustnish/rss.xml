@@ -46,7 +46,7 @@
 &lt;&#x2F;span&gt;&lt;span&gt;#[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9fdac;&quot;&gt;cfg&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9fdac;&quot;&gt;not&lt;&#x2F;span&gt;&lt;span&gt;(test))]
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff5e5e;&quot;&gt;use &lt;&#x2F;span&gt;&lt;span&gt;std::time::Instant;
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;The &lt;code&gt;cfg&lt;&#x2F;code&gt; attribute is used here to swap in a mock &lt;code&gt;Instant&lt;&#x2F;code&gt; type whenever the tests are executed. During production compilation the normal type is used. Luckily in this case a &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;maidsafe&#x2F;fake_clock&quot;&gt;fake clock crate&lt;&#x2F;a&gt; already exists, so we don&#x27;t even have to write the mock code and just use it:&lt;&#x2F;p&gt;
+&lt;p&gt;The &lt;code&gt;cfg&lt;&#x2F;code&gt; attribute is used here to swap in a mock &lt;code&gt;Instant&lt;&#x2F;code&gt; type whenever the tests are executed. During production compilation the normal type is used. Luckily in this case a &lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;fake_clock&quot;&gt;fake_clock crate&lt;&#x2F;a&gt; already exists, so we don&#x27;t even have to write the mock code and just use it:&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#191919;color:#f8f8f2;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;font-style:italic;color:#fbdfb5;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8cdaff;&quot;&gt;sleep&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fc9354;&quot;&gt;time&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fbdfb5;&quot;&gt;u64&lt;&#x2F;span&gt;&lt;span&gt;) {
 &lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff5e5e;&quot;&gt;use &lt;&#x2F;span&gt;&lt;span&gt;fake_clock::FakeClock;
 &lt;&#x2F;span&gt;&lt;span&gt;    FakeClock::advance_time(time);
@@ -250,7 +250,7 @@
 &lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;bench_requests&lt;&#x2F;span&gt;&lt;span&gt;(b, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdb082;&quot;&gt;100&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdb082;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdb082;&quot;&gt;6081&lt;&#x2F;span&gt;&lt;span&gt;);
 &lt;&#x2F;span&gt;&lt;span&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;The full source code with the scenarios can be found in the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;klausi&#x2F;rustnish&#x2F;blob&#x2F;goal-09&#x2F;benches&#x2F;rustnish_vs_varnish.rs&quot;&gt;goal-09 branch&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;The full source code with the scenarios can be found in the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;klausi&#x2F;rustnish&#x2F;blob&#x2F;master&#x2F;benches&#x2F;rustnish_vs_varnish.rs&quot;&gt;rustnish repository&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;Before this benchmark can be executed we need Varnish running on port 6081 (default) and we need to start a dummy backend and our proxy server:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;cargo run --release --example hello_9091
 &lt;&#x2F;span&gt;&lt;span&gt;cargo run --release --example rustnish_9090
@@ -272,7 +272,7 @@
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Cool, that shows our proxy always being slightly faster than Varnish.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;observing-benchmark-regressions&quot;&gt;Observing benchmark regressions&lt;&#x2F;h2&gt;
-&lt;p&gt;Now that we have established a performance base line we can change or refactor our code and check what happens to our benchmark numbers. My Rustnish project is built on the Hyper library version 0.11, let&#x27;s see what happens if I update and rewrite to Hyper 0.12 (code in the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;klausi&#x2F;rustnish&#x2F;tree&#x2F;hyper-0.12-upgrade&quot;&gt;hyper-0.12-upgrade branch&lt;&#x2F;a&gt;) and run the same benchmark:&lt;&#x2F;p&gt;
+&lt;p&gt;Now that we have established a performance base line we can change or refactor our code and check what happens to our benchmark numbers. My Rustnish project is built on the Hyper library version 0.11, let&#x27;s see what happens if I update and rewrite to Hyper 0.12 and run the same benchmark:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;test a_1_request                       ... bench:     554,467 ns&#x2F;iter (+&#x2F;- 75,441)
 &lt;&#x2F;span&gt;&lt;span&gt;test a_1_request_varnish               ... bench:     495,228 ns&#x2F;iter (+&#x2F;- 94,544)
 &lt;&#x2F;span&gt;&lt;span&gt;test b_10_requests                     ... bench:   3,022,574 ns&#x2F;iter (+&#x2F;- 1,797,736)
@@ -296,7 +296,7 @@
 &lt;p&gt;Automated benchmarks are great when you want to track the performance of your application over time. &lt;code&gt;cargo bench&lt;&#x2F;code&gt; is useful, unfortunately it is only available on Rust Nightly. The biggest challenge when doing a big black box performance test is to isolate the cause once you have determined a performance regression. Why and where is it happening? Is it really the application or the benchmark code? Can I reproduce the behavior with manual performance testing?&lt;&#x2F;p&gt;
 &lt;p&gt;The Hyper library does not seem to be a good fit for me when writing a reverse proxy. After finding a &lt;a href=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;testing-memory-leaks-in-rust&#x2F;&quot;&gt;memory leak&lt;&#x2F;a&gt;, a &lt;a href=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;crashing-a-rust-hyper-server-with-a-denial-of-service-attack&#x2F;&quot;&gt;denial of service weakness&lt;&#x2F;a&gt; and now this performance regression I think it is time to try another framework next.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;strong&gt;Update 2018-09-07:&lt;&#x2F;strong&gt; seanmonster has some good insights about multi-threading performance in &lt;a href=&quot;https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;rust&#x2F;comments&#x2F;9bukvy&#x2F;blog_post_benchmarking_a_rustlang_web_application&#x2F;e56484j&quot;&gt;their Reddit comments&lt;&#x2F;a&gt;. I was able to get Rustnish benchmark numbers ahead of Varnish again, but only by setting Tokio to be single-threaded. So in my single computer (but 4 CPU core) scenario Hyper is only able to compete with Varnish if we eliminate Tokio multithreading. The question remains: Varnish is multithreaded with 2 threadpools and potentially very many threads, why can it handle that so much better than Tokio?&lt;&#x2F;p&gt;
-&lt;p&gt;I also &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;klausi&#x2F;rustnish&#x2F;blob&#x2F;actix-web-test&#x2F;src&#x2F;lib.rs&quot;&gt;quickly tested actix-web&lt;&#x2F;a&gt; as a replacement for Hyper, but that delivered even worse benchmark results. I think I&#x27;ll stick to Hyper for now :-)&lt;&#x2F;p&gt;
+&lt;p&gt;I also quickly tested actix-web as a replacement for Hyper, but that delivered even worse benchmark results. I think I&#x27;ll stick to Hyper for now :-)&lt;&#x2F;p&gt;
 </description>
       </item>
       <item>
@@ -548,10 +548,10 @@ dependent and can for example not work on MacOS or Windows.&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;core.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;run&lt;&#x2F;span&gt;&lt;span&gt;(work).&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;unwrap&lt;&#x2F;span&gt;&lt;span&gt;();
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;We are building 4 loop futures here with the
-&lt;a href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;futures&#x2F;*&#x2F;futures&#x2F;future&#x2F;fn.loop_fn.html&quot;&gt;&lt;code&gt;loop_fn()&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;
-construct, each iteration sending one request. The 4 futures are executed in
+&lt;code&gt;loop_fn()&lt;&#x2F;code&gt; construct (note: this function was removed in later versions of the futures crate),
+each iteration sending one request. The 4 futures are executed in
 parallel and we wait with a
-&lt;a href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;futures&#x2F;*&#x2F;futures&#x2F;future&#x2F;fn.join_all.html&quot;&gt;&lt;code&gt;join_all()&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;
+&lt;a href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;futures&#x2F;latest&#x2F;futures&#x2F;future&#x2F;fn.join_all.html&quot;&gt;&lt;code&gt;join_all()&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;
 future until they all are finished.&lt;&#x2F;p&gt;
 &lt;p&gt;Note that this is test code, that&#x27;s why there are lots of &lt;code&gt;unwrap()&lt;&#x2F;code&gt; calls
 because we don&#x27;t care about errors (I have &lt;a href=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;replacing-unwrap-and-avoiding-panics-in-rust&#x2F;&quot;&gt;written about &lt;code&gt;unwrap()&lt;&#x2F;code&gt; before&lt;&#x2F;a&gt;).&lt;&#x2F;p&gt;
@@ -668,7 +668,7 @@ still very practical and useful.&lt;&#x2F;p&gt;
           <description xml:base="https://klau.si/blog/static-variables-made-thread-safe-in-rust/">&lt;p&gt;When writing &lt;a href=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;writing-integration-tests-in-rust&#x2F;&quot;&gt;integration tests for my Rustnish reverse proxy project&lt;&#x2F;a&gt; I
 have hard-coded port numbers in tests. This is not ideal because it is hard to
 keep track of which port numbers have already been used and which ones are
-available when writing a new test. Because Rust&#x27;s test runner &lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;book&#x2F;second-edition&#x2F;ch11-02-running-tests.html#running-tests-in-parallel-or-consecutively&quot;&gt;executes test cases in parallel&lt;&#x2F;a&gt; it is important to coordinate
+available when writing a new test. Because Rust&#x27;s test runner &lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;book&#x2F;ch11-02-running-tests.html#running-tests-in-parallel-or-consecutively&quot;&gt;executes test cases in parallel&lt;&#x2F;a&gt; it is important to coordinate
 which test uses which ports so that there are no clashes that break the tests.&lt;&#x2F;p&gt;
 &lt;p&gt;One obvious solution to this problem would be to disable parallel test
 execution with &lt;code&gt;cargo test -- --test-threads=1&lt;&#x2F;code&gt;. But we want to cover program
@@ -886,7 +886,7 @@ errors.&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;})
 &lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;chain_err&lt;&#x2F;span&gt;&lt;span&gt;(|| &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffffff;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fbe3bf;&quot;&gt;Spawning server thread failed&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffffff;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff5e5e;&quot;&gt;?&lt;&#x2F;span&gt;&lt;span&gt;;
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;We introduced the empty &lt;code&gt;Result&amp;lt;()&amp;gt;&lt;&#x2F;code&gt; as return type and use &lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;book&#x2F;second-edition&#x2F;ch09-02-recoverable-errors-with-result.html#a-shortcut-for-propagating-errors-&quot;&gt;the &lt;code&gt;?&lt;&#x2F;code&gt; operator&lt;&#x2F;a&gt; to early return errors.&lt;&#x2F;p&gt;
+&lt;p&gt;We introduced the empty &lt;code&gt;Result&amp;lt;()&amp;gt;&lt;&#x2F;code&gt; as return type and use &lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;book&#x2F;ch09-02-recoverable-errors-with-result.html#the--operator-shortcut&quot;&gt;the &lt;code&gt;?&lt;&#x2F;code&gt; operator&lt;&#x2F;a&gt; to early return errors.&lt;&#x2F;p&gt;
 &lt;p&gt;By adding a new error to the error chain we give meaning and context where and
 how the error occurred - which makes it easier to get to the problem when
 diagnosing errors. The output of such an error chain looks like this:&lt;&#x2F;p&gt;
@@ -1066,7 +1066,7 @@ We can use the &lt;code&gt;Either&lt;&#x2F;code&gt; helper Future to combine tho
 &lt;p&gt;So we went from 15 lines of code to 40 lines of code. What happened?&lt;&#x2F;p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;code&gt;core.run(server)&lt;&#x2F;code&gt; is starting the event loop and blocking. That&#x27;s why
-we need to set up our own thread handling. Inspired by &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;hyperium&#x2F;hyper&#x2F;blob&#x2F;master&#x2F;tests&#x2F;server.rs#L583&quot;&gt;Hyper test
+we need to set up our own thread handling. Inspired by &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;hyperium&#x2F;hyper&#x2F;blob&#x2F;master&#x2F;tests&#x2F;server.rs&quot;&gt;Hyper test
 code&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
 &lt;li&gt;The Hyper server would create its own internal Tokio core event loop when
 using &lt;code&gt;http.bind()&lt;&#x2F;code&gt;. But we need our event loop beforehand to initialize
@@ -1082,8 +1082,7 @@ consumer can just wait indefinitely on the thread by calling &lt;code&gt;join()&
 response types are now unified: a HTTP client response is the same as a HTTP
 server response! This is very useful in our reverse proxy use case where we can
 just pass through responses as is.&lt;&#x2F;p&gt;
-&lt;p&gt;I&#x27;m omitting &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;klausi&#x2F;rustnish&#x2F;blob&#x2F;goal-02&#x2F;src&#x2F;lib.rs#L35&quot;&gt;my old Hyper
-code&lt;&#x2F;a&gt; here
+&lt;p&gt;I&#x27;m omitting my old Hyper code here
 because it is quite convoluted and long. The new code is so much nicer:&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#191919;color:#f8f8f2;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;font-style:italic;color:#fbdfb5;&quot;&gt;impl &lt;&#x2F;span&gt;&lt;span&gt;Service &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff5e5e;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;Proxy {
 &lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fbdfb5;&quot;&gt;type &lt;&#x2F;span&gt;&lt;span&gt;Request &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff5e5e;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; Request;
@@ -1178,7 +1177,7 @@ the &lt;code&gt;code&lt;&#x2F;code&gt; command to start the IDE.&lt;&#x2F;p&gt;
 &lt;p&gt;Next install the following extensions:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;Rust code completion and auto formatting:
-&lt;a href=&quot;https:&#x2F;&#x2F;marketplace.visualstudio.com&#x2F;items?itemName=kalitaalexey.vscode-rust&quot;&gt;Rust&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;a href=&quot;https:&#x2F;&#x2F;marketplace.visualstudio.com&#x2F;items?itemName=rust-lang.rust-analyzer&quot;&gt;rust-analyzer&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;TOML configuration files syntax highlighting: &lt;a href=&quot;https:&#x2F;&#x2F;marketplace.visualstudio.com&#x2F;items?itemName=bungcip.better-toml&quot;&gt;Better
 TOML&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;LLDB debugging for Rust programs: &lt;a href=&quot;https:&#x2F;&#x2F;marketplace.visualstudio.com&#x2F;items?itemName=vadimcn.vscode-lldb&quot;&gt;LLDB

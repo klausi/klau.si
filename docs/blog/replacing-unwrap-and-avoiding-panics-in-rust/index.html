@@ -279,7 +279,7 @@ errors.</p>
 </span><span>})
 </span><span>.</span><span style="color:#6699cc;">chain_err</span><span>(|| </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">Spawning server thread failed</span><span style="color:#ffffff;">&quot;</span><span>)</span><span style="color:#ff5e5e;">?</span><span>;
 </span></code></pre>
-<p>We introduced the empty <code>Result&lt;()&gt;</code> as return type and use <a href="https://doc.rust-lang.org/book/second-edition/ch09-02-recoverable-errors-with-result.html#a-shortcut-for-propagating-errors-">the <code>?</code> operator</a> to early return errors.</p>
+<p>We introduced the empty <code>Result&lt;()&gt;</code> as return type and use <a href="https://doc.rust-lang.org/book/ch09-02-recoverable-errors-with-result.html#the--operator-shortcut">the <code>?</code> operator</a> to early return errors.</p>
 <p>By adding a new error to the error chain we give meaning and context where and
 how the error occurred - which makes it easier to get to the problem when
 diagnosing errors. The output of such an error chain looks like this:</p>

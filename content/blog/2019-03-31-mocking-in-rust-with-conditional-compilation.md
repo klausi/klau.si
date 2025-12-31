@@ -51,7 +51,7 @@ use fake_clock::FakeClock as Instant;
 use std::time::Instant;
 ```
 
-The `cfg` attribute is used here to swap in a mock `Instant` type whenever the tests are executed. During production compilation the normal type is used. Luckily in this case a [fake clock crate](https://github.com/maidsafe/fake_clock) already exists, so we don't even have to write the mock code and just use it:
+The `cfg` attribute is used here to swap in a mock `Instant` type whenever the tests are executed. During production compilation the normal type is used. Luckily in this case a [fake_clock crate](https://crates.io/crates/fake_clock) already exists, so we don't even have to write the mock code and just use it:
 
 ```rust
 fn sleep(time: u64) {

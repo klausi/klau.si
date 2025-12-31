@@ -177,7 +177,7 @@ fn c_100_requests_varnish(b: &mut test::Bencher) {
 }
 ```
 
-The full source code with the scenarios can be found in the [goal-09 branch](https://github.com/klausi/rustnish/blob/goal-09/benches/rustnish_vs_varnish.rs).
+The full source code with the scenarios can be found in the [rustnish repository](https://github.com/klausi/rustnish/blob/master/benches/rustnish_vs_varnish.rs).
 
 Before this benchmark can be executed we need Varnish running on port 6081 (default) and we need to start a dummy backend and our proxy server:
 
@@ -209,7 +209,7 @@ Cool, that shows our proxy always being slightly faster than Varnish.
 
 ## Observing benchmark regressions
 
-Now that we have established a performance base line we can change or refactor our code and check what happens to our benchmark numbers. My Rustnish project is built on the Hyper library version 0.11, let's see what happens if I update and rewrite to Hyper 0.12 (code in the [hyper-0.12-upgrade branch](https://github.com/klausi/rustnish/tree/hyper-0.12-upgrade)) and run the same benchmark:
+Now that we have established a performance base line we can change or refactor our code and check what happens to our benchmark numbers. My Rustnish project is built on the Hyper library version 0.11, let's see what happens if I update and rewrite to Hyper 0.12 and run the same benchmark:
 
 ```
 test a_1_request                       ... bench:     554,467 ns/iter (+/- 75,441)
@@ -241,4 +241,4 @@ The Hyper library does not seem to be a good fit for me when writing a reverse p
 
 **Update 2018-09-07:** seanmonster has some good insights about multi-threading performance in [their Reddit comments](https://www.reddit.com/r/rust/comments/9bukvy/blog_post_benchmarking_a_rustlang_web_application/e56484j). I was able to get Rustnish benchmark numbers ahead of Varnish again, but only by setting Tokio to be single-threaded. So in my single computer (but 4 CPU core) scenario Hyper is only able to compete with Varnish if we eliminate Tokio multithreading. The question remains: Varnish is multithreaded with 2 threadpools and potentially very many threads, why can it handle that so much better than Tokio?
 
-I also [quickly tested actix-web](https://github.com/klausi/rustnish/blob/actix-web-test/src/lib.rs) as a replacement for Hyper, but that delivered even worse benchmark results. I think I'll stick to Hyper for now :-)
+I also quickly tested actix-web as a replacement for Hyper, but that delivered even worse benchmark results. I think I'll stick to Hyper for now :-)

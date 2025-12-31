@@ -42,7 +42,7 @@ the ```code``` command to start the IDE.
 
 Next install the following extensions:
 * Rust code completion and auto formatting:
-  [Rust](https://marketplace.visualstudio.com/items?itemName=kalitaalexey.vscode-rust)
+  [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
 * TOML configuration files syntax highlighting: [Better
   TOML](https://marketplace.visualstudio.com/items?itemName=bungcip.better-toml)
 * LLDB debugging for Rust programs: [LLDB

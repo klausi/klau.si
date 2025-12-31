@@ -39,7 +39,7 @@ With that in mind I have set out the requirement for the first step:
 
 I'm using Ubuntu as operating system and everything was very straight forward
 by [following the installation
-instructions](https://www.rust-lang.org/en-US/install.html):
+instructions](https://www.rust-lang.org/tools/install):
 
 ```
 curl https://sh.rustup.rs -sSf | sh
