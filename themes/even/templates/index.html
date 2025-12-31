@@ -62,7 +62,7 @@
                 {% for item in config.extra.even_menu %}
                     <li class="mobile-menu-item">
                         <a href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) }}">
-                            {{ item.name }}
+                            {{ item.name }}{% if item.name == "RSS" %} <img src="{{ get_url(path="rss-icon.svg") }}" alt="RSS icon" style="vertical-align: middle; width: 16px; height: 16px; position: relative; top: -2px;">{% endif %}
                         </a>
                     </li>
                 {% endfor %}
@@ -81,7 +81,7 @@
                         {% for item in config.extra.even_menu %}
                             <li>
                                 <a href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) }}">
-                                    {{ item.name }}
+                                    {{ item.name }}{% if item.name == "RSS" %} <img src="{{ get_url(path="rss-icon.svg") }}" alt="RSS icon" style="vertical-align: middle; width: 16px; height: 16px; position: relative; top: -2px;">{% endif %}
                                 </a>
                             </li>
                         {% endfor %}
