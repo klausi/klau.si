@@ -23,14 +23,13 @@
           <link>https://klau.si/blog/d7security-drupal-austria-meetup/</link>
           <guid>https://klau.si/blog/d7security-drupal-austria-meetup/</guid>
           <description xml:base="https://klau.si/blog/d7security-drupal-austria-meetup/">&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;d7security-drupal-austria-meetup&#x2F;d7security-drupal-austria-2024.pdf&quot;&gt;the slides&lt;&#x2F;a&gt; and a recording of my Drupal Austria Meetup presentation about &lt;a href=&quot;https:&#x2F;&#x2F;www.d7security.org&quot;&gt;D7Security&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;div class=&quot;youtube-lazy&quot;
-     data-video-id=&quot;1vLU1Eo0Tkk&quot;&gt;
+&lt;div class=&quot;youtube-lazy&quot; data-video-id=&quot;1vLU1Eo0Tkk&quot;&gt;
   &lt;div class=&quot;youtube-lazy-placeholder&quot;&gt;
     &lt;img src=&quot;&#x2F;youtube-thumbs&#x2F;1vLU1Eo0Tkk.jpg&quot;
          alt=&quot;YouTube video thumbnail - click to play&quot;
-          loading=&quot;lazy&quot;
-          width=&quot;16&quot;
-          height=&quot;9&quot;&gt;
+         loading=&quot;lazy&quot;
+         width=&quot;16&quot;
+         height=&quot;9&quot;&gt;
     &lt;button class=&quot;youtube-play-button&quot; aria-label=&quot;Play video&quot;&gt;
       &lt;svg viewBox=&quot;0 0 68 48&quot; width=&quot;68&quot; height=&quot;48&quot;&gt;
         &lt;path class=&quot;youtube-play-bg&quot; d=&quot;M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z&quot; fill=&quot;#f00&quot; &#x2F;&gt;
