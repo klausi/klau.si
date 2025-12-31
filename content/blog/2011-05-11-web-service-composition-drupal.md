@@ -7,7 +7,7 @@ aliases = ["node/36", "node/36.html", "web-service-composition-drupal.html", "we
 tags = ["software", "uni", "drupal", "drupal planet"]
 +++
 
-<p><img alt="" src="/sites/default/files/wsclient_logo_300_0.thumbnail.png" style="width: 209px; height: 217px; float: right;" />A master thesis written by Klaus Purer at the Vienna University of Technology, released in May 2011.</p>
+<p><img alt="WSClient module logo" src="/sites/default/files/wsclient_logo_300_0.thumbnail.png" style="width: 209px; height: 217px; float: right;" />A master thesis written by Klaus Purer at the Vienna University of Technology, released in May 2011.</p>
 <p><strong>Abstract:</strong></p>
 <p>Building web applications has become a complex task and often requires interaction with other web applications, such as web services. Drupal is a free and open source content management system and framework that provides a rich platform for rapid web development. The modular and extensible nature of Drupal allows developers to customize and embrace the core functionality and to create new features. This thesis is about investigating and implementing a web service client module for Drupal that is able to consume classical WS* web services as well as RESTful web services.</p>
 <!-- more -->

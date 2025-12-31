@@ -45,7 +45,7 @@ tags = ["gesellschaftskritik", "uni"]
 <h3>
 	Fachschaft Informatik</h3>
 <p>
-	<img alt="" src="/sites/default/files/fsinf_logo.png" style="width: 216px; height: 97px; float: right; margin: 10px;" /></p>
+	<img alt="Fachschaft Informatik logo" src="/sites/default/files/fsinf_logo.png" style="width: 216px; height: 97px; float: right; margin: 10px;" /></p>
 <p>
 	Eine der wichtigsten Erfahrungen im Studium war meine Beteiligung an der <a href="http://fsinf.at">Fachschaft Informatik</a>, der Studienrichtungsvertretung. Ich kam mit sehr vielen intelligenten und interessanten Leuten in Kontakt und habe meinen Horizont bezüglich Informatik, Basisdemokratie, Unipolitik, Feminismus, Gesellschaftspolitik und vielem mehr extrem erweitern können. Ich habe gelernt als Teil einer Interessenvertretung Dinge selbst in die Hand zu nehmen und mich an meiner Studiensituation aktiv zu beteiligen. Danke für so viele spannende Themen und den Rückhalt, den mir die Gruppe gegeben hat.</p>
 <h3>

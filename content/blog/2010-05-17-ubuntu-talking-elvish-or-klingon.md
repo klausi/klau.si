@@ -10,5 +10,5 @@ tags = ["software", "ubuntu"]
 <p>
 	Funny screenshot I captured yesterday (I guess this bug was originally caused by outputting binary data in a terminal):</p>
 <p>
-	<a href="/files/ubuntu-elvish-klingon.png"><img alt="" src="/files/ubuntu-elvish-klingon.png" style="width: 500px; height: 313px;" /></a></p>
+	<a href="/files/ubuntu-elvish-klingon.png"><img alt="Screenshot of my Ubuntu desktop displaying garbled characters resembling Elvish or Klingon script" src="/files/ubuntu-elvish-klingon.png" style="width: 500px; height: 313px;" /></a></p>
 <!-- more -->
