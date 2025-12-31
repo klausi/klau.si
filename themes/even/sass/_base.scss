@@ -29,12 +29,12 @@ body {
 }
 
 a {
-  color: $main-colour;
+  color: $link-colour;
   text-decoration: underline;
   transition: color 0.2s ease;
 
   &:hover {
-    color: darken($main-colour, 15%);
+    color: $link-hover-colour;
   }
 }
 

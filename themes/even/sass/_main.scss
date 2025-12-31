@@ -11,13 +11,13 @@ main {
   }
 
   .read-more a {
-    color: $main-colour;
+    color: $link-colour;
     font-family: $decoration-font-family;
     font-size: 1.1rem;
     transition: color 0.2s ease;
 
     &:hover {
-      color: darken($main-colour, 15%);
+      color: $link-hover-colour;
     }
   }
 
@@ -29,11 +29,11 @@ main {
       font-family: $decoration-font-family;
 
       a {
-        color: #34495e;
+        color: $link-colour;
         transition: color 0.2s ease;
 
         &:hover {
-          color: $main-colour;
+          color: $link-hover-colour;
         }
       }
     }
@@ -54,11 +54,11 @@ main {
     }
 
     p>a {
-      color: $main-colour;
+      color: $link-colour;
       transition: color 0.2s ease;
 
       &:hover {
-        color: darken($main-colour, 15%);
+        color: $link-hover-colour;
       }
     }
 
@@ -180,8 +180,12 @@ main {
 
     a {
       margin-right: 5px;
-      color: $main-colour;
+      color: $link-colour;
       word-break: break-all;
+
+      &:hover {
+        color: $link-hover-colour;
+      }
     }
   }
 
@@ -199,7 +203,11 @@ main {
     margin: 2rem 0 4rem 0;
 
     a {
-      color: #34495e;
+      color: $link-colour;
+
+      &:hover {
+        color: $link-hover-colour;
+      }
     }
   }
 }
@@ -211,7 +219,7 @@ main {
   transition: transform 0.3s ease-out;
 
   &:hover {
-    color: $main-colour;
+    color: $link-hover-colour;
   }
 }
 
@@ -249,16 +257,17 @@ main {
       margin: 5px 10px;
       word-wrap: break-word;
       position: relative;
+      color: $link-colour;
 
       &:hover {
-        color: $main-colour;
+        color: $link-hover-colour;
       }
 
       .count {
         position: relative;
         top: -8px;
         right: -2px;
-        color: $main-colour;
+        color: $link-hover-colour;
         font-size: 12px;
       }
     }
@@ -284,14 +293,22 @@ main {
     }
 
     &__title a {
-      color: $main-colour;
+      color: $link-colour;
+
+      &:hover {
+        color: $link-hover-colour;
+      }
     }
   }
 }
 
 .about {
   p>a {
-    color: $main-colour;
+    color: $link-colour;
     word-break: break-all;
+
+    &:hover {
+      color: $link-hover-colour;
+    }
   }
 }
