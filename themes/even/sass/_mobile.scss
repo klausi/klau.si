@@ -15,10 +15,6 @@
   transition: transform 300ms ease;
   z-index: 99;
 
-  &.fixed-open {
-    transform: translate3d(180px, 0px, 0px);
-  }
-
   .mobile-header-logo {
     display: inline-block;
     margin-right: 50px;
@@ -60,8 +56,16 @@
     }
 
     a {
+      color: $link-colour;
       font-size: 18px;
       transition: color 0.2s ease;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+      &:visited,
+      &:active,
+      &:focus {
+        color: $link-colour;
+      }
 
       &:hover {
         color: $link-hover-colour;

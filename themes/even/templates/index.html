@@ -23,7 +23,6 @@
     {% endblock %}
 
     {% block js %}
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
       {% if config.extra.katex_enable %}
         <link rel="stylesheet"
               href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css"
@@ -66,6 +65,11 @@
   <body>
     <div class="container">
 
+      <input type="checkbox"
+             id="mobile-menu-toggle"
+             class="mobile-menu-toggle"
+             aria-label="Toggle mobile menu">
+
       <div id="mobile-navbar" class="mobile-navbar">
         <div class="mobile-header-logo">
           <a href="{{ config.base_url }}"
@@ -77,34 +81,16 @@
           </a>
           <a href="/" class="logo">{{ config.extra.even_title }}</a>
         </div>
-        <div class="mobile-navbar-icon icon-out">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+        <label for="mobile-menu-toggle"
+               class="mobile-navbar-icon"
+               role="button"
+               aria-controls="mobile-menu"
+               aria-label="Toggle menu">
+          <span aria-hidden="true">&nbsp;</span>
+          <span aria-hidden="true">&nbsp;</span>
+          <span aria-hidden="true">&nbsp;</span>
+        </label>
       </div>
-
-      <nav id="mobile-menu" class="mobile-menu slideout-menu slideout-menu-left">
-        <ul class="mobile-menu-list">
-          {% for item in config.extra.even_menu %}
-            <li class="mobile-menu-item">
-              <a href="{{ item.url | replace(from='$BASE_URL', to=config.base_url) }}">
-                {{ item.name }}
-                {% if item.name == "RSS" %}
-
-                  <img src="{{ get_url(path='icons/rss-icon.svg') }}"
-                       alt="RSS icon"
-                       style="vertical-align: middle;
-                              width: 16px;
-                              height: 16px;
-                              position: relative;
-                              top: -2px">
-                {% endif %}
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
-      </nav>
 
       <header id="header">
         <div class="logo">
@@ -245,6 +231,32 @@
           </p>
         </footer>
       {% endblock footer %}
+
+      <nav id="mobile-menu" class="mobile-menu">
+        <ul class="mobile-menu-list">
+          {% for item in config.extra.even_menu %}
+            <li class="mobile-menu-item">
+              <a href="{{ item.url | replace(from='$BASE_URL', to=config.base_url) }}">
+                {{ item.name }}
+                {% if item.name == "RSS" %}
+
+                  <img src="{{ get_url(path='icons/rss-icon.svg') }}"
+                       alt="RSS icon"
+                       style="vertical-align: middle;
+                              width: 16px;
+                              height: 16px;
+                              position: relative;
+                              top: -2px">
+                {% endif %}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+
+      <label for="mobile-menu-toggle"
+             class="mobile-menu-overlay"
+             aria-hidden="true">&nbsp;</label>
     </div>
 
     {% block js_body %}

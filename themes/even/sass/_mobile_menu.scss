@@ -1,0 +1,88 @@
+// ==============================
+// Mobile Menu (CSS-only drawer)
+// ==============================
+
+.mobile-menu-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.mobile-menu-overlay {
+  display: none;
+}
+
+@include max-screen() {
+  .mobile-menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 180px;
+    min-height: 100vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    transform: translate3d(-180px, 0px, 0px);
+    transition: transform 300ms ease;
+    z-index: 98;
+  }
+
+  .mobile-menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba($main-colour, 0.15);
+    z-index: 97;
+  }
+
+  // Keep the hamburger bars non-visible text from affecting layout.
+  .mobile-navbar-icon span {
+    font-size: 0;
+    line-height: 0;
+    transition: transform 0.3s ease, opacity 0.2s ease;
+  }
+
+  .mobile-menu-toggle:checked~.mobile-menu {
+    transform: translate3d(0px, 0px, 0px);
+  }
+
+  .mobile-menu-toggle:checked~.mobile-menu-overlay {
+    display: block;
+  }
+
+  .mobile-menu-toggle:checked~.mobile-navbar {
+    transform: translate3d(180px, 0px, 0px);
+  }
+
+  // Push the main page content to match the previous Slideout behavior.
+  .mobile-menu-toggle:checked~#header,
+  .mobile-menu-toggle:checked~main {
+    transform: translate3d(180px, 0px, 0px);
+  }
+
+  #header,
+  main {
+    transition: transform 300ms ease;
+  }
+
+  // Hamburger -> X
+  .mobile-menu-toggle:checked~.mobile-navbar .mobile-navbar-icon span:nth-child(1) {
+    transform: translateY(0) rotate(45deg);
+  }
+
+  .mobile-menu-toggle:checked~.mobile-navbar .mobile-navbar-icon span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-menu-toggle:checked~.mobile-navbar .mobile-navbar-icon span:nth-child(3) {
+    transform: translateY(0) rotate(-45deg);
+  }
+}

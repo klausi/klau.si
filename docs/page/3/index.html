@@ -21,7 +21,6 @@
     
 
     
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
       
     
 
@@ -38,6 +37,11 @@
   <body>
     <div class="container">
 
+      <input type="checkbox"
+             id="mobile-menu-toggle"
+             class="mobile-menu-toggle"
+             aria-label="Toggle mobile menu">
+
       <div id="mobile-navbar" class="mobile-navbar">
         <div class="mobile-header-logo">
           <a href="https:&#x2F;&#x2F;klau.si"
@@ -49,55 +53,16 @@
           </a>
           <a href="/" class="logo">Klausi&#x27;s Weblog</a>
         </div>
-        <div class="mobile-navbar-icon icon-out">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+        <label for="mobile-menu-toggle"
+               class="mobile-navbar-icon"
+               role="button"
+               aria-controls="mobile-menu"
+               aria-label="Toggle menu">
+          <span aria-hidden="true">&nbsp;</span>
+          <span aria-hidden="true">&nbsp;</span>
+          <span aria-hidden="true">&nbsp;</span>
+        </label>
       </div>
-
-      <nav id="mobile-menu" class="mobile-menu slideout-menu slideout-menu-left">
-        <ul class="mobile-menu-list">
-          
-            <li class="mobile-menu-item">
-              <a href="https:&#x2F;&#x2F;klau.si">
-                Home
-                
-              </a>
-            </li>
-          
-            <li class="mobile-menu-item">
-              <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;speaking">
-                Speaking
-                
-              </a>
-            </li>
-          
-            <li class="mobile-menu-item">
-              <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags">
-                Categories
-                
-              </a>
-            </li>
-          
-            <li class="mobile-menu-item">
-              <a href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
-                RSS
-                
-
-                  <img src="https://klau.si/icons/rss-icon.svg"
-                       alt="RSS icon"
-                       style="vertical-align: middle;
-                              width: 16px;
-                              height: 16px;
-                              position: relative;
-                              top: -2px">
-                
-              </a>
-            </li>
-          
-        </ul>
-      </nav>
 
       <header id="header">
         <div class="logo">
@@ -537,6 +502,53 @@ enforces.</p></div>
           </p>
         </footer>
       
+
+      <nav id="mobile-menu" class="mobile-menu">
+        <ul class="mobile-menu-list">
+          
+            <li class="mobile-menu-item">
+              <a href="https:&#x2F;&#x2F;klau.si">
+                Home
+                
+              </a>
+            </li>
+          
+            <li class="mobile-menu-item">
+              <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;speaking">
+                Speaking
+                
+              </a>
+            </li>
+          
+            <li class="mobile-menu-item">
+              <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags">
+                Categories
+                
+              </a>
+            </li>
+          
+            <li class="mobile-menu-item">
+              <a href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
+                RSS
+                
+
+                  <img src="https://klau.si/icons/rss-icon.svg"
+                       alt="RSS icon"
+                       style="vertical-align: middle;
+                              width: 16px;
+                              height: 16px;
+                              position: relative;
+                              top: -2px">
+                
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+
+      <label for="mobile-menu-toggle"
+             class="mobile-menu-overlay"
+             aria-hidden="true">&nbsp;</label>
     </div>
 
     
