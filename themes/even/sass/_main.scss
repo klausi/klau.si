@@ -56,6 +56,11 @@ main {
     p>a {
       color: $link-colour;
       transition: color 0.2s ease;
+      word-break: normal;
+      overflow-wrap: normal;
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+      hyphens: auto;
 
       &:hover {
         color: $link-hover-colour;
@@ -181,7 +186,11 @@ main {
     a {
       margin-right: 5px;
       color: $link-colour;
-      word-break: break-all;
+      word-break: normal;
+      overflow-wrap: normal;
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+      hyphens: auto;
 
       &:hover {
         color: $link-hover-colour;
@@ -305,7 +314,11 @@ main {
 .about {
   p>a {
     color: $link-colour;
-    word-break: break-all;
+    word-break: normal;
+    overflow-wrap: normal;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
 
     &:hover {
       color: $link-hover-colour;
