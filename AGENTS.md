@@ -18,3 +18,7 @@ This is a Zola static site generator project.
 ## Accessibility
 
 - Never leave image `alt` text empty. Always provide meaningful alt text for images.
+
+## JavaScript
+
+- Always use braces `{}` around `if` statements, even for single-line bodies.

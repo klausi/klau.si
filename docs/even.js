@@ -10,7 +10,7 @@ function initMobile() {
   });
   slideout.disableTouch();
 
-  $mobileNavIcon.addEventListener("click", function() {
+  $mobileNavIcon.addEventListener("click", function () {
     slideout.toggle();
   });
 
@@ -26,7 +26,7 @@ function initMobile() {
     $mobileNavIcon.classList.remove("icon-click");
   });
 
-  document.getElementById("mobile-panel").addEventListener("touchend", function() {
+  document.getElementById("mobile-panel").addEventListener("touchend", function () {
     slideout.isOpen() && $mobileNavIcon.click();
   })
 }
@@ -42,13 +42,17 @@ function initToc() {
 
     target += 30
     for (let i = 0; i < array.length - 1; i++) {
-      if (target > array[i].offsetTop && target <= array[i + 1].offsetTop) return i
+      if (target > array[i].offsetTop && target <= array[i + 1].offsetTop) {
+        return i
+      }
     }
-    if (target > array[array.length - 1].offsetTop) return array.length - 1
+    if (target > array[array.length - 1].offsetTop) {
+      return array.length - 1
+    }
     return -1
   }
 
-  document.addEventListener("scroll", function() {
+  document.addEventListener("scroll", function () {
     var scrollTop = document.body.scrollTop | document.documentElement.scrollTop
     var activeTocIndex = searchActiveTocIndex($headerlink, scrollTop)
 
@@ -70,12 +74,35 @@ function initToc() {
   })
 }
 
+function initYoutubeLazy() {
+  document.querySelectorAll('.youtube-lazy').forEach(function (container) {
+    var placeholder = container.querySelector('.youtube-lazy-placeholder');
+    if (!placeholder) {
+      return;
+    }
+
+    placeholder.addEventListener('click', function () {
+      var videoId = container.getAttribute('data-video-id');
+      var iframe = document.createElement('iframe');
+      iframe.setAttribute('src', 'https://www.youtube-nocookie.com/embed/' + videoId + '?autoplay=1');
+      iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+      iframe.setAttribute('allowfullscreen', '');
+      iframe.setAttribute('title', 'YouTube video player');
+
+      container.innerHTML = '';
+      container.appendChild(iframe);
+    });
+  });
+}
+
 if (document.readyState === "complete" ||
-    (document.readyState !== "loading" && !document.documentElement.doScroll)
+  (document.readyState !== "loading" && !document.documentElement.doScroll)
 ) {
   initMobile();
   initToc();
+  initYoutubeLazy();
 } else {
   document.addEventListener("DOMContentLoaded", initMobile);
   document.addEventListener("DOMContentLoaded", initToc);
+  document.addEventListener("DOMContentLoaded", initYoutubeLazy);
 }

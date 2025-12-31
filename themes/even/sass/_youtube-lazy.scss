@@ -1,0 +1,51 @@
+// Lazy-loading YouTube embed styles
+.youtube-lazy {
+  width: 100%;
+  margin: 1em 0;
+}
+
+.youtube-lazy-placeholder {
+  position: relative;
+  width: 100%;
+  background: #000;
+  cursor: pointer;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.2s ease;
+  }
+
+  &:hover img {
+    opacity: 0.8;
+  }
+}
+
+.youtube-play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+
+  svg {
+    filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.5));
+  }
+}
+
+.youtube-lazy iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+}

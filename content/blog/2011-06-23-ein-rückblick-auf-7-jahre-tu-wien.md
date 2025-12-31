@@ -33,7 +33,7 @@ tags = ["gesellschaftskritik", "uni"]
 		Haufenweise Sätze, Definitionen, Beweise ohne sie im selben Atemzug mit Beispielen zu erläutern</li>
 </ul>
 <p class="rtecenter">
-	<iframe width="420" height="315" src="https://www.youtube.com/embed/gP-LD2HGs0U" frameborder="0" allowfullscreen></iframe></p>
+	{{ youtube(id="gP-LD2HGs0U", width=420, height=315) }}</p>
 <p>
 	Es entsteht also Verwirrung, Unverständnis und Frust. Ich persönlich war mir ziemlich sicher, dass ich den Stoff halbwegs verstanden hatte, dennoch musste ich dreimal zur Vorlesung Mathematik 1 antreten, bis ich eine positive Note erreicht hatte. Daraus lässt sich auch ein gewisser Knock-out Charakter ablesen, weswegen viele talentierte Leute das Studium einfach schmeißen. Umso ärgerlicher war für mich die Tatsache, dass ich die Inhalte von Mathematik1 &amp; 2 später nicht mehr in meinem Studium brauchte, höchstens die Nebeneffekte wie formales Denken oder wie prinzipiell ein formaler Beweis ausschaut. Dennoch wird an der TU sehr stark an dieser Vermittlung von Mathematik festgehalten, anstatt einen einfachen Ersatz mit ein bisschen Logik, formaler Notation und Beweisführung anzubieten.</p>
 <h3>
@@ -69,4 +69,3 @@ tags = ["gesellschaftskritik", "uni"]
 <p>
 	Nichts desto trotz entspreche ich wahrscheinlich nicht den Wunschvorstellungen, die unsere ProfessorInnen an AbsolventInnen haben: "Wie viel ist log(1)? Wer diese Frage nicht sofort beantworten kann, hat den Abschluss nicht verdient." Tja, nach der Definition habe ich den Abschluss nicht verdient, ich kann die Frage natürlich nicht sofort beantworten. Dazu habe ich mich in meinem Studium viel zu wenig mit Mathematik beschäftigt und bin eingerostet. Was ich allerdings schon tun kann, ist kurz Nachzudenken und mir im Kopf eine Herleitung zu basteln, ich weiß der Logarithmus ist die Umkehrfunktion einer Exponentialfunktion, ich kann visualisieren wie sich diese Kurve verhält ... letztlich würde ich wohl dahinter kommen (auch ohne Internet). Jedenfalls ist mir diese Fähigkeit zur Problemlösung lieber als eine zufällig auswendig gekonnte Lösung.</p>
 
-        

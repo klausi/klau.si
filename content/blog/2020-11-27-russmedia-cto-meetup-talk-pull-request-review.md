@@ -7,6 +7,6 @@ tags = ["speaking", "code review"]
 
 Here is the video of my Russmedia CTO & product meetup talk "Pull Request Review best practices".
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/6CbdQaWI5Hk" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{ youtube(id="6CbdQaWI5Hk") }}
 
 <!-- more -->
