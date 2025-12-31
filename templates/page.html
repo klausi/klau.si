@@ -49,12 +49,6 @@
             {% endfor %}
           </div>
         {% endif %}
-        {% if page.lower or page.higher %}
-          <div class="post-nav">
-            {% if page.lower %}<a class="previous" href="{{ page.lower.permalink }}">‹ {{ page.lower.title }}</a>{% endif %}
-            {% if page.higher %}<a class="next" href="{{ page.higher.permalink }}">{{ page.higher.title }} ›</a>{% endif %}
-          </div>
-        {% endif %}
 
       {% endblock page_footer %}
 
