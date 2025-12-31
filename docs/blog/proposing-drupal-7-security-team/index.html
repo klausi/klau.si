@@ -9,7 +9,9 @@
               content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
         <title>
-            Klausi&#x27;s Weblog - Proposing a Drupal 7 security team
+            
+  Klausi&#x27;s Weblog - Proposing a Drupal 7 security team
+
         </title>
 
         
@@ -157,55 +159,55 @@
                 <div class="content" id="mobile-panel">
                     
 
-
-<div class="post-toc" id="post-toc">
-    <h2 class="post-toc-title">Contents</h2>
-    <div class="post-toc-content always-active">
+  
+    <div class="post-toc" id="post-toc">
+      <h2 class="post-toc-title">Contents</h2>
+      <div class="post-toc-content always-active">
         <nav id="TableOfContents">
-            <ul>
+          <ul>
+            
+              <li>
+                <a href="https://klau.si/blog/proposing-drupal-7-security-team/#background" class="toc-link">Background</a>
                 
-                <li>
-                    <a href="https://klau.si/blog/proposing-drupal-7-security-team/#background" class="toc-link">Background</a>
-                    
-                </li>
+              </li>
+            
+              <li>
+                <a href="https://klau.si/blog/proposing-drupal-7-security-team/#proactive-maintenance-approach" class="toc-link">Proactive Maintenance Approach</a>
                 
-                <li>
-                    <a href="https://klau.si/blog/proposing-drupal-7-security-team/#proactive-maintenance-approach" class="toc-link">Proactive Maintenance Approach</a>
-                    
-                </li>
+              </li>
+            
+              <li>
+                <a href="https://klau.si/blog/proposing-drupal-7-security-team/#blocked-on-unsupported-projects" class="toc-link">Blocked on unsupported projects</a>
                 
-                <li>
-                    <a href="https://klau.si/blog/proposing-drupal-7-security-team/#blocked-on-unsupported-projects" class="toc-link">Blocked on unsupported projects</a>
-                    
-                </li>
+              </li>
+            
+              <li>
+                <a href="https://klau.si/blog/proposing-drupal-7-security-team/#establishing-an-unofficial-d7security-team-on-gitlab-com" class="toc-link">Establishing an unofficial D7Security team on Gitlab.com</a>
                 
-                <li>
-                    <a href="https://klau.si/blog/proposing-drupal-7-security-team/#establishing-an-unofficial-d7security-team-on-gitlab-com" class="toc-link">Establishing an unofficial D7Security team on Gitlab.com</a>
-                    
-                </li>
+              </li>
+            
+              <li>
+                <a href="https://klau.si/blog/proposing-drupal-7-security-team/#pushing-update-notifications-from-gitlab-com-to-drupal-7-sites" class="toc-link">Pushing update notifications from Gitlab.com to Drupal 7 sites</a>
                 
-                <li>
-                    <a href="https://klau.si/blog/proposing-drupal-7-security-team/#pushing-update-notifications-from-gitlab-com-to-drupal-7-sites" class="toc-link">Pushing update notifications from Gitlab.com to Drupal 7 sites</a>
-                    
-                </li>
+              </li>
+            
+              <li>
+                <a href="https://klau.si/blog/proposing-drupal-7-security-team/#why-gitlab-com" class="toc-link">Why Gitlab.com?</a>
                 
-                <li>
-                    <a href="https://klau.si/blog/proposing-drupal-7-security-team/#why-gitlab-com" class="toc-link">Why Gitlab.com?</a>
-                    
-                </li>
+              </li>
+            
+              <li>
+                <a href="https://klau.si/blog/proposing-drupal-7-security-team/#conclusion" class="toc-link">Conclusion</a>
                 
-                <li>
-                    <a href="https://klau.si/blog/proposing-drupal-7-security-team/#conclusion" class="toc-link">Conclusion</a>
-                    
-                </li>
-                
-            </ul>
+              </li>
+            
+          </ul>
         </nav>
+      </div>
     </div>
-</div>
+  
 
-
-<article class="post">
+  <article class="post">
     
     <header class="post__header">
         <h1 class="post__title">
@@ -219,8 +221,7 @@
         </div>
     </header>
 
-    <div class="post-content">
-      <p><strong>Update:</strong> The D7Security group is now established at <a href="https://gitlab.com/d7security">gitlab.com/d7security</a> and <a href="https://www.d7security.org/">d7security.org</a>!</p>
+    <div class="post-content"><p><strong>Update:</strong> The D7Security group is now established at <a href="https://gitlab.com/d7security">gitlab.com/d7security</a> and <a href="https://www.d7security.org/">d7security.org</a>!</p>
 <p><img src="https://klau.si/blog/proposing-drupal-7-security-team/unsupported-hm.png" alt="Screenshot of a drupal.org release settings page. Contains a warning box with the text &quot;Branches compatible with Drupal 7.x that are set as unsupported cannot be set as supported again.&quot;. A big thinking emoji is inserted on the screenshot." /></p>
 <p>The Drupal Security Team has announced in <a href="https://www.drupal.org/psa-2023-06-07">PSA-2023-06-07</a> that unsupported Drupal 7 modules/themes cannot be supported again. I'm proposing to create a D7Security team on Gitlab.com that can provide security fixes for those unsupported modules. A small update module can then notify Drupal 7 site owners when new security releases are available on Gitlab.com.</p>
 <span id="continue-reading"></span><h2 id="background">Background</h2>
@@ -286,43 +287,38 @@
 <p>It should be possible to do a similar approach on drupal.org's Gitlab, but I think it could get very confusing where the actual replacement code for a module lives. I prefer Gitlab.com for organization governance reasons, then it is easy to define repository access based on groups.</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>This is currently a proposal that I would like to get feedback on. Feel free to reach out and discuss in <a href="https://www.drupal.org/project/ideas/issues/3408125">the Drupal ideas issue</a>.</p>
-
-    </div>
+</div>
 
     
     
 
     <div class="post-footer">
+      
         
+          <div class="post-tags">
             
-                <div class="post-tags">
-                    
-                        <a href="https://klau.si/tags/d7security/">#d7security</a>
-                    
-                        <a href="https://klau.si/tags/drupal/">#drupal</a>
-                    
-                        <a href="https://klau.si/tags/drupal-planet/">#drupal planet</a>
-                    
-                </div>
+              <a href="https://klau.si/tags/d7security/">#d7security</a>
             
+              <a href="https://klau.si/tags/drupal/">#drupal</a>
             
-                <div class="post-nav">
-                    
-                        <a class="previous" href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;d7-eol-podcast&#x2F;">‹ Drupal 7 end of life podcast: Unofficial Drupal 7 Security Team</a>
-                    
-                    
-                        <a class="next" href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;fully-hidden-automatic-system-updates-ubuntu&#x2F;">Fully hidden automatic system updates on Ubuntu 20.04 ›</a>
-                    
-                </div>
+              <a href="https://klau.si/tags/drupal-planet/">#drupal planet</a>
             
+          </div>
+        
+        
+          <div class="post-nav">
+            <a class="previous" href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;d7-eol-podcast&#x2F;">‹ Drupal 7 end of life podcast: Unofficial Drupal 7 Security Team</a>
+            <a class="next" href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;fully-hidden-automatic-system-updates-ubuntu&#x2F;">Fully hidden automatic system updates on Ubuntu 20.04 ›</a>
+          </div>
+        
 
-        
+      
 
     </div>
 
     
     
-</article>
+  </article>
 
 
                 </div>

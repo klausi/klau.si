@@ -9,7 +9,9 @@
               content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
         <title>
-            Klausi&#x27;s Weblog - Home WiFi setup with Ubuntu, Asus RT-N56U and Linksys WMP600N
+            
+  Klausi&#x27;s Weblog - Home WiFi setup with Ubuntu, Asus RT-N56U and Linksys WMP600N
+
         </title>
 
         
@@ -157,9 +159,9 @@
                 <div class="content" id="mobile-panel">
                     
 
+  
 
-
-<article class="post">
+  <article class="post">
     
     <header class="post__header">
         <h1 class="post__title">
@@ -173,8 +175,7 @@
         </div>
     </header>
 
-    <div class="post-content">
-      <p>
+    <div class="post-content"><p>
 	A summary about setting up a 802.11n wireless network at home, also for future self-reference.</p>
 <span id="continue-reading"></span>
 <p>
@@ -195,39 +196,34 @@
 	Installing the Linksys WMP600N PCI WiFi card in my desktop PC was not a problem and Ubuntu also detected it correctly. At least I thought so, because there were no WiFi networks showing up in the network manager. After a lot of research about the card&#39;s chipset (Ralink RT2800) I found some errors in the log (&quot;dmesg | grep rt&quot;) while using the rt2800pci linux driver. So I blacklisted that driver (sudo echo &quot;blacklist rt2800pci&quot; &gt;&gt; /etc/modprobe.d/blacklist.conf) and tried the rt2860sta driver that also comes with Ubuntu 10.10. No luck, the WiFi was still dead. The next step was to compile the newest Ralink rt2860sta driver myself (<a href="http://wiki.ubuntuusers.de/WLAN/Ralink#RT28xx">howto on ubuntuusers.de, German</a>). Although everything went through smoothly, still no WiFi.</p>
 <p>
 	I revisited all hardware components and played around with the card&#39;s antennas - suddenly I was able to receive WiFi signals while scanning (sudo iwlist scan)! Obviously the problem was that the antennas can only pick up a signal when they are aligned in parallel, either strictly vertical or strictly horizontal. I adjusted them to be horizontal because there was no vertical space (cables to the graphics card). Finally everything works now!</p>
-
-    </div>
+</div>
 
     
     
 
     <div class="post-footer">
+      
         
+          <div class="post-tags">
             
-                <div class="post-tags">
-                    
-                        <a href="https://klau.si/tags/software/">#software</a>
-                    
-                </div>
+              <a href="https://klau.si/tags/software/">#software</a>
             
-            
-                <div class="post-nav">
-                    
-                        <a class="previous" href="https:&#x2F;&#x2F;klau.si&#x2F;thesis&#x2F;">‹ Web Service Composition in Drupal</a>
-                    
-                    
-                        <a class="next" href="https:&#x2F;&#x2F;klau.si&#x2F;running-php-53-and-52-parallel-nginx&#x2F;">Running PHP 5.3 and 5.2 in parallel with nginx ›</a>
-                    
-                </div>
-            
+          </div>
+        
+        
+          <div class="post-nav">
+            <a class="previous" href="https:&#x2F;&#x2F;klau.si&#x2F;thesis&#x2F;">‹ Web Service Composition in Drupal</a>
+            <a class="next" href="https:&#x2F;&#x2F;klau.si&#x2F;running-php-53-and-52-parallel-nginx&#x2F;">Running PHP 5.3 and 5.2 in parallel with nginx ›</a>
+          </div>
+        
 
-        
+      
 
     </div>
 
     
     
-</article>
+  </article>
 
 
                 </div>

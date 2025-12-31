@@ -9,7 +9,9 @@
               content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
         <title>
-            Klausi&#x27;s Weblog - Static variables made thread-safe in Rust
+            
+  Klausi&#x27;s Weblog - Static variables made thread-safe in Rust
+
         </title>
 
         
@@ -157,40 +159,40 @@
                 <div class="content" id="mobile-panel">
                     
 
-
-<div class="post-toc" id="post-toc">
-    <h2 class="post-toc-title">Contents</h2>
-    <div class="post-toc-content always-active">
+  
+    <div class="post-toc" id="post-toc">
+      <h2 class="post-toc-title">Contents</h2>
+      <div class="post-toc-content always-active">
         <nav id="TableOfContents">
-            <ul>
+          <ul>
+            
+              <li>
+                <a href="https://klau.si/blog/static-variables-made-thread-safe-in-rust/#a-naive-try" class="toc-link">A naive try</a>
                 
-                <li>
-                    <a href="https://klau.si/blog/static-variables-made-thread-safe-in-rust/#a-naive-try" class="toc-link">A naive try</a>
-                    
-                </li>
+              </li>
+            
+              <li>
+                <a href="https://klau.si/blog/static-variables-made-thread-safe-in-rust/#protecting-static-variables-with-atomicusize" class="toc-link">Protecting static variables with AtomicUsize</a>
                 
-                <li>
-                    <a href="https://klau.si/blog/static-variables-made-thread-safe-in-rust/#protecting-static-variables-with-atomicusize" class="toc-link">Protecting static variables with AtomicUsize</a>
-                    
-                </li>
+              </li>
+            
+              <li>
+                <a href="https://klau.si/blog/static-variables-made-thread-safe-in-rust/#postponing-the-offset-calculation" class="toc-link">Postponing the offset calculation</a>
                 
-                <li>
-                    <a href="https://klau.si/blog/static-variables-made-thread-safe-in-rust/#postponing-the-offset-calculation" class="toc-link">Postponing the offset calculation</a>
-                    
-                </li>
+              </li>
+            
+              <li>
+                <a href="https://klau.si/blog/static-variables-made-thread-safe-in-rust/#conclusion" class="toc-link">Conclusion</a>
                 
-                <li>
-                    <a href="https://klau.si/blog/static-variables-made-thread-safe-in-rust/#conclusion" class="toc-link">Conclusion</a>
-                    
-                </li>
-                
-            </ul>
+              </li>
+            
+          </ul>
         </nav>
+      </div>
     </div>
-</div>
+  
 
-
-<article class="post">
+  <article class="post">
     
     <header class="post__header">
         <h1 class="post__title">
@@ -204,8 +206,7 @@
         </div>
     </header>
 
-    <div class="post-content">
-      <p>When writing <a href="https://klau.si/blog/writing-integration-tests-in-rust/">integration tests for my Rustnish reverse proxy project</a> I
+    <div class="post-content"><p>When writing <a href="https://klau.si/blog/writing-integration-tests-in-rust/">integration tests for my Rustnish reverse proxy project</a> I
 have hard-coded port numbers in tests. This is not ideal because it is hard to
 keep track of which port numbers have already been used and which ones are
 available when writing a new test. Because Rust's test runner <a href="https://doc.rust-lang.org/book/ch11-02-running-tests.html#running-tests-in-parallel-or-consecutively">executes test cases in parallel</a> it is important to coordinate
@@ -303,41 +304,36 @@ value of our counter is at the very end which makes this function hard to read.<
 right thing with static variables. The solution to synchronize concurrent
 access with atomics feels a bit clumsy and there might be a better way that I
 have not discovered yet.</p>
-
-    </div>
+</div>
 
     
     
 
     <div class="post-footer">
+      
         
+          <div class="post-tags">
             
-                <div class="post-tags">
-                    
-                        <a href="https://klau.si/tags/rust/">#rust</a>
-                    
-                        <a href="https://klau.si/tags/rustnish/">#rustnish</a>
-                    
-                </div>
+              <a href="https://klau.si/tags/rust/">#rust</a>
             
+              <a href="https://klau.si/tags/rustnish/">#rustnish</a>
             
-                <div class="post-nav">
-                    
-                        <a class="previous" href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;testing-memory-leaks-in-rust&#x2F;">‹ Testing memory leaks in Rust</a>
-                    
-                    
-                        <a class="next" href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;replacing-unwrap-and-avoiding-panics-in-rust&#x2F;">Replacing unwrap() and avoiding panics in Rust ›</a>
-                    
-                </div>
-            
+          </div>
+        
+        
+          <div class="post-nav">
+            <a class="previous" href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;testing-memory-leaks-in-rust&#x2F;">‹ Testing memory leaks in Rust</a>
+            <a class="next" href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;replacing-unwrap-and-avoiding-panics-in-rust&#x2F;">Replacing unwrap() and avoiding panics in Rust ›</a>
+          </div>
+        
 
-        
+      
 
     </div>
 
     
     
-</article>
+  </article>
 
 
                 </div>

@@ -9,7 +9,9 @@
               content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
         <title>
-            Klausi&#x27;s Weblog - Mocking in Rust with conditional compilation
+            
+  Klausi&#x27;s Weblog - Mocking in Rust with conditional compilation
+
         </title>
 
         
@@ -157,40 +159,40 @@
                 <div class="content" id="mobile-panel">
                     
 
-
-<div class="post-toc" id="post-toc">
-    <h2 class="post-toc-title">Contents</h2>
-    <div class="post-toc-content always-active">
+  
+    <div class="post-toc" id="post-toc">
+      <h2 class="post-toc-title">Contents</h2>
+      <div class="post-toc-content always-active">
         <nav id="TableOfContents">
-            <ul>
+          <ul>
+            
+              <li>
+                <a href="https://klau.si/blog/mocking-in-rust-with-conditional-compilation/#conditional-compilation-for-test-types" class="toc-link">Conditional compilation for test types</a>
                 
-                <li>
-                    <a href="https://klau.si/blog/mocking-in-rust-with-conditional-compilation/#conditional-compilation-for-test-types" class="toc-link">Conditional compilation for test types</a>
-                    
-                </li>
+              </li>
+            
+              <li>
+                <a href="https://klau.si/blog/mocking-in-rust-with-conditional-compilation/#integration-tests-not-affected" class="toc-link">Integration tests not affected</a>
                 
-                <li>
-                    <a href="https://klau.si/blog/mocking-in-rust-with-conditional-compilation/#integration-tests-not-affected" class="toc-link">Integration tests not affected</a>
-                    
-                </li>
+              </li>
+            
+              <li>
+                <a href="https://klau.si/blog/mocking-in-rust-with-conditional-compilation/#downsides-of-conditional-compilation-mocks" class="toc-link">Downsides of conditional compilation mocks</a>
                 
-                <li>
-                    <a href="https://klau.si/blog/mocking-in-rust-with-conditional-compilation/#downsides-of-conditional-compilation-mocks" class="toc-link">Downsides of conditional compilation mocks</a>
-                    
-                </li>
+              </li>
+            
+              <li>
+                <a href="https://klau.si/blog/mocking-in-rust-with-conditional-compilation/#conclusion" class="toc-link">Conclusion</a>
                 
-                <li>
-                    <a href="https://klau.si/blog/mocking-in-rust-with-conditional-compilation/#conclusion" class="toc-link">Conclusion</a>
-                    
-                </li>
-                
-            </ul>
+              </li>
+            
+          </ul>
         </nav>
+      </div>
     </div>
-</div>
+  
 
-
-<article class="post">
+  <article class="post">
     
     <header class="post__header">
         <h1 class="post__title">
@@ -204,8 +206,7 @@
         </div>
     </header>
 
-    <div class="post-content">
-      <p>When writing automated unit tests for your application you will probably need to use <a href="https://en.wikipedia.org/wiki/Mock_object">mocks</a> at some point. Classical object-oriented programming languages such as PHP solve this with reflection where mock object types are created during test runtime. The code under test expects a certain interface or class and the test code passes mock objects that implement the interface or are a subclass.</p>
+    <div class="post-content"><p>When writing automated unit tests for your application you will probably need to use <a href="https://en.wikipedia.org/wiki/Mock_object">mocks</a> at some point. Classical object-oriented programming languages such as PHP solve this with reflection where mock object types are created during test runtime. The code under test expects a certain interface or class and the test code passes mock objects that implement the interface or are a subclass.</p>
 <p>Similar approaches exist in Rust where mock objects are used to test code that expects a trait type. There is a wonderful <a href="https://asomers.github.io/mock_shootout/">Rust mock framework comparison</a> by Alan Somers that lists their features. The biggest problem with most of them as far as I can see is that they cannot mock a foreign <code>struct</code> you are using in your code. Rust does not have a concept of object inheritance for structs so there is no way to mimic a struct type from the standard library or an external crate.</p>
 <span id="continue-reading"></span>
 <p>One workaround for that is to refactor your code to use traits/generics instead of concrete structs. That way the implementation is agnostic to whatever struct is used - test code can pass mocks that satisfy the expected trait bounds. The downside is that you might have to invent traits which can make your code more complex just to satisfy test requirements.</p>
@@ -293,41 +294,36 @@
 <li>There are 7 competing mocking frameworks, a sign that the Rust ecosystem has not figured out yet how to do it effectively for everybody.</li>
 <li>The <a href="https://doc.rust-lang.org/1.33.0/book/ch11-00-testing.html">official Testing documentation</a> does not even mention mocking. I assume any larger Rust program will run into mocking use cases during tests, so this is lacking. Interestingly there is a mock use case in the <a href="https://doc.rust-lang.org/1.33.0/book/ch15-05-interior-mutability.html#a-use-case-for-interior-mutability-mock-objects">RefCell example documentation</a>.</li>
 </ul>
-
-    </div>
+</div>
 
     
     
 
     <div class="post-footer">
+      
         
+          <div class="post-tags">
             
-                <div class="post-tags">
-                    
-                        <a href="https://klau.si/tags/rust/">#rust</a>
-                    
-                        <a href="https://klau.si/tags/rustnish/">#rustnish</a>
-                    
-                </div>
+              <a href="https://klau.si/tags/rust/">#rust</a>
             
+              <a href="https://klau.si/tags/rustnish/">#rustnish</a>
             
-                <div class="post-nav">
-                    
-                        <a class="previous" href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;a-new-blog-on-zola&#x2F;">‹ A new blog on Zola</a>
-                    
-                    
-                        <a class="next" href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;drupal-security-vulnerability-learnings&#x2F;">Drupal Austria Meetup: Drupal security learnings ›</a>
-                    
-                </div>
-            
+          </div>
+        
+        
+          <div class="post-nav">
+            <a class="previous" href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;a-new-blog-on-zola&#x2F;">‹ A new blog on Zola</a>
+            <a class="next" href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;drupal-security-vulnerability-learnings&#x2F;">Drupal Austria Meetup: Drupal security learnings ›</a>
+          </div>
+        
 
-        
+      
 
     </div>
 
     
     
-</article>
+  </article>
 
 
                 </div>

@@ -9,7 +9,9 @@
               content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
         <title>
-            Klausi&#x27;s Weblog - Running PHP 5.3 and 5.2 in parallel with nginx
+            
+  Klausi&#x27;s Weblog - Running PHP 5.3 and 5.2 in parallel with nginx
+
         </title>
 
         
@@ -157,9 +159,9 @@
                 <div class="content" id="mobile-panel">
                     
 
+  
 
-
-<article class="post">
+  <article class="post">
     
     <header class="post__header">
         <h1 class="post__title">
@@ -173,8 +175,7 @@
         </div>
     </header>
 
-    <div class="post-content">
-      <p>
+    <div class="post-content"><p>
 	The problem: you want to upgrade your Ubuntu server, but you still need PHP 5.2 for some old web sites (i.e. Drupal 5 is not PHP 5.3 compatible).<br />
 	The solution: Go with the packaged PHP 5.3 for your new sites and compile PHP 5.2 yourself for the old ones. As we use the nginx webserver with FastCGI, we can choose per site which PHP CGI binary will handle the requests.</p>
 <span id="continue-reading"></span>
@@ -300,41 +301,36 @@ sudo ln -s /etc/php5/cli /etc/php52
 	<li>
 		Now you can use /usr/bin/php52/php-cgi in your upstart/init script as PHP 5.2 binary. You should also have now a deb-package in the directory where you executed checkinstall. You can use that package on other servers as well (installation: sudo dpkg -i php-5.2.deb).</li>
 </ul>
-
-    </div>
+</div>
 
     
     
 
     <div class="post-footer">
+      
         
+          <div class="post-tags">
             
-                <div class="post-tags">
-                    
-                        <a href="https://klau.si/tags/software/">#software</a>
-                    
-                        <a href="https://klau.si/tags/drupal/">#drupal</a>
-                    
-                </div>
+              <a href="https://klau.si/tags/software/">#software</a>
             
+              <a href="https://klau.si/tags/drupal/">#drupal</a>
             
-                <div class="post-nav">
-                    
-                        <a class="previous" href="https:&#x2F;&#x2F;klau.si&#x2F;home-wifi-setup-ubuntu-asus-rt-n56u-and-linksys-wmp600n&#x2F;">‹ Home WiFi setup with Ubuntu, Asus RT-N56U and Linksys WMP600N</a>
-                    
-                    
-                        <a class="next" href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;drupalcon-rules-ecosystem&#x2F;">Drupalcon 2010 talk: About the Rules ecosystem ›</a>
-                    
-                </div>
-            
+          </div>
+        
+        
+          <div class="post-nav">
+            <a class="previous" href="https:&#x2F;&#x2F;klau.si&#x2F;home-wifi-setup-ubuntu-asus-rt-n56u-and-linksys-wmp600n&#x2F;">‹ Home WiFi setup with Ubuntu, Asus RT-N56U and Linksys WMP600N</a>
+            <a class="next" href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;drupalcon-rules-ecosystem&#x2F;">Drupalcon 2010 talk: About the Rules ecosystem ›</a>
+          </div>
+        
 
-        
+      
 
     </div>
 
     
     
-</article>
+  </article>
 
 
                 </div>

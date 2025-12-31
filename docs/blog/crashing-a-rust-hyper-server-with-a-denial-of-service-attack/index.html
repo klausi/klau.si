@@ -9,7 +9,9 @@
               content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
         <title>
-            Klausi&#x27;s Weblog - Crashing a Rust Hyper server with a Denial of Service attack
+            
+  Klausi&#x27;s Weblog - Crashing a Rust Hyper server with a Denial of Service attack
+
         </title>
 
         
@@ -157,45 +159,45 @@
                 <div class="content" id="mobile-panel">
                     
 
-
-<div class="post-toc" id="post-toc">
-    <h2 class="post-toc-title">Contents</h2>
-    <div class="post-toc-content always-active">
+  
+    <div class="post-toc" id="post-toc">
+      <h2 class="post-toc-title">Contents</h2>
+      <div class="post-toc-content always-active">
         <nav id="TableOfContents">
-            <ul>
+          <ul>
+            
+              <li>
+                <a href="https://klau.si/blog/crashing-a-rust-hyper-server-with-a-denial-of-service-attack/#a-vulnerable-hello-world-server-example" class="toc-link">A vulnerable Hello world server example</a>
                 
-                <li>
-                    <a href="https://klau.si/blog/crashing-a-rust-hyper-server-with-a-denial-of-service-attack/#a-vulnerable-hello-world-server-example" class="toc-link">A vulnerable Hello world server example</a>
-                    
-                </li>
+              </li>
+            
+              <li>
+                <a href="https://klau.si/blog/crashing-a-rust-hyper-server-with-a-denial-of-service-attack/#using-apachebench-to-attack-the-server" class="toc-link">Using ApacheBench to attack the server</a>
                 
-                <li>
-                    <a href="https://klau.si/blog/crashing-a-rust-hyper-server-with-a-denial-of-service-attack/#using-apachebench-to-attack-the-server" class="toc-link">Using ApacheBench to attack the server</a>
-                    
-                </li>
+              </li>
+            
+              <li>
+                <a href="https://klau.si/blog/crashing-a-rust-hyper-server-with-a-denial-of-service-attack/#a-naive-fix-with-a-loop" class="toc-link">A naive fix with a loop</a>
                 
-                <li>
-                    <a href="https://klau.si/blog/crashing-a-rust-hyper-server-with-a-denial-of-service-attack/#a-naive-fix-with-a-loop" class="toc-link">A naive fix with a loop</a>
-                    
-                </li>
+              </li>
+            
+              <li>
+                <a href="https://klau.si/blog/crashing-a-rust-hyper-server-with-a-denial-of-service-attack/#the-fix-in-hyper" class="toc-link">The fix in Hyper</a>
                 
-                <li>
-                    <a href="https://klau.si/blog/crashing-a-rust-hyper-server-with-a-denial-of-service-attack/#the-fix-in-hyper" class="toc-link">The fix in Hyper</a>
-                    
-                </li>
+              </li>
+            
+              <li>
+                <a href="https://klau.si/blog/crashing-a-rust-hyper-server-with-a-denial-of-service-attack/#conclusion" class="toc-link">Conclusion</a>
                 
-                <li>
-                    <a href="https://klau.si/blog/crashing-a-rust-hyper-server-with-a-denial-of-service-attack/#conclusion" class="toc-link">Conclusion</a>
-                    
-                </li>
-                
-            </ul>
+              </li>
+            
+          </ul>
         </nav>
+      </div>
     </div>
-</div>
+  
 
-
-<article class="post">
+  <article class="post">
     
     <header class="post__header">
         <h1 class="post__title">
@@ -209,8 +211,7 @@
         </div>
     </header>
 
-    <div class="post-content">
-      <p>I'm writing a reverse proxy in Rust using <a href="https://hyper.rs/">Hyper</a> and I want
+    <div class="post-content"><p>I'm writing a reverse proxy in Rust using <a href="https://hyper.rs/">Hyper</a> and I want
 to measure performance a bit to know if I'm doing something terribly wrong. By
 doing that I discovered a Denial of Service vulnerability in Hyper when IO
 errors are not properly handled. Note that <a href="https://github.com/hyperium/hyper/releases/tag/v0.11.20">a workaround has been released in
@@ -346,41 +347,36 @@ using a higher level framework such as <a href="https://rocket.rs/">Rocket</a> e
 the most basic use case (such as my proxy) is a safer choice.</p>
 <p>I think that a HTTP server API such as Hyper should be secure by default and
 prevent server exits where possible. We will get there hopefully!</p>
-
-    </div>
+</div>
 
     
     
 
     <div class="post-footer">
+      
         
+          <div class="post-tags">
             
-                <div class="post-tags">
-                    
-                        <a href="https://klau.si/tags/rust/">#rust</a>
-                    
-                        <a href="https://klau.si/tags/rustnish/">#rustnish</a>
-                    
-                </div>
+              <a href="https://klau.si/tags/rust/">#rust</a>
             
+              <a href="https://klau.si/tags/rustnish/">#rustnish</a>
             
-                <div class="post-nav">
-                    
-                        <a class="previous" href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;benchmarking-a-rust-web-application&#x2F;">‹ Benchmarking a Rust web application</a>
-                    
-                    
-                        <a class="next" href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;testing-memory-leaks-in-rust&#x2F;">Testing memory leaks in Rust ›</a>
-                    
-                </div>
-            
+          </div>
+        
+        
+          <div class="post-nav">
+            <a class="previous" href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;benchmarking-a-rust-web-application&#x2F;">‹ Benchmarking a Rust web application</a>
+            <a class="next" href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;testing-memory-leaks-in-rust&#x2F;">Testing memory leaks in Rust ›</a>
+          </div>
+        
 
-        
+      
 
     </div>
 
     
     
-</article>
+  </article>
 
 
                 </div>

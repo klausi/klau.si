@@ -9,7 +9,9 @@
               content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
         <title>
-            Klausi&#x27;s Weblog - Drupal development setup on Ubuntu 15.10
+            
+  Klausi&#x27;s Weblog - Drupal development setup on Ubuntu 15.10
+
         </title>
 
         
@@ -157,9 +159,9 @@
                 <div class="content" id="mobile-panel">
                     
 
+  
 
-
-<article class="post">
+  <article class="post">
     
     <header class="post__header">
         <h1 class="post__title">
@@ -173,8 +175,7 @@
         </div>
     </header>
 
-    <div class="post-content">
-      <p>I upgraded my local computer to Ubuntu 15.10 today and revisited my Drupal development environment (this <a href="/drupal-development-setup-ubuntu-1310">guide is also available for Ubuntu 13.10</a>). Here is a simple and fast guide how to configure Ubuntu for development. There are a number of <a href="https://www.drupal.org/node/262">installation documentation pages on this topic on drupal.org</a>, but they suggest to use the packaged Drupal installation and to run Drupal in subfolders (e.g. http://localhost/drupal6). They also do not cover some other important development tools like Phpmyadmin or php.ini settings. During development we want to edit files and we want to do that somewhere in our home directory to avoid any permission problems. There is also <a href="https://www.drupal.org/project/drubuntu">Drubuntu</a>, but it is outdated and does way too much magic in my opinion. So here is a more transparent tutorial that highlights the key development configuration settings for Drupal development on a local computer (do not use this for a production server!).<span id="continue-reading"></span></p>
+    <div class="post-content"><p>I upgraded my local computer to Ubuntu 15.10 today and revisited my Drupal development environment (this <a href="/drupal-development-setup-ubuntu-1310">guide is also available for Ubuntu 13.10</a>). Here is a simple and fast guide how to configure Ubuntu for development. There are a number of <a href="https://www.drupal.org/node/262">installation documentation pages on this topic on drupal.org</a>, but they suggest to use the packaged Drupal installation and to run Drupal in subfolders (e.g. http://localhost/drupal6). They also do not cover some other important development tools like Phpmyadmin or php.ini settings. During development we want to edit files and we want to do that somewhere in our home directory to avoid any permission problems. There is also <a href="https://www.drupal.org/project/drubuntu">Drubuntu</a>, but it is outdated and does way too much magic in my opinion. So here is a more transparent tutorial that highlights the key development configuration settings for Drupal development on a local computer (do not use this for a production server!).<span id="continue-reading"></span></p>
 <h2>Installation</h2>
 <p>To install a web server and MySQL and PHP and all the dependencies we simply install the default Ubuntu drupal7 package:</p>
 <pre style="background-color:#191919;color:#f8f8f2;"><code><span>sudo aptitude install drupal7
@@ -264,43 +265,38 @@
   <li>You like the command line? Check out <a href="https://github.com/drush-ops/drush">drush</a> and <a href="https://github.com/hechoendrupal/DrupalConsole">Drupal Console</a> to do all sorts of Drupal administration tasks faster.</li>
   <li>You want to know what's going on in that stupid function? Install the <a href="https://www.drupal.org/project/devel">devel module</a> for debugging purposes and insert <code>dpm($variable);</code> anywhere you want. It will pretty-print the variable in the browser for inspection.</li>
 </ul>
-
-    </div>
+</div>
 
     
     
 
     <div class="post-footer">
+      
         
+          <div class="post-tags">
             
-                <div class="post-tags">
-                    
-                        <a href="https://klau.si/tags/drupal/">#drupal</a>
-                    
-                        <a href="https://klau.si/tags/drupal-planet/">#drupal planet</a>
-                    
-                        <a href="https://klau.si/tags/ubuntu/">#ubuntu</a>
-                    
-                </div>
+              <a href="https://klau.si/tags/drupal/">#drupal</a>
             
+              <a href="https://klau.si/tags/drupal-planet/">#drupal planet</a>
             
-                <div class="post-nav">
-                    
-                        <a class="previous" href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;drupalcon-publish-module&#x2F;">‹ Drupalcon 2016 talk: How to publish a module on drupal.org</a>
-                    
-                    
-                        <a class="next" href="https:&#x2F;&#x2F;klau.si&#x2F;wie-viele-frauen-sprechen-eigentlich-bei-am-schauplatz&#x2F;">Wie viele Frauen sprechen eigentlich bei &quot;Am Schauplatz&quot;? ›</a>
-                    
-                </div>
+              <a href="https://klau.si/tags/ubuntu/">#ubuntu</a>
             
+          </div>
+        
+        
+          <div class="post-nav">
+            <a class="previous" href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;drupalcon-publish-module&#x2F;">‹ Drupalcon 2016 talk: How to publish a module on drupal.org</a>
+            <a class="next" href="https:&#x2F;&#x2F;klau.si&#x2F;wie-viele-frauen-sprechen-eigentlich-bei-am-schauplatz&#x2F;">Wie viele Frauen sprechen eigentlich bei &quot;Am Schauplatz&quot;? ›</a>
+          </div>
+        
 
-        
+      
 
     </div>
 
     
     
-</article>
+  </article>
 
 
                 </div>

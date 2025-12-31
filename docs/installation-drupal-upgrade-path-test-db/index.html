@@ -9,7 +9,9 @@
               content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
         <title>
-            Klausi&#x27;s Weblog - Installation of a Drupal Upgrade Path Test DB
+            
+  Klausi&#x27;s Weblog - Installation of a Drupal Upgrade Path Test DB
+
         </title>
 
         
@@ -157,9 +159,9 @@
                 <div class="content" id="mobile-panel">
                     
 
+  
 
-
-<article class="post">
+  <article class="post">
     
     <header class="post__header">
         <h1 class="post__title">
@@ -173,8 +175,7 @@
         </div>
     </header>
 
-    <div class="post-content">
-      <p>While working on the <a href="http://drupal.org/node/935062">Kill role IDs patch</a> I had to develop some upgrade path Simpletests. Unfortunately the <a href="http://drupal.org/node/1429136">documentation for upgrade path tests</a> currently lacks installtion instructions on how to work with the existing bare and filled exported test databases. Here is a small writeup of what I did until we document that properly.</p>
+    <div class="post-content"><p>While working on the <a href="http://drupal.org/node/935062">Kill role IDs patch</a> I had to develop some upgrade path Simpletests. Unfortunately the <a href="http://drupal.org/node/1429136">documentation for upgrade path tests</a> currently lacks installtion instructions on how to work with the existing bare and filled exported test databases. Here is a small writeup of what I did until we document that properly.</p>
 <span id="continue-reading"></span>
 <p>The test databases are exported to executable PHP code and live in core/modules/simpletest/tests/upgrade (Drupal 8). The problem is that you needed a bootstrapped Drupal database system to run those statements and an empty database at the same time where you insert the data. So first you need to create a new, empty development environment - not only a new site in a multi-site setup in your usual development directory.</p>
 <ul>
@@ -215,41 +216,36 @@ require '/home/klausi/workspace/drupal-8/core/modules/simpletest/tests/upgrade/d
 		Copy your modifications to a separate PHP file, as for example done in drupal-7-language.php. By doing that you avoid to have another big full database export and you can reuse drupal-7.bare.database.php.gz or drupal-7.filled.database.php.gz in your UpgradePathTestCase::setUp() (see upgrade.language.test for an example).</li>
 </ul>
 <p>Doing all this is ugly and I&#39;m not sure this is the way it should be done. Leave a comment or contact me if you know better.</p>
-
-    </div>
+</div>
 
     
     
 
     <div class="post-footer">
+      
         
+          <div class="post-tags">
             
-                <div class="post-tags">
-                    
-                        <a href="https://klau.si/tags/drupal/">#drupal</a>
-                    
-                        <a href="https://klau.si/tags/drupal-planet/">#drupal planet</a>
-                    
-                </div>
+              <a href="https://klau.si/tags/drupal/">#drupal</a>
             
+              <a href="https://klau.si/tags/drupal-planet/">#drupal planet</a>
             
-                <div class="post-nav">
-                    
-                        <a class="previous" href="https:&#x2F;&#x2F;klau.si&#x2F;dev-ubuntu-12-04&#x2F;">‹ Drupal development setup on Ubuntu 12.04</a>
-                    
-                    
-                        <a class="next" href="https:&#x2F;&#x2F;klau.si&#x2F;drupal-project-application-issue-slaughter&#x2F;">The Drupal project application issue slaughter ›</a>
-                    
-                </div>
-            
+          </div>
+        
+        
+          <div class="post-nav">
+            <a class="previous" href="https:&#x2F;&#x2F;klau.si&#x2F;dev-ubuntu-12-04&#x2F;">‹ Drupal development setup on Ubuntu 12.04</a>
+            <a class="next" href="https:&#x2F;&#x2F;klau.si&#x2F;drupal-project-application-issue-slaughter&#x2F;">The Drupal project application issue slaughter ›</a>
+          </div>
+        
 
-        
+      
 
     </div>
 
     
     
-</article>
+  </article>
 
 
                 </div>

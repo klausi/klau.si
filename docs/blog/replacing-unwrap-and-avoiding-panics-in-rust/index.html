@@ -9,7 +9,9 @@
               content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
         <title>
-            Klausi&#x27;s Weblog - Replacing unwrap() and avoiding panics in Rust
+            
+  Klausi&#x27;s Weblog - Replacing unwrap() and avoiding panics in Rust
+
         </title>
 
         
@@ -157,40 +159,40 @@
                 <div class="content" id="mobile-panel">
                     
 
-
-<div class="post-toc" id="post-toc">
-    <h2 class="post-toc-title">Contents</h2>
-    <div class="post-toc-content always-active">
+  
+    <div class="post-toc" id="post-toc">
+      <h2 class="post-toc-title">Contents</h2>
+      <div class="post-toc-content always-active">
         <nav id="TableOfContents">
-            <ul>
+          <ul>
+            
+              <li>
+                <a href="https://klau.si/blog/replacing-unwrap-and-avoiding-panics-in-rust/#the-case-for-unwrap-in-tests" class="toc-link">The case for unwrap() in tests</a>
                 
-                <li>
-                    <a href="https://klau.si/blog/replacing-unwrap-and-avoiding-panics-in-rust/#the-case-for-unwrap-in-tests" class="toc-link">The case for unwrap() in tests</a>
-                    
-                </li>
+              </li>
+            
+              <li>
+                <a href="https://klau.si/blog/replacing-unwrap-and-avoiding-panics-in-rust/#user-input-errors" class="toc-link">User input errors</a>
                 
-                <li>
-                    <a href="https://klau.si/blog/replacing-unwrap-and-avoiding-panics-in-rust/#user-input-errors" class="toc-link">User input errors</a>
-                    
-                </li>
+              </li>
+            
+              <li>
+                <a href="https://klau.si/blog/replacing-unwrap-and-avoiding-panics-in-rust/#error-chains" class="toc-link">Error chains</a>
                 
-                <li>
-                    <a href="https://klau.si/blog/replacing-unwrap-and-avoiding-panics-in-rust/#error-chains" class="toc-link">Error chains</a>
-                    
-                </li>
+              </li>
+            
+              <li>
+                <a href="https://klau.si/blog/replacing-unwrap-and-avoiding-panics-in-rust/#conclusion" class="toc-link">Conclusion</a>
                 
-                <li>
-                    <a href="https://klau.si/blog/replacing-unwrap-and-avoiding-panics-in-rust/#conclusion" class="toc-link">Conclusion</a>
-                    
-                </li>
-                
-            </ul>
+              </li>
+            
+          </ul>
         </nav>
+      </div>
     </div>
-</div>
+  
 
-
-<article class="post">
+  <article class="post">
     
     <header class="post__header">
         <h1 class="post__title">
@@ -204,8 +206,7 @@
         </div>
     </header>
 
-    <div class="post-content">
-      <p><a href="https://doc.rust-lang.org/std/result/enum.Result.html#method.unwrap"><code>unwrap()</code></a> is a useful tool in Rust but is also bad practice in production code that
+    <div class="post-content"><p><a href="https://doc.rust-lang.org/std/result/enum.Result.html#method.unwrap"><code>unwrap()</code></a> is a useful tool in Rust but is also bad practice in production code that
 should not abort with unpredictable panics.</p>
 <p>Therefore my goal 4 for Rustnish is full integration tests with no panics
 allowed:</p>
@@ -353,41 +354,36 @@ and examine it. For example in test code:</p>
 <p><code>unwrap()</code> is your friend in test code where panics are allowed. Error
 chains are a powerful concept of handling errors by providing better context.
 They are comparable to exception handling in languages such as PHP and Java.</p>
-
-    </div>
+</div>
 
     
     
 
     <div class="post-footer">
+      
         
+          <div class="post-tags">
             
-                <div class="post-tags">
-                    
-                        <a href="https://klau.si/tags/rust/">#rust</a>
-                    
-                        <a href="https://klau.si/tags/rustnish/">#rustnish</a>
-                    
-                </div>
+              <a href="https://klau.si/tags/rust/">#rust</a>
             
+              <a href="https://klau.si/tags/rustnish/">#rustnish</a>
             
-                <div class="post-nav">
-                    
-                        <a class="previous" href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;static-variables-made-thread-safe-in-rust&#x2F;">‹ Static variables made thread-safe in Rust</a>
-                    
-                    
-                        <a class="next" href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;converting-a-hyper-server-to-tokio&#x2F;">Converting a Hyper server to Tokio ›</a>
-                    
-                </div>
-            
+          </div>
+        
+        
+          <div class="post-nav">
+            <a class="previous" href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;static-variables-made-thread-safe-in-rust&#x2F;">‹ Static variables made thread-safe in Rust</a>
+            <a class="next" href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;converting-a-hyper-server-to-tokio&#x2F;">Converting a Hyper server to Tokio ›</a>
+          </div>
+        
 
-        
+      
 
     </div>
 
     
     
-</article>
+  </article>
 
 
                 </div>
