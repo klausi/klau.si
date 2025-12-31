@@ -5,7 +5,7 @@ date = 2025-01-30
 tags = ["security"]
 +++
 
-![Black Next.js logos arranged in a circle. In the middle is an emoji with closed eyes exhausting.](nextjs_exhale.png)
+![Black Next.js logos arranged in a circle. In the middle is an emoji with closed eyes exhausting.](nextjs_exhale.webp)
 
 Security Advisory: Next.js Denial of Service vulnerability in redirect misconfiguration
 

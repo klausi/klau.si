@@ -14,7 +14,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/security-advisory-nextjs-redirects/</link>
           <guid>https://klau.si/blog/security-advisory-nextjs-redirects/</guid>
-          <description xml:base="https://klau.si/blog/security-advisory-nextjs-redirects/">&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;security-advisory-nextjs-redirects&#x2F;nextjs_exhale.png&quot; alt=&quot;Black Next.js logos arranged in a circle. In the middle is an emoji with closed eyes exhausting.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/security-advisory-nextjs-redirects/">&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;security-advisory-nextjs-redirects&#x2F;nextjs_exhale.webp&quot; alt=&quot;Black Next.js logos arranged in a circle. In the middle is an emoji with closed eyes exhausting.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;Security Advisory: Next.js Denial of Service vulnerability in redirect misconfiguration&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Project&lt;&#x2F;strong&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;nextjs.org&#x2F;&quot;&gt;Next.js&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;

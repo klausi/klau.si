@@ -5,7 +5,7 @@ date = 2021-01-05
 tags = ["ubuntu"]
 +++
 
-![Screenshot of Ubuntu's update manager popping up during the movie "Tank Girl."](tank-girl-update-smaller.png)
+![Screenshot of Ubuntu's update manager popping up during the movie "Tank Girl."](tank-girl-update-smaller.webp)
 *Screenshot of Ubuntu's update manager popping up during the movie "Tank Girl."*
 
 Ubuntu's graphical update manager pops up every time you need to install updates. That can be annoying when you are watching a movie or doing other things and don't want to be bothered all the time. Yes, I want to always apply all updates from all sources, but please do it silently. Here is a small script I use to do that with Anacron.

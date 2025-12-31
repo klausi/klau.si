@@ -14,7 +14,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/security-advisory-nextjs-redirects/</link>
           <guid>https://klau.si/blog/security-advisory-nextjs-redirects/</guid>
-          <description xml:base="https://klau.si/blog/security-advisory-nextjs-redirects/">&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;security-advisory-nextjs-redirects&#x2F;nextjs_exhale.png&quot; alt=&quot;Black Next.js logos arranged in a circle. In the middle is an emoji with closed eyes exhausting.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/security-advisory-nextjs-redirects/">&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;security-advisory-nextjs-redirects&#x2F;nextjs_exhale.webp&quot; alt=&quot;Black Next.js logos arranged in a circle. In the middle is an emoji with closed eyes exhausting.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;Security Advisory: Next.js Denial of Service vulnerability in redirect misconfiguration&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Project&lt;&#x2F;strong&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;nextjs.org&#x2F;&quot;&gt;Next.js&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
@@ -58,7 +58,7 @@
           <link>https://klau.si/blog/proposing-drupal-7-security-team/</link>
           <guid>https://klau.si/blog/proposing-drupal-7-security-team/</guid>
           <description xml:base="https://klau.si/blog/proposing-drupal-7-security-team/">&lt;p&gt;&lt;strong&gt;Update:&lt;&#x2F;strong&gt; The D7Security group is now established at &lt;a href=&quot;https:&#x2F;&#x2F;gitlab.com&#x2F;d7security&quot;&gt;gitlab.com&#x2F;d7security&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;www.d7security.org&#x2F;&quot;&gt;d7security.org&lt;&#x2F;a&gt;!&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;proposing-drupal-7-security-team&#x2F;unsupported-hm.png&quot; alt=&quot;Screenshot of a drupal.org release settings page. Contains a warning box with the text &amp;quot;Branches compatible with Drupal 7.x that are set as unsupported cannot be set as supported again.&amp;quot;. A big thinking emoji is inserted on the screenshot.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;proposing-drupal-7-security-team&#x2F;unsupported-hm.webp&quot; alt=&quot;Screenshot of a drupal.org release settings page. Contains a warning box with the text &amp;quot;Branches compatible with Drupal 7.x that are set as unsupported cannot be set as supported again.&amp;quot;. A big thinking emoji is inserted on the screenshot.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;The Drupal Security Team has announced in &lt;a href=&quot;https:&#x2F;&#x2F;www.drupal.org&#x2F;psa-2023-06-07&quot;&gt;PSA-2023-06-07&lt;&#x2F;a&gt; that unsupported Drupal 7 modules&#x2F;themes cannot be supported again. I&#x27;m proposing to create a D7Security team on Gitlab.com that can provide security fixes for those unsupported modules. A small update module can then notify Drupal 7 site owners when new security releases are available on Gitlab.com.&lt;&#x2F;p&gt;</description>
       </item>
       <item>
@@ -67,7 +67,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/fully-hidden-automatic-system-updates-ubuntu/</link>
           <guid>https://klau.si/blog/fully-hidden-automatic-system-updates-ubuntu/</guid>
-          <description xml:base="https://klau.si/blog/fully-hidden-automatic-system-updates-ubuntu/">&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;fully-hidden-automatic-system-updates-ubuntu&#x2F;tank-girl-update-smaller.png&quot; alt=&quot;Screenshot of Ubuntu&amp;#39;s update manager popping up during the movie &amp;quot;Tank Girl.&amp;quot;&quot; &#x2F;&gt;
+          <description xml:base="https://klau.si/blog/fully-hidden-automatic-system-updates-ubuntu/">&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;fully-hidden-automatic-system-updates-ubuntu&#x2F;tank-girl-update-smaller.webp&quot; alt=&quot;Screenshot of Ubuntu&amp;#39;s update manager popping up during the movie &amp;quot;Tank Girl.&amp;quot;&quot; &#x2F;&gt;
 &lt;em&gt;Screenshot of Ubuntu&#x27;s update manager popping up during the movie &quot;Tank Girl.&quot;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;Ubuntu&#x27;s graphical update manager pops up every time you need to install updates. That can be annoying when you are watching a movie or doing other things and don&#x27;t want to be bothered all the time. Yes, I want to always apply all updates from all sources, but please do it silently. Here is a small script I use to do that with Anacron.&lt;&#x2F;p&gt;</description>
       </item>
