@@ -7,6 +7,6 @@ tags = ["speaking", "rules", "drupalcon", "drupal"]
 
 Here is the video of our DrupalCon Barcelona 2015 talk "Coding with Rules for Drupal 8".
 
-{{ youtube(id="QcU_LCAHNLg", width=420, height=236) }}
+{{ youtube(id="QcU_LCAHNLg") }}
 
 <!-- more -->

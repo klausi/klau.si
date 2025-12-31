@@ -7,6 +7,6 @@ tags = ["speaking", "security"]
 
 Here is the video of my Drupalcamp Vienna 2013 talk "Cracking Drupal".
 
-{{ youtube(id="-Lxz7YZ4Cr8", width=420, height=236) }}
+{{ youtube(id="-Lxz7YZ4Cr8") }}
 
 <!-- more -->

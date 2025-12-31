@@ -33,7 +33,7 @@ tags = ["gesellschaftskritik", "uni"]
 		Haufenweise Sätze, Definitionen, Beweise ohne sie im selben Atemzug mit Beispielen zu erläutern</li>
 </ul>
 <p class="rtecenter">
-	{{ youtube(id="gP-LD2HGs0U", width=420, height=315) }}</p>
+	{{ youtube(id="gP-LD2HGs0U") }}</p>
 <p>
 	Es entsteht also Verwirrung, Unverständnis und Frust. Ich persönlich war mir ziemlich sicher, dass ich den Stoff halbwegs verstanden hatte, dennoch musste ich dreimal zur Vorlesung Mathematik 1 antreten, bis ich eine positive Note erreicht hatte. Daraus lässt sich auch ein gewisser Knock-out Charakter ablesen, weswegen viele talentierte Leute das Studium einfach schmeißen. Umso ärgerlicher war für mich die Tatsache, dass ich die Inhalte von Mathematik1 &amp; 2 später nicht mehr in meinem Studium brauchte, höchstens die Nebeneffekte wie formales Denken oder wie prinzipiell ein formaler Beweis ausschaut. Dennoch wird an der TU sehr stark an dieser Vermittlung von Mathematik festgehalten, anstatt einen einfachen Ersatz mit ein bisschen Logik, formaler Notation und Beweisführung anzubieten.</p>
 <h3>
