@@ -11,6 +11,11 @@
       color: #34495e;
       font-size: 48px;
       text-decoration: none;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: $main-colour;
+      }
     }
   }
 
@@ -29,6 +34,11 @@
         a {
           color: #34495e;
           font-size: 18px;
+          transition: color 0.2s ease;
+
+          &:hover {
+            color: $main-colour;
+          }
         }
       }
     }

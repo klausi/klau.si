@@ -14,6 +14,11 @@ main {
     color: $main-colour;
     font-family: $decoration-font-family;
     font-size: 1.1rem;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: darken($main-colour, 15%);
+    }
   }
 
   .about,
@@ -25,6 +30,11 @@ main {
 
       a {
         color: #34495e;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: $main-colour;
+        }
       }
     }
 
@@ -45,6 +55,11 @@ main {
 
     p>a {
       color: $main-colour;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: darken($main-colour, 15%);
+      }
     }
 
     blockquote {

@@ -27,12 +27,12 @@ footer {
   align-items: center;
   gap: 0.4em;
   text-decoration: underline;
-  color: #333;
+  color: $main-colour;
   transition: color 0.2s ease;
 }
 
 .footer-social a:hover {
-  color: $main-colour;
+  color: darken($main-colour, 15%);
 }
 
 .social-icon {

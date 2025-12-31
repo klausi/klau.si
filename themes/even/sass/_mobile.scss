@@ -61,6 +61,7 @@
 
     a {
       font-size: 18px;
+      transition: color 0.2s ease;
 
       &:hover {
         color: $main-colour;

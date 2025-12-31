@@ -31,6 +31,11 @@ body {
 a {
   color: $main-colour;
   text-decoration: underline;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: darken($main-colour, 15%);
+  }
 }
 
 img {
