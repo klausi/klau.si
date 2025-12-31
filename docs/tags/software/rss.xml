@@ -14,18 +14,8 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/screencasts-recordmydesktop-ffmpeg-conversion-html5-video/</link>
           <guid>https://klau.si/screencasts-recordmydesktop-ffmpeg-conversion-html5-video/</guid>
-          <description xml:base="https://klau.si/screencasts-recordmydesktop-ffmpeg-conversion-html5-video/">&lt;p&gt;Producing a demo video for &lt;a href=&quot;http:&#x2F;&#x2F;portland2013.drupal.org&#x2F;session&#x2F;rest-and-serialization-drupal-8&quot;&gt;my DrupalCon Portland presentation&lt;&#x2F;a&gt; caused a bit frustration with video editing tools, so here is a simple solution to cut and convert a video on Ubuntu.&lt;!-- more --&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;First I recorded my screencast with RecordMyDesktop, a simple tool to capture the happenings on your screen. It even supports only recording one window, so you don&#x27;t need to include the rest of your irrelevant desktop. Installation:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;sudo aptitude install gtk-recordmydesktop
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;The output file it creates uses the Ogg Theroa Video format, which is free and open, but unfortunately not used on a lot on other platforms. For HTML5 video H.264&#x2F;MPEG-4 now seems to be the most widely spread format, so we need to convert that. I tried with various graphical video editors such as PiTiVi, kdenlive and OpenShot, but not any of them produced useful results. They always changed the resolution, used the wrong codec, a different frame rate or blew up the output file. Their preconfigured rendering profiles just don&#x27;t make sense for simply converting and cutting a video for the web.&lt;&#x2F;p&gt;
-&lt;p&gt;I decided to look into the command line tool ffmpeg directly and found it surprisingly easy to use. Installation with the H.264 codec:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;sudo aptitude install ffmpeg x264
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;To convert the video file, cut off everything after minute 1:34 and remove the audio track I used this command:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;ffmpeg -i input-file.ogv -vcodec libx264 -acodec none -t 00:01:34.0 output-file.mp4
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Done! It also reduced the file size from 4 MB for the Ogg file to 1.4 MB for the MP4 file without reducing the visual quality, thank you ffmpeg :-)&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/screencasts-recordmydesktop-ffmpeg-conversion-html5-video/">&lt;p&gt;Producing a demo video for &lt;a href=&quot;http:&#x2F;&#x2F;portland2013.drupal.org&#x2F;session&#x2F;rest-and-serialization-drupal-8&quot;&gt;my DrupalCon Portland presentation&lt;&#x2F;a&gt; caused a bit frustration with video editing tools, so here is a simple solution to cut and convert a video on Ubuntu.&amp;hellip;
+&lt;&#x2F;p&gt;
 </description>
       </item>
       <item>
@@ -49,8 +39,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <guid>https://klau.si/thesis/</guid>
           <description xml:base="https://klau.si/thesis/">&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;&#x2F;sites&#x2F;default&#x2F;files&#x2F;wsclient_logo_300_0.thumbnail.png&quot; style=&quot;width: 209px; height: 217px; float: right;&quot; &#x2F;&gt;A master thesis written by Klaus Purer at the Vienna University of Technology, released in May 2011.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;strong&gt;Abstract:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;Building web applications has become a complex task and often requires interaction with other web applications, such as web services. Drupal is a free and open source content management system and framework that provides a rich platform for rapid web development. The modular and extensible nature of Drupal allows developers to customize and embrace the core functionality and to create new features. This thesis is about investigating and implementing a web service client module for Drupal that is able to consume classical WS* web services as well as RESTful web services.&lt;&#x2F;p&gt;
-</description>
+&lt;p&gt;Building web applications has become a complex task and often requires interaction with other web applications, such as web services. Drupal is a free and open source content management system and framework that provides a rich platform for rapid web development. The modular and extensible nature of Drupal allows developers to customize and embrace the core functionality and to create new features. This thesis is about investigating and implementing a web service client module for Drupal that is able to consume classical WS* web services as well as RESTful web services.&lt;&#x2F;p&gt;</description>
       </item>
       <item>
           <title>Home WiFi setup with Ubuntu, Asus RT-N56U and Linksys WMP600N</title>
@@ -59,8 +48,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <link>https://klau.si/home-wifi-setup-ubuntu-asus-rt-n56u-and-linksys-wmp600n/</link>
           <guid>https://klau.si/home-wifi-setup-ubuntu-asus-rt-n56u-and-linksys-wmp600n/</guid>
           <description xml:base="https://klau.si/home-wifi-setup-ubuntu-asus-rt-n56u-and-linksys-wmp600n/">&lt;p&gt;
-	A summary about setting up a 802.11n wireless network at home, also for future self-reference.&lt;&#x2F;p&gt;
-</description>
+	A summary about setting up a 802.11n wireless network at home, also for future self-reference.&lt;&#x2F;p&gt;</description>
       </item>
       <item>
           <title>Running PHP 5.3 and 5.2 in parallel with nginx</title>
@@ -70,8 +58,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <guid>https://klau.si/running-php-53-and-52-parallel-nginx/</guid>
           <description xml:base="https://klau.si/running-php-53-and-52-parallel-nginx/">&lt;p&gt;
 	The problem: you want to upgrade your Ubuntu server, but you still need PHP 5.2 for some old web sites (i.e. Drupal 5 is not PHP 5.3 compatible).&lt;br &#x2F;&gt;
-	The solution: Go with the packaged PHP 5.3 for your new sites and compile PHP 5.2 yourself for the old ones. As we use the nginx webserver with FastCGI, we can choose per site which PHP CGI binary will handle the requests.&lt;&#x2F;p&gt;
-</description>
+	The solution: Go with the packaged PHP 5.3 for your new sites and compile PHP 5.2 yourself for the old ones. As we use the nginx webserver with FastCGI, we can choose per site which PHP CGI binary will handle the requests.&lt;&#x2F;p&gt;</description>
       </item>
       <item>
           <title>Ubuntu talking Elvish or Klingon?</title>
@@ -82,8 +69,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <description xml:base="https://klau.si/ubuntu-talking-elvish-or-klingon/">&lt;p&gt;
 	Funny screenshot I captured yesterday (I guess this bug was originally caused by outputting binary data in a terminal):&lt;&#x2F;p&gt;
 &lt;p&gt;
-	&lt;a href=&quot;&#x2F;files&#x2F;ubuntu-elvish-klingon.png&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;&#x2F;files&#x2F;ubuntu-elvish-klingon.png&quot; style=&quot;width: 500px; height: 313px;&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-</description>
+	&lt;a href=&quot;&#x2F;files&#x2F;ubuntu-elvish-klingon.png&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;&#x2F;files&#x2F;ubuntu-elvish-klingon.png&quot; style=&quot;width: 500px; height: 313px;&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;</description>
       </item>
       <item>
           <title>Lightning talk about hooks in Drupal</title>
@@ -92,8 +78,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <link>https://klau.si/lightning-talk-about-hooks-drupal/</link>
           <guid>https://klau.si/lightning-talk-about-hooks-drupal/</guid>
           <description xml:base="https://klau.si/lightning-talk-about-hooks-drupal/">&lt;p&gt;
-	I will attend the &lt;a href=&quot;http:&#x2F;&#x2F;sf2010.drupal.org&#x2F;conference&#x2F;core-developer-summit&quot;&gt;Drupal Core Developer Summit&lt;&#x2F;a&gt; at Drupalcon San Francisco, so I had to prepare a short lighting talk about a topic that bothers me in Drupal. As I ran into an issue of implementing a hook by accident recently, I decided to come up with some suggestions how to improve the situation. I have attached &lt;a href=&quot;&#x2F;files&#x2F;hooks_drupal.pdf&quot;&gt;the PDF&lt;&#x2F;a&gt; I will submit.&lt;&#x2F;p&gt;
-</description>
+	I will attend the &lt;a href=&quot;http:&#x2F;&#x2F;sf2010.drupal.org&#x2F;conference&#x2F;core-developer-summit&quot;&gt;Drupal Core Developer Summit&lt;&#x2F;a&gt; at Drupalcon San Francisco, so I had to prepare a short lighting talk about a topic that bothers me in Drupal. As I ran into an issue of implementing a hook by accident recently, I decided to come up with some suggestions how to improve the situation. I have attached &lt;a href=&quot;&#x2F;files&#x2F;hooks_drupal.pdf&quot;&gt;the PDF&lt;&#x2F;a&gt; I will submit.&lt;&#x2F;p&gt;</description>
       </item>
       <item>
           <title>Gmail and postmaster</title>
@@ -101,8 +86,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/gmail-and-postmaster/</link>
           <guid>https://klau.si/gmail-and-postmaster/</guid>
-          <description xml:base="https://klau.si/gmail-and-postmaster/">&lt;p&gt;The Gmail spam filter works fine most time, but be careful if you are the postmaster of a mail server and want to check delivery failure notifications in your Gmail account.&lt;&#x2F;p&gt;
-</description>
+          <description xml:base="https://klau.si/gmail-and-postmaster/">&lt;p&gt;The Gmail spam filter works fine most time, but be careful if you are the postmaster of a mail server and want to check delivery failure notifications in your Gmail account.&lt;&#x2F;p&gt;</description>
       </item>
       <item>
           <title>A master thesis about Drupal and Web Services</title>
@@ -111,8 +95,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <link>https://klau.si/master-thesis-about-drupal-and-web-services/</link>
           <guid>https://klau.si/master-thesis-about-drupal-and-web-services/</guid>
           <description xml:base="https://klau.si/master-thesis-about-drupal-and-web-services/">&lt;p&gt;
-	In the last weeks I thought about a topic for my master thesis at the Vienna University of Technology, and I came up with the idea of integrating Drupal and Web Services.&lt;&#x2F;p&gt;
-</description>
+	In the last weeks I thought about a topic for my master thesis at the Vienna University of Technology, and I came up with the idea of integrating Drupal and Web Services.&lt;&#x2F;p&gt;</description>
       </item>
       <item>
           <title>Drupal Core update script</title>
@@ -123,8 +106,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <description xml:base="https://klau.si/drupal-core-update-script/">&lt;p&gt;
 	&lt;strong&gt;Update: Do not use this script anymore, drush provides a very good upgrade mechanism itself now!&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;
-	Upgrading &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&quot;&gt;Drupal&lt;&#x2F;a&gt; core can be a very tedious task - especially if you run a Drupal multi site installation (backup database, put site into maintenance mode, run update DB script, put site online again - repeat for every single site). We use &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;project&#x2F;drush&quot;&gt;Drush&lt;&#x2F;a&gt; and a custom bash script to make life much more easier on our fsinf.at Drupal farm.&lt;&#x2F;p&gt;
-</description>
+	Upgrading &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&quot;&gt;Drupal&lt;&#x2F;a&gt; core can be a very tedious task - especially if you run a Drupal multi site installation (backup database, put site into maintenance mode, run update DB script, put site online again - repeat for every single site). We use &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;project&#x2F;drush&quot;&gt;Drush&lt;&#x2F;a&gt; and a custom bash script to make life much more easier on our fsinf.at Drupal farm.&lt;&#x2F;p&gt;</description>
       </item>
       <item>
           <title>Ruby on Rails Setup on Ubuntu 9.10</title>
@@ -132,8 +114,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/ruby-rails-setup-ubuntu-910/</link>
           <guid>https://klau.si/ruby-rails-setup-ubuntu-910/</guid>
-          <description xml:base="https://klau.si/ruby-rails-setup-ubuntu-910/">&lt;p&gt;I&#x27;m working on a Ruby on Rails project right now and had to setup an environment on my Ubuntu 9.10 system. Here are the install commands for your reference if you want to get it done fast.&lt;&#x2F;p&gt;
-</description>
+          <description xml:base="https://klau.si/ruby-rails-setup-ubuntu-910/">&lt;p&gt;I&#x27;m working on a Ruby on Rails project right now and had to setup an environment on my Ubuntu 9.10 system. Here are the install commands for your reference if you want to get it done fast.&lt;&#x2F;p&gt;</description>
       </item>
       <item>
           <title>Thunderbird 3 quick test</title>
@@ -141,8 +122,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/thunderbird-3-quick-test/</link>
           <guid>https://klau.si/thunderbird-3-quick-test/</guid>
-          <description xml:base="https://klau.si/thunderbird-3-quick-test/">&lt;p&gt;Just tested the new Mozilla Thunderbird 3 mailclient, here is a very short review what has changed since version 2.&lt;&#x2F;p&gt;
-</description>
+          <description xml:base="https://klau.si/thunderbird-3-quick-test/">&lt;p&gt;Just tested the new Mozilla Thunderbird 3 mailclient, here is a very short review what has changed since version 2.&lt;&#x2F;p&gt;</description>
       </item>
       <item>
           <title>Development and deployment workflow at Absolventen.at</title>
@@ -160,8 +140,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/php-vs-python-vs-ruby/</link>
           <guid>https://klau.si/php-vs-python-vs-ruby/</guid>
-          <description xml:base="https://klau.si/php-vs-python-vs-ruby/">&lt;p&gt;I did an interesting programming language comparison last semester and wrote up a paper called &amp;quot;&lt;a href=&quot;&#x2F;sites&#x2F;default&#x2F;files&#x2F;php-vs-python-vs-ruby.pdf&quot;&gt;PHP vs. Python vs. Ruby &amp;ndash; The web scripting language shootout&amp;quot;&lt;&#x2F;a&gt;. I&#x27;m not completely satisfied with it as it does not dig deep enough into the details, but it provides a good introduction and overview. As my time was limited and the seminar was only worth 3 ECTS, further investigation and experiments were not done - I would appreciate any additional references on this topic, feel free to post a comment or contact me. &lt;&#x2F;p&gt;
-</description>
+          <description xml:base="https://klau.si/php-vs-python-vs-ruby/">&lt;p&gt;I did an interesting programming language comparison last semester and wrote up a paper called &amp;quot;&lt;a href=&quot;&#x2F;sites&#x2F;default&#x2F;files&#x2F;php-vs-python-vs-ruby.pdf&quot;&gt;PHP vs. Python vs. Ruby &amp;ndash; The web scripting language shootout&amp;quot;&lt;&#x2F;a&gt;. I&#x27;m not completely satisfied with it as it does not dig deep enough into the details, but it provides a good introduction and overview. As my time was limited and the seminar was only worth 3 ECTS, further investigation and experiments were not done - I would appreciate any additional references on this topic, feel free to post a comment or contact me. &lt;&#x2F;p&gt;</description>
       </item>
       <item>
           <title>Stirb Wordpress, stirb!</title>
@@ -169,8 +148,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/stirb-wordpress-stirb/</link>
           <guid>https://klau.si/stirb-wordpress-stirb/</guid>
-          <description xml:base="https://klau.si/stirb-wordpress-stirb/">&lt;p&gt;Endlich geschafft: Mein Weblog l&amp;auml;uft jetzt auf &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&quot;&gt;Drupal&lt;&#x2F;a&gt; und nicht mehr auf dem unsympathischen &lt;a href=&quot;http:&#x2F;&#x2F;wordpress.org&quot;&gt;Wordpress&lt;&#x2F;a&gt;. Gleichzeitig bin ich umgezogen - ich will mal den Webspace der TU ausprobieren. Seit einiger Zeit bietet der ZID ja PHP- und Mysql-Unterst&amp;uuml;tzung an, sodass hier auch Content Management Systeme aufgezogen werden k&amp;ouml;nnen.&lt;&#x2F;p&gt;
-</description>
+          <description xml:base="https://klau.si/stirb-wordpress-stirb/">&lt;p&gt;Endlich geschafft: Mein Weblog l&amp;auml;uft jetzt auf &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&quot;&gt;Drupal&lt;&#x2F;a&gt; und nicht mehr auf dem unsympathischen &lt;a href=&quot;http:&#x2F;&#x2F;wordpress.org&quot;&gt;Wordpress&lt;&#x2F;a&gt;. Gleichzeitig bin ich umgezogen - ich will mal den Webspace der TU ausprobieren. Seit einiger Zeit bietet der ZID ja PHP- und Mysql-Unterst&amp;uuml;tzung an, sodass hier auch Content Management Systeme aufgezogen werden k&amp;ouml;nnen.&lt;&#x2F;p&gt;</description>
       </item>
       <item>
           <title>The sidux way of life - Beispiel OpenOffice 3</title>
@@ -178,41 +156,8 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/sidux-way-life-beispiel-openoffice-3/</link>
           <guid>https://klau.si/sidux-way-life-beispiel-openoffice-3/</guid>
-          <description xml:base="https://klau.si/sidux-way-life-beispiel-openoffice-3/">&lt;p&gt;Eine &lt;a href=&quot;http:&#x2F;&#x2F;ikhaya.ubuntuusers.de&#x2F;2008&#x2F;10&#x2F;25&#x2F;ubuntu-rechtfertigt-entscheidung-gegen-openoffice.org-3.0&#x2F;&quot; target=&quot;_blank&quot;&gt;Ikhaya Meldung auf ubuntuusers.de&lt;&#x2F;a&gt; samt &lt;a href=&quot;http:&#x2F;&#x2F;forum.ubuntuusers.de&#x2F;topic&#x2F;ikhaya-ubuntu-rechtfertigt-entscheidung-gegen&#x2F;&quot;&gt;Diskussion&lt;&#x2F;a&gt; brachte mich letztens ein bisschen zum Lächeln: OpenOffice 3 wird nicht in Ubuntu 8.10 Intrepid Ibex enthalten sein. Großes Wehklagen war bei den Fans von Ubuntu (gleichzeitig Fans aktueller Software) zu hören, so was wird mir bei der Distribution meiner Wahl jedenfalls nicht passieren.&lt;!-- more --&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;Wie wird OpenOffice 3 in Sidux behandelt? Nun, zum einen gibt es keine fixen Release-Termine bei Sidux, weil das System in kleinen inkrementellen Schritten auf Debian Unstable Basis immer aktuell gehalten wird (Rolling Release). Damit fallen grobe, halbjährliche Upgrades wie bei Ubuntu weg, aktuelle Software kommt ziemlich schnell in den Debian Unstable Zweig und kann unmittelbar verwendet werden. Zum anderen werden mit dem Sidux System- und Upgradewerkzeug &lt;a href=&quot;http:&#x2F;&#x2F;manual.sidux.com&#x2F;de&#x2F;smxi-de.htm&quot; target=&quot;_blank&quot;&gt;smxi&lt;&#x2F;a&gt; brandaktuelle Softwarepakete mit Fehlern zurückgehalten, sodass stabiles Arbeiten selbstverständlich ist. OpenOffice 3 ist aber so aktuell, dass es nach dem &lt;a href=&quot;http:&#x2F;&#x2F;lists.debian.org&#x2F;debian-devel-announce&#x2F;2008&#x2F;07&#x2F;msg00007.html&quot; target=&quot;_blank&quot;&gt;Feature Freeze von Debian&lt;&#x2F;a&gt; im Juli im Moment nicht in Debian Unstable aufgenommen wird.&lt;&#x2F;p&gt;
-&lt;p&gt;Kleiner Exkurs zur Wiederholung: Debian hat vier Entwicklungszweige:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-	&lt;li&gt;Stable (Codename Etch): Aktuelles Debian Relaese, hier werden hauptsächlich Security Updates vorgenommen. Die Software ist teiltweise hoffnungslos veraltet. Gut für StabilitätsfanatikerInnen.&lt;&#x2F;li&gt;
-	&lt;li&gt;Testing (Codename Lenny): Nächstes Debian Release, hier werden die Softwarepakete für den zukünftigen Einsatz in Debian 5.0 vorbereitet. Halbwegs aktuell, ziemlich stabil.&lt;&#x2F;li&gt;
-	&lt;li&gt;Unstable (Codename Sid): Alles was noch ins nächste Debian Release kommen soll wird einfach paketiert und reingeworfen. Da aber meist nur Software verwendet wird, die auch ein offizielles Release der ursprünglichen EntwicklerInnen (der sogenannte Upstream) darstellt, ist diese oft problemlos verwendbar und sehr aktuell. Was für lauffähig befunden wird, wandert nach einiger Zeit auch weiter nach Testing.&lt;&#x2F;li&gt;
-	&lt;li&gt;Experimental: Brandheiß - hier landet neue Software als erstes, oft gibt es nach wenigen Stunden oder Tagen eines Upstream-Releases (z.B. die offizielle Verlautbarung von OpenOffice 3 auf openoffice.org) bereits ein Debian Paket in diesem Zweig. Wird die Software für tauglich befunden, macht sie ihren Weg über Unstable und Testing schließlich irgendwann nach Stable.&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-OpenOffice 3 ist also im Moment in Experimental, da komme ich als Sidux User auch problemlos ran:
-&lt;ul&gt;
-	&lt;li&gt;&lt;code&gt;&#x2F;etc&#x2F;apt&#x2F;sources.list.d&#x2F;debian.list&lt;&#x2F;code&gt; mit Rootrechten bearbeiten, die Zeile &lt;code&gt;#deb http:&#x2F;&#x2F;ftp.at.debian.org&#x2F;debian&#x2F; experimental main contrib non-free&lt;&#x2F;code&gt; aktivieren oder unten einfügen (dadurch ist eine zweite Quelle aktiv, automatische Upgrades werden aber nur über die erste Quelle, Unstable, durchgeführt)&lt;&#x2F;li&gt;
-	&lt;li&gt;&lt;code&gt;apt-get update&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
-	&lt;li&gt;&lt;code&gt;apt-get install -t experimental openoffice.org&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-Fertig, jetzt ist OpenOffice 3 installiert und kann verwendet werden. Sollte ich draufkommen, dass OpenOffice 3 noch zu instabil ist, zuviele Bugs hat oder ähnliches, kann ich auch einfach wieder OpenOffice 2.4 aus Unstable installieren:
-&lt;ul&gt;
-	&lt;li&gt;&lt;code&gt;apt-get remove openoffice.org&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
-	&lt;li&gt;&lt;code&gt;apt-get install openoffice.org&lt;&#x2F;code&gt; (Eine Fehlermeldung tritt auf, das sagt mir, dass ich andere openoffice.org Komponenten auch noch entfernen sollte)&lt;&#x2F;li&gt;
-	&lt;li&gt;&lt;code&gt;apt-get remove openoffice.org-core openoffice.org-common openoffice.org-l10n-de openoffice.org-base-core&lt;&#x2F;code&gt; (Jetzt werden auch noch alle anderen OpenOffice 3.0 Teile deinstalliert)&lt;&#x2F;li&gt;
-	&lt;li&gt;apt-get install openoffice.org&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-Fertig, jetzt habe ich wieder das alte OpenOffice 2.4 installiert und lauffähig (eventuell noch den experimental Eintrag aus der &#x2F;etc&#x2F;apt&#x2F;source.list.d&#x2F;debian.list entfernen).
-&lt;p&gt;Die Vorteile von Sidux dabei aus meiner Sicht:&lt;&#x2F;p&gt;
-&lt;ol&gt;
-	&lt;li&gt;Keine Fremdquellen in meinen source.list Dateien. Die Pakete die ich installiere kommen von Debian selbst, ich muss mir also keine Gedanken wegen Sicherheitsproblemen machen.&lt;&#x2F;li&gt;
-	&lt;li&gt;Schnelle Paketierung: wie gesagt, Debian-Pakete werden sehr schnell nach Upstream-Releases gebaut und stehen in den offiziellen Repositories zur Verfügung (zumindest in experimental).&lt;&#x2F;li&gt;
-	&lt;li&gt;Immer auf dem Laufenden - keine halbjährlichen, riesigen Zitter-Upgrades, die spätestens nach dem 3. Mal (also nach 1.5 Jahren) schiefgehen (was mir bei Ubuntu passiert ist).&lt;&#x2F;li&gt;
-&lt;&#x2F;ol&gt;
-Nachteile gibt es aber auch:
-&lt;ol&gt;
-	&lt;li&gt;Schwierig für EinsteigerInnen: Du musst schon APT, deine installierten Pakete, smxi etc. etwas  kennen, um nicht überfordert zu sein.&lt;&#x2F;li&gt;
-	&lt;li&gt;Update-Flut: Bei Sidux gibt es immer was zu sehen und upzudaten - Leute mit Downloadlimit werden bald ihre Grenzen sprengen.&lt;&#x2F;li&gt;
-	&lt;li&gt;Stabil ist relativ - einige Debian-EntwicklerInnen verachten Sidux sogar, weil sie davon ausgehen, dass man ein produktives Betriebssystem gar nicht auf dem Unstable-Zweig betreiben kann. Sidux beweist das Gegenteil, kann aber kurzzeitig Fehler mit sich bringen, die aber sehr schnell behoben werden.&lt;&#x2F;li&gt;
-&lt;&#x2F;ol&gt;
+          <description xml:base="https://klau.si/sidux-way-life-beispiel-openoffice-3/">&lt;p&gt;Eine &lt;a href=&quot;http:&#x2F;&#x2F;ikhaya.ubuntuusers.de&#x2F;2008&#x2F;10&#x2F;25&#x2F;ubuntu-rechtfertigt-entscheidung-gegen-openoffice.org-3.0&#x2F;&quot; target=&quot;_blank&quot;&gt;Ikhaya Meldung auf ubuntuusers.de&lt;&#x2F;a&gt; samt &lt;a href=&quot;http:&#x2F;&#x2F;forum.ubuntuusers.de&#x2F;topic&#x2F;ikhaya-ubuntu-rechtfertigt-entscheidung-gegen&#x2F;&quot;&gt;Diskussion&lt;&#x2F;a&gt; brachte mich letztens ein bisschen zum Lächeln: OpenOffice 3 wird nicht in Ubuntu 8.10 Intrepid Ibex enthalten sein. Großes Wehklagen war bei den Fans von Ubuntu (gleichzeitig Fans aktueller Software) zu hören, so was wird mir bei der Distribution meiner Wahl jedenfalls nicht passieren.&amp;hellip;
+&lt;&#x2F;p&gt;
 </description>
       </item>
       <item>
@@ -221,8 +166,7 @@ Nachteile gibt es aber auch:
           <author>Klaus Purer</author>
           <link>https://klau.si/python-dbus-gajim-magic/</link>
           <guid>https://klau.si/python-dbus-gajim-magic/</guid>
-          <description xml:base="https://klau.si/python-dbus-gajim-magic/">&lt;p&gt;I like &lt;a href=&quot;http:&#x2F;&#x2F;freedesktop.org&#x2F;wiki&#x2F;Software&#x2F;dbus&quot;&gt;Dbus&lt;&#x2F;a&gt; because it allows desktop applications to communicate with each other. I also like &lt;a href=&quot;http:&#x2F;&#x2F;www.python.org&#x2F;&quot;&gt;Python&lt;&#x2F;a&gt;, a powerful scripting language that is perfect for short tasks with a minimum of commands. And finally I like &lt;a href=&quot;http:&#x2F;&#x2F;www.gajim.org&quot;&gt;Gajim&lt;&#x2F;a&gt;, the instant messenger of my choice for the &lt;a href=&quot;http:&#x2F;&#x2F;jabber.rwth-aachen.de&#x2F;wiki&#x2F;index.php&#x2F;Jabber_-_Einfach_erkl%C3%A4rt!&quot;&gt;XMPP-Jabber network&lt;&#x2F;a&gt; (the only free [free as in free speech] instant messaging network!).&lt;&#x2F;p&gt;
-</description>
+          <description xml:base="https://klau.si/python-dbus-gajim-magic/">&lt;p&gt;I like &lt;a href=&quot;http:&#x2F;&#x2F;freedesktop.org&#x2F;wiki&#x2F;Software&#x2F;dbus&quot;&gt;Dbus&lt;&#x2F;a&gt; because it allows desktop applications to communicate with each other. I also like &lt;a href=&quot;http:&#x2F;&#x2F;www.python.org&#x2F;&quot;&gt;Python&lt;&#x2F;a&gt;, a powerful scripting language that is perfect for short tasks with a minimum of commands. And finally I like &lt;a href=&quot;http:&#x2F;&#x2F;www.gajim.org&quot;&gt;Gajim&lt;&#x2F;a&gt;, the instant messenger of my choice for the &lt;a href=&quot;http:&#x2F;&#x2F;jabber.rwth-aachen.de&#x2F;wiki&#x2F;index.php&#x2F;Jabber_-_Einfach_erkl%C3%A4rt!&quot;&gt;XMPP-Jabber network&lt;&#x2F;a&gt; (the only free [free as in free speech] instant messaging network!).&lt;&#x2F;p&gt;</description>
       </item>
       <item>
           <title>Display the currently playing song from rythmbox as gajim status message</title>
@@ -240,8 +184,7 @@ Nachteile gibt es aber auch:
           <author>Klaus Purer</author>
           <link>https://klau.si/sidux-der-nächste-schritt/</link>
           <guid>https://klau.si/sidux-der-nächste-schritt/</guid>
-          <description xml:base="https://klau.si/sidux-der-nächste-schritt/">&lt;p&gt;Lange habe ich auf meinem Desktop-Rechner &lt;a href=&quot;http:&#x2F;&#x2F;ubuntu.com&quot; title=&quot;Ubuntu Home&quot;&gt;Ubuntu GNU&#x2F;Linux&lt;&#x2F;a&gt; eingesetzt, was für mich zumeist sehr bequem funktioniert hat. Am Anfang wusste ich kaum wie man eine Shell  bedient - es war bei Ubuntu auch nur selten notwendig, vieles ging über grafische Konfigurationstools oder man befragte einfach das ausgezeichnete &lt;a href=&quot;http:&#x2F;&#x2F;wiki.ubuntuusers.de&#x2F;&quot; title=&quot;deutsches Ubuntu Wiki&quot;&gt;Ubuntuusers-Wiki&lt;&#x2F;a&gt;. Die Jahre zogen ins Land, auf der Uni wurde auch viel mit GNU&#x2F;Linux&#x2F;Unix gemacht und ich begann schön langsam die Innereien eines debian-artigen Betriebssystems kennenzulernen (Ubuntu basiert ja auf &lt;a href=&quot;http:&#x2F;&#x2F;debian.org&quot; title=&quot;Debian Home&quot;&gt;Debian&lt;&#x2F;a&gt;). Die Philosophie von freier bzw. open source Software überzeugte mich immer mehr, und ich konnte fast ganz auf Windows XP verzichten (XP habe ich heute noch im &lt;a href=&quot;http:&#x2F;&#x2F;wiki.ubuntuusers.de&#x2F;Dualboot&quot; title=&quot;Wikibeitrag zu Dualboot&quot;&gt;Dualboot&lt;&#x2F;a&gt;, Vista habe ich gar nie probiert).&lt;&#x2F;p&gt;
-</description>
+          <description xml:base="https://klau.si/sidux-der-nächste-schritt/">&lt;p&gt;Lange habe ich auf meinem Desktop-Rechner &lt;a href=&quot;http:&#x2F;&#x2F;ubuntu.com&quot; title=&quot;Ubuntu Home&quot;&gt;Ubuntu GNU&#x2F;Linux&lt;&#x2F;a&gt; eingesetzt, was für mich zumeist sehr bequem funktioniert hat. Am Anfang wusste ich kaum wie man eine Shell  bedient - es war bei Ubuntu auch nur selten notwendig, vieles ging über grafische Konfigurationstools oder man befragte einfach das ausgezeichnete &lt;a href=&quot;http:&#x2F;&#x2F;wiki.ubuntuusers.de&#x2F;&quot; title=&quot;deutsches Ubuntu Wiki&quot;&gt;Ubuntuusers-Wiki&lt;&#x2F;a&gt;. Die Jahre zogen ins Land, auf der Uni wurde auch viel mit GNU&#x2F;Linux&#x2F;Unix gemacht und ich begann schön langsam die Innereien eines debian-artigen Betriebssystems kennenzulernen (Ubuntu basiert ja auf &lt;a href=&quot;http:&#x2F;&#x2F;debian.org&quot; title=&quot;Debian Home&quot;&gt;Debian&lt;&#x2F;a&gt;). Die Philosophie von freier bzw. open source Software überzeugte mich immer mehr, und ich konnte fast ganz auf Windows XP verzichten (XP habe ich heute noch im &lt;a href=&quot;http:&#x2F;&#x2F;wiki.ubuntuusers.de&#x2F;Dualboot&quot; title=&quot;Wikibeitrag zu Dualboot&quot;&gt;Dualboot&lt;&#x2F;a&gt;, Vista habe ich gar nie probiert).&lt;&#x2F;p&gt;</description>
       </item>
       <item>
           <title>Windows Vista gratis</title>

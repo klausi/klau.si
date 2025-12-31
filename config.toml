@@ -1,6 +1,9 @@
 # The URL the site will be built for
 base_url = "https://klau.si"
 
+# Output directory for the built site
+output_dir = "docs"
+
 title = "Klausi's Weblog"
 
 # Whether to automatically compile all Sass files in the sass directory

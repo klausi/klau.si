@@ -117,7 +117,10 @@ main {
       font-size: 26px;
       font-weight: 400;
 
-      @include underline-from-center;
+      // Only apply underline animation when title contains a link
+      &:has(a) {
+        @include underline-from-center;
+      }
     }
 
     &__category {

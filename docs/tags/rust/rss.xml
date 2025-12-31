@@ -15,8 +15,7 @@
           <link>https://klau.si/blog/a-new-blog-on-zola/</link>
           <guid>https://klau.si/blog/a-new-blog-on-zola/</guid>
           <description xml:base="https://klau.si/blog/a-new-blog-on-zola/">&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;a-new-blog-on-zola&#x2F;zola.ico&quot; alt=&quot;Zola logo&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;I converted my old blog posts from Drupal to static files and now I&#x27;m trying out &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&quot;&gt;Zola&lt;&#x2F;a&gt;. The static files are hosted on &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;github-pages&#x2F;&quot;&gt;Github Pages&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-</description>
+&lt;p&gt;I converted my old blog posts from Drupal to static files and now I&#x27;m trying out &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&quot;&gt;Zola&lt;&#x2F;a&gt;. The static files are hosted on &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;github-pages&#x2F;&quot;&gt;Github Pages&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;</description>
       </item>
       <item>
           <title>Mocking in Rust with conditional compilation</title>
@@ -1506,8 +1505,7 @@ areweideyet.com&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
           <description xml:base="https://klau.si/blog/getting-started-with-rust/">&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;getting-started-with-rust&#x2F;rustnish2.png&quot; alt=&quot;Rustnish logo&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.rust-lang.org&quot;&gt;Rust&lt;&#x2F;a&gt; is still very alien to me and I want to write
 a bit of code in it to get a feeling of the concepts and restrictions it
-enforces.&lt;&#x2F;p&gt;
-</description>
+enforces.&lt;&#x2F;p&gt;</description>
       </item>
     </channel>
 </rss>

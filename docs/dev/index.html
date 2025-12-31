@@ -122,7 +122,9 @@
     
     <header class="post__header">
         <h1 class="post__title">
-            <a href="https:&#x2F;&#x2F;klau.si&#x2F;dev&#x2F;">Drupal development setup on Ubuntu 15.10</a>
+            
+                Drupal development setup on Ubuntu 15.10
+            
         </h1>
         <div class="post__meta">
             <span class="post__time">2015-12-19</span>
@@ -131,7 +133,7 @@
     </header>
 
     <div class="post-content">
-      <p>I upgraded my local computer to Ubuntu 15.10 today and revisited my Drupal development environment (this <a href="/drupal-development-setup-ubuntu-1310">guide is also available for Ubuntu 13.10</a>). Here is a simple and fast guide how to configure Ubuntu for development. There are a number of <a href="https://www.drupal.org/node/262">installation documentation pages on this topic on drupal.org</a>, but they suggest to use the packaged Drupal installation and to run Drupal in subfolders (e.g. http://localhost/drupal6). They also do not cover some other important development tools like Phpmyadmin or php.ini settings. During development we want to edit files and we want to do that somewhere in our home directory to avoid any permission problems. There is also <a href="https://www.drupal.org/project/drubuntu">Drubuntu</a>, but it is outdated and does way too much magic in my opinion. So here is a more transparent tutorial that highlights the key development configuration settings for Drupal development on a local computer (do not use this for a production server!).<!-- more --></p>
+      <p>I upgraded my local computer to Ubuntu 15.10 today and revisited my Drupal development environment (this <a href="/drupal-development-setup-ubuntu-1310">guide is also available for Ubuntu 13.10</a>). Here is a simple and fast guide how to configure Ubuntu for development. There are a number of <a href="https://www.drupal.org/node/262">installation documentation pages on this topic on drupal.org</a>, but they suggest to use the packaged Drupal installation and to run Drupal in subfolders (e.g. http://localhost/drupal6). They also do not cover some other important development tools like Phpmyadmin or php.ini settings. During development we want to edit files and we want to do that somewhere in our home directory to avoid any permission problems. There is also <a href="https://www.drupal.org/project/drubuntu">Drubuntu</a>, but it is outdated and does way too much magic in my opinion. So here is a more transparent tutorial that highlights the key development configuration settings for Drupal development on a local computer (do not use this for a production server!).<span id="continue-reading"></span></p>
 <h2>Installation</h2>
 <p>To install a web server and MySQL and PHP and all the dependencies we simply install the default Ubuntu drupal7 package:</p>
 <pre style="background-color:#191919;color:#f8f8f2;"><code><span>sudo aptitude install drupal7

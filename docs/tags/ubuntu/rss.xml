@@ -16,8 +16,7 @@
           <guid>https://klau.si/blog/fully-hidden-automatic-system-updates-ubuntu/</guid>
           <description xml:base="https://klau.si/blog/fully-hidden-automatic-system-updates-ubuntu/">&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;fully-hidden-automatic-system-updates-ubuntu&#x2F;tank-girl-update-smaller.png&quot; alt=&quot;Screenshot of Ubuntu&amp;#39;s update manager popping up during the movie &amp;quot;Tank Girl.&amp;quot;&quot; &#x2F;&gt;
 &lt;em&gt;Screenshot of Ubuntu&#x27;s update manager popping up during the movie &quot;Tank Girl.&quot;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;Ubuntu&#x27;s graphical update manager pops up every time you need to install updates. That can be annoying when you are watching a movie or doing other things and don&#x27;t want to be bothered all the time. Yes, I want to always apply all updates from all sources, but please do it silently. Here is a small script I use to do that with Anacron.&lt;&#x2F;p&gt;
-</description>
+&lt;p&gt;Ubuntu&#x27;s graphical update manager pops up every time you need to install updates. That can be annoying when you are watching a movie or doing other things and don&#x27;t want to be bothered all the time. Yes, I want to always apply all updates from all sources, but please do it silently. Here is a small script I use to do that with Anacron.&lt;&#x2F;p&gt;</description>
       </item>
       <item>
           <title>Drupal development setup on Ubuntu 15.10</title>
@@ -25,96 +24,8 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/dev/</link>
           <guid>https://klau.si/dev/</guid>
-          <description xml:base="https://klau.si/dev/">&lt;p&gt;I upgraded my local computer to Ubuntu 15.10 today and revisited my Drupal development environment (this &lt;a href=&quot;&#x2F;drupal-development-setup-ubuntu-1310&quot;&gt;guide is also available for Ubuntu 13.10&lt;&#x2F;a&gt;). Here is a simple and fast guide how to configure Ubuntu for development. There are a number of &lt;a href=&quot;https:&#x2F;&#x2F;www.drupal.org&#x2F;node&#x2F;262&quot;&gt;installation documentation pages on this topic on drupal.org&lt;&#x2F;a&gt;, but they suggest to use the packaged Drupal installation and to run Drupal in subfolders (e.g. http:&#x2F;&#x2F;localhost&#x2F;drupal6). They also do not cover some other important development tools like Phpmyadmin or php.ini settings. During development we want to edit files and we want to do that somewhere in our home directory to avoid any permission problems. There is also &lt;a href=&quot;https:&#x2F;&#x2F;www.drupal.org&#x2F;project&#x2F;drubuntu&quot;&gt;Drubuntu&lt;&#x2F;a&gt;, but it is outdated and does way too much magic in my opinion. So here is a more transparent tutorial that highlights the key development configuration settings for Drupal development on a local computer (do not use this for a production server!).&lt;!-- more --&gt;&lt;&#x2F;p&gt;
-&lt;h2&gt;Installation&lt;&#x2F;h2&gt;
-&lt;p&gt;To install a web server and MySQL and PHP and all the dependencies we simply install the default Ubuntu drupal7 package:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;sudo aptitude install drupal7
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;The installation will probably prompt you for a few things: Set a password for the MySQL root user. For the Postfix configuration you can select the &quot;Local only&quot; profile, so that no outgoing mail will be sent by PHP from your computer. For the postfix system mail name you can just leave it at your default hostname. The installation will probably prompt you to configure a default drupal database with dbconfig-common, but we will do that manually afterwards, so skip it.&lt;&#x2F;p&gt;
-&lt;p&gt;We don&#x27;t want to expose any of our sites to the outside world, so we limit Apache to only listen on the localhost interface. Edit &lt;strong&gt;&#x2F;etc&#x2F;apache2&#x2F;ports.conf&lt;&#x2F;strong&gt; and replace &quot;Listen 80&quot; with &quot;Listen 127.0.0.1:80&quot;.&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;Listen 127.0.0.1:80
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;We want Apache to run as our own user account to avoid any permission problems or conflicts when running drush or editing config files. Edit &lt;strong&gt;&#x2F;etc&#x2F;apache2&#x2F;envvars&lt;&#x2F;strong&gt; and change the user to your account name. Example:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;export APACHE_RUN_USER=klausi
-&lt;&#x2F;span&gt;&lt;span&gt;export APACHE_RUN_GROUP=klausi
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Enable the Rewrite mod and restart Apache.&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;sudo a2enmod rewrite
-&lt;&#x2F;span&gt;&lt;span&gt;sudo service apache2 restart
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Now we would like to have Phpmyadmin to easily create, inspect and manipulate MySQL databases.&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;sudo aptitude install phpmyadmin
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;The installation will probably prompt you for a few things: Confirm that you want to automatically configure a database with dbconfig-common. Select Apache as web server to configure automatically.&lt;&#x2F;p&gt;
-&lt;p&gt;Now your Phpmyadmin installation should be reachable at http:&#x2F;&#x2F;localhost&#x2F;phpmyadmin&#x2F; .&lt;&#x2F;p&gt;
-&lt;p&gt;We will need some tools for development:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;sudo aptitude install git php5-xdebug php5-curl
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h2&gt;&lt;a name=&quot;php.ini&quot;&gt;php.ini&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
-&lt;p&gt;It is important to tune your &#x2F;etc&#x2F;php5&#x2F;apache2&#x2F;&lt;strong&gt;php.ini&lt;&#x2F;strong&gt; for development purposes to show all PHP warnings. I changed the following entries:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;memory_limit = 256M
-&lt;&#x2F;span&gt;&lt;span&gt;error_reporting = E_ALL
-&lt;&#x2F;span&gt;&lt;span&gt;display_errors = On
-&lt;&#x2F;span&gt;&lt;span&gt;display_startup_errors = On
-&lt;&#x2F;span&gt;&lt;span&gt;track_errors = On
-&lt;&#x2F;span&gt;&lt;span&gt;html_errors = On
-&lt;&#x2F;span&gt;&lt;span&gt;session.gc_probability = 1
-&lt;&#x2F;span&gt;&lt;span&gt;opcache.enable = 1
-&lt;&#x2F;span&gt;&lt;span&gt;opcache.memory_consumption = 256
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Restart Apache again so that the php.ini changes are picked up.&lt;&#x2F;p&gt;
-&lt;h2&gt;Folder setup&lt;&#x2F;h2&gt;
-&lt;p&gt;The next step is the setup of a workspace environment in my home folder where I will develop my Drupal projects. Example for my &quot;drupal-8&quot; development environment:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Drupal root: &#x2F;home&#x2F;klausi&#x2F;workspace&#x2F;drupal-8&lt;&#x2F;li&gt;
-  &lt;li&gt;Apache config: &#x2F;etc&#x2F;apache2&#x2F;sites-available&#x2F;drupal-8.conf&lt;&#x2F;li&gt;
-  &lt;li&gt;Browser: http:&#x2F;&#x2F;drupal-8.localhost&lt;&#x2F;li&gt;
-  &lt;li&gt;Database: drupal-8&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;Checkout Drupal 8:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;cd ~
-&lt;&#x2F;span&gt;&lt;span&gt;mkdir workspace
-&lt;&#x2F;span&gt;&lt;span&gt;cd workspace
-&lt;&#x2F;span&gt;&lt;span&gt;git clone --branch 8.1.x http:&#x2F;&#x2F;git.drupal.org&#x2F;project&#x2F;drupal.git drupal-8
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h2&gt;Apache config&lt;&#x2F;h2&gt;
-&lt;p&gt;Create an Apache configuration for your drupal-8 folder at &#x2F;etc&#x2F;apache2&#x2F;sites-available&#x2F;drupal-8.conf:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;lt;VirtualHost *:80&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;        ServerAlias drupal-8.localhost
-&lt;&#x2F;span&gt;&lt;span&gt;        DocumentRoot &#x2F;home&#x2F;klausi&#x2F;workspace&#x2F;drupal-8
-&lt;&#x2F;span&gt;&lt;span&gt;        &amp;lt;Directory &amp;quot;&#x2F;home&#x2F;klausi&#x2F;workspace&#x2F;drupal-8&amp;quot;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;                Options FollowSymLinks
-&lt;&#x2F;span&gt;&lt;span&gt;                AllowOverride All
-&lt;&#x2F;span&gt;&lt;span&gt;                Require all granted
-&lt;&#x2F;span&gt;&lt;span&gt;        &amp;lt;&#x2F;Directory&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&#x2F;VirtualHost&amp;gt;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Enable the configuration and restart Apache:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;sudo a2ensite drupal-8
-&lt;&#x2F;span&gt;&lt;span&gt;sudo service apache2 restart
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;You might wonder why I do not use an &lt;a href=&quot;http:&#x2F;&#x2F;randyfay.com&#x2F;content&#x2F;quick-guide-wildcard-apache-vhosts&quot;&gt;Apache wildcard&#x2F;catchall configuration&lt;&#x2F;a&gt;, here is the reason why: unfortunately the VirtualDocumentRoot directive requires that you modify your .htaccess in your Drupal installation (you have to enable the RewriteBase &#x2F;). This is bad because then you always have local changes in that file if you are working with a Drupal core git checkout.&lt;&#x2F;p&gt;
-&lt;h2&gt;localhost DNS&lt;&#x2F;h2&gt;
-&lt;p&gt;Create the domain entry for drupal-8.localhost in &#x2F;etc&#x2F;hosts. Add &quot;127.0.0.1  drupal-8.localhost&quot;. You will have to add each new project name in this file (you could also install Bind to automatically resolve this, but seems like an overkill to me).&lt;&#x2F;p&gt;
-&lt;p&gt;I wrote a &lt;a href=&quot;&#x2F;sites&#x2F;default&#x2F;files&#x2F;deploy-site.sh_.txt&quot;&gt;simple bash script&lt;&#x2F;a&gt; that automatically creates the Apache site config and the site&#x27;s hosts entry for me. Make sure to change the WORKDIR to your directory and run it like this:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;sudo deploy-site.sh drupal-8
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h2&gt;Database&lt;&#x2F;h2&gt;
-&lt;p&gt;Create the database in Phpmyadmin: Go to http:&#x2F;&#x2F;localhost&#x2F;phpmyadmin , then &quot;Users&quot;, then &quot;Add User&quot;. Fill out the user name with &quot;drupal-8&quot;, host localhost and generate a password (copy that password to use it later during the Drupal install process). Use the &quot;Database for user&quot; section and select &quot;Create database with same name and grant all privileges&quot;.&lt;&#x2F;p&gt;
-&lt;h2&gt;Install Drupal&lt;&#x2F;h2&gt;
-&lt;p&gt;Now your Drupal installation should be reachable in your browser at http:&#x2F;&#x2F;drupal-8.localhost and you can start the installation. Done!&lt;&#x2F;p&gt;
-&lt;p&gt;You can also use &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;drush-ops&#x2F;drush&quot;&gt;drush&lt;&#x2F;a&gt; to install Drupal from the command line:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;drush site-install --account-name=klausi --account-pass=klausi --site-name=drupal-8.localhost
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h2&gt;Development tips&lt;&#x2F;h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;I highly recommend using an IDE for source code editing such as Netbeans or Phpstorm. Drupal is spread over thousands of files and shortcuts to jump to other files are a real time saver, same for code completion as you type. And having a debugger to step through the code is very helpful.&lt;&#x2F;li&gt;
-  &lt;li&gt;Use &lt;a href=&quot;https:&#x2F;&#x2F;www.drupal.org&#x2F;project&#x2F;coder&quot;&gt;Coder with PHP CodeSniffer&lt;&#x2F;a&gt; to automatically check and fix your files to Drupal coding standards&lt;&#x2F;li&gt;
-  &lt;li&gt;Read and use the file &lt;strong&gt;sites&#x2F;example.settings.local.php&lt;&#x2F;strong&gt; and include it from sites&#x2F;settings.php. It contains useful configuration options for development sites, but make sure to not use them on production sites.&lt;&#x2F;li&gt;
-  &lt;li&gt;You want to examine mails that Drupal sends out? &lt;a href=&quot;http:&#x2F;&#x2F;www.drupal4hu.com&#x2F;node&#x2F;55&quot;&gt;Configure PHP to write outgoing mails to temporary files&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
-  &lt;li&gt;You like the command line? Check out &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;drush-ops&#x2F;drush&quot;&gt;drush&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;hechoendrupal&#x2F;DrupalConsole&quot;&gt;Drupal Console&lt;&#x2F;a&gt; to do all sorts of Drupal administration tasks faster.&lt;&#x2F;li&gt;
-  &lt;li&gt;You want to know what&#x27;s going on in that stupid function? Install the &lt;a href=&quot;https:&#x2F;&#x2F;www.drupal.org&#x2F;project&#x2F;devel&quot;&gt;devel module&lt;&#x2F;a&gt; for debugging purposes and insert &lt;code&gt;dpm($variable);&lt;&#x2F;code&gt; anywhere you want. It will pretty-print the variable in the browser for inspection.&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
+          <description xml:base="https://klau.si/dev/">&lt;p&gt;I upgraded my local computer to Ubuntu 15.10 today and revisited my Drupal development environment (this &lt;a href=&quot;&#x2F;drupal-development-setup-ubuntu-1310&quot;&gt;guide is also available for Ubuntu 13.10&lt;&#x2F;a&gt;). Here is a simple and fast guide how to configure Ubuntu for development. There are a number of &lt;a href=&quot;https:&#x2F;&#x2F;www.drupal.org&#x2F;node&#x2F;262&quot;&gt;installation documentation pages on this topic on drupal.org&lt;&#x2F;a&gt;, but they suggest to use the packaged Drupal installation and to run Drupal in subfolders (e.g. http:&#x2F;&#x2F;localhost&#x2F;drupal6). They also do not cover some other important development tools like Phpmyadmin or php.ini settings. During development we want to edit files and we want to do that somewhere in our home directory to avoid any permission problems. There is also &lt;a href=&quot;https:&#x2F;&#x2F;www.drupal.org&#x2F;project&#x2F;drubuntu&quot;&gt;Drubuntu&lt;&#x2F;a&gt;, but it is outdated and does way too much magic in my opinion. So here is a more transparent tutorial that highlights the key development configuration settings for Drupal development on a local computer (do not use this for a production server!).&amp;hellip;
+&lt;&#x2F;p&gt;
 </description>
       </item>
       <item>
@@ -123,92 +34,8 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/drupal-development-setup-ubuntu-1310/</link>
           <guid>https://klau.si/drupal-development-setup-ubuntu-1310/</guid>
-          <description xml:base="https://klau.si/drupal-development-setup-ubuntu-1310/">&lt;p&gt;I upgraded my local computer to Ubuntu 13.10 today and revisited my Drupal development environment (this &lt;a href=&quot;&#x2F;dev-ubuntu-12-04&quot;&gt;guide is also available for Ubuntu 12.04&lt;&#x2F;a&gt;). Here is a simple and fast guide how to configure Ubuntu for development. There are a number of &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;node&#x2F;262&quot;&gt;installation documentation pages on this topic on drupal.org&lt;&#x2F;a&gt;, but they suggest to use the packaged Drupal installation and to run Drupal in subfolders (e.g. http:&#x2F;&#x2F;localhost&#x2F;drupal6). They also do not cover some other important development tools like Phpmyadmin or php.ini settings. During development we want to edit files and we want to do that somewhere in our home directory to avoid any permission problems. There is also &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;project&#x2F;drubuntu&quot;&gt;Drubuntu&lt;&#x2F;a&gt;, but it is outdated and does way too much magic in my opinion. So here is a more transparent tutorial that highlights the key development configuration settings for Drupal development on a local computer (do not use this for a production server!).&lt;!-- more --&gt;&lt;&#x2F;p&gt;
-&lt;h2&gt;Installation&lt;&#x2F;h2&gt;
-&lt;p&gt;To install a web server and MySQL and PHP and all the dependencies we simply install the default Ubuntu drupal7 package:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;sudo aptitude install drupal7
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;The installation will probably prompt you for a few things: Set a password for the MySQL root user. For the Postfix configuration you can select the &quot;Local only&quot; profile, so that no outgoing mail will be sent by PHP from your computer. For the postfix system mail name you can just leave it at your default hostname. The installation will probably prompt you to configure a default drupal database, but we will do that manually afterwards, so skip it.&lt;&#x2F;p&gt;
-&lt;p&gt;We don&#x27;t want to expose any of our sites to the outside world, so we limit Apache to only listen on the localhost interface. Edit &lt;strong&gt;&#x2F;etc&#x2F;apache2&#x2F;ports.conf&lt;&#x2F;strong&gt; and replace &quot;Listen 80&quot; with &quot;Listen 127.0.0.1:80&quot;.&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;Listen 127.0.0.1:80
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;We want Apache to run as our own user account to avoid any permission problems or conflicts when running drush or editing config files. Edit &lt;strong&gt;&#x2F;etc&#x2F;apache2&#x2F;envvars&lt;&#x2F;strong&gt; and change the user to your account name. Example:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;export APACHE_RUN_USER=klausi
-&lt;&#x2F;span&gt;&lt;span&gt;export APACHE_RUN_GROUP=klausi
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Enable the Rewrite mod and restart Apache.&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;sudo a2enmod rewrite
-&lt;&#x2F;span&gt;&lt;span&gt;sudo service apache2 restart
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Now we would like to have Phpmyadmin to easily create, inspect and manipulate MySQL databases.&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;sudo aptitude install phpmyadmin
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;The installation will probably prompt you for a few things: Confirm that you want to automatically configure a database with dbconfig-common. Select Apache as web server to configure automatically.&lt;&#x2F;p&gt;
-&lt;p&gt;Now your Phpmyadmin installation should be reachable at http:&#x2F;&#x2F;localhost&#x2F;phpmyadmin&#x2F; .&lt;&#x2F;p&gt;
-&lt;p&gt;We will need some tools for development:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;sudo aptitude install git php5-xdebug php5-curl
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h2&gt;&lt;a name=&quot;php.ini&quot;&gt;php.ini&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
-&lt;p&gt;It is important to tune your &#x2F;etc&#x2F;php5&#x2F;apache2&#x2F;&lt;strong&gt;php.ini&lt;&#x2F;strong&gt; for development purposes to show all PHP warnings. I changed the following entries:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;memory_limit = 256M
-&lt;&#x2F;span&gt;&lt;span&gt;error_reporting = E_ALL
-&lt;&#x2F;span&gt;&lt;span&gt;display_errors = On
-&lt;&#x2F;span&gt;&lt;span&gt;display_startup_errors = On
-&lt;&#x2F;span&gt;&lt;span&gt;track_errors = On
-&lt;&#x2F;span&gt;&lt;span&gt;html_errors = On
-&lt;&#x2F;span&gt;&lt;span&gt;session.gc_probability = 1
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h2&gt;Folder setup&lt;&#x2F;h2&gt;
-&lt;p&gt;The next step is the setup of a workspace environment in my home folder where I will develop my Drupal projects. Example for my &quot;drupal-8&quot; development environment:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Drupal root: &#x2F;home&#x2F;klausi&#x2F;workspace&#x2F;drupal-8&lt;&#x2F;li&gt;
-  &lt;li&gt;Apache config: &#x2F;etc&#x2F;apache2&#x2F;sites-available&#x2F;drupal-8.conf&lt;&#x2F;li&gt;
-  &lt;li&gt;Browser: http:&#x2F;&#x2F;drupal-8.localhost&lt;&#x2F;li&gt;
-  &lt;li&gt;Database: drupal-8&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;Checkout Drupal 8:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;cd ~
-&lt;&#x2F;span&gt;&lt;span&gt;mkdir workspace
-&lt;&#x2F;span&gt;&lt;span&gt;cd workspace
-&lt;&#x2F;span&gt;&lt;span&gt;git clone --recursive --branch 8.x http:&#x2F;&#x2F;git.drupal.org&#x2F;project&#x2F;drupal.git drupal-8
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h2&gt;Apache config&lt;&#x2F;h2&gt;
-&lt;p&gt;Create an Apache configuration for your drupal-8 folder at &#x2F;etc&#x2F;apache2&#x2F;sites-available&#x2F;drupal-8.conf:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;lt;VirtualHost *:80&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;        ServerAlias drupal-8.localhost
-&lt;&#x2F;span&gt;&lt;span&gt;        DocumentRoot &#x2F;home&#x2F;klausi&#x2F;workspace&#x2F;drupal-8
-&lt;&#x2F;span&gt;&lt;span&gt;        &amp;lt;Directory &amp;quot;&#x2F;home&#x2F;klausi&#x2F;workspace&#x2F;drupal-8&amp;quot;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;                Options FollowSymLinks
-&lt;&#x2F;span&gt;&lt;span&gt;                AllowOverride All
-&lt;&#x2F;span&gt;&lt;span&gt;                Require all granted
-&lt;&#x2F;span&gt;&lt;span&gt;        &amp;lt;&#x2F;Directory&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&#x2F;VirtualHost&amp;gt;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Enable the configuration and restart Apache:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;sudo a2ensite drupal-8
-&lt;&#x2F;span&gt;&lt;span&gt;sudo service apache2 restart
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;You might wonder why I do not use an &lt;a href=&quot;http:&#x2F;&#x2F;randyfay.com&#x2F;content&#x2F;quick-guide-wildcard-apache-vhosts&quot;&gt;Apache wildcard&#x2F;catchall configuration&lt;&#x2F;a&gt;, here is the reason why: unfortunately the VirtualDocumentRoot directive requires that you modify your .htaccess in your Drupal installation (you have to enable the RewriteBase &#x2F;). This is bad because then you always have local changes in that file if you are working with a Drupal core git checkout.&lt;&#x2F;p&gt;
-&lt;h2&gt;localhost DNS&lt;&#x2F;h2&gt;
-&lt;p&gt;Create the domain entry for drupal-8.localhost in &#x2F;etc&#x2F;hosts. Add &quot;127.0.0.1  drupal-8.localhost&quot;. You will have to add each new project name in this file (you could also install Bind to automatically resolve this, but seems like an overkill to me).&lt;&#x2F;p&gt;
-&lt;p&gt;I wrote a &lt;a href=&quot;&#x2F;sites&#x2F;default&#x2F;files&#x2F;deploy-site.sh_.txt&quot;&gt;simple bash script&lt;&#x2F;a&gt; that automatically creates the Apache site config and the site&#x27;s hosts entry for me. Make sure to change the WORKDIR to your directory and run it like this:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;sudo deploy-site.sh drupal-8
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h2&gt;Database&lt;&#x2F;h2&gt;
-&lt;p&gt;Create the database in Phpmyadmin: Go to http:&#x2F;&#x2F;localhost&#x2F;phpmyadmin , then &quot;Privileges&quot;, then &quot;Add a new User&quot;. Fill out the user name with &quot;drupal-8&quot;, host localhost and generate a password (copy that password to use it later during the Drupal install process). Use the &quot;Database for user&quot; section and select &quot;Create database with same name and grant all privileges&quot;.&lt;&#x2F;p&gt;
-&lt;h2&gt;Install Drupal&lt;&#x2F;h2&gt;
-&lt;p&gt;Now your Drupal installation should be reachable in your browser at http:&#x2F;&#x2F;drupal-8.localhost and you can start the installation. Done!&lt;&#x2F;p&gt;
-&lt;p&gt;You can also use &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;drush-ops&#x2F;drush&quot;&gt;drush&lt;&#x2F;a&gt; to install Drupal from the command line:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;drush site-install --account-name=klausi --account-pass=klausi --site-name=drupal-8.localhost
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h2&gt;Development tips&lt;&#x2F;h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;I highly recommend using an IDE for source code editing such as Netbeans or Phpstorm. Drupal is spread over thousands of files and shortcuts to jump to other files are a real time saver, same for code completion as you type. And having a debugger to step through the code is very helpful.&lt;&#x2F;li&gt;
-  &lt;li&gt;You want to speed up MySQL because you don&#x27;t care about your local development databases anyway? Put &lt;a href=&quot;http:&#x2F;&#x2F;wolfgangziegler.net&#x2F;ubuntu-11.04-simpletest-performance-upstart-mysql-ramdisk&quot;&gt;MySQL on a RAM disc that syncs back to your hard drive on start&#x2F;stop&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
-  &lt;li&gt;You want to examine mails that Drupal sends out? &lt;a href=&quot;http:&#x2F;&#x2F;www.drupal4hu.com&#x2F;node&#x2F;55&quot;&gt;Configure PHP to write outgoing mails to temporary files&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
-  &lt;li&gt;You like the command line? Check out &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;drush-ops&#x2F;drush&quot;&gt;drush&lt;&#x2F;a&gt; to do all sorts of Drupal administration tasks faster.&lt;&#x2F;li&gt;
-  &lt;li&gt;You want to know what&#x27;s going on in that stupid function? Install the &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;project&#x2F;devel&quot;&gt;devel module&lt;&#x2F;a&gt; for debugging purposes and insert &lt;code&gt;dpm($variable);&lt;&#x2F;code&gt; anywhere you want. It will pretty-print the variable in the browser for inspection.&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
+          <description xml:base="https://klau.si/drupal-development-setup-ubuntu-1310/">&lt;p&gt;I upgraded my local computer to Ubuntu 13.10 today and revisited my Drupal development environment (this &lt;a href=&quot;&#x2F;dev-ubuntu-12-04&quot;&gt;guide is also available for Ubuntu 12.04&lt;&#x2F;a&gt;). Here is a simple and fast guide how to configure Ubuntu for development. There are a number of &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;node&#x2F;262&quot;&gt;installation documentation pages on this topic on drupal.org&lt;&#x2F;a&gt;, but they suggest to use the packaged Drupal installation and to run Drupal in subfolders (e.g. http:&#x2F;&#x2F;localhost&#x2F;drupal6). They also do not cover some other important development tools like Phpmyadmin or php.ini settings. During development we want to edit files and we want to do that somewhere in our home directory to avoid any permission problems. There is also &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;project&#x2F;drubuntu&quot;&gt;Drubuntu&lt;&#x2F;a&gt;, but it is outdated and does way too much magic in my opinion. So here is a more transparent tutorial that highlights the key development configuration settings for Drupal development on a local computer (do not use this for a production server!).&amp;hellip;
+&lt;&#x2F;p&gt;
 </description>
       </item>
       <item>
@@ -217,18 +44,8 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/screencasts-recordmydesktop-ffmpeg-conversion-html5-video/</link>
           <guid>https://klau.si/screencasts-recordmydesktop-ffmpeg-conversion-html5-video/</guid>
-          <description xml:base="https://klau.si/screencasts-recordmydesktop-ffmpeg-conversion-html5-video/">&lt;p&gt;Producing a demo video for &lt;a href=&quot;http:&#x2F;&#x2F;portland2013.drupal.org&#x2F;session&#x2F;rest-and-serialization-drupal-8&quot;&gt;my DrupalCon Portland presentation&lt;&#x2F;a&gt; caused a bit frustration with video editing tools, so here is a simple solution to cut and convert a video on Ubuntu.&lt;!-- more --&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;First I recorded my screencast with RecordMyDesktop, a simple tool to capture the happenings on your screen. It even supports only recording one window, so you don&#x27;t need to include the rest of your irrelevant desktop. Installation:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;sudo aptitude install gtk-recordmydesktop
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;The output file it creates uses the Ogg Theroa Video format, which is free and open, but unfortunately not used on a lot on other platforms. For HTML5 video H.264&#x2F;MPEG-4 now seems to be the most widely spread format, so we need to convert that. I tried with various graphical video editors such as PiTiVi, kdenlive and OpenShot, but not any of them produced useful results. They always changed the resolution, used the wrong codec, a different frame rate or blew up the output file. Their preconfigured rendering profiles just don&#x27;t make sense for simply converting and cutting a video for the web.&lt;&#x2F;p&gt;
-&lt;p&gt;I decided to look into the command line tool ffmpeg directly and found it surprisingly easy to use. Installation with the H.264 codec:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;sudo aptitude install ffmpeg x264
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;To convert the video file, cut off everything after minute 1:34 and remove the audio track I used this command:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;ffmpeg -i input-file.ogv -vcodec libx264 -acodec none -t 00:01:34.0 output-file.mp4
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Done! It also reduced the file size from 4 MB for the Ogg file to 1.4 MB for the MP4 file without reducing the visual quality, thank you ffmpeg :-)&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/screencasts-recordmydesktop-ffmpeg-conversion-html5-video/">&lt;p&gt;Producing a demo video for &lt;a href=&quot;http:&#x2F;&#x2F;portland2013.drupal.org&#x2F;session&#x2F;rest-and-serialization-drupal-8&quot;&gt;my DrupalCon Portland presentation&lt;&#x2F;a&gt; caused a bit frustration with video editing tools, so here is a simple solution to cut and convert a video on Ubuntu.&amp;hellip;
+&lt;&#x2F;p&gt;
 </description>
       </item>
       <item>
@@ -237,87 +54,8 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/dev-ubuntu-12-04/</link>
           <guid>https://klau.si/dev-ubuntu-12-04/</guid>
-          <description xml:base="https://klau.si/dev-ubuntu-12-04/">&lt;p&gt;I upgraded my local computer to Ubuntu 12.04 today and revisited my Drupal development environment. Here is a simple and fast guide how to configure Ubuntu for development. There are a number of &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;node&#x2F;262&quot;&gt;installation documentation pages on this topic on drupal.org&lt;&#x2F;a&gt;, but they suggest to use the packaged Drupal installation and to run Drupal in subfolders (e.g. http:&#x2F;&#x2F;localhost&#x2F;drupal6). They also do not cover some other important development tools like Phpmyadmin or php.ini settings. During development we want to edit files and we want to do that somewhere in our home directory to avoid any permission problems. There is also &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;project&#x2F;drubuntu&quot;&gt;Drubuntu&lt;&#x2F;a&gt;, but it is outdated and does way too much magic in my opinion. So here is a more transparent tutorial that highlights the key development configuration settings for Drupal development.&lt;!-- more --&gt;&lt;&#x2F;p&gt;
-&lt;h2&gt;Installation&lt;&#x2F;h2&gt;
-&lt;p&gt;To install a web server and MySQL and PHP and all the dependencies we simply install the default Ubuntu drupal package:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;sudo aptitude install drupal7
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;The installation will probably prompt you for a few things: Set a password for the MySQL root user. For the Postfix configuration you can select the &quot;Local only&quot; profile, so that no outgoing mail will be sent by PHP from your computer. For the postfix system mail name you can just leave it at your default hostname. The installation will probably prompt you to configure a default drupal database, but we will do that manually afterwards, so skip it.&lt;&#x2F;p&gt;
-&lt;p&gt;We don&#x27;t want to expose any of our sites to the outside world, so we limit Apache to only listen on the localhost interface. Edit &lt;strong&gt;&#x2F;etc&#x2F;apache2&#x2F;ports.conf&lt;&#x2F;strong&gt; and replace &quot;Listen 80&quot; with &quot;Listen 127.0.0.1:80&quot;.&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;Listen 127.0.0.1:80
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;We want Apache to run as our own user account to avoid any permission problems or conflicts when running drush or editing config files. Edit &lt;strong&gt;&#x2F;etc&#x2F;apache2&#x2F;envvars&lt;&#x2F;strong&gt; and change the user to your account name. Example:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;export APACHE_RUN_USER=klausi
-&lt;&#x2F;span&gt;&lt;span&gt;export APACHE_RUN_GROUP=klausi
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Enable the Rewrite mod and restart Apache.&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;sudo a2enmod rewrite
-&lt;&#x2F;span&gt;&lt;span&gt;sudo service apache2 restart
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Now we would like to have Phpmyadmin to easily create, inspect and manipulate MySQL databases.&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;sudo aptitude install phpmyadmin
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;The installation will probably prompt you for a few things: Confirm that you want to automatically configure a database with dbconfig-common. Select Apache as web server to configure automatically.&lt;&#x2F;p&gt;
-&lt;p&gt;Now your Phpmyadmin installation should be reachable at http:&#x2F;&#x2F;localhost&#x2F;phpmyadmin&#x2F; .&lt;&#x2F;p&gt;
-&lt;p&gt;We will need some tools for development:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;sudo aptitude install git php5-xdebug php5-curl php-apc
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h2&gt;&lt;a name=&quot;php.ini&quot;&gt;php.ini&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
-&lt;p&gt;It is important to tune your &#x2F;etc&#x2F;php5&#x2F;apache2&#x2F;&lt;strong&gt;php.ini&lt;&#x2F;strong&gt; for development purposes. I changed the following entries:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;memory_limit = 256M
-&lt;&#x2F;span&gt;&lt;span&gt;error_reporting = E_ALL | E_STRICT
-&lt;&#x2F;span&gt;&lt;span&gt;display_errors = On
-&lt;&#x2F;span&gt;&lt;span&gt;display_startup_errors = On
-&lt;&#x2F;span&gt;&lt;span&gt;track_errors = On
-&lt;&#x2F;span&gt;&lt;span&gt;html_errors = On
-&lt;&#x2F;span&gt;&lt;span&gt;session.gc_probability = 1
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h2&gt;Folder setup&lt;&#x2F;h2&gt;
-&lt;p&gt;The next step is the setup of a workspace environment in my home folder where I will develop my Drupal projects. Example for my &quot;drupal-8&quot; development environment:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Drupal root: &#x2F;home&#x2F;klausi&#x2F;workspace&#x2F;drupal-8&lt;&#x2F;li&gt;
-  &lt;li&gt;Apache config: &#x2F;etc&#x2F;apache2&#x2F;sites-available&#x2F;drupal-8&lt;&#x2F;li&gt;
-  &lt;li&gt;Browser: http:&#x2F;&#x2F;drupal-8.localhost&lt;&#x2F;li&gt;
-  &lt;li&gt;Database: drupal-8&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;Checkout Drupal 8:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;cd ~
-&lt;&#x2F;span&gt;&lt;span&gt;mkdir workspace
-&lt;&#x2F;span&gt;&lt;span&gt;cd workspace
-&lt;&#x2F;span&gt;&lt;span&gt;git clone --recursive --branch 8.x http:&#x2F;&#x2F;git.drupal.org&#x2F;project&#x2F;drupal.git drupal-8
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h2&gt;Apache config&lt;&#x2F;h2&gt;
-&lt;p&gt;Create an Apache configuration for your drupal-8 folder at &#x2F;etc&#x2F;apache2&#x2F;site-available&#x2F;drupal-8:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;lt;VirtualHost *:80&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;        ServerAlias drupal-8.localhost
-&lt;&#x2F;span&gt;&lt;span&gt;        DocumentRoot &#x2F;home&#x2F;klausi&#x2F;workspace&#x2F;drupal-8
-&lt;&#x2F;span&gt;&lt;span&gt;        &amp;lt;Directory &amp;quot;&#x2F;home&#x2F;klausi&#x2F;workspace&#x2F;drupal-8&amp;quot;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;                Options FollowSymLinks
-&lt;&#x2F;span&gt;&lt;span&gt;                AllowOverride All
-&lt;&#x2F;span&gt;&lt;span&gt;        &amp;lt;&#x2F;Directory&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&#x2F;VirtualHost&amp;gt;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Enable the configuration and restart Apache:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;sudo a2ensite drupal-8
-&lt;&#x2F;span&gt;&lt;span&gt;sudo service apache2 restart
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;You might wonder why I do not use an &lt;a href=&quot;http:&#x2F;&#x2F;randyfay.com&#x2F;content&#x2F;quick-guide-wildcard-apache-vhosts&quot;&gt;Apache wildcard&#x2F;catchall configuration&lt;&#x2F;a&gt;, here is the reason why: unfortunately the VirtualDocumentRoot directive requires that you modify your .htaccess in your Drupal installation (you have to enable the RewriteBase &#x2F;). This is bad because then you always have local changes in that file if you are working with a Drupal core git checkout.&lt;&#x2F;p&gt;
-&lt;h2&gt;localhost DNS&lt;&#x2F;h2&gt;
-&lt;p&gt;Create the domain entry for drupal-8.localhost in &#x2F;etc&#x2F;hosts. Add &quot;127.0.0.1  drupal-8.localhost&quot;. You will have to add each new project name in this file (you could also install Bind to automatically resolve this, but seems like an overkill to me).&lt;&#x2F;p&gt;
-&lt;p&gt;I wrote a &lt;a href=&quot;&#x2F;sites&#x2F;default&#x2F;files&#x2F;deploy-site.sh.txt&quot;&gt;simple bash script&lt;&#x2F;a&gt; that automatically creates the Apache site config and the site&#x27;s hosts entry for me. Make sure to change the WORKDIR to your directory and run it like this:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#191919;color:#f8f8f2;&quot;&gt;&lt;code&gt;&lt;span&gt;sudo deploy-site.sh drupal-8
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h2&gt;Database&lt;&#x2F;h2&gt;
-&lt;p&gt;Create the database in Phpmyadmin: Go to http:&#x2F;&#x2F;localhost&#x2F;phpmyadmin , then &quot;Privileges&quot;, then &quot;Add a new User&quot;. Fill out the user name with &quot;drupal-8&quot;, host localhost and generate a password (copy that password to use it later during the Drupal install process). Use the &quot;Database for user&quot; section and select &quot;Create database with same name and grant all privileges&quot;.&lt;&#x2F;p&gt;
-&lt;h2&gt;Install Drupal&lt;&#x2F;h2&gt;
-&lt;p&gt;Now your Drupal installation should be reachable in your browser at http:&#x2F;&#x2F;drupal-8.localhost and you can start the installation. Done!&lt;&#x2F;p&gt;
-&lt;h2&gt;Development tips&lt;&#x2F;h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;You want to speed up MySQL because you don&#x27;t care about your local development databases anyway? Put &lt;a href=&quot;http:&#x2F;&#x2F;wolfgangziegler.net&#x2F;ubuntu-11.04-simpletest-performance-upstart-mysql-ramdisk&quot;&gt;MySQL on a RAM disc that syncs back to your hard drive on start&#x2F;stop&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
-  &lt;li&gt;You want to examine mails that Drupal sends out? &lt;a href=&quot;http:&#x2F;&#x2F;www.drupal4hu.com&#x2F;node&#x2F;55&quot;&gt;Configure PHP to write outgoing mails to temporary files&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
-  &lt;li&gt;You like the command line? Check out &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;project&#x2F;drush&quot;&gt;drush&lt;&#x2F;a&gt; to do all sorts of Drupal administration tasks faster.&lt;&#x2F;li&gt;
-  &lt;li&gt;You want to know what&#x27;s going on in that stupid function? Install the &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;project&#x2F;devel&quot;&gt;devel module&lt;&#x2F;a&gt; for debugging purposes and insert &lt;code&gt;dpm($variable);&lt;&#x2F;code&gt; anywhere you want. It will pretty-print the variable in the browser for inspection.&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
+          <description xml:base="https://klau.si/dev-ubuntu-12-04/">&lt;p&gt;I upgraded my local computer to Ubuntu 12.04 today and revisited my Drupal development environment. Here is a simple and fast guide how to configure Ubuntu for development. There are a number of &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;node&#x2F;262&quot;&gt;installation documentation pages on this topic on drupal.org&lt;&#x2F;a&gt;, but they suggest to use the packaged Drupal installation and to run Drupal in subfolders (e.g. http:&#x2F;&#x2F;localhost&#x2F;drupal6). They also do not cover some other important development tools like Phpmyadmin or php.ini settings. During development we want to edit files and we want to do that somewhere in our home directory to avoid any permission problems. There is also &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;project&#x2F;drubuntu&quot;&gt;Drubuntu&lt;&#x2F;a&gt;, but it is outdated and does way too much magic in my opinion. So here is a more transparent tutorial that highlights the key development configuration settings for Drupal development.&amp;hellip;
+&lt;&#x2F;p&gt;
 </description>
       </item>
       <item>
@@ -329,8 +67,7 @@
           <description xml:base="https://klau.si/ubuntu-talking-elvish-or-klingon/">&lt;p&gt;
 	Funny screenshot I captured yesterday (I guess this bug was originally caused by outputting binary data in a terminal):&lt;&#x2F;p&gt;
 &lt;p&gt;
-	&lt;a href=&quot;&#x2F;files&#x2F;ubuntu-elvish-klingon.png&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;&#x2F;files&#x2F;ubuntu-elvish-klingon.png&quot; style=&quot;width: 500px; height: 313px;&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-</description>
+	&lt;a href=&quot;&#x2F;files&#x2F;ubuntu-elvish-klingon.png&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;&#x2F;files&#x2F;ubuntu-elvish-klingon.png&quot; style=&quot;width: 500px; height: 313px;&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;</description>
       </item>
       <item>
           <title>Ruby on Rails Setup on Ubuntu 9.10</title>
@@ -338,8 +75,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/ruby-rails-setup-ubuntu-910/</link>
           <guid>https://klau.si/ruby-rails-setup-ubuntu-910/</guid>
-          <description xml:base="https://klau.si/ruby-rails-setup-ubuntu-910/">&lt;p&gt;I&#x27;m working on a Ruby on Rails project right now and had to setup an environment on my Ubuntu 9.10 system. Here are the install commands for your reference if you want to get it done fast.&lt;&#x2F;p&gt;
-</description>
+          <description xml:base="https://klau.si/ruby-rails-setup-ubuntu-910/">&lt;p&gt;I&#x27;m working on a Ruby on Rails project right now and had to setup an environment on my Ubuntu 9.10 system. Here are the install commands for your reference if you want to get it done fast.&lt;&#x2F;p&gt;</description>
       </item>
       <item>
           <title>Windows Vista gratis</title>

@@ -14,8 +14,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/d7security-devdays/</link>
           <guid>https://klau.si/blog/d7security-devdays/</guid>
-          <description xml:base="https://klau.si/blog/d7security-devdays/">&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;d7security-devdays&#x2F;d7security-dev-days-bourgas-2024.pdf&quot;&gt;the slides&lt;&#x2F;a&gt; of my &lt;a href=&quot;https:&#x2F;&#x2F;ddd2024.drupalcamp.bg&#x2F;drupal-dev-days-2024&#x2F;session&#x2F;d7security-drupal-7-long-term-support&quot;&gt;Drupal Dev Days presentation&lt;&#x2F;a&gt; about &lt;a href=&quot;https:&#x2F;&#x2F;www.d7security.org&quot;&gt;D7Security&lt;&#x2F;a&gt; in Bourgas. The recording will hopefully follow soon!&lt;&#x2F;p&gt;
-</description>
+          <description xml:base="https://klau.si/blog/d7security-devdays/">&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;d7security-devdays&#x2F;d7security-dev-days-bourgas-2024.pdf&quot;&gt;the slides&lt;&#x2F;a&gt; of my &lt;a href=&quot;https:&#x2F;&#x2F;ddd2024.drupalcamp.bg&#x2F;drupal-dev-days-2024&#x2F;session&#x2F;d7security-drupal-7-long-term-support&quot;&gt;Drupal Dev Days presentation&lt;&#x2F;a&gt; about &lt;a href=&quot;https:&#x2F;&#x2F;www.d7security.org&quot;&gt;D7Security&lt;&#x2F;a&gt; in Bourgas. The recording will hopefully follow soon!&lt;&#x2F;p&gt;</description>
       </item>
       <item>
           <title>D7Security presentation at Drupal Austria Meetup</title>
@@ -24,8 +23,7 @@
           <link>https://klau.si/blog/d7security-drupal-austria-meetup/</link>
           <guid>https://klau.si/blog/d7security-drupal-austria-meetup/</guid>
           <description xml:base="https://klau.si/blog/d7security-drupal-austria-meetup/">&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;d7security-drupal-austria-meetup&#x2F;d7security-drupal-austria-2024.pdf&quot;&gt;the slides&lt;&#x2F;a&gt; and a recording of my Drupal Austria Meetup presentation about &lt;a href=&quot;https:&#x2F;&#x2F;www.d7security.org&quot;&gt;D7Security&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;embed&#x2F;1vLU1Eo0Tkk?si=ooNMcTeensXmMNom&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
-</description>
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;embed&#x2F;1vLU1Eo0Tkk?si=ooNMcTeensXmMNom&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;</description>
       </item>
       <item>
           <title>Drupal 7 end of life podcast: Unofficial Drupal 7 Security Team</title>
@@ -34,8 +32,7 @@
           <link>https://klau.si/blog/d7-eol-podcast/</link>
           <guid>https://klau.si/blog/d7-eol-podcast/</guid>
           <description xml:base="https://klau.si/blog/d7-eol-podcast/">&lt;p&gt;Here is the video of my appearance on the Drupal 7 end of life podcast, talking about plans for the &lt;a href=&quot;https:&#x2F;&#x2F;www.d7security.org&#x2F;&quot;&gt;D7Security&lt;&#x2F;a&gt; group. Thank you Mark Dorison and Chris Free from Chromatic for the recording!&lt;&#x2F;p&gt;
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;embed&#x2F;hNI73M0ftOM?si=mPReJ3ZTMT7-8f7_&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
-</description>
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;embed&#x2F;hNI73M0ftOM?si=mPReJ3ZTMT7-8f7_&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;</description>
       </item>
       <item>
           <title>Russmedia CTO meetup talk: Pull Request Review best practices</title>
@@ -44,8 +41,7 @@
           <link>https://klau.si/blog/russmedia-cto-meetup-talk-pull-request-review/</link>
           <guid>https://klau.si/blog/russmedia-cto-meetup-talk-pull-request-review/</guid>
           <description xml:base="https://klau.si/blog/russmedia-cto-meetup-talk-pull-request-review/">&lt;p&gt;Here is the video of my Russmedia CTO &amp;amp; product meetup talk &quot;Pull Request Review best practices&quot;.&lt;&#x2F;p&gt;
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;6CbdQaWI5Hk&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
-</description>
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;6CbdQaWI5Hk&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;</description>
       </item>
       <item>
           <title>Drupalcon 2019 talk: Find security vulnerabilities through code review</title>
@@ -54,8 +50,7 @@
           <link>https://klau.si/blog/drupalcon-security-code-review/</link>
           <guid>https://klau.si/blog/drupalcon-security-code-review/</guid>
           <description xml:base="https://klau.si/blog/drupalcon-security-code-review/">&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;klausi.github.io&#x2F;sec-code-review2019&#x2F;#&#x2F;&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of my DrupalCon Amsterdam 2019 talk &quot;Find security vulnerabilities through code review&quot;.&lt;&#x2F;p&gt;
-&lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;Oyoja2rfqSk&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
-</description>
+&lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;Oyoja2rfqSk&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;</description>
       </item>
       <item>
           <title>Drupal Austria Meetup: Drupal security learnings</title>
@@ -64,8 +59,7 @@
           <link>https://klau.si/blog/drupal-security-vulnerability-learnings/</link>
           <guid>https://klau.si/blog/drupal-security-vulnerability-learnings/</guid>
           <description xml:base="https://klau.si/blog/drupal-security-vulnerability-learnings/">&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;drupal-security-vulnerability-learnings&#x2F;meetup_security.jpeg&quot; alt=&quot;Drupal Austria security meetup&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;Here are &lt;a href=&quot;&#x2F;presentations&#x2F;sec-learnings2019&#x2F;index.html&quot;&gt;the slides&lt;&#x2F;a&gt; of my Drupal Austria Meetup talk &quot;Drupal security learnings&quot;.&lt;&#x2F;p&gt;
-</description>
+&lt;p&gt;Here are &lt;a href=&quot;&#x2F;presentations&#x2F;sec-learnings2019&#x2F;index.html&quot;&gt;the slides&lt;&#x2F;a&gt; of my Drupal Austria Meetup talk &quot;Drupal security learnings&quot;.&lt;&#x2F;p&gt;</description>
       </item>
       <item>
           <title>Drupalcon 2016 talk: Automated Testing: PHPUnit all the way</title>
@@ -74,8 +68,7 @@
           <link>https://klau.si/blog/drupalcon-automated-testing-phpunit/</link>
           <guid>https://klau.si/blog/drupalcon-automated-testing-phpunit/</guid>
           <description xml:base="https://klau.si/blog/drupalcon-automated-testing-phpunit/">&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;docs.google.com&#x2F;presentation&#x2F;d&#x2F;1Uhw3wYfcC_axz6SRTxEHVe8FZHbA-tUGN7dr7YyHMXg&#x2F;edit#slide=id.p&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of our DrupalCon Dublin 2016 talk &quot;Automated Testing: PHPUnit all the way&quot;.&lt;&#x2F;p&gt;
-&lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;jcdEp3YGa94&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
-</description>
+&lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;jcdEp3YGa94&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;</description>
       </item>
       <item>
           <title>Drupalcon 2016 talk: How to publish a module on drupal.org</title>
@@ -84,8 +77,7 @@
           <link>https://klau.si/blog/drupalcon-publish-module/</link>
           <guid>https://klau.si/blog/drupalcon-publish-module/</guid>
           <description xml:base="https://klau.si/blog/drupalcon-publish-module/">&lt;p&gt;Here is the video of my DrupalCon Asia 2016 talk &quot;How to publish a module on drupal.org&quot;.&lt;&#x2F;p&gt;
-&lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;JWLb--cb33E&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
-</description>
+&lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;JWLb--cb33E&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;</description>
       </item>
       <item>
           <title>Drupalcon 2015 talk: Drupal and Security: what you need to know</title>
@@ -94,8 +86,7 @@
           <link>https://klau.si/blog/drupalcon-security-what-you-need-to-know/</link>
           <guid>https://klau.si/blog/drupalcon-security-what-you-need-to-know/</guid>
           <description xml:base="https://klau.si/blog/drupalcon-security-what-you-need-to-know/">&lt;p&gt;Here are &lt;a href=&quot;http:&#x2F;&#x2F;scor.github.io&#x2F;drupal-security-2015&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of our DrupalCon Barcelona 2015 talk &quot;Drupal and Security: what you need to know&quot;.&lt;&#x2F;p&gt;
-&lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;5LpKelSMsas&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
-</description>
+&lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;5LpKelSMsas&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;</description>
       </item>
       <item>
           <title>Drupalcon 2015 talk: Coding with Rules for Drupal 8</title>
@@ -104,8 +95,7 @@
           <link>https://klau.si/blog/drupalcon-coding-with-rules-drupal-8/</link>
           <guid>https://klau.si/blog/drupalcon-coding-with-rules-drupal-8/</guid>
           <description xml:base="https://klau.si/blog/drupalcon-coding-with-rules-drupal-8/">&lt;p&gt;Here is the video of our DrupalCon Barcelona 2015 talk &quot;Coding with Rules for Drupal 8&quot;.&lt;&#x2F;p&gt;
-&lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;QcU_LCAHNLg&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
-</description>
+&lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;QcU_LCAHNLg&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;</description>
       </item>
       <item>
           <title>Drupalcon 2014 talk: Cracking Drupal</title>
@@ -114,8 +104,7 @@
           <link>https://klau.si/blog/drupalcon-cracking-drupal/</link>
           <guid>https://klau.si/blog/drupalcon-cracking-drupal/</guid>
           <description xml:base="https://klau.si/blog/drupalcon-cracking-drupal/">&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;docs.google.com&#x2F;presentation&#x2F;d&#x2F;1LWXRbcQUTj9NDHg8gHplAc7EGy94nmbUEUryWLHJqBg&#x2F;edit?usp=sharing&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of our DrupalCon Amsterdam 2014 talk &quot;Cracking Drupal&quot;.&lt;&#x2F;p&gt;
-&lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;ZkNGObI4nlU&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
-</description>
+&lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;ZkNGObI4nlU&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;</description>
       </item>
       <item>
           <title>Drupalcamp Vienna 2013 talk: Cracking Drupal</title>
@@ -124,8 +113,7 @@
           <link>https://klau.si/blog/drupalcamp-cracking-drupal/</link>
           <guid>https://klau.si/blog/drupalcamp-cracking-drupal/</guid>
           <description xml:base="https://klau.si/blog/drupalcamp-cracking-drupal/">&lt;p&gt;Here is the video of my Drupalcamp Vienna 2013 talk &quot;Cracking Drupal&quot;.&lt;&#x2F;p&gt;
-&lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;-Lxz7YZ4Cr8&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
-</description>
+&lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;-Lxz7YZ4Cr8&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;</description>
       </item>
       <item>
           <title>Drupalcon Prague 2013 talk: REST and Serialization in Drupal 8</title>
@@ -134,8 +122,7 @@
           <link>https://klau.si/blog/drupalcon-prague-rest-serialization-drupal-8/</link>
           <guid>https://klau.si/blog/drupalcon-prague-rest-serialization-drupal-8/</guid>
           <description xml:base="https://klau.si/blog/drupalcon-prague-rest-serialization-drupal-8/">&lt;p&gt;Here is the video of our DrupalCon Prague 2013 talk &quot;REST and serialization in Drupal 8&quot;.&lt;&#x2F;p&gt;
-&lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;w6dqzDbY78k&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
-</description>
+&lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;w6dqzDbY78k&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;</description>
       </item>
       <item>
           <title>Drupalcon Portland 2013 talk: REST and Serialization in Drupal 8</title>
@@ -144,8 +131,7 @@
           <link>https://klau.si/blog/drupalcon-portland-rest-serialization-drupal-8/</link>
           <guid>https://klau.si/blog/drupalcon-portland-rest-serialization-drupal-8/</guid>
           <description xml:base="https://klau.si/blog/drupalcon-portland-rest-serialization-drupal-8/">&lt;p&gt;Here is the video of our DrupalCon Portland 2013 talk &quot;REST and serialization in Drupal 8&quot;.&lt;&#x2F;p&gt;
-&lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;6FNfy7pU6mE&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
-</description>
+&lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;6FNfy7pU6mE&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;</description>
       </item>
       <item>
           <title>Drupalcon 2012 talk: The project application process</title>
@@ -154,8 +140,7 @@
           <link>https://klau.si/blog/drupalcon-project-application-process/</link>
           <guid>https://klau.si/blog/drupalcon-project-application-process/</guid>
           <description xml:base="https://klau.si/blog/drupalcon-project-application-process/">&lt;p&gt;Here is the video of our DrupalCon Munich 2012 talk &quot;The project application process&quot;.&lt;&#x2F;p&gt;
-&lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;jLj0K8Trvus&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
-</description>
+&lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;jLj0K8Trvus&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;</description>
       </item>
       <item>
           <title>Drupalcon 2011 talk: The Rules way of life</title>
@@ -164,8 +149,7 @@
           <link>https://klau.si/blog/drupalcon-rules-way-of-life/</link>
           <guid>https://klau.si/blog/drupalcon-rules-way-of-life/</guid>
           <description xml:base="https://klau.si/blog/drupalcon-rules-way-of-life/">&lt;p&gt;Here is the video of our DrupalCon London 2011 talk &quot;The Rules way of life&quot;.&lt;&#x2F;p&gt;
-&lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;xXcbPi16VAU&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
-</description>
+&lt;iframe width=&quot;420&quot; height=&quot;236&quot; src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;xXcbPi16VAU&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;</description>
       </item>
       <item>
           <title>Drupalcon 2010 talk: About the Rules ecosystem</title>
@@ -174,8 +158,7 @@
           <link>https://klau.si/blog/drupalcon-rules-ecosystem/</link>
           <guid>https://klau.si/blog/drupalcon-rules-ecosystem/</guid>
           <description xml:base="https://klau.si/blog/drupalcon-rules-ecosystem/">&lt;p&gt;Here is the video of our DrupalCon Copenhagen 2010 talk &quot;About the Rules ecosystem&quot;.&lt;&#x2F;p&gt;
-&lt;iframe src=&quot;https:&#x2F;&#x2F;archive.org&#x2F;embed&#x2F;AboutTheRulesEcosystem&quot; width=&quot;420&quot; height=&quot;236&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
-</description>
+&lt;iframe src=&quot;https:&#x2F;&#x2F;archive.org&#x2F;embed&#x2F;AboutTheRulesEcosystem&quot; width=&quot;420&quot; height=&quot;236&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;</description>
       </item>
     </channel>
 </rss>

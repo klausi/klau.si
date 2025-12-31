@@ -82,8 +82,7 @@
           <guid>https://klau.si/thesis/</guid>
           <description xml:base="https://klau.si/thesis/">&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;&#x2F;sites&#x2F;default&#x2F;files&#x2F;wsclient_logo_300_0.thumbnail.png&quot; style=&quot;width: 209px; height: 217px; float: right;&quot; &#x2F;&gt;A master thesis written by Klaus Purer at the Vienna University of Technology, released in May 2011.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;strong&gt;Abstract:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;Building web applications has become a complex task and often requires interaction with other web applications, such as web services. Drupal is a free and open source content management system and framework that provides a rich platform for rapid web development. The modular and extensible nature of Drupal allows developers to customize and embrace the core functionality and to create new features. This thesis is about investigating and implementing a web service client module for Drupal that is able to consume classical WS* web services as well as RESTful web services.&lt;&#x2F;p&gt;
-</description>
+&lt;p&gt;Building web applications has become a complex task and often requires interaction with other web applications, such as web services. Drupal is a free and open source content management system and framework that provides a rich platform for rapid web development. The modular and extensible nature of Drupal allows developers to customize and embrace the core functionality and to create new features. This thesis is about investigating and implementing a web service client module for Drupal that is able to consume classical WS* web services as well as RESTful web services.&lt;&#x2F;p&gt;</description>
       </item>
       <item>
           <title>A master thesis about Drupal and Web Services</title>
@@ -92,8 +91,7 @@
           <link>https://klau.si/master-thesis-about-drupal-and-web-services/</link>
           <guid>https://klau.si/master-thesis-about-drupal-and-web-services/</guid>
           <description xml:base="https://klau.si/master-thesis-about-drupal-and-web-services/">&lt;p&gt;
-	In the last weeks I thought about a topic for my master thesis at the Vienna University of Technology, and I came up with the idea of integrating Drupal and Web Services.&lt;&#x2F;p&gt;
-</description>
+	In the last weeks I thought about a topic for my master thesis at the Vienna University of Technology, and I came up with the idea of integrating Drupal and Web Services.&lt;&#x2F;p&gt;</description>
       </item>
       <item>
           <title>PHP vs. Python vs. Ruby</title>
@@ -101,8 +99,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/php-vs-python-vs-ruby/</link>
           <guid>https://klau.si/php-vs-python-vs-ruby/</guid>
-          <description xml:base="https://klau.si/php-vs-python-vs-ruby/">&lt;p&gt;I did an interesting programming language comparison last semester and wrote up a paper called &amp;quot;&lt;a href=&quot;&#x2F;sites&#x2F;default&#x2F;files&#x2F;php-vs-python-vs-ruby.pdf&quot;&gt;PHP vs. Python vs. Ruby &amp;ndash; The web scripting language shootout&amp;quot;&lt;&#x2F;a&gt;. I&#x27;m not completely satisfied with it as it does not dig deep enough into the details, but it provides a good introduction and overview. As my time was limited and the seminar was only worth 3 ECTS, further investigation and experiments were not done - I would appreciate any additional references on this topic, feel free to post a comment or contact me. &lt;&#x2F;p&gt;
-</description>
+          <description xml:base="https://klau.si/php-vs-python-vs-ruby/">&lt;p&gt;I did an interesting programming language comparison last semester and wrote up a paper called &amp;quot;&lt;a href=&quot;&#x2F;sites&#x2F;default&#x2F;files&#x2F;php-vs-python-vs-ruby.pdf&quot;&gt;PHP vs. Python vs. Ruby &amp;ndash; The web scripting language shootout&amp;quot;&lt;&#x2F;a&gt;. I&#x27;m not completely satisfied with it as it does not dig deep enough into the details, but it provides a good introduction and overview. As my time was limited and the seminar was only worth 3 ECTS, further investigation and experiments were not done - I would appreciate any additional references on this topic, feel free to post a comment or contact me. &lt;&#x2F;p&gt;</description>
       </item>
       <item>
           <title>Die Vorlesung über die Vorlesung an sich</title>
@@ -111,8 +108,7 @@
           <link>https://klau.si/die-vorlesung-über-die-vorlesung-sich/</link>
           <guid>https://klau.si/die-vorlesung-über-die-vorlesung-sich/</guid>
           <description xml:base="https://klau.si/die-vorlesung-über-die-vorlesung-sich/">&lt;p&gt;Ich habe gerade die Online-Prüfung zur &lt;a href=&quot;http:&#x2F;&#x2F;ringvorlesung.univie.ac.at&#x2F;&quot; title=&quot;Homepage der Ringvorlesung&quot; target=&quot;_blank&quot;&gt;Ringvorlesung zum Thema Vorlesung&lt;&#x2F;a&gt; aus dem WS 06&#x2F;07 abgelegt. Man musste eine Prüfungsfrage in einem MS-Word Dokument beantworten und auf die &lt;a href=&quot;http:&#x2F;&#x2F;webct.univie.ac.at&quot; target=&quot;_blank&quot; title=&quot;WebCT Plattform&quot;&gt;E-Lerning Plattform der Uni Wien&lt;&#x2F;a&gt; hinaufladen.&lt;&#x2F;p&gt;
-&lt;p&gt;Prüfungsfrage: &quot;Welche Probleme der Wissensvermittlung ergeben sich aus dem Mitschreiben und den Mitschriften einer Vorlesung?&quot;&lt;&#x2F;p&gt;
-</description>
+&lt;p&gt;Prüfungsfrage: &quot;Welche Probleme der Wissensvermittlung ergeben sich aus dem Mitschreiben und den Mitschriften einer Vorlesung?&quot;&lt;&#x2F;p&gt;</description>
       </item>
     </channel>
 </rss>
