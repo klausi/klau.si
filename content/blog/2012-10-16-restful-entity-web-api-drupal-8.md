@@ -9,5 +9,7 @@ tags = ["drupal", "drupal planet"]
 
 I'm happy to announce that I will join the <a href="http://groups.drupal.org/wscci">WSCCI initiative</a> to help develop web service interfaces in Drupal 8. Big thanks to my team at <a href="http://epiqo.com/">epiqo</a> for sponsoring and making time for me to work on this, as well as <a href="https://www.acquia.com/">Acquia</a> for providing a crucial financial part to make this happen.
 
+<!-- more -->
+
 Read the <a href="http://groups.drupal.org/node/262063">full announcement on groups.drupal.org</a>.
         

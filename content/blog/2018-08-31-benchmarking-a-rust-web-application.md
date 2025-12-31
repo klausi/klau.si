@@ -14,6 +14,8 @@ I set out out my goal 9 for Rustnish:
 
 The basic idea of a performance test here is to send many HTTP requests to the web service (the reverse proxy in this case) and measure how fast the responses arrive back. Comparing the results from Rustnish and Varnish should give us an idea if our performance expectations are holding up.
 
+<!-- more -->
+
 ## Manual performance testing with ApacheBench
 
 A quick way to get performance feedback is to run `ab` against our reverse proxy. Start the server in release mode (optimized):

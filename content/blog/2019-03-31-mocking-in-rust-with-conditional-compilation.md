@@ -9,6 +9,8 @@ When writing automated unit tests for your application you will probably need to
 
 Similar approaches exist in Rust where mock objects are used to test code that expects a trait type. There is a wonderful [Rust mock framework comparison](https://asomers.github.io/mock_shootout/) by Alan Somers that lists their features. The biggest problem with most of them as far as I can see is that they cannot mock a foreign `struct` you are using in your code. Rust does not have a concept of object inheritance for structs so there is no way to mimic a struct type from the standard library or an external crate.
 
+<!-- more -->
+
 One workaround for that is to refactor your code to use traits/generics instead of concrete structs. That way the implementation is agnostic to whatever struct is used - test code can pass mocks that satisfy the expected trait bounds. The downside is that you might have to invent traits which can make your code more complex just to satisfy test requirements.
 
 Another solution is to use one of Rust's powerful meta programming capabilities: [conditional compilation](https://doc.rust-lang.org/reference/conditional-compilation.html).

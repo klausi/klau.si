@@ -158,7 +158,13 @@
     </header>
 
                                     <div class="post__summary">
-                                        
+                                        <p>Performance testing is an important part when developing a network application - you want to know when you have a regression in request throughput in your service.</p>
+<p>I set out out my goal 9 for Rustnish:</p>
+<blockquote>
+<p>Write benchmark code that compares runtime performance of Rustnish against
+<a href="https://varnish-cache.org/">Varnish</a>. Use <code>cargo bench</code> to execute the benchmarks.</p>
+</blockquote>
+<p>The basic idea of a performance test here is to send many HTTP requests to the web service (the reverse proxy in this case) and measure how fast the responses arrive back. Comparing the results from Rustnish and Varnish should give us an idea if our performance expectations are holding up.</p>
                                     </div>
                                     <div class="read-more">
                                         <a href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;benchmarking-a-rust-web-application&#x2F;">Read more...</a>
@@ -180,7 +186,14 @@
     </header>
 
                                     <div class="post__summary">
-                                        
+                                        <p>I'm writing a reverse proxy in Rust using <a href="https://hyper.rs/">Hyper</a> and I want
+to measure performance a bit to know if I'm doing something terribly wrong. By
+doing that I discovered a Denial of Service vulnerability in Hyper when IO
+errors are not properly handled. Note that <a href="https://github.com/hyperium/hyper/releases/tag/v0.11.20">a workaround has been released in
+the meantime in Hyper
+0.11.20</a>, more
+background info can be found in <a href="https://github.com/hyperium/hyper/issues/1358">this Hyper
+issue</a>.</p>
                                     </div>
                                     <div class="read-more">
                                         <a href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;crashing-a-rust-hyper-server-with-a-denial-of-service-attack&#x2F;">Read more...</a>
@@ -202,7 +215,20 @@
     </header>
 
                                     <div class="post__summary">
-                                        
+                                        <p>Rust has many built-in concepts for memory safety, but it cannot prevent
+application level logic errors that take up system memory. An example would be
+a server application that stores something for each incoming request in a
+growing collection or list. If the program does not clean up the growing list
+then it will take up more and more server memory - thereby exposing a memory
+leak.</p>
+<p>While working on my reverse proxy project I discovered such a <a href="https://github.com/hyperium/hyper/issues/1315">leak in the HTTP
+library Hyper</a>. In order to
+prevent and detect memory leaks in the future I set out my goal 7:</p>
+<blockquote>
+<p>Add an integration test that ensures that the proxy server is not leaking
+memory (growing RAM usage without shrinking again). Use /proc information to
+compare memory usage of the current process before and after the test.</p>
+</blockquote>
                                     </div>
                                     <div class="read-more">
                                         <a href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;testing-memory-leaks-in-rust&#x2F;">Read more...</a>
@@ -224,7 +250,14 @@
     </header>
 
                                     <div class="post__summary">
-                                        
+                                        <p>When writing <a href="https://klau.si/blog/writing-integration-tests-in-rust/">integration tests for my Rustnish reverse proxy project</a> I
+have hard-coded port numbers in tests. This is not ideal because it is hard to
+keep track of which port numbers have already been used and which ones are
+available when writing a new test. Because Rust's test runner <a href="https://doc.rust-lang.org/book/ch11-02-running-tests.html#running-tests-in-parallel-or-consecutively">executes test cases in parallel</a> it is important to coordinate
+which test uses which ports so that there are no clashes that break the tests.</p>
+<p>One obvious solution to this problem would be to disable parallel test
+execution with <code>cargo test -- --test-threads=1</code>. But we want to cover program
+and test isolation with our test so this is not really an option.</p>
                                     </div>
                                     <div class="read-more">
                                         <a href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;static-variables-made-thread-safe-in-rust&#x2F;">Read more...</a>
@@ -246,7 +279,16 @@
     </header>
 
                                     <div class="post__summary">
-                                        
+                                        <p><a href="https://doc.rust-lang.org/std/result/enum.Result.html#method.unwrap"><code>unwrap()</code></a> is a useful tool in Rust but is also bad practice in production code that
+should not abort with unpredictable panics.</p>
+<p>Therefore my goal 4 for Rustnish is full integration tests with no panics
+allowed:</p>
+<blockquote>
+<p>Expand the integration tests to confirm that the reverse proxy is working as
+expected. Add tests with broken HTTP requests to cover error handling of the
+reverse proxy. All <code>unwrap()</code> calls in none test code should be removed
+and covered by proper error handling.</p>
+</blockquote>
                                     </div>
                                     <div class="read-more">
                                         <a href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;replacing-unwrap-and-avoiding-panics-in-rust&#x2F;">Read more...</a>
@@ -268,7 +310,17 @@
     </header>
 
                                     <div class="post__summary">
-                                        
+                                        <p>Since my <a href="https://klau.si/blog/getting-started-with-rust/">first blog post where I constructed a server with Hyper</a> some time
+has passed and there is now a new version of the library that is based on
+<a href="https://tokio.rs">Tokio</a>. My goal 3:</p>
+<blockquote>
+<p>A new version of the Hyper library has been released which is
+based on the Tokio library. Convert the existing code to use that new version
+and provide one integration test case.</p>
+</blockquote>
+<p>Tokio handles input/output asynchronously, which makes setting up a server more
+complicated. The benefit is more efficient parallel execution with a
+non-blocking event loop.</p>
                                     </div>
                                     <div class="read-more">
                                         <a href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;converting-a-hyper-server-to-tokio&#x2F;">Read more...</a>
@@ -290,7 +342,16 @@
     </header>
 
                                     <div class="post__summary">
-                                        
+                                        <p>I already wrote about <a href="https://klau.si/blog/using-eclipse-ide-for-rust-on-ubuntu/">using Eclipse for Rust development</a> but after trying
+<a href="https://code.visualstudio.com/">Visual Studio Code</a> (VSCode) I think it is
+slightly better than the Eclipse integration:</p>
+<ul>
+<li>when the cursor is at a variable the same variable is highlighted elsewhere.</li>
+<li>tooltip popups when hovering over variables, functions, methods.</li>
+<li>better native support for Git and Markdown files</li>
+</ul>
+<p>Syntax highlighting, autocompletion, Ctrl + Click on functions and
+auto-formatting of course also work in VSCode as you would expect from an IDE.</p>
                                     </div>
                                     <div class="read-more">
                                         <a href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;using-visual-studio-code-for-rust-on-ubuntu&#x2F;">Read more...</a>
@@ -312,7 +373,13 @@
     </header>
 
                                     <div class="post__summary">
-                                        
+                                        <p>In my first post I wrote a quite fragile, minimally working prototype that uses
+many <code>unwrap()</code> calls thereby raising lots of panics during execution.
+Implementing and verifying proper error handling requires testing. I don't want
+to do unit testing yet because that would require research about complicated
+mocking techniques and dependency injection in Rust. Instead, I would like to
+do integration testing of the whole application to prove that the end result is
+working as expected.</p>
                                     </div>
                                     <div class="read-more">
                                         <a href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;writing-integration-tests-in-rust&#x2F;">Read more...</a>
@@ -334,7 +401,13 @@
     </header>
 
                                     <div class="post__summary">
-                                        
+                                        <p><strong>Update: <a href="https://klau.si/blog/using-visual-studio-code-for-rust-on-ubuntu/">New blog post about choosing Visual Studio Code for Rust</a>
+because of better IDE support.</strong></p>
+<p>In <a href="https://klau.si/blog/getting-started-with-rust/">my first blog post</a> I was
+starting out with Atom editor but quickly realized that it is lacking features
+of Integrated Development Environments (IDEs). I need to be able to click on
+functions and data types to jump to their definitions and was not able to get
+that working in Atom.</p>
                                     </div>
                                     <div class="read-more">
                                         <a href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;using-eclipse-ide-for-rust-on-ubuntu&#x2F;">Read more...</a>

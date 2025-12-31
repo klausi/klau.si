@@ -16,6 +16,8 @@ slightly better than the Eclipse integration:
 Syntax highlighting, autocompletion, Ctrl + Click on functions and
 auto-formatting of course also work in VSCode as you would expect from an IDE.
 
+<!-- more -->
+
 ## Installing Rust on Ubuntu
 
 First make sure you have a Rust toolchain environment set up:

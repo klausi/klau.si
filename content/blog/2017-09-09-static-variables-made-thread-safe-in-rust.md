@@ -15,6 +15,8 @@ One obvious solution to this problem would be to disable parallel test
 execution with `cargo test -- --test-threads=1`. But we want to cover program
 and test isolation with our test so this is not really an option.
 
+<!-- more -->
+
 
 ## A naive try
 

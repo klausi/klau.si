@@ -171,9 +171,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/restful-entity-web-api-drupal-8/</link>
           <guid>https://klau.si/restful-entity-web-api-drupal-8/</guid>
-          <description xml:base="https://klau.si/restful-entity-web-api-drupal-8/">&lt;p&gt;I&#x27;m happy to announce that I will join the &lt;a href=&quot;http:&#x2F;&#x2F;groups.drupal.org&#x2F;wscci&quot;&gt;WSCCI initiative&lt;&#x2F;a&gt; to help develop web service interfaces in Drupal 8. Big thanks to my team at &lt;a href=&quot;http:&#x2F;&#x2F;epiqo.com&#x2F;&quot;&gt;epiqo&lt;&#x2F;a&gt; for sponsoring and making time for me to work on this, as well as &lt;a href=&quot;https:&#x2F;&#x2F;www.acquia.com&#x2F;&quot;&gt;Acquia&lt;&#x2F;a&gt; for providing a crucial financial part to make this happen.&lt;&#x2F;p&gt;
-&lt;p&gt;Read the &lt;a href=&quot;http:&#x2F;&#x2F;groups.drupal.org&#x2F;node&#x2F;262063&quot;&gt;full announcement on groups.drupal.org&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-</description>
+          <description xml:base="https://klau.si/restful-entity-web-api-drupal-8/">&lt;p&gt;I&#x27;m happy to announce that I will join the &lt;a href=&quot;http:&#x2F;&#x2F;groups.drupal.org&#x2F;wscci&quot;&gt;WSCCI initiative&lt;&#x2F;a&gt; to help develop web service interfaces in Drupal 8. Big thanks to my team at &lt;a href=&quot;http:&#x2F;&#x2F;epiqo.com&#x2F;&quot;&gt;epiqo&lt;&#x2F;a&gt; for sponsoring and making time for me to work on this, as well as &lt;a href=&quot;https:&#x2F;&#x2F;www.acquia.com&#x2F;&quot;&gt;Acquia&lt;&#x2F;a&gt; for providing a crucial financial part to make this happen.&lt;&#x2F;p&gt;</description>
       </item>
       <item>
           <title>Drupalcon 2012 talk: The project application process</title>

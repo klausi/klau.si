@@ -17,6 +17,8 @@ Tokio handles input/output asynchronously, which makes setting up a server more
 complicated. The benefit is more efficient parallel execution with a
 non-blocking event loop.
 
+<!-- more -->
+
 You can find all the code in [the goal-03 branch on
 Github](https://github.com/klausi/rustnish/tree/goal-03).
 

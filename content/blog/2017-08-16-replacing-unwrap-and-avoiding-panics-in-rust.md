@@ -16,6 +16,8 @@ allowed:
 > reverse proxy. All ```unwrap()``` calls in none test code should be removed
 > and covered by proper error handling.
 
+<!-- more -->
+
 You can find all the code in [the goal-04 branch on
 Github](https://github.com/klausi/rustnish/tree/goal-04).
 

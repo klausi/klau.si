@@ -13,6 +13,8 @@ mocking techniques and dependency injection in Rust. Instead, I would like to
 do integration testing of the whole application to prove that the end result is
 working as expected.
 
+<!-- more -->
+
 Here is the requirement for goal 2 of Rustnish:
 
 > Write an integration test that confirms that the reverse proxy is working as

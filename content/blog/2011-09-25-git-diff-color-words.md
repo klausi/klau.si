@@ -8,6 +8,9 @@ tags = ["software", "drupal"]
 +++
 
 <p>Git command for better patch review.</p>
+
+<!-- more -->
+
 <p>The usual patch format is often not really human readable. Consider <a href="http://drupal.org/files/issues/dependent-clause-errors-806974-8.patch">this patch on drupal.org</a> (<a href="http://drupal.org/node/806974">issue</a>) that only removes commas. How can I be sure that only the comma was removed on the changed lines? Fortunately, Git can help here. Download the patch, apply it to your repository and use the following command to get a colored output:</p>
 <pre>
 git diff --color-words</pre>

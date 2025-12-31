@@ -9,4 +9,6 @@ tags = ["software"]
 
 <p>Here you can find the slides to my <a href="http://drupalcamp.at">Drupalcamp Vienna</a> presentation about development and deployment at <a href="http://absolventen.at">Absolventen.at</a>.</p>
 
+<!-- more -->
+
 [Presentation as PDF](/files/absolventen-dev-workflow.pdf) or as [ODP](/files/absolventen-dev-workflow.odp)

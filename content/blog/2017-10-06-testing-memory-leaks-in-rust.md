@@ -20,6 +20,8 @@ prevent and detect memory leaks in the future I set out my goal 7:
 > memory (growing RAM usage without shrinking again). Use /proc information to
 > compare memory usage of the current process before and after the test.
 
+<!-- more -->
+
 ## Finding memory leaks manually first
 
 A very primitive way of inspecting the memory usage of a program is `ps` on

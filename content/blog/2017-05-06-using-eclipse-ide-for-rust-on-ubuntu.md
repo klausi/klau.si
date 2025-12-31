@@ -15,6 +15,8 @@ of Integrated Development Environments (IDEs). I need to be able to click on
 functions and data types to jump to their definitions and was not able to get
 that working in Atom.
 
+<!-- more -->
+
 Looking further at [areweideyet.com](https://areweideyet.com/) I found
 [Eclipse](https://eclipse.org/) listed, an IDE I have used a long time ago for
 Java development. Let's give it a try!

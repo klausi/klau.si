@@ -24,12 +24,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/git-diff-color-words/</link>
           <guid>https://klau.si/git-diff-color-words/</guid>
-          <description xml:base="https://klau.si/git-diff-color-words/">&lt;p&gt;Git command for better patch review.&lt;&#x2F;p&gt;
-&lt;p&gt;The usual patch format is often not really human readable. Consider &lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;files&#x2F;issues&#x2F;dependent-clause-errors-806974-8.patch&quot;&gt;this patch on drupal.org&lt;&#x2F;a&gt; (&lt;a href=&quot;http:&#x2F;&#x2F;drupal.org&#x2F;node&#x2F;806974&quot;&gt;issue&lt;&#x2F;a&gt;) that only removes commas. How can I be sure that only the comma was removed on the changed lines? Fortunately, Git can help here. Download the patch, apply it to your repository and use the following command to get a colored output:&lt;&#x2F;p&gt;
-&lt;pre&gt;
-git diff --color-words&lt;&#x2F;pre&gt;
-&lt;p&gt;The output will not show changed lines but changed words, usually removed words in red and added words in green. So you get a much more fine-grained overview of what the patch changes.&lt;&#x2F;p&gt;
-</description>
+          <description xml:base="https://klau.si/git-diff-color-words/">&lt;p&gt;Git command for better patch review.&lt;&#x2F;p&gt;</description>
       </item>
       <item>
           <title>Web Service Composition in Drupal</title>
@@ -130,9 +125,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/development-and-deployment-workflow-absolventenat/</link>
           <guid>https://klau.si/development-and-deployment-workflow-absolventenat/</guid>
-          <description xml:base="https://klau.si/development-and-deployment-workflow-absolventenat/">&lt;p&gt;Here you can find the slides to my &lt;a href=&quot;http:&#x2F;&#x2F;drupalcamp.at&quot;&gt;Drupalcamp Vienna&lt;&#x2F;a&gt; presentation about development and deployment at &lt;a href=&quot;http:&#x2F;&#x2F;absolventen.at&quot;&gt;Absolventen.at&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;a href=&quot;&#x2F;files&#x2F;absolventen-dev-workflow.pdf&quot;&gt;Presentation as PDF&lt;&#x2F;a&gt; or as &lt;a href=&quot;&#x2F;files&#x2F;absolventen-dev-workflow.odp&quot;&gt;ODP&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-</description>
+          <description xml:base="https://klau.si/development-and-deployment-workflow-absolventenat/">&lt;p&gt;Here you can find the slides to my &lt;a href=&quot;http:&#x2F;&#x2F;drupalcamp.at&quot;&gt;Drupalcamp Vienna&lt;&#x2F;a&gt; presentation about development and deployment at &lt;a href=&quot;http:&#x2F;&#x2F;absolventen.at&quot;&gt;Absolventen.at&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;</description>
       </item>
       <item>
           <title>PHP vs. Python vs. Ruby</title>
@@ -174,9 +167,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/display-currently-playing-song-rythmbox-gajim-status-message/</link>
           <guid>https://klau.si/display-currently-playing-song-rythmbox-gajim-status-message/</guid>
-          <description xml:base="https://klau.si/display-currently-playing-song-rythmbox-gajim-status-message/">&lt;p&gt;I found a nice feature in the preferences of my instant messenger &lt;a href=&quot;http:&#x2F;&#x2F;www.gajim.org&quot; title=&quot;Gajim home&quot;&gt;gajim&lt;&#x2F;a&gt;, where a check box says &quot;Set status message to reflect currently playing music track&quot;. My only problem was that i could not enable the option, because it was greyed out and not active. First I tried to find a plugin for my musicplayer &lt;a href=&quot;http:&#x2F;&#x2F;rhythmbox.org&quot; title=&quot;Rhythmbox home&quot;&gt;r&lt;&#x2F;a&gt;&lt;a href=&quot;http:&#x2F;&#x2F;rhythmbox.org&quot; title=&quot;Rhythmbox home&quot;&gt;hythmbox&lt;&#x2F;a&gt;, but the information I found seemed to be old and several web pages said that gajim and rhythmbox should work together natively. I remembered that most &lt;a href=&quot;http:&#x2F;&#x2F;gnome.org&quot; title=&quot;GNOME home&quot;&gt;GNOME&lt;&#x2F;a&gt; applications use &lt;a href=&quot;http:&#x2F;&#x2F;www.freedesktop.org&#x2F;wiki&#x2F;Software&#x2F;dbus&quot; title=&quot;D-Bus home&quot;&gt;D-Bus&lt;&#x2F;a&gt; to communicate with each other. I supposed that there was a D-Bus package missing on my &lt;a href=&quot;http:&#x2F;&#x2F;sidux.com&quot; title=&quot;Sidux home&quot;&gt;Sidux&lt;&#x2F;a&gt; system, so I searched the package repository with &quot;apt-cache search dbus&quot; and found a package named &quot;&lt;a href=&quot;http:&#x2F;&#x2F;packages.debian.org&#x2F;sid&#x2F;python-dbus&quot; title=&quot;Debian package info&quot;&gt;python-dbus&lt;&#x2F;a&gt;&quot;. Since I know that gajim is written in &lt;a href=&quot;http:&#x2F;&#x2F;python.org&quot; title=&quot;Python home&quot;&gt;python&lt;&#x2F;a&gt; I installed the package and had success: After a restart of gajim the option was now available and worked when enabled.&lt;&#x2F;p&gt;
-&lt;p&gt;Solution worked with gajim 0.11.4 and rhythmbox 0.10.1.&lt;&#x2F;p&gt;
-</description>
+          <description xml:base="https://klau.si/display-currently-playing-song-rythmbox-gajim-status-message/">&lt;p&gt;I found a nice feature in the preferences of my instant messenger &lt;a href=&quot;http:&#x2F;&#x2F;www.gajim.org&quot; title=&quot;Gajim home&quot;&gt;gajim&lt;&#x2F;a&gt;, where a check box says &quot;Set status message to reflect currently playing music track&quot;. My only problem was that i could not enable the option, because it was greyed out and not active. First I tried to find a plugin for my musicplayer &lt;a href=&quot;http:&#x2F;&#x2F;rhythmbox.org&quot; title=&quot;Rhythmbox home&quot;&gt;r&lt;&#x2F;a&gt;&lt;a href=&quot;http:&#x2F;&#x2F;rhythmbox.org&quot; title=&quot;Rhythmbox home&quot;&gt;hythmbox&lt;&#x2F;a&gt;, but the information I found seemed to be old and several web pages said that gajim and rhythmbox should work together natively. I remembered that most &lt;a href=&quot;http:&#x2F;&#x2F;gnome.org&quot; title=&quot;GNOME home&quot;&gt;GNOME&lt;&#x2F;a&gt; applications use &lt;a href=&quot;http:&#x2F;&#x2F;www.freedesktop.org&#x2F;wiki&#x2F;Software&#x2F;dbus&quot; title=&quot;D-Bus home&quot;&gt;D-Bus&lt;&#x2F;a&gt; to communicate with each other. I supposed that there was a D-Bus package missing on my &lt;a href=&quot;http:&#x2F;&#x2F;sidux.com&quot; title=&quot;Sidux home&quot;&gt;Sidux&lt;&#x2F;a&gt; system, so I searched the package repository with &quot;apt-cache search dbus&quot; and found a package named &quot;&lt;a href=&quot;http:&#x2F;&#x2F;packages.debian.org&#x2F;sid&#x2F;python-dbus&quot; title=&quot;Debian package info&quot;&gt;python-dbus&lt;&#x2F;a&gt;&quot;. Since I know that gajim is written in &lt;a href=&quot;http:&#x2F;&#x2F;python.org&quot; title=&quot;Python home&quot;&gt;python&lt;&#x2F;a&gt; I installed the package and had success: After a restart of gajim the option was now available and worked when enabled.&lt;&#x2F;p&gt;</description>
       </item>
       <item>
           <title>Sidux - der nächste Schritt</title>
@@ -192,9 +183,7 @@ git diff --color-words&lt;&#x2F;pre&gt;
           <author>Klaus Purer</author>
           <link>https://klau.si/windows-vista-gratis/</link>
           <guid>https://klau.si/windows-vista-gratis/</guid>
-          <description xml:base="https://klau.si/windows-vista-gratis/">&lt;p&gt;Jetzt gibt es ein unglaubliches Angebot: &lt;a href=&quot;http:&#x2F;&#x2F;www.ubuntu.com&#x2F;&quot;&gt;Microsoft Windows Vista Ultimate Edition&lt;&#x2F;a&gt; kann gratis aus dem Internet heruntergeladen werden, und das völlig legal! Diese Version ist außerdem auf Sicherheit ausgelegt und benötigt daher keinen Virenscanner und keine Firewall! Mitgeliefert werden volle 3D-Effekte, das &lt;a href=&quot;http:&#x2F;&#x2F;www.openoffice.org&#x2F;&quot;&gt;Microsoft Office Professional&lt;&#x2F;a&gt; Paket und &lt;a href=&quot;http:&#x2F;&#x2F;www.gimp.org&#x2F;&quot;&gt;Adobe Photoshop&lt;&#x2F;a&gt;!&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;ubuntu.gds.tuwien.ac.at&#x2F;cdimage&#x2F;releases&#x2F;gutsy&#x2F;ubuntu-7.10-desktop-i386.iso&quot;&gt;Hier geht&#x27;s zum Download ...&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-</description>
+          <description xml:base="https://klau.si/windows-vista-gratis/">&lt;p&gt;Jetzt gibt es ein unglaubliches Angebot: &lt;a href=&quot;http:&#x2F;&#x2F;www.ubuntu.com&#x2F;&quot;&gt;Microsoft Windows Vista Ultimate Edition&lt;&#x2F;a&gt; kann gratis aus dem Internet heruntergeladen werden, und das völlig legal! Diese Version ist außerdem auf Sicherheit ausgelegt und benötigt daher keinen Virenscanner und keine Firewall! Mitgeliefert werden volle 3D-Effekte, das &lt;a href=&quot;http:&#x2F;&#x2F;www.openoffice.org&#x2F;&quot;&gt;Microsoft Office Professional&lt;&#x2F;a&gt; Paket und &lt;a href=&quot;http:&#x2F;&#x2F;www.gimp.org&#x2F;&quot;&gt;Adobe Photoshop&lt;&#x2F;a&gt;!&lt;&#x2F;p&gt;</description>
       </item>
     </channel>
 </rss>

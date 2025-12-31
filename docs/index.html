@@ -364,7 +364,8 @@
     </header>
 
                                     <div class="post__summary">
-                                        
+                                        <p>When writing automated unit tests for your application you will probably need to use <a href="https://en.wikipedia.org/wiki/Mock_object">mocks</a> at some point. Classical object-oriented programming languages such as PHP solve this with reflection where mock object types are created during test runtime. The code under test expects a certain interface or class and the test code passes mock objects that implement the interface or are a subclass.</p>
+<p>Similar approaches exist in Rust where mock objects are used to test code that expects a trait type. There is a wonderful <a href="https://asomers.github.io/mock_shootout/">Rust mock framework comparison</a> by Alan Somers that lists their features. The biggest problem with most of them as far as I can see is that they cannot mock a foreign <code>struct</code> you are using in your code. Rust does not have a concept of object inheritance for structs so there is no way to mimic a struct type from the standard library or an external crate.</p>
                                     </div>
                                     <div class="read-more">
                                         <a href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;mocking-in-rust-with-conditional-compilation&#x2F;">Read more...</a>

@@ -14,6 +14,8 @@ the meantime in Hyper
 background info can be found in [this Hyper
 issue](https://github.com/hyperium/hyper/issues/1358).
 
+<!-- more -->
+
 ## A vulnerable Hello world server example
 
 Let's look at the simplest Hyper server example that just serves "Hello world"

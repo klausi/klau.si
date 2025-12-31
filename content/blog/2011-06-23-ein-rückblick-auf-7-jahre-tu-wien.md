@@ -9,6 +9,9 @@ tags = ["gesellschaftskritik", "uni"]
 
 <p>
 	Ich habe vor kurzem mein Informatikstudium an der TU Wien abgeschlossen, Zeit für einen kleinen Rückblick. Obwohl in diesem Artikel auch viele für mich negative Dinge vorkommen werden, so habe ich doch die Jahre sehr genossen, viel dazu gelernt und viele interessante Menschen getroffen. Ich möchte diesen Lebensabschnitt nicht missen und würde mich wohl wieder für die TU Wien entscheiden.</p>
+
+<!-- more -->
+
 <h3>
 	Der Anfang</h3>
 <p>

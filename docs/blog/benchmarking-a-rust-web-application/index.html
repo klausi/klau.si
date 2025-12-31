@@ -171,7 +171,7 @@
 <a href="https://varnish-cache.org/">Varnish</a>. Use <code>cargo bench</code> to execute the benchmarks.</p>
 </blockquote>
 <p>The basic idea of a performance test here is to send many HTTP requests to the web service (the reverse proxy in this case) and measure how fast the responses arrive back. Comparing the results from Rustnish and Varnish should give us an idea if our performance expectations are holding up.</p>
-<h2 id="manual-performance-testing-with-apachebench">Manual performance testing with ApacheBench</h2>
+<span id="continue-reading"></span><h2 id="manual-performance-testing-with-apachebench">Manual performance testing with ApacheBench</h2>
 <p>A quick way to get performance feedback is to run <code>ab</code> against our reverse proxy. Start the server in release mode (optimized):</p>
 <pre style="background-color:#191919;color:#f8f8f2;"><code><span>cargo run --release
 </span><span>   Compiling rustnish v0.0.1 (file:///home/klausi/workspace/rustnish)

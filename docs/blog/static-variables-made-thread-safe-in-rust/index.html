@@ -172,7 +172,7 @@ which test uses which ports so that there are no clashes that break the tests.</
 <p>One obvious solution to this problem would be to disable parallel test
 execution with <code>cargo test -- --test-threads=1</code>. But we want to cover program
 and test isolation with our test so this is not really an option.</p>
-<h2 id="a-naive-try">A naive try</h2>
+<span id="continue-reading"></span><h2 id="a-naive-try">A naive try</h2>
 <p>The basic idea is to have a function <code>get_free_port()</code> that hands out port
 numbers incrementally and is called by tests:</p>
 <pre data-lang="rust" style="background-color:#191919;color:#f8f8f2;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#ff5e5e;">pub </span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">get_free_port</span><span>() -&gt; </span><span style="font-style:italic;color:#fbdfb5;">u16 </span><span>{
