@@ -10,6 +10,7 @@
     a {
       color: #34495e;
       font-size: 48px;
+      text-decoration: none;
     }
   }
 
@@ -24,7 +25,6 @@
       li {
         display: inline-block;
         margin-right: 5px;
-        @include underline-from-center;
 
         a {
           color: #34495e;
@@ -34,11 +34,15 @@
     }
   }
 }
+
 @include max-screen() {
   #header {
-    .logo, .menu {
+
+    .logo,
+    .menu {
       display: none;
     }
+
     padding: 50px 0 0;
     text-align: center;
   }

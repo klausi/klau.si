@@ -14,10 +14,6 @@ main {
     color: $main-colour;
     font-family: $decoration-font-family;
     font-size: 1.1rem;
-
-    &:hover {
-      text-decoration: underline;
-    }
   }
 
   .about,
@@ -32,23 +28,23 @@ main {
       }
     }
 
-    h2, h3, h4, h5, h6 {
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       font-weight: 400;
     }
 
-    :not(pre) > code {
+    :not(pre)>code {
       padding: 3px 5px;
       border-radius: 4px;
       color: $code-colour;
       background: $secondary-colour;
     }
 
-    p > a {
+    p>a {
       color: $main-colour;
-
-      &:hover {
-        border-bottom: 1px solid $main-colour;
-      }
     }
 
     blockquote {
@@ -76,7 +72,8 @@ main {
         background: $secondary-colour;
       }
 
-      th, td {
+      th,
+      td {
         padding: 5px 15px;
         border: 1px double darken($secondary-colour, 3%);
       }
@@ -116,11 +113,6 @@ main {
       margin: 0;
       font-size: 26px;
       font-weight: 400;
-
-      // Only apply underline animation when title contains a link
-      &:has(a) {
-        @include underline-from-center;
-      }
     }
 
     &__category {
@@ -150,7 +142,7 @@ main {
     }
 
     // Display image captions under the image.
-    img + em {
+    img+em {
       display: block;
     }
   }
@@ -160,11 +152,11 @@ main {
     border-top: 1px solid #e6e6e6;
 
     &:after {
-        clear: both;
-        height: 0;
-        width: 100%;
-        content: '';
-        display: block;
+      clear: both;
+      height: 0;
+      width: 100%;
+      content: '';
+      display: block;
     }
   }
 
@@ -182,7 +174,7 @@ main {
     margin: 1rem 0;
   }
 
-  .post + .post {
+  .post+.post {
     border-top: 1px solid #e6e6e6;
   }
 
@@ -197,7 +189,8 @@ main {
   }
 }
 
-.next, .previous {
+.next,
+.previous {
   font-weight: 600;
   font-size: 20px;
   transition: transform 0.3s ease-out;
@@ -209,6 +202,7 @@ main {
 
 .next {
   float: right;
+
   &:hover {
     transform: translateX(4px);
   }
@@ -216,6 +210,7 @@ main {
 
 .previous {
   float: left;
+
   &:hover {
     transform: translateX(-4px);
   }
@@ -280,12 +275,8 @@ main {
 }
 
 .about {
-  p > a {
+  p>a {
     color: $main-colour;
     word-break: break-all;
-
-    &:hover {
-      border-bottom: 1px solid $main-colour;
-    }
   }
 }

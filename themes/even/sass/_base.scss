@@ -30,7 +30,7 @@ body {
 
 a {
   color: $main-colour;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 img {
@@ -45,7 +45,8 @@ pre {
   padding: 1rem;
 }
 
-pre, code {
+pre,
+code {
   font-size: 90%;
   overflow: auto;
   font-family: $code-font-family;
@@ -53,7 +54,7 @@ pre, code {
   color: #c9d2dc;
 }
 
-pre > code {
+pre>code {
   display: block;
   border: none;
   font-style: normal;
