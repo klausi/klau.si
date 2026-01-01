@@ -256,7 +256,6 @@ main {
     display: inline-block;
     font-size: 18px;
     color: $main-colour;
-    border-bottom: 2px solid $main-colour;
   }
 
   &__items {
@@ -267,9 +266,14 @@ main {
       word-wrap: break-word;
       position: relative;
       color: $link-colour;
+      text-decoration: none;
 
       &:hover {
         color: $link-hover-colour;
+      }
+
+      .taxonomies__name {
+        text-decoration: underline;
       }
 
       .count {
@@ -278,6 +282,7 @@ main {
         right: -2px;
         color: $link-hover-colour;
         font-size: 12px;
+        text-decoration: none;
       }
     }
   }
