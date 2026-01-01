@@ -1,5 +1,5 @@
 <div class="youtube-lazy" data-video-id="{{ id }}">
-  <div class="youtube-lazy-placeholder">
+  <a href="https://www.youtube.com/watch?v={{ id }}" class="youtube-lazy-placeholder" target="_blank" rel="noopener">
     <img src="/youtube-thumbs/{{ id }}.webp"
          alt="YouTube video thumbnail - click to play"
          loading="lazy"
@@ -11,5 +11,5 @@
         <path d="M 45,24 27,14 27,34" fill="#fff" />
       </svg>
     </button>
-  </div>
+  </a>
 </div>

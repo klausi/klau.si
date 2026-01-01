@@ -49,7 +49,8 @@ function initYoutubeLazy() {
       return;
     }
 
-    placeholder.addEventListener('click', function () {
+    placeholder.addEventListener('click', function (event) {
+      event.preventDefault();
       var videoId = container.getAttribute('data-video-id');
       var iframe = document.createElement('iframe');
       iframe.setAttribute('src', 'https://www.youtube-nocookie.com/embed/' + videoId + '?autoplay=1');
