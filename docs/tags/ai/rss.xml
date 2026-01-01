@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>Klausi&#x27;s Weblog - ai</title>
+      <link>https://klau.si</link>
+      <description></description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://klau.si/tags/ai/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Sat, 04 Apr 2026 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Testing Claude AI for Drupal code</title>
+          <pubDate>Sat, 04 Apr 2026 00:00:00 +0000</pubDate>
+          <author>Klaus Purer</author>
+          <link>https://klau.si/blog/testing-claude-ai-for-drupal-code/</link>
+          <guid>https://klau.si/blog/testing-claude-ai-for-drupal-code/</guid>
+          <description xml:base="https://klau.si/blog/testing-claude-ai-for-drupal-code/">&lt;p&gt;I tested ClaudeAI for Drupal code, got inspired by &lt;a href=&quot;https:&#x2F;&#x2F;dri.es&#x2F;claude-code-meets-drupal&quot;&gt;Dries Buytaert&lt;&#x2F;a&gt; video.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;🤯 the interaction and suggestions were quite good&lt;&#x2F;li&gt;
+&lt;li&gt;💵 execution is expensive, I paid $1.16 for 20 minutes&lt;&#x2F;li&gt;
+&lt;li&gt;🙄 I got annoyed a couple of times, because Claude did contradictory things&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;div class=&quot;youtube-lazy&quot; data-video-id=&quot;7U4XwkjfckE&quot;&gt;
+  &lt;div class=&quot;youtube-lazy-placeholder&quot;&gt;
+    &lt;img src=&quot;&#x2F;youtube-thumbs&#x2F;7U4XwkjfckE.jpg&quot;
+         alt=&quot;YouTube video thumbnail - click to play&quot;
+         loading=&quot;lazy&quot;
+         width=&quot;16&quot;
+         height=&quot;9&quot;&gt;
+    &lt;button class=&quot;youtube-play-button&quot; aria-label=&quot;Play video&quot;&gt;
+      &lt;svg viewBox=&quot;0 0 68 48&quot; width=&quot;68&quot; height=&quot;48&quot;&gt;
+        &lt;path class=&quot;youtube-play-bg&quot; d=&quot;M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z&quot; fill=&quot;#f00&quot; &#x2F;&gt;
+        &lt;path d=&quot;M 45,24 27,14 27,34&quot; fill=&quot;#fff&quot; &#x2F;&gt;
+      &lt;&#x2F;svg&gt;
+    &lt;&#x2F;button&gt;
+  &lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;</description>
+      </item>
+    </channel>
+</rss>

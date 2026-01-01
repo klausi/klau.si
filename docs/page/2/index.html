@@ -132,6 +132,27 @@
     <header class="post__header">
         <h1 class="post__title">
             
+                <a href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;mocking-in-rust-with-conditional-compilation&#x2F;">Mocking in Rust with conditional compilation</a>
+            
+        </h1>
+        <div class="post__meta">
+            <span class="post__time">2019-03-31</span>
+            
+        </div>
+    </header>
+
+                  <div class="post__summary"><p>When writing automated unit tests for your application you will probably need to use <a href="https://en.wikipedia.org/wiki/Mock_object">mocks</a> at some point. Classical object-oriented programming languages such as PHP solve this with reflection where mock object types are created during test runtime. The code under test expects a certain interface or class and the test code passes mock objects that implement the interface or are a subclass.</p>
+<p>Similar approaches exist in Rust where mock objects are used to test code that expects a trait type. There is a wonderful <a href="https://asomers.github.io/mock_shootout/">Rust mock framework comparison</a> by Alan Somers that lists their features. The biggest problem with most of them as far as I can see is that they cannot mock a foreign <code>struct</code> you are using in your code. Rust does not have a concept of object inheritance for structs so there is no way to mimic a struct type from the standard library or an external crate.</p></div>
+                  <div class="read-more">
+                    <a href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;mocking-in-rust-with-conditional-compilation&#x2F;">Read more...</a>
+                  </div>
+                </article>
+              
+                <article class="post">
+                  
+    <header class="post__header">
+        <h1 class="post__title">
+            
                 <a href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;drupal-security-vulnerability-learnings&#x2F;">Drupal Austria Meetup: Drupal security learnings</a>
             
         </h1>
@@ -372,32 +393,6 @@ do integration testing of the whole application to prove that the end result is
 working as expected.</p></div>
                   <div class="read-more">
                     <a href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;writing-integration-tests-in-rust&#x2F;">Read more...</a>
-                  </div>
-                </article>
-              
-                <article class="post">
-                  
-    <header class="post__header">
-        <h1 class="post__title">
-            
-                <a href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;using-eclipse-ide-for-rust-on-ubuntu&#x2F;">Using Eclipse IDE for Rust on Ubuntu</a>
-            
-        </h1>
-        <div class="post__meta">
-            <span class="post__time">2017-05-06</span>
-            
-        </div>
-    </header>
-
-                  <div class="post__summary"><p><strong>Update: <a href="https://klau.si/blog/using-visual-studio-code-for-rust-on-ubuntu/">New blog post about choosing Visual Studio Code for Rust</a>
-because of better IDE support.</strong></p>
-<p>In <a href="https://klau.si/blog/getting-started-with-rust/">my first blog post</a> I was
-starting out with Atom editor but quickly realized that it is lacking features
-of Integrated Development Environments (IDEs). I need to be able to click on
-functions and data types to jump to their definitions and was not able to get
-that working in Atom.</p></div>
-                  <div class="read-more">
-                    <a href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;using-eclipse-ide-for-rust-on-ubuntu&#x2F;">Read more...</a>
                   </div>
                 </article>
               

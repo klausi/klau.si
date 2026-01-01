@@ -119,6 +119,10 @@
         <lastmod>2017-09-09</lastmod>
     </url>
     <url>
+        <loc>https://klau.si/blog/testing-claude-ai-for-drupal-code/</loc>
+        <lastmod>2026-04-04</lastmod>
+    </url>
+    <url>
         <loc>https://klau.si/blog/testing-memory-leaks-in-rust/</loc>
         <lastmod>2017-10-06</lastmod>
     </url>
@@ -340,6 +344,9 @@
     </url>
     <url>
         <loc>https://klau.si/tags/</loc>
+    </url>
+    <url>
+        <loc>https://klau.si/tags/ai/</loc>
     </url>
     <url>
         <loc>https://klau.si/tags/code-review/</loc>
