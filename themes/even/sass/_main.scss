@@ -263,7 +263,7 @@ main {
 
     a {
       margin: 5px 10px;
-      word-wrap: break-word;
+      white-space: nowrap;
       position: relative;
       color: $link-colour;
       text-decoration: none;
