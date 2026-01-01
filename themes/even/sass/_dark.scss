@@ -57,6 +57,22 @@
     color: $dark-link-hover-colour;
   }
 
+  main {
+    .taxonomies__items {
+      a {
+        .count {
+          color: $dark-link-colour;
+        }
+
+        &:hover {
+          .count {
+            color: $dark-link-hover-colour;
+          }
+        }
+      }
+    }
+  }
+
   .post-toc {
     background: #2a1f14;
     color: rgba(#fff, 0.9);
