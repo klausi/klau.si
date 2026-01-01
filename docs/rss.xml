@@ -21,18 +21,15 @@
 &lt;li&gt;🙄 I got annoyed a couple of times, because Claude did contradictory things&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;div class=&quot;youtube-lazy&quot; data-video-id=&quot;7U4XwkjfckE&quot;&gt;
-  &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=7U4XwkjfckE&quot; class=&quot;youtube-lazy-placeholder&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
-    &lt;img src=&quot;&#x2F;youtube-thumbs&#x2F;7U4XwkjfckE.webp&quot;
+  &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=7U4XwkjfckE&quot;
+     class=&quot;youtube-lazy-placeholder&quot;
+     target=&quot;_blank&quot;
+     rel=&quot;noopener&quot;&gt;
+    &lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;youtube-thumbs&#x2F;7U4XwkjfckE.webp&quot;
          alt=&quot;YouTube video thumbnail - click to play&quot;
          loading=&quot;lazy&quot;
          width=&quot;16&quot;
          height=&quot;9&quot;&gt;
-    &lt;button class=&quot;youtube-play-button&quot; aria-label=&quot;Play video&quot;&gt;
-      &lt;svg viewBox=&quot;0 0 68 48&quot; width=&quot;68&quot; height=&quot;48&quot;&gt;
-        &lt;path class=&quot;youtube-play-bg&quot; d=&quot;M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z&quot; fill=&quot;#f00&quot; &#x2F;&gt;
-        &lt;path d=&quot;M 45,24 27,14 27,34&quot; fill=&quot;#fff&quot; &#x2F;&gt;
-      &lt;&#x2F;svg&gt;
-    &lt;&#x2F;button&gt;
   &lt;&#x2F;a&gt;
 &lt;&#x2F;div&gt;</description>
       </item>
@@ -69,18 +66,15 @@
           <guid>https://klau.si/blog/d7security-drupal-austria-meetup/</guid>
           <description xml:base="https://klau.si/blog/d7security-drupal-austria-meetup/">&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;d7security-drupal-austria-meetup&#x2F;d7security-drupal-austria-2024.pdf&quot;&gt;the slides&lt;&#x2F;a&gt; and a recording of my Drupal Austria Meetup presentation about &lt;a href=&quot;https:&#x2F;&#x2F;www.d7security.org&quot;&gt;D7Security&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;div class=&quot;youtube-lazy&quot; data-video-id=&quot;1vLU1Eo0Tkk&quot;&gt;
-  &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=1vLU1Eo0Tkk&quot; class=&quot;youtube-lazy-placeholder&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
-    &lt;img src=&quot;&#x2F;youtube-thumbs&#x2F;1vLU1Eo0Tkk.webp&quot;
+  &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=1vLU1Eo0Tkk&quot;
+     class=&quot;youtube-lazy-placeholder&quot;
+     target=&quot;_blank&quot;
+     rel=&quot;noopener&quot;&gt;
+    &lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;youtube-thumbs&#x2F;1vLU1Eo0Tkk.webp&quot;
          alt=&quot;YouTube video thumbnail - click to play&quot;
          loading=&quot;lazy&quot;
          width=&quot;16&quot;
          height=&quot;9&quot;&gt;
-    &lt;button class=&quot;youtube-play-button&quot; aria-label=&quot;Play video&quot;&gt;
-      &lt;svg viewBox=&quot;0 0 68 48&quot; width=&quot;68&quot; height=&quot;48&quot;&gt;
-        &lt;path class=&quot;youtube-play-bg&quot; d=&quot;M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z&quot; fill=&quot;#f00&quot; &#x2F;&gt;
-        &lt;path d=&quot;M 45,24 27,14 27,34&quot; fill=&quot;#fff&quot; &#x2F;&gt;
-      &lt;&#x2F;svg&gt;
-    &lt;&#x2F;button&gt;
   &lt;&#x2F;a&gt;
 &lt;&#x2F;div&gt;</description>
       </item>
@@ -92,18 +86,15 @@
           <guid>https://klau.si/blog/d7-eol-podcast/</guid>
           <description xml:base="https://klau.si/blog/d7-eol-podcast/">&lt;p&gt;Here is the video of my appearance on the Drupal 7 end of life podcast, talking about plans for the &lt;a href=&quot;https:&#x2F;&#x2F;www.d7security.org&#x2F;&quot;&gt;D7Security&lt;&#x2F;a&gt; group. Thank you Mark Dorison and Chris Free from Chromatic for the recording!&lt;&#x2F;p&gt;
 &lt;div class=&quot;youtube-lazy&quot; data-video-id=&quot;hNI73M0ftOM&quot;&gt;
-  &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=hNI73M0ftOM&quot; class=&quot;youtube-lazy-placeholder&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
-    &lt;img src=&quot;&#x2F;youtube-thumbs&#x2F;hNI73M0ftOM.webp&quot;
+  &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=hNI73M0ftOM&quot;
+     class=&quot;youtube-lazy-placeholder&quot;
+     target=&quot;_blank&quot;
+     rel=&quot;noopener&quot;&gt;
+    &lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;youtube-thumbs&#x2F;hNI73M0ftOM.webp&quot;
          alt=&quot;YouTube video thumbnail - click to play&quot;
          loading=&quot;lazy&quot;
          width=&quot;16&quot;
          height=&quot;9&quot;&gt;
-    &lt;button class=&quot;youtube-play-button&quot; aria-label=&quot;Play video&quot;&gt;
-      &lt;svg viewBox=&quot;0 0 68 48&quot; width=&quot;68&quot; height=&quot;48&quot;&gt;
-        &lt;path class=&quot;youtube-play-bg&quot; d=&quot;M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z&quot; fill=&quot;#f00&quot; &#x2F;&gt;
-        &lt;path d=&quot;M 45,24 27,14 27,34&quot; fill=&quot;#fff&quot; &#x2F;&gt;
-      &lt;&#x2F;svg&gt;
-    &lt;&#x2F;button&gt;
   &lt;&#x2F;a&gt;
 &lt;&#x2F;div&gt;</description>
       </item>
@@ -134,18 +125,15 @@
           <guid>https://klau.si/blog/russmedia-cto-meetup-talk-pull-request-review/</guid>
           <description xml:base="https://klau.si/blog/russmedia-cto-meetup-talk-pull-request-review/">&lt;p&gt;Here is the video of my Russmedia CTO &amp;amp; product meetup talk &quot;Pull Request Review best practices&quot;.&lt;&#x2F;p&gt;
 &lt;div class=&quot;youtube-lazy&quot; data-video-id=&quot;6CbdQaWI5Hk&quot;&gt;
-  &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=6CbdQaWI5Hk&quot; class=&quot;youtube-lazy-placeholder&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
-    &lt;img src=&quot;&#x2F;youtube-thumbs&#x2F;6CbdQaWI5Hk.webp&quot;
+  &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=6CbdQaWI5Hk&quot;
+     class=&quot;youtube-lazy-placeholder&quot;
+     target=&quot;_blank&quot;
+     rel=&quot;noopener&quot;&gt;
+    &lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;youtube-thumbs&#x2F;6CbdQaWI5Hk.webp&quot;
          alt=&quot;YouTube video thumbnail - click to play&quot;
          loading=&quot;lazy&quot;
          width=&quot;16&quot;
          height=&quot;9&quot;&gt;
-    &lt;button class=&quot;youtube-play-button&quot; aria-label=&quot;Play video&quot;&gt;
-      &lt;svg viewBox=&quot;0 0 68 48&quot; width=&quot;68&quot; height=&quot;48&quot;&gt;
-        &lt;path class=&quot;youtube-play-bg&quot; d=&quot;M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z&quot; fill=&quot;#f00&quot; &#x2F;&gt;
-        &lt;path d=&quot;M 45,24 27,14 27,34&quot; fill=&quot;#fff&quot; &#x2F;&gt;
-      &lt;&#x2F;svg&gt;
-    &lt;&#x2F;button&gt;
   &lt;&#x2F;a&gt;
 &lt;&#x2F;div&gt;</description>
       </item>
@@ -157,18 +145,15 @@
           <guid>https://klau.si/blog/drupalcon-security-code-review/</guid>
           <description xml:base="https://klau.si/blog/drupalcon-security-code-review/">&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;klausi.github.io&#x2F;sec-code-review2019&#x2F;#&#x2F;&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of my DrupalCon Amsterdam 2019 talk &quot;Find security vulnerabilities through code review&quot;.&lt;&#x2F;p&gt;
 &lt;div class=&quot;youtube-lazy&quot; data-video-id=&quot;Oyoja2rfqSk&quot;&gt;
-  &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=Oyoja2rfqSk&quot; class=&quot;youtube-lazy-placeholder&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
-    &lt;img src=&quot;&#x2F;youtube-thumbs&#x2F;Oyoja2rfqSk.webp&quot;
+  &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=Oyoja2rfqSk&quot;
+     class=&quot;youtube-lazy-placeholder&quot;
+     target=&quot;_blank&quot;
+     rel=&quot;noopener&quot;&gt;
+    &lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;youtube-thumbs&#x2F;Oyoja2rfqSk.webp&quot;
          alt=&quot;YouTube video thumbnail - click to play&quot;
          loading=&quot;lazy&quot;
          width=&quot;16&quot;
          height=&quot;9&quot;&gt;
-    &lt;button class=&quot;youtube-play-button&quot; aria-label=&quot;Play video&quot;&gt;
-      &lt;svg viewBox=&quot;0 0 68 48&quot; width=&quot;68&quot; height=&quot;48&quot;&gt;
-        &lt;path class=&quot;youtube-play-bg&quot; d=&quot;M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z&quot; fill=&quot;#f00&quot; &#x2F;&gt;
-        &lt;path d=&quot;M 45,24 27,14 27,34&quot; fill=&quot;#fff&quot; &#x2F;&gt;
-      &lt;&#x2F;svg&gt;
-    &lt;&#x2F;button&gt;
   &lt;&#x2F;a&gt;
 &lt;&#x2F;div&gt;</description>
       </item>
