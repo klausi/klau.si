@@ -7,14 +7,14 @@
       <generator>Zola</generator>
       <language>en</language>
       <atom:link href="https://klau.si/rss.xml" rel="self" type="application/rss+xml"/>
-      <lastBuildDate>Sat, 04 Apr 2026 00:00:00 +0000</lastBuildDate>
+      <lastBuildDate>Fri, 04 Apr 2025 00:00:00 +0000</lastBuildDate>
       <item>
           <title>Testing Claude AI for Drupal code</title>
-          <pubDate>Sat, 04 Apr 2026 00:00:00 +0000</pubDate>
+          <pubDate>Fri, 04 Apr 2025 00:00:00 +0000</pubDate>
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/testing-claude-ai-for-drupal-code/</link>
           <guid>https://klau.si/blog/testing-claude-ai-for-drupal-code/</guid>
-          <description xml:base="https://klau.si/blog/testing-claude-ai-for-drupal-code/">&lt;p&gt;I tested ClaudeAI for Drupal code, got inspired by &lt;a href=&quot;https:&#x2F;&#x2F;dri.es&#x2F;claude-code-meets-drupal&quot;&gt;Dries Buytaert&lt;&#x2F;a&gt; video.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/testing-claude-ai-for-drupal-code/">&lt;p&gt;I tested ClaudeAI for Drupal code, got inspired by &lt;a href=&quot;https:&#x2F;&#x2F;dri.es&#x2F;claude-code-meets-drupal&quot;&gt;Dries Buytaert video&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;🤯 the interaction and suggestions were quite good&lt;&#x2F;li&gt;
 &lt;li&gt;💵 execution is expensive, I paid $1.16 for 20 minutes&lt;&#x2F;li&gt;
