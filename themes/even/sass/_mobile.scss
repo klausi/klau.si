@@ -19,6 +19,11 @@
     display: inline-block;
     margin-right: 50px;
 
+    img {
+      max-width: 64px;
+      max-height: 64px;
+    }
+
     .logo {
       font-size: 22px;
       line-height: $mobile-navbar-height;

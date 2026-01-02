@@ -56,9 +56,9 @@
     {% endif %}
   {% endif %}
 
-  {# Fallback to site logo #}
+  {# Fallback to opengraph default image #}
   {% if og_image == "" %}
-    {% set og_image = get_url(path="logo.webp") %}
+    {% set og_image = get_url(path="opengraph-default.webp") %}
   {% endif %}
 
   <meta property="og:image" content="{{ og_image | safe }}">

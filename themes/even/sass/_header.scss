@@ -8,6 +8,11 @@
     font-weight: 400;
     white-space: nowrap;
 
+    img {
+      max-width: 64px;
+      max-height: 64px;
+    }
+
     a {
       color: #34495e;
       font-size: 48px;
