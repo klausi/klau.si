@@ -59,6 +59,12 @@
     {% endblock css %}
 
     {% block extra_head %}
+      {# Default OpenGraph meta tags for non-page templates (frontpage, sections, etc.) #}
+      <meta property="og:title" content="{{ config.title }}">
+      <meta property="og:type" content="website">
+      <meta property="og:url" content="{{ config.base_url }}">
+      <meta property="og:site_name" content="{{ config.title }}">
+      <meta property="og:image" content="{{ get_url(path='logo.webp') }}">
     {% endblock extra_head %}
   </head>
 
