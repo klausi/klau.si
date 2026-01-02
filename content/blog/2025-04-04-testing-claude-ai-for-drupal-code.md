@@ -15,4 +15,4 @@ I tested ClaudeAI for Drupal code, got inspired by [Dries Buytaert video](https:
 
 <!-- more -->
 
-{{ mastodon_comments(id="115824755107613500") }}
+{{ mastodon_comments(id="115826555577593358") }}

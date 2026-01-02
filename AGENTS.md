@@ -32,4 +32,4 @@ This is a Zola static site generator project.
 
 ## Rust
 
-- Run `cargo clippy` to validate code
+- Run `cargo clippy` and `cargo fmt` to validate code

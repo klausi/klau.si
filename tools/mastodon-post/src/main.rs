@@ -55,17 +55,14 @@ impl Config {
             dotenvy::from_path(&env_path)?;
         }
 
-        let mastodon_base_url = env::var("MASTODON_BASE_URL").map_err(|_| {
-            anyhow::anyhow!(Self::missing_credentials_message())
-        })?;
+        let mastodon_base_url = env::var("MASTODON_BASE_URL")
+            .map_err(|_| anyhow::anyhow!(Self::missing_credentials_message()))?;
 
-        let mastodon_access_token = env::var("MASTODON_ACCESS_TOKEN").map_err(|_| {
-            anyhow::anyhow!(Self::missing_credentials_message())
-        })?;
+        let mastodon_access_token = env::var("MASTODON_ACCESS_TOKEN")
+            .map_err(|_| anyhow::anyhow!(Self::missing_credentials_message()))?;
 
-        let mastodon_handle = env::var("MASTODON_HANDLE").map_err(|_| {
-            anyhow::anyhow!(Self::missing_credentials_message())
-        })?;
+        let mastodon_handle = env::var("MASTODON_HANDLE")
+            .map_err(|_| anyhow::anyhow!(Self::missing_credentials_message()))?;
 
         Ok(Config {
             mastodon_base_url,
@@ -107,10 +104,8 @@ struct ZolaConfig {
 /// Read base_url from config.toml
 fn read_base_url(project_root: &Path) -> Result<String> {
     let config_path = project_root.join("config.toml");
-    let content = fs::read_to_string(&config_path)
-        .context("Failed to read config.toml")?;
-    let config: ZolaConfig = toml::from_str(&content)
-        .context("Failed to parse config.toml")?;
+    let content = fs::read_to_string(&config_path).context("Failed to read config.toml")?;
+    let config: ZolaConfig = toml::from_str(&content).context("Failed to parse config.toml")?;
     Ok(config.base_url)
 }
 
@@ -154,13 +149,19 @@ fn scan_blog_posts(project_root: &Path, base_url: &str) -> Result<Vec<BlogPost>>
 
         // Extract title
         let title = match title_re.captures(front_matter) {
-            Some(caps) => caps.get(1).map(|m| m.as_str().to_string()).unwrap_or_default(),
+            Some(caps) => caps
+                .get(1)
+                .map(|m| m.as_str().to_string())
+                .unwrap_or_default(),
             None => continue,
         };
 
         // Extract date
         let date = match date_re.captures(front_matter) {
-            Some(caps) => caps.get(1).map(|m| m.as_str().to_string()).unwrap_or_default(),
+            Some(caps) => caps
+                .get(1)
+                .map(|m| m.as_str().to_string())
+                .unwrap_or_default(),
             None => continue,
         };
 
@@ -217,13 +218,22 @@ fn derive_blog_url(file_path: &Path, blog_dir: &Path, base_url: &str) -> Result<
 
     // Convert date prefix to URL format
     // 2025-04-04-testing-claude-ai... -> testing-claude-ai...
-    let url_slug = if url_path.len() > 11 && url_path.chars().take(10).all(|c| c.is_ascii_digit() || c == '-') {
+    let url_slug = if url_path.len() > 11
+        && url_path
+            .chars()
+            .take(10)
+            .all(|c| c.is_ascii_digit() || c == '-')
+    {
         &url_path[11..]
     } else {
         &url_path
     };
 
-    Ok(format!("{}/blog/{}/", base_url.trim_end_matches('/'), url_slug))
+    Ok(format!(
+        "{}/blog/{}/",
+        base_url.trim_end_matches('/'),
+        url_slug
+    ))
 }
 
 /// Find the latest blog post without a comment section
@@ -239,15 +249,8 @@ fn find_by_url<'a>(posts: &'a [BlogPost], url: &str) -> Option<&'a BlogPost> {
 }
 
 /// Post to Mastodon and return the post ID and URL
-async fn post_to_mastodon(config: &Config, title: &str, url: &str, dry_run: bool) -> Result<(String, String)> {
-    let status_text = format!("{}\n\n{}", title, url);
-
+async fn post_to_mastodon(config: &Config, status_text: &str) -> Result<(String, String)> {
     println!("Posting to Mastodon: {}", status_text);
-
-    if dry_run {
-        println!("[DRY RUN] Would post to Mastodon");
-        return Ok(("dry-run-id".to_string(), "https://example.com/@user/dry-run-id".to_string()));
-    }
 
     let mastodon = generator(
         megalodon::SNS::Mastodon,
@@ -268,7 +271,7 @@ async fn post_to_mastodon(config: &Config, title: &str, url: &str, dry_run: bool
     };
 
     let response = mastodon
-        .post_status(status_text, Some(&options))
+        .post_status(status_text.to_string(), Some(&options))
         .await
         .context("Failed to post to Mastodon")?;
 
@@ -287,10 +290,7 @@ fn add_comment_section(post: &BlogPost, mastodon_id: &str) -> Result<()> {
     let content = fs::read_to_string(&post.file_path)?;
 
     // Add the comment shortcode at the end of the file
-    let comment_section = format!(
-        "\n\n{{{{ mastodon_comments(id=\"{}\") }}}}\n",
-        mastodon_id
-    );
+    let comment_section = format!("\n\n{{{{ mastodon_comments(id=\"{}\") }}}}\n", mastodon_id);
 
     let new_content = format!("{}{}", content.trim_end(), comment_section);
 
@@ -331,7 +331,11 @@ async fn main() -> Result<()> {
         println!("Blog post already has a comment section!");
         println!("Blog URL: {}", post.url);
         if let Some(mastodon_id) = &post.mastodon_id {
-            println!("Mastodon URL: {}/statuses/{}", config.mastodon_base_url.trim_end_matches('/'), mastodon_id);
+            println!(
+                "Mastodon URL: {}/statuses/{}",
+                config.mastodon_base_url.trim_end_matches('/'),
+                mastodon_id
+            );
         }
         return Ok(());
     }
@@ -340,12 +344,21 @@ async fn main() -> Result<()> {
     println!("URL: {}", post.url);
 
     // Post to Mastodon
-    let status_text = format!("{}\n\nvia {}\n\n{}", post.title, config.mastodon_handle, post.url);
+    let status_text = format!(
+        "{}\n\nby {}\n\n{}",
+        post.title, config.mastodon_handle, post.url
+    );
     let (mastodon_id, mastodon_url) = if args.dry_run {
-        println!("[DRY RUN] Would post to Mastodon:\n---\n{}\n---", status_text);
-        ("dry-run-id".to_string(), "https://mastodon.social/@user/dry-run-id".to_string())
+        println!(
+            "[DRY RUN] Would post to Mastodon:\n---\n{}\n---",
+            status_text
+        );
+        (
+            "dry-run-id".to_string(),
+            "https://mastodon.social/@user/dry-run-id".to_string(),
+        )
     } else {
-        post_to_mastodon(&config, &post.title, &post.url, false).await?
+        post_to_mastodon(&config, &status_text).await?
     };
 
     if !args.dry_run {
@@ -356,7 +369,10 @@ async fn main() -> Result<()> {
     if !args.dry_run {
         add_comment_section(post, &mastodon_id)?;
     } else {
-        println!("[DRY RUN] Would add comment section with Mastodon ID: {}", mastodon_id);
+        println!(
+            "[DRY RUN] Would add comment section with Mastodon ID: {}",
+            mastodon_id
+        );
     }
 
     println!("\nDone! Remember to rebuild the site with 'zola build' or './build.sh'");
