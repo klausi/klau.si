@@ -21,6 +21,7 @@ Blog posts can have a comment section that displays replies from Mastodon. When 
 ```
 MASTODON_BASE_URL=https://mastodon.social
 MASTODON_ACCESS_TOKEN=your_access_token_here
+MASTODON_HANDLE=@yourname@mastodon.social
 ```
 
 To get an access token:

@@ -25,6 +25,7 @@ struct Args {
 struct Config {
     mastodon_base_url: String,
     mastodon_access_token: String,
+    mastodon_handle: String,
 }
 
 /// Represents a blog post
@@ -62,9 +63,14 @@ impl Config {
             anyhow::anyhow!(Self::missing_credentials_message())
         })?;
 
+        let mastodon_handle = env::var("MASTODON_HANDLE").map_err(|_| {
+            anyhow::anyhow!(Self::missing_credentials_message())
+        })?;
+
         Ok(Config {
             mastodon_base_url,
             mastodon_access_token,
+            mastodon_handle,
         })
     }
 
@@ -92,8 +98,24 @@ fn find_project_root() -> Result<PathBuf> {
     }
 }
 
+/// Zola config structure (only the fields we need)
+#[derive(serde::Deserialize)]
+struct ZolaConfig {
+    base_url: String,
+}
+
+/// Read base_url from config.toml
+fn read_base_url(project_root: &Path) -> Result<String> {
+    let config_path = project_root.join("config.toml");
+    let content = fs::read_to_string(&config_path)
+        .context("Failed to read config.toml")?;
+    let config: ZolaConfig = toml::from_str(&content)
+        .context("Failed to parse config.toml")?;
+    Ok(config.base_url)
+}
+
 /// Scan the content/blog directory for blog posts
-fn scan_blog_posts(project_root: &Path) -> Result<Vec<BlogPost>> {
+fn scan_blog_posts(project_root: &Path, base_url: &str) -> Result<Vec<BlogPost>> {
     let blog_dir = project_root.join("content/blog");
     let mut posts = Vec::new();
 
@@ -151,7 +173,7 @@ fn scan_blog_posts(project_root: &Path) -> Result<Vec<BlogPost>> {
             .and_then(|caps| caps.get(1).map(|m| m.as_str().to_string()));
 
         // Derive URL from file path
-        let url = derive_blog_url(path, &blog_dir)?;
+        let url = derive_blog_url(path, &blog_dir, base_url)?;
 
         posts.push(BlogPost {
             file_path: path.to_path_buf(),
@@ -170,7 +192,7 @@ fn scan_blog_posts(project_root: &Path) -> Result<Vec<BlogPost>> {
 }
 
 /// Derive the blog post URL from the file path
-fn derive_blog_url(file_path: &Path, blog_dir: &Path) -> Result<String> {
+fn derive_blog_url(file_path: &Path, blog_dir: &Path, base_url: &str) -> Result<String> {
     let relative = file_path.strip_prefix(blog_dir)?;
 
     // Handle both formats:
@@ -201,7 +223,7 @@ fn derive_blog_url(file_path: &Path, blog_dir: &Path) -> Result<String> {
         &url_path
     };
 
-    Ok(format!("https://klau.si/blog/{}/", url_slug))
+    Ok(format!("{}/blog/{}/", base_url.trim_end_matches('/'), url_slug))
 }
 
 /// Find the latest blog post without a comment section
@@ -283,9 +305,17 @@ fn add_comment_section(post: &BlogPost, mastodon_id: &str) -> Result<()> {
 async fn main() -> Result<()> {
     let args = Args::parse();
 
-    // Find project root and scan blog posts
+    // Find project root
     let project_root = find_project_root()?;
-    let posts = scan_blog_posts(&project_root)?;
+
+    // Read base_url from config.toml
+    let base_url = read_base_url(&project_root)?;
+
+    // Load Mastodon configuration
+    let config = Config::load()?;
+
+    // Scan blog posts
+    let posts = scan_blog_posts(&project_root, &base_url)?;
 
     // Determine which post to process
     let post = if let Some(url) = &args.url {
@@ -296,23 +326,12 @@ async fn main() -> Result<()> {
             .ok_or_else(|| anyhow::anyhow!("All blog posts already have comment sections"))?
     };
 
-    // Load configuration (only required for non-dry-run or when post already has section)
-    let config = if args.dry_run {
-        Config::load().ok()
-    } else {
-        Some(Config::load()?)
-    };
-
     // Check if already has a comment section
     if post.has_mastodon_section {
         println!("Blog post already has a comment section!");
         println!("Blog URL: {}", post.url);
         if let Some(mastodon_id) = &post.mastodon_id {
-            if let Some(cfg) = &config {
-                println!("Mastodon URL: {}/statuses/{}", cfg.mastodon_base_url.trim_end_matches('/'), mastodon_id);
-            } else {
-                println!("Mastodon ID: {}", mastodon_id);
-            }
+            println!("Mastodon URL: {}/statuses/{}", config.mastodon_base_url.trim_end_matches('/'), mastodon_id);
         }
         return Ok(());
     }
@@ -321,13 +340,12 @@ async fn main() -> Result<()> {
     println!("URL: {}", post.url);
 
     // Post to Mastodon
-    let status_text = format!("{}\n\n{}", post.title, post.url);
+    let status_text = format!("{}\n\nvia {}\n\n{}", post.title, config.mastodon_handle, post.url);
     let (mastodon_id, mastodon_url) = if args.dry_run {
         println!("[DRY RUN] Would post to Mastodon:\n---\n{}\n---", status_text);
         ("dry-run-id".to_string(), "https://mastodon.social/@user/dry-run-id".to_string())
     } else {
-        let cfg = config.as_ref().unwrap();
-        post_to_mastodon(cfg, &post.title, &post.url, false).await?
+        post_to_mastodon(&config, &post.title, &post.url, false).await?
     };
 
     if !args.dry_run {
