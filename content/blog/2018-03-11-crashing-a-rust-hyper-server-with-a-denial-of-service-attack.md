@@ -2,7 +2,7 @@
 title = "Crashing a Rust Hyper server with a Denial of Service attack"
 date = 2018-03-11
 [taxonomies]
-tags = ["rust", "rustnish"]
+tags = ["rust", "rustnish", "security"]
 +++
 
 I'm writing a reverse proxy in Rust using [Hyper](https://hyper.rs/) and I want

@@ -103,6 +103,42 @@
 &lt;p&gt;Here are &lt;a href=&quot;&#x2F;presentations&#x2F;sec-learnings2019&#x2F;index.html&quot;&gt;the slides&lt;&#x2F;a&gt; of my Drupal Austria Meetup talk &quot;Drupal security learnings&quot;.&lt;&#x2F;p&gt;</description>
       </item>
       <item>
+          <title>Crashing a Rust Hyper server with a Denial of Service attack</title>
+          <pubDate>Sun, 11 Mar 2018 00:00:00 +0000</pubDate>
+          <author>Klaus Purer</author>
+          <link>https://klau.si/blog/crashing-a-rust-hyper-server-with-a-denial-of-service-attack/</link>
+          <guid>https://klau.si/blog/crashing-a-rust-hyper-server-with-a-denial-of-service-attack/</guid>
+          <description xml:base="https://klau.si/blog/crashing-a-rust-hyper-server-with-a-denial-of-service-attack/">&lt;p&gt;I&#x27;m writing a reverse proxy in Rust using &lt;a href=&quot;https:&#x2F;&#x2F;hyper.rs&#x2F;&quot;&gt;Hyper&lt;&#x2F;a&gt; and I want
+to measure performance a bit to know if I&#x27;m doing something terribly wrong. By
+doing that I discovered a Denial of Service vulnerability in Hyper when IO
+errors are not properly handled. Note that &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;hyperium&#x2F;hyper&#x2F;releases&#x2F;tag&#x2F;v0.11.20&quot;&gt;a workaround has been released in
+the meantime in Hyper
+0.11.20&lt;&#x2F;a&gt;, more
+background info can be found in &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;hyperium&#x2F;hyper&#x2F;issues&#x2F;1358&quot;&gt;this Hyper
+issue&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;</description>
+      </item>
+      <item>
+          <title>Testing memory leaks in Rust</title>
+          <pubDate>Fri, 06 Oct 2017 00:00:00 +0000</pubDate>
+          <author>Klaus Purer</author>
+          <link>https://klau.si/blog/testing-memory-leaks-in-rust/</link>
+          <guid>https://klau.si/blog/testing-memory-leaks-in-rust/</guid>
+          <description xml:base="https://klau.si/blog/testing-memory-leaks-in-rust/">&lt;p&gt;Rust has many built-in concepts for memory safety, but it cannot prevent
+application level logic errors that take up system memory. An example would be
+a server application that stores something for each incoming request in a
+growing collection or list. If the program does not clean up the growing list
+then it will take up more and more server memory - thereby exposing a memory
+leak.&lt;&#x2F;p&gt;
+&lt;p&gt;While working on my reverse proxy project I discovered such a &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;hyperium&#x2F;hyper&#x2F;issues&#x2F;1315&quot;&gt;leak in the HTTP
+library Hyper&lt;&#x2F;a&gt;. In order to
+prevent and detect memory leaks in the future I set out my goal 7:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Add an integration test that ensures that the proxy server is not leaking
+memory (growing RAM usage without shrinking again). Use &#x2F;proc information to
+compare memory usage of the current process before and after the test.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;</description>
+      </item>
+      <item>
           <title>Drupalcon 2015 talk: Drupal and Security: what you need to know</title>
           <pubDate>Wed, 23 Sep 2015 00:00:00 +0000</pubDate>
           <author>Klaus Purer</author>
