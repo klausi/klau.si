@@ -1,3 +1,5 @@
+{% import "post_macros.html" as post_macros %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,57 +10,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>
-      
-  Klausi&#x27;s Weblog - Yet another blog move
-
+      {% block title %}
+        {{ config.title }}
+      {% endblock title %}
     </title>
 
-    
+    {% block rss %}
       <link rel="alternate"
             type="application/rss+xml"
             title="RSS"
-            href="https://klau.si/rss.xml">
-    
+            href="{{ get_url(path='rss.xml', trailing_slash=false) }}">
+    {% endblock %}
 
-    
-      
-    
+    {% block js %}
+      {% if config.extra.katex_enable %}
+        <link rel="stylesheet"
+              href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css"
+              integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y"
+              crossorigin="anonymous">
 
-    
+        <script defer
+                src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js"
+                integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx"
+                crossorigin="anonymous"></script>
+        <script defer
+                src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/mathtex-script-type.min.js"
+                integrity="sha384-zWYbd0NBwgTsgIdFKVprSfTh1mbMPe5Hz1X3yY4Sd1h/K1cQoUe36OGwAGz/PcDy"
+                crossorigin="anonymous"></script>
+        {% if config.extra.katex_auto_render %}
+          <script defer
+                  src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js"
+                  integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe"
+                  crossorigin="anonymous"
+                  onload="renderMathInElement(document.body);"></script>
+        {% endif %}
+      {% endif %}
+    {% endblock js %}
+
+    {% block css %}
       <link rel="stylesheet"
-            href="https://klau.si/site.css">
-      
-    
+            href="{{ get_url(path='site.css', trailing_slash=false) }}">
+      {% if config.extra.katex_enable %}
+        <link rel="stylesheet"
+              href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css"
+              integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y"
+              crossorigin="anonymous">
+      {% endif %}
+    {% endblock css %}
 
-    
-  
-  <meta property="og:title" content="Yet another blog move">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://klau.si/yet-another-blog-move/">
-  
-    <meta property="og:description" content="While I liked the webspace offered by the Vienna university of technology, I decided to move my Drupal blog to the Drupal farm at fsinf.at. This has two advantages: less administration&#x2F;update overhead…">
-  
-  <meta property="og:site_name" content="Klausi&#x27;s Weblog">
-  
-    <meta property="article:published_time" content="2009-11-22">
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-    
-  
-
-  <meta property="og:image" content="https://klau.si/logo.webp">
-
+    {% block extra_head %}
+      {# Default OpenGraph meta tags for non-page templates (frontpage, sections, etc.) #}
+      <meta property="og:title" content="{{ config.title }}">
+      <meta property="og:type" content="website">
+      <meta property="og:url" content="{{ config.base_url }}">
+      <meta property="og:site_name" content="{{ config.title }}">
+      <meta property="og:image" content="{{ get_url(path='logo.webp') }}">
+    {% endblock extra_head %}
   </head>
 
   <body>
@@ -71,14 +78,14 @@
 
       <div id="mobile-navbar" class="mobile-navbar">
         <div class="mobile-header-logo">
-          <a href="https:&#x2F;&#x2F;klau.si"
-             title="Klausi&#x27;s Weblog"
+          <a href="{{ config.base_url }}"
+             title="{{ config.extra.even_title }}"
              rel="home"
              class="site-logo site-title">
-            <img src="https://klau.si/logo.webp"
-                 alt="Klausi&#x27;s Weblog logo">
+            <img src="{{ get_url(path='logo.webp') }}"
+                 alt="{{ config.extra.even_title }} logo">
           </a>
-          <a href="/" class="logo">Klausi&#x27;s Weblog</a>
+          <a href="/" class="logo">{{ config.extra.even_title }}</a>
         </div>
         <label for="mobile-menu-toggle"
                class="mobile-navbar-icon"
@@ -93,113 +100,69 @@
 
       <header id="header">
         <div class="logo">
-          <a href="https:&#x2F;&#x2F;klau.si"
-             title="Klausi&#x27;s Weblog"
+          <a href="{{ config.base_url }}"
+             title="{{ config.extra.even_title }}"
              rel="home"
              class="site-logo site-title">
-            <img src="https://klau.si/logo.webp"
-                 alt="Klausi&#x27;s Weblog logo">
+            <img src="{{ get_url(path='logo.webp') }}"
+                 alt="{{ config.extra.even_title }} logo">
           </a>
-          <a href="https:&#x2F;&#x2F;klau.si">Klausi&#x27;s Weblog</a>
+          <a href="{{ config.base_url }}">{{ config.extra.even_title }}</a>
         </div>
         <nav class="menu">
           <ul>
-            
+            {% for item in config.extra.even_menu %}
               <li>
-                <a href="https:&#x2F;&#x2F;klau.si">
-                  Home
-                  
-                </a>
-              </li>
-            
-              <li>
-                <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;speaking">
-                  Speaking
-                  
-                </a>
-              </li>
-            
-              <li>
-                <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags">
-                  Categories
-                  
-                </a>
-              </li>
-            
-              <li>
-                <a href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
-                  RSS
-                  
+                <a href="{{ item.url | replace(from='$BASE_URL', to=config.base_url) }}">
+                  {{ item.name }}
+                  {% if item.name == "RSS" %}
 
-                    <img src="https://klau.si/icons/rss-icon.svg"
+                    <img src="{{ get_url(path='icons/rss-icon.svg') }}"
                          alt="RSS icon"
                          style="vertical-align: middle;
                                 width: 16px;
                                 height: 16px;
                                 position: relative;
                                 top: -2px">
-                  
+                  {% endif %}
                 </a>
               </li>
-            
+            {% endfor %}
           </ul>
         </nav>
       </header>
 
       <main>
         <div class="content" id="mobile-panel">
-          
+          {% block content %}
 
-  
+            {% if not paginator.previous %}<div class="about">{{ section.content | safe }}</div>{% endif %}
 
-  <article class="post">
-    
-    <header class="post__header">
-        <h1 class="post__title">
-            
-                Yet another blog move
-            
-        </h1>
-        <div class="post__meta">
-            <span class="post__time">2009-11-22</span>
-            
-        </div>
-    </header>
-
-    <div class="post-content"><p>While I liked the <a href="https://web.student.tuwien.ac.at/~e0426223/">webspace</a> offered by the Vienna university of technology, I decided to move my Drupal blog to the Drupal farm at fsinf.at. This has two advantages: less administration/update overhead (I'm responsible for Drupal updates on fsinf.at as well) and a much shorter, easy to remember URL.</p>
-<span id="continue-reading"></span></div>
-
-    
-    
-
-    <div class="post-footer">
-      
-        
-          <div class="post-tags">
-            
-              <a href="https://klau.si/tags/uncategorized/">#uncategorized</a>
-            
-          </div>
-        
-
-      
-
-    </div>
-
-    
-    
-  </article>
-
-
+            <div class="posts">
+              {% for page in paginator.pages %}
+                <article class="post">
+                  {{ post_macros::title(page=page) }}
+                  <div class="post__summary">{{ page.summary | safe }}</div>
+                  <div class="read-more">
+                    <a href="{{ page.permalink }}">Read more...</a>
+                  </div>
+                </article>
+              {% endfor %}
+            </div>
+            <nav class="pagination">
+              {% if paginator.previous %}<a class="previous" href="{{ paginator.previous }}">‹ Previous</a>{% endif %}
+              {% if paginator.next %}<a class="next" href="{{ paginator.next }}">Next ›</a>{% endif %}
+            </nav>
+          {% endblock content %}
         </div>
       </main>
 
-      
+      {% block footer %}
         <footer>
           <ul class="footer-social">
             <li>
               <a href="https://mastodon.social/@klausi" title="Mastodon" rel="me">
-                <img src="https://klau.si/icons/mastodon.svg"
+                <img src="{{ get_url(path='icons/mastodon.svg') }}"
                      alt="Mastodon icon"
                      class="social-icon"
                      width="24"
@@ -209,7 +172,7 @@
             </li>
             <li>
               <a href="https://www.drupal.org/u/klausi" title="Drupal" rel="me">
-                <img src="https://klau.si/icons/drupal.svg"
+                <img src="{{ get_url(path='icons/drupal.svg') }}"
                      alt="Drupal icon"
                      class="social-icon"
                      width="24"
@@ -221,8 +184,8 @@
               <a href="https://github.com/klausi" title="GitHub" rel="me">
                 <picture>
                   <source media="(prefers-color-scheme: dark)"
-                          srcset="https://klau.si/icons/github-darkmode.svg">
-                  <img src="https://klau.si/icons/github.svg"
+                          srcset="{{ get_url(path='icons/github-darkmode.svg') }}">
+                  <img src="{{ get_url(path='icons/github.svg') }}"
                        alt="GitHub icon"
                        class="social-icon"
                        width="24"
@@ -233,7 +196,7 @@
             </li>
             <li>
               <a href="https://bsky.app/profile/klau.si" title="Bluesky" rel="me">
-                <img src="https://klau.si/icons/bluesky.svg"
+                <img src="{{ get_url(path='icons/bluesky.svg') }}"
                      alt="Bluesky icon"
                      class="social-icon"
                      width="24"
@@ -243,7 +206,7 @@
             </li>
             <li>
               <a href="https://www.linkedin.com/in/klausi" title="LinkedIn" rel="me">
-                <img src="https://klau.si/icons/linkedin.svg"
+                <img src="{{ get_url(path='icons/linkedin.svg') }}"
                      alt="LinkedIn icon"
                      class="social-icon"
                      width="24"
@@ -252,9 +215,9 @@
               </a>
             </li>
             <li>
-              <a href="https://klau.si/rss.xml"
+              <a href="{{ get_url(path='rss.xml', trailing_slash=false) }}"
                  title="RSS Feed">
-                <img src="https://klau.si/icons/rss-icon.svg"
+                <img src="{{ get_url(path='icons/rss-icon.svg') }}"
                      alt="RSS icon"
                      class="social-icon"
                      width="24"
@@ -277,48 +240,27 @@
             Attribution-ShareAlike 4.0 International License</a>.
           </p>
         </footer>
-      
+      {% endblock footer %}
 
       <nav id="mobile-menu" class="mobile-menu">
         <ul class="mobile-menu-list">
-          
+          {% for item in config.extra.even_menu %}
             <li class="mobile-menu-item">
-              <a href="https:&#x2F;&#x2F;klau.si">
-                Home
-                
-              </a>
-            </li>
-          
-            <li class="mobile-menu-item">
-              <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags&#x2F;speaking">
-                Speaking
-                
-              </a>
-            </li>
-          
-            <li class="mobile-menu-item">
-              <a href="https:&#x2F;&#x2F;klau.si&#x2F;tags">
-                Categories
-                
-              </a>
-            </li>
-          
-            <li class="mobile-menu-item">
-              <a href="https:&#x2F;&#x2F;klau.si&#x2F;rss.xml">
-                RSS
-                
+              <a href="{{ item.url | replace(from='$BASE_URL', to=config.base_url) }}">
+                {{ item.name }}
+                {% if item.name == "RSS" %}
 
-                  <img src="https://klau.si/icons/rss-icon.svg"
+                  <img src="{{ get_url(path='icons/rss-icon.svg') }}"
                        alt="RSS icon"
                        style="vertical-align: middle;
                               width: 16px;
                               height: 16px;
                               position: relative;
                               top: -2px">
-                
+                {% endif %}
               </a>
             </li>
-          
+          {% endfor %}
         </ul>
       </nav>
 
@@ -327,10 +269,10 @@
              aria-hidden="true">&nbsp;</label>
     </div>
 
-    
+    {% block js_body %}
       <script type="text/javascript"
-              src="https://klau.si/even.js"></script>
-    
+              src="{{ get_url(path="even.js", trailing_slash=false) }}"></script>
+    {% endblock js_body %}
   </body>
 
 </html>
