@@ -13,7 +13,7 @@
   {% if page.description %}
     <meta property="og:description" content="{{ page.description }}">
   {% elif page.summary %}
-    <meta property="og:description" content="{{ page.summary | striptags | truncate(length=200) }}">
+    <meta property="og:description" content="{{ page.summary | striptags | truncate(length=160) }}">
   {% endif %}
   <meta property="og:site_name" content="{{ config.title }}">
   {% if page.date %}
