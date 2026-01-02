@@ -44,21 +44,20 @@ cargo build --release
 
 Post the latest blog entry without a comment section:
 ```
-cd tools/mastodon-post
-cargo run --release
+./post-mastodon.sh
 ```
 
 Or specify a specific blog post URL:
 ```
-cargo run --release -- --url "https://klau.si/my-blog-post/"
+./post-mastodon.sh --url "https://klau.si/blog/my-blog-post/"
 ```
 
 Dry run (shows what would be done without posting):
 ```
-cargo run --release -- --dry-run
+./post-mastodon.sh --dry-run
 ```
 
 After running the tool:
 1. The blog post will have a new `{{ mastodon_comments(id="...") }}` shortcode added
-2. Rebuild the site with `./build.sh` or `zola build`
+2. Rebuild the site with `./build.sh`
 3. Commit and push the changes

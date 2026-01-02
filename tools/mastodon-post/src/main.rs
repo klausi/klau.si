@@ -72,18 +72,7 @@ impl Config {
         r#"
 Missing Mastodon credentials in .env file.
 
-Please create a .env file in the project root with the following content:
-
-MASTODON_BASE_URL=https://mastodon.social
-MASTODON_ACCESS_TOKEN=your_access_token_here
-
-To get an access token:
-1. Log in to your Mastodon account
-2. Go to Settings -> Development -> New Application
-3. Give it a name (e.g., "Blog Comments")
-4. Select scopes: read, write
-5. Click "Submit"
-6. Copy the "Your access token" value
+Check the README.md file how to set it up.
 "#
         .to_string()
     }
