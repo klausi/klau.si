@@ -1,0 +1,166 @@
+<div class="mastodon-comments" id="mastodon-comments">
+    <h2>Comments</h2>
+    <p>
+        <a href="https://mastodon.social/@klausi_blog/{{ id }}" target="_blank" rel="noopener">
+            Comment on this post on Mastodon
+        </a>
+    </p>
+    <noscript>
+        <p>
+            JavaScript is required to load comments from Mastodon.
+            Please <a href="https://mastodon.social/@klausi/{{ id }}" target="_blank" rel="noopener">view the comments on Mastodon</a>.
+        </p>
+    </noscript>
+    <div id="mastodon-comments-list" data-mastodon-host="mastodon.social" data-mastodon-id="{{ id }}"></div>
+</div>
+
+<script>
+(function() {
+  const container = document.getElementById('mastodon-comments-list');
+  if (!container) {
+    return;
+  }
+
+  const host = container.dataset.mastodonHost;
+  const id = container.dataset.mastodonId;
+
+  async function loadComments() {
+    try {
+      const response = await fetch(`https://${host}/api/v1/statuses/${id}/context`);
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      const data = await response.json();
+
+      if (!data.descendants || data.descendants.length === 0) {
+        container.innerHTML = '<p class="no-comments">No comments yet. Be the first to comment!</p>';
+        return;
+      }
+
+      const commentsHtml = data.descendants
+        .filter(reply => reply.visibility === 'public')
+        .map(reply => {
+          const date = new Date(reply.created_at);
+          const dateStr = date.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+          });
+
+          return `
+            <div class="mastodon-comment">
+              <div class="comment-header">
+                <a href="${reply.account.url}" target="_blank" rel="noopener" class="comment-author">
+                  <img src="${reply.account.avatar}" alt="${reply.account.display_name}'s avatar" class="comment-avatar" loading="lazy" width="48" height="48">
+                  <span class="comment-author-name">${escapeHtml(reply.account.display_name || reply.account.username)}</span>
+                  <span class="comment-author-handle">@${escapeHtml(reply.account.acct)}</span>
+                </a>
+                <a href="${reply.url}" target="_blank" rel="noopener" class="comment-date">${dateStr}</a>
+              </div>
+              <div class="comment-content">${reply.content}</div>
+            </div>
+          `;
+        })
+        .join('');
+
+      container.innerHTML = commentsHtml || '<p class="no-comments">No comments yet. Be the first to comment!</p>';
+    } catch (error) {
+      console.error('Failed to load Mastodon comments:', error);
+      container.innerHTML = '<p class="comment-error">Failed to load comments. Please try again later.</p>';
+    }
+  }
+
+  function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+  }
+
+  loadComments();
+})();
+</script>
+
+<style>
+.mastodon-comments {
+  margin-top: 2rem;
+}
+
+.mastodon-comment {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.comment-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.comment-author {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.comment-avatar {
+  border-radius: 50%;
+}
+
+.comment-author-name {
+  font-weight: bold;
+}
+
+.comment-author-handle {
+  color: #666;
+  font-size: 0.9em;
+}
+
+.comment-date {
+  margin-left: auto;
+  color: #666;
+  font-size: 0.9em;
+  text-decoration: none;
+}
+
+.comment-date:hover {
+  text-decoration: underline;
+}
+
+.comment-content {
+  margin-top: 0.5rem;
+  line-height: 1.5;
+}
+
+.comment-content a {
+  word-break: break-word;
+}
+
+.no-comments,
+.comment-error {
+  color: #666;
+  font-style: italic;
+}
+
+@media (prefers-color-scheme: dark) {
+  .mastodon-comments {
+    border-top-color: #444;
+  }
+
+  .mastodon-comment {
+    background: #2a2a2a;
+  }
+
+  .comment-author-handle,
+  .comment-date,
+  .no-comments,
+  .comment-error {
+    color: #aaa;
+  }
+}
+</style>

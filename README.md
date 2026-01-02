@@ -9,3 +9,56 @@ zola serve
 ```
 ./build.sh
 ```
+
+## Blog Comments via Mastodon
+
+Blog posts can have a comment section that displays replies from Mastodon. When you publish a new blog post and want to enable comments, use the `mastodon-post` tool.
+
+### Setup
+
+1. Create a `.env` file in the project root with your Mastodon credentials:
+
+```
+MASTODON_BASE_URL=https://mastodon.social
+MASTODON_ACCESS_TOKEN=your_access_token_here
+```
+
+To get an access token:
+1. Log in to your Mastodon account
+2. Go to Settings -> Development -> New Application
+3. Give it a name (e.g., "Blog Comments")
+4. Select scopes:
+  * `read:statuses`
+  * `write:media`
+  * `write:statuses`
+5. Click "Submit"
+6. Click on the application name and copy the "Your access token" value
+
+### Usage
+
+Build the tool first:
+```
+cd tools/mastodon-post
+cargo build --release
+```
+
+Post the latest blog entry without a comment section:
+```
+cd tools/mastodon-post
+cargo run --release
+```
+
+Or specify a specific blog post URL:
+```
+cargo run --release -- --url "https://klau.si/my-blog-post/"
+```
+
+Dry run (shows what would be done without posting):
+```
+cargo run --release -- --dry-run
+```
+
+After running the tool:
+1. The blog post will have a new `{{ mastodon_comments(id="...") }}` shortcode added
+2. Rebuild the site with `./build.sh` or `zola build`
+3. Commit and push the changes

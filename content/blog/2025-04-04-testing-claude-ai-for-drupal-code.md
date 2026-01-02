@@ -14,3 +14,5 @@ I tested ClaudeAI for Drupal code, got inspired by [Dries Buytaert video](https:
 {{ youtube(id="7U4XwkjfckE") }}
 
 <!-- more -->
+
+{{ mastodon_comments(id="115824755107613500") }}

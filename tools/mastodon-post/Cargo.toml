@@ -1,0 +1,23 @@
+[package]
+name = "mastodon-post"
+version = "0.1.0"
+authors = ["Klaus Purer <klaus.purer@protonmail.ch>"]
+description = "Posts blog entries to Mastodon for comment functionality."
+edition = "2024"
+
+[[bin]]
+name = "mastodon-post"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = ">=1"
+chrono = { version = ">=0.4.23", default-features = false, features = ["std"] }
+clap = { version = ">=4", features = ["derive"] }
+dotenvy = ">=0.15"
+html-escape = ">=0.2.11"
+megalodon = ">=0.14"
+regex = ">=1"
+serde = { version = ">=1.0", features = ["derive"] }
+tokio = { version = ">=1", features = ["full"] }
+url = ">=2.3.1"
+walkdir = ">=2"
