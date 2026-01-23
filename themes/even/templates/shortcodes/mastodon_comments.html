@@ -69,6 +69,18 @@
             day: 'numeric'
           });
 
+          let attachments = '';
+          if (reply.media_attachments && reply.media_attachments.length > 0) {
+            const images = reply.media_attachments.filter(m => m.type === 'image');
+            if (images.length > 0) {
+              attachments = '<div class="comment-attachments">' +
+                images.map(m =>
+                  `<a href="${m.url}" target="_blank" rel="noopener" class="comment-attachment-link"><img src="${m.preview_url || m.url}" alt="${escapeHtml(m.description || 'Image attachment')}" class="comment-attachment-image" loading="lazy"></a>`
+                ).join('') +
+                '</div>';
+            }
+          }
+
           return `
             <div class="mastodon-comment">
               <div class="comment-header">
@@ -80,6 +92,7 @@
                 <a href="${reply.url}" target="_blank" rel="noopener" class="comment-date">${dateStr}</a>
               </div>
               <div class="comment-content">${reply.content}</div>
+              ${attachments}
             </div>
           `;
         })
@@ -161,6 +174,20 @@
 
 .comment-content a {
   word-break: break-word;
+}
+
+.comment-attachments {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.comment-attachment-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  max-height: 300px;
 }
 
 .no-comments,
