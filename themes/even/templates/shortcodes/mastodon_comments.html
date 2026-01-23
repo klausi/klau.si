@@ -1,17 +1,21 @@
 <div class="mastodon-comments" id="mastodon-comments">
-    <h2>Comments</h2>
+  <h2>Comments</h2>
+  <p>
+    <a href="https://mastodon.social/@klausi_blog/{{ id }}"
+       target="_blank"
+       rel="noopener">Comment on this post on Mastodon</a>
+  </p>
+  <noscript>
     <p>
-        <a href="https://mastodon.social/@klausi_blog/{{ id }}" target="_blank" rel="noopener">
-            Comment on this post on Mastodon
-        </a>
+      JavaScript is required to load comments from Mastodon.
+      Please <a href="https://mastodon.social/@klausi/{{ id }}"
+    target="_blank"
+    rel="noopener">view the comments on Mastodon</a>.
     </p>
-    <noscript>
-        <p>
-            JavaScript is required to load comments from Mastodon.
-            Please <a href="https://mastodon.social/@klausi/{{ id }}" target="_blank" rel="noopener">view the comments on Mastodon</a>.
-        </p>
-    </noscript>
-    <div id="mastodon-comments-list" data-mastodon-host="mastodon.social" data-mastodon-id="{{ id }}"></div>
+  </noscript>
+  <div id="mastodon-comments-list"
+       data-mastodon-host="mastodon.social"
+       data-mastodon-id="{{ id }}"></div>
 </div>
 
 <script>
@@ -23,6 +27,12 @@
 
   const host = container.dataset.mastodonHost;
   const id = container.dataset.mastodonId;
+
+  // Moderation block lists.
+  // Example: const blockedAccounts = ["https://mastodon.social/@spammer"];
+  const blockedAccounts = [];
+  // Example: const blockedStatuses = ["1234567890"];
+  const blockedStatuses = [];
 
   async function loadComments() {
     try {
@@ -38,7 +48,18 @@
       }
 
       const commentsHtml = data.descendants
-        .filter(reply => reply.visibility === 'public')
+        .filter(reply => {
+          if (reply.visibility !== 'public') {
+            return false;
+          }
+          if (blockedStatuses.includes(reply.id)) {
+            return false;
+          }
+          if (blockedAccounts.includes(reply.account.url)) {
+            return false;
+          }
+          return true;
+        })
         .map(reply => {
           const date = new Date(reply.created_at);
           const dateStr = date.toLocaleDateString('en-US', {
