@@ -147,8 +147,8 @@
         </div>
     </header>
 
-                  <div class="post__summary"><p>When writing automated unit tests for your application you will probably need to use <a href="https://en.wikipedia.org/wiki/Mock_object">mocks</a> at some point. Classical object-oriented programming languages such as PHP solve this with reflection where mock object types are created during test runtime. The code under test expects a certain interface or class and the test code passes mock objects that implement the interface or are a subclass.</p>
-<p>Similar approaches exist in Rust where mock objects are used to test code that expects a trait type. There is a wonderful <a href="https://asomers.github.io/mock_shootout/">Rust mock framework comparison</a> by Alan Somers that lists their features. The biggest problem with most of them as far as I can see is that they cannot mock a foreign <code>struct</code> you are using in your code. Rust does not have a concept of object inheritance for structs so there is no way to mimic a struct type from the standard library or an external crate.</p></div>
+                  <div class="post__summary"><p>When writing automated unit tests for your application you will probably need to use <a rel="external" href="https://en.wikipedia.org/wiki/Mock_object">mocks</a> at some point. Classical object-oriented programming languages such as PHP solve this with reflection where mock object types are created during test runtime. The code under test expects a certain interface or class and the test code passes mock objects that implement the interface or are a subclass.</p>
+<p>Similar approaches exist in Rust where mock objects are used to test code that expects a trait type. There is a wonderful <a rel="external" href="https://asomers.github.io/mock_shootout/">Rust mock framework comparison</a> by Alan Somers that lists their features. The biggest problem with most of them as far as I can see is that they cannot mock a foreign <code>struct</code> you are using in your code. Rust does not have a concept of object inheritance for structs so there is no way to mimic a struct type from the standard library or an external crate.</p></div>
                   <div class="read-more">
                     <a href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;mocking-in-rust-with-conditional-compilation&#x2F;">Read more...</a>
                   </div>
@@ -193,7 +193,7 @@
 <p>I set out out my goal 9 for Rustnish:</p>
 <blockquote>
 <p>Write benchmark code that compares runtime performance of Rustnish against
-<a href="https://varnish-cache.org/">Varnish</a>. Use <code>cargo bench</code> to execute the benchmarks.</p>
+<a rel="external" href="https://varnish-cache.org/">Varnish</a>. Use <code>cargo bench</code> to execute the benchmarks.</p>
 </blockquote>
 <p>The basic idea of a performance test here is to send many HTTP requests to the web service (the reverse proxy in this case) and measure how fast the responses arrive back. Comparing the results from Rustnish and Varnish should give us an idea if our performance expectations are holding up.</p></div>
                   <div class="read-more">
@@ -215,13 +215,13 @@
         </div>
     </header>
 
-                  <div class="post__summary"><p>I'm writing a reverse proxy in Rust using <a href="https://hyper.rs/">Hyper</a> and I want
+                  <div class="post__summary"><p>I'm writing a reverse proxy in Rust using <a rel="external" href="https://hyper.rs/">Hyper</a> and I want
 to measure performance a bit to know if I'm doing something terribly wrong. By
 doing that I discovered a Denial of Service vulnerability in Hyper when IO
-errors are not properly handled. Note that <a href="https://github.com/hyperium/hyper/releases/tag/v0.11.20">a workaround has been released in
+errors are not properly handled. Note that <a rel="external" href="https://github.com/hyperium/hyper/releases/tag/v0.11.20">a workaround has been released in
 the meantime in Hyper
 0.11.20</a>, more
-background info can be found in <a href="https://github.com/hyperium/hyper/issues/1358">this Hyper
+background info can be found in <a rel="external" href="https://github.com/hyperium/hyper/issues/1358">this Hyper
 issue</a>.</p></div>
                   <div class="read-more">
                     <a href="https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;crashing-a-rust-hyper-server-with-a-denial-of-service-attack&#x2F;">Read more...</a>
@@ -248,7 +248,7 @@ a server application that stores something for each incoming request in a
 growing collection or list. If the program does not clean up the growing list
 then it will take up more and more server memory - thereby exposing a memory
 leak.</p>
-<p>While working on my reverse proxy project I discovered such a <a href="https://github.com/hyperium/hyper/issues/1315">leak in the HTTP
+<p>While working on my reverse proxy project I discovered such a <a rel="external" href="https://github.com/hyperium/hyper/issues/1315">leak in the HTTP
 library Hyper</a>. In order to
 prevent and detect memory leaks in the future I set out my goal 7:</p>
 <blockquote>
@@ -278,7 +278,7 @@ compare memory usage of the current process before and after the test.</p>
                   <div class="post__summary"><p>When writing <a href="https://klau.si/blog/writing-integration-tests-in-rust/">integration tests for my Rustnish reverse proxy project</a> I
 have hard-coded port numbers in tests. This is not ideal because it is hard to
 keep track of which port numbers have already been used and which ones are
-available when writing a new test. Because Rust's test runner <a href="https://doc.rust-lang.org/book/ch11-02-running-tests.html#running-tests-in-parallel-or-consecutively">executes test cases in parallel</a> it is important to coordinate
+available when writing a new test. Because Rust's test runner <a rel="external" href="https://doc.rust-lang.org/book/ch11-02-running-tests.html#running-tests-in-parallel-or-consecutively">executes test cases in parallel</a> it is important to coordinate
 which test uses which ports so that there are no clashes that break the tests.</p>
 <p>One obvious solution to this problem would be to disable parallel test
 execution with <code>cargo test -- --test-threads=1</code>. But we want to cover program
@@ -302,7 +302,7 @@ and test isolation with our test so this is not really an option.</p></div>
         </div>
     </header>
 
-                  <div class="post__summary"><p><a href="https://doc.rust-lang.org/std/result/enum.Result.html#method.unwrap"><code>unwrap()</code></a> is a useful tool in Rust but is also bad practice in production code that
+                  <div class="post__summary"><p><a rel="external" href="https://doc.rust-lang.org/std/result/enum.Result.html#method.unwrap"><code>unwrap()</code></a> is a useful tool in Rust but is also bad practice in production code that
 should not abort with unpredictable panics.</p>
 <p>Therefore my goal 4 for Rustnish is full integration tests with no panics
 allowed:</p>
@@ -333,7 +333,7 @@ and covered by proper error handling.</p>
 
                   <div class="post__summary"><p>Since my <a href="https://klau.si/blog/getting-started-with-rust/">first blog post where I constructed a server with Hyper</a> some time
 has passed and there is now a new version of the library that is based on
-<a href="https://tokio.rs">Tokio</a>. My goal 3:</p>
+<a rel="external" href="https://tokio.rs">Tokio</a>. My goal 3:</p>
 <blockquote>
 <p>A new version of the Hyper library has been released which is
 based on the Tokio library. Convert the existing code to use that new version
@@ -362,7 +362,7 @@ non-blocking event loop.</p></div>
     </header>
 
                   <div class="post__summary"><p>I already wrote about <a href="https://klau.si/blog/using-eclipse-ide-for-rust-on-ubuntu/">using Eclipse for Rust development</a> but after trying
-<a href="https://code.visualstudio.com/">Visual Studio Code</a> (VSCode) I think it is
+<a rel="external" href="https://code.visualstudio.com/">Visual Studio Code</a> (VSCode) I think it is
 slightly better than the Eclipse integration:</p>
 <ul>
 <li>when the cursor is at a variable the same variable is highlighted elsewhere.</li>

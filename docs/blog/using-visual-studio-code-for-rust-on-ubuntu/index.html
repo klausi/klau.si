@@ -195,7 +195,7 @@ slightly better than the Eclipse integration…">
     </header>
 
     <div class="post-content"><p>I already wrote about <a href="https://klau.si/blog/using-eclipse-ide-for-rust-on-ubuntu/">using Eclipse for Rust development</a> but after trying
-<a href="https://code.visualstudio.com/">Visual Studio Code</a> (VSCode) I think it is
+<a rel="external" href="https://code.visualstudio.com/">Visual Studio Code</a> (VSCode) I think it is
 slightly better than the Eclipse integration:</p>
 <ul>
 <li>when the cursor is at a variable the same variable is highlighted elsewhere.</li>
@@ -206,49 +206,44 @@ slightly better than the Eclipse integration:</p>
 auto-formatting of course also work in VSCode as you would expect from an IDE.</p>
 <span id="continue-reading"></span><h2 id="installing-rust-on-ubuntu">Installing Rust on Ubuntu</h2>
 <p>First make sure you have a Rust toolchain environment set up:</p>
-<pre style="background-color:#191919;color:#f8f8f2;"><code><span>curl https://sh.rustup.rs -sSf | sh
-</span></code></pre>
+<pre class="giallo" style="color: #E1E4E8; background-color: #24292E;"><code data-lang="plain"><span class="giallo-l"><span>curl https://sh.rustup.rs -sSf | sh</span></span></code></pre>
 <p>(the usual security warning: make sure to trust your sources before you execute
 random scripts from the internet.)</p>
-<pre style="background-color:#191919;color:#f8f8f2;"><code><span>source $HOME/.cargo/env
-</span><span>cargo install racer
-</span><span>cargo install rustfmt
-</span><span>rustup component add rust-src
-</span></code></pre>
-<h2 id="installing-vscode-and-extensions">Installing VSCode and extensions</h2>
+<pre class="giallo" style="color: #E1E4E8; background-color: #24292E;"><code data-lang="plain"><span class="giallo-l"><span>source $HOME/.cargo/env</span></span>
+<span class="giallo-l"><span>cargo install racer</span></span>
+<span class="giallo-l"><span>cargo install rustfmt</span></span>
+<span class="giallo-l"><span>rustup component add rust-src</span></span></code></pre><h2 id="installing-vscode-and-extensions">Installing VSCode and extensions</h2>
 <p>Download the Deb package from
-<a href="https://code.visualstudio.com">code.visualstudio.com</a> and install it with the
+<a rel="external" href="https://code.visualstudio.com">code.visualstudio.com</a> and install it with the
 Ubuntu software center or dpkg. You should now have a launcher for vscode and
 the <code>code</code> command to start the IDE.</p>
 <p>Next install the following extensions:</p>
 <ul>
 <li>Rust code completion and auto formatting:
-<a href="https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer">rust-analyzer</a></li>
-<li>TOML configuration files syntax highlighting: <a href="https://marketplace.visualstudio.com/items?itemName=bungcip.better-toml">Better
+<a rel="external" href="https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer">rust-analyzer</a></li>
+<li>TOML configuration files syntax highlighting: <a rel="external" href="https://marketplace.visualstudio.com/items?itemName=bungcip.better-toml">Better
 TOML</a></li>
-<li>LLDB debugging for Rust programs: <a href="https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb">LLDB
+<li>LLDB debugging for Rust programs: <a rel="external" href="https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb">LLDB
 Debugger</a></li>
 <li>nice file icons:
-<a href="https://marketplace.visualstudio.com/items?itemName=robertohuertasm.vscode-icons">vscode-icons</a></li>
+<a rel="external" href="https://marketplace.visualstudio.com/items?itemName=robertohuertasm.vscode-icons">vscode-icons</a></li>
 </ul>
-<p>The Rust extension has experimental support for <a href="https://github.com/rust-lang-nursery/rls">Rust Language
+<p>The Rust extension has experimental support for <a rel="external" href="https://github.com/rust-lang-nursery/rls">Rust Language
 Server</a>, but it does not work
 reliably yet. That's why you have to enable the racer legacy mode in the VSCode
 settings.</p>
 <p>Go to File -&gt; Preferences -&gt; Settings and the editor will open your settings
 JSON file. Here are some very useful settings you should use:</p>
-<pre data-lang="json" style="background-color:#191919;color:#f8f8f2;" class="language-json "><code class="language-json" data-lang="json"><span>{
-</span><span>    </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">editor.formatOnSave</span><span style="color:#ffffff;">&quot;</span><span>: </span><span style="color:#ff8942;">true</span><span>,
-</span><span>    </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">editor.rulers</span><span style="color:#ffffff;">&quot;</span><span>: [
-</span><span>        </span><span style="color:#fdb082;">80
-</span><span>    ],
-</span><span>    </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">files.trimTrailingWhitespace</span><span style="color:#ffffff;">&quot;</span><span>: </span><span style="color:#ff8942;">true</span><span>,
-</span><span>    </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">rust.actionOnSave</span><span style="color:#ffffff;">&quot;</span><span>: </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">check</span><span style="color:#ffffff;">&quot;</span><span>,
-</span><span>    </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">rust.forceLegacyMode</span><span style="color:#ffffff;">&quot;</span><span>: </span><span style="color:#ff8942;">true</span><span>,
-</span><span>    </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">workbench.iconTheme</span><span style="color:#ffffff;">&quot;</span><span>: </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">vscode-icons</span><span style="color:#ffffff;">&quot;
-</span><span>}
-</span></code></pre>
-<h2 id="conclusion">Conclusion</h2>
+<pre class="giallo" style="color: #E1E4E8; background-color: #24292E;"><code data-lang="json"><span class="giallo-l"><span>{</span></span>
+<span class="giallo-l"><span style="color: #79B8FF;">    &quot;editor.formatOnSave&quot;</span><span>:</span><span style="color: #79B8FF;"> true</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #79B8FF;">    &quot;editor.rulers&quot;</span><span>: [</span></span>
+<span class="giallo-l"><span style="color: #79B8FF;">        80</span></span>
+<span class="giallo-l"><span>    ],</span></span>
+<span class="giallo-l"><span style="color: #79B8FF;">    &quot;files.trimTrailingWhitespace&quot;</span><span>:</span><span style="color: #79B8FF;"> true</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #79B8FF;">    &quot;rust.actionOnSave&quot;</span><span>:</span><span style="color: #9ECBFF;"> &quot;check&quot;</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #79B8FF;">    &quot;rust.forceLegacyMode&quot;</span><span>:</span><span style="color: #79B8FF;"> true</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #79B8FF;">    &quot;workbench.iconTheme&quot;</span><span>:</span><span style="color: #9ECBFF;"> &quot;vscode-icons&quot;</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre><h2 id="conclusion">Conclusion</h2>
 <p>Although VSCode has a sparse user interface (Back/Forward buttons are missing
 for example when navigating through code) it is a decent IDE for Rust
 development. It offers freely configurable keyboard shortcuts and a

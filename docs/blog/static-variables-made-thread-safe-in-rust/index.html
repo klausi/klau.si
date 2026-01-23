@@ -202,7 +202,7 @@ keep track…">
     <div class="post-content"><p>When writing <a href="https://klau.si/blog/writing-integration-tests-in-rust/">integration tests for my Rustnish reverse proxy project</a> I
 have hard-coded port numbers in tests. This is not ideal because it is hard to
 keep track of which port numbers have already been used and which ones are
-available when writing a new test. Because Rust's test runner <a href="https://doc.rust-lang.org/book/ch11-02-running-tests.html#running-tests-in-parallel-or-consecutively">executes test cases in parallel</a> it is important to coordinate
+available when writing a new test. Because Rust's test runner <a rel="external" href="https://doc.rust-lang.org/book/ch11-02-running-tests.html#running-tests-in-parallel-or-consecutively">executes test cases in parallel</a> it is important to coordinate
 which test uses which ports so that there are no clashes that break the tests.</p>
 <p>One obvious solution to this problem would be to disable parallel test
 execution with <code>cargo test -- --test-threads=1</code>. But we want to cover program
@@ -210,20 +210,18 @@ and test isolation with our test so this is not really an option.</p>
 <span id="continue-reading"></span><h2 id="a-naive-try">A naive try</h2>
 <p>The basic idea is to have a function <code>get_free_port()</code> that hands out port
 numbers incrementally and is called by tests:</p>
-<pre data-lang="rust" style="background-color:#191919;color:#f8f8f2;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#ff5e5e;">pub </span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">get_free_port</span><span>() -&gt; </span><span style="font-style:italic;color:#fbdfb5;">u16 </span><span>{
-</span><span>    </span><span style="font-style:italic;color:#fbdfb5;">static </span><span style="color:#ff5e5e;">mut </span><span style="color:#fdb082;">PORT_NR</span><span>: </span><span style="font-style:italic;color:#fbdfb5;">u16 </span><span style="color:#ff5e5e;">= </span><span style="color:#fdb082;">9090</span><span>;
-</span><span>    </span><span style="color:#fdb082;">PORT_NR </span><span style="color:#ff5e5e;">+= </span><span style="color:#fdb082;">1</span><span>;
-</span><span>    </span><span style="color:#fdb082;">PORT_NR
-</span><span>}
-</span></code></pre>
+<pre class="giallo" style="color: #E1E4E8; background-color: #24292E;"><code data-lang="rust"><span class="giallo-l"><span style="color: #F97583;">pub fn</span><span style="color: #B392F0;"> get_free_port</span><span>()</span><span style="color: #F97583;"> -&gt;</span><span style="color: #B392F0;"> u16</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #F97583;">    static mut</span><span style="color: #79B8FF;"> PORT_NR</span><span style="color: #F97583;">:</span><span style="color: #B392F0;"> u16</span><span style="color: #F97583;"> =</span><span style="color: #79B8FF;"> 9090</span><span>;</span></span>
+<span class="giallo-l"><span style="color: #79B8FF;">    PORT_NR</span><span style="color: #F97583;"> +=</span><span style="color: #79B8FF;"> 1</span><span>;</span></span>
+<span class="giallo-l"><span style="color: #79B8FF;">    PORT_NR</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre>
 <p>We initialize with the number 9090 here and return an incremented number for
 each call. The compiler doesn't seem to like it:</p>
-<pre style="background-color:#191919;color:#f8f8f2;"><code><span>error[E0133]: use of mutable static requires unsafe function or block
-</span><span>  --&gt; tests/common/mod.rs:99:5
-</span><span>   |
-</span><span>99 |     PORT_NR += 1;
-</span><span>   |     ^^^^^^^ use of mutable static
-</span></code></pre>
+<pre class="giallo" style="color: #E1E4E8; background-color: #24292E;"><code data-lang="plain"><span class="giallo-l"><span>error[E0133]: use of mutable static requires unsafe function or block</span></span>
+<span class="giallo-l"><span>  --&gt; tests/common/mod.rs:99:5</span></span>
+<span class="giallo-l"><span>   |</span></span>
+<span class="giallo-l"><span>99 |     PORT_NR += 1;</span></span>
+<span class="giallo-l"><span>   |     ^^^^^^^ use of mutable static</span></span></code></pre>
 <p>The compiler is saving me from a race condition here. Since tests are executed
 concurrently 2 tests could enter this function at the same time. One increments
 the port number, but before returning the operating system hands over execution
@@ -235,31 +233,28 @@ variable. In Java we would use the <code>synchronize</code> keyword on the funct
 definition to ensure that only one thread can enter it at a time. But Rust uses
 more primitive synchronization constructs.</p>
 <h2 id="protecting-static-variables-with-atomicusize">Protecting static variables with AtomicUsize</h2>
-<p>The standard library has some <a href="https://doc.rust-lang.org/std/sync/atomic/">good documentation about synchronized atomic
+<p>The standard library has some <a rel="external" href="https://doc.rust-lang.org/std/sync/atomic/">good documentation about synchronized atomic
 access</a> that we can use.</p>
-<pre data-lang="rust" style="background-color:#191919;color:#f8f8f2;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#ff5e5e;">pub </span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">get_free_port</span><span>() -&gt; </span><span style="font-style:italic;color:#fbdfb5;">u16 </span><span>{
-</span><span>    </span><span style="font-style:italic;color:#fbdfb5;">static </span><span style="color:#fdb082;">PORT_NR</span><span>: AtomicUsize </span><span style="color:#ff5e5e;">= </span><span style="color:#fdb082;">ATOMIC_USIZE_INIT</span><span>;
-</span><span>
-</span><span>    </span><span style="color:#fdb082;">PORT_NR</span><span>.</span><span style="color:#6699cc;">compare_and_swap</span><span>(</span><span style="color:#fdb082;">0</span><span>, </span><span style="color:#fdb082;">9090</span><span>, Ordering::SeqCst);
-</span><span>    </span><span style="color:#fdb082;">PORT_NR</span><span>.</span><span style="color:#6699cc;">fetch_add</span><span>(</span><span style="color:#fdb082;">1</span><span>, Ordering::SeqCst) </span><span style="color:#ff5e5e;">as </span><span style="font-style:italic;color:#fbdfb5;">u16
-</span><span>}
-</span></code></pre>
+<pre class="giallo" style="color: #E1E4E8; background-color: #24292E;"><code data-lang="rust"><span class="giallo-l"><span style="color: #F97583;">pub fn</span><span style="color: #B392F0;"> get_free_port</span><span>()</span><span style="color: #F97583;"> -&gt;</span><span style="color: #B392F0;"> u16</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #F97583;">    static</span><span style="color: #79B8FF;"> PORT_NR</span><span style="color: #F97583;">:</span><span style="color: #B392F0;"> AtomicUsize</span><span style="color: #F97583;"> =</span><span style="color: #79B8FF;"> ATOMIC_USIZE_INIT</span><span>;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #79B8FF;">    PORT_NR</span><span style="color: #F97583;">.</span><span style="color: #B392F0;">compare_and_swap</span><span>(</span><span style="color: #79B8FF;">0</span><span>,</span><span style="color: #79B8FF;"> 9090</span><span>,</span><span style="color: #B392F0;"> Ordering</span><span style="color: #F97583;">::</span><span style="color: #B392F0;">SeqCst</span><span>);</span></span>
+<span class="giallo-l"><span style="color: #79B8FF;">    PORT_NR</span><span style="color: #F97583;">.</span><span style="color: #B392F0;">fetch_add</span><span>(</span><span style="color: #79B8FF;">1</span><span>,</span><span style="color: #B392F0;"> Ordering</span><span style="color: #F97583;">::</span><span style="color: #B392F0;">SeqCst</span><span>)</span><span style="color: #F97583;"> as</span><span style="color: #B392F0;"> u16</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre>
 <p>This works, but is a bit annoying:</p>
 <ol>
 <li>
 <p>We have to initialize the static variable with <code>ATOMIC_USIZE_INIT</code> instead
 of our desired value 9090. If you try</p>
-<pre data-lang="rust" style="background-color:#191919;color:#f8f8f2;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="font-style:italic;color:#fbdfb5;">static </span><span style="color:#fdb082;">PORT_NR</span><span>: AtomicUsize </span><span style="color:#ff5e5e;">= </span><span>AtomicUsize::new(</span><span style="color:#fdb082;">9090</span><span>);
-</span></code></pre>
+<pre class="giallo" style="color: #E1E4E8; background-color: #24292E;"><code data-lang="rust"><span class="giallo-l"><span style="color: #F97583;">static</span><span style="color: #79B8FF;"> PORT_NR</span><span style="color: #F97583;">:</span><span style="color: #B392F0;"> AtomicUsize</span><span style="color: #F97583;"> =</span><span style="color: #B392F0;"> AtomicUsize</span><span style="color: #F97583;">::</span><span style="color: #B392F0;">new</span><span>(</span><span style="color: #79B8FF;">9090</span><span>);</span></span></code></pre>
 <p>then the compiler will complain:</p>
-<pre style="background-color:#191919;color:#f8f8f2;"><code><span>error: const fns are an unstable feature
-</span><span>   --&gt; tests/common/mod.rs:98:35
-</span><span>   |
-</span><span>98 |     static PORT_NR: AtomicUsize = AtomicUsize::new(9090);
-</span><span>   |                                   ^^^^^^^^^^^^^^^^^^^^^^
-</span><span>   |
-</span><span>   = help: in Nightly builds, add `#![feature(const_fn)]` to the crate attributes to enable
-</span></code></pre>
+<pre class="giallo" style="color: #E1E4E8; background-color: #24292E;"><code data-lang="plain"><span class="giallo-l"><span>error: const fns are an unstable feature</span></span>
+<span class="giallo-l"><span>   --&gt; tests/common/mod.rs:98:35</span></span>
+<span class="giallo-l"><span>   |</span></span>
+<span class="giallo-l"><span>98 |     static PORT_NR: AtomicUsize = AtomicUsize::new(9090);</span></span>
+<span class="giallo-l"><span>   |                                   ^^^^^^^^^^^^^^^^^^^^^^</span></span>
+<span class="giallo-l"><span>   |</span></span>
+<span class="giallo-l"><span>   = help: in Nightly builds, add `#![feature(const_fn)]` to the crate attributes to enable</span></span></code></pre>
 <p>We don't want to depend on the nightly compiler, so this is not possible
 right now.</p>
 </li>
@@ -269,7 +264,7 @@ directly initialize our value to 9090. It is executed on every call to
 <code>get_free_port()</code> and is just a waste of execution time.</p>
 </li>
 <li>
-<p>I have no idea what <code>Ordering::SeqCst</code> means. <a href="https://doc.rust-lang.org/std/sync/atomic/enum.Ordering.html">The
+<p>I have no idea what <code>Ordering::SeqCst</code> means. <a rel="external" href="https://doc.rust-lang.org/std/sync/atomic/enum.Ordering.html">The
 documentation</a>
 says that this variant is the most restrictive one but I don't know if this is
 necessary or ideal in my use case. I'm using it because it is used in the docs
@@ -281,14 +276,13 @@ type but no <code>AtomicU16</code>.</p>
 </li>
 </ol>
 <h2 id="postponing-the-offset-calculation">Postponing the offset calculation</h2>
-<p>Thanks to a <a href="https://users.rust-lang.org/t/how-do-you-access-static-variables-in-a-thread-safe-manner/12792/2">tip from Steven Fackler</a>
+<p>Thanks to a <a rel="external" href="https://users.rust-lang.org/t/how-do-you-access-static-variables-in-a-thread-safe-manner/12792/2">tip from Steven Fackler</a>
 we can postpone our offset to the very end:</p>
-<pre data-lang="rust" style="background-color:#191919;color:#f8f8f2;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#ff5e5e;">pub </span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">get_free_port</span><span>() -&gt; </span><span style="font-style:italic;color:#fbdfb5;">u16 </span><span>{
-</span><span>    </span><span style="font-style:italic;color:#fbdfb5;">static </span><span style="color:#fdb082;">PORT_NR</span><span>: AtomicUsize </span><span style="color:#ff5e5e;">= </span><span style="color:#fdb082;">ATOMIC_USIZE_INIT</span><span>;
-</span><span>
-</span><span>    </span><span style="color:#fdb082;">PORT_NR</span><span>.</span><span style="color:#6699cc;">fetch_add</span><span>(</span><span style="color:#fdb082;">1</span><span>, Ordering::SeqCst) </span><span style="color:#ff5e5e;">as </span><span style="font-style:italic;color:#fbdfb5;">u16 </span><span style="color:#ff5e5e;">+ </span><span style="color:#fdb082;">9090
-</span><span>}
-</span></code></pre>
+<pre class="giallo" style="color: #E1E4E8; background-color: #24292E;"><code data-lang="rust"><span class="giallo-l"><span style="color: #F97583;">pub fn</span><span style="color: #B392F0;"> get_free_port</span><span>()</span><span style="color: #F97583;"> -&gt;</span><span style="color: #B392F0;"> u16</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #F97583;">    static</span><span style="color: #79B8FF;"> PORT_NR</span><span style="color: #F97583;">:</span><span style="color: #B392F0;"> AtomicUsize</span><span style="color: #F97583;"> =</span><span style="color: #79B8FF;"> ATOMIC_USIZE_INIT</span><span>;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #79B8FF;">    PORT_NR</span><span style="color: #F97583;">.</span><span style="color: #B392F0;">fetch_add</span><span>(</span><span style="color: #79B8FF;">1</span><span>,</span><span style="color: #B392F0;"> Ordering</span><span style="color: #F97583;">::</span><span style="color: #B392F0;">SeqCst</span><span>)</span><span style="color: #F97583;"> as</span><span style="color: #B392F0;"> u16</span><span style="color: #F97583;"> +</span><span style="color: #79B8FF;"> 9090</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre>
 <p>That way we can remove the initialization condition and always operate on a
 fixed offset of 9090. This is still not super intuitive because the initial
 value of our counter is at the very end which makes this function hard to read.</p>

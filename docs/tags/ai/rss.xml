@@ -14,7 +14,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/testing-claude-ai-for-drupal-code/</link>
           <guid>https://klau.si/blog/testing-claude-ai-for-drupal-code/</guid>
-          <description xml:base="https://klau.si/blog/testing-claude-ai-for-drupal-code/">&lt;p&gt;I tested ClaudeAI for Drupal code, got inspired by &lt;a href=&quot;https:&#x2F;&#x2F;dri.es&#x2F;claude-code-meets-drupal&quot;&gt;Dries Buytaert video&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/testing-claude-ai-for-drupal-code/">&lt;p&gt;I tested ClaudeAI for Drupal code, got inspired by &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;dri.es&#x2F;claude-code-meets-drupal&quot;&gt;Dries Buytaert video&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;🤯 the interaction and suggestions were quite good&lt;&#x2F;li&gt;
 &lt;li&gt;💵 execution is expensive, I paid $1.16 for 20 minutes&lt;&#x2F;li&gt;

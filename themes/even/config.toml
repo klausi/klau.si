@@ -7,20 +7,20 @@ description = ""
 generate_feed = true
 
 taxonomies = [
-    {name = "categories", feed = true},
-    {name = "tags", feed = true},
+    { name = "categories", feed = true },
+    { name = "tags", feed = true },
 ]
 
-[markdown]
-highlight_code = true
+[markdown.highlighting]
+theme = "github-dark"
 
 [extra]
 author = "Vincent"
 even_menu = [
-    {url = "$BASE_URL", name = "Home"},
-    {url = "$BASE_URL/categories", name = "Categories"},
-    {url = "$BASE_URL/tags", name = "Tags"},
-    {url = "$BASE_URL/about", name = "About"},
+    { url = "$BASE_URL", name = "Home" },
+    { url = "$BASE_URL/categories", name = "Categories" },
+    { url = "$BASE_URL/tags", name = "Tags" },
+    { url = "$BASE_URL/about", name = "About" },
 ]
 
 even_title = "Even"

@@ -197,79 +197,76 @@
         </div>
     </header>
 
-    <div class="post-content"><p>When writing automated unit tests for your application you will probably need to use <a href="https://en.wikipedia.org/wiki/Mock_object">mocks</a> at some point. Classical object-oriented programming languages such as PHP solve this with reflection where mock object types are created during test runtime. The code under test expects a certain interface or class and the test code passes mock objects that implement the interface or are a subclass.</p>
-<p>Similar approaches exist in Rust where mock objects are used to test code that expects a trait type. There is a wonderful <a href="https://asomers.github.io/mock_shootout/">Rust mock framework comparison</a> by Alan Somers that lists their features. The biggest problem with most of them as far as I can see is that they cannot mock a foreign <code>struct</code> you are using in your code. Rust does not have a concept of object inheritance for structs so there is no way to mimic a struct type from the standard library or an external crate.</p>
+    <div class="post-content"><p>When writing automated unit tests for your application you will probably need to use <a rel="external" href="https://en.wikipedia.org/wiki/Mock_object">mocks</a> at some point. Classical object-oriented programming languages such as PHP solve this with reflection where mock object types are created during test runtime. The code under test expects a certain interface or class and the test code passes mock objects that implement the interface or are a subclass.</p>
+<p>Similar approaches exist in Rust where mock objects are used to test code that expects a trait type. There is a wonderful <a rel="external" href="https://asomers.github.io/mock_shootout/">Rust mock framework comparison</a> by Alan Somers that lists their features. The biggest problem with most of them as far as I can see is that they cannot mock a foreign <code>struct</code> you are using in your code. Rust does not have a concept of object inheritance for structs so there is no way to mimic a struct type from the standard library or an external crate.</p>
 <span id="continue-reading"></span>
 <p>One workaround for that is to refactor your code to use traits/generics instead of concrete structs. That way the implementation is agnostic to whatever struct is used - test code can pass mocks that satisfy the expected trait bounds. The downside is that you might have to invent traits which can make your code more complex just to satisfy test requirements.</p>
-<p>Another solution is to use one of Rust's powerful meta programming capabilities: <a href="https://doc.rust-lang.org/reference/conditional-compilation.html">conditional compilation</a>.</p>
+<p>Another solution is to use one of Rust's powerful meta programming capabilities: <a rel="external" href="https://doc.rust-lang.org/reference/conditional-compilation.html">conditional compilation</a>.</p>
 <h2 id="conditional-compilation-for-test-types">Conditional compilation for test types</h2>
-<p>This was quite a revelation to me and still blows my mind: you can just swap out a complete type during test runs! I first found this when looking at the <a href="https://github.com/maidsafe/lru_time_cache">lru_time_cache crate</a> and the <a href="https://github.com/pcsm/test_double">test_double crate</a>.</p>
-<p>Let's look at a concrete use case as I implemented for <a href="https://github.com/klausi/rustnish/blob/goal-11/src/cache.rs">the cache part</a> of my Rustnish project (a fork of the mentioned lru_time_cache crate). The cache has an <code>insert()</code> and <code>len()</code> method defined like this:</p>
-<pre data-lang="rust" style="background-color:#191919;color:#f8f8f2;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#ff5e5e;">use </span><span>std::time::Instant;
-</span><span>
-</span><span style="color:#6d6d6d;">/// Inserts a key-value pair into the cache.
-</span><span style="color:#ff5e5e;">pub </span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">insert</span><span>(</span><span style="color:#ff5e5e;">&amp;mut </span><span style="font-style:italic;color:#fc9354;">self</span><span>, </span><span style="font-style:italic;color:#fc9354;">key</span><span>: Key, </span><span style="font-style:italic;color:#fc9354;">value</span><span>: Value, </span><span style="font-style:italic;color:#fc9354;">expires</span><span>: Instant) -&gt; </span><span style="color:#fbe3bf;">Option</span><span>&lt;Value&gt; {
-</span><span>    </span><span style="color:#e9fdac;">self</span><span>.</span><span style="color:#6699cc;">remove_expired</span><span>();
-</span><span>    </span><span style="color:#6d6d6d;">// ...
-</span><span>    </span><span style="color:#6d6d6d;">// Rest of function body omitted here.
-</span><span>}
-</span><span>
-</span><span style="color:#6d6d6d;">/// Returns the size of the cache, i.e. the number of cached non-expired key-value pairs.
-</span><span style="color:#ff5e5e;">pub </span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">len</span><span>(</span><span style="color:#ff5e5e;">&amp;</span><span style="font-style:italic;color:#fc9354;">self</span><span>) -&gt; </span><span style="font-style:italic;color:#fbdfb5;">usize </span><span>{
-</span><span>    </span><span style="color:#e9fdac;">self</span><span>.map
-</span><span>        .</span><span style="color:#6699cc;">iter</span><span>()
-</span><span>        .</span><span style="color:#6699cc;">filter</span><span>(|</span><span style="color:#ff5e5e;">&amp;</span><span>(_, (_, </span><span style="font-style:italic;color:#fc9354;">t</span><span>, _))</span><span style="color:#ff5e5e;">| *</span><span>t </span><span style="color:#ff5e5e;">&gt;= </span><span>Instant::now())
-</span><span>        .</span><span style="color:#6699cc;">count</span><span>()
-</span><span>}
-</span></code></pre>
+<p>This was quite a revelation to me and still blows my mind: you can just swap out a complete type during test runs! I first found this when looking at the <a rel="external" href="https://github.com/maidsafe/lru_time_cache">lru_time_cache crate</a> and the <a rel="external" href="https://github.com/pcsm/test_double">test_double crate</a>.</p>
+<p>Let's look at a concrete use case as I implemented for <a rel="external" href="https://github.com/klausi/rustnish/blob/goal-11/src/cache.rs">the cache part</a> of my Rustnish project (a fork of the mentioned lru_time_cache crate). The cache has an <code>insert()</code> and <code>len()</code> method defined like this:</p>
+<pre class="giallo" style="color: #E1E4E8; background-color: #24292E;"><code data-lang="rust"><span class="giallo-l"><span style="color: #F97583;">use</span><span style="color: #B392F0;"> std</span><span style="color: #F97583;">::</span><span style="color: #B392F0;">time</span><span style="color: #F97583;">::</span><span style="color: #B392F0;">Instant</span><span>;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #6A737D;">/// Inserts a key-value pair into the cache.</span></span>
+<span class="giallo-l"><span style="color: #F97583;">pub fn</span><span style="color: #B392F0;"> insert</span><span>(</span><span style="color: #F97583;">&amp;mut</span><span style="color: #79B8FF;"> self</span><span>, key</span><span style="color: #F97583;">:</span><span style="color: #B392F0;"> Key</span><span>, value</span><span style="color: #F97583;">:</span><span style="color: #B392F0;"> Value</span><span>, expires</span><span style="color: #F97583;">:</span><span style="color: #B392F0;"> Instant</span><span>)</span><span style="color: #F97583;"> -&gt;</span><span style="color: #B392F0;"> Option</span><span>&lt;</span><span style="color: #B392F0;">Value</span><span>&gt; {</span></span>
+<span class="giallo-l"><span style="color: #79B8FF;">    self</span><span style="color: #F97583;">.</span><span style="color: #B392F0;">remove_expired</span><span>();</span></span>
+<span class="giallo-l"><span style="color: #6A737D;">    // ...</span></span>
+<span class="giallo-l"><span style="color: #6A737D;">    // Rest of function body omitted here.</span></span>
+<span class="giallo-l"><span>}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #6A737D;">/// Returns the size of the cache, i.e. the number of cached non-expired key-value pairs.</span></span>
+<span class="giallo-l"><span style="color: #F97583;">pub fn</span><span style="color: #B392F0;"> len</span><span>(</span><span style="color: #F97583;">&amp;</span><span style="color: #79B8FF;">self</span><span>)</span><span style="color: #F97583;"> -&gt;</span><span style="color: #B392F0;"> usize</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #79B8FF;">    self</span><span style="color: #F97583;">.</span><span>map</span></span>
+<span class="giallo-l"><span style="color: #F97583;">        .</span><span style="color: #B392F0;">iter</span><span>()</span></span>
+<span class="giallo-l"><span style="color: #F97583;">        .</span><span style="color: #B392F0;">filter</span><span>(</span><span style="color: #F97583;">|&amp;</span><span>(_, (_, t, _))</span><span style="color: #F97583;">| *</span><span>t</span><span style="color: #F97583;"> &gt;=</span><span style="color: #B392F0;"> Instant</span><span style="color: #F97583;">::</span><span style="color: #B392F0;">now</span><span>())</span></span>
+<span class="giallo-l"><span style="color: #F97583;">        .</span><span style="color: #B392F0;">count</span><span>()</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre>
 <p>Whenever <code>len()</code> is called it has to go through all items in the cache and only count the non-expired ones (expired items are only removed in <code>insert()</code> calls).</p>
 <p>How do we test this effectively? We could use <code>thread::sleep()</code> in test functions and check real time results, but that makes the unit test slow and dependent on thread time. How can we mock the <code>Instant</code> struct and associated methods instead? The secret sauce is this:</p>
-<pre data-lang="rust" style="background-color:#191919;color:#f8f8f2;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#6d6d6d;">// During testing we use a mock clock to be time independent.
-</span><span>#[</span><span style="color:#e9fdac;">cfg</span><span>(test)]
-</span><span style="color:#ff5e5e;">use </span><span>fake_clock::FakeClock </span><span style="color:#ff5e5e;">as</span><span> Instant;
-</span><span>#[</span><span style="color:#e9fdac;">cfg</span><span>(</span><span style="color:#e9fdac;">not</span><span>(test))]
-</span><span style="color:#ff5e5e;">use </span><span>std::time::Instant;
-</span></code></pre>
-<p>The <code>cfg</code> attribute is used here to swap in a mock <code>Instant</code> type whenever the tests are executed. During production compilation the normal type is used. Luckily in this case a <a href="https://crates.io/crates/fake_clock">fake_clock crate</a> already exists, so we don't even have to write the mock code and just use it:</p>
-<pre data-lang="rust" style="background-color:#191919;color:#f8f8f2;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">sleep</span><span>(</span><span style="font-style:italic;color:#fc9354;">time</span><span>: </span><span style="font-style:italic;color:#fbdfb5;">u64</span><span>) {
-</span><span>    </span><span style="color:#ff5e5e;">use </span><span>fake_clock::FakeClock;
-</span><span>    FakeClock::advance_time(time);
-</span><span>}
-</span><span>
-</span><span>#[</span><span style="color:#e9fdac;">test</span><span>]
-</span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">expiration_time</span><span>() {
-</span><span>    </span><span style="font-style:italic;color:#fbdfb5;">let</span><span> time_to_live </span><span style="color:#ff5e5e;">= </span><span>Duration::from_millis(</span><span style="color:#fdb082;">100</span><span>);
-</span><span>    </span><span style="font-style:italic;color:#fbdfb5;">let </span><span style="color:#ff5e5e;">mut</span><span> lru_cache </span><span style="color:#ff5e5e;">= super</span><span>::LruCache::&lt;</span><span style="font-style:italic;color:#fbdfb5;">usize</span><span>, </span><span style="font-style:italic;color:#fbdfb5;">usize</span><span>&gt;::with_memory_size(</span><span style="color:#fdb082;">10000</span><span>);
-</span><span>
-</span><span>    </span><span style="color:#ff5e5e;">for</span><span> i </span><span style="color:#ff5e5e;">in </span><span style="color:#fdb082;">0</span><span style="color:#ff5e5e;">..</span><span style="color:#fdb082;">10 </span><span>{
-</span><span>        assert_eq!(lru_cache.</span><span style="color:#6699cc;">len</span><span>(), i);
-</span><span>        </span><span style="font-style:italic;color:#fbdfb5;">let </span><span style="color:#ff5e5e;">_ =</span><span> lru_cache.</span><span style="color:#6699cc;">insert</span><span>(i, i, Instant::now() </span><span style="color:#ff5e5e;">+</span><span> time_to_live);
-</span><span>        assert_eq!(lru_cache.</span><span style="color:#6699cc;">len</span><span>(), i </span><span style="color:#ff5e5e;">+ </span><span style="color:#fdb082;">1</span><span>);
-</span><span>    }
-</span><span>
-</span><span>    </span><span style="color:#6699cc;">sleep</span><span>(</span><span style="color:#fdb082;">101</span><span>);
-</span><span>    </span><span style="font-style:italic;color:#fbdfb5;">let </span><span style="color:#ff5e5e;">_ =</span><span> lru_cache.</span><span style="color:#6699cc;">insert</span><span>(</span><span style="color:#fdb082;">11</span><span>, </span><span style="color:#fdb082;">11</span><span>, Instant::now() </span><span style="color:#ff5e5e;">+</span><span> time_to_live);
-</span><span>
-</span><span>    </span><span style="color:#6d6d6d;">// All old items are expired, so only the last item must remain.
-</span><span>    assert_eq!(lru_cache.</span><span style="color:#6699cc;">len</span><span>(), </span><span style="color:#fdb082;">1</span><span>);
-</span><span>
-</span><span>    </span><span style="color:#ff5e5e;">for</span><span> i </span><span style="color:#ff5e5e;">in </span><span style="color:#fdb082;">0</span><span style="color:#ff5e5e;">..</span><span style="color:#fdb082;">10 </span><span>{
-</span><span>        assert!(</span><span style="color:#ff5e5e;">!</span><span>lru_cache.</span><span style="color:#6699cc;">is_empty</span><span>());
-</span><span>        assert_eq!(lru_cache.</span><span style="color:#6699cc;">len</span><span>(), i </span><span style="color:#ff5e5e;">+ </span><span style="color:#fdb082;">1</span><span>);
-</span><span>        </span><span style="font-style:italic;color:#fbdfb5;">let </span><span style="color:#ff5e5e;">_ =</span><span> lru_cache.</span><span style="color:#6699cc;">insert</span><span>(i, i, Instant::now() </span><span style="color:#ff5e5e;">+</span><span> time_to_live);
-</span><span>        assert_eq!(lru_cache.</span><span style="color:#6699cc;">len</span><span>(), i </span><span style="color:#ff5e5e;">+ </span><span style="color:#fdb082;">2</span><span>);
-</span><span>    }
-</span><span>
-</span><span>    </span><span style="color:#6699cc;">sleep</span><span>(</span><span style="color:#fdb082;">101</span><span>);
-</span><span>    </span><span style="color:#6d6d6d;">// All items are expired, so the cache must report being empty.
-</span><span>    assert_eq!(</span><span style="color:#fdb082;">0</span><span>, lru_cache.</span><span style="color:#6699cc;">len</span><span>());
-</span><span>    assert!(lru_cache.</span><span style="color:#6699cc;">is_empty</span><span>());
-</span><span>}
-</span></code></pre>
+<pre class="giallo" style="color: #E1E4E8; background-color: #24292E;"><code data-lang="rust"><span class="giallo-l"><span style="color: #6A737D;">// During testing we use a mock clock to be time independent.</span></span>
+<span class="giallo-l"><span>#[cfg(test)]</span></span>
+<span class="giallo-l"><span style="color: #F97583;">use</span><span style="color: #B392F0;"> fake_clock</span><span style="color: #F97583;">::</span><span style="color: #B392F0;">FakeClock</span><span style="color: #F97583;"> as</span><span style="color: #B392F0;"> Instant</span><span>;</span></span>
+<span class="giallo-l"><span>#[cfg(not(test))]</span></span>
+<span class="giallo-l"><span style="color: #F97583;">use</span><span style="color: #B392F0;"> std</span><span style="color: #F97583;">::</span><span style="color: #B392F0;">time</span><span style="color: #F97583;">::</span><span style="color: #B392F0;">Instant</span><span>;</span></span></code></pre>
+<p>The <code>cfg</code> attribute is used here to swap in a mock <code>Instant</code> type whenever the tests are executed. During production compilation the normal type is used. Luckily in this case a <a rel="external" href="https://crates.io/crates/fake_clock">fake_clock crate</a> already exists, so we don't even have to write the mock code and just use it:</p>
+<pre class="giallo" style="color: #E1E4E8; background-color: #24292E;"><code data-lang="rust"><span class="giallo-l"><span style="color: #F97583;">fn</span><span style="color: #B392F0;"> sleep</span><span>(time</span><span style="color: #F97583;">:</span><span style="color: #B392F0;"> u64</span><span>) {</span></span>
+<span class="giallo-l"><span style="color: #F97583;">    use</span><span style="color: #B392F0;"> fake_clock</span><span style="color: #F97583;">::</span><span style="color: #B392F0;">FakeClock</span><span>;</span></span>
+<span class="giallo-l"><span style="color: #B392F0;">    FakeClock</span><span style="color: #F97583;">::</span><span style="color: #B392F0;">advance_time</span><span>(time);</span></span>
+<span class="giallo-l"><span>}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>#[test]</span></span>
+<span class="giallo-l"><span style="color: #F97583;">fn</span><span style="color: #B392F0;"> expiration_time</span><span>() {</span></span>
+<span class="giallo-l"><span style="color: #F97583;">    let</span><span> time_to_live</span><span style="color: #F97583;"> =</span><span style="color: #B392F0;"> Duration</span><span style="color: #F97583;">::</span><span style="color: #B392F0;">from_millis</span><span>(</span><span style="color: #79B8FF;">100</span><span>);</span></span>
+<span class="giallo-l"><span style="color: #F97583;">    let mut</span><span> lru_cache</span><span style="color: #F97583;"> =</span><span style="color: #79B8FF;"> super</span><span style="color: #F97583;">::</span><span style="color: #B392F0;">LruCache</span><span style="color: #F97583;">::</span><span>&lt;</span><span style="color: #B392F0;">usize</span><span>,</span><span style="color: #B392F0;"> usize</span><span>&gt;</span><span style="color: #F97583;">::</span><span style="color: #B392F0;">with_memory_size</span><span>(</span><span style="color: #79B8FF;">10000</span><span>);</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #F97583;">    for</span><span> i</span><span style="color: #F97583;"> in</span><span style="color: #79B8FF;"> 0</span><span style="color: #F97583;">..</span><span style="color: #79B8FF;">10</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #B392F0;">        assert_eq!</span><span>(lru_cache</span><span style="color: #F97583;">.</span><span style="color: #B392F0;">len</span><span>(), i);</span></span>
+<span class="giallo-l"><span style="color: #F97583;">        let</span><span> _</span><span style="color: #F97583;"> =</span><span> lru_cache</span><span style="color: #F97583;">.</span><span style="color: #B392F0;">insert</span><span>(i, i,</span><span style="color: #B392F0;"> Instant</span><span style="color: #F97583;">::</span><span style="color: #B392F0;">now</span><span>()</span><span style="color: #F97583;"> +</span><span> time_to_live);</span></span>
+<span class="giallo-l"><span style="color: #B392F0;">        assert_eq!</span><span>(lru_cache</span><span style="color: #F97583;">.</span><span style="color: #B392F0;">len</span><span>(), i</span><span style="color: #F97583;"> +</span><span style="color: #79B8FF;"> 1</span><span>);</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #B392F0;">    sleep</span><span>(</span><span style="color: #79B8FF;">101</span><span>);</span></span>
+<span class="giallo-l"><span style="color: #F97583;">    let</span><span> _</span><span style="color: #F97583;"> =</span><span> lru_cache</span><span style="color: #F97583;">.</span><span style="color: #B392F0;">insert</span><span>(</span><span style="color: #79B8FF;">11</span><span>,</span><span style="color: #79B8FF;"> 11</span><span>,</span><span style="color: #B392F0;"> Instant</span><span style="color: #F97583;">::</span><span style="color: #B392F0;">now</span><span>()</span><span style="color: #F97583;"> +</span><span> time_to_live);</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #6A737D;">    // All old items are expired, so only the last item must remain.</span></span>
+<span class="giallo-l"><span style="color: #B392F0;">    assert_eq!</span><span>(lru_cache</span><span style="color: #F97583;">.</span><span style="color: #B392F0;">len</span><span>(),</span><span style="color: #79B8FF;"> 1</span><span>);</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #F97583;">    for</span><span> i</span><span style="color: #F97583;"> in</span><span style="color: #79B8FF;"> 0</span><span style="color: #F97583;">..</span><span style="color: #79B8FF;">10</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #B392F0;">        assert!</span><span>(</span><span style="color: #F97583;">!</span><span>lru_cache</span><span style="color: #F97583;">.</span><span style="color: #B392F0;">is_empty</span><span>());</span></span>
+<span class="giallo-l"><span style="color: #B392F0;">        assert_eq!</span><span>(lru_cache</span><span style="color: #F97583;">.</span><span style="color: #B392F0;">len</span><span>(), i</span><span style="color: #F97583;"> +</span><span style="color: #79B8FF;"> 1</span><span>);</span></span>
+<span class="giallo-l"><span style="color: #F97583;">        let</span><span> _</span><span style="color: #F97583;"> =</span><span> lru_cache</span><span style="color: #F97583;">.</span><span style="color: #B392F0;">insert</span><span>(i, i,</span><span style="color: #B392F0;"> Instant</span><span style="color: #F97583;">::</span><span style="color: #B392F0;">now</span><span>()</span><span style="color: #F97583;"> +</span><span> time_to_live);</span></span>
+<span class="giallo-l"><span style="color: #B392F0;">        assert_eq!</span><span>(lru_cache</span><span style="color: #F97583;">.</span><span style="color: #B392F0;">len</span><span>(), i</span><span style="color: #F97583;"> +</span><span style="color: #79B8FF;"> 2</span><span>);</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #B392F0;">    sleep</span><span>(</span><span style="color: #79B8FF;">101</span><span>);</span></span>
+<span class="giallo-l"><span style="color: #6A737D;">    // All items are expired, so the cache must report being empty.</span></span>
+<span class="giallo-l"><span style="color: #B392F0;">    assert_eq!</span><span>(</span><span style="color: #79B8FF;">0</span><span>, lru_cache</span><span style="color: #F97583;">.</span><span style="color: #B392F0;">len</span><span>());</span></span>
+<span class="giallo-l"><span style="color: #B392F0;">    assert!</span><span>(lru_cache</span><span style="color: #F97583;">.</span><span style="color: #B392F0;">is_empty</span><span>());</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre>
 <p><code>FakeClock</code> exhibits the same methods as <code>Instant</code> from the standard library, so the compiler has no problem to use it as a drop-in replacement. We can manipulate the FakeClock from the outside and pretend that a certain amount of time has passed while we really just increase a counter. Super fast unit test, no waiting with a <code>thread::sleep()</code> needed!</p>
 <h2 id="integration-tests-not-affected">Integration tests not affected</h2>
 <p>"But Klausi!" you scream "Now your reverse proxy integration tests are broken because they will also run with the fake clock!"</p>
-<p>No, because Rust compiles each <a href="https://doc.rust-lang.org/rust-by-example/testing/integration_testing.html">integration test</a> as separate crate. It links it with your main crate, but only the integration test code has <code>#[cfg(test)]</code> mode on during that test run. The main crate will use the production <code>Instant</code> type and everything still works as before.</p>
+<p>No, because Rust compiles each <a rel="external" href="https://doc.rust-lang.org/rust-by-example/testing/integration_testing.html">integration test</a> as separate crate. It links it with your main crate, but only the integration test code has <code>#[cfg(test)]</code> mode on during that test run. The main crate will use the production <code>Instant</code> type and everything still works as before.</p>
 <h2 id="downsides-of-conditional-compilation-mocks">Downsides of conditional compilation mocks</h2>
 <p>So far so good, but there are some downsides to consider with this approach:</p>
 <ul>
@@ -279,11 +276,11 @@
 </ul>
 <p>As you can see there is great overlap with the general challenges of mocking, so don't take these as arguments against conditional compilation mocks specifically.</p>
 <h2 id="conclusion">Conclusion</h2>
-<p>Rust is super flexible and powerful on the topic of mocking. Conditional compilation is a next level opportunity that is simply missing in other programming languages. HTTP request mocking libraries such as <a href="https://github.com/lipanski/mockito">Mockito</a> are beginning to leverage this.</p>
+<p>Rust is super flexible and powerful on the topic of mocking. Conditional compilation is a next level opportunity that is simply missing in other programming languages. HTTP request mocking libraries such as <a rel="external" href="https://github.com/lipanski/mockito">Mockito</a> are beginning to leverage this.</p>
 <p>But there are also maturity problems:</p>
 <ul>
 <li>There are 7 competing mocking frameworks, a sign that the Rust ecosystem has not figured out yet how to do it effectively for everybody.</li>
-<li>The <a href="https://doc.rust-lang.org/1.33.0/book/ch11-00-testing.html">official Testing documentation</a> does not even mention mocking. I assume any larger Rust program will run into mocking use cases during tests, so this is lacking. Interestingly there is a mock use case in the <a href="https://doc.rust-lang.org/1.33.0/book/ch15-05-interior-mutability.html#a-use-case-for-interior-mutability-mock-objects">RefCell example documentation</a>.</li>
+<li>The <a rel="external" href="https://doc.rust-lang.org/1.33.0/book/ch11-00-testing.html">official Testing documentation</a> does not even mention mocking. I assume any larger Rust program will run into mocking use cases during tests, so this is lacking. Interestingly there is a mock use case in the <a rel="external" href="https://doc.rust-lang.org/1.33.0/book/ch15-05-interior-mutability.html#a-use-case-for-interior-mutability-mock-objects">RefCell example documentation</a>.</li>
 </ul>
 </div>
 

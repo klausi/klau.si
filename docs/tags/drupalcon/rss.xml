@@ -14,7 +14,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-security-code-review/</link>
           <guid>https://klau.si/blog/drupalcon-security-code-review/</guid>
-          <description xml:base="https://klau.si/blog/drupalcon-security-code-review/">&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;klausi.github.io&#x2F;sec-code-review2019&#x2F;#&#x2F;&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of my DrupalCon Amsterdam 2019 talk &quot;Find security vulnerabilities through code review&quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-security-code-review/">&lt;p&gt;Here are &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;klausi.github.io&#x2F;sec-code-review2019&#x2F;#&#x2F;&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of my DrupalCon Amsterdam 2019 talk &quot;Find security vulnerabilities through code review&quot;.&lt;&#x2F;p&gt;
 &lt;div class=&quot;youtube-lazy&quot; data-video-id=&quot;Oyoja2rfqSk&quot;&gt;
   &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=Oyoja2rfqSk&quot;
      class=&quot;youtube-lazy-placeholder&quot;
@@ -34,7 +34,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-automated-testing-phpunit/</link>
           <guid>https://klau.si/blog/drupalcon-automated-testing-phpunit/</guid>
-          <description xml:base="https://klau.si/blog/drupalcon-automated-testing-phpunit/">&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;docs.google.com&#x2F;presentation&#x2F;d&#x2F;1Uhw3wYfcC_axz6SRTxEHVe8FZHbA-tUGN7dr7YyHMXg&#x2F;edit&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of our DrupalCon Dublin 2016 talk &quot;Automated Testing: PHPUnit all the way&quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-automated-testing-phpunit/">&lt;p&gt;Here are &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;docs.google.com&#x2F;presentation&#x2F;d&#x2F;1Uhw3wYfcC_axz6SRTxEHVe8FZHbA-tUGN7dr7YyHMXg&#x2F;edit&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of our DrupalCon Dublin 2016 talk &quot;Automated Testing: PHPUnit all the way&quot;.&lt;&#x2F;p&gt;
 &lt;div class=&quot;youtube-lazy&quot; data-video-id=&quot;jcdEp3YGa94&quot;&gt;
   &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=jcdEp3YGa94&quot;
      class=&quot;youtube-lazy-placeholder&quot;
@@ -74,7 +74,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-security-what-you-need-to-know/</link>
           <guid>https://klau.si/blog/drupalcon-security-what-you-need-to-know/</guid>
-          <description xml:base="https://klau.si/blog/drupalcon-security-what-you-need-to-know/">&lt;p&gt;Here are &lt;a href=&quot;http:&#x2F;&#x2F;scor.github.io&#x2F;drupal-security-2015&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of our DrupalCon Barcelona 2015 talk &quot;Drupal and Security: what you need to know&quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-security-what-you-need-to-know/">&lt;p&gt;Here are &lt;a rel=&quot;external&quot; href=&quot;http:&#x2F;&#x2F;scor.github.io&#x2F;drupal-security-2015&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of our DrupalCon Barcelona 2015 talk &quot;Drupal and Security: what you need to know&quot;.&lt;&#x2F;p&gt;
 &lt;div class=&quot;youtube-lazy&quot; data-video-id=&quot;5LpKelSMsas&quot;&gt;
   &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=5LpKelSMsas&quot;
      class=&quot;youtube-lazy-placeholder&quot;
@@ -114,7 +114,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-cracking-drupal/</link>
           <guid>https://klau.si/blog/drupalcon-cracking-drupal/</guid>
-          <description xml:base="https://klau.si/blog/drupalcon-cracking-drupal/">&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;docs.google.com&#x2F;presentation&#x2F;d&#x2F;1LWXRbcQUTj9NDHg8gHplAc7EGy94nmbUEUryWLHJqBg&#x2F;edit?usp=sharing&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of our DrupalCon Amsterdam 2014 talk &quot;Cracking Drupal&quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-cracking-drupal/">&lt;p&gt;Here are &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;docs.google.com&#x2F;presentation&#x2F;d&#x2F;1LWXRbcQUTj9NDHg8gHplAc7EGy94nmbUEUryWLHJqBg&#x2F;edit?usp=sharing&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of our DrupalCon Amsterdam 2014 talk &quot;Cracking Drupal&quot;.&lt;&#x2F;p&gt;
 &lt;div class=&quot;youtube-lazy&quot; data-video-id=&quot;ZkNGObI4nlU&quot;&gt;
   &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=ZkNGObI4nlU&quot;
      class=&quot;youtube-lazy-placeholder&quot;

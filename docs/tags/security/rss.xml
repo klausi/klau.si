@@ -17,10 +17,10 @@
           <description xml:base="https://klau.si/blog/security-advisory-nextjs-redirects/">&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;security-advisory-nextjs-redirects&#x2F;nextjs_exhale.webp&quot; alt=&quot;Black Next.js logos arranged in a circle. In the middle is an emoji with closed eyes exhausting.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;Security Advisory: Next.js Denial of Service vulnerability in redirect misconfiguration&lt;&#x2F;p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Project&lt;&#x2F;strong&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;nextjs.org&#x2F;&quot;&gt;Next.js&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Project&lt;&#x2F;strong&gt;: &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;nextjs.org&#x2F;&quot;&gt;Next.js&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;strong&gt;Security Risk&lt;&#x2F;strong&gt;: Less Critical&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;strong&gt;Vulnerability&lt;&#x2F;strong&gt;: Denial of Service (DoS)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Category&lt;&#x2F;strong&gt;: &lt;a href=&quot;https:&#x2F;&#x2F;owasp.org&#x2F;Top10&#x2F;A05_2021-Security_Misconfiguration&#x2F;&quot;&gt;OWASP A05:2021 – Security Misconfiguration&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Category&lt;&#x2F;strong&gt;: &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;owasp.org&#x2F;Top10&#x2F;A05_2021-Security_Misconfiguration&#x2F;&quot;&gt;OWASP A05:2021 – Security Misconfiguration&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;strong&gt;Affected versions&lt;&#x2F;strong&gt;: all Next.js versions, for example 15.0.3&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;p&gt;Note: This vulnerability has been disclosed privately to the Vercel Security Team. They decided that this is a misconfiguration issue and not an inherent security issue.&lt;&#x2F;p&gt;</description>
@@ -31,7 +31,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/d7security-devdays/</link>
           <guid>https://klau.si/blog/d7security-devdays/</guid>
-          <description xml:base="https://klau.si/blog/d7security-devdays/">&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;d7security-devdays&#x2F;d7security-dev-days-bourgas-2024.pdf&quot;&gt;the slides&lt;&#x2F;a&gt; of my &lt;a href=&quot;https:&#x2F;&#x2F;ddd2024.drupalcamp.bg&#x2F;drupal-dev-days-2024&#x2F;session&#x2F;d7security-drupal-7-long-term-support&quot;&gt;Drupal Dev Days presentation&lt;&#x2F;a&gt; about &lt;a href=&quot;https:&#x2F;&#x2F;www.d7security.org&quot;&gt;D7Security&lt;&#x2F;a&gt; in Bourgas. Unfortunately there is no video recording.&lt;&#x2F;p&gt;</description>
+          <description xml:base="https://klau.si/blog/d7security-devdays/">&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;d7security-devdays&#x2F;d7security-dev-days-bourgas-2024.pdf&quot;&gt;the slides&lt;&#x2F;a&gt; of my &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;ddd2024.drupalcamp.bg&#x2F;drupal-dev-days-2024&#x2F;session&#x2F;d7security-drupal-7-long-term-support&quot;&gt;Drupal Dev Days presentation&lt;&#x2F;a&gt; about &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.d7security.org&quot;&gt;D7Security&lt;&#x2F;a&gt; in Bourgas. Unfortunately there is no video recording.&lt;&#x2F;p&gt;</description>
       </item>
       <item>
           <title>D7Security presentation at Drupal Austria Meetup</title>
@@ -39,7 +39,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/d7security-drupal-austria-meetup/</link>
           <guid>https://klau.si/blog/d7security-drupal-austria-meetup/</guid>
-          <description xml:base="https://klau.si/blog/d7security-drupal-austria-meetup/">&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;d7security-drupal-austria-meetup&#x2F;d7security-drupal-austria-2024.pdf&quot;&gt;the slides&lt;&#x2F;a&gt; and a recording of my Drupal Austria Meetup presentation about &lt;a href=&quot;https:&#x2F;&#x2F;www.d7security.org&quot;&gt;D7Security&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/d7security-drupal-austria-meetup/">&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;d7security-drupal-austria-meetup&#x2F;d7security-drupal-austria-2024.pdf&quot;&gt;the slides&lt;&#x2F;a&gt; and a recording of my Drupal Austria Meetup presentation about &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.d7security.org&quot;&gt;D7Security&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;div class=&quot;youtube-lazy&quot; data-video-id=&quot;1vLU1Eo0Tkk&quot;&gt;
   &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=1vLU1Eo0Tkk&quot;
      class=&quot;youtube-lazy-placeholder&quot;
@@ -59,7 +59,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/d7-eol-podcast/</link>
           <guid>https://klau.si/blog/d7-eol-podcast/</guid>
-          <description xml:base="https://klau.si/blog/d7-eol-podcast/">&lt;p&gt;Here is the video of my appearance on the Drupal 7 end of life podcast, talking about plans for the &lt;a href=&quot;https:&#x2F;&#x2F;www.d7security.org&#x2F;&quot;&gt;D7Security&lt;&#x2F;a&gt; group. Thank you Mark Dorison and Chris Free from Chromatic for the recording!&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/d7-eol-podcast/">&lt;p&gt;Here is the video of my appearance on the Drupal 7 end of life podcast, talking about plans for the &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.d7security.org&#x2F;&quot;&gt;D7Security&lt;&#x2F;a&gt; group. Thank you Mark Dorison and Chris Free from Chromatic for the recording!&lt;&#x2F;p&gt;
 &lt;div class=&quot;youtube-lazy&quot; data-video-id=&quot;hNI73M0ftOM&quot;&gt;
   &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=hNI73M0ftOM&quot;
      class=&quot;youtube-lazy-placeholder&quot;
@@ -79,7 +79,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-security-code-review/</link>
           <guid>https://klau.si/blog/drupalcon-security-code-review/</guid>
-          <description xml:base="https://klau.si/blog/drupalcon-security-code-review/">&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;klausi.github.io&#x2F;sec-code-review2019&#x2F;#&#x2F;&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of my DrupalCon Amsterdam 2019 talk &quot;Find security vulnerabilities through code review&quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-security-code-review/">&lt;p&gt;Here are &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;klausi.github.io&#x2F;sec-code-review2019&#x2F;#&#x2F;&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of my DrupalCon Amsterdam 2019 talk &quot;Find security vulnerabilities through code review&quot;.&lt;&#x2F;p&gt;
 &lt;div class=&quot;youtube-lazy&quot; data-video-id=&quot;Oyoja2rfqSk&quot;&gt;
   &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=Oyoja2rfqSk&quot;
      class=&quot;youtube-lazy-placeholder&quot;
@@ -108,13 +108,13 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/crashing-a-rust-hyper-server-with-a-denial-of-service-attack/</link>
           <guid>https://klau.si/blog/crashing-a-rust-hyper-server-with-a-denial-of-service-attack/</guid>
-          <description xml:base="https://klau.si/blog/crashing-a-rust-hyper-server-with-a-denial-of-service-attack/">&lt;p&gt;I&#x27;m writing a reverse proxy in Rust using &lt;a href=&quot;https:&#x2F;&#x2F;hyper.rs&#x2F;&quot;&gt;Hyper&lt;&#x2F;a&gt; and I want
+          <description xml:base="https://klau.si/blog/crashing-a-rust-hyper-server-with-a-denial-of-service-attack/">&lt;p&gt;I&#x27;m writing a reverse proxy in Rust using &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;hyper.rs&#x2F;&quot;&gt;Hyper&lt;&#x2F;a&gt; and I want
 to measure performance a bit to know if I&#x27;m doing something terribly wrong. By
 doing that I discovered a Denial of Service vulnerability in Hyper when IO
-errors are not properly handled. Note that &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;hyperium&#x2F;hyper&#x2F;releases&#x2F;tag&#x2F;v0.11.20&quot;&gt;a workaround has been released in
+errors are not properly handled. Note that &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;hyperium&#x2F;hyper&#x2F;releases&#x2F;tag&#x2F;v0.11.20&quot;&gt;a workaround has been released in
 the meantime in Hyper
 0.11.20&lt;&#x2F;a&gt;, more
-background info can be found in &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;hyperium&#x2F;hyper&#x2F;issues&#x2F;1358&quot;&gt;this Hyper
+background info can be found in &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;hyperium&#x2F;hyper&#x2F;issues&#x2F;1358&quot;&gt;this Hyper
 issue&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;</description>
       </item>
       <item>
@@ -129,7 +129,7 @@ a server application that stores something for each incoming request in a
 growing collection or list. If the program does not clean up the growing list
 then it will take up more and more server memory - thereby exposing a memory
 leak.&lt;&#x2F;p&gt;
-&lt;p&gt;While working on my reverse proxy project I discovered such a &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;hyperium&#x2F;hyper&#x2F;issues&#x2F;1315&quot;&gt;leak in the HTTP
+&lt;p&gt;While working on my reverse proxy project I discovered such a &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;hyperium&#x2F;hyper&#x2F;issues&#x2F;1315&quot;&gt;leak in the HTTP
 library Hyper&lt;&#x2F;a&gt;. In order to
 prevent and detect memory leaks in the future I set out my goal 7:&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
@@ -144,7 +144,7 @@ compare memory usage of the current process before and after the test.&lt;&#x2F;
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-security-what-you-need-to-know/</link>
           <guid>https://klau.si/blog/drupalcon-security-what-you-need-to-know/</guid>
-          <description xml:base="https://klau.si/blog/drupalcon-security-what-you-need-to-know/">&lt;p&gt;Here are &lt;a href=&quot;http:&#x2F;&#x2F;scor.github.io&#x2F;drupal-security-2015&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of our DrupalCon Barcelona 2015 talk &quot;Drupal and Security: what you need to know&quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-security-what-you-need-to-know/">&lt;p&gt;Here are &lt;a rel=&quot;external&quot; href=&quot;http:&#x2F;&#x2F;scor.github.io&#x2F;drupal-security-2015&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of our DrupalCon Barcelona 2015 talk &quot;Drupal and Security: what you need to know&quot;.&lt;&#x2F;p&gt;
 &lt;div class=&quot;youtube-lazy&quot; data-video-id=&quot;5LpKelSMsas&quot;&gt;
   &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=5LpKelSMsas&quot;
      class=&quot;youtube-lazy-placeholder&quot;
@@ -164,7 +164,7 @@ compare memory usage of the current process before and after the test.&lt;&#x2F;
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-cracking-drupal/</link>
           <guid>https://klau.si/blog/drupalcon-cracking-drupal/</guid>
-          <description xml:base="https://klau.si/blog/drupalcon-cracking-drupal/">&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;docs.google.com&#x2F;presentation&#x2F;d&#x2F;1LWXRbcQUTj9NDHg8gHplAc7EGy94nmbUEUryWLHJqBg&#x2F;edit?usp=sharing&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of our DrupalCon Amsterdam 2014 talk &quot;Cracking Drupal&quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-cracking-drupal/">&lt;p&gt;Here are &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;docs.google.com&#x2F;presentation&#x2F;d&#x2F;1LWXRbcQUTj9NDHg8gHplAc7EGy94nmbUEUryWLHJqBg&#x2F;edit?usp=sharing&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of our DrupalCon Amsterdam 2014 talk &quot;Cracking Drupal&quot;.&lt;&#x2F;p&gt;
 &lt;div class=&quot;youtube-lazy&quot; data-video-id=&quot;ZkNGObI4nlU&quot;&gt;
   &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=ZkNGObI4nlU&quot;
      class=&quot;youtube-lazy-placeholder&quot;

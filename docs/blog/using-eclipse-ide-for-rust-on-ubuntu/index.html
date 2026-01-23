@@ -213,22 +213,19 @@ of Integrated Development Environments (IDEs). I need to be able to click on
 functions and data types to jump to their definitions and was not able to get
 that working in Atom.</p>
 <span id="continue-reading"></span>
-<p>Looking further at <a href="https://areweideyet.com/">areweideyet.com</a> I found
-<a href="https://eclipse.org/">Eclipse</a> listed, an IDE I have used a long time ago for
+<p>Looking further at <a rel="external" href="https://areweideyet.com/">areweideyet.com</a> I found
+<a rel="external" href="https://eclipse.org/">Eclipse</a> listed, an IDE I have used a long time ago for
 Java development. Let's give it a try!</p>
 <h2 id="installing-java-to-run-eclipse">Installing Java to run Eclipse</h2>
-<pre style="background-color:#191919;color:#f8f8f2;"><code><span>sudo apt install openjdk-8-jre
-</span></code></pre>
+<pre class="giallo" style="color: #E1E4E8; background-color: #24292E;"><code data-lang="plain"><span class="giallo-l"><span>sudo apt install openjdk-8-jre</span></span></code></pre>
 <p>In my first installation attempt Eclipse had problems to connect to external
 Github software sources sites because of missing Java SSL root certificates.
-After <a href="https://github.com/RustDT/RustDT/issues/162">filing an issue in the wrong
-place</a> I found the following <a href="http://stackoverflow.com/a/33440168/2000435">fix
+After <a rel="external" href="https://github.com/RustDT/RustDT/issues/162">filing an issue in the wrong
+place</a> I found the following <a rel="external" href="http://stackoverflow.com/a/33440168/2000435">fix
 for missing Java SSL certificates</a>:</p>
-<pre style="background-color:#191919;color:#f8f8f2;"><code><span>sudo dpkg --purge --force-depends ca-certificates-java
-</span><span>sudo apt-get install ca-certificates-java
-</span></code></pre>
-<h2 id="installing-eclipse-base">Installing Eclipse base</h2>
-<p>The <a href="https://www.eclipse.org/downloads/">Eclipse downloads page</a> gives you an
+<pre class="giallo" style="color: #E1E4E8; background-color: #24292E;"><code data-lang="plain"><span class="giallo-l"><span>sudo dpkg --purge --force-depends ca-certificates-java</span></span>
+<span class="giallo-l"><span>sudo apt-get install ca-certificates-java</span></span></code></pre><h2 id="installing-eclipse-base">Installing Eclipse base</h2>
+<p>The <a rel="external" href="https://www.eclipse.org/downloads/">Eclipse downloads page</a> gives you an
 installer where you select additional packages for whatever platform you want
 to develop on. You can skip all of that because we will install the external
 Rust extension later, so we select "Eclipse Platform (Neon)".</p>
@@ -241,31 +238,27 @@ accept some license agreements and trust some certificates.</p>
 <h2 id="adding-a-launcher-shortcut">Adding a launcher shortcut</h2>
 <p>Create a new file at <code>~/.local/share/applications/eclipse.desktop</code> with
 content like this:</p>
-<pre style="background-color:#191919;color:#f8f8f2;"><code><span>[Desktop Entry]
-</span><span>Name=Eclipse
-</span><span>Type=Application
-</span><span>Exec=/home/klausi/eclipse/eclipse/eclipse
-</span><span>Terminal=false
-</span><span>Icon=/home/klausi/eclipse/eclipse/icon.xpm
-</span><span>Comment=Integrated Development Environment
-</span><span>NoDisplay=false
-</span><span>Categories=Development;IDE;
-</span><span>Name[en]=Eclipse
-</span></code></pre>
-<h2 id="installing-rustdt-on-ubuntu">Installing RustDT on Ubuntu</h2>
+<pre class="giallo" style="color: #E1E4E8; background-color: #24292E;"><code data-lang="plain"><span class="giallo-l"><span>[Desktop Entry]</span></span>
+<span class="giallo-l"><span>Name=Eclipse</span></span>
+<span class="giallo-l"><span>Type=Application</span></span>
+<span class="giallo-l"><span>Exec=/home/klausi/eclipse/eclipse/eclipse</span></span>
+<span class="giallo-l"><span>Terminal=false</span></span>
+<span class="giallo-l"><span>Icon=/home/klausi/eclipse/eclipse/icon.xpm</span></span>
+<span class="giallo-l"><span>Comment=Integrated Development Environment</span></span>
+<span class="giallo-l"><span>NoDisplay=false</span></span>
+<span class="giallo-l"><span>Categories=Development;IDE;</span></span>
+<span class="giallo-l"><span>Name[en]=Eclipse</span></span></code></pre><h2 id="installing-rustdt-on-ubuntu">Installing RustDT on Ubuntu</h2>
 <p>Make sure you have a Rust toolchain environment set up:</p>
-<pre style="background-color:#191919;color:#f8f8f2;"><code><span>curl https://sh.rustup.rs -sSf | sh
-</span></code></pre>
+<pre class="giallo" style="color: #E1E4E8; background-color: #24292E;"><code data-lang="plain"><span class="giallo-l"><span>curl https://sh.rustup.rs -sSf | sh</span></span></code></pre>
 <p>(the usual security warning: make sure to trust your sources before you execute
 random scripts from the internet.)</p>
-<pre style="background-color:#191919;color:#f8f8f2;"><code><span>source $HOME/.cargo/env
-</span><span>cargo install racer
-</span><span>cargo install rustfmt
-</span><span>cargo install --git https://github.com/RustDT/Rainicorn --tag version_1.x
-</span><span>rustup component add rust-src
-</span></code></pre>
+<pre class="giallo" style="color: #E1E4E8; background-color: #24292E;"><code data-lang="plain"><span class="giallo-l"><span>source $HOME/.cargo/env</span></span>
+<span class="giallo-l"><span>cargo install racer</span></span>
+<span class="giallo-l"><span>cargo install rustfmt</span></span>
+<span class="giallo-l"><span>cargo install --git https://github.com/RustDT/Rainicorn --tag version_1.x</span></span>
+<span class="giallo-l"><span>rustup component add rust-src</span></span></code></pre>
 <p>Now we need the RustDT Eclipse plugin from
-<a href="https://rustdt.github.io/">rustdt.github.io</a>. Follow the installation and
+<a rel="external" href="https://rustdt.github.io/">rustdt.github.io</a>. Follow the installation and
 configuration instructions there closely.</p>
 <p>My settings in Window -&gt; Preferences -&gt; Rust:</p>
 <ul>
@@ -282,7 +275,7 @@ anymore what the correct code style is :-)</p>
 <p>The installation of Eclipse is a bit tedious and RustDT takes a bit of
 configuration, but I think it is totally worth it to be more productive when
 writing Rust. Eclipse works better for me than Atom Editor. I also filed a
-<a href="https://github.com/contradictioned/areweideyet/pull/46">pull request to update the available Eclipse features on
+<a rel="external" href="https://github.com/contradictioned/areweideyet/pull/46">pull request to update the available Eclipse features on
 areweideyet.com</a>.</p>
 </div>
 

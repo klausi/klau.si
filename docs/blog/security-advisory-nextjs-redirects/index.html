@@ -220,70 +220,67 @@ Vulnerability: Denial of…">
     <div class="post-content"><p><img src="https://klau.si/blog/security-advisory-nextjs-redirects/nextjs_exhale.webp" alt="Black Next.js logos arranged in a circle. In the middle is an emoji with closed eyes exhausting." /></p>
 <p>Security Advisory: Next.js Denial of Service vulnerability in redirect misconfiguration</p>
 <ul>
-<li><strong>Project</strong>: <a href="https://nextjs.org/">Next.js</a></li>
+<li><strong>Project</strong>: <a rel="external" href="https://nextjs.org/">Next.js</a></li>
 <li><strong>Security Risk</strong>: Less Critical</li>
 <li><strong>Vulnerability</strong>: Denial of Service (DoS)</li>
-<li><strong>Category</strong>: <a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP A05:2021 – Security Misconfiguration</a></li>
+<li><strong>Category</strong>: <a rel="external" href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP A05:2021 – Security Misconfiguration</a></li>
 <li><strong>Affected versions</strong>: all Next.js versions, for example 15.0.3</li>
 </ul>
 <p>Note: This vulnerability has been disclosed privately to the Vercel Security Team. They decided that this is a misconfiguration issue and not an inherent security issue.</p>
 <span id="continue-reading"></span><h2 id="description">Description</h2>
-<p><a href="https://nextjs.org/">Next.js</a> is a web framework using React. Configuration for HTTP redirects can be added (<a href="https://nextjs.org/docs/pages/api-reference/config/next-config-js/redirects">documentation</a>).</p>
+<p><a rel="external" href="https://nextjs.org/">Next.js</a> is a web framework using React. Configuration for HTTP redirects can be added (<a rel="external" href="https://nextjs.org/docs/pages/api-reference/config/next-config-js/redirects">documentation</a>).</p>
 <p>The issue happens when misconfiguring a redirect in the pages directory which leads to the Nodejs (Next.js server) process completely hanging, leaving the application subject to denial of service attacks.</p>
 <p>Example for a vulnerable configuration: create a page <code>/other-page</code>. Then set up a redirect as such:</p>
-<pre data-lang="js" style="background-color:#191919;color:#f8f8f2;" class="language-js "><code class="language-js" data-lang="js"><span style="color:#ff5e5e;">import type </span><span>{ </span><span style="color:#e9fdac;">NextConfig </span><span>} </span><span style="color:#ff5e5e;">from </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">next</span><span style="color:#ffffff;">&quot;</span><span>;
-</span><span>
-</span><span style="font-style:italic;color:#fbdfb5;">const </span><span style="color:#e9fdac;">nextConfig</span><span style="color:#ff5e5e;">: </span><span>NextConfig </span><span style="color:#ff5e5e;">= </span><span>{
-</span><span>  </span><span style="color:#6d6d6d;">/* config options here */
-</span><span>  reactStrictMode: </span><span style="color:#ff8942;">true</span><span>,
-</span><span>  </span><span style="color:#ff5e5e;">async </span><span style="color:#8cdaff;">redirects</span><span style="color:#ffffff;">() </span><span>{
-</span><span>    </span><span style="color:#ff5e5e;">return </span><span>[
-</span><span>      {
-</span><span>        source: </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">/about:path*</span><span style="color:#ffffff;">&quot;</span><span>,
-</span><span>        destination: </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">/other-page:path*</span><span style="color:#ffffff;">&quot;</span><span>,
-</span><span>        permanent: </span><span style="color:#ff8942;">true</span><span>,
-</span><span>      },
-</span><span>    ];
-</span><span>  },
-</span><span>};
-</span><span>
-</span><span style="color:#ff5e5e;">export default </span><span style="color:#e9fdac;">nextConfig</span><span>;
-</span></code></pre>
+<pre class="giallo" style="color: #E1E4E8; background-color: #24292E;"><code data-lang="javascript"><span class="giallo-l"><span style="color: #F97583;">import type</span><span> { NextConfig }</span><span style="color: #F97583;"> from</span><span style="color: #9ECBFF;"> &quot;next&quot;</span><span>;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #F97583;">const</span><span style="color: #79B8FF;"> nextConfig</span><span style="color: #F97583;">:</span><span style="color: #B392F0;"> NextConfig</span><span style="color: #F97583;"> =</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #6A737D;">  /* config options here */</span></span>
+<span class="giallo-l"><span>  reactStrictMode:</span><span style="color: #79B8FF;"> true</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #F97583;">  async</span><span style="color: #B392F0;"> redirects</span><span>() {</span></span>
+<span class="giallo-l"><span style="color: #F97583;">    return</span><span> [</span></span>
+<span class="giallo-l"><span>      {</span></span>
+<span class="giallo-l"><span>        source:</span><span style="color: #9ECBFF;"> &quot;/about:path*&quot;</span><span>,</span></span>
+<span class="giallo-l"><span>        destination:</span><span style="color: #9ECBFF;"> &quot;/other-page:path*&quot;</span><span>,</span></span>
+<span class="giallo-l"><span>        permanent:</span><span style="color: #79B8FF;"> true</span><span>,</span></span>
+<span class="giallo-l"><span>      },</span></span>
+<span class="giallo-l"><span>    ];</span></span>
+<span class="giallo-l"><span>  },</span></span>
+<span class="giallo-l"><span>};</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #F97583;">export default</span><span> nextConfig;</span></span></code></pre>
 <p>The problem is the <code>:path</code> placeholder. There must be a slash <code>/</code> before the colon.</p>
 <h2 id="attack">Attack</h2>
 <p>With the given example an attacker can now send a specially crafted HTTP request to trigger the DoS vulnerability. For example:</p>
-<pre style="background-color:#191919;color:#f8f8f2;"><code><span>/about&#39;%20AND%202*3*8=6*8%20AND%20&#39;2tSe&#39;=&#39;2tSe/example-se
-</span></code></pre>
+<pre class="giallo" style="color: #E1E4E8; background-color: #24292E;"><code data-lang="plain"><span class="giallo-l"><span>/about&#39;%20AND%202*3*8=6*8%20AND%20&#39;2tSe&#39;=&#39;2tSe/example-se</span></span></code></pre>
 <p>This will send the Node.js process into an endless loop. The Next.js application is not able to handle requests anymore causing the website to be down.</p>
 <h2 id="mitigation">Mitigation</h2>
 <p>This vulnerability can mitigated by using slashes correctly in Next.js redirects. The corrected example from above looks like this:</p>
-<pre data-lang="js" style="background-color:#191919;color:#f8f8f2;" class="language-js "><code class="language-js" data-lang="js"><span style="color:#ff5e5e;">import type </span><span>{ </span><span style="color:#e9fdac;">NextConfig </span><span>} </span><span style="color:#ff5e5e;">from </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">next</span><span style="color:#ffffff;">&quot;</span><span>;
-</span><span>
-</span><span style="font-style:italic;color:#fbdfb5;">const </span><span style="color:#e9fdac;">nextConfig</span><span style="color:#ff5e5e;">: </span><span>NextConfig </span><span style="color:#ff5e5e;">= </span><span>{
-</span><span>  </span><span style="color:#6d6d6d;">/* config options here */
-</span><span>  reactStrictMode: </span><span style="color:#ff8942;">true</span><span>,
-</span><span>  </span><span style="color:#ff5e5e;">async </span><span style="color:#8cdaff;">redirects</span><span style="color:#ffffff;">() </span><span>{
-</span><span>    </span><span style="color:#ff5e5e;">return </span><span>[
-</span><span>      {
-</span><span>        source: </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">/about</span><span style="color:#ffffff;">&quot;</span><span>,
-</span><span>        destination: </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">/other-page</span><span style="color:#ffffff;">&quot;</span><span>,
-</span><span>        permanent: </span><span style="color:#ff8942;">true</span><span>,
-</span><span>      },
-</span><span>      {
-</span><span>        source: </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">/about/:path*</span><span style="color:#ffffff;">&quot;</span><span>,
-</span><span>        destination: </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">/other-page/:path*</span><span style="color:#ffffff;">&quot;</span><span>,
-</span><span>        permanent: </span><span style="color:#ff8942;">true</span><span>,
-</span><span>      },
-</span><span>    ];
-</span><span>  },
-</span><span>};
-</span><span>
-</span><span style="color:#ff5e5e;">export default </span><span style="color:#e9fdac;">nextConfig</span><span>;
-</span></code></pre>
-<p>This has now also been documented as "Good to know" tip on the <a href="https://nextjs.org/docs/pages/api-reference/config/next-config-js/redirects">Next.js redirects doc page</a>: "Remember to include the forward slash <code>/</code> before the colon <code>:</code> in path parameters of the <code>source</code> and <code>destination</code> paths, otherwise the path will be treated as a literal string and you run the risk of causing infinite redirects."</p>
+<pre class="giallo" style="color: #E1E4E8; background-color: #24292E;"><code data-lang="javascript"><span class="giallo-l"><span style="color: #F97583;">import type</span><span> { NextConfig }</span><span style="color: #F97583;"> from</span><span style="color: #9ECBFF;"> &quot;next&quot;</span><span>;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #F97583;">const</span><span style="color: #79B8FF;"> nextConfig</span><span style="color: #F97583;">:</span><span style="color: #B392F0;"> NextConfig</span><span style="color: #F97583;"> =</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #6A737D;">  /* config options here */</span></span>
+<span class="giallo-l"><span>  reactStrictMode:</span><span style="color: #79B8FF;"> true</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #F97583;">  async</span><span style="color: #B392F0;"> redirects</span><span>() {</span></span>
+<span class="giallo-l"><span style="color: #F97583;">    return</span><span> [</span></span>
+<span class="giallo-l"><span>      {</span></span>
+<span class="giallo-l"><span>        source:</span><span style="color: #9ECBFF;"> &quot;/about&quot;</span><span>,</span></span>
+<span class="giallo-l"><span>        destination:</span><span style="color: #9ECBFF;"> &quot;/other-page&quot;</span><span>,</span></span>
+<span class="giallo-l"><span>        permanent:</span><span style="color: #79B8FF;"> true</span><span>,</span></span>
+<span class="giallo-l"><span>      },</span></span>
+<span class="giallo-l"><span>      {</span></span>
+<span class="giallo-l"><span>        source:</span><span style="color: #9ECBFF;"> &quot;/about/:path*&quot;</span><span>,</span></span>
+<span class="giallo-l"><span>        destination:</span><span style="color: #9ECBFF;"> &quot;/other-page/:path*&quot;</span><span>,</span></span>
+<span class="giallo-l"><span>        permanent:</span><span style="color: #79B8FF;"> true</span><span>,</span></span>
+<span class="giallo-l"><span>      },</span></span>
+<span class="giallo-l"><span>    ];</span></span>
+<span class="giallo-l"><span>  },</span></span>
+<span class="giallo-l"><span>};</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #F97583;">export default</span><span> nextConfig;</span></span></code></pre>
+<p>This has now also been documented as "Good to know" tip on the <a rel="external" href="https://nextjs.org/docs/pages/api-reference/config/next-config-js/redirects">Next.js redirects doc page</a>: "Remember to include the forward slash <code>/</code> before the colon <code>:</code> in path parameters of the <code>source</code> and <code>destination</code> paths, otherwise the path will be treated as a literal string and you run the risk of causing infinite redirects."</p>
 <p>There is currently no fix in the Next.js source code to detect and prevent configuration mistakes like this.</p>
 <h2 id="reported-by">Reported By</h2>
-<p>This vulnerability was found by Klaus Purer and Joao Garin at <a href="https://www.jobiqo.com/">Jobiqo</a>.</p>
+<p>This vulnerability was found by Klaus Purer and Joao Garin at <a rel="external" href="https://www.jobiqo.com/">Jobiqo</a>.</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>Web developers can easily make mistakes when setting up redirects in Next.js. It is not clear to me when exactly the redirect vulnerability triggers, as other expressions for the <code>source</code> key do not expose this behavior such as <code>/about-:path(example1|example2)</code>.</p>
 <p>Next.js could be improved to have a redirect loop detection (or infinite loop detection) in the code that handles redirects.</p>

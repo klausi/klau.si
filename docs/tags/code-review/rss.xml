@@ -34,7 +34,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-security-code-review/</link>
           <guid>https://klau.si/blog/drupalcon-security-code-review/</guid>
-          <description xml:base="https://klau.si/blog/drupalcon-security-code-review/">&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;klausi.github.io&#x2F;sec-code-review2019&#x2F;#&#x2F;&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of my DrupalCon Amsterdam 2019 talk &quot;Find security vulnerabilities through code review&quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-security-code-review/">&lt;p&gt;Here are &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;klausi.github.io&#x2F;sec-code-review2019&#x2F;#&#x2F;&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of my DrupalCon Amsterdam 2019 talk &quot;Find security vulnerabilities through code review&quot;.&lt;&#x2F;p&gt;
 &lt;div class=&quot;youtube-lazy&quot; data-video-id=&quot;Oyoja2rfqSk&quot;&gt;
   &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=Oyoja2rfqSk&quot;
      class=&quot;youtube-lazy-placeholder&quot;

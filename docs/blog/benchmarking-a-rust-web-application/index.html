@@ -201,179 +201,169 @@
 <p>I set out out my goal 9 for Rustnish:</p>
 <blockquote>
 <p>Write benchmark code that compares runtime performance of Rustnish against
-<a href="https://varnish-cache.org/">Varnish</a>. Use <code>cargo bench</code> to execute the benchmarks.</p>
+<a rel="external" href="https://varnish-cache.org/">Varnish</a>. Use <code>cargo bench</code> to execute the benchmarks.</p>
 </blockquote>
 <p>The basic idea of a performance test here is to send many HTTP requests to the web service (the reverse proxy in this case) and measure how fast the responses arrive back. Comparing the results from Rustnish and Varnish should give us an idea if our performance expectations are holding up.</p>
 <span id="continue-reading"></span><h2 id="manual-performance-testing-with-apachebench">Manual performance testing with ApacheBench</h2>
 <p>A quick way to get performance feedback is to run <code>ab</code> against our reverse proxy. Start the server in release mode (optimized):</p>
-<pre style="background-color:#191919;color:#f8f8f2;"><code><span>cargo run --release
-</span><span>   Compiling rustnish v0.0.1 (file:///home/klausi/workspace/rustnish)
-</span><span>    Finished release [optimized] target(s) in 6.02s
-</span><span>     Running `target/release/rustnish`
-</span><span>Listening on http://127.0.0.1:9090
-</span></code></pre>
+<pre class="giallo" style="color: #E1E4E8; background-color: #24292E;"><code data-lang="plain"><span class="giallo-l"><span>cargo run --release</span></span>
+<span class="giallo-l"><span>   Compiling rustnish v0.0.1 (file:///home/klausi/workspace/rustnish)</span></span>
+<span class="giallo-l"><span>    Finished release [optimized] target(s) in 6.02s</span></span>
+<span class="giallo-l"><span>     Running `target/release/rustnish`</span></span>
+<span class="giallo-l"><span>Listening on http://127.0.0.1:9090</span></span></code></pre>
 <p>As backend service I'm using the default Ubuntu Apache webserver running on port 80. It delivers a static default test page.</p>
 <p>Benchmarking by sending 10k requests, 100 in parallel:</p>
-<pre style="background-color:#191919;color:#f8f8f2;"><code><span>$ ab -c 100 -n 10000 http://127.0.0.1:9090/
-</span><span>This is ApacheBench, Version 2.3 &lt;$Revision: 1807734 $&gt;
-</span><span>...
-</span><span>Benchmarking 127.0.0.1 (be patient)
-</span><span>...
-</span><span>Concurrency Level:      100
-</span><span>Time taken for tests:   1.011 seconds
-</span><span>Complete requests:      10000
-</span><span>Failed requests:        0
-</span><span>Total transferred:      116200000 bytes
-</span><span>HTML transferred:       113210000 bytes
-</span><span>Requests per second:    9893.12 [#/sec] (mean)
-</span><span>Time per request:       10.108 [ms] (mean)
-</span><span>Time per request:       0.101 [ms] (mean, across all concurrent requests)
-</span><span>Transfer rate:          112263.78 [Kbytes/sec] received
-</span><span>...
-</span></code></pre>
+<pre class="giallo" style="color: #E1E4E8; background-color: #24292E;"><code data-lang="plain"><span class="giallo-l"><span>$ ab -c 100 -n 10000 http://127.0.0.1:9090/</span></span>
+<span class="giallo-l"><span>This is ApacheBench, Version 2.3 &lt;$Revision: 1807734 $&gt;</span></span>
+<span class="giallo-l"><span>...</span></span>
+<span class="giallo-l"><span>Benchmarking 127.0.0.1 (be patient)</span></span>
+<span class="giallo-l"><span>...</span></span>
+<span class="giallo-l"><span>Concurrency Level:      100</span></span>
+<span class="giallo-l"><span>Time taken for tests:   1.011 seconds</span></span>
+<span class="giallo-l"><span>Complete requests:      10000</span></span>
+<span class="giallo-l"><span>Failed requests:        0</span></span>
+<span class="giallo-l"><span>Total transferred:      116200000 bytes</span></span>
+<span class="giallo-l"><span>HTML transferred:       113210000 bytes</span></span>
+<span class="giallo-l"><span>Requests per second:    9893.12 [#/sec] (mean)</span></span>
+<span class="giallo-l"><span>Time per request:       10.108 [ms] (mean)</span></span>
+<span class="giallo-l"><span>Time per request:       0.101 [ms] (mean, across all concurrent requests)</span></span>
+<span class="giallo-l"><span>Transfer rate:          112263.78 [Kbytes/sec] received</span></span>
+<span class="giallo-l"><span>...</span></span></code></pre>
 <p>That looks quite OK!</p>
 <p>Of course it is easy for our reverse proxy to reach this throughput: it does not do anything except passing requests through and adding its own header.</p>
 <p>Now we install Varnish on Ubuntu:</p>
-<pre style="background-color:#191919;color:#f8f8f2;"><code><span>sudo apt install varnish
-</span></code></pre>
+<pre class="giallo" style="color: #E1E4E8; background-color: #24292E;"><code data-lang="plain"><span class="giallo-l"><span>sudo apt install varnish</span></span></code></pre>
 <p>We configure it to do the sane thing as Rustnish, just passing all requests through. /etc/varnish/default.vcl:</p>
-<pre style="background-color:#191919;color:#f8f8f2;"><code><span>vcl 4.0;
-</span><span>
-</span><span># Default backend definition. Set this to point to your content server.
-</span><span>backend default {
-</span><span>    .host = &quot;127.0.0.1&quot;;
-</span><span>    .port = &quot;80&quot;;
-</span><span>}
-</span><span>
-</span><span>sub vcl_recv {
-</span><span>    return (pass);
-</span><span>}
-</span></code></pre>
+<pre class="giallo" style="color: #E1E4E8; background-color: #24292E;"><code data-lang="plain"><span class="giallo-l"><span>vcl 4.0;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span># Default backend definition. Set this to point to your content server.</span></span>
+<span class="giallo-l"><span>backend default {</span></span>
+<span class="giallo-l"><span>    .host = &quot;127.0.0.1&quot;;</span></span>
+<span class="giallo-l"><span>    .port = &quot;80&quot;;</span></span>
+<span class="giallo-l"><span>}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>sub vcl_recv {</span></span>
+<span class="giallo-l"><span>    return (pass);</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre>
 <p>And benchmark it:</p>
-<pre style="background-color:#191919;color:#f8f8f2;"><code><span>$ ab -c 100 -n 10000 http://127.0.0.1:6081/
-</span><span>This is ApacheBench, Version 2.3 &lt;$Revision: 1807734 $&gt;
-</span><span>...
-</span><span>Benchmarking 127.0.0.1 (be patient)
-</span><span>...
-</span><span>Concurrency Level:      100
-</span><span>Time taken for tests:   1.182 seconds
-</span><span>Complete requests:      10000
-</span><span>Failed requests:        0
-</span><span>Total transferred:      116553545 bytes
-</span><span>HTML transferred:       113210000 bytes
-</span><span>Requests per second:    8458.46 [#/sec] (mean)
-</span><span>Time per request:       11.822 [ms] (mean)
-</span><span>Time per request:       0.118 [ms] (mean, across all concurrent requests)
-</span><span>Transfer rate:          96275.68 [Kbytes/sec] received
-</span></code></pre>
+<pre class="giallo" style="color: #E1E4E8; background-color: #24292E;"><code data-lang="plain"><span class="giallo-l"><span>$ ab -c 100 -n 10000 http://127.0.0.1:6081/</span></span>
+<span class="giallo-l"><span>This is ApacheBench, Version 2.3 &lt;$Revision: 1807734 $&gt;</span></span>
+<span class="giallo-l"><span>...</span></span>
+<span class="giallo-l"><span>Benchmarking 127.0.0.1 (be patient)</span></span>
+<span class="giallo-l"><span>...</span></span>
+<span class="giallo-l"><span>Concurrency Level:      100</span></span>
+<span class="giallo-l"><span>Time taken for tests:   1.182 seconds</span></span>
+<span class="giallo-l"><span>Complete requests:      10000</span></span>
+<span class="giallo-l"><span>Failed requests:        0</span></span>
+<span class="giallo-l"><span>Total transferred:      116553545 bytes</span></span>
+<span class="giallo-l"><span>HTML transferred:       113210000 bytes</span></span>
+<span class="giallo-l"><span>Requests per second:    8458.46 [#/sec] (mean)</span></span>
+<span class="giallo-l"><span>Time per request:       11.822 [ms] (mean)</span></span>
+<span class="giallo-l"><span>Time per request:       0.118 [ms] (mean, across all concurrent requests)</span></span>
+<span class="giallo-l"><span>Transfer rate:          96275.68 [Kbytes/sec] received</span></span></code></pre>
 <p>As you can see Varnish performs slightly worse than Rustnish - which means we are on the right track! Of course Varnish has a much bigger code base with much more complexity compared to our most basic reverse proxy that just passes requests through. This difference is to be expected.</p>
 <h2 id="automating-benchmarks-in-code">Automating benchmarks in code</h2>
-<p>While manual testing is fine we want to automate multiple benchmark scenarios into a benchmark suite that can be executed quickly in one go. <code>cargo bench</code> can help us with that - <a href="https://doc.rust-lang.org/stable/unstable-book/library-features/test.html">the unstable Rust book describes what you need to do to use it</a>.</p>
+<p>While manual testing is fine we want to automate multiple benchmark scenarios into a benchmark suite that can be executed quickly in one go. <code>cargo bench</code> can help us with that - <a rel="external" href="https://doc.rust-lang.org/stable/unstable-book/library-features/test.html">the unstable Rust book describes what you need to do to use it</a>.</p>
 <p>The book has some good points of advice, one point that we are going to deliberately ignore:</p>
 <blockquote>
 <p>Make the code in the iter loop do something simple, to assist in pinpointing performance improvements (or regressions)</p>
 </blockquote>
 <p>But we want to do a full black box performance test of our service here, so our benchmark will be an HTTP client that sends requests and measures response times. This is not a trivial thing to do with Hyper because there are no example guides of how to send requests in parallel. Here is a helper function I came up with:</p>
-<pre data-lang="rust" style="background-color:#191919;color:#f8f8f2;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">bench_requests</span><span>(</span><span style="font-style:italic;color:#fc9354;">b</span><span>: </span><span style="color:#ff5e5e;">&amp;mut </span><span>test::Bencher, </span><span style="font-style:italic;color:#fc9354;">amount</span><span>: </span><span style="font-style:italic;color:#fbdfb5;">u32</span><span>, </span><span style="font-style:italic;color:#fc9354;">concurrency</span><span>: </span><span style="font-style:italic;color:#fbdfb5;">u32</span><span>, </span><span style="font-style:italic;color:#fc9354;">proxy_port</span><span>: </span><span style="font-style:italic;color:#fbdfb5;">u16</span><span>) {
-</span><span>    </span><span style="color:#6d6d6d;">// Initialize all the Tokio runtime stuff.
-</span><span>    </span><span style="font-style:italic;color:#fbdfb5;">let </span><span style="color:#ff5e5e;">mut</span><span> core </span><span style="color:#ff5e5e;">= </span><span>Core::new().</span><span style="color:#6699cc;">unwrap</span><span>();
-</span><span>    </span><span style="font-style:italic;color:#fbdfb5;">let</span><span> handle </span><span style="color:#ff5e5e;">=</span><span> core.</span><span style="color:#6699cc;">handle</span><span>();
-</span><span>    </span><span style="font-style:italic;color:#fbdfb5;">let</span><span> client </span><span style="color:#ff5e5e;">= </span><span>hyper::Client::new(</span><span style="color:#ff5e5e;">&amp;</span><span>handle);
-</span><span>
-</span><span>    </span><span style="color:#6d6d6d;">// Target is localhost with the port of the proxy under test.
-</span><span>    </span><span style="font-style:italic;color:#fbdfb5;">let</span><span> url: hyper::Uri </span><span style="color:#ff5e5e;">= </span><span>format!(</span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">http://127.0.0.1:</span><span style="color:#fdb082;">{}</span><span style="color:#fbe3bf;">/get</span><span style="color:#ffffff;">&quot;</span><span>, proxy_port)
-</span><span>        .</span><span style="color:#6699cc;">parse</span><span>()
-</span><span>        .</span><span style="color:#6699cc;">unwrap</span><span>();
-</span><span>
-</span><span>    </span><span style="color:#6d6d6d;">// This is the benchmark loop that will be executed multiple times and
-</span><span>    </span><span style="color:#6d6d6d;">// measured.
-</span><span>    b.</span><span style="color:#6699cc;">iter</span><span>(</span><span style="color:#ff5e5e;">move || </span><span>{
-</span><span>        </span><span style="color:#6d6d6d;">// Build a list of futures that we will execute all at once in parallel
-</span><span>        </span><span style="color:#6d6d6d;">// in the end.
-</span><span>        </span><span style="font-style:italic;color:#fbdfb5;">let </span><span style="color:#ff5e5e;">mut</span><span> parallel </span><span style="color:#ff5e5e;">= </span><span style="color:#fbe3bf;">Vec</span><span>::new();
-</span><span>        </span><span style="color:#ff5e5e;">for</span><span> _i </span><span style="color:#ff5e5e;">in </span><span style="color:#fdb082;">0</span><span style="color:#ff5e5e;">..</span><span>concurrency {
-</span><span>            </span><span style="color:#6d6d6d;">// A future that sends requests sequentially by scheduling itself in
-</span><span>            </span><span style="color:#6d6d6d;">// a loop-like way.
-</span><span>            </span><span style="font-style:italic;color:#fbdfb5;">let</span><span> requests_til_done </span><span style="color:#ff5e5e;">= </span><span style="color:#6699cc;">loop_fn</span><span>(</span><span style="color:#fdb082;">0</span><span>, |</span><span style="font-style:italic;color:#fc9354;">counter</span><span>| {
-</span><span>                client
-</span><span>                    .</span><span style="color:#6699cc;">get</span><span>(url.</span><span style="color:#6699cc;">clone</span><span>())
-</span><span>                    .</span><span style="color:#6699cc;">and_then</span><span>(|</span><span style="font-style:italic;color:#fc9354;">res</span><span>| {
-</span><span>                        assert_eq!(
-</span><span>                            res.</span><span style="color:#6699cc;">status</span><span>(),
-</span><span>                            hyper::StatusCode::Ok,
-</span><span>                            </span><span style="color:#ffffff;">&quot;</span><span style="color:#fbe3bf;">Did not receive a 200 HTTP status code. Make sure Varnish is configured on port 6081 and the backend port is set to 9091 in /etc/varnish/default.vcl. Make sure the backend server is running with `cargo run --example hello_9091` and Rustnish with `cargo run --release --example rustnish_9090`.</span><span style="color:#ffffff;">&quot;</span><span>);
-</span><span>                        </span><span style="color:#6d6d6d;">// Read response body until the end.
-</span><span>                        res.</span><span style="color:#6699cc;">body</span><span>().</span><span style="color:#6699cc;">for_each</span><span>(|</span><span style="font-style:italic;color:#fc9354;">_chunk</span><span>| </span><span style="color:#fbe3bf;">Ok</span><span>(()))
-</span><span>                    })
-</span><span>                    </span><span style="color:#6d6d6d;">// Break condition of the future &quot;loop&quot;. The return values
-</span><span>                    </span><span style="color:#6d6d6d;">// signal the loop future if it should run another iteration
-</span><span>                    </span><span style="color:#6d6d6d;">// or not.
-</span><span>                    .</span><span style="color:#6699cc;">and_then</span><span>(</span><span style="color:#ff5e5e;">move |_| </span><span>{
-</span><span>                        </span><span style="color:#ff5e5e;">if</span><span> counter </span><span style="color:#ff5e5e;">&lt; </span><span>(amount </span><span style="color:#ff5e5e;">/</span><span> concurrency) {
-</span><span>                            </span><span style="color:#fbe3bf;">Ok</span><span>(Loop::Continue(counter </span><span style="color:#ff5e5e;">+ </span><span style="color:#fdb082;">1</span><span>))
-</span><span>                        } </span><span style="color:#ff5e5e;">else </span><span>{
-</span><span>                            </span><span style="color:#fbe3bf;">Ok</span><span>(Loop::Break(counter))
-</span><span>                        }
-</span><span>                    })
-</span><span>            });
-</span><span>            parallel.</span><span style="color:#6699cc;">push</span><span>(requests_til_done);
-</span><span>        }
-</span><span>
-</span><span>        </span><span style="color:#6d6d6d;">// The execution should finish when all futures are done.
-</span><span>        </span><span style="font-style:italic;color:#fbdfb5;">let</span><span> work </span><span style="color:#ff5e5e;">= </span><span style="color:#6699cc;">join_all</span><span>(parallel);
-</span><span>        </span><span style="color:#6d6d6d;">// Now run it! Up to this point no request has been sent, we just
-</span><span>        </span><span style="color:#6d6d6d;">// assembled heavily nested futures so far.
-</span><span>        core.</span><span style="color:#6699cc;">run</span><span>(work).</span><span style="color:#6699cc;">unwrap</span><span>();
-</span><span>    });
-</span><span>}
-</span></code></pre>
+<pre class="giallo" style="color: #E1E4E8; background-color: #24292E;"><code data-lang="rust"><span class="giallo-l"><span style="color: #F97583;">fn</span><span style="color: #B392F0;"> bench_requests</span><span>(b</span><span style="color: #F97583;">: &amp;mut</span><span style="color: #B392F0;"> test</span><span style="color: #F97583;">::</span><span style="color: #B392F0;">Bencher</span><span>, amount</span><span style="color: #F97583;">:</span><span style="color: #B392F0;"> u32</span><span>, concurrency</span><span style="color: #F97583;">:</span><span style="color: #B392F0;"> u32</span><span>, proxy_port</span><span style="color: #F97583;">:</span><span style="color: #B392F0;"> u16</span><span>) {</span></span>
+<span class="giallo-l"><span style="color: #6A737D;">    // Initialize all the Tokio runtime stuff.</span></span>
+<span class="giallo-l"><span style="color: #F97583;">    let mut</span><span> core</span><span style="color: #F97583;"> =</span><span style="color: #B392F0;"> Core</span><span style="color: #F97583;">::</span><span style="color: #B392F0;">new</span><span>()</span><span style="color: #F97583;">.</span><span style="color: #B392F0;">unwrap</span><span>();</span></span>
+<span class="giallo-l"><span style="color: #F97583;">    let</span><span> handle</span><span style="color: #F97583;"> =</span><span> core</span><span style="color: #F97583;">.</span><span style="color: #B392F0;">handle</span><span>();</span></span>
+<span class="giallo-l"><span style="color: #F97583;">    let</span><span> client</span><span style="color: #F97583;"> =</span><span style="color: #B392F0;"> hyper</span><span style="color: #F97583;">::</span><span style="color: #B392F0;">Client</span><span style="color: #F97583;">::</span><span style="color: #B392F0;">new</span><span>(</span><span style="color: #F97583;">&amp;</span><span>handle);</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #6A737D;">    // Target is localhost with the port of the proxy under test.</span></span>
+<span class="giallo-l"><span style="color: #F97583;">    let</span><span> url</span><span style="color: #F97583;">:</span><span style="color: #B392F0;"> hyper</span><span style="color: #F97583;">::</span><span style="color: #B392F0;">Uri</span><span style="color: #F97583;"> =</span><span style="color: #B392F0;"> format!</span><span>(</span><span style="color: #9ECBFF;">&quot;http://127.0.0.1:{}/get&quot;</span><span>, proxy_port)</span></span>
+<span class="giallo-l"><span style="color: #F97583;">        .</span><span style="color: #B392F0;">parse</span><span>()</span></span>
+<span class="giallo-l"><span style="color: #F97583;">        .</span><span style="color: #B392F0;">unwrap</span><span>();</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #6A737D;">    // This is the benchmark loop that will be executed multiple times and</span></span>
+<span class="giallo-l"><span style="color: #6A737D;">    // measured.</span></span>
+<span class="giallo-l"><span>    b</span><span style="color: #F97583;">.</span><span style="color: #B392F0;">iter</span><span>(</span><span style="color: #F97583;">move ||</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #6A737D;">        // Build a list of futures that we will execute all at once in parallel</span></span>
+<span class="giallo-l"><span style="color: #6A737D;">        // in the end.</span></span>
+<span class="giallo-l"><span style="color: #F97583;">        let mut</span><span> parallel</span><span style="color: #F97583;"> =</span><span style="color: #B392F0;"> Vec</span><span style="color: #F97583;">::</span><span style="color: #B392F0;">new</span><span>();</span></span>
+<span class="giallo-l"><span style="color: #F97583;">        for</span><span> _i</span><span style="color: #F97583;"> in</span><span style="color: #79B8FF;"> 0</span><span style="color: #F97583;">..</span><span>concurrency {</span></span>
+<span class="giallo-l"><span style="color: #6A737D;">            // A future that sends requests sequentially by scheduling itself in</span></span>
+<span class="giallo-l"><span style="color: #6A737D;">            // a loop-like way.</span></span>
+<span class="giallo-l"><span style="color: #F97583;">            let</span><span> requests_til_done</span><span style="color: #F97583;"> =</span><span style="color: #B392F0;"> loop_fn</span><span>(</span><span style="color: #79B8FF;">0</span><span>,</span><span style="color: #F97583;"> |</span><span>counter</span><span style="color: #F97583;">|</span><span> {</span></span>
+<span class="giallo-l"><span>                client</span></span>
+<span class="giallo-l"><span style="color: #F97583;">                    .</span><span style="color: #B392F0;">get</span><span>(url</span><span style="color: #F97583;">.</span><span style="color: #B392F0;">clone</span><span>())</span></span>
+<span class="giallo-l"><span style="color: #F97583;">                    .</span><span style="color: #B392F0;">and_then</span><span>(</span><span style="color: #F97583;">|</span><span>res</span><span style="color: #F97583;">|</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #B392F0;">                        assert_eq!</span><span>(</span></span>
+<span class="giallo-l"><span>                            res</span><span style="color: #F97583;">.</span><span style="color: #B392F0;">status</span><span>(),</span></span>
+<span class="giallo-l"><span style="color: #B392F0;">                            hyper</span><span style="color: #F97583;">::</span><span style="color: #B392F0;">StatusCode</span><span style="color: #F97583;">::</span><span style="color: #B392F0;">Ok</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #9ECBFF;">                            &quot;Did not receive a 200 HTTP status code. Make sure Varnish is configured on port 6081 and the backend port is set to 9091 in /etc/varnish/default.vcl. Make sure the backend server is running with `cargo run --example hello_9091` and Rustnish with `cargo run --release --example rustnish_9090`.&quot;</span><span>);</span></span>
+<span class="giallo-l"><span style="color: #6A737D;">                        // Read response body until the end.</span></span>
+<span class="giallo-l"><span>                        res</span><span style="color: #F97583;">.</span><span style="color: #B392F0;">body</span><span>()</span><span style="color: #F97583;">.</span><span style="color: #B392F0;">for_each</span><span>(</span><span style="color: #F97583;">|</span><span>_chunk</span><span style="color: #F97583;">|</span><span style="color: #B392F0;"> Ok</span><span>(()))</span></span>
+<span class="giallo-l"><span>                    })</span></span>
+<span class="giallo-l"><span style="color: #6A737D;">                    // Break condition of the future &quot;loop&quot;. The return values</span></span>
+<span class="giallo-l"><span style="color: #6A737D;">                    // signal the loop future if it should run another iteration</span></span>
+<span class="giallo-l"><span style="color: #6A737D;">                    // or not.</span></span>
+<span class="giallo-l"><span style="color: #F97583;">                    .</span><span style="color: #B392F0;">and_then</span><span>(</span><span style="color: #F97583;">move |</span><span>_</span><span style="color: #F97583;">|</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #F97583;">                        if</span><span> counter</span><span style="color: #F97583;"> &lt;</span><span> (amount</span><span style="color: #F97583;"> /</span><span> concurrency) {</span></span>
+<span class="giallo-l"><span style="color: #B392F0;">                            Ok</span><span>(</span><span style="color: #B392F0;">Loop</span><span style="color: #F97583;">::</span><span style="color: #B392F0;">Continue</span><span>(counter</span><span style="color: #F97583;"> +</span><span style="color: #79B8FF;"> 1</span><span>))</span></span>
+<span class="giallo-l"><span>                        }</span><span style="color: #F97583;"> else</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #B392F0;">                            Ok</span><span>(</span><span style="color: #B392F0;">Loop</span><span style="color: #F97583;">::</span><span style="color: #B392F0;">Break</span><span>(counter))</span></span>
+<span class="giallo-l"><span>                        }</span></span>
+<span class="giallo-l"><span>                    })</span></span>
+<span class="giallo-l"><span>            });</span></span>
+<span class="giallo-l"><span>            parallel</span><span style="color: #F97583;">.</span><span style="color: #B392F0;">push</span><span>(requests_til_done);</span></span>
+<span class="giallo-l"><span>        }</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #6A737D;">        // The execution should finish when all futures are done.</span></span>
+<span class="giallo-l"><span style="color: #F97583;">        let</span><span> work</span><span style="color: #F97583;"> =</span><span style="color: #B392F0;"> join_all</span><span>(parallel);</span></span>
+<span class="giallo-l"><span style="color: #6A737D;">        // Now run it! Up to this point no request has been sent, we just</span></span>
+<span class="giallo-l"><span style="color: #6A737D;">        // assembled heavily nested futures so far.</span></span>
+<span class="giallo-l"><span>        core</span><span style="color: #F97583;">.</span><span style="color: #B392F0;">run</span><span>(work)</span><span style="color: #F97583;">.</span><span style="color: #B392F0;">unwrap</span><span>();</span></span>
+<span class="giallo-l"><span>    });</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre>
 <p>Now we can define bench scenarios that should be measured, for example:</p>
-<pre data-lang="rust" style="background-color:#191919;color:#f8f8f2;" class="language-rust "><code class="language-rust" data-lang="rust"><span>#[</span><span style="color:#e9fdac;">bench</span><span>]
-</span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">c_100_requests</span><span>(</span><span style="font-style:italic;color:#fc9354;">b</span><span>: </span><span style="color:#ff5e5e;">&amp;mut </span><span>test::Bencher) {
-</span><span>    </span><span style="color:#6699cc;">bench_requests</span><span>(b, </span><span style="color:#fdb082;">100</span><span>, </span><span style="color:#fdb082;">1</span><span>, </span><span style="color:#fdb082;">9090</span><span>);
-</span><span>}
-</span><span>
-</span><span>#[</span><span style="color:#e9fdac;">bench</span><span>]
-</span><span style="font-style:italic;color:#fbdfb5;">fn </span><span style="color:#8cdaff;">c_100_requests_varnish</span><span>(</span><span style="font-style:italic;color:#fc9354;">b</span><span>: </span><span style="color:#ff5e5e;">&amp;mut </span><span>test::Bencher) {
-</span><span>    </span><span style="color:#6699cc;">bench_requests</span><span>(b, </span><span style="color:#fdb082;">100</span><span>, </span><span style="color:#fdb082;">1</span><span>, </span><span style="color:#fdb082;">6081</span><span>);
-</span><span>}
-</span></code></pre>
-<p>The full source code with the scenarios can be found in the <a href="https://github.com/klausi/rustnish/blob/master/benches/rustnish_vs_varnish.rs">rustnish repository</a>.</p>
+<pre class="giallo" style="color: #E1E4E8; background-color: #24292E;"><code data-lang="rust"><span class="giallo-l"><span>#[bench]</span></span>
+<span class="giallo-l"><span style="color: #F97583;">fn</span><span style="color: #B392F0;"> c_100_requests</span><span>(b</span><span style="color: #F97583;">: &amp;mut</span><span style="color: #B392F0;"> test</span><span style="color: #F97583;">::</span><span style="color: #B392F0;">Bencher</span><span>) {</span></span>
+<span class="giallo-l"><span style="color: #B392F0;">    bench_requests</span><span>(b,</span><span style="color: #79B8FF;"> 100</span><span>,</span><span style="color: #79B8FF;"> 1</span><span>,</span><span style="color: #79B8FF;"> 9090</span><span>);</span></span>
+<span class="giallo-l"><span>}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>#[bench]</span></span>
+<span class="giallo-l"><span style="color: #F97583;">fn</span><span style="color: #B392F0;"> c_100_requests_varnish</span><span>(b</span><span style="color: #F97583;">: &amp;mut</span><span style="color: #B392F0;"> test</span><span style="color: #F97583;">::</span><span style="color: #B392F0;">Bencher</span><span>) {</span></span>
+<span class="giallo-l"><span style="color: #B392F0;">    bench_requests</span><span>(b,</span><span style="color: #79B8FF;"> 100</span><span>,</span><span style="color: #79B8FF;"> 1</span><span>,</span><span style="color: #79B8FF;"> 6081</span><span>);</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre>
+<p>The full source code with the scenarios can be found in the <a rel="external" href="https://github.com/klausi/rustnish/blob/master/benches/rustnish_vs_varnish.rs">rustnish repository</a>.</p>
 <p>Before this benchmark can be executed we need Varnish running on port 6081 (default) and we need to start a dummy backend and our proxy server:</p>
-<pre style="background-color:#191919;color:#f8f8f2;"><code><span>cargo run --release --example hello_9091
-</span><span>cargo run --release --example rustnish_9090
-</span></code></pre>
+<pre class="giallo" style="color: #E1E4E8; background-color: #24292E;"><code data-lang="plain"><span class="giallo-l"><span>cargo run --release --example hello_9091</span></span>
+<span class="giallo-l"><span>cargo run --release --example rustnish_9090</span></span></code></pre>
 <p>Executing <code>cargo bench</code> then gives us this:</p>
-<pre style="background-color:#191919;color:#f8f8f2;"><code><span>running 12 tests
-</span><span>test a_1_request                       ... bench:     364,246 ns/iter (+/- 103,690)
-</span><span>test a_1_request_varnish               ... bench:     389,026 ns/iter (+/- 63,051)
-</span><span>test b_10_requests                     ... bench:   1,874,980 ns/iter (+/- 377,843)
-</span><span>test b_10_requests_varnish             ... bench:   2,152,368 ns/iter (+/- 356,510)
-</span><span>test c_100_requests                    ... bench:  17,507,140 ns/iter (+/- 2,847,238)
-</span><span>test c_100_requests_varnish            ... bench:  21,896,708 ns/iter (+/- 5,546,318)
-</span><span>test d_10_parallel_requests            ... bench:   1,646,869 ns/iter (+/- 228,179)
-</span><span>test d_10_parallel_requests_varnish    ... bench:   2,012,392 ns/iter (+/- 426,878)
-</span><span>test e_100_parallel_requests           ... bench:   8,508,973 ns/iter (+/- 361,317)
-</span><span>test e_100_parallel_requests_varnish   ... bench:   9,574,347 ns/iter (+/- 764,147)
-</span><span>test f_1_000_parallel_requests         ... bench:  82,898,926 ns/iter (+/- 1,037,534)
-</span><span>test f_1_000_parallel_requests_varnish ... bench:  86,922,588 ns/iter (+/- 1,687,902)
-</span></code></pre>
+<pre class="giallo" style="color: #E1E4E8; background-color: #24292E;"><code data-lang="plain"><span class="giallo-l"><span>running 12 tests</span></span>
+<span class="giallo-l"><span>test a_1_request                       ... bench:     364,246 ns/iter (+/- 103,690)</span></span>
+<span class="giallo-l"><span>test a_1_request_varnish               ... bench:     389,026 ns/iter (+/- 63,051)</span></span>
+<span class="giallo-l"><span>test b_10_requests                     ... bench:   1,874,980 ns/iter (+/- 377,843)</span></span>
+<span class="giallo-l"><span>test b_10_requests_varnish             ... bench:   2,152,368 ns/iter (+/- 356,510)</span></span>
+<span class="giallo-l"><span>test c_100_requests                    ... bench:  17,507,140 ns/iter (+/- 2,847,238)</span></span>
+<span class="giallo-l"><span>test c_100_requests_varnish            ... bench:  21,896,708 ns/iter (+/- 5,546,318)</span></span>
+<span class="giallo-l"><span>test d_10_parallel_requests            ... bench:   1,646,869 ns/iter (+/- 228,179)</span></span>
+<span class="giallo-l"><span>test d_10_parallel_requests_varnish    ... bench:   2,012,392 ns/iter (+/- 426,878)</span></span>
+<span class="giallo-l"><span>test e_100_parallel_requests           ... bench:   8,508,973 ns/iter (+/- 361,317)</span></span>
+<span class="giallo-l"><span>test e_100_parallel_requests_varnish   ... bench:   9,574,347 ns/iter (+/- 764,147)</span></span>
+<span class="giallo-l"><span>test f_1_000_parallel_requests         ... bench:  82,898,926 ns/iter (+/- 1,037,534)</span></span>
+<span class="giallo-l"><span>test f_1_000_parallel_requests_varnish ... bench:  86,922,588 ns/iter (+/- 1,687,902)</span></span></code></pre>
 <p>Cool, that shows our proxy always being slightly faster than Varnish.</p>
 <h2 id="observing-benchmark-regressions">Observing benchmark regressions</h2>
 <p>Now that we have established a performance base line we can change or refactor our code and check what happens to our benchmark numbers. My Rustnish project is built on the Hyper library version 0.11, let's see what happens if I update and rewrite to Hyper 0.12 and run the same benchmark:</p>
-<pre style="background-color:#191919;color:#f8f8f2;"><code><span>test a_1_request                       ... bench:     554,467 ns/iter (+/- 75,441)
-</span><span>test a_1_request_varnish               ... bench:     495,228 ns/iter (+/- 94,544)
-</span><span>test b_10_requests                     ... bench:   3,022,574 ns/iter (+/- 1,797,736)
-</span><span>test b_10_requests_varnish             ... bench:   2,755,437 ns/iter (+/- 500,961)
-</span><span>test c_100_requests                    ... bench:  27,405,520 ns/iter (+/- 2,611,418)
-</span><span>test c_100_requests_varnish            ... bench:  24,964,495 ns/iter (+/- 3,385,641)
-</span><span>test d_10_parallel_requests            ... bench:   5,712,737 ns/iter (+/- 11,442,635)
-</span><span>test d_10_parallel_requests_varnish    ... bench:   1,684,061 ns/iter (+/- 264,177)
-</span><span>test e_100_parallel_requests           ... bench:  25,301,274 ns/iter (+/- 35,737,625)
-</span><span>test e_100_parallel_requests_varnish   ... bench:   8,721,555 ns/iter (+/- 897,422)
-</span><span>test f_1_000_parallel_requests         ... bench:  69,946,899 ns/iter (+/- 36,979,491)
-</span><span>test f_1_000_parallel_requests_varnish ... bench:  76,219,659 ns/iter (+/- 10,381,027)
-</span></code></pre>
+<pre class="giallo" style="color: #E1E4E8; background-color: #24292E;"><code data-lang="plain"><span class="giallo-l"><span>test a_1_request                       ... bench:     554,467 ns/iter (+/- 75,441)</span></span>
+<span class="giallo-l"><span>test a_1_request_varnish               ... bench:     495,228 ns/iter (+/- 94,544)</span></span>
+<span class="giallo-l"><span>test b_10_requests                     ... bench:   3,022,574 ns/iter (+/- 1,797,736)</span></span>
+<span class="giallo-l"><span>test b_10_requests_varnish             ... bench:   2,755,437 ns/iter (+/- 500,961)</span></span>
+<span class="giallo-l"><span>test c_100_requests                    ... bench:  27,405,520 ns/iter (+/- 2,611,418)</span></span>
+<span class="giallo-l"><span>test c_100_requests_varnish            ... bench:  24,964,495 ns/iter (+/- 3,385,641)</span></span>
+<span class="giallo-l"><span>test d_10_parallel_requests            ... bench:   5,712,737 ns/iter (+/- 11,442,635)</span></span>
+<span class="giallo-l"><span>test d_10_parallel_requests_varnish    ... bench:   1,684,061 ns/iter (+/- 264,177)</span></span>
+<span class="giallo-l"><span>test e_100_parallel_requests           ... bench:  25,301,274 ns/iter (+/- 35,737,625)</span></span>
+<span class="giallo-l"><span>test e_100_parallel_requests_varnish   ... bench:   8,721,555 ns/iter (+/- 897,422)</span></span>
+<span class="giallo-l"><span>test f_1_000_parallel_requests         ... bench:  69,946,899 ns/iter (+/- 36,979,491)</span></span>
+<span class="giallo-l"><span>test f_1_000_parallel_requests_varnish ... bench:  76,219,659 ns/iter (+/- 10,381,027)</span></span></code></pre>
 <p>Ouch, that is quite a heavy performance regression! Some observations:</p>
 <ul>
 <li>Varnish is now faster in almost all scenarios - which probably means that there is a performance regression in our reverse proxy.</li>
@@ -383,7 +373,7 @@
 <h2 id="conclusion">Conclusion</h2>
 <p>Automated benchmarks are great when you want to track the performance of your application over time. <code>cargo bench</code> is useful, unfortunately it is only available on Rust Nightly. The biggest challenge when doing a big black box performance test is to isolate the cause once you have determined a performance regression. Why and where is it happening? Is it really the application or the benchmark code? Can I reproduce the behavior with manual performance testing?</p>
 <p>The Hyper library does not seem to be a good fit for me when writing a reverse proxy. After finding a <a href="https://klau.si/blog/testing-memory-leaks-in-rust/">memory leak</a>, a <a href="https://klau.si/blog/crashing-a-rust-hyper-server-with-a-denial-of-service-attack/">denial of service weakness</a> and now this performance regression I think it is time to try another framework next.</p>
-<p><strong>Update 2018-09-07:</strong> seanmonster has some good insights about multi-threading performance in <a href="https://www.reddit.com/r/rust/comments/9bukvy/blog_post_benchmarking_a_rustlang_web_application/e56484j">their Reddit comments</a>. I was able to get Rustnish benchmark numbers ahead of Varnish again, but only by setting Tokio to be single-threaded. So in my single computer (but 4 CPU core) scenario Hyper is only able to compete with Varnish if we eliminate Tokio multithreading. The question remains: Varnish is multithreaded with 2 threadpools and potentially very many threads, why can it handle that so much better than Tokio?</p>
+<p><strong>Update 2018-09-07:</strong> seanmonster has some good insights about multi-threading performance in <a rel="external" href="https://www.reddit.com/r/rust/comments/9bukvy/blog_post_benchmarking_a_rustlang_web_application/e56484j">their Reddit comments</a>. I was able to get Rustnish benchmark numbers ahead of Varnish again, but only by setting Tokio to be single-threaded. So in my single computer (but 4 CPU core) scenario Hyper is only able to compete with Varnish if we eliminate Tokio multithreading. The question remains: Varnish is multithreaded with 2 threadpools and potentially very many threads, why can it handle that so much better than Tokio?</p>
 <p>I also quickly tested actix-web as a replacement for Hyper, but that delivered even worse benchmark results. I think I'll stick to Hyper for now :-)</p>
 </div>
 

@@ -14,7 +14,7 @@
           <author>Klaus Purer</author>
           <link>https://klau.si/blog/drupalcon-automated-testing-phpunit/</link>
           <guid>https://klau.si/blog/drupalcon-automated-testing-phpunit/</guid>
-          <description xml:base="https://klau.si/blog/drupalcon-automated-testing-phpunit/">&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;docs.google.com&#x2F;presentation&#x2F;d&#x2F;1Uhw3wYfcC_axz6SRTxEHVe8FZHbA-tUGN7dr7YyHMXg&#x2F;edit&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of our DrupalCon Dublin 2016 talk &quot;Automated Testing: PHPUnit all the way&quot;.&lt;&#x2F;p&gt;
+          <description xml:base="https://klau.si/blog/drupalcon-automated-testing-phpunit/">&lt;p&gt;Here are &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;docs.google.com&#x2F;presentation&#x2F;d&#x2F;1Uhw3wYfcC_axz6SRTxEHVe8FZHbA-tUGN7dr7YyHMXg&#x2F;edit&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of our DrupalCon Dublin 2016 talk &quot;Automated Testing: PHPUnit all the way&quot;.&lt;&#x2F;p&gt;
 &lt;div class=&quot;youtube-lazy&quot; data-video-id=&quot;jcdEp3YGa94&quot;&gt;
   &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=jcdEp3YGa94&quot;
      class=&quot;youtube-lazy-placeholder&quot;
