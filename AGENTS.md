@@ -12,6 +12,7 @@ This is a Zola static site generator project.
 - `docs/` - Generated output (do not edit directly)
 - `tools/` - CLI tools for managing the blog
   - `tools/mastodon-post/` - Rust CLI for posting blog entries to Mastodon for comments
+  - `tools/optimize-image.sh` - Bash script to convert images to WebP (max width 1200px)
 
 ## Static Assets Organization
 

@@ -99,6 +99,10 @@
         <lastmod>2019-03-31</lastmod>
     </url>
     <url>
+        <loc>https://klau.si/blog/moony/</loc>
+        <lastmod>2026-02-01</lastmod>
+    </url>
+    <url>
         <loc>https://klau.si/blog/proposing-drupal-7-security-team/</loc>
         <lastmod>2023-12-12</lastmod>
     </url>
@@ -370,6 +374,9 @@
         <loc>https://klau.si/tags/gesellschaftskritik/</loc>
     </url>
     <url>
+        <loc>https://klau.si/tags/moony/</loc>
+    </url>
+    <url>
         <loc>https://klau.si/tags/phpunit/</loc>
     </url>
     <url>
@@ -392,6 +399,9 @@
     </url>
     <url>
         <loc>https://klau.si/tags/speaking/</loc>
+    </url>
+    <url>
+        <loc>https://klau.si/tags/suicide/</loc>
     </url>
     <url>
         <loc>https://klau.si/tags/testing/</loc>

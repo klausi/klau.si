@@ -7,7 +7,16 @@
       <generator>Zola</generator>
       <language>en</language>
       <atom:link href="https://klau.si/rss.xml" rel="self" type="application/rss+xml"/>
-      <lastBuildDate>Fri, 04 Apr 2025 00:00:00 +0000</lastBuildDate>
+      <lastBuildDate>Sun, 01 Feb 2026 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Moony</title>
+          <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
+          <author>Klaus Purer</author>
+          <link>https://klau.si/blog/moony/</link>
+          <guid>https://klau.si/blog/moony/</guid>
+          <description xml:base="https://klau.si/blog/moony/">&lt;p&gt;Mein Sohn Moony hat sich das Leben genommen. In meiner Trauer ist dieser Text entstanden.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;moony&#x2F;moony-datum.webp&quot; alt=&quot;Porträtfoto des 18-jährigen Moony. Kurzes blondes und blaues Haar. Helle Hautfarbe. Piercings im Ohr und in der Nase. Beinahe ein Lächeln. Geboren 22.12.2007, gestorben 26.01.2026.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;</description>
+      </item>
       <item>
           <title>Testing Claude AI for Drupal code</title>
           <pubDate>Fri, 04 Apr 2025 00:00:00 +0000</pubDate>
@@ -300,20 +309,6 @@ slightly better than the Eclipse integration:&lt;&#x2F;p&gt;
 &lt;&#x2F;ul&gt;
 &lt;p&gt;Syntax highlighting, autocompletion, Ctrl + Click on functions and
 auto-formatting of course also work in VSCode as you would expect from an IDE.&lt;&#x2F;p&gt;</description>
-      </item>
-      <item>
-          <title>Writing integration tests in Rust</title>
-          <pubDate>Thu, 25 May 2017 00:00:00 +0000</pubDate>
-          <author>Klaus Purer</author>
-          <link>https://klau.si/blog/writing-integration-tests-in-rust/</link>
-          <guid>https://klau.si/blog/writing-integration-tests-in-rust/</guid>
-          <description xml:base="https://klau.si/blog/writing-integration-tests-in-rust/">&lt;p&gt;In my first post I wrote a quite fragile, minimally working prototype that uses
-many &lt;code&gt;unwrap()&lt;&#x2F;code&gt; calls thereby raising lots of panics during execution.
-Implementing and verifying proper error handling requires testing. I don&#x27;t want
-to do unit testing yet because that would require research about complicated
-mocking techniques and dependency injection in Rust. Instead, I would like to
-do integration testing of the whole application to prove that the end result is
-working as expected.&lt;&#x2F;p&gt;</description>
       </item>
     </channel>
 </rss>

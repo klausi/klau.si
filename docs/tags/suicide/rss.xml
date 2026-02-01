@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>Klausi&#x27;s Weblog - suicide</title>
+      <link>https://klau.si</link>
+      <description></description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://klau.si/tags/suicide/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Sun, 01 Feb 2026 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Moony</title>
+          <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
+          <author>Klaus Purer</author>
+          <link>https://klau.si/blog/moony/</link>
+          <guid>https://klau.si/blog/moony/</guid>
+          <description xml:base="https://klau.si/blog/moony/">&lt;p&gt;Mein Sohn Moony hat sich das Leben genommen. In meiner Trauer ist dieser Text entstanden.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;moony&#x2F;moony-datum.webp&quot; alt=&quot;Porträtfoto des 18-jährigen Moony. Kurzes blondes und blaues Haar. Helle Hautfarbe. Piercings im Ohr und in der Nase. Beinahe ein Lächeln. Geboren 22.12.2007, gestorben 26.01.2026.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;</description>
+      </item>
+    </channel>
+</rss>
