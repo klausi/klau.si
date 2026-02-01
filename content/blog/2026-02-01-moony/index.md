@@ -36,8 +36,8 @@ Moony hatte 2 Väter.
 Moony hatte Geschwister.  
 Moony hatte Großeltern.  
 Moony hatte Tanten und Onkels.  
-Moony hatte Freund*Innen.  
-Moony hatte queere Freund*Innen.  
+Moony hatte Freund\*Innen.  
+Moony hatte queere Freund\*Innen.  
 Moony hatte nicht viel Zeit.
 
 Moony war auf Snapchat, aber nur wegen dem langen Streak mit Leonie.  
