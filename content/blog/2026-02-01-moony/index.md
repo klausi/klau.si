@@ -116,3 +116,5 @@ Moony wird nicht maturieren.
 Moony wird begraben.  
 Moony wird ruhen.  
 Moony wird mir fehlen.
+
+{{ mastodon_comments(id="115996852255344735") }}
