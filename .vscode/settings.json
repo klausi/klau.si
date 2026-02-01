@@ -1,0 +1,20 @@
+{
+  // Use djLint for Jinja2/HTML templates - it understands template syntax
+  "[html]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "monosans.djlint",
+    "editor.tabSize": 2
+  },
+  "[xml]": {
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  },
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false
+  },
+  "djlint.pythonPath": "/home/klausi/.local/share/pipx/venvs/djlint/bin/python",
+  "djlint.useEditorIndentation": false,
+  "python.defaultInterpreterPath": "/home/klausi/.local/share/pipx/venvs/djlint/bin/python"
+}

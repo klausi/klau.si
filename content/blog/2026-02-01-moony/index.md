@@ -6,7 +6,9 @@ draft = true
 tags = ["moony", "suicide"]
 +++
 
-![Portrait photo of 18-year-old Moony. Short blue and blonde hair. White skin color. Piercings in ear and nose. Almost a smile.](moony-datum.png)
+Mein Sohn Moony hat sich das Leben genommen. In meiner Trauer ist dieser Text entstanden.
+
+![Porträtfoto des 18-jährigen Moony. Kurzes blondes und blaues Haar. Helle Hautfarbe. Piercings im Ohr und in der Nase. Beinahe ein Lächeln. Geboren 22.12.2007, gestorben 26.01.2026.](moony-datum.png)
 
 <!-- more -->
 
@@ -76,7 +78,7 @@ Moony schrieb Mathematik Schularbeiten ohne dafür zu lernen, eiskalt.
 
 Moony mochte Harry Potter, aber nicht J.K. Rowling.  
 Moony mochte die Marauder Ära.  
-Moony mochte Haz Been Hotel.  
+Moony mochte Hazbin Hotel.  
 Moony mochte Within Temptation.  
 Moony mochte schwarz.  
 Moony mochte All for the Game.  
@@ -103,6 +105,7 @@ Moony wollte aufs System of a Down Konzert gehen.
 Moony wollte sich mit mir am 31. Jänner treffen.
 
 Moony isst vegetarisch. Nein, Moony aß vegetarisch.  
+
 Moony ist tot.  
 Moony ist Vergangenheit.  
 Moony ist Erinnerung.  
