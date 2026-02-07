@@ -81,3 +81,5 @@ noch nach Hause zurückkehren, so tun, als wäre
 nichts passiert. Doch ich lasse mich fallen...
 
 {{ gallery() }}
+
+{{ mastodon_comments(id="116030867607120736") }}
