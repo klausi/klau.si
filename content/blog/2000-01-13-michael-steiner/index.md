@@ -7,7 +7,7 @@ tags = ["suicide"]
 
 **Triggerwarnung: Tod, Suizid**
 
-Im Jänner 2000 beging mein Schulkollege Michael Steiner Selbstmord. Wir besuchten die 2. Klasse der HTL Mössingerstraße in Klagenfurt und waren 16 Jahre alt. Unsere Deutschlehrerin Edith Keuschnig ermöglichte uns bei der darauf folgenden Deutschschularbeit als 3. Thema frei über Suizid zu schreiben, so ist dieser Text entstanden.
+Im Jänner 2000 beging mein Schulkollege Michael Steiner Selbstmord. Wir besuchten die 2. Klasse der HTL Mössingerstraße in Klagenfurt und waren 16 Jahre alt. Unsere Deutschlehrerin Edith Keuschnig ermöglichte uns, bei der darauffolgenden Deutschschularbeit als 3. Thema frei über Suizid zu schreiben. So ist dieser Text entstanden.
 
 <!-- more -->
 
@@ -72,12 +72,12 @@ Ich bin in der Mitte der Brücke angekommen. Mir
 wird schlecht. Ich sehe hinunter in die Tiefe. Eine
 Träne löst sich und benötigt einige Sekunden, bis
 sie im Wasser aufschlägt. Zitternd steige ich auf
-das Geländer, schaue gerade aus, sehe den Himmel
+das Geländer, schaue geradeaus, sehe den Himmel
 voller Sterne. Vor mir geht es 80 Meter in die Tiefe.
 Der Wind hat aufgefrischt und streicht sanft durch
 mein Haar. Ich strecke meine Arme nach rechts und
 links aus und fühle Vollkommenheit. Ich könnte
-noch nach Hause zurückkehren, so tun als wäre
+noch nach Hause zurückkehren, so tun, als wäre
 nichts passiert. Doch ich lasse mich fallen...
 
 {{ gallery() }}
