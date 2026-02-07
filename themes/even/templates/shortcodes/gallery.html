@@ -1,0 +1,10 @@
+<div>
+  {% for asset in page.assets -%}
+    {%- if asset is matching("[.]webp$") -%}
+      {% set image = resize_image(path=asset, width=240, height=180) %}
+      <a href="{{ asset | split(pat='/') | last }}">
+        <img src="{{ image.url }}" />
+      </a>
+    {%- endif %}
+  {%- endfor %}
+</div>

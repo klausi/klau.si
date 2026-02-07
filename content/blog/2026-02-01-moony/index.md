@@ -5,6 +5,8 @@ date = 2026-02-01
 tags = ["moony", "suicide"]
 +++
 
+**Triggerwarnung: Tod, Suizid**
+
 Mein Sohn Moony hat sich das Leben genommen. In meiner Trauer ist dieser Text entstanden.
 
 ![Porträtfoto des 18-jährigen Moony. Kurzes blondes und blaues Haar. Helle Hautfarbe. Piercings im Ohr und in der Nase. Beinahe ein Lächeln. Geboren 22.12.2007, gestorben 26.01.2026.](moony-datum.webp)
