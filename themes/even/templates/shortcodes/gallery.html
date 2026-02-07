@@ -2,8 +2,9 @@
   {% for asset in page.assets -%}
     {%- if asset is matching("[.]webp$") -%}
       {% set image = resize_image(path=asset, width=240, height=180) %}
+      {% set alt_text = load_data(path=asset ~ ".alt.txt", format="plain") %}
       <a href="{{ asset | split(pat='/') | last }}">
-        <img src="{{ image.url }}" />
+        <img src="{{ image.url }}" alt="{{ alt_text | trim }}" />
       </a>
     {%- endif %}
   {%- endfor %}
