@@ -10,6 +10,11 @@ zola serve
 ./build.sh
 ```
 
+## Optimize image to webp
+```
+./tools/optimize-image.sh <filepath>
+```
+
 ## Blog Comments via Mastodon
 
 Blog posts can have a comment section that displays replies from Mastodon. When you publish a new blog post and want to enable comments, use the `mastodon-post` tool.
