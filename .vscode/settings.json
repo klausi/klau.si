@@ -16,5 +16,6 @@
   },
   "djlint.pythonPath": "/home/klausi/.local/share/pipx/venvs/djlint/bin/python",
   "djlint.useEditorIndentation": false,
-  "python.defaultInterpreterPath": "/home/klausi/.local/share/pipx/venvs/djlint/bin/python"
+  "python.defaultInterpreterPath": "/home/klausi/.local/share/pipx/venvs/djlint/bin/python",
+  "cSpell.enabled": false
 }
