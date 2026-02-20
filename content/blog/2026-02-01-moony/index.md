@@ -119,4 +119,6 @@ Moony wird begraben.
 Moony wird ruhen.  
 Moony wird mir fehlen.
 
+{{ gallery() }}
+
 {{ mastodon_comments(id="115996852255344735") }}
