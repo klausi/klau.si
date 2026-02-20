@@ -7,7 +7,17 @@
       <generator>Zola</generator>
       <language>en</language>
       <atom:link href="https://klau.si/rss.xml" rel="self" type="application/rss+xml"/>
-      <lastBuildDate>Sun, 01 Feb 2026 00:00:00 +0000</lastBuildDate>
+      <lastBuildDate>Fri, 20 Feb 2026 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>18 Monate</title>
+          <pubDate>Fri, 20 Feb 2026 00:00:00 +0000</pubDate>
+          <author>Klaus Purer</author>
+          <link>https://klau.si/blog/18-monate/</link>
+          <guid>https://klau.si/blog/18-monate/</guid>
+          <description xml:base="https://klau.si/blog/18-monate/">&lt;p&gt;&lt;strong&gt;Triggerwarnung: Tod, Suizid&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Ich trauere um meinen Sohn &lt;a href=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;moony&#x2F;&quot;&gt;Moony&lt;&#x2F;a&gt;, der sich das Leben genommen hat. Dies ist ein weiterer Text in meiner Suche nach Umgang mit Selbstmord (Kategorie: &lt;a href=&quot;&#x2F;tags&#x2F;suicide&quot;&gt;suicide&lt;&#x2F;a&gt;).&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;18-monate&#x2F;moony-hair.webp&quot; alt=&quot;Porträtfoto des 17-jährigen Moony. Kurze, schwarz gefärbte Haare mit einem einrasierten Muster auf der Seite des Kopfes. 2 Piercings im Ohr, eines in der Nase. Grau-grüne Augen. Weiße Hautfarbe. Dunkelgrüner Sweater.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;</description>
+      </item>
       <item>
           <title>Moony</title>
           <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
@@ -293,23 +303,6 @@ and provide one integration test case.&lt;&#x2F;p&gt;
 &lt;p&gt;Tokio handles input&#x2F;output asynchronously, which makes setting up a server more
 complicated. The benefit is more efficient parallel execution with a
 non-blocking event loop.&lt;&#x2F;p&gt;</description>
-      </item>
-      <item>
-          <title>Using Visual Studio Code for Rust on Ubuntu</title>
-          <pubDate>Sun, 28 May 2017 00:00:00 +0000</pubDate>
-          <author>Klaus Purer</author>
-          <link>https://klau.si/blog/using-visual-studio-code-for-rust-on-ubuntu/</link>
-          <guid>https://klau.si/blog/using-visual-studio-code-for-rust-on-ubuntu/</guid>
-          <description xml:base="https://klau.si/blog/using-visual-studio-code-for-rust-on-ubuntu/">&lt;p&gt;I already wrote about &lt;a href=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;using-eclipse-ide-for-rust-on-ubuntu&#x2F;&quot;&gt;using Eclipse for Rust development&lt;&#x2F;a&gt; but after trying
-&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;code.visualstudio.com&#x2F;&quot;&gt;Visual Studio Code&lt;&#x2F;a&gt; (VSCode) I think it is
-slightly better than the Eclipse integration:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;when the cursor is at a variable the same variable is highlighted elsewhere.&lt;&#x2F;li&gt;
-&lt;li&gt;tooltip popups when hovering over variables, functions, methods.&lt;&#x2F;li&gt;
-&lt;li&gt;better native support for Git and Markdown files&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;Syntax highlighting, autocompletion, Ctrl + Click on functions and
-auto-formatting of course also work in VSCode as you would expect from an IDE.&lt;&#x2F;p&gt;</description>
       </item>
     </channel>
 </rss>
