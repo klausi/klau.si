@@ -70,3 +70,5 @@ Moment, habe ich gerade mit mir selbst argumentiert, um mich zuerst schlecht zu 
 Noch 18 Monate.
 
 Ich vermisse dich Moony.
+
+{{ mastodon_comments(id="116104401915876202") }}
