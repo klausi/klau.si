@@ -393,6 +393,8 @@ für einen karitativen Zweck." />
             day: 'numeric'
           });
 
+          const cleanedContent = cleanReplyContent(reply.content);
+
           let attachments = '';
           if (reply.media_attachments && reply.media_attachments.length > 0) {
             const images = reply.media_attachments.filter(m => m.type === 'image');
@@ -415,7 +417,7 @@ für einen karitativen Zweck." />
                 </a>
                 <a href="${reply.url}" target="_blank" rel="noopener" class="comment-date">${dateStr}</a>
               </div>
-              <div class="comment-content">${reply.content}</div>
+              <div class="comment-content">${cleanedContent}</div>
               ${attachments}
             </div>
           `;
@@ -427,6 +429,76 @@ für einen karitativen Zweck." />
       console.error('Failed to load Mastodon comments:', error);
       container.innerHTML = '<p class="comment-error">Failed to load comments. Please try again later.</p>';
     }
+  }
+
+  // Remove leading mentions of @klausi and @klausi_blog from the reply content,
+  // but keep any other mentions or formatting intact.
+  function cleanReplyContent(content) {
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = content;
+
+    const handlesToRemove = ['@klausi', '@klausi_blog'];
+
+    // We expect the content to be wrapped in a <p> tag, but handle cases where it might not be
+    let container = tempDiv.firstElementChild;
+
+    // If the first element is not a paragraph, use the tempDiv itself as container
+    // This handles cases where there might be no <p> or multiple top-level elements
+    if (!container || container.tagName !== 'P') {
+        container = tempDiv;
+    }
+
+    // Remove leading mentions
+    let child = container.firstChild;
+    while (child) {
+      let shouldRemove = false;
+
+      if (child.nodeType === Node.TEXT_NODE) {
+        // Remove whitespace text nodes at the beginning
+        if (!child.textContent.trim()) {
+          shouldRemove = true;
+        } else {
+          // Found text content, stop processing
+          break;
+        }
+      } else if (child.nodeType === Node.ELEMENT_NODE) {
+         // Check for span with h-card class (common Mastodon structure)
+         let link = null;
+         if (child.tagName === 'A' && child.classList.contains('mention')) {
+           link = child;
+         } else if (child.tagName === 'SPAN' && child.classList.contains('h-card')) {
+           link = child.querySelector('a.mention');
+         }
+
+         if (link) {
+           const handle = link.textContent.trim();
+           // Check if handle is in our removal list (case insensitive)
+           if (handlesToRemove.some(h => handle.toLowerCase() === h.toLowerCase())) {
+             shouldRemove = true;
+           } else {
+             // Found a mention that isn't in our list (e.g. replying to someone else too), stop?
+             break;
+           }
+         } else {
+           // Found some other element (e.g. <br>, <strong>), stop processing
+           break;
+         }
+      } else {
+         // Comment node or others
+         shouldRemove = true;
+      }
+
+      // Check if we should remove this node
+      if (shouldRemove) {
+        const next = child.nextSibling;
+        container.removeChild(child);
+        child = next;
+      } else {
+        break;
+      }
+    }
+
+    return tempDiv.innerHTML;
   }
 
   function escapeHtml(text) {
