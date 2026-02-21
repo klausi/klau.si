@@ -4,7 +4,7 @@ date = 2011-09-25
 path = "git-diff-color-words"
 aliases = ["node/39", "node/39.html", "git-diff-color-words.html"]
 [taxonomies]
-tags = ["software", "drupal"]
+tags = ["software", "drupal", "english"]
 +++
 
 <p>Git command for better patch review.</p>

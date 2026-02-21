@@ -4,7 +4,7 @@ date = 2010-04-13
 path = "lightning-talk-about-hooks-drupal"
 aliases = ["node/30", "node/30.html", "lightning-talk-about-hooks-drupal.html"]
 [taxonomies]
-tags = ["software", "drupal"]
+tags = ["software", "drupal", "english"]
 +++
 
 <p>

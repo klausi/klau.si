@@ -4,7 +4,7 @@ date = 2008-10-30
 path = "sidux-way-life-beispiel-openoffice-3"
 aliases = ["node/19", "node/19.html", "sidux-way-life-beispiel-openoffice-3.html"]
 [taxonomies]
-tags = ["software"]
+tags = ["software", "german"]
 +++
 
 Eine <a href="http://ikhaya.ubuntuusers.de/2008/10/25/ubuntu-rechtfertigt-entscheidung-gegen-openoffice.org-3.0/" target="_blank">Ikhaya Meldung auf ubuntuusers.de</a> samt <a href="http://forum.ubuntuusers.de/topic/ikhaya-ubuntu-rechtfertigt-entscheidung-gegen/">Diskussion</a> brachte mich letztens ein bisschen zum Lächeln: OpenOffice 3 wird nicht in Ubuntu 8.10 Intrepid Ibex enthalten sein. Großes Wehklagen war bei den Fans von Ubuntu (gleichzeitig Fans aktueller Software) zu hören, so was wird mir bei der Distribution meiner Wahl jedenfalls nicht passieren.<!-- more -->

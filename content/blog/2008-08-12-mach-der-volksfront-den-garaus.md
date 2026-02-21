@@ -4,7 +4,7 @@ date = 2008-08-12
 path = "mach-der-volksfront-den-garaus"
 aliases = ["node/16", "node/16.html", "mach-der-volksfront-den-garaus.html"]
 [taxonomies]
-tags = ["gesellschaftskritik"]
+tags = ["gesellschaftskritik", "german"]
 +++
 
 Es ist wieder Wahlkampf in Österreich - passend dazu hier ein Schmakerl der ÖVP Propaganda aus dem Jahre 1966: Ein schönes Marsch-Lied mit schrägem, lustigem Text. Eignet sich perfekt zum Grölen im alkoholisiertem Zustand, beispielsweise auf Festivals (heuer am <a title="Sauzipf Rocks" href="http://www.sauzipfrocks.com" target="_blank">Sauzip</a><a title="Sauzipf Rocks" href="http://www.sauzipfrocks.com" target="_blank">f</a> Camping Platz zu hören gewesen).

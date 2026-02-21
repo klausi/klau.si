@@ -4,7 +4,7 @@ date = 2008-09-05
 path = "mit-dem-schlauchboot-die-donau-runter"
 aliases = ["node/17", "node/17.html", "mit-dem-schlauchboot-die-donau-runter.html"]
 [taxonomies]
-tags = ["freizeit"]
+tags = ["freizeit", "german"]
 +++
 
 <p>Ein etwas sp&auml;ter Nachbericht meiner Reise im Juli.</p>

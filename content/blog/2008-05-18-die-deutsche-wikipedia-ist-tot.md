@@ -4,7 +4,7 @@ date = 2008-05-18
 path = "die-deutsche-wikipedia-ist-tot"
 aliases = ["node/15", "node/15.html", "die-deutsche-wikipedia-ist-tot.html"]
 [taxonomies]
-tags = ["gesellschaftskritik"]
+tags = ["gesellschaftskritik", "german"]
 +++
 
 Ich mag die <a title="Wikipedia" href="http://wikipedia.org/" target="_blank">Wikipedia</a> eigentlich. Du weißt über einen Begriff nicht wirklich Bescheid und willst kurz wissen wo du ihn einordnen sollst - dafür war die <a title="die " href="http://de.wikipedia.org/wiki/Hauptseite" target="_blank">deutsche Wikipedia</a> zum Nachschlagen bestens geeignet. Klar, eine jede weiß, dass man den Inhalten nur bedingt vertrauen kann, aber für den Einstieg und für weiterführende Links war es immer noch gut genug.

@@ -2,7 +2,7 @@
 title = "Writing integration tests in Rust"
 date = 2017-05-25
 [taxonomies]
-tags = ["rust", "rustnish"]
+tags = ["rust", "rustnish", "english"]
 +++
 
 In my first post I wrote a quite fragile, minimally working prototype that uses

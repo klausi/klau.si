@@ -2,7 +2,7 @@
 title = "Dangerous Next.js redirects - how misconfiguration can bring your website down"
 date = 2025-01-30
 [taxonomies]
-tags = ["security"]
+tags = ["security", "english"]
 +++
 
 ![Black Next.js logos arranged in a circle. In the middle is an emoji with closed eyes exhausting.](nextjs_exhale.webp)

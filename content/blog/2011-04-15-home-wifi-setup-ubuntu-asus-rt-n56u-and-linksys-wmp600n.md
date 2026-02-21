@@ -4,7 +4,7 @@ date = 2011-04-15
 path = "home-wifi-setup-ubuntu-asus-rt-n56u-and-linksys-wmp600n"
 aliases = ["node/35", "node/35.html", "home-wifi-setup-ubuntu-asus-rt-n56u-and-linksys-wmp600n.html"]
 [taxonomies]
-tags = ["software"]
+tags = ["software", "english"]
 +++
 
 <p>

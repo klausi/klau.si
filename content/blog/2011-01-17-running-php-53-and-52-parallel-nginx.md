@@ -4,7 +4,7 @@ date = 2011-01-17
 path = "running-php-53-and-52-parallel-nginx"
 aliases = ["node/34", "node/34.html", "running-php-53-and-52-parallel-nginx.html"]
 [taxonomies]
-tags = ["software", "drupal"]
+tags = ["software", "drupal", "english"]
 +++
 
 <p>

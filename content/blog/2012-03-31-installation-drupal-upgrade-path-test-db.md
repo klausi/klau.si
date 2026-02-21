@@ -4,7 +4,7 @@ date = 2012-03-31
 path = "installation-drupal-upgrade-path-test-db"
 aliases = ["node/41", "node/41.html", "installation-drupal-upgrade-path-test-db.html"]
 [taxonomies]
-tags = ["drupal", "drupal planet"]
+tags = ["drupal", "drupal planet", "english"]
 +++
 
 <p>While working on the <a href="http://drupal.org/node/935062">Kill role IDs patch</a> I had to develop some upgrade path Simpletests. Unfortunately the <a href="http://drupal.org/node/1429136">documentation for upgrade path tests</a> currently lacks installtion instructions on how to work with the existing bare and filled exported test databases. Here is a small writeup of what I did until we document that properly.</p>

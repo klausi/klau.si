@@ -2,7 +2,7 @@
 title = "Converting a Hyper server to Tokio"
 date = 2017-07-16
 [taxonomies]
-tags = ["rust", "rustnish"]
+tags = ["rust", "rustnish", "english"]
 +++
 
 Since my [first blog post where I constructed a server with Hyper](@/blog/2017-04-30-getting-started-with-rust/index.md) some time

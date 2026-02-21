@@ -4,7 +4,7 @@ date = 2008-09-28
 path = "python-dbus-gajim-magic"
 aliases = ["node/18", "node/18.html", "python-dbus-gajim-magic.html"]
 [taxonomies]
-tags = ["software"]
+tags = ["software", "english"]
 +++
 
 <p>I like <a href="http://freedesktop.org/wiki/Software/dbus">Dbus</a> because it allows desktop applications to communicate with each other. I also like <a href="http://www.python.org/">Python</a>, a powerful scripting language that is perfect for short tasks with a minimum of commands. And finally I like <a href="http://www.gajim.org">Gajim</a>, the instant messenger of my choice for the <a href="http://jabber.rwth-aachen.de/wiki/index.php/Jabber_-_Einfach_erkl%C3%A4rt!">XMPP-Jabber network</a> (the only free [free as in free speech] instant messaging network!).</p>

@@ -4,7 +4,7 @@ date = 2007-07-25
 path = "der-nationalsozialismus-und-ich"
 aliases = ["node/6", "node/6.html", "der-nationalsozialismus-und-ich.html"]
 [taxonomies]
-tags = ["gesellschaftskritik"]
+tags = ["gesellschaftskritik", "german"]
 +++
 
 Oft erwähnt, oft für Beispiele herangezogen (siehe auch <a href="http://de.wikipedia.org/wiki/Godwins_law" title="Godwins Law" target="_blank">Godwins Law</a>), gut dokumentiert und wohlbekannt: der Nationalsozialismus. Wir alle wissen was in den Dreißiger Jahren und im zweiten Weltkrieg passiert ist, es wurde uns in der Schule beigebracht und von der älteren Generation überliefert. Wir wissen auch wie es dazu gekommen ist, zumindest ungefähr. Die Frage "Wie konnte das nur passieren?" steht für mich trotzdem immer noch im Raum, die Frage "Wie können wir verhindern, dass so etwas jetzt und in Zukunft nicht mehr passiert?" scheint mir auch viel zuwenig oft diskutiert worden.

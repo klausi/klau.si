@@ -4,7 +4,7 @@ date = 2010-02-22
 path = "gmail-and-postmaster"
 aliases = ["node/29", "node/29.html", "gmail-and-postmaster.html"]
 [taxonomies]
-tags = ["software"]
+tags = ["software", "english"]
 +++
 
 <p>The Gmail spam filter works fine most time, but be careful if you are the postmaster of a mail server and want to check delivery failure notifications in your Gmail account.</p>

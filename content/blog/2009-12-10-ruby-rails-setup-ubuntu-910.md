@@ -4,7 +4,7 @@ date = 2009-12-10
 path = "ruby-rails-setup-ubuntu-910"
 aliases = ["node/26", "node/26.html", "ruby-rails-setup-ubuntu-910.html"]
 [taxonomies]
-tags = ["software", "ubuntu"]
+tags = ["software", "ubuntu", "english"]
 +++
 
 <p>I'm working on a Ruby on Rails project right now and had to setup an environment on my Ubuntu 9.10 system. Here are the install commands for your reference if you want to get it done fast.</p>

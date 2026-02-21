@@ -2,7 +2,7 @@
 title = "Testing memory leaks in Rust"
 date = 2017-10-06
 [taxonomies]
-tags = ["rust", "rustnish", "security"]
+tags = ["rust", "rustnish", "security", "english"]
 +++
 
 Rust has many built-in concepts for memory safety, but it cannot prevent

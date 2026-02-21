@@ -4,7 +4,7 @@ date = 2010-02-15
 path = "master-thesis-about-drupal-and-web-services"
 aliases = ["node/28", "node/28.html", "master-thesis-about-drupal-and-web-services.html"]
 [taxonomies]
-tags = ["software", "uni", "drupal"]
+tags = ["software", "uni", "drupal", "english"]
 +++
 
 <p>

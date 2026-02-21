@@ -2,7 +2,7 @@
 title = "Using Eclipse IDE for Rust on Ubuntu"
 date = 2017-05-06
 [taxonomies]
-tags = ["rust", "rustnish"]
+tags = ["rust", "rustnish", "english"]
 +++
 
 **Update: [New blog post about choosing Visual Studio Code for Rust](@/blog/2017-05-28-using-visual-studio-code-for-rust-on-ubuntu.md)

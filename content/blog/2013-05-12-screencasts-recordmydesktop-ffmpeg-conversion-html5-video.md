@@ -4,7 +4,7 @@ date = 2013-05-12
 path = "screencasts-recordmydesktop-ffmpeg-conversion-html5-video"
 aliases = ["node/46", "node/46.html", "screencasts-recordmydesktop-ffmpeg-conversion-html5-video.html"]
 [taxonomies]
-tags = ["software", "ubuntu"]
+tags = ["software", "ubuntu", "english"]
 +++
 
 Producing a demo video for <a href="http://portland2013.drupal.org/session/rest-and-serialization-drupal-8">my DrupalCon Portland presentation</a> caused a bit frustration with video editing tools, so here is a simple solution to cut and convert a video on Ubuntu.<!-- more -->

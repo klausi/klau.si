@@ -2,7 +2,7 @@
 title = "18 Monate"
 date = 2026-02-20
 [taxonomies]
-tags = ["moony", "suicide"]
+tags = ["moony", "suicide", "german"]
 +++
 
 **Triggerwarnung: Tod, Suizid**

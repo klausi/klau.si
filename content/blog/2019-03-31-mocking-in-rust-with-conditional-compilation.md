@@ -2,7 +2,7 @@
 title = "Mocking in Rust with conditional compilation"
 date = 2019-03-31
 [taxonomies]
-tags = ["rust", "rustnish"]
+tags = ["rust", "rustnish", "english"]
 +++
 
 When writing automated unit tests for your application you will probably need to use [mocks](https://en.wikipedia.org/wiki/Mock_object) at some point. Classical object-oriented programming languages such as PHP solve this with reflection where mock object types are created during test runtime. The code under test expects a certain interface or class and the test code passes mock objects that implement the interface or are a subclass.

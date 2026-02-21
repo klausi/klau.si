@@ -4,7 +4,7 @@ date = 2007-08-07
 path = "frauinnen-emanzencodex-und-das-ganze-gender-blabla"
 aliases = ["node/7", "node/7.html", "frauinnen-emanzencodex-und-das-ganze-gender-blabla.html"]
 [taxonomies]
-tags = ["gesellschaftskritik"]
+tags = ["gesellschaftskritik", "german"]
 +++
 
 Nette Überschrift, etwas übertrieben vielleicht, aber nett. In letzter Zeit gab es viele Diskussionen zum Thema Gleichberechtigung in meinem Online-Umfeld, angefangen bei <a href="http://fsinf.at/node/449">Kommentaren auf fsinf.at</a>, über einen <a href="http://www.informatik-forum.at/showthread.php?t=54487">Frauenräume-Thread</a> im Informatik-Forum, bis hin zu einer Offtopic-Grundsatzdiskussion über geschlechtergerechte Sprache im <a href="http://www.informatik-forum.at/showthread.php?t=53667">Veganismus-Thread</a>, ebenfalls im Informatik-Forum. Ich möchte hier nochmals meine Meinung zusammenfassen.

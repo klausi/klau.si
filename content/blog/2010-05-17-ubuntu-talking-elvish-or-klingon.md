@@ -4,7 +4,7 @@ date = 2010-05-17
 path = "ubuntu-talking-elvish-or-klingon"
 aliases = ["node/31", "node/31.html", "ubuntu-talking-elvish-or-klingon.html"]
 [taxonomies]
-tags = ["software", "ubuntu"]
+tags = ["software", "ubuntu", "english"]
 +++
 
 <p>

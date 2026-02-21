@@ -2,7 +2,7 @@
 title = "Proposing a Drupal 7 security team"
 date = 2023-12-12
 [taxonomies]
-tags = ["d7security", "drupal", "drupal planet"]
+tags = ["d7security", "drupal", "drupal planet", "english"]
 +++
 
 **Update:** The D7Security group is now established at [gitlab.com/d7security](https://gitlab.com/d7security) and [d7security.org](https://www.d7security.org/)!

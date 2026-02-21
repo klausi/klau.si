@@ -2,7 +2,7 @@
 title = "Getting started with Rust"
 date = 2017-04-30
 [taxonomies]
-tags = ["rust", "rustnish"]
+tags = ["rust", "rustnish", "english"]
 +++
 
 ![Rustnish logo](rustnish2.png)

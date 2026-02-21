@@ -4,7 +4,7 @@ date = 2007-10-19
 path = "brecht-das-gesetz-brecht-die-abschiebung"
 aliases = ["node/9", "node/9.html", "brecht-das-gesetz-brecht-die-abschiebung.html"]
 [taxonomies]
-tags = ["gesellschaftskritik"]
+tags = ["gesellschaftskritik", "german"]
 +++
 
 Abgesehen von dem etwas grauslichen Fremdenrecht sind leider auch die Asylverfahren in Österreich ja nicht gerade schnell. Was dann passiert, haben wir in letzter Zeit deutlich mitbekommen: Menschen, die seit vielen Jahren in Österreich leben, werden abgeschoben.

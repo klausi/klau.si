@@ -4,7 +4,7 @@ date = 2010-06-17
 path = "integration"
 aliases = ["node/32", "node/32.html", "integration.html"]
 [taxonomies]
-tags = ["gesellschaftskritik"]
+tags = ["gesellschaftskritik", "german"]
 +++
 
 <p>

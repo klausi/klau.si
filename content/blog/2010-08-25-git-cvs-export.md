@@ -4,7 +4,7 @@ date = 2010-08-25
 path = "git-cvs-export"
 aliases = ["node/33", "node/33.html", "git-cvs-export.html"]
 [taxonomies]
-tags = ["drupal"]
+tags = ["drupal", "english"]
 +++
 
 <p>

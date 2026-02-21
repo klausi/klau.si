@@ -4,7 +4,7 @@ date = 2007-11-25
 path = "klitoris-die-schöne-unbekannte"
 aliases = ["node/12", "node/12.html", "klitoris-die-schöne-unbekannte.html"]
 [taxonomies]
-tags = ["gesellschaftskritik"]
+tags = ["gesellschaftskritik", "german"]
 +++
 
 <p>Ich habe den spannenden Themenabend <a href="http://www.arte.tv/de/woche/244,broadcastingNum=775128,day=7,week=47,year=2007.html">&quot;Jetzt Onanie!&quot;</a> auf <a href="http://www.arte.tv">arte</a> gesehen, wo es um Selbstbefriedigung und Sexualit&auml;t ging. Besonders interessant war ein Beitrag zum weiblichen Sexualorgan schlechthin: der Klitoris. Seien wir ehrlich: Wer wei&szlig; schon wirklich wie sie funktioniert?  Das liegt vor allem daran, dass die weibliche Sexualit&auml;t nur schlecht erforscht und dokumentiert ist, und dass erst allm&auml;hlich neue Erkenntnisse aus der Forschung gewonnen werden.</p>

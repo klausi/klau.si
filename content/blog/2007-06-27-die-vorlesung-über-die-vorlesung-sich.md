@@ -4,7 +4,7 @@ date = 2007-06-27
 path = "die-vorlesung-über-die-vorlesung-sich"
 aliases = ["node/5", "node/5.html", "die-vorlesung-über-die-vorlesung-sich.html"]
 [taxonomies]
-tags = ["uni"]
+tags = ["uni", "german"]
 +++
 
 Ich habe gerade die Online-Prüfung zur <a href="http://ringvorlesung.univie.ac.at/" title="Homepage der Ringvorlesung" target="_blank">Ringvorlesung zum Thema Vorlesung</a> aus dem WS 06/07 abgelegt. Man musste eine Prüfungsfrage in einem MS-Word Dokument beantworten und auf die <a href="http://webct.univie.ac.at" target="_blank" title="WebCT Plattform">E-Lerning Plattform der Uni Wien</a> hinaufladen.

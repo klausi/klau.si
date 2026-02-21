@@ -2,7 +2,7 @@
 title = "Fully hidden automatic system updates on Ubuntu 20.04"
 date = 2021-01-05
 [taxonomies]
-tags = ["ubuntu"]
+tags = ["ubuntu", "english"]
 +++
 
 ![Screenshot of Ubuntu's update manager popping up during the movie "Tank Girl."](tank-girl-update-smaller.webp)

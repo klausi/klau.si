@@ -2,7 +2,7 @@
 title = "Benchmarking a Rust web application"
 date = 2018-08-31
 [taxonomies]
-tags = ["rust", "rustnish"]
+tags = ["rust", "rustnish", "english"]
 +++
 
 Performance testing is an important part when developing a network application - you want to know when you have a regression in request throughput in your service.

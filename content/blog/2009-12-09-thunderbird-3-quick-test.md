@@ -4,7 +4,7 @@ date = 2009-12-09
 path = "thunderbird-3-quick-test"
 aliases = ["node/25", "node/25.html", "thunderbird-3-quick-test.html"]
 [taxonomies]
-tags = ["software"]
+tags = ["software", "english"]
 +++
 
 <p>Just tested the new Mozilla Thunderbird 3 mailclient, here is a very short review what has changed since version 2.</p>

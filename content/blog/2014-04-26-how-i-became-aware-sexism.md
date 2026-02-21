@@ -4,7 +4,7 @@ date = 2014-04-26
 path = "how-i-became-aware-sexism"
 aliases = ["node/48", "node/48.html", "how-i-became-aware-sexism.html"]
 [taxonomies]
-tags = ["gesellschaftskritik"]
+tags = ["gesellschaftskritik", "english"]
 +++
 
 This is a cross post to the <a href="http://groups.drupal.org/node/419973">"ah-ha moment regarding sexism in tech" discussion on groups.drupal.org</a>.

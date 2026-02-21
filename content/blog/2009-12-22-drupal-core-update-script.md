@@ -4,7 +4,7 @@ date = 2009-12-22
 path = "drupal-core-update-script"
 aliases = ["node/27", "node/27.html", "drupal-core-update-script.html"]
 [taxonomies]
-tags = ["software", "drupal"]
+tags = ["software", "drupal", "english"]
 +++
 
 <p>

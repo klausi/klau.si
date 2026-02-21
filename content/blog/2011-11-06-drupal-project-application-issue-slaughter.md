@@ -4,7 +4,7 @@ date = 2011-11-06
 path = "drupal-project-application-issue-slaughter"
 aliases = ["node/40", "node/40.html", "drupal-project-application-issue-slaughter.html"]
 [taxonomies]
-tags = ["drupal", "drupal planet"]
+tags = ["drupal", "drupal planet", "english"]
 +++
 
 <p>This is a happy day: the <a href="http://drupal.org/project/issues/projectapplications?status=8">issues needing review</a> count is down to zero at this moment in the Drupal project application issue queue. I have attached a screenshot as proof.</p>

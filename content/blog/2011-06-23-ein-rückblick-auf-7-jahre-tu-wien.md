@@ -4,7 +4,7 @@ date = 2011-06-23
 path = "ein-rückblick-auf-7-jahre-tu-wien"
 aliases = ["node/38", "node/38.html", "ein-rückblick-auf-7-jahre-tu-wien.html"]
 [taxonomies]
-tags = ["gesellschaftskritik", "uni"]
+tags = ["gesellschaftskritik", "uni", "german"]
 +++
 
 <p>

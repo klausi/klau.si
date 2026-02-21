@@ -2,7 +2,7 @@
 title = "Michael Steiner"
 date = 2000-01-13
 [taxonomies]
-tags = ["suicide"]
+tags = ["suicide", "german"]
 +++
 
 **Triggerwarnung: Tod, Suizid**

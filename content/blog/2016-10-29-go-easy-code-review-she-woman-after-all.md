@@ -4,7 +4,7 @@ date = 2016-10-29
 path = "go-easy-code-review-she-woman-after-all"
 aliases = ["node/52", "node/52.html", "go-easy-code-review-she-woman-after-all.html"]
 [taxonomies]
-tags = ["drupal planet"]
+tags = ["drupal planet", "english"]
 +++
 
 What is the appropriate response if a fellow woman pulls you aside and says "Go easy on this code review, she is a woman after all and already gets a lot of shit."? Of course it is "Sure, this will be my friendliest code review ever!".

@@ -4,7 +4,7 @@ date = 2011-05-23
 path = "nginx-configuration-drupal"
 aliases = ["node/37", "node/37.html", "nginx-configuration-drupal.html"]
 [taxonomies]
-tags = ["drupal", "drupal planet"]
+tags = ["drupal", "drupal planet", "english"]
 +++
 
 <p>While nginx is highly configurable, you might encounter some problems and pitfalls when configuring it with Drupal. This post contains our configuration and solutions to those problems.</p>

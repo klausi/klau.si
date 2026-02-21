@@ -2,7 +2,7 @@
 title = "Testing Claude AI for Drupal code"
 date = 2025-04-04
 [taxonomies]
-tags = ["drupal", "ai", "speaking"]
+tags = ["drupal", "ai", "speaking", "english"]
 +++
 
 I tested ClaudeAI for Drupal code, got inspired by [Dries Buytaert video](https://dri.es/claude-code-meets-drupal).

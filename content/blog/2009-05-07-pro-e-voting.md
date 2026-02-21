@@ -4,7 +4,7 @@ date = 2009-05-07
 path = "pro-e-voting"
 aliases = ["node/21", "node/21.html", "pro-e-voting.html"]
 [taxonomies]
-tags = ["gesellschaftskritik"]
+tags = ["gesellschaftskritik", "german"]
 +++
 
 <p>Bei den &Ouml;H-Wahlen 2009 kommt ja erstmals E-Voting in &Ouml;sterreich zum Einsatz (Abgabe der Stimme &uuml;ber das Internet). Es gibt viele gute Gr&uuml;nde, warum E-Voting gef&auml;hrlich ist, siehe dazu z.B. <a href="http://papierwahl.at/">papierwahl.at</a> oder einen <a href="http://sendungsarchiv.o94.at/get.php?id=094pr3327">Podcast von Peter Purgathofer</a>. Ich war letztens auf einer Podiumsdiskussion zu dem Thema und es war erschreckend, wie schlecht das System von einem &Ouml;VP-Abgeordneten und einem Beamten aus dem Ministerium verkauft wurde. Es gab praktisch nur zwei Pro-Argumente: E-Voting erh&ouml;ht die Wahlbeteiligung und E-Voting ist eh sicher. Weil aber mein gesamtes Umfeld gegen E-Voting ist, will keine produktive Diskussion aufkommen. Muss ich eben selbst als Advocatus Diaboli schl&uuml;ssige Argumente f&uuml;r E-Voting liefern, um ein bisschen einzuheizen:</p>

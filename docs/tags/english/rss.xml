@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>Klausi&#x27;s Weblog - english</title>
+      <link>https://klau.si</link>
+      <description></description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://klau.si/tags/english/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Fri, 04 Apr 2025 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Testing Claude AI for Drupal code</title>
+          <pubDate>Fri, 04 Apr 2025 00:00:00 +0000</pubDate>
+          <author>Klaus Purer</author>
+          <link>https://klau.si/blog/testing-claude-ai-for-drupal-code/</link>
+          <guid>https://klau.si/blog/testing-claude-ai-for-drupal-code/</guid>
+          <description xml:base="https://klau.si/blog/testing-claude-ai-for-drupal-code/">&lt;p&gt;I tested ClaudeAI for Drupal code, got inspired by &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;dri.es&#x2F;claude-code-meets-drupal&quot;&gt;Dries Buytaert video&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;🤯 the interaction and suggestions were quite good&lt;&#x2F;li&gt;
+&lt;li&gt;💵 execution is expensive, I paid $1.16 for 20 minutes&lt;&#x2F;li&gt;
+&lt;li&gt;🙄 I got annoyed a couple of times, because Claude did contradictory things&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;div class=&quot;youtube-lazy&quot; data-video-id=&quot;7U4XwkjfckE&quot;&gt;
+  &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=7U4XwkjfckE&quot;
+     class=&quot;youtube-lazy-placeholder&quot;
+     target=&quot;_blank&quot;
+     rel=&quot;noopener&quot;&gt;
+    &lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;youtube-thumbs&#x2F;7U4XwkjfckE.webp&quot;
+         alt=&quot;YouTube video thumbnail - click to play&quot;
+         loading=&quot;lazy&quot;
+         width=&quot;480&quot;
+         height=&quot;270&quot;&gt;
+  &lt;&#x2F;a&gt;
+&lt;&#x2F;div&gt;</description>
+      </item>
+      <item>
+          <title>Dangerous Next.js redirects - how misconfiguration can bring your website down</title>
+          <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
+          <author>Klaus Purer</author>
+          <link>https://klau.si/blog/security-advisory-nextjs-redirects/</link>
+          <guid>https://klau.si/blog/security-advisory-nextjs-redirects/</guid>
+          <description xml:base="https://klau.si/blog/security-advisory-nextjs-redirects/">&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;security-advisory-nextjs-redirects&#x2F;nextjs_exhale.webp&quot; alt=&quot;Black Next.js logos arranged in a circle. In the middle is an emoji with closed eyes exhausting.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Security Advisory: Next.js Denial of Service vulnerability in redirect misconfiguration&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Project&lt;&#x2F;strong&gt;: &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;nextjs.org&#x2F;&quot;&gt;Next.js&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Security Risk&lt;&#x2F;strong&gt;: Less Critical&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Vulnerability&lt;&#x2F;strong&gt;: Denial of Service (DoS)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Category&lt;&#x2F;strong&gt;: &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;owasp.org&#x2F;Top10&#x2F;A05_2021-Security_Misconfiguration&#x2F;&quot;&gt;OWASP A05:2021 – Security Misconfiguration&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Affected versions&lt;&#x2F;strong&gt;: all Next.js versions, for example 15.0.3&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Note: This vulnerability has been disclosed privately to the Vercel Security Team. They decided that this is a misconfiguration issue and not an inherent security issue.&lt;&#x2F;p&gt;</description>
+      </item>
+      <item>
+          <title>D7Security presentation at Drupal Dev Days Bourgas</title>
+          <pubDate>Wed, 26 Jun 2024 00:00:00 +0000</pubDate>
+          <author>Klaus Purer</author>
+          <link>https://klau.si/blog/d7security-devdays/</link>
+          <guid>https://klau.si/blog/d7security-devdays/</guid>
+          <description xml:base="https://klau.si/blog/d7security-devdays/">&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;d7security-devdays&#x2F;d7security-dev-days-bourgas-2024.pdf&quot;&gt;the slides&lt;&#x2F;a&gt; of my &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;ddd2024.drupalcamp.bg&#x2F;drupal-dev-days-2024&#x2F;session&#x2F;d7security-drupal-7-long-term-support&quot;&gt;Drupal Dev Days presentation&lt;&#x2F;a&gt; about &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.d7security.org&quot;&gt;D7Security&lt;&#x2F;a&gt; in Bourgas. Unfortunately there is no video recording.&lt;&#x2F;p&gt;</description>
+      </item>
+      <item>
+          <title>D7Security presentation at Drupal Austria Meetup</title>
+          <pubDate>Wed, 13 Mar 2024 00:00:00 +0000</pubDate>
+          <author>Klaus Purer</author>
+          <link>https://klau.si/blog/d7security-drupal-austria-meetup/</link>
+          <guid>https://klau.si/blog/d7security-drupal-austria-meetup/</guid>
+          <description xml:base="https://klau.si/blog/d7security-drupal-austria-meetup/">&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;d7security-drupal-austria-meetup&#x2F;d7security-drupal-austria-2024.pdf&quot;&gt;the slides&lt;&#x2F;a&gt; and a recording of my Drupal Austria Meetup presentation about &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.d7security.org&quot;&gt;D7Security&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;div class=&quot;youtube-lazy&quot; data-video-id=&quot;1vLU1Eo0Tkk&quot;&gt;
+  &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=1vLU1Eo0Tkk&quot;
+     class=&quot;youtube-lazy-placeholder&quot;
+     target=&quot;_blank&quot;
+     rel=&quot;noopener&quot;&gt;
+    &lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;youtube-thumbs&#x2F;1vLU1Eo0Tkk.webp&quot;
+         alt=&quot;YouTube video thumbnail - click to play&quot;
+         loading=&quot;lazy&quot;
+         width=&quot;480&quot;
+         height=&quot;270&quot;&gt;
+  &lt;&#x2F;a&gt;
+&lt;&#x2F;div&gt;</description>
+      </item>
+      <item>
+          <title>Drupal 7 end of life podcast: Unofficial Drupal 7 Security Team</title>
+          <pubDate>Sun, 31 Dec 2023 00:00:00 +0000</pubDate>
+          <author>Klaus Purer</author>
+          <link>https://klau.si/blog/d7-eol-podcast/</link>
+          <guid>https://klau.si/blog/d7-eol-podcast/</guid>
+          <description xml:base="https://klau.si/blog/d7-eol-podcast/">&lt;p&gt;Here is the video of my appearance on the Drupal 7 end of life podcast, talking about plans for the &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.d7security.org&#x2F;&quot;&gt;D7Security&lt;&#x2F;a&gt; group. Thank you Mark Dorison and Chris Free from Chromatic for the recording!&lt;&#x2F;p&gt;
+&lt;div class=&quot;youtube-lazy&quot; data-video-id=&quot;hNI73M0ftOM&quot;&gt;
+  &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=hNI73M0ftOM&quot;
+     class=&quot;youtube-lazy-placeholder&quot;
+     target=&quot;_blank&quot;
+     rel=&quot;noopener&quot;&gt;
+    &lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;youtube-thumbs&#x2F;hNI73M0ftOM.webp&quot;
+         alt=&quot;YouTube video thumbnail - click to play&quot;
+         loading=&quot;lazy&quot;
+         width=&quot;480&quot;
+         height=&quot;270&quot;&gt;
+  &lt;&#x2F;a&gt;
+&lt;&#x2F;div&gt;</description>
+      </item>
+      <item>
+          <title>Proposing a Drupal 7 security team</title>
+          <pubDate>Tue, 12 Dec 2023 00:00:00 +0000</pubDate>
+          <author>Klaus Purer</author>
+          <link>https://klau.si/blog/proposing-drupal-7-security-team/</link>
+          <guid>https://klau.si/blog/proposing-drupal-7-security-team/</guid>
+          <description xml:base="https://klau.si/blog/proposing-drupal-7-security-team/">&lt;p&gt;&lt;strong&gt;Update:&lt;&#x2F;strong&gt; The D7Security group is now established at &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;gitlab.com&#x2F;d7security&quot;&gt;gitlab.com&#x2F;d7security&lt;&#x2F;a&gt; and &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.d7security.org&#x2F;&quot;&gt;d7security.org&lt;&#x2F;a&gt;!&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;proposing-drupal-7-security-team&#x2F;unsupported-hm.webp&quot; alt=&quot;Screenshot of a drupal.org release settings page. Contains a warning box with the text &amp;quot;Branches compatible with Drupal 7.x that are set as unsupported cannot be set as supported again.&amp;quot;. A big thinking emoji is inserted on the screenshot.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The Drupal Security Team has announced in &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.drupal.org&#x2F;psa-2023-06-07&quot;&gt;PSA-2023-06-07&lt;&#x2F;a&gt; that unsupported Drupal 7 modules&#x2F;themes cannot be supported again. I&#x27;m proposing to create a D7Security team on Gitlab.com that can provide security fixes for those unsupported modules. A small update module can then notify Drupal 7 site owners when new security releases are available on Gitlab.com.&lt;&#x2F;p&gt;</description>
+      </item>
+      <item>
+          <title>Fully hidden automatic system updates on Ubuntu 20.04</title>
+          <pubDate>Tue, 05 Jan 2021 00:00:00 +0000</pubDate>
+          <author>Klaus Purer</author>
+          <link>https://klau.si/blog/fully-hidden-automatic-system-updates-ubuntu/</link>
+          <guid>https://klau.si/blog/fully-hidden-automatic-system-updates-ubuntu/</guid>
+          <description xml:base="https://klau.si/blog/fully-hidden-automatic-system-updates-ubuntu/">&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;fully-hidden-automatic-system-updates-ubuntu&#x2F;tank-girl-update-smaller.webp&quot; alt=&quot;Screenshot of Ubuntu&amp;#39;s update manager popping up during the movie &amp;quot;Tank Girl.&amp;quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Ubuntu&#x27;s graphical update manager pops up every time you need to install updates. That can be annoying when you are watching a movie or doing other things and don&#x27;t want to be bothered all the time. Yes, I want to always apply all updates from all sources, but please do it silently. Here is a small script I use to do that with Anacron.&lt;&#x2F;p&gt;</description>
+      </item>
+      <item>
+          <title>Russmedia CTO meetup talk: Pull Request Review best practices</title>
+          <pubDate>Fri, 27 Nov 2020 00:00:00 +0000</pubDate>
+          <author>Klaus Purer</author>
+          <link>https://klau.si/blog/russmedia-cto-meetup-talk-pull-request-review/</link>
+          <guid>https://klau.si/blog/russmedia-cto-meetup-talk-pull-request-review/</guid>
+          <description xml:base="https://klau.si/blog/russmedia-cto-meetup-talk-pull-request-review/">&lt;p&gt;Here is the video of my Russmedia CTO &amp;amp; product meetup talk &quot;Pull Request Review best practices&quot;.&lt;&#x2F;p&gt;
+&lt;div class=&quot;youtube-lazy&quot; data-video-id=&quot;6CbdQaWI5Hk&quot;&gt;
+  &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=6CbdQaWI5Hk&quot;
+     class=&quot;youtube-lazy-placeholder&quot;
+     target=&quot;_blank&quot;
+     rel=&quot;noopener&quot;&gt;
+    &lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;youtube-thumbs&#x2F;6CbdQaWI5Hk.webp&quot;
+         alt=&quot;YouTube video thumbnail - click to play&quot;
+         loading=&quot;lazy&quot;
+         width=&quot;480&quot;
+         height=&quot;270&quot;&gt;
+  &lt;&#x2F;a&gt;
+&lt;&#x2F;div&gt;</description>
+      </item>
+      <item>
+          <title>Drupalcon 2019 talk: Find security vulnerabilities through code review</title>
+          <pubDate>Sun, 03 Nov 2019 00:00:00 +0000</pubDate>
+          <author>Klaus Purer</author>
+          <link>https://klau.si/blog/drupalcon-security-code-review/</link>
+          <guid>https://klau.si/blog/drupalcon-security-code-review/</guid>
+          <description xml:base="https://klau.si/blog/drupalcon-security-code-review/">&lt;p&gt;Here are &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;klausi.github.io&#x2F;sec-code-review2019&#x2F;#&#x2F;&quot;&gt;the slides&lt;&#x2F;a&gt; and the video of my DrupalCon Amsterdam 2019 talk &quot;Find security vulnerabilities through code review&quot;.&lt;&#x2F;p&gt;
+&lt;div class=&quot;youtube-lazy&quot; data-video-id=&quot;Oyoja2rfqSk&quot;&gt;
+  &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=Oyoja2rfqSk&quot;
+     class=&quot;youtube-lazy-placeholder&quot;
+     target=&quot;_blank&quot;
+     rel=&quot;noopener&quot;&gt;
+    &lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;youtube-thumbs&#x2F;Oyoja2rfqSk.webp&quot;
+         alt=&quot;YouTube video thumbnail - click to play&quot;
+         loading=&quot;lazy&quot;
+         width=&quot;480&quot;
+         height=&quot;270&quot;&gt;
+  &lt;&#x2F;a&gt;
+&lt;&#x2F;div&gt;</description>
+      </item>
+      <item>
+          <title>A new blog on Zola</title>
+          <pubDate>Sat, 26 Oct 2019 00:00:00 +0000</pubDate>
+          <author>Klaus Purer</author>
+          <link>https://klau.si/blog/a-new-blog-on-zola/</link>
+          <guid>https://klau.si/blog/a-new-blog-on-zola/</guid>
+          <description xml:base="https://klau.si/blog/a-new-blog-on-zola/">&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;a-new-blog-on-zola&#x2F;zola.ico&quot; alt=&quot;Zola logo&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I converted my old blog posts from Drupal to static files and now I&#x27;m trying out &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.getzola.org&quot;&gt;Zola&lt;&#x2F;a&gt;. The static files are hosted on &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;github-pages&#x2F;&quot;&gt;Github Pages&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;</description>
+      </item>
+      <item>
+          <title>Mocking in Rust with conditional compilation</title>
+          <pubDate>Sun, 31 Mar 2019 00:00:00 +0000</pubDate>
+          <author>Klaus Purer</author>
+          <link>https://klau.si/blog/mocking-in-rust-with-conditional-compilation/</link>
+          <guid>https://klau.si/blog/mocking-in-rust-with-conditional-compilation/</guid>
+          <description xml:base="https://klau.si/blog/mocking-in-rust-with-conditional-compilation/">&lt;p&gt;When writing automated unit tests for your application you will probably need to use &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Mock_object&quot;&gt;mocks&lt;&#x2F;a&gt; at some point. Classical object-oriented programming languages such as PHP solve this with reflection where mock object types are created during test runtime. The code under test expects a certain interface or class and the test code passes mock objects that implement the interface or are a subclass.&lt;&#x2F;p&gt;
+&lt;p&gt;Similar approaches exist in Rust where mock objects are used to test code that expects a trait type. There is a wonderful &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;asomers.github.io&#x2F;mock_shootout&#x2F;&quot;&gt;Rust mock framework comparison&lt;&#x2F;a&gt; by Alan Somers that lists their features. The biggest problem with most of them as far as I can see is that they cannot mock a foreign &lt;code&gt;struct&lt;&#x2F;code&gt; you are using in your code. Rust does not have a concept of object inheritance for structs so there is no way to mimic a struct type from the standard library or an external crate.&lt;&#x2F;p&gt;</description>
+      </item>
+      <item>
+          <title>Drupal Austria Meetup: Drupal security learnings</title>
+          <pubDate>Wed, 13 Mar 2019 00:00:00 +0000</pubDate>
+          <author>Klaus Purer</author>
+          <link>https://klau.si/blog/drupal-security-vulnerability-learnings/</link>
+          <guid>https://klau.si/blog/drupal-security-vulnerability-learnings/</guid>
+          <description xml:base="https://klau.si/blog/drupal-security-vulnerability-learnings/">&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;drupal-security-vulnerability-learnings&#x2F;meetup_security.jpeg&quot; alt=&quot;Drupal Austria security meetup&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Here are &lt;a href=&quot;&#x2F;presentations&#x2F;sec-learnings2019&#x2F;index.html&quot;&gt;the slides&lt;&#x2F;a&gt; of my Drupal Austria Meetup talk &quot;Drupal security learnings&quot;.&lt;&#x2F;p&gt;</description>
+      </item>
+      <item>
+          <title>Benchmarking a Rust web application</title>
+          <pubDate>Fri, 31 Aug 2018 00:00:00 +0000</pubDate>
+          <author>Klaus Purer</author>
+          <link>https://klau.si/blog/benchmarking-a-rust-web-application/</link>
+          <guid>https://klau.si/blog/benchmarking-a-rust-web-application/</guid>
+          <description xml:base="https://klau.si/blog/benchmarking-a-rust-web-application/">&lt;p&gt;Performance testing is an important part when developing a network application - you want to know when you have a regression in request throughput in your service.&lt;&#x2F;p&gt;
+&lt;p&gt;I set out out my goal 9 for Rustnish:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Write benchmark code that compares runtime performance of Rustnish against
+&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;varnish-cache.org&#x2F;&quot;&gt;Varnish&lt;&#x2F;a&gt;. Use &lt;code&gt;cargo bench&lt;&#x2F;code&gt; to execute the benchmarks.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;The basic idea of a performance test here is to send many HTTP requests to the web service (the reverse proxy in this case) and measure how fast the responses arrive back. Comparing the results from Rustnish and Varnish should give us an idea if our performance expectations are holding up.&lt;&#x2F;p&gt;</description>
+      </item>
+      <item>
+          <title>Crashing a Rust Hyper server with a Denial of Service attack</title>
+          <pubDate>Sun, 11 Mar 2018 00:00:00 +0000</pubDate>
+          <author>Klaus Purer</author>
+          <link>https://klau.si/blog/crashing-a-rust-hyper-server-with-a-denial-of-service-attack/</link>
+          <guid>https://klau.si/blog/crashing-a-rust-hyper-server-with-a-denial-of-service-attack/</guid>
+          <description xml:base="https://klau.si/blog/crashing-a-rust-hyper-server-with-a-denial-of-service-attack/">&lt;p&gt;I&#x27;m writing a reverse proxy in Rust using &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;hyper.rs&#x2F;&quot;&gt;Hyper&lt;&#x2F;a&gt; and I want
+to measure performance a bit to know if I&#x27;m doing something terribly wrong. By
+doing that I discovered a Denial of Service vulnerability in Hyper when IO
+errors are not properly handled. Note that &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;hyperium&#x2F;hyper&#x2F;releases&#x2F;tag&#x2F;v0.11.20&quot;&gt;a workaround has been released in
+the meantime in Hyper
+0.11.20&lt;&#x2F;a&gt;, more
+background info can be found in &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;hyperium&#x2F;hyper&#x2F;issues&#x2F;1358&quot;&gt;this Hyper
+issue&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;</description>
+      </item>
+      <item>
+          <title>Testing memory leaks in Rust</title>
+          <pubDate>Fri, 06 Oct 2017 00:00:00 +0000</pubDate>
+          <author>Klaus Purer</author>
+          <link>https://klau.si/blog/testing-memory-leaks-in-rust/</link>
+          <guid>https://klau.si/blog/testing-memory-leaks-in-rust/</guid>
+          <description xml:base="https://klau.si/blog/testing-memory-leaks-in-rust/">&lt;p&gt;Rust has many built-in concepts for memory safety, but it cannot prevent
+application level logic errors that take up system memory. An example would be
+a server application that stores something for each incoming request in a
+growing collection or list. If the program does not clean up the growing list
+then it will take up more and more server memory - thereby exposing a memory
+leak.&lt;&#x2F;p&gt;
+&lt;p&gt;While working on my reverse proxy project I discovered such a &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;hyperium&#x2F;hyper&#x2F;issues&#x2F;1315&quot;&gt;leak in the HTTP
+library Hyper&lt;&#x2F;a&gt;. In order to
+prevent and detect memory leaks in the future I set out my goal 7:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Add an integration test that ensures that the proxy server is not leaking
+memory (growing RAM usage without shrinking again). Use &#x2F;proc information to
+compare memory usage of the current process before and after the test.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;</description>
+      </item>
+      <item>
+          <title>Static variables made thread-safe in Rust</title>
+          <pubDate>Sat, 09 Sep 2017 00:00:00 +0000</pubDate>
+          <author>Klaus Purer</author>
+          <link>https://klau.si/blog/static-variables-made-thread-safe-in-rust/</link>
+          <guid>https://klau.si/blog/static-variables-made-thread-safe-in-rust/</guid>
+          <description xml:base="https://klau.si/blog/static-variables-made-thread-safe-in-rust/">&lt;p&gt;When writing &lt;a href=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;writing-integration-tests-in-rust&#x2F;&quot;&gt;integration tests for my Rustnish reverse proxy project&lt;&#x2F;a&gt; I
+have hard-coded port numbers in tests. This is not ideal because it is hard to
+keep track of which port numbers have already been used and which ones are
+available when writing a new test. Because Rust&#x27;s test runner &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;book&#x2F;ch11-02-running-tests.html#running-tests-in-parallel-or-consecutively&quot;&gt;executes test cases in parallel&lt;&#x2F;a&gt; it is important to coordinate
+which test uses which ports so that there are no clashes that break the tests.&lt;&#x2F;p&gt;
+&lt;p&gt;One obvious solution to this problem would be to disable parallel test
+execution with &lt;code&gt;cargo test -- --test-threads=1&lt;&#x2F;code&gt;. But we want to cover program
+and test isolation with our test so this is not really an option.&lt;&#x2F;p&gt;</description>
+      </item>
+      <item>
+          <title>Replacing unwrap() and avoiding panics in Rust</title>
+          <pubDate>Wed, 16 Aug 2017 00:00:00 +0000</pubDate>
+          <author>Klaus Purer</author>
+          <link>https://klau.si/blog/replacing-unwrap-and-avoiding-panics-in-rust/</link>
+          <guid>https://klau.si/blog/replacing-unwrap-and-avoiding-panics-in-rust/</guid>
+          <description xml:base="https://klau.si/blog/replacing-unwrap-and-avoiding-panics-in-rust/">&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;std&#x2F;result&#x2F;enum.Result.html#method.unwrap&quot;&gt;&lt;code&gt;unwrap()&lt;&#x2F;code&gt;&lt;&#x2F;a&gt; is a useful tool in Rust but is also bad practice in production code that
+should not abort with unpredictable panics.&lt;&#x2F;p&gt;
+&lt;p&gt;Therefore my goal 4 for Rustnish is full integration tests with no panics
+allowed:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Expand the integration tests to confirm that the reverse proxy is working as
+expected. Add tests with broken HTTP requests to cover error handling of the
+reverse proxy. All &lt;code&gt;unwrap()&lt;&#x2F;code&gt; calls in none test code should be removed
+and covered by proper error handling.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;</description>
+      </item>
+      <item>
+          <title>Converting a Hyper server to Tokio</title>
+          <pubDate>Sun, 16 Jul 2017 00:00:00 +0000</pubDate>
+          <author>Klaus Purer</author>
+          <link>https://klau.si/blog/converting-a-hyper-server-to-tokio/</link>
+          <guid>https://klau.si/blog/converting-a-hyper-server-to-tokio/</guid>
+          <description xml:base="https://klau.si/blog/converting-a-hyper-server-to-tokio/">&lt;p&gt;Since my &lt;a href=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;getting-started-with-rust&#x2F;&quot;&gt;first blog post where I constructed a server with Hyper&lt;&#x2F;a&gt; some time
+has passed and there is now a new version of the library that is based on
+&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;tokio.rs&quot;&gt;Tokio&lt;&#x2F;a&gt;. My goal 3:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A new version of the Hyper library has been released which is
+based on the Tokio library. Convert the existing code to use that new version
+and provide one integration test case.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Tokio handles input&#x2F;output asynchronously, which makes setting up a server more
+complicated. The benefit is more efficient parallel execution with a
+non-blocking event loop.&lt;&#x2F;p&gt;</description>
+      </item>
+      <item>
+          <title>Using Visual Studio Code for Rust on Ubuntu</title>
+          <pubDate>Sun, 28 May 2017 00:00:00 +0000</pubDate>
+          <author>Klaus Purer</author>
+          <link>https://klau.si/blog/using-visual-studio-code-for-rust-on-ubuntu/</link>
+          <guid>https://klau.si/blog/using-visual-studio-code-for-rust-on-ubuntu/</guid>
+          <description xml:base="https://klau.si/blog/using-visual-studio-code-for-rust-on-ubuntu/">&lt;p&gt;I already wrote about &lt;a href=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;using-eclipse-ide-for-rust-on-ubuntu&#x2F;&quot;&gt;using Eclipse for Rust development&lt;&#x2F;a&gt; but after trying
+&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;code.visualstudio.com&#x2F;&quot;&gt;Visual Studio Code&lt;&#x2F;a&gt; (VSCode) I think it is
+slightly better than the Eclipse integration:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;when the cursor is at a variable the same variable is highlighted elsewhere.&lt;&#x2F;li&gt;
+&lt;li&gt;tooltip popups when hovering over variables, functions, methods.&lt;&#x2F;li&gt;
+&lt;li&gt;better native support for Git and Markdown files&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Syntax highlighting, autocompletion, Ctrl + Click on functions and
+auto-formatting of course also work in VSCode as you would expect from an IDE.&lt;&#x2F;p&gt;</description>
+      </item>
+      <item>
+          <title>Writing integration tests in Rust</title>
+          <pubDate>Thu, 25 May 2017 00:00:00 +0000</pubDate>
+          <author>Klaus Purer</author>
+          <link>https://klau.si/blog/writing-integration-tests-in-rust/</link>
+          <guid>https://klau.si/blog/writing-integration-tests-in-rust/</guid>
+          <description xml:base="https://klau.si/blog/writing-integration-tests-in-rust/">&lt;p&gt;In my first post I wrote a quite fragile, minimally working prototype that uses
+many &lt;code&gt;unwrap()&lt;&#x2F;code&gt; calls thereby raising lots of panics during execution.
+Implementing and verifying proper error handling requires testing. I don&#x27;t want
+to do unit testing yet because that would require research about complicated
+mocking techniques and dependency injection in Rust. Instead, I would like to
+do integration testing of the whole application to prove that the end result is
+working as expected.&lt;&#x2F;p&gt;</description>
+      </item>
+    </channel>
+</rss>

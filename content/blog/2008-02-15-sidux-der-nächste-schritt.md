@@ -4,7 +4,7 @@ date = 2008-02-15
 path = "sidux-der-nächste-schritt"
 aliases = ["node/13", "node/13.html", "sidux-der-nächste-schritt.html"]
 [taxonomies]
-tags = ["software"]
+tags = ["software", "german"]
 +++
 
 Lange habe ich auf meinem Desktop-Rechner <a href="http://ubuntu.com" title="Ubuntu Home">Ubuntu GNU/Linux</a> eingesetzt, was für mich zumeist sehr bequem funktioniert hat. Am Anfang wusste ich kaum wie man eine Shell  bedient - es war bei Ubuntu auch nur selten notwendig, vieles ging über grafische Konfigurationstools oder man befragte einfach das ausgezeichnete <a href="http://wiki.ubuntuusers.de/" title="deutsches Ubuntu Wiki">Ubuntuusers-Wiki</a>. Die Jahre zogen ins Land, auf der Uni wurde auch viel mit GNU/Linux/Unix gemacht und ich begann schön langsam die Innereien eines debian-artigen Betriebssystems kennenzulernen (Ubuntu basiert ja auf <a href="http://debian.org" title="Debian Home">Debian</a>). Die Philosophie von freier bzw. open source Software überzeugte mich immer mehr, und ich konnte fast ganz auf Windows XP verzichten (XP habe ich heute noch im <a href="http://wiki.ubuntuusers.de/Dualboot" title="Wikibeitrag zu Dualboot">Dualboot</a>, Vista habe ich gar nie probiert).

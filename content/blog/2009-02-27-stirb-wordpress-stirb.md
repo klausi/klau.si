@@ -4,7 +4,7 @@ date = 2009-02-27
 path = "stirb-wordpress-stirb"
 aliases = ["node/20", "node/20.html", "stirb-wordpress-stirb.html"]
 [taxonomies]
-tags = ["software"]
+tags = ["software", "german"]
 +++
 
 <p>Endlich geschafft: Mein Weblog l&auml;uft jetzt auf <a href="http://drupal.org">Drupal</a> und nicht mehr auf dem unsympathischen <a href="http://wordpress.org">Wordpress</a>. Gleichzeitig bin ich umgezogen - ich will mal den Webspace der TU ausprobieren. Seit einiger Zeit bietet der ZID ja PHP- und Mysql-Unterst&uuml;tzung an, sodass hier auch Content Management Systeme aufgezogen werden k&ouml;nnen.</p>

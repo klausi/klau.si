@@ -4,7 +4,7 @@ date = 2011-05-11
 path = "thesis"
 aliases = ["node/36", "node/36.html", "web-service-composition-drupal.html", "web-service-composition-drupal", "thesis.html"]
 [taxonomies]
-tags = ["software", "uni", "drupal", "drupal planet"]
+tags = ["software", "uni", "drupal", "drupal planet", "english"]
 +++
 
 <p><img alt="WSClient module logo" src="/sites/default/files/wsclient_logo_300_0.thumbnail.png" style="width: 209px; height: 217px; float: right;" />A master thesis written by Klaus Purer at the Vienna University of Technology, released in May 2011.</p>

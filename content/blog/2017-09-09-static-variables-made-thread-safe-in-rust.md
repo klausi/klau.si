@@ -2,7 +2,7 @@
 title = "Static variables made thread-safe in Rust"
 date = 2017-09-09
 [taxonomies]
-tags = ["rust", "rustnish"]
+tags = ["rust", "rustnish", "english"]
 +++
 
 When writing [integration tests for my Rustnish reverse proxy project](@/blog/2017-05-25-writing-integration-tests-in-rust.md) I

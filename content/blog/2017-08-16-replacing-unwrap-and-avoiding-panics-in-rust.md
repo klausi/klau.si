@@ -2,7 +2,7 @@
 title = "Replacing unwrap() and avoiding panics in Rust"
 date = 2017-08-16
 [taxonomies]
-tags = ["rust", "rustnish"]
+tags = ["rust", "rustnish", "english"]
 +++
 
 [```unwrap()```](https://doc.rust-lang.org/std/result/enum.Result.html#method.unwrap) is a useful tool in Rust but is also bad practice in production code that

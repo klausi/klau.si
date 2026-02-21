@@ -4,7 +4,7 @@ date = 2007-06-24
 path = "oida-bist-schwul-oder-was"
 aliases = ["node/3", "node/3.html", "oida-bist-schwul-oder-was.html"]
 [taxonomies]
-tags = ["gesellschaftskritik"]
+tags = ["gesellschaftskritik", "german"]
 +++
 
 <p>Nein, eigentlich nicht. Vielleicht ein bisschen bisexuell, wie wahrscheinlich jeder Mensch, aber davon merke ich bis jetzt nichts. Homosexualit&auml;t scheint noch immer ein Tabu-Thema zu sein, selbst in Zeiten politischer Akzeptanz und sogenannten aufgekl&auml;rten Jugendlichen. Es wird von den einen als etwas besonderes, etwas au&szlig;erhalb der Norm angesehen, von den anderen als abartig oder sogar als Krankheit betrachtet.</p>

@@ -4,7 +4,7 @@ date = 2013-11-08
 path = "drupal-development-setup-ubuntu-1310"
 aliases = ["node/47", "node/47.html", "drupal-development-setup-ubuntu-1310.html"]
 [taxonomies]
-tags = ["drupal", "drupal planet", "ubuntu"]
+tags = ["drupal", "drupal planet", "ubuntu", "english"]
 +++
 
 I upgraded my local computer to Ubuntu 13.10 today and revisited my Drupal development environment (this <a href="/dev-ubuntu-12-04">guide is also available for Ubuntu 12.04</a>). Here is a simple and fast guide how to configure Ubuntu for development. There are a number of <a href="http://drupal.org/node/262">installation documentation pages on this topic on drupal.org</a>, but they suggest to use the packaged Drupal installation and to run Drupal in subfolders (e.g. http://localhost/drupal6). They also do not cover some other important development tools like Phpmyadmin or php.ini settings. During development we want to edit files and we want to do that somewhere in our home directory to avoid any permission problems. There is also <a href="http://drupal.org/project/drubuntu">Drubuntu</a>, but it is outdated and does way too much magic in my opinion. So here is a more transparent tutorial that highlights the key development configuration settings for Drupal development on a local computer (do not use this for a production server!).<!-- more -->
