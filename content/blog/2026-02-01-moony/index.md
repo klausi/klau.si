@@ -7,7 +7,7 @@ tags = ["moony", "suicide", "german"]
 
 **Triggerwarnung: Tod, Suizid**
 
-Mein Sohn Moony hat sich das Leben genommen. In meiner Trauer ist dieser Text entstanden.
+Mein Sohn Moony hat sich das Leben genommen. In meiner Trauer ist dieser Text entstanden (weitere Texte in der Kategorie: [suicide](/tags/suicide)).
 
 ![Porträtfoto des 18-jährigen Moony. Kurzes blondes und blaues Haar. Helle Hautfarbe. Piercings im Ohr und in der Nase. Beinahe ein Lächeln. Geboren 22.12.2007, gestorben 26.01.2026.](moony-datum.webp)
 
