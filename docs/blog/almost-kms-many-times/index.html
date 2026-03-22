@@ -250,6 +250,293 @@ Mein Sohn Moony hat sich das Leben genommen. In meiner Trauer ist dieser Text en
 <p>Mir bleibt als Trost nur die Schuld klar zu benennen: Moony hat entschieden sich zu töten, niemand sonst. Ach ja, ich wollte noch einen Text über Schuld und Versagen schreiben, der muss noch warten.</p>
 <p>Noch 16 Monate.</p>
 <p>Ich vermisse dich Moony.</p>
+<div class="mastodon-comments" id="mastodon-comments">
+  <h2>Comments</h2>
+  <p>
+    <a href="https://mastodon.social/@klausi_blog/116272687652658506"
+       target="_blank"
+       rel="noopener">Comment on this post on Mastodon</a>
+  </p>
+  <noscript>
+    <p>
+      JavaScript is required to load comments from Mastodon.
+      Please <a href="https://mastodon.social/@klausi_blog/116272687652658506"
+    target="_blank"
+    rel="noopener">view the comments on Mastodon</a>.
+    </p>
+  </noscript>
+  <div id="mastodon-comments-list"
+       data-mastodon-host="mastodon.social"
+       data-mastodon-id="116272687652658506"></div>
+</div>
+
+<script>
+(function() {
+  const container = document.getElementById('mastodon-comments-list');
+  if (!container) {
+    return;
+  }
+
+  const host = container.dataset.mastodonHost;
+  const id = container.dataset.mastodonId;
+
+  // Global moderation block lists, all accounts or posts you want to hide are
+  // listed here.
+  // Example: const blockedAccounts = ["https://mastodon.social/@spammer"];
+  const blockedAccounts = [];
+  // Example: const blockedStatuses = ["1234567890"];
+  const blockedStatuses = [];
+
+  async function loadComments() {
+    try {
+      const response = await fetch(`https://${host}/api/v1/statuses/${id}/context`);
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      const data = await response.json();
+
+      if (!data.descendants || data.descendants.length === 0) {
+        container.innerHTML = '<p class="no-comments">No comments yet. Be the first to comment!</p>';
+        return;
+      }
+
+      const commentsHtml = data.descendants
+        .filter(reply => {
+          if (reply.visibility !== 'public') {
+            return false;
+          }
+          if (blockedStatuses.includes(reply.id)) {
+            return false;
+          }
+          if (blockedAccounts.includes(reply.account.url)) {
+            return false;
+          }
+          return true;
+        })
+        .map(reply => {
+          const date = new Date(reply.created_at);
+          const dateStr = date.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+          });
+
+          const cleanedContent = cleanReplyContent(reply.content);
+
+          let attachments = '';
+          if (reply.media_attachments && reply.media_attachments.length > 0) {
+            const images = reply.media_attachments.filter(m => m.type === 'image');
+            if (images.length > 0) {
+              attachments = '<div class="comment-attachments">' +
+                images.map(m =>
+                  `<a href="${m.url}" target="_blank" rel="noopener" class="comment-attachment-link"><img src="${m.preview_url || m.url}" alt="${escapeHtml(m.description || 'Image attachment')}" class="comment-attachment-image" loading="lazy"></a>`
+                ).join('') +
+                '</div>';
+            }
+          }
+
+          return `
+            <div class="mastodon-comment">
+              <div class="comment-header">
+                <a href="${reply.account.url}" target="_blank" rel="noopener" class="comment-author">
+                  <img src="${reply.account.avatar}" alt="${reply.account.display_name}'s avatar" class="comment-avatar" loading="lazy" width="48" height="48">
+                  <span class="comment-author-name">${escapeHtml(reply.account.display_name || reply.account.username)}</span>
+                  <span class="comment-author-handle">@${escapeHtml(reply.account.acct)}</span>
+                </a>
+                <a href="${reply.url}" target="_blank" rel="noopener" class="comment-date">${dateStr}</a>
+              </div>
+              <div class="comment-content">${cleanedContent}</div>
+              ${attachments}
+            </div>
+          `;
+        })
+        .join('');
+
+      container.innerHTML = commentsHtml || '<p class="no-comments">No comments yet. Be the first to comment!</p>';
+    } catch (error) {
+      console.error('Failed to load Mastodon comments:', error);
+      container.innerHTML = '<p class="comment-error">Failed to load comments. Please try again later.</p>';
+    }
+  }
+
+  // Remove leading mentions of @klausi and @klausi_blog from the reply content,
+  // but keep any other mentions or formatting intact.
+  function cleanReplyContent(content) {
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = content;
+
+    const handlesToRemove = ['@klausi', '@klausi_blog'];
+
+    // We expect the content to be wrapped in a <p> tag, but handle cases where it might not be
+    let container = tempDiv.firstElementChild;
+
+    // If the first element is not a paragraph, use the tempDiv itself as container
+    // This handles cases where there might be no <p> or multiple top-level elements
+    if (!container || container.tagName !== 'P') {
+        container = tempDiv;
+    }
+
+    // Remove leading mentions
+    let child = container.firstChild;
+    while (child) {
+      let shouldRemove = false;
+
+      if (child.nodeType === Node.TEXT_NODE) {
+        // Remove whitespace text nodes at the beginning
+        if (!child.textContent.trim()) {
+          shouldRemove = true;
+        } else {
+          // Found text content, stop processing
+          break;
+        }
+      } else if (child.nodeType === Node.ELEMENT_NODE) {
+         // Check for span with h-card class (common Mastodon structure)
+         let link = null;
+         if (child.tagName === 'A' && child.classList.contains('mention')) {
+           link = child;
+         } else if (child.tagName === 'SPAN' && child.classList.contains('h-card')) {
+           link = child.querySelector('a.mention');
+         }
+
+         if (link) {
+           const handle = link.textContent.trim();
+           // Check if handle is in our removal list (case insensitive)
+           if (handlesToRemove.some(h => handle.toLowerCase() === h.toLowerCase())) {
+             shouldRemove = true;
+           } else {
+             // Found a mention that isn't in our list (e.g. replying to someone else too), stop?
+             break;
+           }
+         } else {
+           // Found some other element (e.g. <br>, <strong>), stop processing
+           break;
+         }
+      } else {
+         // Comment node or others
+         shouldRemove = true;
+      }
+
+      // Check if we should remove this node
+      if (shouldRemove) {
+        const next = child.nextSibling;
+        container.removeChild(child);
+        child = next;
+      } else {
+        break;
+      }
+    }
+
+    return tempDiv.innerHTML;
+  }
+
+  function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+  }
+
+  loadComments();
+})();
+</script>
+
+<style>
+.mastodon-comments {
+  margin-top: 2rem;
+}
+
+.mastodon-comment {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.comment-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.comment-author {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.comment-avatar {
+  border-radius: 50%;
+}
+
+.comment-author-name {
+  font-weight: bold;
+}
+
+.comment-author-handle {
+  color: #666;
+  font-size: 0.9em;
+}
+
+.comment-date {
+  margin-left: auto;
+  color: #666;
+  font-size: 0.9em;
+  text-decoration: none;
+}
+
+.comment-date:hover {
+  text-decoration: underline;
+}
+
+.comment-content {
+  margin-top: 0.5rem;
+  line-height: 1.5;
+}
+
+.comment-content a {
+  word-break: break-word;
+}
+
+.comment-attachments {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.comment-attachment-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  max-height: 300px;
+}
+
+.no-comments,
+.comment-error {
+  color: #666;
+  font-style: italic;
+}
+
+@media (prefers-color-scheme: dark) {
+  .mastodon-comments {
+    border-top-color: #444;
+  }
+
+  .mastodon-comment {
+    background: #2a2a2a;
+  }
+
+  .comment-author-handle,
+  .comment-date,
+  .no-comments,
+  .comment-error {
+    color: #aaa;
+  }
+}
+</style>
 </div>
 
     

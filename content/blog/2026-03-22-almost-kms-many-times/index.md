@@ -107,3 +107,5 @@ Mir bleibt als Trost nur die Schuld klar zu benennen: Moony hat entschieden sich
 Noch 16 Monate.
 
 Ich vermisse dich Moony.
+
+{{ mastodon_comments(id="116272687652658506") }}
