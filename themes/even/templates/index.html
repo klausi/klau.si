@@ -9,6 +9,11 @@
     <!-- Enable responsiveness on mobile devices-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    {% if config.extra.fediverse_creator %}
+      <meta name="fediverse:creator"
+            content="{{ config.extra.fediverse_creator }}">
+    {% endif %}
+
     <title>
       {% block title %}
         {{ config.title }}
