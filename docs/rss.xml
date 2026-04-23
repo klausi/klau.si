@@ -7,7 +7,15 @@
       <generator>Zola</generator>
       <language>en</language>
       <atom:link href="https://klau.si/rss.xml" rel="self" type="application/rss+xml"/>
-      <lastBuildDate>Sun, 22 Mar 2026 00:00:00 +0000</lastBuildDate>
+      <lastBuildDate>Thu, 23 Apr 2026 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Mago presentation at Drupal Dev Days Athens</title>
+          <pubDate>Thu, 23 Apr 2026 00:00:00 +0000</pubDate>
+          <author>Klaus Purer</author>
+          <link>https://klau.si/blog/mago-format-your-drupal-code/</link>
+          <guid>https://klau.si/blog/mago-format-your-drupal-code/</guid>
+          <description xml:base="https://klau.si/blog/mago-format-your-drupal-code/">&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;mago-format-your-drupal-code&#x2F;drupal-dev-days-2026-mago-format-code.pdf&quot;&gt;the slides&lt;&#x2F;a&gt; of my &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;devdays2026.drupal.org.gr&#x2F;drupal-developer-days-athens-2026&#x2F;session&#x2F;mago-format-lint-and-analyze-your-php-code&quot;&gt;Drupal Dev Days presentation&lt;&#x2F;a&gt; about &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;mago.carthage.software&#x2F;&quot;&gt;Mago&lt;&#x2F;a&gt; in Athens. I will add the video recording here as soon as it is available.&lt;&#x2F;p&gt;</description>
+      </item>
       <item>
           <title>almost kms many times</title>
           <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
@@ -278,23 +286,6 @@ which test uses which ports so that there are no clashes that break the tests.&l
 &lt;p&gt;One obvious solution to this problem would be to disable parallel test
 execution with &lt;code&gt;cargo test -- --test-threads=1&lt;&#x2F;code&gt;. But we want to cover program
 and test isolation with our test so this is not really an option.&lt;&#x2F;p&gt;</description>
-      </item>
-      <item>
-          <title>Replacing unwrap() and avoiding panics in Rust</title>
-          <pubDate>Wed, 16 Aug 2017 00:00:00 +0000</pubDate>
-          <author>Klaus Purer</author>
-          <link>https://klau.si/blog/replacing-unwrap-and-avoiding-panics-in-rust/</link>
-          <guid>https://klau.si/blog/replacing-unwrap-and-avoiding-panics-in-rust/</guid>
-          <description xml:base="https://klau.si/blog/replacing-unwrap-and-avoiding-panics-in-rust/">&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;std&#x2F;result&#x2F;enum.Result.html#method.unwrap&quot;&gt;&lt;code&gt;unwrap()&lt;&#x2F;code&gt;&lt;&#x2F;a&gt; is a useful tool in Rust but is also bad practice in production code that
-should not abort with unpredictable panics.&lt;&#x2F;p&gt;
-&lt;p&gt;Therefore my goal 4 for Rustnish is full integration tests with no panics
-allowed:&lt;&#x2F;p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Expand the integration tests to confirm that the reverse proxy is working as
-expected. Add tests with broken HTTP requests to cover error handling of the
-reverse proxy. All &lt;code&gt;unwrap()&lt;&#x2F;code&gt; calls in none test code should be removed
-and covered by proper error handling.&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;</description>
       </item>
     </channel>
 </rss>

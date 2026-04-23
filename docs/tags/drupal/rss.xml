@@ -7,7 +7,15 @@
       <generator>Zola</generator>
       <language>en</language>
       <atom:link href="https://klau.si/tags/drupal/rss.xml" rel="self" type="application/rss+xml"/>
-      <lastBuildDate>Fri, 04 Apr 2025 00:00:00 +0000</lastBuildDate>
+      <lastBuildDate>Thu, 23 Apr 2026 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Mago presentation at Drupal Dev Days Athens</title>
+          <pubDate>Thu, 23 Apr 2026 00:00:00 +0000</pubDate>
+          <author>Klaus Purer</author>
+          <link>https://klau.si/blog/mago-format-your-drupal-code/</link>
+          <guid>https://klau.si/blog/mago-format-your-drupal-code/</guid>
+          <description xml:base="https://klau.si/blog/mago-format-your-drupal-code/">&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;mago-format-your-drupal-code&#x2F;drupal-dev-days-2026-mago-format-code.pdf&quot;&gt;the slides&lt;&#x2F;a&gt; of my &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;devdays2026.drupal.org.gr&#x2F;drupal-developer-days-athens-2026&#x2F;session&#x2F;mago-format-lint-and-analyze-your-php-code&quot;&gt;Drupal Dev Days presentation&lt;&#x2F;a&gt; about &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;mago.carthage.software&#x2F;&quot;&gt;Mago&lt;&#x2F;a&gt; in Athens. I will add the video recording here as soon as it is available.&lt;&#x2F;p&gt;</description>
+      </item>
       <item>
           <title>Testing Claude AI for Drupal code</title>
           <pubDate>Fri, 04 Apr 2025 00:00:00 +0000</pubDate>
@@ -307,26 +315,6 @@
           <link>https://klau.si/restful-entity-web-api-drupal-8/</link>
           <guid>https://klau.si/restful-entity-web-api-drupal-8/</guid>
           <description xml:base="https://klau.si/restful-entity-web-api-drupal-8/">&lt;p&gt;I&#x27;m happy to announce that I will join the &lt;a href=&quot;http:&#x2F;&#x2F;groups.drupal.org&#x2F;wscci&quot;&gt;WSCCI initiative&lt;&#x2F;a&gt; to help develop web service interfaces in Drupal 8. Big thanks to my team at &lt;a href=&quot;http:&#x2F;&#x2F;epiqo.com&#x2F;&quot;&gt;epiqo&lt;&#x2F;a&gt; for sponsoring and making time for me to work on this, as well as &lt;a href=&quot;https:&#x2F;&#x2F;www.acquia.com&#x2F;&quot;&gt;Acquia&lt;&#x2F;a&gt; for providing a crucial financial part to make this happen.&lt;&#x2F;p&gt;</description>
-      </item>
-      <item>
-          <title>Drupalcon 2012 talk: The project application process</title>
-          <pubDate>Fri, 24 Aug 2012 00:00:00 +0000</pubDate>
-          <author>Klaus Purer</author>
-          <link>https://klau.si/blog/drupalcon-project-application-process/</link>
-          <guid>https://klau.si/blog/drupalcon-project-application-process/</guid>
-          <description xml:base="https://klau.si/blog/drupalcon-project-application-process/">&lt;p&gt;Here is the video of our DrupalCon Munich 2012 talk &quot;The project application process&quot;.&lt;&#x2F;p&gt;
-&lt;div class=&quot;youtube-lazy&quot; data-video-id=&quot;jLj0K8Trvus&quot;&gt;
-  &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=jLj0K8Trvus&quot;
-     class=&quot;youtube-lazy-placeholder&quot;
-     target=&quot;_blank&quot;
-     rel=&quot;noopener&quot;&gt;
-    &lt;img src=&quot;https:&#x2F;&#x2F;klau.si&#x2F;youtube-thumbs&#x2F;jLj0K8Trvus.webp&quot;
-         alt=&quot;YouTube video thumbnail - click to play&quot;
-         loading=&quot;lazy&quot;
-         width=&quot;480&quot;
-         height=&quot;270&quot;&gt;
-  &lt;&#x2F;a&gt;
-&lt;&#x2F;div&gt;</description>
       </item>
     </channel>
 </rss>

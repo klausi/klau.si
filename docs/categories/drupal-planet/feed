@@ -7,7 +7,15 @@
       <generator>Zola</generator>
       <language>en</language>
       <atom:link href="https://klau.si/tags/drupal-planet/rss.xml" rel="self" type="application/rss+xml"/>
-      <lastBuildDate>Wed, 26 Jun 2024 00:00:00 +0000</lastBuildDate>
+      <lastBuildDate>Thu, 23 Apr 2026 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Mago presentation at Drupal Dev Days Athens</title>
+          <pubDate>Thu, 23 Apr 2026 00:00:00 +0000</pubDate>
+          <author>Klaus Purer</author>
+          <link>https://klau.si/blog/mago-format-your-drupal-code/</link>
+          <guid>https://klau.si/blog/mago-format-your-drupal-code/</guid>
+          <description xml:base="https://klau.si/blog/mago-format-your-drupal-code/">&lt;p&gt;Here are &lt;a href=&quot;https:&#x2F;&#x2F;klau.si&#x2F;blog&#x2F;mago-format-your-drupal-code&#x2F;drupal-dev-days-2026-mago-format-code.pdf&quot;&gt;the slides&lt;&#x2F;a&gt; of my &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;devdays2026.drupal.org.gr&#x2F;drupal-developer-days-athens-2026&#x2F;session&#x2F;mago-format-lint-and-analyze-your-php-code&quot;&gt;Drupal Dev Days presentation&lt;&#x2F;a&gt; about &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;mago.carthage.software&#x2F;&quot;&gt;Mago&lt;&#x2F;a&gt; in Athens. I will add the video recording here as soon as it is available.&lt;&#x2F;p&gt;</description>
+      </item>
       <item>
           <title>D7Security presentation at Drupal Dev Days Bourgas</title>
           <pubDate>Wed, 26 Jun 2024 00:00:00 +0000</pubDate>
