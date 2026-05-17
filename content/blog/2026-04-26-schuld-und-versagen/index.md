@@ -27,9 +27,11 @@ Zweimal falsche Zurückhaltung, fatalerweise.
 
 ## Eltern
 
-Ich bin Moonys Mutter und Moonys Stiefvater zutiefst dankbar, was sie in 18 Jahren für Moony getan und geleistet haben. Moonys Mutter hatte ein sehr gutes Verhältnis zu ihm, sie hat ihm vertraut. Wie ich war sie naiv und ließ sich von Moony belügen was die Selbstmordversuche anging.
+Ich bin Moonys Mutter und Moonys Stiefvater zutiefst dankbar, was sie in 18 Jahren für Moony getan und geleistet haben. Moonys Mutter hatte ein sehr gutes Verhältnis zu ihm, sie hat ihm vertraut. Wie ich war sie naiv und ließ sich von Moony belügen was die Selbstmordversuche anging. Ich kann hier aber nicht mal einen Vorwurf formulieren. Wir Eltern sind für unsere Kinder verantwortlich und schützen sie wo wir können, aber das geht halt nur wenn es die Kinder zulassen und annehmen. Irgendwie sind wir schuld, aber ratlos warum.
 
-## ÄrztInnen
+## Ärzt*Innen
+
+Ich habe ja schon [in meinem 2. Text](@/blog/2026-02-20-18-monate/index.md) erwähnt, wie das Gesundheitssystem in Österreich mit komplizierteren Krankheiten wie Fibromyalgie überfordert ist. Moony ging mit seiner Mutter über viele Jahre zu verschiedenen Ärzt\*Innen, Psychotherapeuth\*Innen, Spezialist\*Innen etc. in Österreich und in Deutschland - relativ erfolglos.
 
 ## FreundInnen
 
