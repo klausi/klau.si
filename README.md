@@ -64,10 +64,10 @@ Dry run (shows what would be done without posting):
 ```
 
 After running the tool:
-1. The blog post will have a new `{{ mastodon_comments(id="...") }}` shortcode added
+1. The blog post will have a new `{{ <mastodon_comments id="..." /> }}` component added
 2. Rebuild the site with `./build.sh`
 3. Commit and push the changes
 
 ### Moderation (hiding comment replies)
 
-Edit `themes/even/templates/shortcodes/mastodon_comments.html` and list accounts or posts to hide in `blockedAccounts` or `blockedStatuses`.
+Edit `themes/even/templates/mastodon_comments_component.html` and list accounts or posts to hide in `blockedAccounts` or `blockedStatuses`.

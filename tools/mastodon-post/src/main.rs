@@ -118,8 +118,9 @@ fn scan_blog_posts(project_root: &Path, base_url: &str) -> Result<Vec<BlogPost>>
     let front_matter_re = Regex::new(r"(?s)^\+\+\+\n(.+?)\n\+\+\+")?;
     let title_re = Regex::new(r#"title\s*=\s*"([^"]+)""#)?;
     let date_re = Regex::new(r"date\s*=\s*(\d{4}-\d{2}-\d{2})")?;
-    let mastodon_re = Regex::new(r"\{\{\s*mastodon_comments\s*\(")?;
-    let mastodon_id_re = Regex::new(r#"mastodon_comments\s*\(\s*id\s*=\s*"(\d+)""#)?;
+    let mastodon_re = Regex::new(
+        r#"\{\{\s*(?:<mastodon_comments\s+id="(\d+)"\s*/>|mastodon_comments\s*\(\s*id\s*=\s*"(\d+)"\s*\))\s*\}\}"#,
+    )?;
 
     for entry in WalkDir::new(&blog_dir)
         .min_depth(1)
@@ -166,12 +167,12 @@ fn scan_blog_posts(project_root: &Path, base_url: &str) -> Result<Vec<BlogPost>>
         };
 
         // Check if the post already has a Mastodon comment section
-        let has_mastodon_section = mastodon_re.is_match(&content);
-
-        // Extract Mastodon ID if present
-        let mastodon_id = mastodon_id_re
-            .captures(&content)
-            .and_then(|caps| caps.get(1).map(|m| m.as_str().to_string()));
+        let mastodon_id = mastodon_re.captures(&content).and_then(|caps| {
+            caps.get(1)
+                .or_else(|| caps.get(2))
+                .map(|m| m.as_str().to_string())
+        });
+        let has_mastodon_section = mastodon_id.is_some();
 
         // Derive URL from file path
         let url = derive_blog_url(path, &blog_dir, base_url)?;
@@ -289,8 +290,11 @@ async fn post_to_mastodon(config: &Config, status_text: &str) -> Result<(String,
 fn add_comment_section(post: &BlogPost, mastodon_id: &str) -> Result<()> {
     let content = fs::read_to_string(&post.file_path)?;
 
-    // Add the comment shortcode at the end of the file
-    let comment_section = format!("\n\n{{{{ mastodon_comments(id=\"{}\") }}}}\n", mastodon_id);
+    // Add the Tera 2 component at the end of the file
+    let comment_section = format!(
+        "\n\n{{{{ <mastodon_comments id=\"{}\" /> }}}}\n",
+        mastodon_id
+    );
 
     let new_content = format!("{}{}", content.trim_end(), comment_section);
 
