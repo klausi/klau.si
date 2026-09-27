@@ -119,6 +119,6 @@ Moony wird begraben.
 Moony wird ruhen.  
 Moony wird mir fehlen.
 
-{{ gallery() }}
+{{ <gallery page={page} /> }}
 
-{{ mastodon_comments(id="115996852255344735") }}
+{{ <mastodon_comments id="115996852255344735" /> }}

@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euo pipefail
 
 # Build the Zola site
 rm -rf public

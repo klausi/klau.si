@@ -7,6 +7,6 @@ tags = ["speaking", "drupalcon", "drupal", "english"]
 
 Here is the video of my DrupalCon Asia 2016 talk "How to publish a module on drupal.org".
 
-{{ youtube(id="JWLb--cb33E") }}
+{{ <youtube id="JWLb--cb33E" /> }}
 
 <!-- more -->

@@ -7,6 +7,6 @@ tags = ["speaking", "rest", "drupalcon", "drupal", "english"]
 
 Here is the video of our DrupalCon Portland 2013 talk "REST and serialization in Drupal 8".
 
-{{ youtube(id="6FNfy7pU6mE") }}
+{{ <youtube id="6FNfy7pU6mE" /> }}
 
 <!-- more -->

@@ -1,5 +1,4 @@
 {% extends "index.html" %}
-{% import "post_macros.html" as post_macros %}
 
 {% block title %}
   {{ config.title }} - {{ page.title }}
@@ -24,7 +23,7 @@
   {% set og_image = "" %}
 
   {# Check for YouTube shortcode - extract video ID from rendered content #}
-  {% if page.content is containing("data-video-id=") %}
+  {% if page.content is containing(pat="data-video-id=") %}
     {# Extract the line containing data-video-id and get the ID #}
     {% set content_after_marker = page.content | split(pat='data-video-id="') %}
     {% if content_after_marker | length > 1 %}
@@ -36,20 +35,20 @@
   {% endif %}
 
   {# If no YouTube, check for first image in content #}
-  {% if og_image == "" and page.content is containing(' src="') %}
+  {% if og_image == "" and page.content is containing(pat=' src="') %}
     {# Extract the first src attribute value #}
     {% set content_after_src = page.content | split(pat=' src="') %}
     {% if content_after_src | length > 1 %}
       {% set img_src = content_after_src[1] | split(pat='"') | first %}
       {% if img_src %}
         {# Handle relative URLs - make them absolute #}
-        {% if img_src is starting_with("http") %}
+        {% if img_src is starting_with(pat="http") %}
           {% set og_image = img_src %}
-        {% elif img_src is starting_with("/") %}
+        {% elif img_src is starting_with(pat="/") %}
           {% set og_image = config.base_url ~ img_src %}
         {% else %}
           {# Relative to page path - construct full URL #}
-          {% set page_dir = page.permalink | trim_end_matches(pat="/") %}
+          {% set page_dir = page.permalink | trim_end(pat="/") %}
           {% set og_image = page_dir ~ "/" ~ img_src %}
         {% endif %}
       {% endif %}
@@ -93,7 +92,7 @@
   {% endif %}
 
   <article class="post">
-    {{ post_macros::title(page=page, link=false) }}
+    {{ <post_title page={page} link={false} /> }}
     <div class="post-content">{{ page.content | safe }}</div>
 
     {% block page_before_footer %}
@@ -104,7 +103,7 @@
         {% if page.taxonomies.tags %}
           <div class="post-tags">
             {% for tag in page.taxonomies.tags %}
-              <a href="{{ get_taxonomy_url(kind='tags', name=tag) }}">#{{ tag }}</a>
+              <a href="{{ get_taxonomy_url(kind='tags', term=tag) }}">#{{ tag }}</a>
             {% endfor %}
           </div>
         {% endif %}

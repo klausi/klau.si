@@ -7,6 +7,6 @@ tags = ["d7security", "speaking", "drupal", "security", "english"]
 
 Here is the video of my appearance on the Drupal 7 end of life podcast, talking about plans for the [D7Security](https://www.d7security.org/) group. Thank you Mark Dorison and Chris Free from Chromatic for the recording!
 
-{{ youtube(id="hNI73M0ftOM") }}
+{{ <youtube id="hNI73M0ftOM" /> }}
 
 <!-- more -->

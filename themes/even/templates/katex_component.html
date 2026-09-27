@@ -1,1 +1,3 @@
+{% component katex(block: bool = false) %}
 <script type="math/tex{% if block %};mode=display{% endif %}">{{body | safe}}</script>
+{% endcomponent katex %}

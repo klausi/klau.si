@@ -108,4 +108,4 @@ Noch 16 Monate.
 
 Ich vermisse dich Moony.
 
-{{ mastodon_comments(id="116272687652658506") }}
+{{ <mastodon_comments id="116272687652658506" /> }}

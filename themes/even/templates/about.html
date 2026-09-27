@@ -2,10 +2,10 @@
 
 {% block content %}
 <div class="about">
-  {% if page.content %}
+  {% if page is defined and page.content %}
   {{ page.content | safe }}
   {% endif %}
-  {% if section.content %}
+  {% if section is defined and section.content %}
   {{ section.content | safe }}
   {% endif %}
 </div>

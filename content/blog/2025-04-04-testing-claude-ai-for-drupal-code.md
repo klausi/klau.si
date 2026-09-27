@@ -11,8 +11,8 @@ I tested ClaudeAI for Drupal code, got inspired by [Dries Buytaert video](https:
 * 💵 execution is expensive, I paid $1.16 for 20 minutes
 * 🙄 I got annoyed a couple of times, because Claude did contradictory things
 
-{{ youtube(id="7U4XwkjfckE") }}
+{{ <youtube id="7U4XwkjfckE" /> }}
 
 <!-- more -->
 
-{{ mastodon_comments(id="115826555577593358") }}
+{{ <mastodon_comments id="115826555577593358" /> }}

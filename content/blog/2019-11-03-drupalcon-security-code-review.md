@@ -7,6 +7,6 @@ tags = ["speaking", "security", "code review", "drupalcon", "drupal", "english"]
 
 Here are [the slides](https://klausi.github.io/sec-code-review2019/#/) and the video of my DrupalCon Amsterdam 2019 talk "Find security vulnerabilities through code review".
 
-{{ youtube(id="Oyoja2rfqSk") }}
+{{ <youtube id="Oyoja2rfqSk" /> }}
 
 <!-- more -->

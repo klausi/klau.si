@@ -1,6 +1,7 @@
+{% component gallery(page: map) %}
 <div class="gallery">
   {% for asset in page.assets -%}
-    {%- if asset is matching("[.]webp$") -%}
+    {%- if asset is matching(pat="[.]webp$") -%}
       {% set image = resize_image(path=asset, width=240, height=180) %}
       {% set alt_text = load_data(path=asset ~ ".alt.txt", format="plain") %}
       <a href="{{ asset | split(pat='/') | last }}">
@@ -9,3 +10,4 @@
     {%- endif %}
   {%- endfor %}
 </div>
+{% endcomponent gallery %}
