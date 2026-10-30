@@ -1,4 +1,7 @@
 .env
 
+# Generated Zola site
+/public/
+
 # Override global gitignore to track .vscode settings
 !.vscode/
