@@ -139,7 +139,10 @@
         <div class="content" id="mobile-panel">
           {% block content %}
 
-            {% if not paginator.previous %}<div class="about">{{ section.content | safe }}</div>{% endif %}
+            {% if not paginator.previous %}
+              {% set about = get_section(path="about/_index.md") %}
+              <div class="about">{{ about.content | safe }}</div>
+            {% endif %}
 
             <div class="posts">
               {% for page in paginator.pages %}
